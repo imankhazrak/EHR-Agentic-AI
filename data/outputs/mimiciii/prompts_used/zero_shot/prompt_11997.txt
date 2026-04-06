@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Coronary atherosclerosis of native coronary artery; Acute myocardial infarction of other specified sites, initial episode of care; Dissection of coronary artery; Acute systolic heart failure; Cardiogenic shock; Acute respiratory failure; Cushing's syndrome; Other complications due to other cardiac device, implant, and graft; Urinary tract infection, site not specified; Cardiac complications, not elsewhere classified; Acute posthemorrhagic anemia; Hematoma complicating a procedure; Delirium due to conditions classified elsewhere; Hyperosmolality and/or hypernatremia; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Cardiac catheterization as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Accidents occurring in residential institution; Unspecified acquired hypothyroidism; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Secondary diabetes mellitus without mention of complication, not stated as uncontrolled, or unspecified; Adrenal cortical steroids causing adverse effects in therapeutic use; Congestive heart failure, unspecified; Atrial fibrillation; Mononeuritis of unspecified site; Abnormal coagulation profile; Rash and other nonspecific skin eruption
+- Medications prescribed: Heparin Flush (10 units/ml); Heparin; Warfarin; Hydrocortisone Na Succ.; Metoprolol Tartrate; 5% Dextrose; Potassium Chloride; Sterile Water; CeftriaXONE; Iso-Osmotic Dextrose; Lisinopril; Olanzapine (Disintegrating Tablet); Bumetanide; Gabapentin; Insulin; Potassium Chloride (Powder); Haloperidol; Docusate Sodium; Quetiapine Fumarate; Senna; OxycoDONE (Immediate Release); Acetaminophen; CefePIME; Piperacillin-Tazobactam; Vancomycin; Amiodarone; 0.9% Sodium Chloride (Mini Bag Plus); 1/2 NS; 5% Dextrose (EXCEL BAG); MethylPREDNISolone Sodium Succ; Furosemide; Lorazepam; Phenylephrine; Ciprofloxacin HCl; Fentanyl Citrate; Midazolam; Chlorhexidine Gluconate 0.12% Oral Rinse; Lansoprazole Oral Disintegrating Tab; Miconazole Powder 2%; Ondansetron; Atropine Sulfate; Morphine Sulfate; Sodium Polystyrene Sulfonate; Levothyroxine Sodium; D5W; Nitroglycerin; Pioglitazone; Heparin Sodium; Hydrocodone-Acetaminophen; Pantoprazole
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Insertion of drug-eluting coronary artery stent(s); Coronary arteriography using two catheters; Insertion of two vascular stents; Procedure on single vessel; Left heart cardiac catheterization; Insertion of three vascular stents; Combined right and left heart cardiac catheterization; Insertion of non-drug-eluting coronary artery stent(s); Central venous catheter placement with guidance; Venous catheterization, not elsewhere classified; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Removal of other device from thorax
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

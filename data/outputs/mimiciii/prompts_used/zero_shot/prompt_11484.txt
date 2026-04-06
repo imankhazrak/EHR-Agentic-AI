@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Methicillin susceptible Staphylococcus aureus septicemia; Toxic encephalopathy; Acute and subacute bacterial endocarditis; Acute kidney failure, unspecified; Pressure ulcer, lower back; Septic arterial embolism; Thrombocytopenia, unspecified; Pyogenic arthritis, shoulder region; Congenital insufficiency of aortic valve; Body Mass Index 45.0-49.9, adult; Rhabdomyolysis; Unspecified viral meningitis; Sepsis; Atrial fibrillation; Unspecified essential hypertension; Abnormal coagulation profile; Coronary atherosclerosis of native coronary artery; Pure hypercholesterolemia; Other chronic pain; Internuclear ophthalmoplegia; Sebaceous cyst; Anemia, unspecified; First degree atrioventricular block; Mitral valve disorders; Pressure ulcer, unspecified stage; Obesity, unspecified; Other ill-defined heart diseases
+- Medications prescribed: Furosemide; Metoprolol Tartrate; Warfarin; Simvastatin; HydrALAzine; 5% Dextrose; Heparin Sodium; Amlodipine; Sodium Chloride 0.9%  Flush; Potassium Chloride; Calcium Carbonate; Dextrose 50%; Pantoprazole; Glucagon; Insulin; 5% Dextrose (EXCEL BAG); Amiodarone; Docusate Sodium; Aspirin EC; Acetaminophen; Oxycodone-Acetaminophen (5mg-325mg); Iso-Osmotic Dextrose; Dexmedetomidine; 0.9% Sodium Chloride; Acyclovir; Albumin 5% (25g / 500mL); Heparin; Vancomycin; NORepinephrine; EPINEPHrine; Acetaminophen IV; Aluminum-Magnesium Hydrox.-Simethicone; Aluminum Hydroxide Suspension; Senna; Aspirin; HYDROmorphone (Dilaudid); OxycoDONE (Immediate Release); Atropine Sulfate; Nafcillin; D5 1/2NS; Glycopyrrolate; Syringe; Lactated Ringers; PHENYLEPHrine; Neostigmine; Chlorhexidine Gluconate 0.12% Oral Rinse; D5W; Propofol; Nitroglycerin; Meperidine
+- Procedures performed: Other partial ostectomy, scapula, clavicle, and thorax [ribs and sternum]; Open and other replacement of aortic valve; Other local excision or destruction of lesion of joint, shoulder; (Aorto)coronary bypass of one coronary artery; Single internal mammary-coronary artery bypass; Open and other replacement of mitral valve; Other repair of heart and pericardium; Incision of lung; Extracorporeal circulation auxiliary to open heart surgery; Central venous catheter placement with guidance; Left heart cardiac catheterization; Coronary arteriography using two catheters; Insertion of temporary transvenous pacemaker system; Arterial catheterization
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

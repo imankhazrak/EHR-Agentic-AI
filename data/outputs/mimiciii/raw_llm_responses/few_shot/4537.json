@@ -1,0 +1,12 @@
+{
+  "sample_id": 4537,
+  "mode": "few_shot",
+  "model": "gpt-4o-mini-2024-07-18",
+  "text": "Prediction: Yes\n\nReasoning: The patient's current visit record indicates a diagnosis of \"Pure hypercholesterolemia.\" This is a clear and explicit diagnosis of a lipid metabolism disorder, which falls under the category of \"Disorders of Lipid Metabolism.\" The presence of this diagnosis strongly supports the likelihood that the patient will have a similar diagnosis coded in their next hospital visit.\n\nAdditionally, the patient is prescribed Atorvastatin, a medication commonly used to manage cholesterol levels, which further indicates that there is an ongoing management of a lipid disorder. The combination of the explicit diagnosis of hypercholesterolemia and the use of a statin suggests that the patient's lipid levels are being actively monitored and treated.\n\nGiven these factors, it is reasonable to predict that \"Disorders of Lipid Metabolism\" will be present in the patient's next hospital visit, as there is strong evidence of an existing lipid disorder that is being managed.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3862,
+    "completion_tokens": 186
+  }
+}

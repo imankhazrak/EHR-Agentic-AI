@@ -1,0 +1,16 @@
+Starting Ollama serve (log: /users/PCS0229/imankhazrak/EHR-Agentic-AI/logs/ollama-slurm-46354353.log)...
+Ollama API ready after 2s
+Ensuring model is available: llama3.3:70b
+Using OPENAI_BASE_URL=http://127.0.0.1:11434/v1 for this job (in-process Ollama).
+=== smoke_llm_real.sh  (Ollama / Llama only) ===
+provider=openai  model=llama3.3:70b  base_url=http://127.0.0.1:11434/v1
+Local Ollama: ensure the service is running and the model is available, e.g. ollama pull llama3.3:70b
+OPENAI_API_KEY set: True  effective_key_for_client: True
+models.list() count=1  chat-like ids=0
+FAILED: InternalServerError: Error code: 500 - {'error': {'message': 'llama runner process has terminated: %!w(<nil>)', 'type': 'api_error', 'param': None, 'code': None}}
+
+Local endpoint troubleshooting:
+  • Start Ollama (ollama serve) and run: ollama pull <model> (see configs/default.yaml llm.model).
+  • If using SLURM/HPC, OPENAI_BASE_URL must reach the host where Ollama listens (not 127.0.0.1 on a batch node unless tunneled).
+
+Stopping Ollama (pid 1780463)...

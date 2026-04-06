@@ -1,0 +1,12 @@
+{
+  "sample_id": 8749,
+  "mode": "few_shot",
+  "model": "gpt-4o-mini-2024-07-18",
+  "text": "Prediction: Yes\n\nReasoning: The patient's current visit record indicates a diagnosis of \"Pure hypercholesterolemia.\" This is a clear and explicit diagnosis of a lipid metabolism disorder, which falls under the category of \"Disorders of Lipid Metabolism.\" The presence of this diagnosis strongly supports the likelihood that the patient will have a similar diagnosis coded in their next hospital visit.\n\nIn addition to the diagnosis, the patient's medical history includes significant cardiovascular conditions such as subendocardial infarction and coronary atherosclerosis, which are often associated with lipid metabolism disorders. However, the key factor here is the explicit diagnosis of hypercholesterolemia, which directly indicates a disorder of lipid metabolism.\n\nGiven that the patient has a documented lipid disorder, it is reasonable to predict that this will be recognized and coded in future visits, especially since there is no indication of resolution or management that would suggest the condition has been addressed or is no longer present.\n\nTherefore, based on the strong evidence of an existing lipid disorder, the prediction is that \"Disorders of Lipid Metabolism\" will indeed be present in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3713,
+    "completion_tokens": 226
+  }
+}

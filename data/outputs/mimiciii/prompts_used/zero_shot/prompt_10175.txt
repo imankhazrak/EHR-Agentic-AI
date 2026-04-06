@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of lumbar vertebra without mention of spinal cord injury; Closed fracture of dorsal [thoracic] vertebra without mention of spinal cord injury; Acute posthemorrhagic anemia; Acidosis; Closed fracture of five ribs; Accidental fall from or out of building or other structure; Ankylosing spondylitis; Other specified cardiac dysrhythmias; Other and unspecified hyperlipidemia; Oliguria and anuria
+- Medications prescribed: Propofol; Metoprolol Tartrate; Haloperidol; LR; Insulin; Heparin; Oxycodone-Acetaminophen; Senna; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Potassium Phosphate; Furosemide; 0.9% Sodium Chloride; Milk of Magnesia; Famotidine; Sodium Chloride 0.9%  Flush; Acetaminophen; D5 1/2NS; Ibuprofen; Morphine Sulfate; Iso-Osmotic Sodium Chloride; Albuterol 0.083% Neb Soln; Docusate Sodium; Pneumococcal Vac Polyvalent; Atorvastatin; Magnesium Sulfate; SW; Pantoprazole Sodium; Phenylephrine; Vial; 5% Dextrose; HYDROmorphone (Dilaudid); Iso-Osmotic Dextrose; CefazoLIN; Chlorhexidine Gluconate 0.12% Oral Rinse; Ondansetron; Bisacodyl; OxycoDONE (Immediate Release)
+- Procedures performed: Dorsal and dorsolumbar fusion of the posterior column, posterior technique; Fusion or refusion of 9 or more vertebrae; Repair of vertebral fracture
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

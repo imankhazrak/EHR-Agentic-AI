@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Traumatic pneumothorax without mention of open wound into thorax; Laceration of lung without mention of open wound into thorax; Interstitial emphysema; Closed fracture of multiple ribs, unspecified; Acute vascular insufficiency of intestine; Perforation of intestine; [ICD9-DX:5185]; Pneumonia due to Klebsiella pneumoniae; [ICD9-DX:5672]
+- Medications prescribed: Albuterol Neb Soln; Iso-Osmotic Dextrose; Morphine Sulfate; Oxycodone-Acetaminophen; Vancomycin HCl; Docusate Sodium; Lorazepam; Albuterol; Ipratropium Bromide MDI; Levothyroxine Sodium; Simvastatin; Amlodipine; Aspirin EC; Losartan Potassium; Atenolol; Heparin; Pantoprazole; Ketorolac; Ibuprofen; Ondansetron; D5W; Nystatin Oral Suspension; NS; Pantoprazole Sodium; Norepinephrine; Miconazole 2% Cream; Acetylcysteine 20%; Fluconazole; Vecuronium Bromide; Imipenem-Cilastatin; Hespan; Insulin; Vasopressin; Hydromorphone-HP; Furosemide; Metoclopramide; Diphenhydramine HCl; Phenylephrine HCl; Dextrose 5%; Levofloxacin; Metronidazole; Albuterol-Ipratropium; Magnesium Sulfate; Calcium Gluconate; SW; Potassium Chloride; Artificial Tears; Lacri-Lube Oint; Phytonadione; Cosyntropin
+- Procedures performed: Temporary tracheostomy; Other local excision or destruction of lesion or tissue of lung; Transpleural thoracoscopy; Closure of laceration of lung; Other and unspecified partial excision of large intestine; Other partial resection of small intestine; Other permanent ileostomy; Exploratory laparotomy; Proctostomy; Other partial ostectomy, scapula, clavicle, and thorax [ribs and sternum]; Thoracentesis
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

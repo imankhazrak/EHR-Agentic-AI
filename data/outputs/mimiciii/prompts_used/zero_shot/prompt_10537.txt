@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Atherosclerosis of native arteries of the extremities with gangrene; End stage renal disease; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Other complications due to other vascular device, implant, and graft; Methicillin resistant Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere; Unspecified viral hepatitis C without hepatic coma; Ulcer of ankle; Ulcer of other part of foot; Personal history of venous thrombosis and embolism; Examination of participant in clinical trial; Long-term (current) use of insulin; Tobacco use disorder; Anemia in chronic kidney disease
+- Medications prescribed: HYDROmorphone (Dilaudid); Lidocaine 1%; Doxercalciferol; 5% Dextrose; NS; MetRONIDAZOLE (FLagyl); Ciprofloxacin IV; Iso-Osmotic Dextrose; Vancomycin; Epoetin Alfa; Vial; 0.9% Sodium Chloride; 0.45% Sodium Chloride; D5W; OxycoDONE (Immediate Release); Metoprolol Tartrate; Nitroglycerin; Magnesium Sulfate; Bag; Heparin; Aspirin; Clopidogrel; Insulin; Ciprofloxacin HCl; Carvedilol; Amlodipine; Atorvastatin; Calcium Acetate; HydrALAzine; Dextrose 50%; Albuterol 0.083% Neb Soln; Sodium Chloride 0.9%  Flush; Glucagon; Tiotropium Bromide; Sodium Chloride; Collagenase Ointment; Silver Sulfadiazine 1% Cream; Ondansetron; Docusate Sodium; Acetaminophen; Heparin Flush (10 units/ml); Senna; Nephrocaps
+- Procedures performed: Amputation through foot; Endarterectomy, lower limb arteries; Other (peripheral) vascular shunt or bypass; Amputation of toe; Procedure on single vessel; Arteriography of femoral and other lower extremity arteries; Hemodialysis
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

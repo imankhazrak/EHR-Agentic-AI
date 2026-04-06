@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of C1-C4 level with unspecified spinal cord injury; Quadriplegia, unspecified; Acute respiratory failure; Acute kidney failure, unspecified; Ventilator associated pneumonia; Pulmonary collapse; Paralytic ileus; Hyperosmolality and/or hypernatremia; Occlusion and stenosis of vertebral artery without mention of cerebral infarction; Foreign body in other specified parts bronchus and lung; Accident from diving or jumping into water [swimming pool]; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Hypotension, unspecified; Inhalation and ingestion of other object causing obstruction of respiratory tract or suffocation; Accidents occurring in residential institution
+- Medications prescribed: Levofloxacin; Dextrose 5%; Ondansetron; Lansoprazole Oral Disintegrating Tab; Midazolam; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; HYDROmorphone (Dilaudid); Metoclopramide; Lorazepam; Insulin; Citalopram Hydrobromide; OxycoDONE (Immediate Release); SW; 0.9% Sodium Chloride (Mini Bag Plus); Meropenem; Soln; Fentanyl Citrate; Ciprofloxacin IV; 5% Dextrose; OxycoDONE-Acetaminophen Elixir; Methylnaltrexone; OxycoDONE Liquid; Heparin; Acetaminophen (Liquid); Chloraseptic Throat Spray; Propofol; Vancomycin; Artificial Tear Ointment; Artificial Tears; Rocuronium; Iso-Osmotic Dextrose; Nafcillin; Pantoprazole; Norepinephrine; Dexamethasone; LR; D5W; DOPamine; Iso-Osmotic Sodium Chloride; Famotidine; Phenylephrine; Neutra-Phos; Piperacillin-Tazobactam; Vial; Milk of Magnesia; 0.9% Sodium Chloride; Potassium Chl 20 mEq / 1000 mL NS; Morphine Sulfate; Bisacodyl; Calcium Gluconate
+- Procedures performed: Temporary tracheostomy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Other exploration and decompression of spinal canal; Interruption of the vena cava; Other cervical fusion of the anterior column, anterior technique; Excision of intervertebral disc; Repair of vertebral fracture; Enteral infusion of concentrated nutritional substances; Angiocardiography of venae cavae; Fusion or refusion of 2-3 vertebrae; Closed [endoscopic] biopsy of bronchus; Other intubation of respiratory tract; Percutaneous [endoscopic] gastrostomy [PEG]
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

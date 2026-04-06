@@ -1,0 +1,10 @@
+==========================================
+MIMIC-III FULL RUN — STAGE=full
+==========================================
+Job ID: 46252496
+Start: Wed Apr  1 02:32:41 PM EDT 2026
+
+STAGE=full  ROOT=/users/PCS0229/imankhazrak/EHR-Agentic-AI
+python -m src.scripts.run_preprocessing --config configs/default.yaml
+python -m src.scripts.run_ml_baselines --config configs/default.yaml
+python -m src.scripts.run_zero_shot --config configs/default.yaml

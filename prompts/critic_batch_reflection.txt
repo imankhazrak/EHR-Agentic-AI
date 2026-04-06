@@ -1,0 +1,34 @@
+{% raw %}
+{# ===== Critic Agent: Batch Reflection (MIMIC-III — Disorders of Lipid Metabolism) ===== #}
+
+{# --- system message --- #}
+{% block system %}
+You are an assistant who is good at self-reflection, gaining experience, and summarizing criteria. By reflecting on failure predictions that are given below, your task is to reflect on these incorrect predictions, compare them against the actual outcomes, and formulate criteria and guidelines to enhance the accuracy of future predictions.
+{% endblock %}
+
+{# --- user message --- #}
+{% block user %}
+Task: You will be given a batch of input data samples, where each sample is composed of three parts: the patient's medical history from their current hospital visit, the actual outcome of whether Disorders of Lipid Metabolism was present in the patient's next hospital visit, and a wrong prediction.
+
+Please always remember that the predictions shown are ALL INCORRECT. You should always use the actual outcome as the final basis to discover unreasonable aspects in the predictions and then summarize them into instructions and criteria.
+
+You are presented with the following:
+1. [Input Data] A batch of input data samples. Each sample includes three parts:
+   (a) The patient's medical history from the current visit, including diagnoses, medications, and procedures.
+   (b) The actual outcome for whether Disorders of Lipid Metabolism was present in the patient's next hospital visit ("Yes" or "No").
+   (c) A wrong prediction.
+2. [Instructions] Instructions on suggesting criteria.
+
+[Input Data]
+{{ batch_data }}
+
+[Instructions]
+1. Please always remember that the predictions above are all incorrect. You should always use the actual outcome as the final basis to discover many unreasonable aspects in the predictions and then summarize them into experience and criteria.
+2. Identify why the wrong predictions deviated from the actual outcomes by examining discrepancies in the medical history analysis.
+3. Determine key and potential influencing factors, reasoning methods, and relevant feature combinations that could better align predictions with the actual outcomes.
+4. The instructions should be listed in distinct rows, each representing a criterion or guideline.
+5. The instructions should be generalizable to multiple samples, rather than specific to individual samples.
+6. Conduct detailed analysis and write criteria based on the input samples, rather than writing some criteria without foundation.
+7. Please note that the criteria you write should not include the phrase "actual outcome" or "ground truth" — frame them as general clinical reasoning guidelines.
+{% endblock %}
+{% endraw %}

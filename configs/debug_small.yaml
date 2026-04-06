@@ -1,0 +1,21 @@
+# Overrides for fast smoke tests — merge with: --overrides configs/debug_small.yaml
+
+data:
+  max_pairs: 3000
+  test_size: 0.25
+  stratify_test: true
+
+llm:
+  max_test_samples: 12
+  rate_limit_rpm: 60
+  cache_responses: true
+
+few_shot:
+  n_positive: 2
+  n_negative: 2
+
+coagent:
+  calibration_size: 24
+  n_wrong_samples: 8
+  critic_batch_size: 4
+  n_critic_rounds: 2

@@ -1,0 +1,46 @@
+{
+  "total_records": 12456,
+  "positive": 3416,
+  "negative": 9040,
+  "prevalence": 0.2742,
+  "example_positive": [
+    {
+      "pair_id": 0,
+      "hadm_id_current": 194023,
+      "hadm_id_next": 161087,
+      "diagnoses_codes_next": "4239;5119;78551;4589;311;7220;71946;2724"
+    },
+    {
+      "pair_id": 2,
+      "hadm_id_current": 152223,
+      "hadm_id_next": 124321,
+      "diagnoses_codes_next": "2252;3485;78039;4241;4019;2720;2724;V4581;V4579;V1582"
+    },
+    {
+      "pair_id": 10,
+      "hadm_id_current": 116630,
+      "hadm_id_next": 112077,
+      "diagnoses_codes_next": "0389;486;V4281;23875;42731;41400;3004;2724;2449;60001;78843;32723;3320;3051;V1079;V4581;V433;99591;5853"
+    }
+  ],
+  "example_negative": [
+    {
+      "pair_id": 1,
+      "hadm_id_current": 109451,
+      "hadm_id_next": 111970,
+      "diagnoses_codes_next": "0388;78552;40391;42731;70709;5119;6823;99859;00845;5720;99592;V0980;25000;2859;43889;2749;41401;185;4439;2449;E8788"
+    },
+    {
+      "pair_id": 3,
+      "hadm_id_current": 115799,
+      "hadm_id_next": 144319,
+      "diagnoses_codes_next": "42789;42822;4263;41401;V5861;4280;2449;3659"
+    },
+    {
+      "pair_id": 4,
+      "hadm_id_current": 182104,
+      "hadm_id_next": 122659,
+      "diagnoses_codes_next": "99831;99811;41511;4538;99672;496;41401;V4581;4019;60000;53081;V1051"
+    }
+  ]
+}

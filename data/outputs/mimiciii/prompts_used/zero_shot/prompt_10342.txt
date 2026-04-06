@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of upper end of fibula with tibia; Alcohol withdrawal; Acute posthemorrhagic anemia; Unspecified pleural effusion; Other pulmonary insufficiency, not elsewhere classified; Occlusion and stenosis of carotid artery without mention of cerebral infarction; Other and unspecified coagulation defects; Closed fracture of one rib; Accidental fall on or from other stairs or steps; Other and unspecified alcohol dependence, continuous; Unspecified essential hypertension; Gout, unspecified; Esophageal reflux; Edema of larynx; Other iatrogenic hypotension; Swelling, mass, or lump in head and neck; Hip joint replacement
+- Medications prescribed: Metoprolol Tartrate; Lorazepam; Chlordiazepoxide HCl; Docusate Sodium; Oxycodone-Acetaminophen; Haloperidol; CloniDINE; Lidocaine Jelly 2% (Urojet); D5 1/2NS; Insulin; Acetaminophen; Sodium Chloride 0.9%  Flush; OxycoDONE (Immediate Release); Diazepam; Magnesium Oxide; Potassium Chloride; Hydrocodone-Acetaminophen; Labetalol; CefazoLIN; D5W; NS; Sodium Bicarbonate; Fentanyl Citrate; SW; Midazolam; Calcium Gluconate; Magnesium Sulfate; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Dexamethasone; Milk of Magnesia; Chlorhexidine Gluconate 0.12% Oral Rinse; Ondansetron; Enoxaparin Sodium; Multivitamins; Calcium Carbonate; Vitamin D; LR; Sodium Phosphate; HydrALAzine; Metoprolol Succinate XL; Morphine Sulfate; Allopurinol; Omeprazole; Thiamine; FoLIC Acid; Senna; Influenza Virus Vaccine; Doxepin HCl; Pneumococcal Vac Polyvalent; NS (Mini Bag Plus)
+- Procedures performed: Open reduction of fracture with internal fixation, tibia and fibula; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Transfusion of packed cells
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

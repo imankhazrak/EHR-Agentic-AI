@@ -1,0 +1,12 @@
+{
+  "sample_id": 248,
+  "mode": "few_shot",
+  "model": "gpt-4o-mini-2024-07-18",
+  "text": "Prediction: Yes\n\nReasoning: \n\nIn the patient's current visit record, there is explicit evidence of a lipid disorder, specifically \"Pure hypercholesterolemia.\" This diagnosis is a clear indication of a disorder of lipid metabolism, which falls under the target definition provided. The presence of this diagnosis strongly supports the likelihood that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nAdditionally, the patient is prescribed Simvastatin, a medication commonly used to manage cholesterol levels, which further indicates that the hypercholesterolemia is being actively managed. The combination of the diagnosis of pure hypercholesterolemia and the ongoing management with a statin suggests that the patient's lipid metabolism disorder is not only present but also being treated, reinforcing the likelihood of it being documented in future visits.\n\nWhile the patient has several other comorbid conditions, including cardiovascular diseases and hypertension, these alone do not influence the prediction regarding the specific diagnosis of \"Disorders of Lipid Metabolism.\" The key factor here is the confirmed diagnosis of hypercholesterolemia, which directly aligns with the criteria for predicting a future diagnosis of lipid metabolism disorders.\n\nTherefore, based on the strong and explicit evidence of a lipid disorder present in the current visit, the prediction is that \"Disorders of Lipid Metabolism\" will indeed be present in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3814,
+    "completion_tokens": 276
+  }
+}

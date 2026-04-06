@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Perforation of intestine; Septic shock; Unspecified peritonitis; Acute kidney failure, unspecified; Injury to liver without mention of open wound into cavity laceration, unspecified; Acidosis; Other ascites; Severe sepsis; Atrial fibrillation; Neoplasm of unspecified nature of other genitourinary organs; Unspecified noninflammatory disorder of ovary, fallopian tube, and broad ligament; Urinary tract infection, site not specified; Unspecified essential hypertension; Fall from other slipping, tripping, or stumbling; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Hypoglycemia, unspecified; Other and unspecified ovarian cyst; Other specified disorders of intestine; Other ill-defined conditions; Other diseases of spleen; [ICD9-DX:0414]; Hernia of other specified sites without mention of obstruction or gangrene; Examination of participant in clinical trial; Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits
+- Medications prescribed: Scopolamine Patch; Piperacillin-Tazobactam; Insulin Human Regular; Norepinephrine; LR; 0.9% Sodium Chloride; 5% Dextrose; 0.9% Sodium Chloride (Mini Bag Plus); Midazolam; Vasopressin; Potassium Chloride; Albumin 5% (25g / 500mL); Sodium Bicarbonate; Cisatracurium Besylate; Calcium Chloride; Albuterol Inhaler; Iso-Osmotic Dextrose; Vancomycin; Albumin 25% (12.5g / 50mL); Fentanyl Citrate; Sodium Chloride 0.9%  Flush; Soln; Chlorhexidine Gluconate 0.12% Oral Rinse; Vial; SW; Calcium Gluconate; Magnesium Sulfate; Pantoprazole; Dextrose 50%; Glucagon; Insulin; Pneumococcal Vac Polyvalent; Amiodarone; 5% Dextrose (EXCEL BAG); Ciprofloxacin HCl; Aspirin; Neutra-Phos; Furosemide; Ondansetron ODT; Multivitamins; Ferrous Sulfate; Potassium Phosphate; Ketorolac; Metoprolol Tartrate; Phosphorus; AcetaZOLamide Sodium; Lansoprazole Oral Disintegrating Tab; Potassium Chloride (Powder); Docusate Sodium; Acetaminophen
+- Procedures performed: Total splenectomy; Reopening of recent laparotomy site; Open and other sigmoidectomy; Other unilateral oophorectomy; Colostomy, not otherwise specified; Other gastroenterostomy without gastrectomy; Insertion of intercostal catheter for drainage; Application of other wound dressing; Percutaneous abdominal drainage; Diagnostic ultrasound of abdomen and retroperitoneum; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Venous catheterization, not elsewhere classified; Arterial catheterization; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

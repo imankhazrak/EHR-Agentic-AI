@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Acute and subacute necrosis of liver; Chronic hepatitis C with hepatic coma; Asymptomatic human immunodeficiency virus [HIV] infection status; Hepatorenal syndrome; Acute kidney failure, unspecified; Cirrhosis of liver without mention of alcohol; Acquired coagulation factor deficiency; Hemorrhage complicating a procedure; [ICD9-DX:9974]; Urinary tract infection, site not specified; Blood in stool; Pressure ulcer, lower back; [ICD9-DX:7895]; Other psoriasis; Combinations of opioid type drug with any other drug dependence, in remission; Asthma, unspecified type, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Unspecified gastritis and gastroduodenitis, without mention of hemorrhage; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Long-term (current) use of insulin; Edema of male genital organs
+- Medications prescribed: Lactulose; Spironolactone; Furosemide; Albuterol 0.083% Neb Soln; Albuterol; Quinine Sulfate; NS; Albumin 5% (25 g); Octreotide Acetate; AMP; Midodrine HCl; Efavirenz; Calcipotriene 0.005% Cream; Aluminum-Magnesium Hydrox.-Simethicone; Tacrolimus; Sodium Chloride 0.9%  Flush; Insulin; PredniSONE; Pantoprazole; Fluconazole; Pentamidine Inhalation; Acetylcysteine 20%; D5W; Sodium Bicarbonate; Calcium Gluconate; DiphenhydrAMINE HCl; Ampicillin-Sulbactam; NS (Mini Bag Plus); Magnesium Sulfate; OxycoDONE (Immediate Release); Albumin 25% (12.5 g); Tenofovir Disoproxil Fum.; LaMIVudine; 1/2 NS; ValGANCIclovir; Amoxicillin-Clavulanic Acid; Heparin Flush CVL  (100 units/ml); Mycophenolate Mofetil Suspension; MethylPREDNISolone Sodium Succ; CefePIME; Pamidronate; Metoprolol; D5 1/2NS; Heparin; Docusate Sodium; Vial; Pantoprazole Sodium; Propofol; Morphine Sulfate; Prochlorperazine
+- Procedures performed: Other transplant of liver; Control of hemorrhage, not otherwise specified; Transplant from cadaver; Closed (percutaneous) [needle] biopsy of liver; Percutaneous abdominal drainage; Other endoscopy of small intestine; Colonoscopy; Endoscopic sphincterotomy and papillotomy; Endoscopic insertion of stent (tube) into bile duct; Transfusion of packed cells; Transfusion of other serum
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

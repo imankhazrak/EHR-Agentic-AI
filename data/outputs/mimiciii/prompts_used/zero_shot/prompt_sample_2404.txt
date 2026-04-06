@@ -1,0 +1,21 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Current Visit Record]
+- Diagnoses made: Atherosclerosis of native arteries of the extremities with ulceration; Congestive heart failure, unspecified; Other primary cardiomyopathies; Ulcer of heel and midfoot; Vertebrobasilar artery syndrome; Unspecified essential hypertension; Coronary atherosclerosis of unspecified type of vessel, native or graft; Automatic implantable cardiac defibrillator in situ
+- Medications prescribed: None recorded
+- Procedures performed: Aorta-iliac-femoral bypass
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

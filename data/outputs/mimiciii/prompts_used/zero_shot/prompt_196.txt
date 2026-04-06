@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other and unspecified infection due to central venous catheter; Sepsis; Methicillin resistant Staphylococcus aureus septicemia; End stage renal disease; Toxic encephalopathy; Endocarditis, valve unspecified, unspecified cause; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Other and unspecified mycoses; Intestinal infection due to Clostridium difficile; Renal dialysis status; Chronic hepatitis C without mention of hepatic coma; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Thrombocytopenia, unspecified
+- Medications prescribed: Ciprofloxacin HCl; 0.9% Sodium Chloride; Iso-Osmotic Dextrose; Naloxone; Acetaminophen; Heparin; HydrALAzine; Insulin; Calcium Acetate; Amlodipine; Glucagon; Piperacillin-Tazobactam; Heparin Flush (10 units/ml); Nephrocaps; Dextrose 50%; MetRONIDAZOLE (FLagyl); Vancomycin; 5% Dextrose; Lactulose; Norepinephrine; Calcium Gluconate; Magnesium Sulfate; Sodium Polystyrene Sulfonate; Sodium Chloride 0.9%  Flush; NS; Heparin Flush (1000 units/mL); Alteplase 1mg/1mL ( Clearance ie. Temp TLCL ); Sodium CITRATE 4%; Lorazepam; SW; Bag; Potassium Chloride; Citrate Dextrose 3% (ACD-A) CRRT; Prismasate (B32 K2); Alteplase (Catheter Clearance); Syringe (0.9% Sodium Chloride); Simvastatin; Gabapentin; Zolpidem Tartrate; Micafungin; 0.9% Sodium Chloride (Mini Bag Plus); Lidocaine 5% Patch; Loperamide
+- Procedures performed: Venous catheterization, not elsewhere classified; Venous catheterization for renal dialysis; Hemodialysis; Diagnostic ultrasound of heart
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

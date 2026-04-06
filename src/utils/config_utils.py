@@ -1,0 +1,66 @@
+"""Configuration loading and merging utilities."""
+
+from __future__ import annotations
+
+import copy
+import os
+from pathlib import Path
+from typing import Any, Dict, Optional
+
+import yaml
+from dotenv import load_dotenv
+
+# Repo root (parent of src/) so .env loads even when cwd is not the project directory.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def deep_merge(base: Dict, override: Dict) -> Dict:
+    """Recursively merge *override* into *base* (returns a new dict)."""
+    result = copy.deepcopy(base)
+    for k, v in override.items():
+        if k in result and isinstance(result[k], dict) and isinstance(v, dict):
+            result[k] = deep_merge(result[k], v)
+        else:
+            result[k] = copy.deepcopy(v)
+    return result
+
+
+def load_config(
+    default_path: str = "configs/default.yaml",
+    overrides: Optional[list[str]] = None,
+) -> Dict[str, Any]:
+    """Load the default config and merge any override YAML files on top.
+
+    Also loads environment variables from ``.env`` if present.
+    """
+    load_dotenv(_REPO_ROOT / ".env")
+    load_dotenv()  # cwd fallback
+
+    with open(default_path, "r") as f:
+        cfg = yaml.safe_load(f)
+
+    for path_str in overrides or []:
+        p = Path(path_str)
+        if p.exists():
+            with open(p, "r") as f:
+                override = yaml.safe_load(f) or {}
+            cfg = deep_merge(cfg, override)
+
+    # Ensure all path values are resolved to Path objects
+    if "paths" in cfg:
+        for key, val in cfg["paths"].items():
+            cfg["paths"][key] = str(Path(val))
+
+    # Override llm.model from env without editing YAML.
+    if "llm" in cfg:
+        env_model = os.getenv("OPENAI_MODEL") or os.getenv("LLM_MODEL")
+        if env_model:
+            cfg["llm"]["model"] = env_model.strip()
+        # OpenAI-compatible base URL: env wins over YAML so HPC can override default localhost.
+        bu_env = (os.getenv("OPENAI_BASE_URL") or "").strip()
+        if bu_env:
+            cfg["llm"]["base_url"] = bu_env
+        elif not (cfg["llm"].get("base_url") or "").strip():
+            cfg["llm"]["base_url"] = None
+
+    return cfg

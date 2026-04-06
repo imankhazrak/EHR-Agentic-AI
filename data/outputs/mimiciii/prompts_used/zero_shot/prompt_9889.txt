@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Septicemia due to escherichia coli [E. coli]; End stage renal disease; Septic shock; Pancreas replaced by transplant; Peripheral autonomic neuropathy in disorders classified elsewhere; Chronic systolic heart failure; Urinary tract infection, site not specified; Complications of transplanted kidney; Severe sepsis; Other septicemia due to gram-negative organisms; Anemia in chronic kidney disease; Encounter for other dialysis; Diabetes with renal manifestations, type I [juvenile type], not stated as uncontrolled; Coronary atherosclerosis of native coronary artery; Aortocoronary bypass status; Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled; Background diabetic retinopathy; Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled; Old myocardial infarction; Percutaneous transluminal coronary angioplasty status; Obstructive sleep apnea (adult)(pediatric); Congestive heart failure, unspecified; Right bundle branch block; Atrial fibrillation; Long-term (current) use of anticoagulants; Unspecified acquired hypothyroidism; Unspecified glaucoma; Surgical operation with transplant of whole organ causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Personal history of allergy to penicillin; Personal history of allergy to sulfonamides; Personal history of allergy to other anti-infective agent; Personal history of allergy to other specified medicinal agents
+- Medications prescribed: Linezolid; D5W; Acetaminophen; Levofloxacin; Dextrose 5%; Warfarin; Insulin; Glucagon; Dextrose 50%; 0.9% Sodium Chloride (Mini Bag Plus); Meropenem; Amiodarone; Fluconazole; Simethicone; Sodium Chloride 0.9%  Flush; Midodrine; Fludrocortisone Acetate; Docusate Sodium; Magnesium Sulfate; Potassium Chloride; Bag; Methazolamide; Brimonidine Tartrate 0.15% Ophth.; Dorzolamide 2%/Timolol 0.5% Ophth.; Levothyroxine Sodium; Readi-Cat 2 (Barium Sulfate 2% Suspension); Syringe (Sterile Water); Pentamidine-Inhalation; Hydrocortisone Na Succ.; 0.9% Sodium Chloride; Heparin; Clopidogrel; Mycophenolate Mofetil; Creon 12; FoLIC Acid; Tacrolimus; Acyclovir; Nephrocaps; Gabapentin; PredniSONE; Omeprazole; Latanoprost 0.005% Ophth. Soln.; Atorvastatin; Lanthanum; Aspirin
+- Procedures performed: Creation of cutaneoperitoneal fistula; Peritoneal dialysis; Injection or infusion of oxazolidinone class of antibiotics; Non-invasive mechanical ventilation; Central venous catheter placement with guidance
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

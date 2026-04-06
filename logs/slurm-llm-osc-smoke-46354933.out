@@ -1,0 +1,20 @@
+Starting Ollama serve (log: /users/PCS0229/imankhazrak/EHR-Agentic-AI/logs/ollama-slurm-46354933.log)...
+Ollama API ready after 2s
+Ensuring model is available: llama3.2
+Using OPENAI_BASE_URL=http://127.0.0.1:11434/v1 for this job (in-process Ollama).
+=== smoke_llm_real.sh  (Ollama / Llama only) ===
+provider=openai  model=llama3.2  base_url=http://127.0.0.1:11434/v1
+Local Ollama: ensure the service is running and the model is available, e.g. ollama pull llama3.2
+OPENAI_API_KEY set: True  effective_key_for_client: True
+models.list() count=2  chat-like ids=0
+chat.completions test reply: 'OK'
+OK — LLM calls should work for the pipeline.
+LLM-only pipeline  ROOT=/users/PCS0229/imankhazrak/EHR-Agentic-AI  START_FROM=zero_shot  STAGE=smoke
+python -m src.scripts.run_zero_shot --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_zero_shot_plus --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_few_shot --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_coagent --config configs/default.yaml --overrides configs/debug_small.yaml
+Done. See data/outputs/mimiciii/summary_table.csv
+=== smoke_llm_real.sh done ===
+OSC Ollama smoke finished at Sat Apr  4 02:50:46 PM EDT 2026
+Stopping Ollama (pid 4067441)...

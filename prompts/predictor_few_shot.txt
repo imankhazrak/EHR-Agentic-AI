@@ -1,0 +1,73 @@
+{% raw %}
+{# ===== Predictor: Few-Shot (MIMIC-III — Disorders of Lipid Metabolism) ===== #}
+
+{# --- system message --- #}
+{% block system %}
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+{% endblock %}
+
+{# --- user message --- #}
+{% block user %}
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. You will be presented with a patient's medical history and various resources to aid in your prediction. Please provide your reasoning and make your prediction by learning from the resources.
+
+You are presented with the following:
+1. [Target Definition] The definition of the prediction target.
+2. [Current Visit Record] The patient's current hospital visit record, capturing diagnoses made, medications prescribed, and procedures performed.
+3. [Instructions] Guidelines on analyzing the record, providing reasoning, and making predictions. This includes referring to the demonstration cases and exploring the interaction of various factors and the interplay between diseases, medications, and procedures.
+4. [Demonstration Cases] Real and typical cases, including the patient's medical history and the result of whether Disorders of Lipid Metabolism was present in the patient's next visit.
+5. [Output Format] The required format for your response. You must provide a confirmed prediction by choosing between "Yes" or "No".
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+
+[Current Visit Record]
+{{ narrative }}
+
+[Instructions]
+Based on the patient's current visit record, provide reasoning on whether Disorders of Lipid Metabolism will be present in the patient's next hospital visit.
+
+You should know that: in the MIMIC-III critical care population, approximately 27.6% of subsequent hospital visits include a diagnosis of Disorders of Lipid Metabolism.
+
+Please:
+(1) Use your medical knowledge about lipid metabolism disorders, their risk factors, and associated conditions.
+(2) Learn from the provided demonstration cases.
+(3) Perform a comprehensive analysis of the patient's current visit record.
+(4) Consider the interplay of diseases, medications, and procedures. Make sure to:
+    - Identify and weigh both risk factors and protective factors evident in the patient's medical history.
+    - Consider the presence of comorbid conditions commonly associated with lipid disorders (e.g., diabetes mellitus, obesity, hypertension, cardiovascular diseases).
+    - Examine the patient's medication profile to identify drugs relevant to lipid management (e.g., statins, fibrates) or drugs that may affect lipid levels.
+    - Evaluate medical or surgical procedures the patient has undergone that could relate to metabolic or cardiovascular health.
+(5) Utilize a multihop and step-by-step reasoning approach to systematically analyze the data.
+
+[Demonstration Cases]
+{{ demonstration_cases }}
+
+[Output Format]
+Your final response should include:
+1. Prediction: Conclude your analysis with a clear and concise prediction. This prediction must be a single word, either "Yes" or "No", indicating whether you believe Disorders of Lipid Metabolism will be present in the patient's next hospital visit. This prediction should be the first line of your response, to facilitate easy parsing.
+2. Reasoning: Provide a detailed reasoning process.
+Ensure that your analysis is thorough and based on the information provided, leading logically to your final prediction.
+{% endblock %}
+{% endraw %}

@@ -1,0 +1,63 @@
+# MIMIC-III lipid disorder next-visit prediction — default experiment config
+# Paths are relative to the repository root (cwd when running scripts).
+
+seed: 42
+
+paths:
+  mimic_raw: "data/mimic III/physionet.org/files/mimiciii/1.4"
+  interim: "data/interim/mimiciii"
+  processed: "data/processed/mimiciii"
+  outputs: "data/outputs/mimiciii"
+
+data:
+  min_visits: 2
+  test_size: 0.2
+  stratify_test: true
+  # Optional: cap rows after label step (debug only). Omit or null for full data.
+  max_pairs: null
+
+narrative:
+  style: bullet
+  max_diagnoses: 50
+  max_medications: 50
+  max_procedures: 50
+  empty_placeholder: "None recorded"
+
+ml:
+  models:
+    - decision_tree
+    - logistic_regression
+    - random_forest
+  feature_type: bag_of_codes
+  few_shot_n: 6
+
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  # Optional: OpenAI-compatible proxy (e.g. Azure gateway). Default: api.openai.com
+  base_url: null
+  temperature: 0.0
+  max_tokens: 1024
+  seed: 42
+  cache_responses: true
+  cache_dir: "data/outputs/mimiciii/llm_cache"
+  rate_limit_rpm: 30
+  request_logprobs: false
+  # Optional: only first N test rows (debug smoke). null = full test set.
+  max_test_samples: null
+
+few_shot:
+  n_positive: 3
+  n_negative: 3
+  strategy: random_balanced
+  seed: 42
+
+coagent:
+  calibration_size: 200
+  n_wrong_samples: 30
+  critic_batch_size: 10
+  n_critic_rounds: 3
+  consolidation_method: llm
+
+evaluation:
+  bootstrap_ci: false

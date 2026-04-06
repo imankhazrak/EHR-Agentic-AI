@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: [ICD9-DX:9974]; [ICD9-DX:5185]; Pneumonia, organism unspecified; Acute vascular insufficiency of intestine; Pressure ulcer, stage IV; Septic shock; Severe sepsis; Unspecified septicemia; Intestinal or peritoneal adhesions with obstruction (postoperative) (postinfection); Other postoperative infection; Fistula of intestine, excluding rectum and anus; Acute kidney failure, unspecified; Urinary tract infection, site not specified; Ventilator associated pneumonia; Delirium due to conditions classified elsewhere; Attention to gastrostomy; Other and unspecified infection due to central venous catheter; Pressure ulcer, other site; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Other and unspecified hyperlipidemia; Unspecified essential hypertension; Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus; Congestive heart failure, unspecified; Old myocardial infarction
+- Medications prescribed: OxycoDONE (Immediate Release); Pantoprazole; Aspirin; Bisacodyl; Syringe (0.9% Sodium Chloride); Alteplase (Catheter Clearance); 0.9% Sodium Chloride (Mini Bag Plus); CefTAZidime; Ondansetron; Lidocaine 1%; Potassium Chloride; 0.9% Sodium Chloride; Haloperidol; HYDROmorphone (Dilaudid); Remeron SolTab; Vancomycin; 5% Dextrose; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Loperamide; CefePIME; Sulfameth/Trimethoprim Suspension; Daptomycin; Olanzapine (Disintegrating Tablet); Albuterol 0.083% Neb Soln; Acetaminophen; Amino Acids 5%-Dextrose 15%; Multivitamin IV; Cosyntropin; Lidocaine Jelly 2% (Urojet); Metoprolol Tartrate; Pneumococcal Vac Polyvalent; Influenza Virus Vaccine; Sodium Chloride 0.9%  Flush; Iso-Osmotic Dextrose; Miconazole Powder 2%; Ibuprofen Suspension; Zolpidem Tartrate; Heparin; Lorazepam; Vial; Ciprofloxacin HCl; Ciprofloxacin IV; Vancomycin Antibiotic Lock; Ketamine; Midazolam; Fentanyl Citrate; Piperacillin-Tazobactam; Furosemide; LR; Vecuronium Bromide
+- Procedures performed: Other partial resection of small intestine; Temporary tracheostomy; Reopening of recent laparotomy site; Other skin graft to other sites; Full-thickness skin graft to other sites; Central venous catheter placement with guidance; Closed [endoscopic] biopsy of bronchus; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Other lysis of peritoneal adhesions; Small-to-small intestinal anastomosis; Attachment of pedicle or flap graft to other sites; Parenteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

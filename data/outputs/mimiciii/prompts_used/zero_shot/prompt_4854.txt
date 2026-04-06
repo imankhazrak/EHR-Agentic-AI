@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Thoracic aneurysm without mention of rupture; [ICD9-DX:5185]; Mechanical complication of other vascular device, implant, and graft; Acute pericarditis, unspecified; Cardiac arrest; [ICD9-DX:5118]; Acute posthemorrhagic anemia; Atrial fibrillation; Hemorrhage complicating a procedure; Acute kidney failure with lesion of tubular necrosis; Pneumonia due to Pseudomonas; [ICD9-DX:4538]; Unilateral paralysis of vocal cords or larynx, partial; Methicillin susceptible pneumonia due to Staphylococcus aureus; Coronary atherosclerosis of native coronary artery; Other specified congenital anomalies of heart; Infection with microorganisms resistant to penicillins
+- Medications prescribed: Pantoprazole Sodium; Metoprolol; Albuterol; Vial; Amiodarone HCl; Furosemide; D5W (EXCEL BAG); Morphine Sulfate; Aspirin; Potassium Chloride; SW; Albuterol-Ipratropium; Sodium Chloride 0.9%  Flush; Insulin; Albuterol 0.083% Neb Soln; Heparin Sodium; D5W; Oxycodone Liquid; Lansoprazole Oral Suspension; Warfarin; NS; LR; Heparin Flush CVL  (100 units/ml); Docusate Sodium (Liquid); Nitroglycerin; Neostigmine; Glycopyrrolate; Sucralfate; Iso-Osmotic Dextrose; Ranitidine; Cefazolin; Propofol; Phenylephrine HCl; Dextrose 50%; Docusate Sodium; Aspirin EC; Acetaminophen; Oxycodone-Acetaminophen; Metoclopramide; Insulin Human Regular; Calcium Gluconate; Magnesium Sulfate; Ipratropium Bromide MDI; Ipratropium Bromide Neb; Phytonadione; Vancomycin HCl; CefTRIAXone; Cosyntropin; Bisacodyl; D5 1/2NS
+- Procedures performed: (Aorto)coronary bypass of one coronary artery; Temporary tracheostomy; Endovascular implantation of graft in thoracic aorta; Other intrathoracic vascular shunt or bypass; Endarterectomy, lower limb arteries; Control of hemorrhage following vascular surgery; Decortication of lung; Injection or infusion of oxazolidinone class of antibiotics; Combined right and left heart cardiac catheterization; Diagnostic ultrasound of heart; Pericardiocentesis; Other enterostomy; Enteral infusion of concentrated nutritional substances; Percutaneous [endoscopic] gastrostomy [PEG]; Thoracentesis; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Extracorporeal circulation auxiliary to open heart surgery; Coronary arteriography using two catheters; Aortography; Other and unspecified coronary arteriography; Infusion of vasopressor agent; Procedure on single vessel; Insertion of endotracheal tube; Removal of gastrostomy tube; Cardiopulmonary resuscitation, not otherwise specified; Venous catheterization, not elsewhere classified; Perioperative autologous transfusion of whole blood or blood components
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

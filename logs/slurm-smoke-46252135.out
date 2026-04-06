@@ -1,0 +1,11 @@
+MIMIC-III smoke — Wed Apr  1 02:03:40 PM EDT 2026
+STAGE=smoke  ROOT=/users/PCS0229/imankhazrak/EHR-Agentic-AI
+python -m src.scripts.run_preprocessing --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_ml_baselines --config configs/default.yaml --overrides configs/debug_small.yaml
+Note: EHR_SMOKETEST_FAKE_LLM=1 — LLM metrics are not from a real model.
+python -m src.scripts.run_zero_shot --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_zero_shot_plus --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_few_shot --config configs/default.yaml --overrides configs/debug_small.yaml
+python -m src.scripts.run_coagent --config configs/default.yaml --overrides configs/debug_small.yaml
+Done. See data/outputs/mimiciii/summary_table.csv
+Smoke done — Wed Apr  1 02:04:45 PM EDT 2026

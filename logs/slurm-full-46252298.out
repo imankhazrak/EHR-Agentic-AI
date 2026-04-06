@@ -1,0 +1,18 @@
+==========================================
+MIMIC-III FULL RUN — STAGE=full
+==========================================
+Job ID: 46252298
+Start: Wed Apr  1 02:16:13 PM EDT 2026
+
+STAGE=full  ROOT=/users/PCS0229/imankhazrak/EHR-Agentic-AI
+python -m src.scripts.run_preprocessing --config configs/default.yaml
+python -m src.scripts.run_ml_baselines --config configs/default.yaml
+Note: EHR_SMOKETEST_FAKE_LLM=1 — LLM metrics are not from a real model.
+python -m src.scripts.run_zero_shot --config configs/default.yaml
+python -m src.scripts.run_zero_shot_plus --config configs/default.yaml
+python -m src.scripts.run_few_shot --config configs/default.yaml
+python -m src.scripts.run_coagent --config configs/default.yaml
+Done. See data/outputs/mimiciii/summary_table.csv
+
+End: Wed Apr  1 02:18:06 PM EDT 2026
+Outputs: data/outputs/mimiciii/

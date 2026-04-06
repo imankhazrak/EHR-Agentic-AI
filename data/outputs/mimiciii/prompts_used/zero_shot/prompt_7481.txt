@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Obstructive chronic bronchitis with (acute) exacerbation; Methicillin susceptible pneumonia due to Staphylococcus aureus; Diastolic heart failure, unspecified; Chronic respiratory failure; Other diseases of trachea and bronchus; Obstructive sleep apnea (adult)(pediatric); Congestive heart failure, unspecified; Chronic kidney disease, unspecified; Long-term (current) use of anticoagulants; Atrial fibrillation; Unspecified acquired hypothyroidism; Depressive disorder, not elsewhere classified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Gout, unspecified; Personal history of malignant neoplasm of bladder; Heart valve replaced by other means; Other and unspecified complications of medical care, not elsewhere classified; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Infection with microorganisms resistant to penicillins; Diarrhea
+- Medications prescribed: Loperamide; PredniSONE; Venlafaxine XR; Sodium Chloride 0.9%  Flush; Verapamil SR; Albumin 5% (12.5g / 250mL); Fentanyl Citrate; Heparin Sodium; LR; Midazolam; D5W; Heparin; Iso-Osmotic Dextrose; Vancomycin; MethylPREDNISolone Sodium Succ; Levofloxacin; Dextrose 5%; Albuterol-Ipratropium; Potassium Chloride; Insulin; Miconazole Powder 2%; OxycoDONE-Acetaminophen Elixir; Acetaminophen; Guaifenesin-Dextromethorphan; Guaifenesin-CODEINE Phosphate; Benzonatate; Acetylcysteine 20%; Aspirin EC; Levothyroxine Sodium; Omeprazole; Escitalopram Oxalate; Allopurinol; Atorvastatin; CloniDINE; Montelukast Sodium; Tiotropium Bromide; Bumetanide; Ipratropium Bromide Neb; Colchicine; Gabapentin; Cyclobenzaprine; Clonazepam; Fluticasone-Salmeterol (250/50); Ferrous Sulfate; Albuterol 0.083% Neb Soln; Docusate Sodium; D5 1/2NS; Warfarin; Sulfameth/Trimethoprim DS
+- Procedures performed: Other intubation of respiratory tract; Non-invasive mechanical ventilation; Closed [endoscopic] biopsy of bronchus
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

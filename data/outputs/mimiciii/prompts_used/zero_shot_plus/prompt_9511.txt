@@ -1,0 +1,64 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. You will be presented with the patient's medical history and guidelines to aid your prediction. Please provide your reasoning and make your prediction.
+
+You are presented with the following:
+1. [Target Definition] The definition of the prediction target.
+2. [Current Visit Record] The patient's current hospital visit record, capturing diagnoses made, medications prescribed, and procedures performed.
+3. [Instructions] Guidelines on analyzing the record, providing reasoning, and making predictions.
+4. [Output Format] The required format for your response.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Pyogenic arthritis, ankle and foot; Acute glomerulonephritis with other specified pathological lesion in kidney; Acute kidney failure with lesion of tubular necrosis; Unspecified osteomyelitis, lower leg; Bacteremia; Other and unspecified coagulation defects; [ICD9-DX:2841]; Hyposmolality and/or hyponatremia; Acute posthemorrhagic anemia; Portal hypertension; Other ascites; Esophageal varices in diseases classified elsewhere, without mention of bleeding; Acute alcoholic hepatitis; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Cirrhosis of liver without mention of alcohol; Chronic hepatitis C without mention of hepatic coma; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, unspecified; Other fluid overload; Leukocytopenia, unspecified; Unspecified essential hypertension; Gout, unspecified; Coronary atherosclerosis of unspecified type of vessel, native or graft; Esophageal reflux; Other specified antibiotics causing adverse effects in therapeutic use; Penicillins causing adverse effects in therapeutic use; Other drugs and medicinal substances causing adverse effects in therapeutic use; Other specified disorders of stomach and duodenum; Coronary atherosclerosis of native coronary artery; Diarrhea
+- Medications prescribed: Magnesium Sulfate; Potassium Chloride; Furosemide; Iso-Osmotic Dextrose; Vancomycin; Spironolactone; Bag; CefazoLIN; 0.9% Sodium Chloride; OxycoDONE (Immediate Release); Polyethylene Glycol; Docusate Sodium; Senna; Thiamine; Sodium Chloride Nasal; FoLIC Acid; PredniSONE; Oxymetazoline; Phytonadione; Morphine Sulfate; NS; 0.9% Sodium Chloride (Mini Bag Plus); MetRONIDAZOLE (FLagyl); CefTAZidime; 5% Dextrose; Ursodiol; Heparin Flush (10 units/ml); Sodium Chloride 0.9%  Flush; Ondansetron; Piperacillin-Tazobactam; Albumin 25% (12.5g / 50mL); Vancomycin Oral Liquid; Heparin; Albumin 5%; Pantoprazole; traZODONE; Cyanocobalamin; Fluconazole; Iso-Osmotic Sodium Chloride; Vial; D5 1/2NS; Aspirin; Atenolol; Nafcillin; Lorazepam
+- Procedures performed: Other arthrotomy, ankle; Other incision of soft tissue; Arthrocentesis; Other endoscopy of small intestine; Central venous catheter placement with guidance; Venous catheterization, not elsewhere classified
+
+[Instructions]
+Based on the patient's current visit record, provide reasoning on whether Disorders of Lipid Metabolism will be present in the patient's next hospital visit.
+
+You should know that: in the MIMIC-III critical care population, approximately 27.6% of subsequent hospital visits include a diagnosis of Disorders of Lipid Metabolism.
+
+Please:
+(1) Use your medical knowledge about lipid metabolism disorders, their risk factors, and associated conditions.
+(2) Perform a comprehensive analysis of the patient's current visit record.
+(3) Consider the interplay of diseases, medications, and procedures. Make sure to:
+    - Identify and weigh both risk factors and protective factors evident in the patient's medical history.
+    - Consider the presence of comorbid conditions commonly associated with lipid disorders (e.g., diabetes mellitus, obesity, hypertension, cardiovascular diseases).
+    - Examine the patient's medication profile to identify drugs relevant to lipid management (e.g., statins, fibrates) or drugs that may affect lipid levels.
+    - Evaluate medical or surgical procedures the patient has undergone that could relate to metabolic or cardiovascular health.
+(4) Utilize a step-by-step reasoning approach to systematically analyze the data.
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide a detailed reasoning process below.
+Ensure that your analysis is thorough and based on the information provided, leading logically to your final prediction.

@@ -1,0 +1,2 @@
+LLM-only pipeline  ROOT=/users/PCS0229/imankhazrak/EHR-Agentic-AI  START_FROM=zero_shot  STAGE=full
+python -m src.scripts.run_zero_shot --config configs/default.yaml

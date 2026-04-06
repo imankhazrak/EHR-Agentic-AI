@@ -1,0 +1,12 @@
+{
+  "sample_id": 2431,
+  "mode": "few_shot",
+  "model": "gpt-4o-mini-2024-07-18",
+  "text": "Prediction: No\n\nReasoning: Upon reviewing the patient's current hospital visit record, there is no explicit evidence of a \"Disorder of Lipid Metabolism\" present. The diagnoses made during this visit include various complications related to diabetes mellitus, such as ketoacidosis and diabetic retinopathy, as well as a gastroesophageal laceration-hemorrhage syndrome and mental health issues. However, none of these conditions directly indicate a lipid metabolism disorder.\n\nThe medications prescribed do not include any lipid-lowering agents such as statins or fibrates, which would suggest active management of a lipid disorder. The absence of any mention of hyperlipidemia, hypercholesterolemia, or any related lipid abnormalities in the diagnoses further supports the conclusion that there is no current diagnosis of a lipid metabolism disorder.\n\nAdditionally, while the patient has diabetes, which is a risk factor for lipid disorders, the presence of risk factors alone is not sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The guidelines specify that a diagnosis must be explicitly present or actively managed to warrant a \"Yes\" prediction.\n\nGiven the lack of evidence for an existing or actively managed lipid disorder in this visit, the prediction is that \"Disorders of Lipid Metabolism\" will not be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3761,
+    "completion_tokens": 265
+  }
+}

@@ -1,0 +1,27 @@
+{% raw %}
+{# ===== Feedback Consolidation (MIMIC-III — Disorders of Lipid Metabolism) ===== #}
+
+{# --- system message --- #}
+{% block system %}
+You are an expert at synthesizing and consolidating clinical reasoning guidelines. Your task is to merge multiple sets of criteria into a single, concise, non-redundant list of actionable instructions.
+{% endblock %}
+
+{# --- user message --- #}
+{% block user %}
+Below are multiple sets of criteria and guidelines generated from analyzing incorrect predictions about whether Disorders of Lipid Metabolism will appear in a patient's next hospital visit. Each set was produced by reflecting on different batches of prediction errors.
+
+Your task:
+1. Read all the criteria sets below.
+2. Merge duplicate or overlapping criteria into single, clear statements.
+3. Remove any criteria that are too specific to individual patient cases.
+4. Keep only generalizable, actionable instructions that a clinical prediction model should follow.
+5. Produce a final numbered list of 5–10 concise criteria.
+6. Do not use the phrases "actual outcome" or "ground truth" in the final criteria.
+
+[Criteria Sets]
+{{ all_critic_outputs }}
+
+[Output]
+Provide a numbered list of consolidated criteria, one per line. Each criterion should be a concise, actionable guideline for predicting whether Disorders of Lipid Metabolism will appear in a patient's next hospital visit.
+{% endblock %}
+{% endraw %}

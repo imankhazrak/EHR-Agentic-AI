@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Cerebral thrombosis with cerebral infarction; Subarachnoid hemorrhage following injury without mention of open intracranial wound, with no loss of consciousness; Pneumonia, organism unspecified; Pulmonary collapse; Acute respiratory failure; Pneumonitis due to inhalation of food or vomitus; Acute kidney failure, unspecified; Atrial flutter; Cerebral embolism with cerebral infarction; Polymyalgia rheumatica; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Atrial fibrillation; Thoracic spondylosis without myelopathy; Esophageal reflux; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Chronic kidney disease, unspecified; Anemia, unspecified; Personal history of malignant neoplasm of prostate; Accidental fall from chair; Home accidents
+- Medications prescribed: Heparin Sodium; D5W; Miconazole Powder 2%; Lorazepam; NS; Metoprolol Tartrate; Morphine Sulfate; Quetiapine Fumarate; Amiodarone; Captopril; Potassium Chloride; Vancomycin; Ampicillin Sodium; Iso-Osmotic Dextrose; NS (Mini Bag Plus); CeftriaXONE; Neutra-Phos; Vial; Pantoprazole Sodium; Docusate Sodium (Liquid); Chlorhexidine Gluconate 0.12% Oral Rinse; Propofol; Senna; PredniSONE; FoLIC Acid; Atorvastatin; Thiamine; D5W (EXCEL BAG); CefePIME; Acetaminophen; Olanzapine (Disintegrating Tablet); Olanzapine; Lactulose; Haloperidol; D5 1/2NS; Warfarin; Enoxaparin Sodium; Vancomycin Oral Liquid; MetRONIDAZOLE (FLagyl); Papain 2.5 % Solution; SW; Lansoprazole Oral Disintegrating Tab; Bisacodyl; Methylphenidate; Albuterol 0.083% Neb Soln; Heparin Flush (10 units/ml); Pantoprazole; Heparin; Diltiazem; Magnesium Sulfate
+- Procedures performed: Continuous invasive mechanical ventilation for 96 consecutive hours or more; Percutaneous (endoscopic) jejunostomy [PEJ]; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Electroencephalogram
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -1,0 +1,270 @@
+2026-04-01 14:03:48 | __main__ | INFO | === Step 1: Extract MIMIC-III tables ===
+2026-04-01 14:03:48 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/ADMISSIONS.csv.gz
+2026-04-01 14:03:48 | src.utils.io | INFO | Saved 58976 rows → data/interim/mimiciii/admissions.csv
+2026-04-01 14:03:48 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv.gz
+2026-04-01 14:03:50 | src.utils.io | INFO | Saved 651047 rows → data/interim/mimiciii/diagnoses.csv
+2026-04-01 14:03:50 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/PROCEDURES_ICD.csv.gz
+2026-04-01 14:03:50 | src.utils.io | INFO | Saved 240095 rows → data/interim/mimiciii/procedures.csv
+2026-04-01 14:03:50 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/PRESCRIPTIONS.csv.gz
+2026-04-01 14:04:10 | src.utils.io | INFO | Saved 4156450 rows → data/interim/mimiciii/prescriptions.csv
+2026-04-01 14:04:10 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/D_ICD_DIAGNOSES.csv.gz
+2026-04-01 14:04:10 | src.utils.io | INFO | Saved 14567 rows → data/interim/mimiciii/d_icd_diagnoses.csv
+2026-04-01 14:04:10 | src.utils.io | INFO | Reading data/mimic III/physionet.org/files/mimiciii/1.4/D_ICD_PROCEDURES.csv.gz
+2026-04-01 14:04:10 | src.utils.io | INFO | Saved 3882 rows → data/interim/mimiciii/d_icd_procedures.csv
+2026-04-01 14:04:10 | src.data.extract_mimic_tables | INFO | Extraction complete — 6 tables saved to data/interim/mimiciii
+2026-04-01 14:04:10 | __main__ | INFO | === Step 2: Build patient visits ===
+2026-04-01 14:04:20 | src.utils.io | INFO | Saved 58976 rows → data/interim/mimiciii/patient_visits.csv
+2026-04-01 14:04:20 | src.data.build_patient_visits | INFO | Built 58976 visits for 46520 patients
+2026-04-01 14:04:20 | __main__ | INFO | === Step 3: Build visit pairs ===
+2026-04-01 14:04:21 | src.data.build_visit_pairs | INFO | Patients with >= 2 visits: 7537
+2026-04-01 14:04:21 | src.utils.io | INFO | Saved 12456 rows → data/interim/mimiciii/visit_pairs.csv
+2026-04-01 14:04:21 | src.data.build_visit_pairs | INFO | Created 12456 visit pairs
+2026-04-01 14:04:21 | __main__ | INFO | === Step 4: Add target labels ===
+2026-04-01 14:04:21 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/target_label_report.json
+2026-04-01 14:04:21 | src.utils.io | INFO | Saved 2 rows → data/outputs/mimiciii/label_distribution.csv
+2026-04-01 14:04:21 | src.data.build_target_labels | INFO | Target label — total=12456  pos=3416  neg=9040  prevalence=27.42%
+2026-04-01 14:04:21 | __main__ | INFO | Label report: {'total_records': 12456, 'positive': 3416, 'negative': 9040, 'prevalence': 0.2742, 'example_positive': [{'pair_id': 0, 'hadm_id_current': 194023, 'hadm_id_next': 161087, 'diagnoses_codes_next': '4239;5119;78551;4589;311;7220;71946;2724'}, {'pair_id': 2, 'hadm_id_current': 152223, 'hadm_id_next': 124321, 'diagnoses_codes_next': '2252;3485;78039;4241;4019;2720;2724;V4581;V4579;V1582'}, {'pair_id': 10, 'hadm_id_current': 116630, 'hadm_id_next': 112077, 'diagnoses_codes_next': '0389;486;V4281;23875;42731;41400;3004;2724;2449;60001;78843;32723;3320;3051;V1079;V4581;V433;99591;5853'}], 'example_negative': [{'pair_id': 1, 'hadm_id_current': 109451, 'hadm_id_next': 111970, 'diagnoses_codes_next': '0388;78552;40391;42731;70709;5119;6823;99859;00845;5720;99592;V0980;25000;2859;43889;2749;41401;185;4439;2449;E8788'}, {'pair_id': 3, 'hadm_id_current': 115799, 'hadm_id_next': 144319, 'diagnoses_codes_next': '42789;42822;4263;41401;V5861;4280;2449;3659'}, {'pair_id': 4, 'hadm_id_current': 182104, 'hadm_id_next': 122659, 'diagnoses_codes_next': '99831;99811;41511;4538;99672;496;41401;V4581;4019;60000;53081;V1051'}]}
+2026-04-01 14:04:21 | __main__ | INFO | Subsampled to data.max_pairs=3000 rows for this run
+2026-04-01 14:04:21 | __main__ | INFO | === Step 5: Build narratives ===
+2026-04-01 14:04:22 | src.data.code_mappings | INFO | Loaded 14567 diagnosis code mappings
+2026-04-01 14:04:22 | src.data.code_mappings | INFO | Loaded 3809 procedure code mappings
+2026-04-01 14:04:23 | src.data.code_mappings | WARNING | Missing diagnosis mappings: 73 unique codes
+2026-04-01 14:04:23 | src.data.code_mappings | WARNING | Missing procedure mappings: 7 unique codes
+2026-04-01 14:04:23 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/code_mapping_missing.json
+2026-04-01 14:04:23 | __main__ | INFO | === Step 6: Create train/test split ===
+2026-04-01 14:04:32 | src.utils.io | INFO | Saved 2250 rows → data/processed/mimiciii/train.csv
+2026-04-01 14:04:32 | src.utils.io | INFO | Saved 750 rows → data/processed/mimiciii/test.csv
+2026-04-01 14:04:33 | src.utils.io | INFO | Saved 3000 rows → data/processed/mimiciii/full_dataset.csv
+2026-04-01 14:04:33 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/processed_dataset_summary.json
+2026-04-01 14:04:33 | __main__ | INFO | Preprocessing complete: {'total_pairs': 3000, 'train_size': 2250, 'test_size': 750, 'train_prevalence': 0.2769, 'test_prevalence': 0.2773}
+2026-04-01 14:04:36 | src.ml.feature_builder | INFO | Bag-of-codes features: 2250 train × 4714 features
+2026-04-01 14:04:36 | __main__ | INFO | === Fully Supervised ML Baselines ===
+2026-04-01 14:04:36 | src.ml.train_baselines | INFO | Trained decision_tree on 2250 samples
+2026-04-01 14:04:37 | src.ml.train_baselines | INFO | Trained logistic_regression on 2250 samples
+2026-04-01 14:04:38 | src.ml.train_baselines | INFO | Trained random_forest on 2250 samples
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | decision_tree (fully_supervised): {'accuracy': '73.73', 'sensitivity': '49.52', 'specificity': '83.03', 'f1': '51.12'}
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | logistic_regression (fully_supervised): {'accuracy': '74.80', 'sensitivity': '46.63', 'specificity': '85.61', 'f1': '50.65'}
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | random_forest (fully_supervised): {'accuracy': '76.13', 'sensitivity': '26.44', 'specificity': '95.20', 'f1': '38.06'}
+2026-04-01 14:04:38 | src.utils.io | INFO | Saved 3 rows → data/outputs/mimiciii/ml_results_fully_supervised.csv
+2026-04-01 14:04:38 | __main__ | INFO | === Few-Shot ML Baselines ===
+2026-04-01 14:04:38 | src.data.exemplar_selector | INFO | Selected 6 exemplars (3 pos, 3 neg) with strategy=random_balanced
+2026-04-01 14:04:38 | src.utils.io | INFO | Saved 6 rows → data/outputs/mimiciii/ml_few_shot_exemplar_ids.csv
+2026-04-01 14:04:38 | src.ml.feature_builder | INFO | Bag-of-codes features: 6 train × 303 features
+2026-04-01 14:04:38 | src.ml.train_baselines | INFO | Trained decision_tree on 6 samples
+2026-04-01 14:04:38 | src.ml.train_baselines | INFO | Trained logistic_regression on 6 samples
+2026-04-01 14:04:38 | src.ml.train_baselines | INFO | Trained random_forest on 6 samples
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | decision_tree (few_shot): {'accuracy': '63.33', 'sensitivity': '28.37', 'specificity': '76.75', 'f1': '30.03'}
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | logistic_regression (few_shot): {'accuracy': '64.67', 'sensitivity': '18.27', 'specificity': '82.47', 'f1': '22.29'}
+2026-04-01 14:04:38 | src.ml.eval_baselines | INFO | random_forest (few_shot): {'accuracy': '62.53', 'sensitivity': '22.60', 'specificity': '77.86', 'f1': '25.07'}
+2026-04-01 14:04:38 | src.utils.io | INFO | Saved 3 rows → data/outputs/mimiciii/ml_results_few_shot.csv
+2026-04-01 14:04:38 | src.utils.io | INFO | Saved 6 rows → data/outputs/mimiciii/ml_results.csv
+2026-04-01 14:04:38 | __main__ | INFO | ML baselines complete
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | LLMClient — EHR_SMOKETEST_FAKE_LLM set; remote provider not initialised
+2026-04-01 14:04:40 | src.llm.api_clients | INFO | LLMClient initialised — provider=openai  model=smoke-fake-llm
+2026-04-01 14:04:40 | __main__ | INFO | === Running Zero-Shot ===
+LLM zero_shot:   0%|          | 0/12 [00:00<?, ?it/s]2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/2404.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/1425.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/611.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/1657.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/1616.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/644.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/799.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/280.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/2115.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/2933.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/482.json
+2026-04-01 14:04:40 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot/647.json
+LLM zero_shot: 100%|██████████| 12/12 [00:00<00:00, 251.35it/s]
+2026-04-01 14:04:40 | src.evaluation.evaluate_llm_runs | INFO | Mode=zero_shot: 12 total, 0 unparseable (0.0%)
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved 12 rows → data/outputs/mimiciii/llm_zero_shot_results.csv
+2026-04-01 14:04:40 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/llm_zero_shot_metrics.json
+2026-04-01 14:04:40 | src.evaluation.evaluate_llm_runs | INFO | Mode=zero_shot metrics: ACC=91.67  Sens=0.00  Spec=100.00  F1=0.00
+2026-04-01 14:04:40 | __main__ | INFO | Zero-shot complete: {'accuracy': 91.67, 'sensitivity': np.float64(0.0), 'specificity': np.float64(100.0), 'f1': 0.0, 'tp': 0, 'fp': 0, 'tn': 11, 'fn': 1, 'mode': 'zero_shot', 'model': 'smoke-fake-llm', 'n_total': 12, 'n_valid': 12, 'n_unparseable': 0}
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | LLMClient — EHR_SMOKETEST_FAKE_LLM set; remote provider not initialised
+2026-04-01 14:04:41 | src.llm.api_clients | INFO | LLMClient initialised — provider=openai  model=smoke-fake-llm
+2026-04-01 14:04:41 | __main__ | INFO | === Running Zero-Shot+ ===
+LLM zero_shot_plus:   0%|          | 0/12 [00:00<?, ?it/s]2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/2404.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/1425.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/611.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/1657.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/1616.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/644.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/799.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/280.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/2115.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/2933.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/482.json
+2026-04-01 14:04:41 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/zero_shot_plus/647.json
+LLM zero_shot_plus: 100%|██████████| 12/12 [00:00<00:00, 225.78it/s]
+2026-04-01 14:04:41 | src.evaluation.evaluate_llm_runs | INFO | Mode=zero_shot_plus: 12 total, 0 unparseable (0.0%)
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved 12 rows → data/outputs/mimiciii/llm_zero_shot_plus_results.csv
+2026-04-01 14:04:41 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/llm_zero_shot_plus_metrics.json
+2026-04-01 14:04:41 | src.evaluation.evaluate_llm_runs | INFO | Mode=zero_shot_plus metrics: ACC=91.67  Sens=0.00  Spec=100.00  F1=0.00
+2026-04-01 14:04:41 | __main__ | INFO | Zero-shot+ complete: {'accuracy': 91.67, 'sensitivity': np.float64(0.0), 'specificity': np.float64(100.0), 'f1': 0.0, 'tp': 0, 'fp': 0, 'tn': 11, 'fn': 1, 'mode': 'zero_shot_plus', 'model': 'smoke-fake-llm', 'n_total': 12, 'n_valid': 12, 'n_unparseable': 0}
+2026-04-01 14:04:43 | src.data.exemplar_selector | INFO | Selected 4 exemplars (2 pos, 2 neg) with strategy=random_balanced
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved 4 rows → data/outputs/mimiciii/llm_few_shot_exemplars.csv
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | LLMClient — EHR_SMOKETEST_FAKE_LLM set; remote provider not initialised
+2026-04-01 14:04:43 | src.llm.api_clients | INFO | LLMClient initialised — provider=openai  model=smoke-fake-llm
+2026-04-01 14:04:43 | __main__ | INFO | === Running Few-Shot ===
+LLM few_shot:   0%|          | 0/12 [00:00<?, ?it/s]2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2404.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1425.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/611.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1657.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1616.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/644.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/799.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/280.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2115.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2933.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/482.json
+2026-04-01 14:04:43 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/647.json
+LLM few_shot: 100%|██████████| 12/12 [00:00<00:00, 222.01it/s]
+2026-04-01 14:04:43 | src.evaluation.evaluate_llm_runs | INFO | Mode=few_shot: 12 total, 0 unparseable (0.0%)
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved 12 rows → data/outputs/mimiciii/llm_few_shot_results.csv
+2026-04-01 14:04:43 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/llm_few_shot_metrics.json
+2026-04-01 14:04:43 | src.evaluation.evaluate_llm_runs | INFO | Mode=few_shot metrics: ACC=91.67  Sens=0.00  Spec=100.00  F1=0.00
+2026-04-01 14:04:43 | __main__ | INFO | Few-shot complete: {'accuracy': 91.67, 'sensitivity': np.float64(0.0), 'specificity': np.float64(100.0), 'f1': 0.0, 'tp': 0, 'fp': 0, 'tn': 11, 'fn': 1, 'mode': 'few_shot', 'model': 'smoke-fake-llm', 'n_total': 12, 'n_valid': 12, 'n_unparseable': 0}
+2026-04-01 14:04:44 | src.data.exemplar_selector | INFO | Selected 4 exemplars (2 pos, 2 neg) with strategy=random_balanced
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | LLMClient — EHR_SMOKETEST_FAKE_LLM set; remote provider not initialised
+2026-04-01 14:04:44 | src.llm.api_clients | INFO | LLMClient initialised — provider=openai  model=smoke-fake-llm
+2026-04-01 14:04:44 | __main__ | INFO | === Running EHR-CoAgent Pipeline ===
+2026-04-01 14:04:44 | src.llm.coagent | INFO | Step 1: Running few-shot predictor on calibration set (n=24)
+LLM few_shot:   0%|          | 0/24 [00:00<?, ?it/s]2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2992.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1149.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2535.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/610.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1931.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2075.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2895.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2968.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/91.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2185.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2407.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/394.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2620.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2201.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1779.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1040.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1963.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1294.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/699.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2879.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2893.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/475.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/1473.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/few_shot/2235.json
+LLM few_shot: 100%|██████████| 24/24 [00:00<00:00, 340.52it/s]
+2026-04-01 14:04:44 | src.llm.coagent | INFO | Step 2: Found 7 wrong predictions out of 24 calibration samples
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved 7 rows → data/outputs/mimiciii/critic_feedback/wrong_predictions_sampled.csv
+2026-04-01 14:04:44 | src.llm.coagent | INFO | Step 3: Running critic agent (2 rounds, batch_size=4)
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.llm.critic | INFO | Critic round 0 — generated 110 chars of feedback
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.llm.critic | INFO | Critic round 1 — generated 110 chars of feedback
+2026-04-01 14:04:44 | src.llm.coagent | INFO | Step 4: Consolidating feedback (method=llm)
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.llm.critic | INFO | Consolidated feedback: 170 chars
+2026-04-01 14:04:44 | src.llm.coagent | INFO | Step 5: Re-running predictor on test set with critic feedback
+LLM coagent:   0%|          | 0/12 [00:00<?, ?it/s]2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/2404.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/1425.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/611.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/1657.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/1616.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/644.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/799.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/280.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/2115.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/2933.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/482.json
+2026-04-01 14:04:44 | src.llm.api_clients | WARNING | EHR_SMOKETEST_FAKE_LLM active — not calling remote API
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/raw_llm_responses/coagent/647.json
+LLM coagent: 100%|██████████| 12/12 [00:00<00:00, 226.80it/s]
+2026-04-01 14:04:44 | src.evaluation.evaluate_llm_runs | INFO | Mode=coagent: 12 total, 0 unparseable (0.0%)
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved 12 rows → data/outputs/mimiciii/llm_coagent_results.csv
+2026-04-01 14:04:44 | src.utils.io | INFO | Saved JSON → data/outputs/mimiciii/llm_coagent_metrics.json
+2026-04-01 14:04:44 | src.evaluation.evaluate_llm_runs | INFO | Mode=coagent metrics: ACC=91.67  Sens=0.00  Spec=100.00  F1=0.00
+2026-04-01 14:04:44 | __main__ | INFO | EHR-CoAgent complete: {'accuracy': 91.67, 'sensitivity': np.float64(0.0), 'specificity': np.float64(100.0), 'f1': 0.0, 'tp': 0, 'fp': 0, 'tn': 11, 'fn': 1, 'mode': 'coagent', 'model': 'smoke-fake-llm', 'n_total': 12, 'n_valid': 12, 'n_unparseable': 0}
+2026-04-01 14:04:45 | src.utils.io | INFO | Saved 10 rows → data/outputs/mimiciii/summary_table.csv
+2026-04-01 14:04:45 | src.evaluation.summarize_results | INFO | Summary table:
+              Model         Approach   ACC  Sensitivity  Specificity    F1
+      decision_tree Fully Supervised 73.73        49.52        83.03 51.12
+logistic_regression Fully Supervised 74.80        46.63        85.61 50.65
+      random_forest Fully Supervised 76.13        26.44        95.20 38.06
+      decision_tree         Few Shot 63.33        28.37        76.75 30.03
+logistic_regression         Few Shot 64.67        18.27        82.47 22.29
+      random_forest         Few Shot 62.53        22.60        77.86 25.07
+     smoke-fake-llm        Zero-Shot 91.67         0.00       100.00  0.00
+     smoke-fake-llm       Zero-Shot+ 91.67         0.00       100.00  0.00
+     smoke-fake-llm   Few-Shot (N=6) 91.67         0.00       100.00  0.00
+     smoke-fake-llm      EHR-CoAgent 91.67         0.00       100.00  0.00
