@@ -1,5 +1,7 @@
 # EHR-Agentic-AI
 
+![Workflow](image/image.png)
+
 This README summarizes the repository’s MIMIC-III next-visit prediction pipeline, including ML and LLM input pathways, implemented approaches, archived results, documentation map, and reproducible run commands.
 
 Predict whether **Disorders of Lipid Metabolism** (ICD-9 `272.x` / CCS-53) appear on a patient’s **next** hospital admission, using the **current** admission only — implemented on **MIMIC-III** visit pairs with classical ML baselines and **OpenAI** LLM prompts (zero-shot, zero-shot+, few-shot, EHR-CoAgent).
