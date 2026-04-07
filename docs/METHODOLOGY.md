@@ -1,6 +1,18 @@
 # MIMIC-III Next-Visit Prediction — Methodology and Project Steps
 
+This methodology note summarizes the implemented end-to-end pipeline for MIMIC-III next-visit lipid-disorder prediction, including cohort construction, ML and LLM modeling tracks, evaluation setup, run configuration, and primary artifacts for reproducibility.
+
 Concise reference for advising meetings. Code lives under `src/`; configuration under `configs/`.
+
+## Table of Contents
+- [1. Objective](#1-objective)
+- [2. Data and cohort](#2-data-and-cohort)
+- [3. Train / test split](#3-train--test-split)
+- [4. Classical ML baselines](#4-classical-ml-baselines)
+- [5. LLM experiments](#5-llm-experiments)
+- [6. Evaluation metrics](#6-evaluation-metrics)
+- [7. What we configured and ran](#7-what-we-configured-and-ran)
+- [8. Primary output locations](#8-primary-output-locations)
 
 ## 1. Objective
 

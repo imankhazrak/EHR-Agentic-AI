@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>COMPARATIVE_RESULTS_REPORT_ML_AND_LLM</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">COMPARATIVE_RESULTS_REPORT_ML_AND_LLM</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#comparative-results-report-classical-ml-vs-llm-approaches">Comparative Results Report — Classical ML vs LLM Approaches</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#task-and-evaluation-shared">1. Task and evaluation (shared)</a></li>
+<li><a href="#complete-classical-ml-results">2. Complete classical ML results</a>
+<ul>
+<li><a href="#fully-supervised-full-training-set">2.1 Fully supervised (full training set)</a></li>
+<li><a href="#few-shot-ml-n-6-labeled-training-examples">2.2 Few-shot ML (N = 6 labeled training examples)</a></li>
+</ul></li>
+<li><a href="#complete-llm-results-gpt-4o-mini-2024-07-18">3. Complete LLM results (<code>gpt-4o-mini-2024-07-18</code>)</a></li>
+<li><a href="#intra-family-comparisons">4. Intra-family comparisons</a>
+<ul>
+<li><a href="#intra-ml-fully-supervised">4.1 Intra-ML — fully supervised</a></li>
+<li><a href="#intra-ml-few-shot-n6-vs-fully-supervised">4.2 Intra-ML — few-shot (N=6) vs fully supervised</a></li>
+<li><a href="#intra-llm-ranking-and-deltas-vs-zero-shot">4.3 Intra-LLM — ranking and deltas vs zero-shot</a></li>
+</ul></li>
+<li><a href="#inter-family-comparisons-ml-vs-llm">5. Inter-family comparisons (ML vs LLM)</a>
+<ul>
+<li><a href="#best-in-class-vs-best-llm-this-run">5.1 Best-in-class vs best LLM (this run)</a></li>
+<li><a href="#llm-vs-strongest-reasonable-ml-baseline">5.2 LLM vs strongest “reasonable” ML baseline</a></li>
+<li><a href="#llm-few-shot-in-context-vs-ml-few-shot-parameter-learning">5.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)</a></li>
+<li><a href="#modality-caveat">5.4 Modality caveat</a></li>
+</ul></li>
+<li><a href="#summary-matrix-all-twelve-configurations">6. Summary matrix (all twelve configurations)</a></li>
+<li><a href="#conclusions">7. Conclusions</a></li>
+<li><a href="#artifact-map">8. Artifact map</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="comparative-results-report-classical-ml-vs-llm-approaches">Comparative Results Report — Classical ML vs LLM Approaches</h1>
+<p>This report summarizes the completed MIMIC-III lipid-disorder next-visit prediction experiments, covering both classical ML and LLM pipelines. It presents full metric tables, confusion-level outcomes, and structured intra-family and inter-family comparisons to clarify performance trade-offs across approaches.</p>
+<p><strong>MIMIC-III next-visit prediction:</strong> Disorders of Lipid Metabolism (binary), held-out test evaluation.</p>
+<p>This report consolidates <strong>all</strong> classical ML and LLM results from the completed pipeline, then compares approaches <strong>within</strong> each family (intra-) and <strong>between</strong> families (inter-). Numbers are taken from <code>data/outputs/mimiciii/summary_table.csv</code>, <code>ml_results_*.csv</code>, and <code>llm_*_metrics.json</code> as produced by a full run.</p>
+<p><strong>Related:</strong> <code>docs/LLM_EXPERIMENT_REPORT.md</code> (LLM-only deep dive), <code>METHODOLOGY.md</code> (pipeline).</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#1-task-and-evaluation-shared">1. Task and evaluation (shared)</a></li>
+<li><a href="#2-complete-classical-ml-results">2. Complete classical ML results</a>
+<ul>
+<li><a href="#21-fully-supervised-full-training-set">2.1 Fully supervised (full training set)</a></li>
+<li><a href="#22-few-shot-ml-n--6-labeled-training-examples">2.2 Few-shot ML (N = 6 labeled training examples)</a></li>
+</ul></li>
+<li><a href="#3-complete-llm-results-gpt-4o-mini-2024-07-18">3. Complete LLM results (<code>gpt-4o-mini-2024-07-18</code>)</a></li>
+<li><a href="#4-intra-family-comparisons">4. Intra-family comparisons</a>
+<ul>
+<li><a href="#41-intra-ml--fully-supervised">4.1 Intra-ML — fully supervised</a></li>
+<li><a href="#42-intra-ml--few-shot-n6-vs-fully-supervised">4.2 Intra-ML — few-shot (N=6) vs fully supervised</a></li>
+<li><a href="#43-intra-llm--ranking-and-deltas-vs-zero-shot">4.3 Intra-LLM — ranking and deltas vs zero-shot</a></li>
+</ul></li>
+<li><a href="#5-inter-family-comparisons-ml-vs-llm">5. Inter-family comparisons (ML vs LLM)</a>
+<ul>
+<li><a href="#51-best-in-class-vs-best-llm-this-run">5.1 Best-in-class vs best LLM (this run)</a></li>
+<li><a href="#52-llm-vs-strongest-reasonable-ml-baseline">5.2 LLM vs strongest “reasonable” ML baseline</a></li>
+<li><a href="#53-llm-few-shot-in-context-vs-ml-few-shot-parameter-learning">5.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)</a></li>
+<li><a href="#54-modality-caveat">5.4 Modality caveat</a></li>
+</ul></li>
+<li><a href="#6-summary-matrix-all-twelve-configurations">6. Summary matrix (all twelve configurations)</a></li>
+<li><a href="#7-conclusions">7. Conclusions</a></li>
+<li><a href="#8-artifact-map">8. Artifact map</a></li>
+</ul>
+<h2 id="task-and-evaluation-shared">1. Task and evaluation (shared)</h2>
+<table>
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Target</strong></td>
+<td>Presence of lipid-metabolism ICD-9 codes (<code>272.x</code> / CCS-53 family) on the <strong>next</strong> hospital admission</td>
+</tr>
+<tr class="even">
+<td><strong>Test unit</strong></td>
+<td>Visit-pair rows; <strong>stratified</strong> hold-out (<strong>20%</strong> test, seed <strong>42</strong>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Metrics</strong></td>
+<td>Accuracy (ACC), <strong>Sensitivity</strong> (recall on positives), <strong>Specificity</strong>, <strong>F1</strong> (positive class); all in <strong>%</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Positive prevalence (test)</strong></td>
+<td>Positives ≈ <strong>tp + fn</strong> on fully parsed rows → <strong>683 / 2492 ≈ 27.4%</strong> (zero-shot LLM row; consistent across modes after accounting for dropped unparseables)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Input modality differs by family:</strong></p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Family</th>
+<th>Input representation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Classical ML</strong></td>
+<td><strong>Bag-of-codes</strong> on diagnosis / procedure / medication strings from the <strong>current</strong> visit (<code>feature_type: bag_of_codes</code>)</td>
+</tr>
+<tr class="even">
+<td><strong>LLM</strong></td>
+<td><strong>Natural-language narrative</strong> (<code>narrative_current</code>) from the same current visit</td>
+</tr>
+</tbody>
+</table>
+<p>Metrics are <strong>not</strong> directly comparable as “fairness of model class” because features differ; they <strong>are</strong> comparable as <strong>end-to-end systems</strong> under the same labels and split.</p>
+<hr />
+<h2 id="complete-classical-ml-results">2. Complete classical ML results</h2>
+<h3 id="fully-supervised-full-training-set">2.1 Fully supervised (full training set)</h3>
+<p>Trained on all training pairs; evaluated on the same test split as the rest of the pipeline.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>ACC</th>
+<th>Sensitivity</th>
+<th>Specificity</th>
+<th>F1</th>
+<th>tp</th>
+<th>fp</th>
+<th>tn</th>
+<th>fn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision Tree</td>
+<td>73.48</td>
+<td>50.66</td>
+<td>82.09</td>
+<td>51.15</td>
+<td>346</td>
+<td>324</td>
+<td>1485</td>
+<td>337</td>
+</tr>
+<tr class="even">
+<td>Logistic Regression</td>
+<td><strong>77.05</strong></td>
+<td>47.73</td>
+<td><strong>88.11</strong></td>
+<td><strong>53.27</strong></td>
+<td>326</td>
+<td>215</td>
+<td>1594</td>
+<td>357</td>
+</tr>
+<tr class="odd">
+<td>Random Forest</td>
+<td>76.44</td>
+<td>24.01</td>
+<td><strong>96.24</strong></td>
+<td>35.85</td>
+<td>164</td>
+<td>68</td>
+<td>1741</td>
+<td>519</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <code>ml_results_fully_supervised.csv</code> / <code>summary_table.csv</code>.</p>
+<h3 id="few-shot-ml-n-6-labeled-training-examples">2.2 Few-shot ML (N = 6 labeled training examples)</h3>
+<p>Same models and features, but each model is <strong>fit</strong> on only <strong>6</strong> labeled rows (<code>ml.few_shot_n: 6</code>, balanced), then evaluated on the full test set.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>ACC</th>
+<th>Sensitivity</th>
+<th>Specificity</th>
+<th>F1</th>
+<th>tp</th>
+<th>fp</th>
+<th>tn</th>
+<th>fn</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision Tree</td>
+<td><strong>61.40</strong></td>
+<td>56.52</td>
+<td>63.24</td>
+<td>44.52</td>
+<td>386</td>
+<td>665</td>
+<td>1144</td>
+<td>297</td>
+</tr>
+<tr class="even">
+<td>Logistic Regression</td>
+<td>35.27</td>
+<td><strong>90.34</strong></td>
+<td>14.48</td>
+<td>43.34</td>
+<td>617</td>
+<td>1547</td>
+<td>262</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>Random Forest</td>
+<td>34.95</td>
+<td><strong>92.53</strong></td>
+<td>13.21</td>
+<td>43.81</td>
+<td>632</td>
+<td>1570</td>
+<td>239</td>
+<td>51</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <code>ml_results_few_shot.csv</code> / <code>summary_table.csv</code>.</p>
+<hr />
+<h2 id="complete-llm-results-gpt-4o-mini-2024-07-18">3. Complete LLM results (<code>gpt-4o-mini-2024-07-18</code>)</h2>
+<p>Single underlying chat model; four <strong>prompting</strong> strategies. One completion per test row (coagent adds extra calls on calibration/critic only).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>ACC</th>
+<th>Sensitivity</th>
+<th>Specificity</th>
+<th>F1</th>
+<th>tp</th>
+<th>fp</th>
+<th>tn</th>
+<th>fn</th>
+<th>n_valid</th>
+<th>n_unparseable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td>80.82</td>
+<td>57.69</td>
+<td>89.55</td>
+<td>62.24</td>
+<td>394</td>
+<td>189</td>
+<td>1620</td>
+<td>289</td>
+<td>2492</td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td>80.73</td>
+<td>56.22</td>
+<td><strong>89.99</strong></td>
+<td>61.54</td>
+<td>384</td>
+<td>181</td>
+<td>1627</td>
+<td>299</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Few-Shot (N=6)</td>
+<td>80.65</td>
+<td>57.39</td>
+<td>89.44</td>
+<td>61.93</td>
+<td>392</td>
+<td>191</td>
+<td>1617</td>
+<td>291</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>EHR-CoAgent</strong></td>
+<td><strong>80.93</strong></td>
+<td><strong>58.21</strong></td>
+<td>89.50</td>
+<td><strong>62.57</strong></td>
+<td><strong>397</strong></td>
+<td>190</td>
+<td>1619</td>
+<td>285</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <code>llm_*_metrics.json</code> / <code>summary_table.csv</code>.</p>
+<p><strong>Note:</strong> Rows with <strong>unparseable</strong> assistant text are <strong>excluded</strong> from tp/fp/tn/fn but counted in <code>n_unparseable</code>; three modes show <strong>one</strong> such test example in this run.</p>
+<hr />
+<h2 id="intra-family-comparisons">4. Intra-family comparisons</h2>
+<h3 id="intra-ml-fully-supervised">4.1 Intra-ML — fully supervised</h3>
+<p><strong>Ranking by F1 (primary balance of precision/recall on minority positive class):</strong></p>
+<ol type="1">
+<li>Logistic Regression — <strong>53.27</strong></li>
+<li>Decision Tree — 51.15</li>
+<li>Random Forest — 35.85</li>
+</ol>
+<p><strong>Ranking by accuracy:</strong></p>
+<ol type="1">
+<li><strong>Logistic Regression — 77.05</strong></li>
+<li>Random Forest — 76.44</li>
+<li>Decision Tree — 73.48</li>
+</ol>
+<p><strong>Sensitivity vs specificity trade-off:</strong></p>
+<ul>
+<li><strong>Random Forest</strong> maximizes <strong>specificity (96.24%)</strong> and minimizes positives predicted, at the cost of <strong>very low sensitivity (24.01%)</strong> and weak F1 — it rarely predicts the positive class.</li>
+<li><strong>Logistic regression</strong> offers the <strong>best overall</strong> mix for this task among the three under full supervision.</li>
+</ul>
+<p><strong>Takeaway:</strong> Under full supervision, <strong>logistic regression</strong> on bag-of-codes is the strongest classical baseline in both ACC and F1; <strong>random forest</strong> is miscalibrated for sensitivity on this skewed label.</p>
+<hr />
+<h3 id="intra-ml-few-shot-n6-vs-fully-supervised">4.2 Intra-ML — few-shot (N=6) vs fully supervised</h3>
+<p><strong>Δ = few_shot − fully_supervised</strong> (same model):</p>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Δ ACC</th>
+<th>Δ Sens</th>
+<th>Δ Spec</th>
+<th>Δ F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision Tree</td>
+<td>−12.08</td>
+<td>+5.86</td>
+<td>−18.85</td>
+<td>−6.63</td>
+</tr>
+<tr class="even">
+<td>Logistic Regression</td>
+<td><strong>−41.78</strong></td>
+<td>+42.61</td>
+<td>−73.63</td>
+<td>−9.93</td>
+</tr>
+<tr class="odd">
+<td>Random Forest</td>
+<td><strong>−41.49</strong></td>
+<td>+68.52</td>
+<td>−83.03</td>
+<td>+7.96</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Training on <strong>only six</strong> rows is <strong>catastrophic</strong> for <strong>accuracy</strong> for linear and forest models: they <strong>over-predict positive</strong> (huge <strong>fp</strong>), yielding <strong>high sensitivity</strong> but <strong>very low specificity</strong> and <strong>ACC ~35%</strong>.</li>
+<li>The <strong>decision tree</strong> degrades more gracefully (ACC 61%) but still <strong>hurts specificity</strong> vs full training.</li>
+<li><strong>Takeaway:</strong> “Few-shot” for ML here means <strong>extreme underfitting / instability</strong> on bag-of-codes; it is <strong>not</strong> analogous to LLM in-context few-shot, which does not re-estimate thousands of feature weights from six points.</li>
+</ul>
+<hr />
+<h3 id="intra-llm-ranking-and-deltas-vs-zero-shot">4.3 Intra-LLM — ranking and deltas vs zero-shot</h3>
+<p><strong>Ranking by F1:</strong></p>
+<ol type="1">
+<li><strong>EHR-CoAgent — 62.57</strong></li>
+<li>Zero-Shot — 62.24</li>
+<li>Few-Shot (N=6) — 61.93</li>
+<li>Zero-Shot+ — 61.54</li>
+</ol>
+<p><strong>Ranking by accuracy:</strong></p>
+<ol type="1">
+<li><strong>EHR-CoAgent — 80.93</strong></li>
+<li>Zero-Shot — 80.82</li>
+<li>Zero-Shot+ — 80.73</li>
+<li>Few-Shot (N=6) — 80.65</li>
+</ol>
+<p><strong>Δ vs zero-shot</strong> (percentage points):</p>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Δ ACC</th>
+<th>Δ Sens</th>
+<th>Δ Spec</th>
+<th>Δ F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot+</td>
+<td>−0.09</td>
+<td>−1.47</td>
+<td>+0.44</td>
+<td>−0.70</td>
+</tr>
+<tr class="even">
+<td>Few-Shot (N=6)</td>
+<td>−0.17</td>
+<td>−0.30</td>
+<td>−0.11</td>
+<td>−0.31</td>
+</tr>
+<tr class="odd">
+<td>EHR-CoAgent</td>
+<td><strong>+0.11</strong></td>
+<td><strong>+0.52</strong></td>
+<td>−0.05</td>
+<td><strong>+0.33</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>All four LLM configurations sit in a <strong>tight band</strong> (~80.6–80.9% ACC, ~61.5–62.6% F1). Differences are <strong>small relative to sampling noise</strong> (no bootstrap CIs were computed by default).</li>
+<li><strong>Zero-shot+</strong> slightly shifts toward <strong>higher specificity</strong>, <strong>lower sensitivity</strong> vs plain zero-shot (consistent with longer instructions + prevalence text).</li>
+<li><strong>EHR-CoAgent</strong> nudges <strong>sensitivity and F1</strong> upward vs zero-shot by a few <strong>counts</strong> in the confusion matrix (e.g. <strong>+3 tp</strong>, <strong>−4 fn</strong> vs zero-shot), but <strong>aggregate metrics barely move</strong>.</li>
+<li>Empirically, parsed <strong>Yes/No</strong> decisions agree with zero-shot on <strong>~98%+</strong> of test rows across modes (high <strong>decision correlation</strong>), which explains the <strong>flat</strong> leaderboard.</li>
+</ul>
+<p><strong>Takeaway:</strong> For this model and task, <strong>prompt engineering and coagent feedback</strong> produce <strong>marginal</strong> aggregate gains; the dominant signal is the <strong>shared model + narrative + label definition</strong>.</p>
+<hr />
+<h2 id="inter-family-comparisons-ml-vs-llm">5. Inter-family comparisons (ML vs LLM)</h2>
+<h3 id="best-in-class-vs-best-llm-this-run">5.1 Best-in-class vs best LLM (this run)</h3>
+<p>Compared to <strong>fully supervised</strong> ML only (stable models), versus <strong>EHR-CoAgent</strong>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Best fully supervised ML</th>
+<th>Best LLM (CoAgent)</th>
+<th>Δ (LLM − ML)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ACC</td>
+<td>77.05 (logistic regression)</td>
+<td><strong>80.93</strong></td>
+<td><strong>+3.88</strong></td>
+</tr>
+<tr class="even">
+<td>Sensitivity</td>
+<td>47.73 (logistic regression)</td>
+<td><strong>58.21</strong></td>
+<td><strong>+10.48</strong></td>
+</tr>
+<tr class="odd">
+<td>Specificity</td>
+<td>96.24 (random forest)</td>
+<td>89.50</td>
+<td>−6.74</td>
+</tr>
+<tr class="even">
+<td>F1</td>
+<td>53.27 (logistic regression)</td>
+<td><strong>62.57</strong></td>
+<td><strong>+9.30</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> <strong>ML few-shot</strong> runs reach <strong>higher raw sensitivity</strong> (e.g. logistic regression <strong>90.34%</strong>) but with <strong>very low specificity and ACC</strong>; they are <strong>not</strong> comparable as successful deployable models. Random forest (full) wins <strong>specificity</strong> by being <strong>very conservative</strong> on positives (low sensitivity <strong>24.01%</strong>).</p>
+<h3 id="llm-vs-strongest-reasonable-ml-baseline">5.2 LLM vs strongest “reasonable” ML baseline</h3>
+<p>Comparing <strong>EHR-CoAgent</strong> to <strong>fully supervised logistic regression</strong> (best ACC/F1 among stable ML):</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Logistic regression (full)</th>
+<th>EHR-CoAgent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ACC</td>
+<td>77.05</td>
+<td>80.93</td>
+</tr>
+<tr class="even">
+<td>F1</td>
+<td>53.27</td>
+<td>62.57</td>
+</tr>
+<tr class="odd">
+<td>Sensitivity</td>
+<td>47.73</td>
+<td>58.21</td>
+</tr>
+<tr class="even">
+<td>Specificity</td>
+<td>88.11</td>
+<td>89.50</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>On this split, the <strong>narrative + LLM</strong> pipeline achieves <strong>higher accuracy and much higher F1</strong> than the best classical baseline, driven mainly by <strong>better sensitivity</strong> while keeping <strong>specificity in the same ballpark</strong> as logistic regression.</li>
+<li><strong>Random forest</strong> (full) has higher <strong>specificity</strong> than the LLM but <strong>much worse F1</strong> due to missed positives.</li>
+</ul>
+<h3 id="llm-few-shot-in-context-vs-ml-few-shot-parameter-learning">5.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)</h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>ML few-shot (best ACC among DT/LR/RF)</th>
+<th>LLM Few-Shot (N=6)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Best model</td>
+<td>Decision Tree</td>
+<td>gpt-4o-mini</td>
+</tr>
+<tr class="even">
+<td>ACC</td>
+<td>61.40</td>
+<td><strong>80.65</strong></td>
+</tr>
+<tr class="odd">
+<td>F1</td>
+<td>44.52</td>
+<td><strong>61.93</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Takeaway:</strong> <strong>Six labels</strong> are enough to <strong>destabilize</strong> small-data <strong>fitted</strong> classifiers on high-dimensional sparse codes, but <strong>six in-context demonstrations</strong> for a pretrained LLM <strong>do not</strong> cause the same collapse. The comparison underscores that <strong>“few-shot”</strong> means <strong>different mechanisms</strong> in the two tracks.</p>
+<h3 id="modality-caveat">5.4 Modality caveat</h3>
+<p>LLM inputs are <strong>human-readable narratives</strong>; ML uses <strong>raw code tokens</strong>. Some information may be easier to exploit in text (e.g. phrasing, implicit structure); conversely, codes are <strong>complete</strong> up to extraction. <strong>Fair fusion</strong> (e.g. ensemble of both) is out of scope here but relevant for future work.</p>
+<hr />
+<h2 id="summary-matrix-all-twelve-configurations">6. Summary matrix (all twelve configurations)</h2>
+<p>Sorted by <strong>F1</strong> descending.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Rank</th>
+<th>Model</th>
+<th>Approach</th>
+<th>ACC</th>
+<th>Sens</th>
+<th>Spec</th>
+<th>F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>gpt-4o-mini</td>
+<td>EHR-CoAgent</td>
+<td>80.93</td>
+<td>58.21</td>
+<td>89.50</td>
+<td><strong>62.57</strong></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>gpt-4o-mini</td>
+<td>Zero-Shot</td>
+<td>80.82</td>
+<td>57.69</td>
+<td>89.55</td>
+<td>62.24</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>gpt-4o-mini</td>
+<td>Few-Shot (N=6)</td>
+<td>80.65</td>
+<td>57.39</td>
+<td>89.44</td>
+<td>61.93</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>gpt-4o-mini</td>
+<td>Zero-Shot+</td>
+<td>80.73</td>
+<td>56.22</td>
+<td>89.99</td>
+<td>61.54</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>logistic_regression</td>
+<td>Fully Supervised</td>
+<td>77.05</td>
+<td>47.73</td>
+<td>88.11</td>
+<td>53.27</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>random_forest</td>
+<td>Fully Supervised</td>
+<td>76.44</td>
+<td>24.01</td>
+<td>96.24</td>
+<td>35.85</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>decision_tree</td>
+<td>Fully Supervised</td>
+<td>73.48</td>
+<td>50.66</td>
+<td>82.09</td>
+<td>51.15</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>decision_tree</td>
+<td>Few Shot</td>
+<td>61.40</td>
+<td>56.52</td>
+<td>63.24</td>
+<td>44.52</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>logistic_regression</td>
+<td>Few Shot</td>
+<td>35.27</td>
+<td>90.34</td>
+<td>14.48</td>
+<td>43.34</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>random_forest</td>
+<td>Few Shot</td>
+<td>34.95</td>
+<td>92.53</td>
+<td>13.21</td>
+<td>43.81</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusions">7. Conclusions</h2>
+<ol type="1">
+<li><strong>Intra-ML:</strong> Full-data <strong>logistic regression</strong> is the best overall classical method on ACC/F1; <strong>random forest</strong> is conservative on positives. <strong>N=6 ML training</strong> is <strong>not</strong> viable for LR/RF on this feature setup.</li>
+<li><strong>Intra-LLM:</strong> All four prompting strategies perform <strong>similarly</strong>; <strong>EHR-CoAgent</strong> is <strong>marginally best</strong> on ACC/F1/sensitivity in this run.</li>
+<li><strong>Inter ML vs LLM:</strong> The best LLM configuration <strong>beats</strong> the best fully supervised ML baseline on <strong>ACC and F1</strong>, with <strong>higher sensitivity</strong> and <strong>comparable specificity</strong> to logistic regression. <strong>Input modality</strong> differs; interpret as <strong>system comparison</strong>, not a controlled ablation of model family alone.</li>
+<li><strong>Reporting:</strong> No <strong>bootstrap CIs</strong> or significance tests were run by default (<code>evaluation.bootstrap_ci: false</code>); small gaps between LLM modes should be read with that limitation.</li>
+</ol>
+<hr />
+<h2 id="artifact-map">8. Artifact map</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Artifact</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/summary_table.csv</code></td>
+<td>Combined table (source for Section 6)</td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/ml_results_fully_supervised.csv</code></td>
+<td>ML full-training metrics + confusion</td>
+</tr>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/ml_results_few_shot.csv</code></td>
+<td>ML N=6 metrics + confusion</td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/llm_*_metrics.json</code></td>
+<td>Per-mode LLM metrics + confusion + parse counts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Report reflects outputs stored under <code>data/outputs/mimiciii/</code> at the time of writing. Rerun the pipeline and refresh this document if configs, data, or prompts change.</em></p>
+</body>
+</html>

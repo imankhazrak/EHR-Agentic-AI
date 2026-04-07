@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>llm_prompt_modes_explained</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">llm_prompt_modes_explained</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#llm-prediction-modes-zero-shot-zero-shot-and-few-shot">LLM prediction modes: zero-shot, zero-shot+, and few-shot</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#the-task-identical-for-all-three-modes">1. The task (identical for all three modes)</a></li>
+<li><a href="#example-test-patient-shortened">2. Example test patient (shortened)</a></li>
+<li><a href="#zero-shot-end-to-end">3. Zero-shot — end-to-end</a></li>
+<li><a href="#zero-shot-what-changes">4. Zero-shot+ — what changes</a></li>
+<li><a href="#few-shot-llm-what-changes">5. Few-shot (LLM) — what changes</a></li>
+<li><a href="#summary-table">6. Summary table</a></li>
+<li><a href="#contrast-few-shot-for-classical-ml-in-summary_table.csv">7. Contrast: “Few Shot” for <strong>classical ML</strong> in <code>summary_table.csv</code></a></li>
+<li><a href="#related-files">8. Related files</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="llm-prediction-modes-zero-shot-zero-shot-and-few-shot">LLM prediction modes: zero-shot, zero-shot+, and few-shot</h1>
+<p>This guide explains, in end-to-end practical terms, how the three base LLM prompting modes differ in this repository and what is actually passed to the model at inference time.</p>
+<p>This note explains <strong>what actually happens</strong> in this repository when you run the three LLM approaches on the MIMIC-III lipid-disorder <strong>next-visit</strong> task. Use it for your own review or to brief someone else.</p>
+<p><strong>Scope:</strong> LLM modes only (not EHR-CoAgent, not classical ML). Implementation details live in <code>prompts/predictor_*.txt</code>, <code>src/llm/predictor.py</code>, <code>src/llm/prompt_builder.py</code>, and <code>src/data/exemplar_selector.py</code>.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#1-the-task-identical-for-all-three-modes">1. The task (identical for all three modes)</a></li>
+<li><a href="#2-example-test-patient-shortened">2. Example test patient (shortened)</a></li>
+<li><a href="#3-zero-shot--end-to-end">3. Zero-shot — end-to-end</a></li>
+<li><a href="#4-zero-shot--what-changes">4. Zero-shot+ — what changes</a></li>
+<li><a href="#5-few-shot-llm--what-changes">5. Few-shot (LLM) — what changes</a></li>
+<li><a href="#6-summary-table">6. Summary table</a></li>
+<li><a href="#7-contrast-few-shot-for-classical-ml-in-summary_tablecsv">7. Contrast: “Few Shot” for <strong>classical ML</strong> in <code>summary_table.csv</code></a></li>
+<li><a href="#8-related-files">8. Related files</a></li>
+</ul>
+<h2 id="the-task-identical-for-all-three-modes">1. The task (identical for all three modes)</h2>
+<ul>
+<li><strong>Input:</strong> A text <strong>narrative</strong> for the patient’s <strong>current</strong> hospital visit (<code>narrative_current</code> in <code>test.csv</code>): bullet lists of diagnoses, medications, procedures.</li>
+<li><strong>Question:</strong> Will <strong>“Disorders of Lipid Metabolism”</strong> appear as a diagnosis on the patient’s <strong>next</strong> hospital visit?</li>
+<li><strong>Model output:</strong> Natural language; the pipeline expects a first line like <code>Prediction: Yes</code> or <code>Prediction: No</code>, then optional reasoning (<code>src/llm/output_parser.py</code>).</li>
+<li><strong>Evaluation:</strong> Parsed Yes/No is compared to the binary label <code>label_lipid_disorder</code> (derived from <strong>next</strong> visit ICD codes, not shown to the model).</li>
+</ul>
+<p>The <strong>only</strong> thing that differs across zero-shot, zero-shot+, and few-shot is <strong>the text of the prompt</strong> sent to the API. There is <strong>no</strong> fine-tuning or weight updates for these modes.</p>
+<hr />
+<h2 id="example-test-patient-shortened">2. Example test patient (shortened)</h2>
+<p>Same fictional row for all three modes below:</p>
+<pre class="text"><code>- Diagnoses: Congestive heart failure; Atrial fibrillation
+- Medications: Furosemide; Warfarin; Atorvastatin
+- Procedures: None recorded</code></pre>
+<p>In a real run, this string comes from one row of <code>data/processed/mimiciii/test.csv</code> (one <code>pair_id</code>). The true label is computed from the <strong>next</strong> admission’s diagnoses; the model does <strong>not</strong> see the next visit.</p>
+<hr />
+<h2 id="zero-shot-end-to-end">3. Zero-shot — end-to-end</h2>
+<ol type="1">
+<li>Load the test row from <code>test.csv</code>.</li>
+<li>Render <code>prompts/predictor_zero_shot.txt</code> with Jinja: task rules, target definition, prediction clarification, then <strong><code>{{ narrative }}</code></strong> for this patient only.</li>
+<li>Build chat messages (<code>system</code> + <code>user</code>) via <code>build_messages</code> in <code>src/llm/prompt_builder.py</code>.</li>
+<li>Call <strong><code>gpt-4o-mini</code></strong> once per row (<code>temperature: 0</code> in <code>configs/default.yaml</code>).</li>
+<li>Parse the reply for Yes/No; merge with labels in <code>src/evaluation/evaluate_llm_runs.py</code>.</li>
+</ol>
+<p><strong>What the user message is like (schematic, not the full template):</strong></p>
+<pre class="text"><code>Task: ... predict whether &quot;Disorders of Lipid Metabolism&quot; will be present ...
+
+[Target Definition]
+... hypercholesterolemia, hyperlipidemia, ...
+
+[Prediction Clarification]
+... e.g. do not answer Yes based only on statins or CHF alone ...
+
+[Current Visit Record]
+- Diagnoses: Congestive heart failure; Atrial fibrillation
+- Medications: Furosemide; Warfarin; Atorvastatin
+- Procedures: None recorded
+
+[Output Format]
+Prediction: Yes / No on first line, then reasoning.</code></pre>
+<p><strong>Not included:</strong> the ~27.6% prevalence paragraph, the long structured <strong>[Instructions]</strong> block used in zero-shot+, and <strong>no</strong> demonstration cases from the training set.</p>
+<hr />
+<h2 id="zero-shot-what-changes">4. Zero-shot+ — what changes</h2>
+<p>Same test row, same API, same “one call per row.”</p>
+<p>Template: <code>prompts/predictor_zero_shot_plus.txt</code>.</p>
+<p><strong>Additions vs zero-shot:</strong></p>
+<ul>
+<li>Structured <strong>[Instructions]</strong> (longer analysis recipe: risk factors, medications, procedures, step-by-step reasoning).</li>
+<li>Explicit note that in the MIMIC-III population roughly <strong>27.6%</strong> of <strong>subsequent</strong> visits carry the target diagnosis.</li>
+</ul>
+<p><strong>Still no</strong> labeled examples from <code>train.csv</code>. This is <strong>prompt engineering only</strong>, not training.</p>
+<hr />
+<h2 id="few-shot-llm-what-changes">5. Few-shot (LLM) — what changes</h2>
+<p>Same test row, still <strong>one completion per test row</strong>, still <strong>no weight updates</strong>.</p>
+<p>Template: <code>prompts/predictor_few_shot.txt</code>.</p>
+<p><strong>Before</strong> rendering the prompt for each test patient, the pipeline selects exemplars from <strong><code>train.csv</code></strong> only (default: <strong>6</strong> cases — e.g. 3 positive and 3 negative — see <code>configs/default.yaml</code> under <code>few_shot</code>).</p>
+<p>They are formatted by <code>format_exemplar_block</code> in <code>src/data/exemplar_selector.py</code> as:</p>
+<pre class="text"><code>Case 1:
+&lt;narrative_current of exemplar 1&gt;
+Outcome: Yes
+
+Case 2:
+&lt;narrative_current of exemplar 2&gt;
+Outcome: No
+
+... through Case 6 ...</code></pre>
+<p>That string is inserted as <strong><code>{{ demonstration_cases }}</code></strong>. The instructions tell the model to learn from these cases, then the <strong>current</strong> test narrative appears under <strong>[Current Visit Record]</strong> as <code>{{ narrative }}</code>.</p>
+<p>This is <strong>in-context learning</strong>: the “training” is <strong>text pasted into the prompt</strong>, not gradient descent.</p>
+<hr />
+<h2 id="summary-table">6. Summary table</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Zero-shot</th>
+<th>Zero-shot+</th>
+<th>Few-shot (LLM)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Read test row</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Add rules + target definition</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Add long instructions + prevalence</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Paste 6 train examples with <code>Outcome: Yes/No</code></td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>One API call per test row</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Update LLM weights</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="contrast-few-shot-for-classical-ml-in-summary_table.csv">7. Contrast: “Few Shot” for <strong>classical ML</strong> in <code>summary_table.csv</code></h2>
+<p>In the ML rows labeled <strong>Few Shot</strong>, models such as logistic regression or random forest <strong>actually fit parameters</strong> on only <strong>N = 6</strong> labeled training examples (bag-of-codes features). That <strong>is</strong> real training on a tiny dataset.</p>
+<p>LLM <strong>few-shot</strong> does <strong>not</strong> do that; it only adds <strong>demonstration text</strong> to the prompt.</p>
+<hr />
+<h2 id="related-files">8. Related files</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-shot template</td>
+<td><code>prompts/predictor_zero_shot.txt</code></td>
+</tr>
+<tr class="even">
+<td>Zero-shot+ template</td>
+<td><code>prompts/predictor_zero_shot_plus.txt</code></td>
+</tr>
+<tr class="odd">
+<td>Few-shot template</td>
+<td><code>prompts/predictor_few_shot.txt</code></td>
+</tr>
+<tr class="even">
+<td>Mode → template map</td>
+<td><code>src/llm/predictor.py</code> (<code>MODE_TEMPLATE_MAP</code>)</td>
+</tr>
+<tr class="odd">
+<td>Exemplar formatting</td>
+<td><code>src/data/exemplar_selector.py</code> (<code>format_exemplar_block</code>)</td>
+</tr>
+<tr class="even">
+<td>High-level methodology</td>
+<td><code>METHODOLOGY.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Document generated to match the project’s implemented behavior; if templates or config change, update this file or regenerate from the repo.</em></p>
+</body>
+</html>

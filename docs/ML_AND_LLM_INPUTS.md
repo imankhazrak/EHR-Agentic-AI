@@ -1,14 +1,38 @@
 # ML vs LLM Inputs: Sources, Processing, and Examples
 
+This document provides a structured side-by-side view of how classical ML and LLM pipelines ingest, transform, and evaluate inputs in this repository, with concrete examples and code-linked processing details.
+
 This document explains **what goes into the classical ML models** versus **what goes into the LLM**, how each is produced in code, and **concrete examples** for each path.
 
 ---
 
-## Diagrams — step-by-step input flows
+## Table of Contents
+- [1. Diagrams — step-by-step input flows](#1-diagrams--step-by-step-input-flows)
+  - [1.1. Classical ML (`bag_of_codes`, default)](#11-classical-ml-bag_of_codes-default)
+  - [1.2. LLM (zero-shot; few-shot and co-agent add blocks)](#12-llm-zero-shot-few-shot-and-co-agent-add-blocks)
+- [2. Part A — Classical ML models](#2-part-a--classical-ml-models)
+  - [2.1. A.1 What the models predict](#21-a1-what-the-models-predict)
+  - [2.2. A.2 Raw input fields (from preprocessing)](#22-a2-raw-input-fields-from-preprocessing)
+  - [2.3. A.3 Default processing: `bag_of_codes` (config: `ml.feature_type`)](#23-a3-default-processing-bag_of_codes-config-mlfeature_type)
+  - [2.4. A.4 Optional processing: `tfidf`](#24-a4-optional-processing-tfidf)
+  - [2.5. A.5 Complete ML example (illustrative)](#25-a5-complete-ml-example-illustrative)
+- [3. Part B — LLM inputs](#3-part-b--llm-inputs)
+  - [3.1. B.1 Primary text source: `narrative_current`](#31-b1-primary-text-source-narrative_current)
+  - [3.2. B.2 How prompts are assembled](#32-b2-how-prompts-are-assembled)
+  - [3.3. B.3 Few-shot block (`demonstration_cases`)](#33-b3-few-shot-block-demonstration_cases)
+  - [3.4. B.4 Co-agent: `critic_feedback`](#34-b4-co-agent-critic_feedback)
+- [4. Part C — LLM output parsing](#4-part-c--llm-output-parsing)
+- [5. Part D — Full LLM examples (minimal, synthetic)](#5-part-d--full-llm-examples-minimal-synthetic)
+  - [5.1. D.1 Zero-shot](#51-d1-zero-shot)
+  - [5.2. D.2 Few-shot (excerpt)](#52-d2-few-shot-excerpt)
+  - [5.3. D.3 Co-agent](#53-d3-co-agent)
+- [6. Part E — Quick reference table](#6-part-e--quick-reference-table)
+
+## 1. Diagrams — step-by-step input flows
 
 The figures below show **how data moves from preprocessed visit-pair rows into each model family**. File references point to the implementation.
 
-### Classical ML (`bag_of_codes`, default)
+### 1.1. Classical ML (`bag_of_codes`, default)
 
 ```mermaid
 flowchart TD
@@ -51,7 +75,7 @@ flowchart TD
 
 **Few-shot ML:** The same featurizer runs, but **training rows** are replaced by a **small exemplar subset** (`ml.few_shot_n` rows); `X_test` still comes from the full test set.
 
-### LLM (zero-shot; few-shot and co-agent add blocks)
+### 1.2. LLM (zero-shot; few-shot and co-agent add blocks)
 
 ```mermaid
 flowchart TD
@@ -104,13 +128,13 @@ flowchart TD
 
 ---
 
-## Part A — Classical ML models
+## 2. Part A — Classical ML models
 
-### A.1 What the models predict
+### 2.1. A.1 What the models predict
 
 For every **visit pair** row, the label is binary **`label_lipid_disorder`**: whether a lipid-metabolism ICD-9 code appears in the **next** admission (see `src/data/build_target_labels.py`). The models use only information from the **current** visit.
 
-### A.2 Raw input fields (from preprocessing)
+### 2.2. A.2 Raw input fields (from preprocessing)
 
 For each row in `train.csv` / `test.csv`, the feature builder reads **structured code strings for the current visit only**:
 
@@ -122,7 +146,7 @@ For each row in `train.csv` / `test.csv`, the feature builder reads **structured
 
 These come from MIMIC-III tables aggregated per `HADM_ID` during `build_visits` / `build_pairs` (`src/data/build_patient_visits.py`, `src/data/build_visit_pairs.py`).
 
-### A.3 Default processing: `bag_of_codes` (config: `ml.feature_type`)
+### 2.3. A.3 Default processing: `bag_of_codes` (config: `ml.feature_type`)
 
 **Implementation:** `src/ml/feature_builder.py` → `build_bag_of_codes`.
 
@@ -134,11 +158,11 @@ These come from MIMIC-III tables aggregated per `HADM_ID` during `build_visits` 
 
 **Target vector:** `label_lipid_disorder` (0/1).
 
-### A.4 Optional processing: `tfidf`
+### 2.4. A.4 Optional processing: `tfidf`
 
 If `ml.feature_type` is set to **`tfidf`**, features are built from the text column **`narrative_current`** (see Part B) using **`TfidfVectorizer`** (`max_features=5000`, English stop words). Default experiment uses **`bag_of_codes`**, not TF-IDF.
 
-### A.5 Complete ML example (illustrative)
+### 2.5. A.5 Complete ML example (illustrative)
 
 **Hypothetical single row (current visit):**
 
@@ -164,9 +188,9 @@ Each distinct token across training becomes a dimension; this row’s vector has
 
 ---
 
-## Part B — LLM inputs
+## 3. Part B — LLM inputs
 
-### B.1 Primary text source: `narrative_current`
+### 3.1. B.1 Primary text source: `narrative_current`
 
 The LLM **does not** read the raw semicolon code strings by default. It reads a **single string per visit pair**: **`narrative_current`**.
 
@@ -184,7 +208,7 @@ The LLM **does not** read the raw semicolon code strings by default. It reads a 
 
 So the LLM input is **English clinical text**, not raw ICD strings (unless mapping failed and a raw code slipped through).
 
-### B.2 How prompts are assembled
+### 3.2. B.2 How prompts are assembled
 
 **Templates:** files under `prompts/` (Jinja2 blocks `system` / `user`).  
 **Rendering:** `src/llm/prompt_builder.py` → `build_messages(template_file, narrative, demonstration_cases, critic_feedback)`.
@@ -200,7 +224,7 @@ So the LLM input is **English clinical text**, not raw ICD strings (unless mappi
 
 **Artifacts:** First sample’s rendered prompt is saved under `data/outputs/mimiciii/prompts_used/<mode>/prompt_sample_<pair_id>.txt`; each response is saved under `raw_llm_responses/<mode>/<pair_id>.json`.
 
-### B.3 Few-shot block (`demonstration_cases`)
+### 3.3. B.3 Few-shot block (`demonstration_cases`)
 
 **Source:** Training rows only — `select_exemplars` in `src/data/exemplar_selector.py` (e.g. 3 positive + 3 negative by default).
 
@@ -218,13 +242,13 @@ Outcome: No
 
 That entire string is **`demonstration_cases`** in the few-shot and coagent templates.
 
-### B.4 Co-agent: `critic_feedback`
+### 3.4. B.4 Co-agent: `critic_feedback`
 
 After calibration few-shot predictions and critic batches, **consolidated text** from the critic is passed as **`critic_feedback`** into `predictor_coagent_base.txt` under **`[Refined Criteria]`** (see template).
 
 ---
 
-## Part C — LLM output parsing
+## 4. Part C — LLM output parsing
 
 **Implementation:** `src/llm/output_parser.py` → `parse_prediction`.
 
@@ -241,9 +265,9 @@ Optional: if the API returns **logprobs** and `request_logprobs` is enabled, `ex
 
 ---
 
-## Part D — Full LLM examples (minimal, synthetic)
+## 5. Part D — Full LLM examples (minimal, synthetic)
 
-### D.1 Zero-shot
+### 5.1. D.1 Zero-shot
 
 **`narrative` passed into the user block:**
 
@@ -260,7 +284,7 @@ Prediction: No
 The current visit does not show strong lipid-related diagnoses or lipid-focused therapy; ...
 ```
 
-### D.2 Few-shot (excerpt)
+### 5.2. D.2 Few-shot (excerpt)
 
 **`demonstration_cases` (abbreviated):**
 
@@ -281,7 +305,7 @@ Outcome: No
 **`narrative`:** new patient bullet text as in D.1.  
 The user template wraps definition + instructions + demonstration cases + output format (`prompts/predictor_few_shot.txt`).
 
-### D.3 Co-agent
+### 5.3. D.3 Co-agent
 
 Same as few-shot, plus **`critic_feedback`** under `[Refined Criteria]`, e.g.:
 
@@ -291,7 +315,7 @@ Prior errors often missed 272.x codes when statins were present without explicit
 
 ---
 
-## Part E — Quick reference table
+## 6. Part E — Quick reference table
 
 | Aspect | ML (`bag_of_codes`) | LLM |
 |--------|---------------------|-----|

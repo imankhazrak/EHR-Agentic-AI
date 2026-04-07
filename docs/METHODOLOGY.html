@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>METHODOLOGY</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">METHODOLOGY</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#mimic-iii-next-visit-prediction-methodology-and-project-steps">MIMIC-III Next-Visit Prediction — Methodology and Project Steps</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#objective">1. Objective</a></li>
+<li><a href="#data-and-cohort">2. Data and cohort</a></li>
+<li><a href="#train-test-split">3. Train / test split</a></li>
+<li><a href="#classical-ml-baselines">4. Classical ML baselines</a></li>
+<li><a href="#llm-experiments">5. LLM experiments</a></li>
+<li><a href="#evaluation-metrics">6. Evaluation metrics</a></li>
+<li><a href="#what-we-configured-and-ran">7. What we configured and ran</a></li>
+<li><a href="#primary-output-locations">8. Primary output locations</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="mimic-iii-next-visit-prediction-methodology-and-project-steps">MIMIC-III Next-Visit Prediction — Methodology and Project Steps</h1>
+<p>This methodology note summarizes the implemented end-to-end pipeline for MIMIC-III next-visit lipid-disorder prediction, including cohort construction, ML and LLM modeling tracks, evaluation setup, run configuration, and primary artifacts for reproducibility.</p>
+<p>Concise reference for advising meetings. Code lives under <code>src/</code>; configuration under <code>configs/</code>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#1-objective">1. Objective</a></li>
+<li><a href="#2-data-and-cohort">2. Data and cohort</a></li>
+<li><a href="#3-train--test-split">3. Train / test split</a></li>
+<li><a href="#4-classical-ml-baselines">4. Classical ML baselines</a></li>
+<li><a href="#5-llm-experiments">5. LLM experiments</a></li>
+<li><a href="#6-evaluation-metrics">6. Evaluation metrics</a></li>
+<li><a href="#7-what-we-configured-and-ran">7. What we configured and ran</a></li>
+<li><a href="#8-primary-output-locations">8. Primary output locations</a></li>
+</ul>
+<h2 id="objective">1. Objective</h2>
+<p>Predict whether <strong>Disorders of Lipid Metabolism</strong> appear in a patient’s <strong>next hospital admission</strong>, given structured information from the <strong>current</strong> admission. Task is framed as <strong>adjacent visit pairs</strong> (current visit → next visit), binary label.</p>
+<h2 id="data-and-cohort">2. Data and cohort</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Source</strong></td>
+<td>MIMIC-III v1.4 CSVs (PhysioNet); raw path set in <code>configs/default.yaml</code> → <code>paths.mimic_raw</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>Visits</strong></td>
+<td>One row per <strong>hospital admission</strong> (<code>ADMISSIONS</code> + diagnoses, procedures, prescriptions).</td>
+</tr>
+<tr class="odd">
+<td><strong>Pairs</strong></td>
+<td>For each patient with ≥2 admissions, consecutive admissions form <code>(visit_t, visit_{t+1})</code> pairs.</td>
+</tr>
+<tr class="even">
+<td><strong>Label</strong></td>
+<td>Positive if <strong>any ICD-9 code for lipid disorder</strong> appears in the <strong>next</strong> visit (CCS-53 style: codes <code>272.x</code>, stored without dot in MIMIC, e.g. <code>2720</code>, <code>2724</code>).</td>
+</tr>
+<tr class="odd">
+<td><strong>Input text</strong></td>
+<td>Natural-language <strong>narratives</strong> built from current visit: bullet lists of diagnoses (with titles), medications, procedures; capped per section in config.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The implementation uses <strong>all hospital admissions</strong>, not an ICU-only cohort. If the paper specifies ICU-linked current visits, that is a <strong>documented difference</strong> from this codebase unless ICU filtering is added later.</p>
+<h2 id="train-test-split">3. Train / test split</h2>
+<ul>
+<li><strong>Method:</strong> Random split with <strong>stratification</strong> on the binary label (<code>stratify_test: true</code>).</li>
+<li><strong>Fraction:</strong> <code>test_size: 0.2</code> (default).</li>
+<li><strong>Unit:</strong> <strong>Visit-pair rows</strong>, not patients — the same patient can contribute pairs to both train and test (possible <strong>patient-level leakage</strong>; no <code>split_by_patient</code> flag in current code).</li>
+</ul>
+<p>Outputs: <code>data/processed/mimiciii/train.csv</code>, <code>test.csv</code>, plus <code>processed_dataset_summary.json</code> and <code>label_distribution.csv</code> under outputs.</p>
+<h2 id="classical-ml-baselines">4. Classical ML baselines</h2>
+<ul>
+<li><strong>Features:</strong> Bag-of-codes style encoding from diagnosis / procedure / medication strings (<code>feature_type: bag_of_codes</code>).</li>
+<li><strong>Models:</strong> Decision Tree, Logistic Regression, Random Forest (see <code>configs/default.yaml</code> → <code>ml.models</code>).</li>
+<li><strong>Settings:</strong> (1) <strong>Fully supervised</strong> on full training set; (2) <strong>Few-shot ML</strong> trained on <strong>N = 6</strong> labeled exemplars (balanced positive/negative by default).</li>
+</ul>
+<p>Metrics saved: <code>ml_results_fully_supervised.csv</code>, <code>ml_results_few_shot.csv</code>, <code>ml_results.csv</code>.</p>
+<h2 id="llm-experiments">5. LLM experiments</h2>
+<ul>
+<li><strong>Provider / model:</strong> OpenAI Chat Completions; default model <strong><code>gpt-4o-mini</code></strong> (<code>temperature: 0</code>, <code>max_tokens: 1024</code>).</li>
+<li><strong>Prompts:</strong> Jinja2 templates in <code>prompts/</code> (zero-shot, zero-shot+, few-shot, coagent base; critic and consolidation prompts for EHR-CoAgent).</li>
+<li><strong>Parsing:</strong> Model outputs are parsed for <code>Prediction: Yes</code> / <code>Prediction: No</code> (with fallbacks); unparseable responses are counted and excluded from metric denominators where implemented.</li>
+<li><strong>Modes (order of execution):</strong>
+<ol type="1">
+<li>Zero-shot<br />
+</li>
+<li>Zero-shot+<br />
+</li>
+<li>Few-shot (exemplars sampled from <strong>train</strong> only; IDs saved to <code>llm_few_shot_exemplars.csv</code>)<br />
+</li>
+<li>EHR-CoAgent (calibration few-shot → wrong predictions → critic batches → consolidated feedback → test with feedback); artifacts under <code>critic_feedback/</code>.</li>
+</ol></li>
+</ul>
+<p><strong>Rate limiting:</strong> <code>rate_limit_rpm</code> in config to avoid bursting the API on long runs.</p>
+<p><strong>Authentication:</strong> API key via repo-root <strong><code>.env</code></strong> (<code>OPENAI_API_KEY</code>); never committed (see <code>.gitignore</code>). SLURM jobs source <code>.env</code> through <code>scripts/slurm_llm_env.sh</code>.</p>
+<h2 id="evaluation-metrics">6. Evaluation metrics</h2>
+<p><strong>Accuracy, sensitivity, specificity, F1</strong> for both ML and LLM runs (see <code>src/evaluation/metrics.py</code>). Optional bootstrap CI is off by default.</p>
+<p>Aggregated table: <code>data/outputs/mimiciii/summary_table.csv</code> (from <code>collect_results</code>).</p>
+<h2 id="what-we-configured-and-ran">7. What we configured and ran</h2>
+<table>
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Artifact</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>configs/default.yaml</code></td>
+<td>Main experiment: paths, split, narrative caps, ML, LLM, few-shot, coagent, evaluation.</td>
+</tr>
+<tr class="even">
+<td><code>configs/debug_small.yaml</code></td>
+<td>Smoke: subsample pairs (<code>max_pairs</code>), smaller test fraction override, <strong>fewer LLM test rows</strong> (<code>max_test_samples</code>), smaller coagent calibration.</td>
+</tr>
+<tr class="odd">
+<td><code>requirements.txt</code></td>
+<td>Python dependencies for the pipeline.</td>
+</tr>
+<tr class="even">
+<td><code>scripts/run_mimic_pipeline.sh</code></td>
+<td>Single shell driver: preprocess → ML → four LLM modes → summary (<code>STAGE=smoke</code> merges debug overrides).</td>
+</tr>
+<tr class="odd">
+<td><code>scripts/slurm_llm_env.sh</code></td>
+<td>Loads <code>.env</code> and checks that a provider API key is set before cluster jobs run LLM steps.</td>
+</tr>
+<tr class="even">
+<td><code>slurm/mimic_iii_smoke.slurm</code></td>
+<td>Short wall time; smoke configuration; requires real API key in <code>.env</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>slurm/mimic_iii_full.slurm</code></td>
+<td>Full pipeline; long wall time (e.g. 48h); same key requirement.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps completed in this project:</strong></p>
+<ol type="1">
+<li><strong>Repository setup:</strong> YAML configs, paths to local MIMIC-III extract, <code>pip install -r requirements.txt</code>, virtual environment.</li>
+<li><strong>Smoke test (optional):</strong> <code>run_preprocessing</code> + <code>run_ml_baselines</code> + LLM scripts with <code>debug_small.yaml</code> to validate end-to-end behavior on a small subset.</li>
+<li><strong>Full experiment:</strong> Full preprocessing (no <code>max_pairs</code>), full ML, full test set for each LLM mode — run <strong>on the cluster</strong> via <code>sbatch slurm/mimic_iii_full.slurm</code> (or equivalent), with <code>OPENAI_API_KEY</code> in <code>.env</code> on the cluster filesystem.</li>
+</ol>
+<p><strong>Operational note:</strong> Long LLM jobs are <strong>API-bound</strong> (thousands of calls). Failures such as <code>PermissionDeniedError</code> from OpenAI indicate account/billing/model-access issues on the provider side and should be resolved in the OpenAI dashboard before interpreting LLM metrics.</p>
+<h2 id="primary-output-locations">8. Primary output locations</h2>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data/processed/mimiciii/</code></td>
+<td><code>train.csv</code>, <code>test.csv</code>, <code>full_dataset.csv</code></td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/</code></td>
+<td>Summaries, ML CSVs, <code>llm_*_metrics.json</code>, <code>llm_*_results.csv</code>, <code>raw_llm_responses/</code>, <code>prompts_used/</code>, <code>summary_table.csv</code>, coagent <code>critic_feedback/</code></td>
+</tr>
+<tr class="odd">
+<td><code>logs/slurm-*.out</code> / <code>.err</code></td>
+<td>Cluster stdout/stderr for SLURM jobs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>This document describes the implemented pipeline and configuration; alignment with every detail of the published paper should be checked against the paper text (e.g. ICU definition, exact split policy, and model choice).</em></p>
+</body>
+</html>

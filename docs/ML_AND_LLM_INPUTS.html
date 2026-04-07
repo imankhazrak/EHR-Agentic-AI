@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ML_AND_LLM_INPUTS</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ML_AND_LLM_INPUTS</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ml-vs-llm-inputs-sources-processing-and-examples">ML vs LLM Inputs: Sources, Processing, and Examples</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#diagrams-step-by-step-input-flows">1. Diagrams — step-by-step input flows</a>
+<ul>
+<li><a href="#classical-ml-bag_of_codes-default">1.1. Classical ML (<code>bag_of_codes</code>, default)</a></li>
+<li><a href="#llm-zero-shot-few-shot-and-co-agent-add-blocks">1.2. LLM (zero-shot; few-shot and co-agent add blocks)</a></li>
+</ul></li>
+<li><a href="#part-a-classical-ml-models">2. Part A — Classical ML models</a>
+<ul>
+<li><a href="#a.1-what-the-models-predict">2.1. A.1 What the models predict</a></li>
+<li><a href="#a.2-raw-input-fields-from-preprocessing">2.2. A.2 Raw input fields (from preprocessing)</a></li>
+<li><a href="#a.3-default-processing-bag_of_codes-config-ml.feature_type">2.3. A.3 Default processing: <code>bag_of_codes</code> (config: <code>ml.feature_type</code>)</a></li>
+<li><a href="#a.4-optional-processing-tfidf">2.4. A.4 Optional processing: <code>tfidf</code></a></li>
+<li><a href="#a.5-complete-ml-example-illustrative">2.5. A.5 Complete ML example (illustrative)</a></li>
+</ul></li>
+<li><a href="#part-b-llm-inputs">3. Part B — LLM inputs</a>
+<ul>
+<li><a href="#b.1-primary-text-source-narrative_current">3.1. B.1 Primary text source: <code>narrative_current</code></a></li>
+<li><a href="#b.2-how-prompts-are-assembled">3.2. B.2 How prompts are assembled</a></li>
+<li><a href="#b.3-few-shot-block-demonstration_cases">3.3. B.3 Few-shot block (<code>demonstration_cases</code>)</a></li>
+<li><a href="#b.4-co-agent-critic_feedback">3.4. B.4 Co-agent: <code>critic_feedback</code></a></li>
+</ul></li>
+<li><a href="#part-c-llm-output-parsing">4. Part C — LLM output parsing</a></li>
+<li><a href="#part-d-full-llm-examples-minimal-synthetic">5. Part D — Full LLM examples (minimal, synthetic)</a>
+<ul>
+<li><a href="#d.1-zero-shot">5.1. D.1 Zero-shot</a></li>
+<li><a href="#d.2-few-shot-excerpt">5.2. D.2 Few-shot (excerpt)</a></li>
+<li><a href="#d.3-co-agent">5.3. D.3 Co-agent</a></li>
+</ul></li>
+<li><a href="#part-e-quick-reference-table">6. Part E — Quick reference table</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ml-vs-llm-inputs-sources-processing-and-examples">ML vs LLM Inputs: Sources, Processing, and Examples</h1>
+<p>This document provides a structured side-by-side view of how classical ML and LLM pipelines ingest, transform, and evaluate inputs in this repository, with concrete examples and code-linked processing details.</p>
+<p>This document explains <strong>what goes into the classical ML models</strong> versus <strong>what goes into the LLM</strong>, how each is produced in code, and <strong>concrete examples</strong> for each path.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#1-diagrams--step-by-step-input-flows">1. Diagrams — step-by-step input flows</a>
+<ul>
+<li><a href="#11-classical-ml-bag_of_codes-default">1.1. Classical ML (<code>bag_of_codes</code>, default)</a></li>
+<li><a href="#12-llm-zero-shot-few-shot-and-co-agent-add-blocks">1.2. LLM (zero-shot; few-shot and co-agent add blocks)</a></li>
+</ul></li>
+<li><a href="#2-part-a--classical-ml-models">2. Part A — Classical ML models</a>
+<ul>
+<li><a href="#21-a1-what-the-models-predict">2.1. A.1 What the models predict</a></li>
+<li><a href="#22-a2-raw-input-fields-from-preprocessing">2.2. A.2 Raw input fields (from preprocessing)</a></li>
+<li><a href="#23-a3-default-processing-bag_of_codes-config-mlfeature_type">2.3. A.3 Default processing: <code>bag_of_codes</code> (config: <code>ml.feature_type</code>)</a></li>
+<li><a href="#24-a4-optional-processing-tfidf">2.4. A.4 Optional processing: <code>tfidf</code></a></li>
+<li><a href="#25-a5-complete-ml-example-illustrative">2.5. A.5 Complete ML example (illustrative)</a></li>
+</ul></li>
+<li><a href="#3-part-b--llm-inputs">3. Part B — LLM inputs</a>
+<ul>
+<li><a href="#31-b1-primary-text-source-narrative_current">3.1. B.1 Primary text source: <code>narrative_current</code></a></li>
+<li><a href="#32-b2-how-prompts-are-assembled">3.2. B.2 How prompts are assembled</a></li>
+<li><a href="#33-b3-few-shot-block-demonstration_cases">3.3. B.3 Few-shot block (<code>demonstration_cases</code>)</a></li>
+<li><a href="#34-b4-co-agent-critic_feedback">3.4. B.4 Co-agent: <code>critic_feedback</code></a></li>
+</ul></li>
+<li><a href="#4-part-c--llm-output-parsing">4. Part C — LLM output parsing</a></li>
+<li><a href="#5-part-d--full-llm-examples-minimal-synthetic">5. Part D — Full LLM examples (minimal, synthetic)</a>
+<ul>
+<li><a href="#51-d1-zero-shot">5.1. D.1 Zero-shot</a></li>
+<li><a href="#52-d2-few-shot-excerpt">5.2. D.2 Few-shot (excerpt)</a></li>
+<li><a href="#53-d3-co-agent">5.3. D.3 Co-agent</a></li>
+</ul></li>
+<li><a href="#6-part-e--quick-reference-table">6. Part E — Quick reference table</a></li>
+</ul>
+<h2 id="diagrams-step-by-step-input-flows">1. Diagrams — step-by-step input flows</h2>
+<p>The figures below show <strong>how data moves from preprocessed visit-pair rows into each model family</strong>. File references point to the implementation.</p>
+<h3 id="classical-ml-bag_of_codes-default">1.1. Classical ML (<code>bag_of_codes</code>, default)</h3>
+<pre class="mermaid"><code>flowchart TD
+  subgraph dataSource [Preprocessed table per row]
+    R[train.csv or test.csv row]
+  end
+
+  subgraph threeCols [Current visit code strings]
+    Dx[diagnoses_codes_current]
+    Px[procedures_codes_current]
+    Rx[medications_current]
+  end
+
+  subgraph featurize [feature_builder.build_bag_of_codes]
+    Split[Split each field on semicolon]
+    Join[Join tokens into one space-separated string per row]
+    CV[CountVectorizer fit on train only binary token_pattern]
+    X[Sparse matrix X_train or X_test]
+  end
+
+  subgraph trainEval [train_baselines.py eval_baselines.py]
+    Y[label_lipid_disorder]
+    Models[DecisionTree LogisticRegression RandomForest]
+    Pred[Class prediction 0 or 1]
+  end
+
+  R --&gt; Dx
+  R --&gt; Px
+  R --&gt; Rx
+  Dx --&gt; Split
+  Px --&gt; Split
+  Rx --&gt; Split
+  Split --&gt; Join
+  Join --&gt; CV
+  CV --&gt; X
+  X --&gt; Models
+  Y --&gt; Models
+  Models --&gt; Pred</code></pre>
+<p><strong>Few-shot ML:</strong> The same featurizer runs, but <strong>training rows</strong> are replaced by a <strong>small exemplar subset</strong> (<code>ml.few_shot_n</code> rows); <code>X_test</code> still comes from the full test set.</p>
+<h3 id="llm-zero-shot-few-shot-and-co-agent-add-blocks">1.2. LLM (zero-shot; few-shot and co-agent add blocks)</h3>
+<pre class="mermaid"><code>flowchart TD
+  subgraph row [Same visit-pair row]
+    Raw[diagnoses procedures medications current]
+  end
+
+  subgraph narrative [narrative_builder.add_narratives]
+    Map[CodeMapper code to title or string]
+    Bul[build_narrative bullet style]
+    Nar[narrative_current]
+  end
+
+  subgraph prompt [prompt_builder.build_messages]
+    Tpl[Jinja2 template predictor_zero_shot.txt etc]
+    Sys[System message block]
+    Usr[User block with narrative variable]
+    Msg[Chat messages list]
+  end
+
+  subgraph api [predictor.run_predictions]
+    Client[LLMClient OpenAI chat]
+    RawOut[Assistant message text]
+  end
+
+  subgraph parse [output_parser.parse_prediction]
+    P1[First line Prediction Yes or No]
+    P2[Fallback patterns if needed]
+    Out[parsed_prediction Yes No unparseable]
+  end
+
+  Raw --&gt; Map
+  Map --&gt; Bul
+  Bul --&gt; Nar
+  Nar --&gt; Tpl
+  Tpl --&gt; Sys
+  Tpl --&gt; Usr
+  Sys --&gt; Msg
+  Usr --&gt; Msg
+  Msg --&gt; Client
+  Client --&gt; RawOut
+  RawOut --&gt; P1
+  P1 --&gt; P2
+  P2 --&gt; Out</code></pre>
+<p><strong>Few-shot:</strong> Between <code>Nar</code> and <code>Tpl</code>, the template also receives <strong><code>demonstration_cases</code></strong> (exemplar narratives + Outcome Yes/No from <strong>train</strong> only).</p>
+<p><strong>Co-agent test pass:</strong> Same as few-shot template (<code>predictor_coagent_base.txt</code>) plus <strong><code>critic_feedback</code></strong> text under Refined Criteria, produced after calibration + critic + consolidation (<code>src/llm/coagent.py</code>).</p>
+<hr />
+<h2 id="part-a-classical-ml-models">2. Part A — Classical ML models</h2>
+<h3 id="a.1-what-the-models-predict">2.1. A.1 What the models predict</h3>
+<p>For every <strong>visit pair</strong> row, the label is binary <strong><code>label_lipid_disorder</code></strong>: whether a lipid-metabolism ICD-9 code appears in the <strong>next</strong> admission (see <code>src/data/build_target_labels.py</code>). The models use only information from the <strong>current</strong> visit.</p>
+<h3 id="a.2-raw-input-fields-from-preprocessing">2.2. A.2 Raw input fields (from preprocessing)</h3>
+<p>For each row in <code>train.csv</code> / <code>test.csv</code>, the feature builder reads <strong>structured code strings for the current visit only</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>diagnoses_codes_current</code></td>
+<td>Semicolon-separated ICD-9 diagnosis codes for the current admission</td>
+</tr>
+<tr class="even">
+<td><code>procedures_codes_current</code></td>
+<td>Semicolon-separated ICD-9 procedure codes</td>
+</tr>
+<tr class="odd">
+<td><code>medications_current</code></td>
+<td>Semicolon-separated drug names (from prescriptions)</td>
+</tr>
+</tbody>
+</table>
+<p>These come from MIMIC-III tables aggregated per <code>HADM_ID</code> during <code>build_visits</code> / <code>build_pairs</code> (<code>src/data/build_patient_visits.py</code>, <code>src/data/build_visit_pairs.py</code>).</p>
+<h3 id="a.3-default-processing-bag_of_codes-config-ml.feature_type">2.3. A.3 Default processing: <code>bag_of_codes</code> (config: <code>ml.feature_type</code>)</h3>
+<p><strong>Implementation:</strong> <code>src/ml/feature_builder.py</code> → <code>build_bag_of_codes</code>.</p>
+<ol type="1">
+<li>For each row, the three columns are <strong>split on <code>;</code></strong>, tokens are <strong>concatenated into one space-separated string</strong> (diagnoses, then procedures, then medications — order preserved by column order, not clinically weighted).</li>
+<li><strong><code>sklearn.feature_extraction.text.CountVectorizer</code></strong> is applied with:
+<ul>
+<li><code>binary=True</code> → each token is <strong>present/absent</strong> (multi-hot), not counts.</li>
+<li><code>token_pattern=r"[^\s]+"</code> → any non-whitespace token is a “word” (so codes like <code>V4581</code> or drug names stay as tokens).</li>
+</ul></li>
+<li>The vectorizer is <strong><code>fit</code> on the training set</strong> only; the test set is <strong><code>transform</code>ed</strong> so the vocabulary is defined by training data (standard for avoiding leakage in vocabulary).</li>
+</ol>
+<p><strong>Target vector:</strong> <code>label_lipid_disorder</code> (0/1).</p>
+<h3 id="a.4-optional-processing-tfidf">2.4. A.4 Optional processing: <code>tfidf</code></h3>
+<p>If <code>ml.feature_type</code> is set to <strong><code>tfidf</code></strong>, features are built from the text column <strong><code>narrative_current</code></strong> (see Part B) using <strong><code>TfidfVectorizer</code></strong> (<code>max_features=5000</code>, English stop words). Default experiment uses <strong><code>bag_of_codes</code></strong>, not TF-IDF.</p>
+<h3 id="a.5-complete-ml-example-illustrative">2.5. A.5 Complete ML example (illustrative)</h3>
+<p><strong>Hypothetical single row (current visit):</strong></p>
+<pre class="text"><code>diagnoses_codes_current:  25000;4019;2724
+procedures_codes_current: 0066
+medications_current:      Metformin;Atorvastatin</code></pre>
+<p><strong>Step 1 — token string for that row:</strong></p>
+<pre class="text"><code>25000 4019 2724 0066 Metformin Atorvastatin</code></pre>
+<p><strong>Step 2 — after <code>CountVectorizer</code> (binary) fit on many training rows:</strong><br />
+Each distinct token across training becomes a dimension; this row’s vector has <code>1</code> at indices for tokens that appear and <code>0</code> elsewhere (very high-dimensional, sparse).</p>
+<p><strong>Training:</strong> <code>X_train</code>, <code>y_train</code> from <code>train_df</code>.<br />
+<strong>Evaluation:</strong> <code>X_test</code> vs <code>y_test</code> from <code>test_df</code>.</p>
+<p><strong>Few-shot ML:</strong> The same feature pipeline is run with a <strong>tiny training set</strong> of <code>few_shot_n</code> exemplar rows (default 6) instead of the full <code>train_df</code> (<code>src/scripts/run_ml_baselines.py</code>).</p>
+<hr />
+<h2 id="part-b-llm-inputs">3. Part B — LLM inputs</h2>
+<h3 id="b.1-primary-text-source-narrative_current">3.1. B.1 Primary text source: <code>narrative_current</code></h3>
+<p>The LLM <strong>does not</strong> read the raw semicolon code strings by default. It reads a <strong>single string per visit pair</strong>: <strong><code>narrative_current</code></strong>.</p>
+<p><strong>How narratives are built:</strong> <code>src/data/narrative_builder.py</code> → <code>add_narratives</code>.</p>
+<ol type="1">
+<li><strong><code>diagnoses_codes_current</code></strong>, <strong><code>procedures_codes_current</code></strong>, <strong><code>medications_current</code></strong> are passed through <strong><code>CodeMapper</code></strong> (<code>src/data/code_mappings.py</code>), which maps ICD/drug codes to <strong>human-readable titles</strong> (from MIMIC dictionaries where available).</li>
+<li>Lists are <strong>truncated</strong> to <code>max_diagnoses</code>, <code>max_medications</code>, <code>max_procedures</code> (defaults in <code>configs/default.yaml</code> → <code>narrative</code> section).</li>
+<li><strong><code>build_narrative</code></strong> formats them in <strong>bullet style</strong> (default):</li>
+</ol>
+<pre class="text"><code>- Diagnoses made: &lt;names...&gt;
+- Medications prescribed: &lt;names...&gt;
+- Procedures performed: &lt;names...&gt;</code></pre>
+<p>So the LLM input is <strong>English clinical text</strong>, not raw ICD strings (unless mapping failed and a raw code slipped through).</p>
+<h3 id="b.2-how-prompts-are-assembled">3.2. B.2 How prompts are assembled</h3>
+<p><strong>Templates:</strong> files under <code>prompts/</code> (Jinja2 blocks <code>system</code> / <code>user</code>).<br />
+<strong>Rendering:</strong> <code>src/llm/prompt_builder.py</code> → <code>build_messages(template_file, narrative, demonstration_cases, critic_feedback)</code>.</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 26%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Template file</th>
+<th>Variables injected into user message</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-shot</td>
+<td><code>predictor_zero_shot.txt</code></td>
+<td><code>narrative</code> only</td>
+</tr>
+<tr class="even">
+<td>Zero-shot+</td>
+<td><code>predictor_zero_shot_plus.txt</code></td>
+<td><code>narrative</code> + extra instructions (e.g. prevalence hint in template)</td>
+</tr>
+<tr class="odd">
+<td>Few-shot</td>
+<td><code>predictor_few_shot.txt</code></td>
+<td><code>narrative</code> + <code>demonstration_cases</code></td>
+</tr>
+<tr class="even">
+<td>Co-agent</td>
+<td><code>predictor_coagent_base.txt</code></td>
+<td><code>narrative</code> + <code>demonstration_cases</code> + <code>critic_feedback</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>API call:</strong> <code>src/llm/predictor.py</code> loads each row’s <code>narrative_current</code>, builds <strong>chat messages</strong> <code>[{role: system, content: ...}, {role: user, content: ...}]</code>, and sends them to the configured provider (<code>configs/default.yaml</code> → <code>llm</code>, default <strong>OpenAI</strong> <code>gpt-4o-mini</code>).</p>
+<p><strong>Artifacts:</strong> First sample’s rendered prompt is saved under <code>data/outputs/mimiciii/prompts_used/&lt;mode&gt;/prompt_sample_&lt;pair_id&gt;.txt</code>; each response is saved under <code>raw_llm_responses/&lt;mode&gt;/&lt;pair_id&gt;.json</code>.</p>
+<h3 id="b.3-few-shot-block-demonstration_cases">3.3. B.3 Few-shot block (<code>demonstration_cases</code>)</h3>
+<p><strong>Source:</strong> Training rows only — <code>select_exemplars</code> in <code>src/data/exemplar_selector.py</code> (e.g. 3 positive + 3 negative by default).</p>
+<p><strong>Formatting:</strong> <code>format_exemplar_block</code> produces:</p>
+<pre class="text"><code>Case 1:
+&lt;narrative_current of exemplar 1&gt;
+Outcome: Yes
+
+Case 2:
+...
+Outcome: No</code></pre>
+<p>That entire string is <strong><code>demonstration_cases</code></strong> in the few-shot and coagent templates.</p>
+<h3 id="b.4-co-agent-critic_feedback">3.4. B.4 Co-agent: <code>critic_feedback</code></h3>
+<p>After calibration few-shot predictions and critic batches, <strong>consolidated text</strong> from the critic is passed as <strong><code>critic_feedback</code></strong> into <code>predictor_coagent_base.txt</code> under <strong><code>[Refined Criteria]</code></strong> (see template).</p>
+<hr />
+<h2 id="part-c-llm-output-parsing">4. Part C — LLM output parsing</h2>
+<p><strong>Implementation:</strong> <code>src/llm/output_parser.py</code> → <code>parse_prediction</code>.</p>
+<p>The model’s <strong>assistant message text</strong> is parsed as follows:</p>
+<ol type="1">
+<li><strong>First line:</strong> Prefer <code>Prediction: Yes</code> or <code>Prediction: No</code> (or <code>Yes</code> / <code>No</code> alone on line 1).</li>
+<li><strong>Else:</strong> Search for <code>Prediction: Yes</code> / <code>Prediction: No</code> anywhere in the text.</li>
+<li><strong>Else:</strong> Use the <strong>first</strong> standalone <code>Yes</code> vs <code>No</code> by position in the string.</li>
+<li>If still ambiguous → <strong><code>unparseable</code></strong>.</li>
+</ol>
+<p><strong>Downstream:</strong> <code>src/evaluation/evaluate_llm_runs.py</code> maps <code>Yes</code>→1, <code>No</code>→0, drops <code>unparseable</code> for metric computation and records counts in <code>llm_*_metrics.json</code>.</p>
+<p>Optional: if the API returns <strong>logprobs</strong> and <code>request_logprobs</code> is enabled, <code>extract_logprob_confidence</code> can derive <code>prob_yes</code> / <code>prob_no</code> (off by default in <code>configs/default.yaml</code>).</p>
+<hr />
+<h2 id="part-d-full-llm-examples-minimal-synthetic">5. Part D — Full LLM examples (minimal, synthetic)</h2>
+<h3 id="d.1-zero-shot">5.1. D.1 Zero-shot</h3>
+<p><strong><code>narrative</code> passed into the user block:</strong></p>
+<pre class="text"><code>- Diagnoses made: Diabetes mellitus without mention of complication; Essential hypertension
+- Medications prescribed: Metformin; Lisinopril
+- Procedures performed: None recorded</code></pre>
+<p><strong>Expected model reply shape (first line must be parseable):</strong></p>
+<pre class="text"><code>Prediction: No
+The current visit does not show strong lipid-related diagnoses or lipid-focused therapy; ...</code></pre>
+<h3 id="d.2-few-shot-excerpt">5.2. D.2 Few-shot (excerpt)</h3>
+<p><strong><code>demonstration_cases</code> (abbreviated):</strong></p>
+<pre class="text"><code>Case 1:
+- Diagnoses made: Pure hypercholesterolemia
+- Medications prescribed: Atorvastatin
+- Procedures performed: None recorded
+Outcome: Yes
+
+Case 2:
+- Diagnoses made: Pneumonia; Sepsis
+- Medications prescribed: Ceftriaxone
+- Procedures performed: None recorded
+Outcome: No</code></pre>
+<p><strong><code>narrative</code>:</strong> new patient bullet text as in D.1.<br />
+The user template wraps definition + instructions + demonstration cases + output format (<code>prompts/predictor_few_shot.txt</code>).</p>
+<h3 id="d.3-co-agent">5.3. D.3 Co-agent</h3>
+<p>Same as few-shot, plus <strong><code>critic_feedback</code></strong> under <code>[Refined Criteria]</code>, e.g.:</p>
+<pre class="text"><code>Prior errors often missed 272.x codes when statins were present without explicit lipid diagnoses; prioritize documented 272.x in the next visit diagnosis list.</code></pre>
+<hr />
+<h2 id="part-e-quick-reference-table">6. Part E — Quick reference table</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 61%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>ML (<code>bag_of_codes</code>)</th>
+<th>LLM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Input</strong></td>
+<td>Semicolon code + med strings from <strong>current</strong> visit</td>
+<td><strong><code>narrative_current</code></strong> (mapped names, bullet format)</td>
+</tr>
+<tr class="even">
+<td><strong>Processing</strong></td>
+<td>Split <code>;</code> → tokens → binary CountVectorizer</td>
+<td>Jinja2 prompt + optional exemplars + optional critic text</td>
+</tr>
+<tr class="odd">
+<td><strong>Label for training</strong></td>
+<td><code>label_lipid_disorder</code></td>
+<td>N/A (inference only; label used only for evaluation)</td>
+</tr>
+<tr class="even">
+<td><strong>Output</strong></td>
+<td>Class 0/1 from <code>predict()</code></td>
+<td>Free text → <strong><code>parse_prediction</code></strong> → Yes/No/unparseable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Code references: <code>src/ml/feature_builder.py</code>, <code>src/data/narrative_builder.py</code>, <code>src/llm/prompt_builder.py</code>, <code>src/llm/predictor.py</code>, <code>src/llm/output_parser.py</code>, <code>prompts/predictor_*.txt</code>.</em></p>
+</body>
+</html>
