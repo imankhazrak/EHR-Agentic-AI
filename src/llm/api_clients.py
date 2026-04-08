@@ -17,6 +17,7 @@ from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponen
 
 import openai as _openai_sdk
 
+from src.llm.local_gemma_client import LocalGemmaClient, LocalGemmaResponse
 from src.utils.logging_utils import get_logger
 from src.utils.io import save_json, load_json
 
@@ -257,6 +258,14 @@ class LLMClient:
 
         if provider in ("openai", "azure"):
             self._client = _OpenAIClient(cfg)
+        elif provider == "local_gemma":
+            if cfg.get("use_vllm"):
+                vcfg = dict(cfg)
+                vcfg["provider"] = "openai"
+                vcfg["base_url"] = cfg.get("vllm_base_url") or cfg.get("base_url")
+                self._client = _OpenAIClient(vcfg)
+            else:
+                self._client = LocalGemmaClient(cfg)
         elif provider == "anthropic":
             self._client = _AnthropicClient(cfg)
         else:
@@ -283,6 +292,14 @@ class LLMClient:
                 time.sleep(min_interval - elapsed)
 
         resp = self._client.complete(messages, **kwargs)
+        if isinstance(resp, LocalGemmaResponse):
+            resp = LLMResponse(
+                text=resp.text,
+                model=resp.model,
+                finish_reason=resp.finish_reason,
+                logprobs=resp.logprobs,
+                usage=resp.usage or {},
+            )
         self._last_call = time.time()
 
         if use_cache:

@@ -9,6 +9,14 @@ llm:
   max_test_samples: 12
   rate_limit_rpm: 60
   cache_responses: true
+  finetune:
+    smoke: true
+    force_rebuild_split: true
+    val_ratio_within_train: 0.15
+    split_seed: 42
+    smoke_max_train_samples: 48
+    smoke_max_eval_samples: 24
+    smoke_max_steps: 2
 
 few_shot:
   n_positive: 2

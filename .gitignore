@@ -6,6 +6,7 @@
 /data/
 /data/mimic III
 /data/mimiciv
+/logs/
 # To prevent Zone.Identifier files
 *.Zone.Identifier
 
@@ -232,6 +233,8 @@ pyrightconfig.json
 [Ll]ib64
 [Ll]ocal
 [Ss]cripts
+!src/scripts/
+!src/scripts/*.py
 pyvenv.cfg
 pip-selfcheck.json
 
@@ -279,4 +282,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Archived historical GPT outputs/logs (privacy-sensitive).
+gpt_4o_mini_results/
+
+# Large Hugging Face model snapshots (use src.scripts.download_gemma_model).
+models/hf_snapshots/
 

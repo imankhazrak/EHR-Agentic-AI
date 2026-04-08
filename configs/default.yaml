@@ -7,7 +7,7 @@ paths:
   mimic_raw: "data/mimic III/physionet.org/files/mimiciii/1.4"
   interim: "data/interim/mimiciii"
   processed: "data/processed/mimiciii"
-  outputs: "data/outputs/mimiciii"
+  outputs: "data/outputs/mimiciii_gemma"
 
 data:
   min_visits: 2
@@ -32,15 +32,42 @@ ml:
   few_shot_n: 6
 
 llm:
-  provider: openai
-  model: gpt-4o-mini
+  provider: local_gemma
+  # Local snapshot from: python -m src.scripts.download_gemma_model --model-id google/gemma-4-e4b-it
+  model_name: "models/hf_snapshots/google--gemma-4-e4b-it"
+  mode: inference
+  device: "cuda"
+  use_vllm: false
+  max_new_tokens: 256
+  # Optional: OpenAI-compatible local vLLM endpoint when use_vllm=true
+  vllm_base_url: null
+  vllm_api_key: "not-used"
+  finetune_output_dir: "models/gemma_finetuned"
+  finetune:
+    # Split processed/train.csv into train_ft/val_ft, while keeping processed/test.csv untouched.
+    val_ratio_within_train: 0.15
+    split_seed: 42
+    force_rebuild_split: false
+    smoke: false
+    smoke_max_train_samples: 64
+    smoke_max_eval_samples: 32
+    smoke_max_steps: 3
+    max_length: 1024
+    learning_rate: 0.0002
+    batch_size: 2
+    num_train_epochs: 1
+    lora_r: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+  # Backward-compatible aliases used by legacy clients
+  model: "models/hf_snapshots/google--gemma-4-e4b-it"
   # Optional: OpenAI-compatible proxy (e.g. Azure gateway). Default: api.openai.com
   base_url: null
   temperature: 0.0
-  max_tokens: 1024
+  max_tokens: 256
   seed: 42
   cache_responses: true
-  cache_dir: "data/outputs/mimiciii/llm_cache"
+  cache_dir: "data/outputs/mimiciii_gemma/llm_cache"
   rate_limit_rpm: 30
   request_logprobs: false
   # Optional: only first N test rows (debug smoke). null = full test set.

@@ -53,14 +53,27 @@ def load_config(
 
     # Override llm.model from env without editing YAML.
     if "llm" in cfg:
-        env_model = os.getenv("OPENAI_MODEL") or os.getenv("LLM_MODEL")
+        env_model = os.getenv("LLM_MODEL_NAME") or os.getenv("OPENAI_MODEL") or os.getenv("LLM_MODEL")
         if env_model:
+            cfg["llm"]["model_name"] = env_model.strip()
             cfg["llm"]["model"] = env_model.strip()
+        elif cfg["llm"].get("model_name"):
+            cfg["llm"]["model"] = cfg["llm"]["model_name"]
         # OpenAI-compatible base URL: env wins over YAML so HPC can override default localhost.
         bu_env = (os.getenv("OPENAI_BASE_URL") or "").strip()
         if bu_env:
             cfg["llm"]["base_url"] = bu_env
         elif not (cfg["llm"].get("base_url") or "").strip():
             cfg["llm"]["base_url"] = None
+        vllm_env = (os.getenv("VLLM_BASE_URL") or "").strip()
+        if vllm_env:
+            cfg["llm"]["vllm_base_url"] = vllm_env
+        mode_env = (os.getenv("LLM_MODE") or "").strip()
+        if mode_env:
+            cfg["llm"]["mode"] = mode_env
+        # Expose HF cache env to downstream clients if provided.
+        hf_home = (os.getenv("HF_HOME") or "").strip()
+        if hf_home:
+            cfg["llm"]["hf_home"] = hf_home
 
     return cfg
