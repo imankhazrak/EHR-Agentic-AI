@@ -1,0 +1,12 @@
+{
+  "sample_id": 11868,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with hypercholesterolemia, which is a form of lipid disorder, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit, fulfilling the criteria for a \"Yes\" prediction. The other diagnoses (Intracranial hemorrhage, Diabetes mellitus, Anemia) and the extensive medication/procedure list relate to critical care management but do not override the explicit lipid disorder evidence present in the current record.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3594,
+    "completion_tokens": 169
+  }
+}
