@@ -1,0 +1,12 @@
+{
+  "sample_id": 8099,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of related medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to **malignancy** (multiple secondary and primary neoplasms across various sites: intra-abdominal lymph nodes, kidney, lung, bone, retroperitoneum, etc.), **pulmonary/vascular events** (pulmonary embolism, acute venous embolism/thrombosis, pneumonia), **renal issues** (acute kidney failure), and **gastrointestinal/urological issues** (retention of urine, hemorrhoids).\n2. **Medications:** The medication list is extensive and primarily supports **oncology/critical care management** (Potassium Chloride Replacement, NS, HYDROmorphone, Magnesium Sulfate, Albumin 5%, Levofloxacin, OxycoDONE Liquid, MetRONIDAZOLE, Spironolactone, Furo",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1239,
+    "completion_tokens": 256
+  }
+}

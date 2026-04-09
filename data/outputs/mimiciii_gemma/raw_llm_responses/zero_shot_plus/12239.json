@@ -1,0 +1,12 @@
+{
+  "sample_id": 12239,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on general risk factors, statin use, or cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on severe infectious processes (Septicemia due to anaerobes, Septic shock, Severe sepsis, Intestinal infection due to Clostridium difficile), severe metabolic derangements (Acidosis, Hyposmolality and/or hyponatremia, Disorders of phosphorus/magnesium/glucose metabolism), and severe systemic/immunological issues (HIV disease, Defibrination syndrome, Leukemoid reaction, etc.).\n2. **Medications:** The medication list is extensive and primarily targets the severe infections (Vancomycin, Linezolid, CefePIME, MetRONIDAZOLE), metabolic support (Potassium Phosphate, Calcium Carbonate, Magnesium Sulfate), and HIV/systemic support (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1224,
+    "completion_tokens": 256
+  }
+}

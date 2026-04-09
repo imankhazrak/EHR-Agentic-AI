@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe infectious processes (Septicemia due to anaerobes, Intestinal infection due to Clostridium difficile, Sepsis), acute organ failure (Acute kidney failure with lesion of tubular necrosis, Acute on chronic systolic heart failure, Congestive heart failure, unspecified), and severe cardiac/vascular issues (Paroxysmal ventricular tachycardia, Coronary atherosclerosis of native coronary artery, Primary hypercoagulable state).\n\nWhile the patient has several risk factors commonly associated with lipid disorders, such as Diabetes mellitus without mention of complication, type II or unspecified type, and Coronary atherosclerosis, these factors alone are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nCrucially, the current record does not contain an explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that is actively being managed or is the primary focus of the current treatment plan, beyond the general risk profile. The medication Cholestyramine is prescribed, which is used for lipid management, but this prescription alone, in the context of the overwhelming current diagnoses, does not constitute the \"strong and explicit evidence\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3854,
+    "completion_tokens": 256
+  }
+}

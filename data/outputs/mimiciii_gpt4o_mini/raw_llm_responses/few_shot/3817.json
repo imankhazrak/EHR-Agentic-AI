@@ -1,0 +1,12 @@
+{
+  "sample_id": 3817,
+  "mode": "few_shot",
+  "model": "gpt-4o-mini-2024-07-18",
+  "text": "Prediction: No\n\nReasoning: Upon reviewing the patient's current hospital visit record, the following points are noted:\n\n1. **Diagnoses Made**: The patient has several significant diagnoses, including uncontrolled type I diabetes with ketoacidosis, acute alcoholic intoxication, and unspecified schizophrenia. However, there is no mention of any lipid metabolism disorders such as hypercholesterolemia, hyperlipidemia, or any related conditions.\n\n2. **Medications Prescribed**: The record indicates that no medications were prescribed during this visit. This is particularly relevant because medications such as statins or other lipid-lowering agents would be strong indicators of an existing lipid disorder. The absence of such medications suggests that there is no active management of a lipid disorder.\n\n3. **Procedures Performed**: There were no procedures performed that would typically relate to lipid metabolism or cardiovascular health. This further supports the absence of any ongoing management or diagnosis of lipid disorders.\n\n4. **Comorbid Conditions**: While the patient has diabetes, which is a risk factor for lipid disorders, the presence of diabetes alone is not sufficient to predict a diagnosis of \"Disorders of Lipid Metabolism.\" The guidelines explicitly state that general risk factors alone do not warrant a \"Yes\" prediction.\n\n5. **Interplay of Factors**: The patient's current clinical picture does not provide any explicit evidence of a lipid disorder. The combination of diagnoses, lack of relevant medications, and absence of procedures related to lipid management leads to the conclusion that there is no strong evidence to suggest that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next visit.\n\nIn summary, without explicit evidence of a lipid disorder or ongoing management of such a condition, the prediction is that \"Disorders of Lipid Metabolism\" will not be present in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3642,
+    "completion_tokens": 371
+  }
+}

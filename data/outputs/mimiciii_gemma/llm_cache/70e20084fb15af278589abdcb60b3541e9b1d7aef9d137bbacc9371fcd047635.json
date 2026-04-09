@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Other and unspecified hyperlipidemia\" present in the patient's current visit record.\n\nAccording to the strict rules provided, the presence of an explicit diagnosis of a lipid disorder is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. This overrides the general rules that exclude predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nFurthermore, the patient presents with several strong comorbid conditions commonly associated with lipid disorders, which reinforces the likelihood of this diagnosis being maintained or re-coded:\n1. **Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled:** Diabetes is a major metabolic risk factor strongly associated with dyslipidemia.\n2. **Unspecified essential hypertension:** Hypertension is a common comorbidity with dyslipidemia and cardiovascular disease.\n3. **Congestive heart failure and Coronary atherosclerosis:** These severe cardiovascular conditions are themselves strongly linked to underlying metabolic and lipid abnormalities.\n\nThe explicit diagnosis of \"Other and unspecified hyperlipidemia\" serves as the definitive evidence required by the prediction criteria. While the patient's medication profile is not recorded, the existing diagnosis of hyperlipidemia, coupled",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 922,
+    "completion_tokens": 256
+  }
+}

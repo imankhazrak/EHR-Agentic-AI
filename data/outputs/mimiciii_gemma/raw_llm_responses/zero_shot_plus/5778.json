@@ -1,0 +1,12 @@
+{
+  "sample_id": 5778,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record:**\nThe current visit record primarily documents the management of **Diabetes with ketoacidosis, type I [juvenile type]**. The prescribed medications and procedures are overwhelmingly focused on stabilizing this acute diabetic and metabolic crisis (Insulin, NS, Potassium Chloride, Magnesium Oxide, D5NS, Acetaminophen, etc.).\n\n2. **Evaluation for Explicit Lipid Disorder Evidence:**\nA comprehensive review of the diagnoses, medications, and procedures reveals **no explicit evidence** of a primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n*   **Diagnoses:** The primary diagnosis is diabetic ketoacidosis, not a lipid abnormality.\n*   **Medications:** While the patient is diabetic (a known risk factor for dyslipidemia), the medication profile does not include any specific lipid-lowering agents (like statins or fibrates) that would indicate active management of a lipid disorder.\n*   **Procedures:** No procedures were performed.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 891,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6319,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of lipid-affecting medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to a severe motor vehicle traffic accident (MVA), including multiple closed fractures (pubis, metacarpals, tibia), organ injuries (spleen, liver), and associated conditions like Cirrhosis of liver and Alcohol abuse. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the current diagnoses.\n2. **Medications:** The prescribed medications are primarily for managing acute trauma, infection (Heparin, Cefazolin, Bacitracin-Polymyxin Ointment), pain (Morphine Sulfate, Oxycodone-Acetaminophen), and acute conditions (Iso-Osmotic Dextrose, Pantoprazole). While some medications like Nifedipine or Heparin can be used in cardiovascular contexts, there is no explicit prescription of lipid-lowering agents (e.g., statins,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1133,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10370,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, cardiovascular diseases, or the use of medications like statins.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Mitral valve disorders; Ostium secundum type atrial septal defect; Congestive heart failure, unspecified; Atrial fibrillation.\nThe patient's procedures include: Annuloplasty; Other and unspecified repair of atrial septal defect; Extracorporeal circulation auxiliary to open heart surgery; Diagnostic ultrasound of heart; Other esophagoscopy.\nThe patient's medication profile is: None recorded.\n\nEvaluation against Prediction Criteria:\n1. **Explicit Lipid Disorder Evidence:** There is no mention of any specific lipid abnormality in the current record (e.g., elevated LDL, triglycerides, or a formal diagnosis of hyperlipidemia).\n2. **Risk Factors vs. Explicit Diagnosis:** While the patient has significant cardiovascular comorbidities (CHF, AF, ASD/Mitral valve issues), these are",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 256
+  }
+}

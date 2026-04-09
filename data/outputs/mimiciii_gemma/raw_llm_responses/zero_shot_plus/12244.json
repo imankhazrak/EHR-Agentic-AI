@@ -1,0 +1,12 @@
+{
+  "sample_id": 12244,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of other complex comorbidities.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is a direct and explicit coding of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities and Management:** The patient presents with numerous comorbidities that are strongly associated with lipid disorders, further reinforcing the clinical context:\n    * **Diabetes Mellitus:** The diagnosis of \"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\" is a major risk factor and comorbidity for dyslipidemia.\n    * **Hypertension and Cardiovascular Disease:** The presence of \"Hypertensive chronic kidney disease,\" \"Congestive heart failure,\" and \"Atrial fibrillation\" indicates significant cardiovascular burden, which is intrinsically linked to atherogenic dyslipidemia.\n    * **Medication Management:** The prescription of **\"Simvastatin\"** is a direct intervention for lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1098,
+    "completion_tokens": 256
+  }
+}

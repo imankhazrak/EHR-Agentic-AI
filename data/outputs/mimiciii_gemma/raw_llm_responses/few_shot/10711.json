@@ -1,0 +1,12 @@
+{
+  "sample_id": 10711,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient has several significant comorbidities, including Atrial fibrillation, Coronary atherosclerosis, and Unspecified essential hypertension, which are all risk factors for dyslipidemia. Furthermore, the patient is receiving medications such as Tacrolimus, which is used in transplant management, and Metoprolol Tartrate, which is used for cardiovascular management. While the patient has a history of cardiovascular disease, the strict instructions explicitly state that the use of statins (which are not explicitly listed as a primary treatment for lipid disorder in this record, though they are common in this population) or cardiovascular diseases alone are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since there is no explicit diagnosis or active management of a lipid abnormality evident in the current record, the prediction must be \"No\" according to the provided strict criteria.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3833,
+    "completion_tokens": 203
+  }
+}

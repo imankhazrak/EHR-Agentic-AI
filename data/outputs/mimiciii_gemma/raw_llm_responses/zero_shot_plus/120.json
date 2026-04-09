@@ -1,0 +1,12 @@
+{
+  "sample_id": 120,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis, excluding general risk factors or the use of lipid-affecting medications alone.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Cirrhosis, Hepatic encephalopathy, Coagulation factor deficiency, Esophageal varices, Grand mal status, Pneumonia, ARF, CHF, Portal hypertension, Diabetes, etc.) does **not** contain any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities that are *associated* with lipid disorders, including:\n    *   **Diabetes Mellitus (Type II):** This is a known risk factor for dyslipidemia.\n    *   **Congestive Heart Failure (CHF):** This is a cardiovascular condition often comorbid with metabolic syndrome/dyslipidemia.\n    *   **Cirrhosis/Portal Hypertension:** These conditions can alter overall liver function and metabolism, which is related to lipid processing.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1293,
+    "completion_tokens": 256
+  }
+}

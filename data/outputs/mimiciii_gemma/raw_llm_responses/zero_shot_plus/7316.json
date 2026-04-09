@@ -1,0 +1,12 @@
+{
+  "sample_id": 7316,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors or the use of certain medications (like statins or management of cardiovascular diseases).\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to severe, acute complications of liver transplantation and associated systemic infections/malnutrition: Cholangitis, Cirrhosis of liver without mention of alcohol, Complications of transplanted liver, Hemorrhage, Bacteremia, etc. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality in the current diagnosis list.\n2. **Medications:** The medication list is extensive and focused on managing acute infectious processes (Levofloxacin, Linezolid, Vancomycin, etc.), immunosuppression (Tacrolimus, Mycophenolate Mofetil), and acute complications (Prednisone, Pantoprazole, etc.). While Aspirin and Clopidogrel are present (which are often used in patients with underlying cardiovascular risk), the record does not explicitly state that these are being used",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1280,
+    "completion_tokens": 256
+  }
+}

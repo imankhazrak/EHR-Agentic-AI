@@ -1,0 +1,12 @@
+{
+  "sample_id": 2361,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record shows a complex array of severe, acute medical conditions, including Acute kidney failure with lesion of tubular necrosis, Dehydration, Acute respiratory failure, Pneumonitis, Congestive heart failure, Atrial fibrillation, and various infections and neurological issues. The patient is receiving extensive supportive care, including various antibiotics (Levofloxacin, Vancomycin, Imipenem-Cilastatin, Metronidazole, Tobramycin), vasopressors (Norepinephrine), and supportive medications (Magnesium Sulfate, Diltiazem, Furosemide, etc.).\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the prediction should not be based solely on the use of statins.\n\nFurthermore, the current diagnoses list does not explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder diagnosis. The presence of Atorvastatin suggests the *management* of a potential lipid issue, but without an explicit diagnosis of the underlying disorder in the current record, and adhering strictly to the rule that explicit lipid disorder",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3817,
+    "completion_tokens": 256
+  }
+}

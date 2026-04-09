@@ -1,0 +1,12 @@
+{
+  "sample_id": 5570,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including Septicemia due to E. coli, Severe sepsis, Pneumonia due to E. coli, Septic shock, and Hypertensive chronic kidney disease stage V/end stage renal disease. The medication profile is extensive and focused on managing these critical conditions (e.g., Vancomycin, Piperacillin-Tazobactam, Norepinephrine, etc.).\n\nCrucially, the current diagnoses and prescribed medications do not contain any explicit evidence of a primary or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Jaundice, which can be associated with liver dysfunction and sometimes lipid metabolism issues, the record does not explicitly code a lipid disorder diagnosis.\n\nFollowing the strict instructions provided, which mandate that a prediction of \"Yes\" must be based on *strong and explicit evidence* of an existing or actively managed lipid disorder (and not merely on general risk factors like hypertension or the presence of jaundice), the absence of such explicit evidence leads to the conclusion that the diagnosis of \"Disorders of Lipid Metabolism\" is unlikely to be coded in the next hospital visit. The patient's",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3892,
+    "completion_tokens": 256
+  }
+}

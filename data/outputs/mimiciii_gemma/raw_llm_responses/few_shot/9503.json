@@ -1,0 +1,12 @@
+{
+  "sample_id": 9503,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the record explicitly lists the diagnosis: **\"Pure hypercholesterolemia.\"** According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. The presence of this explicit diagnosis meets the strict criteria for answering \"Yes,\" as it is not based solely on the use of statins or general risk factors. Furthermore, the patient is actively managed with **\"Atorvastatin,\"** which is consistent with the diagnosis of hypercholesterolemia. The explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor, overriding the general high-risk status associated with other comorbidities like Septicemia, Pressure ulcers, and Multiple Sclerosis. Therefore, based on the explicit coding of a lipid disorder in the current record, the prediction for the next visit is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 216
+  }
+}

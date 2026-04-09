@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current visit record contains several significant diagnoses and a complex medication regimen, including: Hemorrhage of gastrointestinal tract, unspecified; Portal hypertension; Acute kidney failure, unspecified; Ulcer of esophagus without bleeding; Alcoholic cirrhosis of liver; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Internal hemorrhoids without mention of complication; Other specified disorders of stomach and duodenum; Esophageal reflux; Depressive disorder, not elsewhere classified; Other and unspecified hyperlipidemia; Unspecified essential hypertension; Iron deficiency anemia secondary to blood loss (chronic); Esophageal varices in diseases classified elsewhere, without mention of bleeding; Obstructive sleep apnea (adult)(pediatric).\n\nWhile the diagnosis \"Other and unspecified hyperlipidemia\" is explicitly present in the current record, the strict instructions for predicting the *next* hospital visit require explicit evidence of an *existing or actively managed* lipid disorder that goes beyond general risk factors or the mere presence of a current, unspecified diagnosis, especially when the goal is to predict a *future* coding.\n\nThe presence of \"Other and unspecified hyperlipidemia\" in the current record is the strongest piece of evidence. However, based on the strict constraints provided in the instructions\u2014",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3668,
+    "completion_tokens": 256
+  }
+}

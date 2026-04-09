@@ -1,0 +1,12 @@
+{
+  "sample_id": 7245,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute traumatic and infectious events: Cerebellar or brain stem laceration with open intracranial wound, Bacteremia, Disseminated candidiasis, and severe neurological/vascular complications (e.g., Cerebrospinal fluid rhinorrhea, Phlebitis). The medication profile is empty, and the procedures are focused on acute trauma and life support (e.g., Continuous invasive mechanical ventilation, Arteriography).\n\nCrucially, the current record contains **no explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The presence of general risk factors like hypertension or diabetes is absent from the provided diagnoses.\n\nAccording to the strict instructions, a prediction of \"Yes\" can **only** be made if there is strong and explicit evidence of a lipid disorder present and likely to be diagnosed. Since the current record lacks this explicit evidence, even though the general population risk for such conditions is high (27.6% in MIMIC-III), the prediction must be \"No\" based on the strict evidence-based criteria provided. The current clinical picture is overwhelmingly focused on acute, non-metabolic",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3576,
+    "completion_tokens": 256
+  }
+}

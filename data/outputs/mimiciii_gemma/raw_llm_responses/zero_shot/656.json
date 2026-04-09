@@ -1,0 +1,12 @@
+{
+  "sample_id": 656,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to hypertension (Hypertensive encephalopathy, Hypertensive chronic kidney disease), diabetes, and renal issues. While the patient is on several medications, including Aspirin, which is often used in the context of cardiovascular risk, and the patient has a history of renal failure requiring hemodialysis, there is no explicit evidence in the provided diagnoses or procedures that points to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications listed, such as Captopril, Lisinopril, and Amlodipine Besylate, are primarily for blood pressure control. Therefore, based strictly on the criteria requiring explicit evidence of a lipid disorder, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 616,
+    "completion_tokens": 156
+  }
+}

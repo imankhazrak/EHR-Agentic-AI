@@ -1,0 +1,12 @@
+{
+  "sample_id": 9903,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for strong and explicit evidence of an existing lipid disorder, which is the primary factor for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" Although the patient has numerous other conditions (Diabetes, ESRD, Hypertension, etc.), the explicit presence of hyperlipidemia in the current record provides the necessary evidence to predict a future coding of this diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 100
+  }
+}

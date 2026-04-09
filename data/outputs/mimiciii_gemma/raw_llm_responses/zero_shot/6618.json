@@ -1,0 +1,12 @@
+{
+  "sample_id": 6618,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is extensive and details numerous serious conditions, including Hemorrhage of gastrointestinal tract, Acute posthemorrhagic anemia, Atrial fibrillation, Acute on chronic diastolic heart failure, Congestive heart failure, unspecified, Obstructive chronic bronchitis with (acute) exacerbation, Other and unspecified angina pectoris, Methicillin susceptible pneumonia due to Staphylococcus aureus, Pneumonitis due to inhalation of food or vomitus, Abnormal coagulation profile, Unspecified essential hypertension, Postsurgical hypothyroidism, Coronary atherosclerosis of native coronary artery, Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS), Personal history of venous thrombosis and embolism, Benign neoplasm of colon, and Long-term (current) use of anticoagulants. However, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that is actively being managed or is the primary focus of the current treatment plan, despite the presence of Simvastatin in the medication list. Since the instructions strictly forbid predicting a future diagnosis based solely on the use of statins, and no explicit lipid disorder diagnosis is present, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 252
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11957,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly dominated by severe, life-threatening conditions such as multiple organ failure (Kidney Stage V/End Stage Renal Disease, Acidosis, Pneumonitis, Acute Respiratory Failure, Hemoperitoneum, Bacteremia, etc.). While the patient is on various medications, including Warfarin and Aspirin, and has diagnoses related to cardiovascular issues (Atrial Fibrillation), the record **lacks any explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The presence of general risk factors or cardiovascular diagnoses alone is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.\n\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is overwhelmingly dominated by severe, life-threatening conditions such as multiple organ failure (Kidney Stage V/End Stage Renal Disease, Acidosis, Pneumonitis, Acute Respiratory Failure, Hemoperitoneum, Bacteremia, etc.). While the patient is on various medications, including Warfarin and Aspirin, and has diagnoses related to cardiovascular issues (Atrial Fibrillation), the record **lacks any explicit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1179,
+    "completion_tokens": 256
+  }
+}

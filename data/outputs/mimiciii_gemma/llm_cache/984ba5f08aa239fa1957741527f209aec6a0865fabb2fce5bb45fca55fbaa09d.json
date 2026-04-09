@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of cardiovascular diseases, or the use of statins.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are heavily focused on severe, acute, and chronic cardiopulmonary and gastrointestinal issues:\n- Congestive heart failure, unspecified\n- Methicillin susceptible pneumonia due to Staphylococcus aureus\n- Mechanical complication of gastrostomy\n- Chronic and other pulmonary manifestations due to radiation\n- Other primary cardiomyopathies\n- Mitral valve disorders\n- Primary pulmonary hypertension\n- Tracheostomy status\n\nThe patient's current medication profile is recorded as \"None recorded.\"\n\nEvaluation against Prediction Criteria:\n1. **Explicit Lipid Disorder Evidence:** There is no mention of any specific lipid abnormality in the current diagnoses (e.g., hypercholesterolemia, hyperlipidemia, elevated LDL/triglycerides).\n2. **Exclusion of General Risk Factors:** While the patient has severe cardiovascular disease (",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4567,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record is overwhelmingly focused on severe, acute medical crises, primarily involving the gastrointestinal system, respiratory system, and cardiovascular system. The diagnoses include Acute gastric ulcer with hemorrhage, Acute respiratory failure, Pneumonia, Cardiac arrest, and Congestive heart failure. The medication profile is dominated by treatments for these acute conditions (e.g., Furosemide, Meropenem, Levothyroxine Sodium, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has several cardiovascular comorbidities (Chronic diastolic heart failure, Congestive heart failure), and the medication list includes Metoprolol Tartrate (a common cardiovascular agent), these factors alone, as per the strict instructions, are **insufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe strict rule mandates that a \"Yes\" prediction can only be made if there is **strong and explicit evidence** of an existing or actively managed lipid disorder. Since this explicit evidence is absent in the current record, the prediction must be \"No,\" regardless of the patient's general high-risk status",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3915,
+    "completion_tokens": 256
+  }
+}

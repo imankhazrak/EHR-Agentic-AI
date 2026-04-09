@@ -1,0 +1,12 @@
+{
+  "sample_id": 8801,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, complex comorbidities related to advanced organ failure, including End Stage Renal Disease (ESRD), Cirrhosis of the liver, Hepatic Encephalopathy, and advanced cardiovascular/renal disease (Hypertensive chronic kidney disease, Portal hypertension). The medication profile includes Cholestyramine, which is used for bile acid sequestration, often in the context of liver disease, but this is not explicit evidence of a primary lipid disorder like hypercholesterolemia or hyperlipidemia. While the patient has multiple risk factors for dyslipidemia (e.g., advanced liver disease, renal failure), the strict instructions mandate that a future diagnosis of \"Disorders of Lipid Metabolism\" can only be predicted if there is *explicit* evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis). Since the current record lacks a specific diagnosis of a lipid abnormality, and the use of Cholestyramine alone is insufficient evidence under the provided constraints, the prediction must be \"No\", despite the high-risk clinical picture.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3724,
+    "completion_tokens": 232
+  }
+}

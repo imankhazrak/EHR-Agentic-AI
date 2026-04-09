@@ -1,0 +1,12 @@
+{
+  "sample_id": 5137,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include acute and chronic respiratory failure, chronic diastolic heart failure, schizophrenia, mixed acid-base disorder, cervicalgia, coronary atherosclerosis, obstructive sleep apnea, congestive heart failure, essential hypertension, diabetes with ophthalmic manifestations, and various other systemic issues. The medication profile is also complex, involving anticoagulants (Heparin), anti-hypertensives (Lisinopril, Metoprolol), anti-diabetics (Insulin), and statins (Atorvastatin).\n\nHowever, according to the strict instructions, the prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder, not merely the presence of risk factors or the use of lipid-lowering medications. The current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid disorder diagnosis. While the patient is prescribed Atorvastatin, which is used for lipid management, the instruction explicitly states that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, because there is no explicit diagnosis of a lipid disorder in the current record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3775,
+    "completion_tokens": 256
+  }
+}

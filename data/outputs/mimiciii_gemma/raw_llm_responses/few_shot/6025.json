@@ -1,0 +1,12 @@
+{
+  "sample_id": 6025,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record shows several significant comorbidities, including Vascular dementia with delirium, Hypertensive chronic kidney disease stage V/ESRD, Atrioventricular block, and Diabetes with renal manifestations. The patient is also receiving Atorvastatin, which is a medication used for lipid management. However, the strict instructions explicitly state that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (such as hypercholesterolemia or hyperlipidemia). While the patient is high-risk due to hypertension and diabetes, the instructions mandate that a diagnosis of an existing or actively managed lipid disorder must be explicitly present to predict a \"Yes.\" Since explicit evidence of a lipid disorder diagnosis is absent in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3563,
+    "completion_tokens": 181
+  }
+}

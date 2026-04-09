@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, complex, and multi-systemic critical care issues, including severe cardiac dysfunction (Chronic systolic heart failure, Congestive heart failure, Primary pulmonary hypertension), severe renal impairment (Chronic kidney disease, Stage IV), severe infectious/inflammatory processes (Infection and inflammatory reaction due to cardiac device, implant, and graft), and severe metabolic/structural issues (Morbid obesity, Ulcer of heel and midfoot).\n\nCrucially, the current diagnoses and the prescribed medications do not contain any explicit, primary diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has significant risk factors commonly associated with lipid disorders\u2014namely **Morbid obesity** and **Hypertensive chronic kidney disease**\u2014these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication list includes **Amlodipine** and **Isosorbide Mononitrate**, which manage hypertension and cardiac function, but there are **no statins, fibrates, or other explicit lipid-lowering agents** prescribed in this record.\n\nBased on the strict rule",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3626,
+    "completion_tokens": 256
+  }
+}

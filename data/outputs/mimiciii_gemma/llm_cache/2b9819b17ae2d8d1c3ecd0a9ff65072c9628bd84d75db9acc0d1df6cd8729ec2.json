@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has several severe, chronic conditions: Hypertensive chronic kidney disease, malignant, End stage renal disease, Systemic lupus erythematosus, Anemia, and Hyperpotassemia. These conditions (especially CKD and SLE) are known risk factors for dyslipidemia, but the presence of a *coded* lipid disorder diagnosis is not explicitly stated in the diagnoses list.\n2. **Medications:** The patient is on various medications for hypertension (NiCARdipine IV, Labetalol, NIFEdipine CR), renal support (Tekturna), SLE (PredniSONE, Citalopram Hydrobromide), and pain/other issues (HYDROmorphone, Acetaminophen). Crucially, there is **no explicit mention of lipid-low",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1019,
+    "completion_tokens": 256
+  }
+}

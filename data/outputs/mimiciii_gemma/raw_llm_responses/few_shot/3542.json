@@ -1,0 +1,12 @@
+{
+  "sample_id": 3542,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and renal pathology. The primary diagnoses include Mitral valve disorders, Atrial fibrillation, Congestive heart failure, Acute kidney failure, and Diabetes mellitus. While Diabetes mellitus is a known risk factor for lipid disorders, and cardiovascular disease is strongly associated with hyperlipidemia, the current record **lacks any explicit diagnosis** of a lipid abnormality (such as hypercholesterolemia or hyperlipidemia) or any active, explicit management of a lipid disorder (such as a documented lipid panel abnormality or ongoing specific lipid-lowering therapy beyond general care). The patient's medication list is empty, and the procedures performed are purely related to acute cardiac and respiratory support. Based on the strict instruction to only predict a future diagnosis when explicit lipid disorder evidence is present, and given the absence of such evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3551,
+    "completion_tokens": 191
+  }
+}

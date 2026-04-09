@@ -1,0 +1,12 @@
+{
+  "sample_id": 1705,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient explicitly has the diagnosis of \"Pure hypercholesterolemia\" documented in the current visit record. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53). Therefore, there is strong and explicit evidence that this condition will be coded as a diagnosis in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record documents several conditions, including \"Pure hypercholesterolemia.\" However, the instructions strictly state that the prediction must be based on *explicit* evidence of an *existing or actively managed* lipid disorder, and that factors like general risk factors or the use of medications alone are insufficient. In this specific context, despite the documented hypercholesterolemia, the provided instructions for the prediction task are interpreted to require a level of ongoing, explicit management or a specific diagnostic pathway that is not fully met by the documentation alone to warrant a \"Yes\" prediction for the *next* visit, leading to a \"No\" prediction based on the strict interpretation of the provided constraints.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient has a documented diagnosis of \"Pure hypercholester",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 761,
+    "completion_tokens": 256
+  }
+}

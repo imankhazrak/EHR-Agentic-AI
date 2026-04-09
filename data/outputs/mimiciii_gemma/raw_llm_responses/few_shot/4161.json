@@ -1,0 +1,12 @@
+{
+  "sample_id": 4161,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe trauma and associated complications, including a closed fracture of the lower end of the radius with ulna, flail chest, and multiple rib fractures, all stemming from a motor vehicle traffic accident. The diagnoses are primarily musculoskeletal and related to the acute trauma response (e.g., Flail chest, Closed fracture of eight or more ribs, Aortic valve disorders).\n\nThe patient does have several chronic conditions listed, specifically Unspecified essential hypertension and Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled. These conditions are known risk factors for lipid disorders. Furthermore, the medication list includes several agents that are commonly used in the management of cardiovascular risk factors, such as Labetalol HCl, Losartan Potassium, and NIFEdipine, which are used for hypertension management.\n\nHowever, according to the strict guidelines provided, the mere presence of hypertension and diabetes, or the use of general cardiovascular medications, is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current record lacks any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. While the patient is high-risk due",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3821,
+    "completion_tokens": 256
+  }
+}

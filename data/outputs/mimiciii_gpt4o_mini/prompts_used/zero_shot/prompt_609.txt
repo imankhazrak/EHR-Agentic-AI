@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Coronary atherosclerosis of native coronary artery; [ICD9-DX:9974]; Other specified complications of procedures not elsewhere classified; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Thyrotoxicosis without mention of goiter or other cause, and without mention of thyrotoxic crisis or storm; Other specified disorders of intestine; Hypotension, unspecified
+- Medications prescribed: Sodium Bicarbonate; Patanol; D5W; Norepinephrine; Phenylephrine HCl; Fluconazole; NS; Albuterol Neb Soln; Albumin 5% (12.5gm); Amino Acids 4.25% W/ Dextrose 5%; Multivitamin-12; Insulin; Miconazole Nitrate Vaginal; Iso-Osmotic Dextrose; Metronidazole; Piperacillin-Tazobactam Na; Nephrocaps; Alteplase (Catheter Clearance); Bisacodyl; Magnesium Sulfate; Metoprolol; Docusate Sodium; Aspirin EC; Acetaminophen; Morphine Sulfate; Diphenhydramine HCl; Pantoprazole; Atorvastatin; Methimazole; Timolol Maleate 0.5%; Milk of Magnesia; Potassium Chloride; Epoetin Alfa; Vial; Magnesium Oxide; Lactulose; Sucralfate; Vancomycin HCl; Meperidine; Neostigmine; Propofol (Generic); Glycopyrrolate; Docusate Sodium (Liquid); Ranitidine; DopAmine; Nitroprusside Sodium; Nitroglycerin; SW; Humulin-R Insulin; Metoclopramide
+- Procedures performed: Single internal mammary-coronary artery bypass; Left heart cardiac catheterization; (Aorto)coronary bypass of two coronary arteries; Extracorporeal circulation auxiliary to open heart surgery; Exploratory laparotomy; Coronary arteriography using two catheters; Angiocardiography of left heart structures; Peritoneal dialysis; Venous catheterization, not elsewhere classified; Parenteral infusion of concentrated nutritional substances; Enteral infusion of concentrated nutritional substances; Hemodialysis; Venous catheterization for renal dialysis
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

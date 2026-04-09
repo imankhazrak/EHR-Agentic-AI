@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses include: Atherosclerosis of native arteries of the extremities with gangrene, Cellulitis and abscess of leg, Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled, Atrial fibrillation, Alcohol abuse, Bipolar I disorder, Iron deficiency anemia, Congestive heart failure, and Atherosclerosis.\n\nThe patient's current medication profile is \"None recorded.\"\n\nThe patient's procedures include: Amputation of toe, Vascular shunt, Amputation through foot, Percutaneous abdominal drainage.\n\nWe must look for explicit evidence of a lipid abnormality in the current record. The current diagnoses list does not explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis.\n\nWe must also check for explicit management of a lipid disorder,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 256
+  }
+}

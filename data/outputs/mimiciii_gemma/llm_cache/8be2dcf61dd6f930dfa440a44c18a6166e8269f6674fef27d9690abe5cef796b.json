@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and pulmonary crises, including Acute on chronic diastolic heart failure, Cardiogenic shock, Primary pulmonary hypertension, and Pneumonia. The medication list includes Atorvastatin, which is a lipid-lowering agent, and Niacin SR, which can affect lipid profiles. However, the strict instructions explicitly state that the mere use of statins (Atorvastatin) or general risk factors (like hypertension or cardiovascular disease) are NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current diagnoses do not explicitly state a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) as the cause of the current illness. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to code this diagnosis in the next hospital visit, despite the presence of high-risk factors and lipid-affecting medications.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3773,
+    "completion_tokens": 195
+  }
+}

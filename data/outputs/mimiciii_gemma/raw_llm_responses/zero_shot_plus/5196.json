@@ -1,0 +1,12 @@
+{
+  "sample_id": 5196,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses: Rheumatic heart failure, other primary cardiomyopathies, Atrial fibrillation, Gout, Diabetes mellitus (Type II, unspecified, not controlled), and Unspecified essential hypertension. These conditions are known risk factors for lipid disorders.\n2. **Medications:** The patient is prescribed **Simvastatin** and **Furosemide**. Simvastatin is a statin, a primary treatment for hyperlipidemia/hypercholesterolemia.\n3. **Procedures:** The patient underwent cardiac catheterization and coronary arteriography.\n\nEvaluation against Strict Rules:\nThe instructions explicitly state that the prediction CANNOT be based solely on:\n* Use of statins (e.g., Simvastatin)\n* Cardiovascular diseases (e.g., CHF, AF, CABG, CAD",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 982,
+    "completion_tokens": 256
+  }
+}

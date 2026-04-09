@@ -1,0 +1,12 @@
+{
+  "sample_id": 5448,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details severe cardiovascular events (Acute myocardial infarction, Ventricular fibrillation, Cardiac arrest, Coronary atherosclerosis, Aortocoronary bypass status) and associated critical care management (Mechanical ventilation, Hypotension, Nephritis, Depressive disorder). While the patient is receiving medications like Levothyroxine, which can sometimes be related to metabolic status, and is high-risk due to the cardiac history, there is **no explicit evidence** in the current diagnoses or ongoing management that points specifically to a primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would necessitate a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The cardiac and critical care diagnoses are the dominant factors.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 654,
+    "completion_tokens": 162
+  }
+}

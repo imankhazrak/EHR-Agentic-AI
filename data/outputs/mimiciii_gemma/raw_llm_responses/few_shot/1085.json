@@ -1,0 +1,12 @@
+{
+  "sample_id": 1085,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record primarily details severe acute and critical care events, including Acute respiratory failure, Anoxic brain damage, Congestive heart failure, unspecified, Chronic airway obstruction, not elsewhere classified, Unspecified sleep apnea, Tracheostomy status, and Other specified cardiac dysrhythmias. The procedures performed include Continuous invasive mechanical ventilation for less than 96 consecutive hours and Hemodialysis.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Congestive heart failure, which is a cardiovascular condition often associated with dyslipidemia, the instructions strictly forbid predicting a future diagnosis based solely on the presence of cardiovascular diseases or general risk factors.\n\nThe medication profile is also empty, meaning there is no current management of a lipid disorder (e.g., statins or fibrates) to suggest an active, coded condition.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014the absence of such a diagnosis in the current record leads to the prediction that \"Disorders of Lipid Metabolism\" will **not**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3489,
+    "completion_tokens": 256
+  }
+}

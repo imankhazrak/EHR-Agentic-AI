@@ -1,0 +1,12 @@
+{
+  "sample_id": 5244,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or strongly implied by the current record, not merely suggested by risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly focused on severe, acute, and chronic conditions related to:\n*   **Infectious/Inflammatory Processes:** Sepsis, Septicemia, Pneumonia, Chronic osteomyelitis.\n*   **Renal/Cardiovascular Complications:** End stage renal disease (ESRD), Complications of transplanted kidney, Chronic glomerulonephritis, Hypertensive chronic kidney disease, Atrial fibrillation.\n*   **Neurological/Skeletal Trauma:** Closed fractures (cervical vertebrae), Intervertebral disc disorder with myelopathy, Encephalopathy.\n*   **Substance Use:** Cocaine dependence, Opioid type dependence.\n\nCrucially, **there is no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes several agents that are commonly used in the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1507,
+    "completion_tokens": 256
+  }
+}

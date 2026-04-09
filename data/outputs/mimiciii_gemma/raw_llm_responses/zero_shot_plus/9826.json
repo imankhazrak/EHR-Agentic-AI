@@ -1,0 +1,12 @@
+{
+  "sample_id": 9826,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hyperlipidemia.\" The current visit record clearly lists the diagnosis: \"Other and unspecified hyperlipidemia.\"\n\nAccording to the strict rules provided, the presence of an explicit diagnosis of a lipid disorder (such as hyperlipidemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. This evidence overrides the general clinical risk factors (like CHF, AF, or hypertension) and the mere use of medications (like Lisinopril or Furosemide).\n\nTherefore, because the patient is explicitly diagnosed with hyperlipidemia, the prediction is Yes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1303,
+    "completion_tokens": 169
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8190,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the prediction criteria strictly state that a diagnosis of \"Disorders of Lipid Metabolism\" will only be coded in the NEXT hospital visit if there is strong and explicit evidence of an *existing or actively managed* lipid disorder, and that factors like general hyperlipidemia listed in the current record are NOT sufficient to predict a future diagnosis. Furthermore, the criteria explicitly exclude predicting a future diagnosis based solely on the presence of general hyperlipidemia listed in the current record. Therefore, despite the current diagnosis of hyperlipidemia, the strict rules for predicting a *future* diagnosis are not met.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 140
+  }
+}

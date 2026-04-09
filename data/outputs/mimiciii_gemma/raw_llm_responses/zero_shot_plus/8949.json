@@ -1,0 +1,12 @@
+{
+  "sample_id": 8949,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly look for explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are heavily focused on the consequences of organ transplantation and associated complications:\n* Complications of transplanted kidney\n* Acute kidney failure with lesion of tubular necrosis\n* Atrial flutter\n* Encephalopathy, unspecified\n* Other venous embolism and thrombosis of unspecified site\n* Long-term (current) use of anticoagulants\n* Antineoplastic and immunosuppressive drugs causing adverse effects in therapeutic use\n\nNone of the explicit diagnoses point to a primary or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and primarily supports immunosuppression, cardiac management, and infection control:\n* **Immunosuppressants/Anti-rejection:** Mycophenolate Mofetil, Sirolimus, Tacrolimus, MethylPREDNISolone Sodium Succ.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1137,
+    "completion_tokens": 256
+  }
+}

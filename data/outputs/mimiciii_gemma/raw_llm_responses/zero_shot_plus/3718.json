@@ -1,0 +1,12 @@
+{
+  "sample_id": 3718,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or the use of specific medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant comorbidities: Atherosclerosis, Acute posthemorrhagic anemia, Aortic valve disorders, Diabetes with neurological manifestations (Type II), Polyneuropathy, Unspecified essential hypertension, Unspecified acquired hypothyroidism, Aortocoronary bypass status, Old myocardial infarction, and Below knee amputation status. These conditions (Diabetes, Hypertension, Atherosclerosis, CAD) are well-known risk factors for lipid disorders.\n2. **Medications:** The patient is prescribed **Atorvastatin**. This is a lipid-lowering agent (statin), which strongly suggests that the patient *has* or *is being treated for* a dyslipidemia.\n3. **Exclusions based on Instructions:** The instructions explicitly state that the use of statins (e.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1028,
+    "completion_tokens": 256
+  }
+}

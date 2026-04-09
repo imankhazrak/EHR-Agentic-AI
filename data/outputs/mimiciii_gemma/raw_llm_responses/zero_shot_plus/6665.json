@@ -1,0 +1,12 @@
+{
+  "sample_id": 6665,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of the Current Visit Record:\n1. **Primary Diagnoses:** The patient's current diagnoses are Volvulus, Perforation of intestine, and Acute vascular insufficiency of intestine. These are acute gastrointestinal and vascular emergencies.\n2. **Medication Profile:** The prescribed medications are extensive and primarily address acute conditions:\n    *   **Gastrointestinal/Infection:** Ampicillin Sodium, Metronidazole, Levofloxacin, Pantoprazole Sodium, Dextrose 5%, Potassium Chloride.\n    *   **Vascular/Pain/Sedation:** Nitroglycerin, Metoprolol, Lorazepam, Morphine Sulfate, Heparin, Propofol, Dexmedetomidine HCl, Oxycodone.\n    *   **Electrolyte/Support:** LR, D5W, NS, Magnesium Sulfate, Calcium Gluconate, Potassium Chloride.\n    *   **Other:** Amp",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 256
+  }
+}

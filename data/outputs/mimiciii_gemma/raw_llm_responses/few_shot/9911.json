@@ -1,0 +1,12 @@
+{
+  "sample_id": 9911,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a diagnosed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient's diagnoses are primarily related to severe acute conditions, including Pneumonia, Malignant neoplasm, Acidosis, and Cardiac tamponade. While the patient is receiving various medications, including those that might be used in the management of cardiovascular risk factors (e.g., Dexamethasone, Ketorolac, Heparin), and has a history of venous thrombosis, these factors alone do not constitute explicit evidence of an existing or actively managed lipid disorder that would strongly predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided. Therefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3834,
+    "completion_tokens": 176
+  }
+}

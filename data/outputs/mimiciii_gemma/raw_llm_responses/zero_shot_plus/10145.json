@@ -1,0 +1,12 @@
+{
+  "sample_id": 10145,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a future diagnosis based solely on the use of statins, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made in the current visit record reveals no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis.\n2. **Cardiovascular Comorbidities:** The record does mention \"Coronary atherosclerosis of native coronary artery.\" While this is a significant cardiovascular comorbidity, the instructions explicitly state that the presence of cardiovascular diseases alone is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\n3. **Medication Profile:** The medication list does not explicitly list a lipid-lowering agent such as a statin (e.g., Atorvastatin) or a fibrate, although the patient is on various other medications. *Self-Correction/Refinement: While the instructions state that the use of statins is not sufficient evidence, the absence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1166,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11353,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is overwhelmingly focused on severe, acute, life-threatening conditions related to infectious disease, organ failure, and malignancy. The primary diagnoses include Nodular lymphoma, acute kidney failure, acute liver necrosis, hepatic encephalopathy, and multiple severe respiratory and infectious complications (e.g., Ventilator associated pneumonia, Pseudomonas infection).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. While the patient is receiving various medications (e.g., Albumin, various antibiotics, steroids), none of the prescribed medications are explicitly for lipid management (like statins or fibrates), and no lipid panel results or related diagnoses are present in the current record.\n\nFollowing the strict guidelines provided:\n1. The prediction target requires **strong and explicit evidence** of a lipid disorder.\n2. The current record only shows evidence of severe systemic illness, not a primary metabolic lipid abnormality.\n3. Therefore, based on the absence of this explicit evidence, the prediction must be \"No\", even though the patient is critically ill and high-risk for many comorbidities.\n\nThe reasoning aligns with the demonstration cases where a \"Yes",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3899,
+    "completion_tokens": 256
+  }
+}

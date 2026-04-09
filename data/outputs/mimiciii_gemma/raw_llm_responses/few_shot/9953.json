@@ -1,0 +1,12 @@
+{
+  "sample_id": 9953,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is overwhelmingly focused on severe, acute, and chronic infectious, inflammatory, and cardiovascular complications stemming from indwelling medical devices and underlying systemic diseases. The primary diagnoses include:\n1. **Infectious/Inflammatory:** Infection and inflammatory reaction due to indwelling urinary catheter; Urinary tract infection, site not specified; Proteus (mirabilis) (morganii) infection in conditions classified elsewhere and of unspecified site.\n2. **Cardiovascular:** Acute on chronic diastolic heart failure; Congestive heart failure, unspecified; Atrial fibrillation; Coronary atherosclerosis of native coronary artery.\n3. **Systemic/Device-related:** Injury to other specified blood vessels of abdomen and pelvis; Acute kidney failure, unspecified; Mechanical complication due to urethral (indwelling) catheter; Spinal stenosis, unspecified region.\n\n**Analysis against Prediction Criteria:**\nThe strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require **explicit evidence** of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) or **clear ongoing management** of such a condition.\n\n1. **Absence of Explicit Lipid Diagnosis:** The current list of diagnoses made does not include any mention of hypercholesterolemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3916,
+    "completion_tokens": 256
+  }
+}

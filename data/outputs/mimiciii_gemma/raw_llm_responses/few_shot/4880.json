@@ -1,0 +1,12 @@
+{
+  "sample_id": 4880,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe respiratory illness (Pneumonitis, Acute respiratory failure), severe cardiac conditions (Acute on chronic diastolic heart failure, Congestive heart failure), and malignancy (Malignant neoplasm of upper lobe, bronchus or lung). The medication profile includes several agents for cardiac and respiratory management (Lisinopril, Metoprolol, Pantoprazole, Albuterol, Ipratropium Bromide Neb, Heparin, Atenolol, Losartan Potassium).\n\nCrucially, while the patient is prescribed **Atorvastatin** and **Fish Oil (Omega 3)**, these medications are used for lipid management. However, the strict instructions dictate that the mere use of statins or lipid-lowering supplements is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit.\n\nFurthermore, the current diagnoses **do not explicitly state** a lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis. The diagnoses are focused on infectious, cardiac, and oncological issues.\n\nBased on the strict criteria provided in the instructions\u2014that explicit evidence of an existing or actively",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3665,
+    "completion_tokens": 256
+  }
+}

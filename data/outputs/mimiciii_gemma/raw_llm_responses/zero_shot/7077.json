@@ -1,0 +1,12 @@
+{
+  "sample_id": 7077,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to End Stage Renal Disease (ESRD), Diabetes, Hypertension, and various cardiac/metabolic complications (e.g., Diastolic Heart Failure, Hyperpotassemia). While the patient is high-risk for dyslipidemia due to these underlying conditions, the current record does not contain any explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The listed medications and procedures are primarily focused on managing renal, diabetic, and cardiovascular complications.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 653,
+    "completion_tokens": 142
+  }
+}

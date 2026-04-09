@@ -1,0 +1,12 @@
+{
+  "sample_id": 4876,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record provided pertains to a neonate admitted for observation of a suspected infectious condition, preterm birth, and prophylactic care. The diagnoses made are related to the birth process (Single liveborn, born in hospital, delivered without mention of cesarean section; Other preterm infants, 2,500 grams and over; 35-36 completed weeks of gestation) and the infectious/prophylactic management (Observation for suspected infectious condition; Need for prophylactic vaccination and inoculation against viral hepatitis; Need for prophylactic vaccination and inoculation against viral hepatitis).\n\nThe medications prescribed (Send 500mg Vial; NEO*IV*Gentamicin; NEO*IV*AMPicillin Sodium; Syringe (Neonatal) *D5W*) and procedures performed (Prophylactic administration of vaccine against other diseases) are standard care for a neonate in this setting and do not explicitly indicate the presence or active management of a primary lipid disorder such as hypercholesterolemia or hyperlipidemia.\n\nCrucially, the instructions explicitly state that the prediction cannot be based solely on general risk factors (like being a neonate, which is a general population group) or the use of standard medications (like those used for infection or hydration",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 917,
+    "completion_tokens": 256
+  }
+}

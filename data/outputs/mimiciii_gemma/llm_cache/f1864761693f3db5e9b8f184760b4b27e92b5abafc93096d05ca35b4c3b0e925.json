@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly requires evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe respiratory and pulmonary issues (Acute and chronic respiratory failure; Obstructive chronic bronchitis with (acute) exacerbation; Tobacco use disorder; Other chronic pulmonary heart diseases). There are also significant psychiatric and neurological diagnoses (Unspecified schizophrenia, unspecified; Unspecified intellectual disabilities; Anxiety state, unspecified). Other noted conditions include Hypotension, unspecified, and Atrial fibrillation.\n2. **Medications:** The medication list is extensive and primarily targets the acute and chronic respiratory, infectious, and psychiatric needs of the patient (e.g., Albuterol, PredniSONE, Famotidine, Olanzapine, Heparin, Furosemide, Azithromycin, etc.).\n3. **Lipid Management Evidence:** Crucially, there is **no explicit diagnosis**",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 256
+  }
+}

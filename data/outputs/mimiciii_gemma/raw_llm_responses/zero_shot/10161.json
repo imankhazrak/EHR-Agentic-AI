@@ -1,0 +1,12 @@
+{
+  "sample_id": 10161,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous diagnoses and ongoing management for various conditions, including digestive system complications, acute vascular insufficiency, toxic encephalopathy, cardiac issues, diabetes, and hypertension. The patient is on various medications, including Simvastatin and Aspirin, which are often used in the context of cardiovascular risk management.\n\nHowever, the record **lacks explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid metabolism disorder diagnosis) that would explicitly warrant coding a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The use of Simvastatin and Aspirin alone, while suggestive of cardiovascular risk management, is insufficient evidence to meet the strict requirement for predicting a future diagnosis of a primary lipid disorder.\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record is extremely detailed, covering a wide array of complex medical issues including multiple digestive system complications, acute vascular insufficiency, toxic encephalopathy, cardiac complications, diabetes, and hypertension. The patient is on various medications, including Simvastatin and Aspirin, which are commonly associated with cardiovascular risk management.\n\nHowever, the record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 951,
+    "completion_tokens": 256
+  }
+}

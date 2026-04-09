@@ -1,0 +1,12 @@
+{
+  "sample_id": 1720,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is extensive, detailing numerous serious and complex medical conditions. These include Low grade myelodysplastic syndrome lesions, Miliary tuberculosis, Urinary tract infection, Bacteremia, Unspecified pleural effusion, Osteoarthrosis, Sickle-cell trait, Anemias due to disorders of glutathione metabolism, Rheumatoid arthritis, Personal history of venous thrombosis and embolism, Nontoxic multinodular goiter, Eosinophilia, and other specified cardiac dysrhythmias. The patient is receiving a wide array of medications to manage these acute and chronic issues, including OxycoDONE, Ethambutol HCl, Warfarin, Levofloxacin, Citalopram Hydrobromide, Acetylcysteine 20%, Magnesium Sulfate, Heparin, and various antibiotics and pain management drugs.\n\nCrucially, when applying the strict rules provided, the evidence for an *existing* or *actively managed* lipid disorder (such as hypercholesterolemia or hyperlipidemia) is absent from the current diagnoses list. While the patient has a personal history of venous thrombosis and embolism, this is a vascular/hematological history, not an explicit diagnosis of a primary lipid disorder. The medications prescribed, such as Warfarin, are used for anticoagulation",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3855,
+    "completion_tokens": 256
+  }
+}

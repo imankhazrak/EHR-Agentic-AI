@@ -1,0 +1,12 @@
+{
+  "sample_id": 7433,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular events and associated complications, including Paroxysmal ventricular tachycardia, Atrial flutter, Cardiac arrest, Congestive heart failure, Coronary atherosclerosis, and Unspecified essential hypertension. The procedures performed and the diagnoses made are focused entirely on managing these life-threatening cardiac and vascular issues (e.g., AICD implantation, PCI status).\n\nCrucially, the current visit record contains **no explicit evidence** of a primary or actively managed lipid disorder. There are no diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication list is recorded as \"None recorded,\" meaning there is no documented use of lipid-lowering agents like statins or fibrates that would serve as explicit evidence for an ongoing lipid management plan.\n\nAccording to the strict guidelines provided, the mere presence of cardiovascular diseases (CHF, Coronary atherosclerosis) or general risk factors (Hypertension) is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since the explicit evidence of a lipid disorder is absent in the current record, the prediction must be \"No,\" despite the general high-risk nature of the patient's overall",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3473,
+    "completion_tokens": 256
+  }
+}

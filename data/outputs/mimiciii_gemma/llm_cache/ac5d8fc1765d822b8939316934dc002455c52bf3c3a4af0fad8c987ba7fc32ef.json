@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are focused on cardiac and pulmonary issues: Mitral valve disorders, Other chronic pulmonary heart diseases, Other iatrogenic hypotension, and complications related to surgical procedures. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the diagnoses made.\n2. **Medications:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a medication used to manage lipid disorders, the presence of the drug alone, without a corresponding diagnosis of a lipid disorder (like hypercholesterolemia) in the current record, does not meet the strict criteria for predicting a future diagnosis of the disorder itself. The medication is",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1056,
+    "completion_tokens": 256
+  }
+}

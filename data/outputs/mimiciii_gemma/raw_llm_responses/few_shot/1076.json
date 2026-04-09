@@ -1,0 +1,12 @@
+{
+  "sample_id": 1076,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe acute respiratory failure, congestive heart failure, chronic airway obstruction, and associated cardiovascular and psychiatric comorbidities. The patient is receiving intensive care, including mechanical ventilation, and is being managed for multiple life-threatening conditions.\n\nWhile the patient is prescribed **Atorvastatin**, this medication is a treatment for hyperlipidemia and is a strong indicator of a *potential* lipid disorder. However, according to the strict instructions provided, the mere prescription of a statin is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid abnormality. The other diagnoses are related to pulmonary, cardiac, and psychiatric systems.\n\nThe instructions explicitly state: \"DO NOT answer 'Yes' based only on: Use of statins (e.g., Atorvastatin).\"\n\nTherefore, because there is no explicit diagnosis of a lipid disorder in the current record, and the only evidence pointing toward a lipid issue (Atorvastatin) is explicitly excluded as sufficient evidence for a future diagnosis, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3616,
+    "completion_tokens": 256
+  }
+}

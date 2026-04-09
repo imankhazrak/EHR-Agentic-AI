@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or related cardiovascular conditions.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has diagnoses related to severe cardiovascular events (Acute myocardial infarction, Coronary atherosclerosis, Congestive heart failure) and respiratory issues (Pneumonitis, Tobacco use disorder).\n2. **Medications:** The record explicitly states \"None recorded\" for medications prescribed. This is a critical finding, as lipid management often involves specific pharmacological interventions (e.g., statins, fibrates).\n3. **Procedures:** The patient underwent extensive cardiac procedures (Stent insertion, Cardiac catheterization, Angiocardiography). These procedures confirm severe cardiovascular disease but do not explicitly diagnose a primary lipid disorder (like hypercholesterolemia).\n\nWeighing Factors:\n* **Risk Factors Present:** The patient has multiple significant risk factors for cardiovascular disease, which are often comorbid with lipid disorders (e.g., Tobacco",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 928,
+    "completion_tokens": 256
+  }
+}

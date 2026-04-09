@@ -1,0 +1,12 @@
+{
+  "sample_id": 2304,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on the use of statins (like Atorvastatin), cardiovascular diseases (like Mitral valve disorders or CHF), or general risk factors (like hypertension or diabetes, which are not explicitly listed as diagnoses).\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are primarily related to acute complications: Hemorrhage complicating a procedure, Mitral valve disorders, Pneumonia, Acute posthemorrhagic anemia, Thrombocytopenia, and a history of prostate cancer. None of the explicit diagnoses point to an existing lipid abnormality (e.g., hyperlipidemia or hypercholesterolemia).\n2. **Medications:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a medication used to *treat* lipid disorders, the presence of the drug alone, without a corresponding diagnosis of a lipid disorder in the current record, is explicitly excluded by the prediction rules as sufficient evidence to predict a future diagnosis of \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1015,
+    "completion_tokens": 256
+  }
+}

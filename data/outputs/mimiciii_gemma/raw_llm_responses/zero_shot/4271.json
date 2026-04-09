@@ -1,0 +1,12 @@
+{
+  "sample_id": 4271,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on severe respiratory, cardiovascular, and metabolic issues related to acute exacerbations of chronic lung disease, heart failure, and associated complications (e.g., acidosis, hypernatremia, diabetes). While the patient has a history of venous thrombosis and embolism, and is on anticoagulants, there is no explicit evidence in the current diagnoses or management plan that points to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed, such as Warfarin and Insulin, address the cardiovascular and diabetic components, not a primary lipid abnormality. Therefore, based on the strict criteria provided, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported by the current clinical picture.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 898,
+    "completion_tokens": 160
+  }
+}

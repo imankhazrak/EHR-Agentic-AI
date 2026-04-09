@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" This is direct and explicit evidence of a lipid disorder. According to the prediction criteria, the presence of an existing lipid disorder diagnosis is sufficient evidence to predict that this condition will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record contains several diagnoses related to cardiovascular health (Coronary atherosclerosis, Hypertensive chronic kidney disease, Percutaneous transluminal coronary angioplasty status) and general health conditions (Diabetes mellitus, Esophageal reflux, Cerebral aneurysm, etc.). However, the criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit* evidence of a lipid disorder (like hypercholesterolemia or hyperlipidemia) that is actively being managed or diagnosed, *excluding* general risk factors or cardiovascular diagnoses. Since the provided record does not contain explicit evidence of a lipid disorder diagnosis (such as hypercholesterolemia or hyperlipidemia) that meets the strict criteria, the prediction must be \"No.\"",
+  "model": "google/gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 806,
+    "completion_tokens": 232
+  }
+}

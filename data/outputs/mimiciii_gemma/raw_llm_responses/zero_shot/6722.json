@@ -1,0 +1,12 @@
+{
+  "sample_id": 6722,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses related to acute kidney failure, infection, urinary tract infection, malignancy, chronic lung conditions, and anemia. While the patient is prescribed Simvastatin, which is used to manage dyslipidemia, the explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) is absent in the current record. According to the strict guidelines, the prescription of a lipid-lowering agent alone is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the explicit evidence provided, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 654,
+    "completion_tokens": 126
+  }
+}

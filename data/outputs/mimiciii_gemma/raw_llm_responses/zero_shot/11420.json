@@ -1,0 +1,12 @@
+{
+  "sample_id": 11420,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and life-threatening conditions such as Hemorrhage, Unspecified septicemia, Encephalopathy, Severe sepsis, Paraplegia, and multiple associated complications (Pressure ulcers, Hydronephrosis, etc.). While the patient has an abnormal coagulation profile and is on anticoagulants, and has a personal history of venous thrombosis, there is no explicit evidence within the current diagnoses or ongoing management that points to an active or ongoing diagnosis of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would necessitate coding \"Disorders of Lipid Metabolism\" in the next visit. The medications prescribed, including Darunavir and RiTONAvir, are antiretrovirals, and the use of anticoagulants is related to thrombosis management, not necessarily active lipid dysregulation. Therefore, based strictly on the evidence provided, a future diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 907,
+    "completion_tokens": 203
+  }
+}

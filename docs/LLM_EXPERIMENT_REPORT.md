@@ -109,6 +109,16 @@ Column used at inference time: **`narrative_current`**.
 
 Authentication: repository-root **`.env`** with `OPENAI_API_KEY` (loaded locally or via `scripts/slurm_llm_env.sh` on the cluster). Do not commit secrets.
 
+### 5.1 Training Objective / Loss Function (Fine-Tuned Local Gemma)
+
+When running the local Gemma fine-tuning path (`src/llm/finetune_gemma.py`), the objective is **causal language modeling**, not a standalone binary-classification BCE objective.
+
+- LoRA is configured with `task_type="CAUSAL_LM"`.
+- Training uses `DataCollatorForLanguageModeling(..., mlm=False)`.
+- Labels are set as `labels = input_ids`, so optimization is **token-level next-token cross-entropy**.
+
+Although the downstream task is binary (`Yes`/`No`), the model is trained to **generate** the target token/text in an instruction format. Therefore, the training loss is **causal LM cross-entropy**, not `BCEWithLogitsLoss`.
+
 ---
 
 ## 6. Prompt Modes (Four LLM Experiments)

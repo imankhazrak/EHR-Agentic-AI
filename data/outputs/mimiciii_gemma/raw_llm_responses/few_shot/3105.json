@@ -1,0 +1,12 @@
+{
+  "sample_id": 3105,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses made in the current visit are primarily related to severe trauma (Subdural hemorrhage, Fall from other slipping, tripping, or stumbling), severe infections (Methicillin susceptible pneumonia, Atrial fibrillation, Acute glomerulonephritis), and other acute conditions (Calculus of gallbladder, Unspecified essential hypertension). While the patient has Unspecified essential hypertension, which is a general risk factor for dyslipidemia, and Atrial fibrillation, which is a cardiovascular condition often associated with lipid abnormalities, these factors alone, according to the strict instructions, are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's medication profile is empty, meaning there is no ongoing management of a lipid disorder (e.g., statins or fibrates) to suggest a future coding of this diagnosis. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3544,
+    "completion_tokens": 220
+  }
+}

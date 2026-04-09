@@ -1,0 +1,12 @@
+{
+  "sample_id": 145,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and cardiovascular complications, including Acute and subacute bacterial endocarditis, Bacteremia, Congestive heart failure, and Atrial fibrillation. The patient is also suffering from Acute kidney failure and Incisional ventral hernia with obstruction. The medication profile includes various supportive and anti-infective agents (e.g., Vancomycin, Ampicillin Sodium, Fluconazole, Heparin) and cardiovascular/pain management drugs (e.g., Metoprolol, Captopril, Nifedipine CR). While the patient has Morbid obesity, which is a known risk factor for lipid disorders, the current record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. The instructions strictly prohibit predicting a future diagnosis based solely on risk factors like obesity or the presence of cardiovascular disease. Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\", adhering to the strict criteria provided in the guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3752,
+    "completion_tokens": 224
+  }
+}

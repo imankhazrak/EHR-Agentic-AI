@@ -1,0 +1,12 @@
+{
+  "sample_id": 9950,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which strongly indicates that this condition will be carried forward into the next hospital visit.\n\n1. **Analysis of Current Diagnoses:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit diagnosis falling under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Weighing Evidence vs. Exclusion Criteria:**\nThe instructions strictly prohibit predicting a future diagnosis based solely on:\n*   Use of statins (e.g., Atorvastatin)\n*   Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)\n*   General risk factors (e.g., hypertension, diabetes)\n\nHowever, the presence of an *explicit, current diagnosis* of **\"Other and unspecified hyperlipidemia\"** overrides these exclusion criteria because it constitutes direct evidence of an existing lipid disorder that is actively being managed or documented.\n\n3. **Analysis of Comorbidities and Management:**\nWhile the patient has numerous comorbidities (Pulmonary embolism, Malignant neoplasm, Coronary atherosclerosis, Ob",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1027,
+    "completion_tokens": 256
+  }
+}

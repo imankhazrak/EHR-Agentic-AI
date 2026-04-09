@@ -1,0 +1,12 @@
+{
+  "sample_id": 2435,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, uncontrolled metabolic and infectious complications related to Type 1 Diabetes Mellitus (Juvenile Type), including ketoacidosis, polyneuropathy, retinopathy, and various bacterial infections (S. aureus, gram-negative organisms). The medication profile includes Simvastatin, which is a lipid-lowering agent (a statin). However, the strict instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses list does not explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder. While the patient has multiple risk factors associated with dyslipidemia (e.g., uncontrolled diabetes, hypertension), the instructions mandate that a diagnosis of an existing or actively managed lipid disorder must be explicitly present or strongly implied to predict a future coding of \"Disorders of Lipid Metabolism.\" Since the current record lacks explicit evidence of a primary lipid disorder, the prediction must be \"No,\" despite the presence of Simvastatin and general high-risk comorbidities.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3808,
+    "completion_tokens": 227
+  }
+}

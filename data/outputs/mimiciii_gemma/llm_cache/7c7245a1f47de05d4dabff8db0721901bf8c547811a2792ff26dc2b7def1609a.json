@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the strict rules, the presence of an explicit lipid disorder diagnosis (such as hyperlipidemia) is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record lists the diagnosis of \"Other and unspecified hyperlipidemia.\" However, the strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present AND likely to be diagnosed, and that factors like general risk factors are NOT sufficient. Given the overwhelming number of other severe, acute, and complex diagnoses (sepsis, AKI, transplant, etc.), and the fact that the hyperlipidemia is listed as \"unspecified,\" the evidence is not strong enough to explicitly guarantee a future diagnosis of \"Disorders of Lipid Metabolism\" beyond the current listing, which is not sufficient to meet the strict threshold for a guaranteed future coding based on the provided constraints.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Other and unspecified",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 986,
+    "completion_tokens": 256
+  }
+}

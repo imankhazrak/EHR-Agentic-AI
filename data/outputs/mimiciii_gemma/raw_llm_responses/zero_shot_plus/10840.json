@@ -1,0 +1,12 @@
+{
+  "sample_id": 10840,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder present in the current visit record, which strongly indicates that this condition will be maintained and likely to be diagnosed in the next hospital visit.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and explicit evidence of a lipid abnormality (hypercholesterolemia), which falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Compliance with Prediction Rules:** The prediction rules state that the answer should be \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The presence of \"Pure hypercholesterolemia\" meets this criterion perfectly, as it is a confirmed diagnosis of a lipid disorder.\n\n3. **Exclusion of Insufficient Evidence:** The rules explicitly state that factors such as the use of statins, cardiovascular diseases, or general risk factors alone are NOT sufficient to predict a future diagnosis. Since the current record contains the explicit diagnosis of hypercholesterolemia, we are relying on confirmed evidence, not just risk factors or medication use.\n\n4.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1323,
+    "completion_tokens": 256
+  }
+}

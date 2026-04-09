@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Aortic valve disorders; Hemorrhage complicating a procedure; [ICD9-DX:5185]; Cardiac complications, not elsewhere classified; Atrial fibrillation; [ICD9-DX:9973]; Pneumonia, organism unspecified; Coronary atherosclerosis of native coronary artery; Unspecified essential hypertension; Anemia, unspecified; Pure hypercholesterolemia
+- Medications prescribed: Acetaminophen; NS; Potassium Chloride; Sodium Chloride 0.9%  Flush; Calcium Gluconate; Metoclopramide; Insulin Human Regular; SW; Magnesium Sulfate; Meperidine; Hydralazine HCl; Furosemide; Dextrose 50%; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Metoprolol; Haloperidol; Levofloxacin; Amiodarone HCl; D5W; D5W (EXCEL BAG); Iso-Osmotic Dextrose; Vancomycin HCl; Lansoprazole Oral Suspension; Docusate Sodium (Liquid); Albuterol; Albuterol-Ipratropium; Piperacillin-Tazobactam Na; Cefazolin; LR; Protamine Sulfate; Sucralfate; Syringe; Soln.; Propofol; Neostigmine; Phenylephrine HCl; Aspirin; Glycopyrrolate; Ranitidine; Nitroglycerin; Nitroprusside Sodium; Docusate Sodium; Oxycodone-Acetaminophen; Morphine Sulfate; Aspirin EC; Amlodipine; Clopidogrel Bisulfate; Insulin; Lansoprazole
+- Procedures performed: Open and other replacement of aortic valve with tissue graft; Left heart cardiac catheterization; Reopening of recent thoracotomy site; [ICD9-PX:3601]; Extracorporeal circulation auxiliary to open heart surgery; Insertion of drug-eluting coronary artery stent(s); Coronary arteriography using two catheters; Insertion of temporary transvenous pacemaker system; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Arterial catheterization; Diagnostic ultrasound of heart; Venous catheterization, not elsewhere classified; Transfusion of packed cells; Transfusion of other serum
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

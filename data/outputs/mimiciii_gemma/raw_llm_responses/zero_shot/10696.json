@@ -1,0 +1,12 @@
+{
+  "sample_id": 10696,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current diagnoses explicitly include \"Other and unspecified hyperlipidemia.\" This is direct evidence of an existing lipid disorder, which strongly supports the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, even though other diagnoses like Atrial fibrillation and Unspecified essential hypertension are also present. The presence of explicit hyperlipidemia is the key factor.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 731,
+    "completion_tokens": 90
+  }
+}

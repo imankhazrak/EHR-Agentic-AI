@@ -1,0 +1,12 @@
+{
+  "sample_id": 12250,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record explicitly includes the diagnosis of **Pure hypercholesterolemia**.\n\nAccording to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Pure hypercholesterolemia falls directly under the definition of lipid abnormalities (CCS category 53) and is a specific manifestation of a lipid disorder.\n\nFurthermore, the patient's current diagnoses include several other conditions commonly associated with lipid disorders, such as:\n1. **Unspecified essential hypertension:** Hypertension is a known risk factor for dyslipidemia and cardiovascular disease.\n2. **Coronary atherosclerosis of native coronary artery** and **Old myocardial infarction:** These are severe cardiovascular comorbidities that are frequently associated with underlying metabolic and lipid abnormalities.\n\nWhile the patient is also managed for other conditions (e.g., Cerebral aneurysm, Cluster headache syndrome), the explicit diagnosis of **Pure hypercholesterolemia** provides the necessary, explicit evidence to meet the criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" The presence of this specific diagnosis overrides the general risk factors alone, satisfying the strict requirement",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 964,
+    "completion_tokens": 256
+  }
+}

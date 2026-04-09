@@ -1,0 +1,12 @@
+{
+  "sample_id": 12354,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe acute and chronic cardiovascular and respiratory conditions: Acute on chronic systolic heart failure, Acute respiratory failure, Coronary atherosclerosis, Congestive heart failure, Hypotension, Hypertensive chronic kidney disease, Chronic kidney disease, and Atrial fibrillation. The medication profile includes several agents for these conditions (Digoxin, Amiodarone, Metoprolol, Furosemide, etc.).\n\nCrucially, the patient is prescribed **Rosuvastatin Calcium**, which is a statin used for lipid management. However, according to the strict instructions provided, the mere use of a statin is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other explicit diagnosis of a lipid disorder. The presence of Rosuvastatin is a *treatment* for a potential lipid issue, not an *explicit diagnosis* of one in the current record.\n\nReviewing the demonstration cases, while some cases with statin use resulted in a \"Yes\" outcome, the instructions explicitly caution against relying on statin use alone. Case 4 and Case",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3668,
+    "completion_tokens": 256
+  }
+}

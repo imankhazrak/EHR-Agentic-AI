@@ -1,0 +1,12 @@
+{
+  "sample_id": 4697,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details complex cardiac issues (Mechanical complication of ICD, Paroxysmal VT, CHF, Cardiomyopathies) and infectious processes (Methicillin susceptible pneumonia). While the patient is prescribed Pravastatin (a lipid-lowering agent), the record lacks explicit diagnostic evidence of a lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would strongly and explicitly support a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria provided. The presence of Pravastatin alone, without corresponding diagnostic evidence of a lipid abnormality, is insufficient to meet the criteria for a \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 598,
+    "completion_tokens": 136
+  }
+}

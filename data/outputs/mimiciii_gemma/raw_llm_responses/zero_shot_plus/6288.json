@@ -1,0 +1,12 @@
+{
+  "sample_id": 6288,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is No because the current hospital visit record lacks explicit, strong evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit, despite the presence of numerous high-risk comorbidities.\n\nDetailed Analysis:\n1. **Analysis of Diagnoses:** The current diagnoses are dominated by severe acute and chronic conditions: Intestinal infection due to Clostridium difficile, Chronic airway obstruction, Unspecified protein-calorie malnutrition, Unspecified septicemia, Acute kidney failure, Acute myocardial infarction, Atrial fibrillation, and Thrombocytopenia. While Acute Myocardial Infarction and Atrial Fibrillation are strong cardiovascular risk factors often associated with dyslipidemia, they do not constitute an explicit diagnosis of a lipid disorder itself.\n\n2. **Analysis of Medications:** The medication list is extensive and focused on managing acute infections (Fluconazole, Nystatin, Metronidazole, Vancomycin), severe sepsis/inflammation (Hydrocortisone, Methylprednisolone), cardiovascular instability (Amiodarone, Labetalol, Metoprolol, Heparin), and nutritional support (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1240,
+    "completion_tokens": 256
+  }
+}

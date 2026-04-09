@@ -1,0 +1,12 @@
+{
+  "sample_id": 1254,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to urinary tract issues (Calculus of kidney, Calculus of ureter, Extracorporeal shockwave lithotripsy), hematological issues (Acute posthemorrhagic anemia, Hypovolemia, Transfusion of packed cells), cardiovascular issues (Congestive heart failure, Heart valve replaced by other means, Unspecified essential hypertension), and general procedural/symptomatic management (Hematoma complicating a procedure, Long-term use of anticoagulants, Constipation).\n\nWhile the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the current visit record **does not contain any explicit diagnostic evidence** (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis) to support the conclusion that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit. The presence of Atorvastatin alone, without corresponding diagnostic evidence, is insufficient to meet the strict criteria for a \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 218
+  }
+}

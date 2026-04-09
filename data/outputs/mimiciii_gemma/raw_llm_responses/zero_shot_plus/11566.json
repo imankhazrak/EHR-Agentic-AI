@@ -1,0 +1,12 @@
+{
+  "sample_id": 11566,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses list includes severe comorbidities such as Alcoholic cirrhosis of liver, Acute kidney failure, Unspecified deficiency anemia, and Asymptomatic human immunodeficiency virus [HIV] infection status. While these conditions are known risk factors for metabolic disturbances, none of the listed diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Medications:** The prescribed medications include various agents for HIV management (Emtricitabine-Tenofovir, RiTONAvir, Darunavir), management of kidney/electrolyte issues (Sodium Chloride 3%, Nadolol, Furosemide, Neutra-Phos), and management of liver/GI issues (Lactulose, Omeprazole,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1019,
+    "completion_tokens": 256
+  }
+}

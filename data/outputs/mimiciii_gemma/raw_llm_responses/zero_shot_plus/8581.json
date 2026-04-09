@@ -1,0 +1,12 @@
+{
+  "sample_id": 8581,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just risk factors or general management.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are dominated by severe oncological conditions (Secondary malignant neoplasm of brain and spinal cord, Secondary malignant neoplasm of lung, Malignant neoplasm of liver, secondary, Personal history of malignant neoplasm of kidney) and severe neurological/metabolic issues (Other convulsions, Long-term use of steroids, Unspecified essential hypertension).\n2. **Risk Factors:** The patient has several general risk factors, including Unspecified essential hypertension and a history of malignancy, which are known to be associated with metabolic disturbances, including dyslipidemia.\n3. **Explicit Lipid Disorder Evidence:** Crucially, the current visit record **does not contain any explicit diagnosis** of a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 992,
+    "completion_tokens": 256
+  }
+}

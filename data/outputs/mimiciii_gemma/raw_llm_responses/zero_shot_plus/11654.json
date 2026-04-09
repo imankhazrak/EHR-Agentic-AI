@@ -1,0 +1,12 @@
+{
+  "sample_id": 11654,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The recorded diagnoses are: Alcohol withdrawal; Acidosis; Other and unspecified alcohol dependence, continuous; Adhesive capsulitis of shoulder; Esophageal reflux; Anemia, unspecified. None of these diagnoses explicitly state a lipid abnormality (e.g., hyperlipidemia, dyslipidemia, or hypercholesterolemia).\n2. **Medications Prescribed:** The medication list is extensive, covering support for alcohol withdrawal, acid-base balance, and general support (e.g., SW, Sodium Chloride 0.9% Flush, Acetaminophen, Ibuprofen, Diazepam, Morphine Sulfate, Lorazepam, FoLIC Acid, Bisacodyl, Ondansetron, Senna, Heparin, Multivitamins, Pantoprazole, Thiamine, Neutra-Phos",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 940,
+    "completion_tokens": 256
+  }
+}

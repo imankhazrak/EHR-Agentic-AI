@@ -1,0 +1,12 @@
+{
+  "sample_id": 10065,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to acute myeloid leukemia, various infectious processes (e.g., otitis media, prostatitis, drug-induced neutropenia), acute kidney failure, anemia, and volume depletion. The medication profile is extensive, covering treatments for these acute and severe conditions, including antibiotics (Meropenem, Vancomycin, Levofloxacin, Micafungin), supportive care (0.9% Sodium Chloride, Dextrose), and treatments for hematological issues (Hydroxyurea, Rasburicase, IDArubicin, Cytarabine, Heparin).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is receiving supportive care, the medication list does not include any statins or fibrates, nor is there a documented lipid panel or diagnosis that would explicitly warrant coding \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided.\n\nTherefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3809,
+    "completion_tokens": 251
+  }
+}

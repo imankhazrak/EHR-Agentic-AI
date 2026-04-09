@@ -1,0 +1,12 @@
+{
+  "sample_id": 5333,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex conditions related to uncontrolled Type 1 Diabetes, severe renal failure (CKD Stage V/ESRD), cardiovascular issues (CHF), and associated complications (pyelonephritis, hyperpotassemia, etc.). While the patient is prescribed Atorvastatin, which is a lipid-lowering agent, the record lacks any explicit diagnostic evidence of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or diagnosed as a condition separate from the other severe systemic diseases. Therefore, based on the strict criteria, the absence of explicit lipid disorder evidence leads to a prediction of \"No\" for a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 914,
+    "completion_tokens": 156
+  }
+}

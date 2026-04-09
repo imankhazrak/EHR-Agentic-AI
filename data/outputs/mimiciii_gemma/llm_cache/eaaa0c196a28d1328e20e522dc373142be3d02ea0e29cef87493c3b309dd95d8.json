@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several risk factors present in the record, such as Unspecified essential hypertension and Rheumatoid arthritis, these factors alone are explicitly stated in the instructions as NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the medication profile includes Ezetimibe, which is a lipid-lowering agent, but the instructions strictly caution against answering \"Yes\" based solely on the use of lipid-lowering medications. Since there is no explicit diagnosis of a lipid disorder in the current record, the prediction must be \"No\" according to the strict guidelines provided.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3680,
+    "completion_tokens": 163
+  }
+}

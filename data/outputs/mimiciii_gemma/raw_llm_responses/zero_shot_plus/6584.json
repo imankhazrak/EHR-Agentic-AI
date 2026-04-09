@@ -1,0 +1,12 @@
+{
+  "sample_id": 6584,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly look for explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses include: Other specified disorders involving the immune mechanism; Urinary tract infection, site not specified; Displacement of lumbar intervertebral disc without myelopathy; Bipolar disorder, unspecified; Carrier or suspected carrier of other specified bacterial diseases; Infection with microorganisms resistant to penicillins; Dysthymic disorder; Unspecified essential hypertension; Anemia of other chronic disease; Chest pain, unspecified; Esophageal reflux; Chronic pain syndrome; Osteoarthrosis, localized, not specified whether primary or secondary, site unspecified.\nCrucially, **none of the listed diagnoses explicitly state hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder.** The presence of \"Unspecified essential hypertension\" is a risk factor for lipid disorders, but it is not a diagnosis of a lipid disorder itself",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1141,
+    "completion_tokens": 256
+  }
+}

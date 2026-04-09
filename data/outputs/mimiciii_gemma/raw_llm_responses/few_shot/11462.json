@@ -1,0 +1,12 @@
+{
+  "sample_id": 11462,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnoses made include \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is sufficient evidence to answer \"Yes,\" even if other risk factors (like hypertension or diabetes) are present. Furthermore, the patient is being managed with \"Simvastatin,\" which is a lipid-lowering medication, reinforcing the active management of a hyperlipidemia condition. The presence of \"Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled\" and \"Unspecified essential hypertension\" are significant comorbidities often associated with lipid disorders, but they alone are insufficient for a \"Yes\" prediction. The key factor is the explicit diagnosis of \"Other and unspecified hyperlipidemia\" in the current record, which provides the strong and explicit evidence required by the instructions to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3892,
+    "completion_tokens": 209
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3489,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to cardiovascular issues (Congestive heart failure, Atrial fibrillation, Coronary atherosclerosis), respiratory problems (Acute respiratory failure, Chronic airway obstruction), renal issues (Acute kidney failure, Other specified disorders resulting from impaired renal function), and diabetes (Diabetes mellitus). While the patient is prescribed Atorvastatin, which is a medication used to manage lipid levels, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict guidelines, the presence of a lipid disorder diagnosis is required to predict a future diagnosis of \"Disorders of Lipid Metabolism,\" and the prescription of Atorvastatin alone is insufficient evidence.\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record is extensive, covering multiple complex conditions including cardiovascular disease (Congestive heart failure, Atrial fibrillation, Coronary atherosclerosis), respiratory disease (Acute respiratory failure, Chronic airway obstruction), renal disease (Acute kidney failure), and diabetes (Diabetes mellitus). The patient is prescribed Atorvastatin, which is a lipid-lowering agent. However, the strict guidelines mandate that a diagnosis of an explicit lipid disorder (such as hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 256
+  }
+}

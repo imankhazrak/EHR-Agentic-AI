@@ -1,0 +1,12 @@
+{
+  "sample_id": 12282,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for evidence of an existing lipid disorder that is likely to be coded in the patient's next hospital visit, even though other conditions like heart failure and hypertension are also present. The presence of this specific diagnosis overrides the need to rely on general risk factors or medication use alone.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not contain an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or explicitly stated as a primary issue. While the patient is on medication (Atorvastatin) which suggests a lipid issue, the diagnosis itself is not explicitly present in the record to meet the strict criteria for predicting a future diagnosis. Therefore, based on the strict rules provided, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 193
+  }
+}

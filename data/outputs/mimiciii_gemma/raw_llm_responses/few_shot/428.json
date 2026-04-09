@@ -1,0 +1,12 @@
+{
+  "sample_id": 428,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are primarily related to severe cardiovascular and pulmonary conditions (Acute on chronic diastolic heart failure, Primary pulmonary hypertension, Congestive heart failure, etc.), renal issues (Chronic kidney disease, Stage IV), and metabolic disturbances (Hyperosmolality and/or hypernatremia).\n\nWhile the patient is on several medications, including Aspirin and Metoprolol Tartrate, and has underlying hypertension (Hypertensive chronic kidney disease), these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins or general risk factors alone do not qualify for a \"Yes\" prediction.\n\nThe medication profile does not explicitly show the prescription of a lipid-lowering agent (like a statin or fibrate) that would serve as strong, explicit evidence of an actively managed lipid disorder in this current record. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3610,
+    "completion_tokens": 245
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9040,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia, that would strongly and explicitly support a future diagnosis of \"Disorders of Lipid Metabolism.\" The diagnoses listed are related to gastrointestinal issues (Diverticulosis), renal failure, coagulation defects, infection, hematocrit issues, cardiac issues (Atrial fibrillation, Mitral valve disorders), and hematological/skeletal conditions (Polycythemia vera, Osteoporosis). The medications prescribed (Sulfameth/Trimethoprim DS, Amiodarone, Hydroxyurea, etc.) and procedures performed do not point to an existing or actively managed lipid disorder. Therefore, based strictly on the provided evidence, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 580,
+    "completion_tokens": 171
+  }
+}

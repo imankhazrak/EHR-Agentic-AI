@@ -1,0 +1,12 @@
+{
+  "sample_id": 417,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are primarily related to gastrointestinal issues (Benign neoplasm of rectum and anal canal; Hematoma complicating a procedure; Open wound of tooth), severe metabolic/nutritional issues (Kwashiorkor; [ICD9-DX:2765]), alcohol abuse, and cardiac complications.\n2. **Medications Prescribed:** No medications were recorded.\n3. **Procedures Performed:** The procedures are extensive and relate to acute surgical and critical care management (Open and other right hemicolectomy; Incision of abdominal wall; Continuous invasive mechanical ventilation; Arterial catheterization).\n\nEvaluation against Strict Rules:\nThe current visit record **does not contain any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 942,
+    "completion_tokens": 256
+  }
+}

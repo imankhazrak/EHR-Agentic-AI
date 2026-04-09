@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hypercholesterolemia.\" Since the patient is currently diagnosed with \"Pure hypercholesterolemia,\" there is strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit.\n\nThe other diagnoses (Congestive heart failure, Coronary atherosclerosis, Thrombocytopenia, Paroxysmal ventricular tachycardia, etc.) are related to cardiovascular and hematological issues, but the presence of the specific lipid diagnosis overrides the need to rely on general risk factors or cardiovascular comorbidities.\n\nTherefore, the explicit lipid diagnosis confirms the strong evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 933,
+    "completion_tokens": 180
+  }
+}

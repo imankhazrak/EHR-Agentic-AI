@@ -1,0 +1,12 @@
+{
+  "sample_id": 11651,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The analysis must focus on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on acute alcohol-related complications and nutritional deficiencies:\n* Alcohol withdrawal; Unspecified protein-calorie malnutrition; Other convulsions; Alcoholic fatty liver; Other and unspecified alcohol dependence, unspecified; Thrombocytopenia, unspecified; Black eye, not otherwise specified; Unspecified fall; Conjunctivitis, unspecified; Stricture and stenosis of esophagus; Personal history of tuberculosis.\nWhile **Alcoholic fatty liver** is a condition involving abnormal fat deposition in the liver, it is a specific manifestation of liver disease related to alcohol dependence, not necessarily a coded diagnosis of systemic \"Disorders of Lipid Metabolism\" (hypercholesterolemia/hyperlipidemia) as defined by the CCS category 53, which typically refers to systemic lipid abnormalities.\n\n2. **Analysis of Medications and Procedures:**\nThe medication list",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 987,
+    "completion_tokens": 256
+  }
+}

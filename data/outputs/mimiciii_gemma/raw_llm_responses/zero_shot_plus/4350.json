@@ -1,0 +1,12 @@
+{
+  "sample_id": 4350,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe current visit record indicates the following:\n- Diagnoses made: Single liveborn, born in hospital, delivered without mention of cesarean section; Need for prophylactic vaccination and inoculation against viral hepatitis.\n- Medications prescribed: None recorded.\n- Procedures performed: Prophylactic administration of vaccine against other diseases.\n\nEvaluation:\nThe current record is entirely focused on neonatal care, birth status, and prophylactic vaccinations. There is absolutely no mention of any metabolic, cardiovascular, or lipid-related diagnoses (such as hypercholesterolemia, hyperlipidemia, or diabetes). Furthermore, the patient is not prescribed any medications relevant to lipid management (like statins or fibrates).\n\nConclusion:\nSince the current visit record lacks any explicit evidence of an existing or actively managed lipid disorder, and the prediction rules strictly require such",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 256
+  }
+}

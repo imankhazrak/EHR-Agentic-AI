@@ -1,0 +1,12 @@
+{
+  "sample_id": 8718,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit and strong evidence of a lipid disorder, which strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nThe most explicit evidence is the diagnosis made in the current visit record: **\"Other and unspecified hyperlipidemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\nFurthermore, the presence of other related conditions and ongoing management reinforces this prediction:\n1. **Cardiovascular Comorbidities:** The patient has multiple severe cardiovascular diagnoses, including **\"Subendocardial infarction,\" \"Congestive heart failure,\" \"Atrial fibrillation,\" \"Cardiogenic shock,\"** and **\"Coronary atherosclerosis of native coronary artery.\"** These conditions are highly comorbid with and often result from underlying lipid abnormalities.\n2. **Lipid Management:** The patient is prescribed **\"Simvastatin,\"** a medication specifically used to manage hyperlipidemia. While statin use alone is not sufficient for the prediction, its presence alongside the explicit diagnosis of hyperlipidemia provides strong contextual evidence that the lipid disorder is an active and primary focus of the patient's",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1361,
+    "completion_tokens": 256
+  }
+}

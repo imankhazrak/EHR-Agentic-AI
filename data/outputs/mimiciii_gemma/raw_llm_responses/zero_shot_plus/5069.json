@@ -1,0 +1,12 @@
+{
+  "sample_id": 5069,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly focused on severe, acute, and chronic conditions related to:\n*   Cardiovascular system (Hypertensive heart, CHF, Atrial fibrillation/flutter, Atherosclerosis of renal artery, Peripheral vascular disease).\n*   Renal system (Chronic kidney disease stage V/ESRD, Acute kidney failure).\n*   Neurological system (Hypertensive encephalopathy, Obstructive hydrocephalus, Acute cerebrovascular disease).\n*   Respiratory system (Pneumonia, Chronic airway obstruction, Acute respiratory failure).\n\nWhile **Atherosclerosis of renal artery** and **Peripheral vascular disease** are strong indicators of underlying systemic vascular disease, which is often comorbid with lipid disorders, they do not explicitly code as \"Disorders of Lipid Metabolism\" (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Atorvastatin**. This is a direct treatment for dys",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1257,
+    "completion_tokens": 256
+  }
+}

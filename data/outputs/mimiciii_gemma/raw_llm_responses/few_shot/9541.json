@@ -1,0 +1,12 @@
+{
+  "sample_id": 9541,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious diagnoses and a complex medication regimen. The diagnoses include Malignant neoplasm of thyroid gland, Coronary atherosclerosis, Diabetes mellitus, and Unspecified essential hypertension, all of which are known risk factors for lipid disorders. Furthermore, the patient is prescribed Simvastatin, a lipid-lowering agent.\n\nHowever, according to the strict instructions provided, the mere presence of risk factors (like diabetes or hypertension) or the use of lipid-lowering medications (like Simvastatin) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nThe instructions explicitly state:\n- \"DO NOT answer 'Yes' based only on: Use of statins (e.g., Atorvastatin) [...] General risk factors (e.g., hypertension, diabetes)\"\n- \"If explicit lipid disorder evidence is absent, answer 'No', even if the patient is high-risk.\"\n\nWhile the patient is high-risk and is receiving treatment for cardiovascular issues, the current record does not contain an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3775,
+    "completion_tokens": 256
+  }
+}

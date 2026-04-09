@@ -1,0 +1,12 @@
+{
+  "sample_id": 1720,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided instructions, which mandate that a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record to predict a future diagnosis.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses list includes numerous severe and complex conditions: Low grade myelodysplastic syndrome lesions, Miliary tuberculosis, Urinary tract infection, Bacteremia, Unspecified pleural effusion, Osteoarthrosis, Sickle-cell trait, Anemias due to disorders of glutathione metabolism, Rheumatoid arthritis, Personal history of venous thrombosis and embolism, Nontoxic multinodular goiter, Eosinophilia, and other specified cardiac dysrhythmias.\nWhile the patient has a personal history of venous thrombosis and embolism, and is receiving anticoagulation (Warfarin, Heparin, Enoxaparin Sodium), these conditions relate to coagulation and vascular health, not explicitly to a primary lipid disorder (hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications and Procedures:**\nThe medication list is extensive, covering infectious diseases (Ethambutol HCl, Levofloxacin, Streptomycin Sulfate, Vancomycin HCl, CefazoLIN, Am",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1267,
+    "completion_tokens": 256
+  }
+}

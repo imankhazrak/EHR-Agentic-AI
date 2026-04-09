@@ -1,0 +1,12 @@
+{
+  "sample_id": 785,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by severe, life-threatening conditions related to acute respiratory failure, hepatic encephalopathy, viral hepatitis C with hepatic coma, cirrhosis, and multiple organ failure (including acute kidney failure and end-stage renal disease). While the patient has a history of cocaine abuse and is receiving various medications, there is no explicit evidence in the diagnoses or procedures performed that points to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed, such as those for infection, renal support, and respiratory support, do not explicitly confirm a lipid disorder diagnosis. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 149
+  }
+}

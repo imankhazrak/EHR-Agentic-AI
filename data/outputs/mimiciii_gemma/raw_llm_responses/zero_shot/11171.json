@@ -1,0 +1,12 @@
+{
+  "sample_id": 11171,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous severe, life-threatening conditions, including Zygomycosis, acute respiratory failure, acute kidney failure, bacteremia, and various complications related to bone marrow transplantation and infections (Candidiasis, Cytomegaloviral disease, Graft-versus-host disease). The patient is also managing severe systemic issues such as hyposmolality, acidosis, and major depressive disorder.\n\nHowever, the record **lacks any explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The medications prescribed, while complex, do not explicitly indicate the management of a primary lipid abnormality.\n\nTherefore, based strictly on the provided criteria\u2014which require explicit evidence of a lipid disorder to predict a future diagnosis\u2014the prediction must be \"No\", even though the patient is high-risk for general cardiovascular issues.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1220,
+    "completion_tokens": 195
+  }
+}

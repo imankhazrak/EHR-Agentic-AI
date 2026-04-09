@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and this prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-related medications.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Evidence:** A review of the patient's current diagnoses (Blood in stool; Chronic pancreatitis; Portal hypertension; Other esophagitis; Alcoholic cirrhosis of liver; Bipolar disorder, unspecified; Other and unspecified alcohol dependence, continuous; Anemia, unspecified; Thrombocytopenia, unspecified; Unspecified viral hepatitis C without hepatic coma) and medications prescribed does **not** contain any explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Risk Factors vs. Explicit Diagnosis:** The patient has several significant comorbidities, including Alcoholic cirrhosis of liver, Chronic pancreatitis, and Portal hypertension. These conditions are known to",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

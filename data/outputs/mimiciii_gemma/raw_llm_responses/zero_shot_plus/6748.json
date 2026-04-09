@@ -1,0 +1,12 @@
+{
+  "sample_id": 6748,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Review of Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe acute and chronic conditions, including:\n    * Severe malnutrition (Unspecified protein-calorie malnutrition; Adult failure to thrive).\n    * Acute intoxication and withdrawal (Acute alcoholic intoxication in alcoholism, continuous; Alcohol withdrawal).\n    * Substance use disorder (Combinations of opioid type drug with any other drug dependence, continuous).\n    * Autoimmune/Inflammatory conditions (Systemic lupus erythematosus; Unspecified inflammatory disease of female pelvic organs and tissues).\n    * Infectious/Metabolic issues (Pneumonia, organism unspecified; Urinary tract infection, site not specified; Iron deficiency anemia, unspecified; Hypopotassemia).\n    * Trauma/Other (Closed fracture of base of skull without mention of intra cranial",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1145,
+    "completion_tokens": 256
+  }
+}

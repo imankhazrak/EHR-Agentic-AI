@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to chronic kidney disease, end-stage renal disease, diabetes, and complications of a kidney transplant. The medications prescribed are primarily for managing these conditions (e.g., Tacrolimus, Furosemide, Insulin, Metoprolol). There is no explicit evidence in the current record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific diagnosis of a lipid disorder\u2014to strongly and explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's NEXT hospital visit, despite the patient being high-risk for such a condition. The factors present (CKD, Diabetes, Transplant) are not sufficient on their own to meet the strict criteria for a \"Yes\" prediction.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 165
+  }
+}

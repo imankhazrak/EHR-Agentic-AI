@@ -1,0 +1,12 @@
+{
+  "sample_id": 4346,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\"\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses are: [ICD9-DX:2765] Acute kidney failure, unspecified; Congestive heart failure, unspecified; Thrombocytopenia, unspecified; Certain sequelae of myocardial infarction, not elsewhere classified, other; Atrial fibrillation; Old myocardial infarction; Hypotension, unspecified; Percutaneous transluminal coronary angioplasty status.\nThe patient's medication profile is: None recorded.\nThe patient's procedures are: Venous catheterization, not elsewhere classified.\n\nWe must strictly adhere to the rule that a diagnosis of \"Yes\" can ONLY be based on strong and explicit evidence of an existing or actively managed lipid disorder.\n\nEvaluation against Exclusion Criteria:\nThe current record contains several significant cardiovascular and metabolic risk factors, including Congestive Heart Failure (CHF), Acute Kidney Failure (AKI), Atrial Fibrillation (AF), and history of Myocardial Infarction (MI). These conditions",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 898,
+    "completion_tokens": 256
+  }
+}

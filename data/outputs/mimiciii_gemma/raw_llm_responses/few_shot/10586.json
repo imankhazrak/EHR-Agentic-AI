@@ -1,0 +1,12 @@
+{
+  "sample_id": 10586,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious processes (Empyema, Candidiasis, Unspecified pleural effusion, Unspecified disease of pericardium) and significant cardiovascular events (Old myocardial infarction, Coronary atherosclerosis, Percutaneous transluminal coronary angioplasty status). While the patient has several risk factors for dyslipidemia, such as a family history of ischemic heart disease and the presence of coronary artery disease, the current record **lacks any explicit diagnosis or active management of a primary lipid disorder** (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). According to the strict guidelines provided, the mere presence of cardiovascular disease or general risk factors (like family history) is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3824,
+    "completion_tokens": 193
+  }
+}

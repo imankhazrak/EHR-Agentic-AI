@@ -1,0 +1,12 @@
+{
+  "sample_id": 10852,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence of an existing or actively managed lipid disorder.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to acute neurological events (Subarachnoid hemorrhage, Cerebral aneurysm, Hematoma, Vascular complications) and associated complications (Precipitous drop in hematocrit, Iatrogenic hypotension, Myalgia, Phlebitis). While the patient has \"Unspecified essential hypertension,\" this is a general risk factor and not explicit evidence of a lipid disorder.\n2. **Medications:** The medication list includes several agents for cardiovascular support (Valsartan, Aspirin EC, Heparin) and general management (OxycoDONE, Ondansetron, Escitalopram Oxalate). Crucially, the list **does not contain any explicit lipid-lowering medications** such as statins (e.g., Atorvastatin), fibrates",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1083,
+    "completion_tokens": 256
+  }
+}

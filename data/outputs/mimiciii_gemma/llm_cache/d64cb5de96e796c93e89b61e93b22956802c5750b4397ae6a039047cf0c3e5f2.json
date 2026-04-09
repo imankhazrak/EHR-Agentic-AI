@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The current visit record primarily documents a severe metabolic crisis: Diabetes with ketoacidosis, type I [juvenile type], uncontrolled.\n\nAnalysis of Current Visit Record:\n1. **Primary Diagnosis:** The central and explicit diagnosis is uncontrolled Type I Diabetes with ketoacidosis. This is a severe endocrine/metabolic event.\n2. **Medication Profile:** The prescribed medications (Humulin-R Insulin, NS, Insulin, Potassium Chloride, Magnesium Sulfate) are entirely focused on managing the acute diabetic ketoacidosis and electrolyte imbalances associated with it. There is no mention of lipid-lowering agents such as statins or fibrates.\n3. **Comorbidities/Risk Factors:** While Type I Diabetes is a known risk factor for future lipid abnormalities, the current record does not explicitly state the presence of a diagnosed lipid disorder (e.g., elevated LDL, hypertriglyceridemia) or ongoing management specifically targeting lipid levels. The focus is strictly on the acute diabetic crisis.\n4.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 849,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10391,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by critical care diagnoses related to a severe neurological event (Subarachnoid hemorrhage, Obstructive hydrocephalus, Acute venous embolism and thrombosis) and associated systemic complications (Acute respiratory failure, Unspecified protein-calorie malnutrition, Candidiasis of mouth, Blood in stool, Atrial fibrillation, Unspecified essential hypertension). The medication profile is extensive, covering infectious diseases (Tobramycin Sulfate, Vancomycin, CefePIME, Nystatin Oral Suspension), cardiovascular support (Amiodarone, PHENYLEPHrine, Esmolol, Heparin), and critical care management (Neutra-Phos, Iso-Osmotic Dextrose, Nimodipine).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Unspecified essential hypertension and Atrial fibrillation\u2014conditions that are often comorbid with dyslipidemia\u2014the instructions strictly forbid predicting a future diagnosis based solely on these risk factors or the use of cardiovascular medications (like Amiodarone or Esmolol).\n\nTherefore, based on the strict criteria provided",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3876,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4270,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has multiple diagnoses related to respiratory and cardiovascular issues (Acute respiratory failure, Obstructive chronic bronchitis, Diabetes mellitus, Atrial fibrillation, Unspecified sleep apnea). While Diabetes Mellitus is a known risk factor for dyslipidemia, the diagnosis itself does not explicitly state a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia).\n2. **Medications:** The patient is prescribed **Atorvastatin**. This is a lipid-lowering medication. However, according to the strict instructions, the mere prescription of a statin is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n3. **Other Factors:** The patient has other significant comorbidities such as Atrial Fibrillation and Diabetes Mellitus, which are associated with",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 256
+  }
+}

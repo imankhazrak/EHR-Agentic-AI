@@ -1,0 +1,12 @@
+{
+  "sample_id": 6725,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to cardiovascular issues (Subendocardial infarction, Coronary atherosclerosis, Atrial fibrillation, Aortocoronary bypass status, Cardiac pacemaker in situ), renal issues (Acute kidney failure), hematological issues (Iron deficiency anemia, Hemorrhage of gastrointestinal tract), and general metabolic/risk factors (Unspecified essential hypertension, Diabetes mellitus). While the patient is prescribed Atorvastatin, which is used to manage lipid levels, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict guidelines, the prescription of a lipid-lowering medication alone is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the explicit evidence required, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 660,
+    "completion_tokens": 175
+  }
+}

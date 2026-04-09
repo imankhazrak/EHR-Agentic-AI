@@ -1,0 +1,12 @@
+{
+  "sample_id": 690,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is considered strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. This meets the criteria for answering \"Yes,\" as it is not based solely on the use of statins, cardiovascular diseases, or general risk factors. Therefore, the presence of this explicit lipid diagnosis dictates the prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3655,
+    "completion_tokens": 116
+  }
+}

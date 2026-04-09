@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and NOT based on general risk factors or the use of medications alone.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe systemic infection and organ failure: Other septicemia, Septic shock, Acute respiratory failure, Acute kidney failure, Pneumonia, Diastolic heart failure, Congestive heart failure, Thrombocytopenia, Hypovolemia, Acidosis, Severe sepsis, and Anemia.\n2. **Medications:** The prescribed medications are primarily for managing sepsis, organ failure, and cardiovascular instability: Propofol, Cosyntropin, Pantoprazole, Multivitamins, NS, Magnesium Sulfate, D5W, Midazolam HCl, Fentanyl Citrate, Norepinephrine, Metronidazole, Heparin, Docusate Sodium, Bisacodyl, Levofloxacin, Clop",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1062,
+    "completion_tokens": 256
+  }
+}

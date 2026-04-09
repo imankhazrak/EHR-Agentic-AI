@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current visit record is dominated by severe, acute, and non-lipid-related critical care issues:\n1. **Acute Critical Illness:** The primary diagnoses are Acute respiratory failure, Dehydration, Unspecified protein-calorie malnutrition, and Acute alcoholic intoxication. These are severe metabolic and infectious/toxicological issues, but they do not explicitly diagnose a primary lipid disorder.\n2. **Trauma:** The patient has significant orthopedic trauma (Open fracture of clavicle, Fracture, cause unspecified, and associated procedures/debridement).\n3. **Critical Care Management:** The medication and procedure lists reflect intensive management for these acute conditions (e.g., mechanical ventilation, antibiotics like Vancomycin, Midazolam, Insulin, etc.).\n\nEvaluation against Prediction Criteria:\n- **Absence of Explicit Lipid Evidence",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1098,
+    "completion_tokens": 256
+  }
+}

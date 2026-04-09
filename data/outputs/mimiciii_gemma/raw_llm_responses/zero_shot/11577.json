@@ -1,0 +1,12 @@
+{
+  "sample_id": 11577,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly details diagnoses related to acute respiratory failure, acute edema, end-stage renal disease, hypertensive chronic kidney disease, and hyperpotassemia. The medications and procedures are focused on managing these critical conditions, including renal dialysis and mechanical ventilation. There is no explicit evidence within the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to support the prediction that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the patient being high-risk for such conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 125
+  }
+}

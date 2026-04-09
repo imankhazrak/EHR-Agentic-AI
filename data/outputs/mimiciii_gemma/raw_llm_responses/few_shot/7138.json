@@ -1,0 +1,12 @@
+{
+  "sample_id": 7138,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by acute cardiovascular events (Subendocardial infarction, Coronary atherosclerosis, Congestive heart failure, Aortic valve disorders) and severe gastrointestinal hemorrhage (Hematemesis, Unspecified gastritis and gastroduodenitis, with hemorrhage). The medication profile includes several agents for managing these acute conditions, such as Furosemide, Metoprolol, Heparin Sodium, and Lisinopril.\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality that would mandate a future coding of this diagnosis, even though the patient is high-risk due to their underlying cardiovascular disease.\n\nThe instructions explicitly state that a diagnosis must be supported by explicit evidence of an existing or actively managed lipid disorder, not merely by the use of statins or general cardiovascular risk factors. Since the current record lacks this explicit lipid disorder evidence, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3676,
+    "completion_tokens": 242
+  }
+}

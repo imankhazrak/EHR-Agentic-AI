@@ -1,0 +1,12 @@
+{
+  "sample_id": 5148,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must focus on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on severe cardiovascular disease:\n* Coronary atherosclerosis (native and autologous vein bypass graft)\n* Intermediate coronary syndrome\n* Mitral valve disorders\n* Unspecified essential hypertension\n* Diabetes mellitus (Type II, unspecified, not stated as uncontrolled)\n* Old myocardial infarction\n\nWhile **Diabetes Mellitus** and **Unspecified Essential Hypertension** are well-known risk factors and comorbidities strongly associated with dyslipidemia, they do not, in themselves, constitute a coded diagnosis of \"Disorders of Lipid Metabolism\" (e.g., hypercholesterolemia or hyperlipidemia) in the current record.\n\n2. **Analysis of Medications and Procedures:**\n* **Medications Prescribed:** None recorded. The absence of lipid-lowering medications (like statins or fibrates) means there is no explicit ongoing management of a lipid disorder evident in the current record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 975,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Acute respiratory failure; Acute diastolic heart failure; Atrial fibrillation; Acute kidney failure, unspecified; Other and unspecified alcohol dependence, unspecified; Alcohol withdrawal; Bacteremia; Pneumonia, organism unspecified; Morbid obesity; Obstructive sleep apnea (adult)(pediatric); Other chronic pulmonary heart diseases; Long-term (current) use of anticoagulants; Anxiety state, unspecified; Tobacco use disorder; Conjunctivitis, unspecified; Acute sinusitis, unspecified) **does not contain any explicit diagnosis of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia.\n\n2. **Risk Factors and Comorbidities:** The patient exhibits several significant risk factors and comorbidities commonly associated with lipid disorders:\n    * **Morbid Obesity:** This is a major metabolic risk factor.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1242,
+    "completion_tokens": 256
+  }
+}

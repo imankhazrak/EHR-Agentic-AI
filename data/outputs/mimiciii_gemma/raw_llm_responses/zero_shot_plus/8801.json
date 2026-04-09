@@ -1,0 +1,12 @@
+{
+  "sample_id": 8801,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of Current Visit Record:\nThe patient's current record is dominated by severe, complex, multi-system failure related to advanced kidney disease, liver disease (cirrhosis), and chronic inflammatory/paraproteinemic conditions. Key diagnoses include End stage renal disease (ESRD), Hepatic encephalopathy, Cirrhosis, Portal hypertension, and Secondary hyperparathyroidism.\n\nMedication and Procedure Review:\nThe patient is receiving Cholestyramine, which is a bile acid sequestrant used to manage cholesterol/lipid levels, and Rifaximin, used for gut health. The patient is also on various medications for managing renal and hepatic complications (e.g., Nephrocaps, Calcium Acetate, Rifaximin).\n\nEvaluation against Strict Rules:\nThe strict rules for prediction are crucial:\n1. Answer \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1136,
+    "completion_tokens": 256
+  }
+}

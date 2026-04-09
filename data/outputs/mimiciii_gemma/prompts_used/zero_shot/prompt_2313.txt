@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of base of skull with other and unspecified intracranial hemorrhage, with prolonged [more than 24 hours] loss of consciousness, without return to pre-existing conscious level; Infection and inflammatory reaction due to other vascular device, implant, and graft; Other septicemia due to gram-negative organisms; Diabetes insipidus; Closed fracture of base of skull with subarachnoid, subdural, and extradural hemorrhage, with prolonged [more than 24 hours] loss of consciousness, without return to pre-existing conscious level; Poisoning by barbiturates; Coma; Dissection of carotid artery; Closed fracture of scapula, unspecified part
+- Medications prescribed: Mannitol 20%; Sucralfate; SW; Potassium Chloride; Magnesium Sulfate; Calcium Gluconate; D5W; Lacri-Lube Oint; Lorazepam; Morphine Sulfate; Vasopressin; Vecuronium Bromide; Cisatracurium Besylate; Pentobarbital Sodium; NS; Phenytoin Sodium; NS        (Glass Bottle); Soln.; Norepinephrine; Iso-Osmotic Dextrose; Cefazolin; Fentanyl Citrate; Dextrose 2.5% in Water (D2.5W); Desmopressin Acetate; DopAmine; Sterile Water; Dextrose 50%; Propofol (Generic); Desmopressin Nasal; Epoetin Alfa; Vial; Piperacillin-Tazobactam Na; Albuterol; Vancomycin HCl; Artificial Tears; Humulin-R Insulin; Insulin; Bisacodyl; Albuterol Neb Soln; Syringe; Syringe (IV Room); Albumin 5% (12.5gm); Acetaminophen; NS (Glass Bottle); Soln; Mannitol; Furosemide; Nystatin; Aspirin; Miconazole Powder 2%
+- Procedures performed: Temporary tracheostomy; Intravascular imaging of intrathoracic vessels; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Other bronchoscopy; Other endoscopy of small intestine; Percutaneous [endoscopic] gastrostomy [PEG]; Venous catheterization, not elsewhere classified; Arteriography of cerebral arteries; Parenteral infusion of concentrated nutritional substances; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -14,9 +14,17 @@ llm:
     force_rebuild_split: true
     val_ratio_within_train: 0.15
     split_seed: 42
-    smoke_max_train_samples: 48
-    smoke_max_eval_samples: 24
+    smoke_max_train_samples: 8
+    smoke_max_eval_samples: 4
     smoke_max_steps: 2
+    max_length: 256
+    batch_size: 1
+    gradient_checkpointing: true
+    force_fp32: true
+    max_grad_norm: 1.0
+    learning_rate: 0.00005
+    lora_r: 4
+    lora_alpha: 8
 
 few_shot:
   n_positive: 2

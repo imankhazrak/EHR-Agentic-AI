@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several significant comorbidities, including Congestive Heart Failure (CHF), Morbid Obesity, and Unspecified Essential Hypertension. These conditions are well-known risk factors for developing lipid disorders. Furthermore, the patient has Polycythemia Vera, which is a hematological condition that can sometimes be associated with metabolic changes.\n\nHowever, according to the strict instructions provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be based solely on the presence of general risk factors like obesity, hypertension, or CHF. The instructions explicitly state that factors such as the use of statins, cardiovascular diseases, or general risk factors alone are NOT sufficient to predict a future diagnosis.\n\nReviewing the current visit record, there is no explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) coded in the diagnoses made section. Similarly, there is no explicit mention of ongoing, active management specifically targeting a lipid abnormality (such as a statin or fibrate prescription, which would be a stronger indicator, though still not definitive on its own).\n\nSince the strict rule requires explicit evidence of an existing or actively managed lipid disorder to predict a",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3557,
+    "completion_tokens": 256
+  }
+}

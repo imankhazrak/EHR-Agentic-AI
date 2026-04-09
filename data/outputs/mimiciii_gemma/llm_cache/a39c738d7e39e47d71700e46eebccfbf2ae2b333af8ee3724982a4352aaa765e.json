@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record, beyond general risk factors or the use of lipid-lowering medications alone.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\n    * The current diagnoses list includes severe infections (Septicemia, Septic shock, Cholangitis), organ failure (Acute kidney failure, Liver replaced by transplant), and cardiac issues (Other primary cardiomyopathies, Atrial fibrillation).\n    * The medication list includes **Rosuvastatin Calcium**, which is a statin used for lipid management.\n    * The instructions explicitly state that the *use of statins alone* is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n    * Furthermore, the current diagnoses list **does not** explicitly code a lipid disorder (e.g., Hypercholesterolemia, Hyperlipidemia, or Lipoid Metabolism Disorder).\n\n2. **Evaluation Against Strict Prediction Rules:**\n    * The rule requires \"strong and explicit evidence that a lipid disorder is present and likely to be diagnosed.\"\n    * Since the only evidence related to lipids is",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3829,
+    "completion_tokens": 256
+  }
+}

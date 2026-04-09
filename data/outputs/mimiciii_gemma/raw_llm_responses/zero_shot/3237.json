@@ -1,0 +1,12 @@
+{
+  "sample_id": 3237,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses related to Malignant neoplasm, Atrial fibrillation, Kidney transplant, and Diabetes mellitus. While the patient is prescribed Pravastatin, which is a lipid-lowering medication, the record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Pravastatin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 602,
+    "completion_tokens": 123
+  }
+}

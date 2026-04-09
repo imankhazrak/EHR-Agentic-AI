@@ -1,0 +1,12 @@
+{
+  "sample_id": 4069,
+  "mode": "zero_shot",
+  "model": "google/gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record primarily details complex surgical procedures (Aorta-iliac-femoral bypass), infectious processes (Acute cholecystitis, Other septicemia), and associated complications (Acute kidney failure, Acute posthemorrhagic anemia). While the patient has a history of Atherosclerosis, the provided record does not contain explicit diagnostic evidence of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or explicitly diagnosed in the current visit. Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 575,
+    "completion_tokens": 145
+  }
+}

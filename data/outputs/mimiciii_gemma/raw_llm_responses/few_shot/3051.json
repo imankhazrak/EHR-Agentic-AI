@@ -1,0 +1,12 @@
+{
+  "sample_id": 3051,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record indicates a complex constellation of severe, life-threatening conditions, including Subendocardial infarction, Acute diastolic heart failure, Aortic valve disorders, Hypertensive chronic kidney disease (Stage V/ESRD), Diabetes with renal manifestations, and First degree atrioventricular block. The patient is receiving extensive supportive care, including Hemodialysis, Transfusion of packed cells, and various medications such as Metoprolol, Glipizide XL, and Atorvastatin.\n\nHowever, based on the strict criteria provided, the presence of a diagnosis of \"Disorders of Lipid Metabolism\" in the *next* hospital visit cannot be explicitly confirmed. While the patient is prescribed Atorvastatin (a lipid-lowering agent), this medication alone, along with the presence of cardiovascular diseases (Subendocardial infarction, CHF) and diabetes, does not meet the threshold for explicit evidence of an existing or actively managed lipid disorder that would guarantee a future diagnosis of \"Disorders of Lipid Metabolism\" being coded.\n\nThe instructions explicitly state that the use of statins (Atorvastatin) and cardiovascular diseases are NOT sufficient to predict a future diagnosis of this specific coded diagnosis. Since there is no explicit diagnosis of hypercholesterolemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3669,
+    "completion_tokens": 256
+  }
+}

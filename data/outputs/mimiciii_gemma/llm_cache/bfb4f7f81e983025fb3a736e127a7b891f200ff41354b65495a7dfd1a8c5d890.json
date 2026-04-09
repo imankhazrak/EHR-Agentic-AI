@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which is the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes **\"Pure hypercholesterolemia.\"** This diagnosis directly meets the requirement for explicit evidence of a lipid abnormality (CCS category 53). Furthermore, the patient is actively managed with multiple lipid-lowering medications, including **Simvastatin** and **Pravastatin**, and is also prescribed **Atorvastatin**. While the presence of statins alone is not sufficient to predict a diagnosis, the combination of an explicit diagnosis of hypercholesterolemia *and* ongoing, aggressive pharmacological management of that specific condition provides strong and explicit evidence that this condition is central to the patient's care and is highly likely to be coded as \"Disorders of Lipid Metabolism\" in the next hospital visit. The other comorbidities (CHF, Diabetes, Hypertension) are risk factors, but the explicit diagnosis of hypercholesterolemia is the decisive factor according to the strict rules provided.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3743,
+    "completion_tokens": 226
+  }
+}

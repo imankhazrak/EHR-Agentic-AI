@@ -1,0 +1,12 @@
+{
+  "sample_id": 9170,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-lowering medications alone.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe acute critical illness: Pneumonitis, Acute respiratory failure, Septic shock, Severe sepsis, Hyposmolality/hyponatremia, Alkalosis, Hypocalcemia, Anemia in CKD, Unspecified essential hypertension, Alzheimer's/Dementia, Benign neoplasm, Hypothyroidism, and other late effects of cerebrovascular disease.\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality** listed in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed **Simvastatin**. Simvastatin is a statin, a medication used to treat dyslipidemia. While the prescription of a statin strongly suggests that the underlying condition (dyslipidemia) was either suspected or diagnosed previously, the instructions",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1217,
+    "completion_tokens": 256
+  }
+}

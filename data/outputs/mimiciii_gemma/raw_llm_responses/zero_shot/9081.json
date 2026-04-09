@@ -1,0 +1,12 @@
+{
+  "sample_id": 9081,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening conditions such as Intraspinal abscess, Chronic kidney disease Stage III, Chronic systolic heart failure, and Morbid obesity. While the patient is on medication like Atorvastatin and Simvastatin, and has diagnoses like Diabetes and Morbid obesity, these factors alone do not constitute explicit evidence of an actively managed or existing primary lipid disorder (like documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the NEXT hospital visit, according to the strict criteria provided. The presence of statins is insufficient evidence for a future diagnosis under these guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1149,
+    "completion_tokens": 141
+  }
+}

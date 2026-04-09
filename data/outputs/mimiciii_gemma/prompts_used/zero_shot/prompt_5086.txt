@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Hemorrhage of gastrointestinal tract, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Chronic airway obstruction, not elsewhere classified; Diastolic heart failure, unspecified; [ICD9-DX:9974]; Iron deficiency anemia secondary to blood loss (chronic); Lipoma of intra-abdominal organs; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Nausea with vomiting; Long-term (current) use of insulin; Other specified cardiac dysrhythmias
+- Medications prescribed: Lorazepam; NS; Desmopressin Acetate; Insulin; Fluticasone-Salmeterol (250/50); Fluticasone Propionate 110mcg; Tiotropium Bromide; Vial; Pantoprazole Sodium; Sodium Chloride 0.9%  Flush; Prednisolone Acetate 1% Ophth. Susp.; Midazolam HCl; Potassium Chloride; Fentanyl Citrate; Magnesium Sulfate; Neutra-Phos; Zolpidem Tartrate; Metoprolol XL; Metoprolol; Diltiazem Extended-Release; Monopril; Sevelamer; Calcium Acetate; Pantoprazole; Nephrocaps; Albuterol; Calcium Carbonate; Sucralfate; Hydromorphone; D5 1/2NS; Metoclopramide; Bisacodyl; Aluminum-Magnesium Hydrox.-Simethicone; Prochlorperazine; Lactulose; Magnesium Oxide; Heparin Flush CVL  (100 units/ml); Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Dolasetron Mesylate; Heparin; DiphenhydrAMINE HCl; Sarna Lotion
+- Procedures performed: Local excision of other lesion or tissue of stomach; Hemodialysis; Other endoscopy of small intestine; Transfusion of packed cells; Other irrigation of (naso-)gastric tube
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

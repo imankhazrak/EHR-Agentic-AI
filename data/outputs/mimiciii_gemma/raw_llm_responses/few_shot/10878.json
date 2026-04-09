@@ -1,0 +1,12 @@
+{
+  "sample_id": 10878,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nFurthermore, the patient's current record also includes the diagnosis of \"Coronary atherosclerosis of native coronary artery,\" which is a condition frequently associated with dyslipidemia, reinforcing the clinical context of a lipid abnormality.\n\nWhile the patient is receiving medications like \"Simvastatin\" (a statin), the rules explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis. However, the explicit diagnosis of \"Pure hypercholesterolemia\" overrides this exclusion, providing the necessary strong and explicit evidence required by the guidelines.\n\nIn summary, the explicit coding of \"Pure hypercholesterolemia\" in the current visit record is the decisive factor leading to the prediction of \"Yes\" for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3819,
+    "completion_tokens": 231
+  }
+}

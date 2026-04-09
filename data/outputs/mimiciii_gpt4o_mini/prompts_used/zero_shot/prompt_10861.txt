@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Secondary hyperparathyroidism (of renal origin); Chronic systolic heart failure; Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease; Other primary cardiomyopathies; Paroxysmal ventricular tachycardia; End stage renal disease; Renal osteodystrophy; Congestive heart failure, unspecified; Anemia in chronic kidney disease; Personal history of malignant neoplasm of prostate; Pain in joint, pelvic region and thigh; Esophageal reflux; Other constipation
+- Medications prescribed: Neutra-Phos; OxycoDONE (Immediate Release); Calcium Carbonate; Acetaminophen; Docusate Sodium; Senna; 0.9% Sodium Chloride; SW; Calcium Gluconate; Valsartan; Magnesium Sulfate; Metoprolol Tartrate; Labetalol; Ranitidine (Liquid); Sodium Chloride 0.9%  Flush; Polyethylene Glycol; Bisacodyl; Potassium Chloride; Aspirin; Metoprolol Succinate XL; Heparin; 5% Dextrose; Morphine Sulfate; Morphine SR (MS Contin); Omeprazole; Ranitidine; sevelamer CARBONATE; Pantoprazole; Vial; Nephrocaps; Lidocaine 5% Patch
+- Procedures performed: Other and unspecified hysterectomy; Percutaneous angioplasty of intracranial vessel(s); Hemodialysis
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

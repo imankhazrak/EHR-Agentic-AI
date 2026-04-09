@@ -1,0 +1,12 @@
+{
+  "sample_id": 5807,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Other and unspecified hyperlipidemia\" present in the patient's current visit record. This diagnosis directly meets the criteria for the prediction target, as hyperlipidemia is a form of lipid disorder.\n\nFurthermore, the patient exhibits several strong comorbid conditions that are strongly associated with lipid disorders, including:\n1. **Diabetes Mellitus without mention of complication, type II or unspecified type:** Diabetes is a major risk factor and comorbidity for dyslipidemia.\n2. **Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified:** Chronic kidney disease and hypertension are frequently associated with metabolic disturbances, including lipid abnormalities.\n3. **Coronary atherosclerosis of native coronary artery and Atrial fibrillation:** These cardiovascular conditions are strongly linked to the development and presence of dyslipidemia.\n\nThe patient is also actively managed with **Atorvastatin**, a medication specifically prescribed for lipid management, which reinforces the clinical presence and ongoing management of a lipid abnormality.\n\nIn summary, the combination of the explicit diagnosis of \"Other and unspecified hyperlipidemia,\" coupled with multiple high-risk comorbidities (Diabetes, CKD, Atherosclerosis) and active lipid-lowering therapy (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1191,
+    "completion_tokens": 256
+  }
+}

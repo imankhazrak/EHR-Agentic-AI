@@ -1,0 +1,12 @@
+{
+  "sample_id": 4474,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe provided current visit record details numerous diagnoses and ongoing management for conditions such as acute kidney failure, cellulitis, chronic heart failure, chronic pulmonary issues, and various infections. While the patient is managed for conditions that carry a general risk for dyslipidemia (e.g., chronic heart failure, hypertension), the record **lacks any explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis). Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 855,
+    "completion_tokens": 144
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3049,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe acute cardiovascular events (Subendocardial infarction, Coronary atherosclerosis, Congestive heart failure) and severe trauma (Multiple motor vehicle accident, Closed fracture, Open wounds). The medication profile includes **Atorvastatin**, which is a lipid-lowering agent. However, according to the strict instructions provided, the mere prescription of a statin (**Atorvastatin**) is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses listed do not explicitly state a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) as the reason for admission or ongoing care, despite the presence of cardiovascular risk factors. The other diagnoses are related to acute organ failure (Acute kidney failure, Congestive heart failure) and trauma. Since explicit evidence of an existing or actively managed lipid disorder (beyond the use of a statin) is absent, the prediction must be \"No\", adhering strictly to the provided constraints.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3755,
+    "completion_tokens": 215
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10627,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition is actively managed and highly likely to be coded again in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is a direct and explicit evidence of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis.\n\n2. **Active Lipid Management:** The medication profile confirms active management of lipid abnormalities. The patient is prescribed **\"Simvastatin\"** and **\"Pioglitazone.\"** Simvastatin is a well-known HMG-CoA reductase inhibitor (statin), which is the primary pharmacological intervention for hyperlipidemia. Pioglitazone is a thiazolidinedione, often used in conjunction with lipid management in diabetic patients.\n\n3. **Comorbid Conditions Supporting Lipid Risk:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders and cardiovascular disease, reinforcing the need for continued diagnosis and management:\n    * **Diabetes Mellitus:** The diagnosis of **\"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\"** is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1226,
+    "completion_tokens": 256
+  }
+}

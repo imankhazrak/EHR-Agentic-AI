@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\"\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses are:\n1. Benign neoplasm of cerebral meninges\n2. Esophageal reflux\n\nThe patient's procedures and medications are:\n- Procedures performed: Other excision or destruction of lesion or tissue of brain\n- Medications prescribed: None recorded\n\nEvaluation against Prediction Rules:\nThe current visit record provides absolutely no evidence of any lipid abnormality, hypercholesterolemia, hyperlipidemia, or any other condition related to lipid metabolism. The diagnoses are strictly related to benign neoplasm and esophageal reflux.\n\nThe instructions explicitly state that a \"Yes\" prediction can ONLY be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. The factors present in the current record (benign neoplasm, esophageal reflux, and lack of medication/procedure related to metabolism) do not meet this threshold.\n\nConclusion:\nSince there is no explicit evidence of a lipid disorder in the current visit record, the prediction must",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 256
+  }
+}

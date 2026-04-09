@@ -1,0 +1,12 @@
+{
+  "sample_id": 10870,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of medications like statins.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to **malignancy** (Secondary malignant neoplasm of retroperitoneum and peritoneum, Malignant neoplasm of ovary, etc.), **cardiovascular issues** (Atrial fibrillation, Mitral valve disorders, etc.), **metabolic/sleep issues** (Morbid obesity, Obstructive sleep apnea), and **coagulation/neurological events** (Abnormal coagulation profile, TIA/cerebral infarction).\nCrucially, **no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality is listed** in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and covers various needs: anti-emetics (Famotidine, Ondansetron), anticoagulants (Heparin, Warfarin, Enoxaparin Sodium), cardiovascular",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1088,
+    "completion_tokens": 256
+  }
+}

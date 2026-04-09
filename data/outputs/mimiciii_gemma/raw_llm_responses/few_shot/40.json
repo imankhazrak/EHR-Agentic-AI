@@ -1,0 +1,12 @@
+{
+  "sample_id": 40,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record primarily details severe, chronic conditions related to renal failure, systemic inflammation (SLE), and hypertension. The diagnoses include Hypertensive chronic kidney disease, End stage renal disease, Systemic lupus erythematosus, and Anemia in chronic kidney disease. The medication profile includes treatments for hypertension (NiCARdipine IV, Labetalol, NIFEdipine CR), anticoagulation (Warfarin), and immunosuppression (PredniSONE).\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While chronic kidney disease and hypertension are known risk factors for dyslipidemia, the instructions strictly prohibit predicting a future diagnosis based solely on these general risk factors or the use of related medications (like statins, which are not explicitly prescribed here).\n\nThe patient's current management focuses on stabilizing renal function and managing systemic inflammation, not on actively treating a diagnosed lipid abnormality. Therefore, based on the strict criteria provided, there is no strong and explicit evidence in the current record to warrant a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3607,
+    "completion_tokens": 245
+  }
+}

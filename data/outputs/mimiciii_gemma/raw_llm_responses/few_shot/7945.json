@@ -1,0 +1,12 @@
+{
+  "sample_id": 7945,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, complex, and life-threatening oncological and neurological conditions. The diagnoses include Secondary malignant neoplasm of brain and spinal cord, Other nervous system complications, Secondary malignant neoplasm of bone and bone marrow, Vascular myelopathies, and Personal history of malignant melanoma of skin. The medications prescribed are primarily for managing severe pain (HYDROmorphone, OxycoDONE), infection (Gentamicin, Vancomycin, Heparin), neurological support, and gastrointestinal/metabolic side effects related to the primary disease (Docusate Sodium, Bisacodyl, Ondansetron, Insulin).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medication profile does not include any lipid-lowering agents (e.g., statins, fibrates) that would serve as explicit evidence of an actively managed lipid disorder, nor are there any diagnoses pointing toward metabolic dysregulation related to lipids.\n\nTherefore, based strictly on the provided evidence and adhering to the strict instruction to only predict a future diagnosis when explicit lipid disorder evidence is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3695,
+    "completion_tokens": 256
+  }
+}

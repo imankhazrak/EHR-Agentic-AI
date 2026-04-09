@@ -1,0 +1,12 @@
+{
+  "sample_id": 7203,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made in the current visit record (Ankylosing spondylitis, Cervical spondylosis with myelopathy, Bipolar I disorder, Unspecified essential hypertension, etc.), there is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded.\n2. **Risk Factors Present:** The patient does have several general risk factors and comorbidities:\n    * **Unspecified essential hypertension:** This is a known risk factor for cardiovascular and metabolic issues, but it alone is insufficient to predict a future diagnosis of a lipid disorder according to the strict guidelines.\n    * **Bipolar I disorder:** This is a psychiatric comorbidity, not directly related to lipid disorders.\n    * **Cervical/Ankylosing Spondylitis:**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1276,
+    "completion_tokens": 256
+  }
+}

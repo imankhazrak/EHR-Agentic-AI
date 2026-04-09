@@ -1,0 +1,12 @@
+{
+  "sample_id": 10341,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to critical care, neurological decline (Alzheimer's, Down's syndrome, Dementia), gastrointestinal issues (Pressure ulcer, Gastrostomy status), and general systemic instability (Hyposmolality, Hypotension, Unspecified hypothyroidism).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient is receiving various medications, including Levothyroxine Sodium, which manages thyroid function, and various antibiotics and supportive care.\n\nThe instructions strictly prohibit predicting a future diagnosis based solely on the use of supportive medications or general high-risk factors (like those implied by critical illness or age). Since there is no explicit evidence of an existing or actively managed lipid disorder in the current diagnoses, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" are not met. Therefore, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3697,
+    "completion_tokens": 209
+  }
+}

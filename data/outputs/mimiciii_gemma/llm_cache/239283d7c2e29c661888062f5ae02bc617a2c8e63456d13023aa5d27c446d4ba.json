@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, life-threatening conditions related to multi-organ failure, chronic disease management, and acute infections. The primary diagnoses include End Stage Renal Disease (ESRD), Acute on Chronic Heart Failure, Acute Respiratory Failure, and various severe infections (Pyelonephritis, Cellulitis).\n\nCrucially, while the patient is prescribed **Atorvastatin** (a lipid-lowering agent), the instructions explicitly state that the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, a review of the other diagnoses and procedures reveals no explicit evidence of a primary or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that would warrant a future coding of this diagnosis, even though the patient has comorbidities like Diabetes and Hypertension. The presence of these comorbidities alone, without explicit lipid evidence, does not meet the strict criteria set forth in the instructions.\n\nTherefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4135,
+    "completion_tokens": 236
+  }
+}

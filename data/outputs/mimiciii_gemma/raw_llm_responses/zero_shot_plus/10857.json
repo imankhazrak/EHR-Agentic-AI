@@ -1,0 +1,12 @@
+{
+  "sample_id": 10857,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit and strong evidence of a lipid disorder, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\nThe most critical piece of evidence is the explicit diagnosis recorded in the current visit: **Pure hypercholesterolemia**.\n\nThis diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary lipid abnormality.\n\nFurthermore, the patient's management profile reinforces the presence and ongoing nature of this lipid issue:\n1. **Medication Management:** The patient is prescribed multiple lipid-lowering agents, including **Atorvastatin** and **Simvastatin**, which are standard treatments for hypercholesterolemia. The presence of these medications confirms that the lipid disorder is not merely a historical finding but an actively managed condition.\n2. **Comorbidities:** The patient has several significant comorbidities commonly associated with dyslipidemia, such as **Diabetes with peripheral circulatory disorders** and **Atherosclerosis of native arteries of the extremities with intermittent claudication**. These conditions are strongly linked to the development and persistence of lipid abnormalities.\n\nBecause the current record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1186,
+    "completion_tokens": 256
+  }
+}

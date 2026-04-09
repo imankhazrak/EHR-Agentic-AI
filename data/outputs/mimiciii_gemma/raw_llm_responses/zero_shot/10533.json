@@ -1,0 +1,12 @@
+{
+  "sample_id": 10533,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to severe cardiovascular disease (Acute on chronic systolic heart failure, Cardiogenic shock, Coronary atherosclerosis, etc.), orthopedic issues (Ulcer of heel and midfoot, Amputation), and general systemic conditions (Hypertension, Anemia, Osteoporosis). While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the provided diagnoses do not explicitly state an existing lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary diagnosis. According to the strict guidelines, prescribing a lipid-lowering medication alone, without an explicit lipid disorder diagnosis in the current record, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The other diagnoses are unrelated to an existing lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 166
+  }
+}

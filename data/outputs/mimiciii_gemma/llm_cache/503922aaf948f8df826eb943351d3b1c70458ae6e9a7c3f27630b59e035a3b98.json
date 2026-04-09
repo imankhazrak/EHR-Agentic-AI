@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to trauma, infection, and organ failure, primarily: Subdural hemorrhage, Pneumonia, Acute on chronic diastolic heart failure, and uncontrolled Diabetes/CKD. While the patient is on **Simvastatin** (a lipid-lowering agent), and has **Coronary Atherosclerosis**, these factors alone, as per the strict instructions, are **not sufficient** to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded. The instructions explicitly state that the use of statins and cardiovascular diseases alone are not sufficient evidence for a future diagnosis. Furthermore, the current diagnoses do not explicitly state a primary lipid abnormality (like hypercholesterolemia or hyperlipidemia) that would warrant the coding of \"Disorders of Lipid Metabolism\" in the next visit, despite the presence of risk factors. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3990,
+    "completion_tokens": 210
+  }
+}

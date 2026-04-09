@@ -1,0 +1,12 @@
+{
+  "sample_id": 1246,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to severe neonatal complications: extreme immaturity, respiratory distress syndrome, sepsis, congenital hypothyroidism, and various perinatal anomalies (PDA, ASD). There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the current diagnoses.\n2. **Medications:** The medication list is extensive and primarily focused on managing the acute neonatal crisis (e.g., antibiotics like Ampicillin, Gentamicin, Cefotaxime; supportive care like Furosemide, Hydrocortisone; managing hypothyroidism with Levothyroxine). While the patient is prescribed **NEO*PO*MCT Oil** and **NEO*PO*Chlorothiazide**, these are not inherently diagnostic of a lipid disorder, nor are they statins or fibrates",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1351,
+    "completion_tokens": 256
+  }
+}

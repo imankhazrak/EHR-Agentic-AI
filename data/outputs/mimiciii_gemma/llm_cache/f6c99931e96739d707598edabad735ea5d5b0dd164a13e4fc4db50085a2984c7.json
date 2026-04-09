@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis).\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are Pneumonia, HIV disease, Other primary cardiomyopathies, Cocaine dependence, Chronic hepatitis C, Candidiasis, and HIV disease. None of these diagnoses explicitly state a lipid disorder (e.g., hyperlipidemia, hypercholesterolemia).\n2. **Medications:** The prescribed medications include Metoprolol, Warfarin, Azithromycin, etc. While some medications (like statins, which are not explicitly listed here) are used for lipid management, the current list does not contain explicit evidence of a lipid disorder being managed or diagnosed.\n3. **Comorbidities/Risk Factors:** The patient has several significant comorbidities, including HIV disease, chronic hepatitis C, and other primary cardiomyopathies. These conditions are",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 943,
+    "completion_tokens": 256
+  }
+}

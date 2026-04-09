@@ -1,0 +1,12 @@
+{
+  "sample_id": 1697,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or comorbidities.\n\n1. **Analysis of Current Visit Record:**\nThe patient's current diagnoses are extensive and primarily relate to severe infectious, respiratory, and neoplastic conditions:\n*   Malignant neoplasm of other specified sites of larynx\n*   Interstitial emphysema\n*   Acute respiratory failure\n*   Hepatitis C carrier\n*   Obstructive chronic bronchitis with (acute) exacerbation\n*   Methicillin susceptible pneumonia due to Staphylococcus aureus\n*   Infection with microorganisms resistant to penicillins\n*   Other vascular complications of medical care, not elsewhere classified\n*   Phlebitis and thrombophlebitis of deep veins of upper extremities\n\nThe patient's medications prescribed are None recorded. The procedures performed are related to airway management and biopsy (Temporary tracheostomy, Laryngoscopy and other tracheoscopy, Closed [endoscopic] biopsy of larynx).\n\n2. **Weighing Evidence for Lipid Disorder:**\nThere is **no",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 921,
+    "completion_tokens": 256
+  }
+}

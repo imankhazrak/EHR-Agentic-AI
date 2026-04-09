@@ -1,0 +1,12 @@
+{
+  "sample_id": 9143,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with hypercholesterolemia, there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, satisfying the criteria for answering \"Yes.\" The other diagnoses (Neoplasm of uncertain behavior of trachea, bronchus, and lung; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled) are comorbid conditions, but the explicit diagnosis of hypercholesterolemia is the decisive factor that meets the strict evidence requirement, overriding the general risk factors or the mere use of other medications (which are absent).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3469,
+    "completion_tokens": 199
+  }
+}

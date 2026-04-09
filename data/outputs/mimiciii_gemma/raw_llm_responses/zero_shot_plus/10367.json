@@ -1,0 +1,12 @@
+{
+  "sample_id": 10367,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made in the current visit record reveals no explicit mention of any lipid abnormality. The diagnoses are overwhelmingly related to:\n    * Malignant Neoplasms (Secondary malignant neoplasm of brain and spinal cord; Secondary malignant neoplasm of bone and bone marrow; Personal history of malignant neoplasm of breast).\n    * Hematological Issues (Acute posthemorrhagic anemia; Hypovolemia).\n    * Cardiovascular/Autonomic Issues (Atrial flutter; Atrial fibrillation; Other iatrogenic hypotension).\n    * Neurological/Pain Issues (Polyneuropathy due to drugs; Neoplasm related pain (acute) (chronic)).\n\n2. **Medication Profile Review:** The medications prescribed include several agents relevant to cardiovascular and pain management (e.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1180,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10459,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require predicting a future diagnosis based on *explicit* evidence of a lipid disorder, not just general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe, complex, and acute gastrointestinal, pulmonary, and renal pathology:\n*   **Gastrointestinal/Pulmonary:** Malignant neoplasm of thoracic esophagus, Abscess of lung, Perforation of esophagus, Pneumonia, Iatrogenic pulmonary embolism, Pneumonitis, Secondary malignant neoplasm of lymph nodes, Dysphagia.\n*   **Systemic/Renal:** Acute kidney failure, Urinary tract infection, Other disorders of neurohypophysis, Dehydration, Iron deficiency anemia.\n*   **Other:** Acute gouty arthropathy, Tobacco use disorder, etc.\n\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality** listed in the current diagnoses.\n\n2. **Analysis of Medications and Procedures:**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1414,
+    "completion_tokens": 256
+  }
+}

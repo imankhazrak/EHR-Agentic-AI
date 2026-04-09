@@ -1,0 +1,12 @@
+{
+  "sample_id": 2060,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses related to cardiovascular issues (Coronary atherosclerosis, CHF, Mitral valve disorders), chronic pancreatitis, diabetes, and other systemic conditions. While the patient is high-risk due to these comorbidities, there is no explicit evidence within the provided diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed (e.g., Atorvastatin, if present, or other cardiovascular/diabetes management) are not sufficient on their own to predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines. Therefore, based on the absence of explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 628,
+    "completion_tokens": 154
+  }
+}

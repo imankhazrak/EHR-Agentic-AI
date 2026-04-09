@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by critical care diagnoses related to severe respiratory and systemic compromise: Angioneurotic edema, Acute edema of lung, and Unspecified accident. The prescribed medications list is empty, and the procedures performed are entirely focused on life support and airway management (Endotracheal tube insertion, Mechanical ventilation, Laryngoscopy).\n\nCrucially, the current record contains **no explicit evidence** of a primary or actively managed lipid disorder. There are no diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, there are no medications prescribed that are specifically for lipid management (e.g., statins or fibrates).\n\nAccording to the strict guidelines provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record is entirely focused on acute, non-metabolic critical illness, and lacks any mention of lipid abnormalities, the prediction must be \"No\", despite the general statistical likelihood of such a diagnosis in the broader critical care population. The absence of explicit evidence overrides the general risk factors.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3455,
+    "completion_tokens": 238
+  }
+}

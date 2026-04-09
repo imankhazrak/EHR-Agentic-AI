@@ -1,0 +1,12 @@
+{
+  "sample_id": 1025,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details severe infectious, renal, and diabetic complications (Pneumonia, Acute respiratory failure, Diabetes with other coma, Acute kidney failure, Hypertensive chronic kidney disease, etc.). While the patient is prescribed Pravastatin, which is a lipid-lowering medication, the record does not explicitly state a primary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The presence of Pravastatin alone, without a corresponding explicit lipid disorder diagnosis, is insufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit, as per the strict guidelines provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 141
+  }
+}

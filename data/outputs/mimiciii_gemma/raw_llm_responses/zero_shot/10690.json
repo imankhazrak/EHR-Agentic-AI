@@ -1,0 +1,12 @@
+{
+  "sample_id": 10690,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to cardiac function (Paroxysmal ventricular tachycardia, Acute systolic heart failure, Congestive heart failure, etc.), respiratory function (Chronic respiratory failure, etc.), and muscular/metabolic issues (Hereditary progressive muscular dystrophy, Acidosis, Hyperpotassemia, etc.). The medications and procedures are primarily aimed at managing these established cardiac, respiratory, and metabolic conditions. There is no explicit evidence in the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's NEXT hospital visit, even though the patient is high-risk for general cardiovascular issues. The management focus is clearly on the established cardiac and respiratory pathology.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 651,
+    "completion_tokens": 174
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10492,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and this prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder, not just general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses, including Obstructive sleep apnea, Obesity, Unspecified essential hypertension, and Sarcoidosis. Obesity and hypertension are known risk factors for lipid disorders, but according to the strict instructions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n2. **Medications:** The prescribed medications include various agents for respiratory support (e.g., Propofol, Midazolam, Dexamethasone), infection control (e.g., Famotidine, Cepacol), and pain management (e.g., Oxycodone-Acetaminophen, Fentanyl Citrate). Crucially, there is **no explicit evidence** in the medication list",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1072,
+    "completion_tokens": 256
+  }
+}

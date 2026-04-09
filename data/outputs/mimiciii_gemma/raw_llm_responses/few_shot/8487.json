@@ -1,0 +1,12 @@
+{
+  "sample_id": 8487,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record shows a complex constellation of diagnoses, primarily revolving around severe cardiovascular events (Acute myocardial infarction of other anterior wall, Cardiogenic shock, Acute systolic heart failure, Congestive heart failure) and other serious comorbidities (Chronic lymphoid leukemia, Aseptic necrosis of bone, Coronary atherosclerosis, Asthma). The patient is receiving extensive supportive care and treatment for these acute and chronic conditions.\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses, while including risk factors for dyslipidemia (like CHF and CAD), do not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder in the provided list of diagnoses made.\n\nThe instructions explicitly state that the prediction must be based on **strong and explicit evidence** of an existing or actively managed lipid disorder, not merely the use of statins or the presence of cardiovascular risk factors. Since the current record lacks this explicit diagnostic evidence, the prediction must be \"No,\" despite the high-risk nature of the patient's overall clinical picture. The presence of Ator",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3740,
+    "completion_tokens": 256
+  }
+}

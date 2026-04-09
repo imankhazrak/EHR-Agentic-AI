@@ -1,0 +1,12 @@
+{
+  "sample_id": 9904,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are highly focused on neurological and cerebrovascular issues: \"Other ill-defined cerebrovascular disease,\" \"Anomalies of cerebrovascular system,\" \"Cerebral edema,\" \"Late effect of radiation,\" and \"Epilepsy, unspecified.\" There is no mention of any primary or secondary lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or metabolic syndrome) in the current diagnosis list.\n2. **Medications Prescribed:** The medication list is extensive and primarily supports the current neurological and critical care status: Propofol, LeVETiracetam, HYDROmorphone, Vancomycin, Dexamethasone, Heparin, etc. While some medications like Vancomycin or Dexamethasone can have metabolic side effects, there is no explicit evidence of lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

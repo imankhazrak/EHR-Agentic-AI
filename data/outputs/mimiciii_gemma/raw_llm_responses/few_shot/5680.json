@@ -1,0 +1,12 @@
+{
+  "sample_id": 5680,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include acute kidney failure, cirrhosis, various infections, cardiac dysfunction (diastolic heart failure), anemia, and diabetes mellitus. The medication list is comprehensive, including several agents used for managing these conditions, such as Albumin, Levothyroxine, Metoprolol, and various antibiotics.\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis). While the patient is prescribed **Atorvastatin** (a statin), this medication alone, as per the instructions, is **not sufficient** to predict a future diagnosis of a lipid disorder.\n\nFurthermore, there are no explicit diagnoses in the current record (such as \"Pure hypercholesterolemia\" or \"Hyperlipidemia\") that confirm the presence of the condition itself, independent of the statin prescription. The other comorbidities, such as hypertension and diabetes, are general risk factors and do not, by themselves, meet the threshold for predicting a future coded diagnosis of a lipid disorder according to the provided guidelines.\n\nTherefore",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3787,
+    "completion_tokens": 256
+  }
+}

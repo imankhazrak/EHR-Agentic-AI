@@ -1,0 +1,12 @@
+{
+  "sample_id": 9750,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and not based on general risk factors or the use of related medications.\n\n**Analysis of Current Visit Record:**\n\n1. **Diagnoses Made:** The recorded diagnoses are: Malignant neoplasm of esophagus, unspecified site; Thrombocytopenia, unspecified; Esophageal hemorrhage; Malignant neoplasm of liver, secondary; Acute posthemorrhagic anemia; Hyposmolality and/or hyponatremia; Hypotension, unspecified; Fever, unspecified; Dysthymic disorder; Unspecified pruritic disorder.\n    * **Lipid Disorder Evidence:** None of these diagnoses explicitly state hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific diagnosis of a lipid disorder.\n\n2. **Medications Prescribed:** The medications include: HYDROmorphone, Oxycodone SR, Ondansetron, Pantoprazole, 0",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 256
+  }
+}

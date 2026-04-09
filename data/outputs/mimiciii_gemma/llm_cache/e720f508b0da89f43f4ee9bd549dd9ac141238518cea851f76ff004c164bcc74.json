@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record primarily documents severe cardiovascular and autoimmune conditions: Aortic valve disorders, Congestive heart failure, and Systemic lupus erythematosus. The medications prescribed are extensive and cover supportive care, pain management, and management of these primary conditions (e.g., Furosemide for CHF, Amiodarone for cardiac rhythm control, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has multiple comorbidities (which are risk factors for dyslipidemia), the instructions strictly forbid predicting a future diagnosis based solely on general risk factors or the use of supportive medications like statins (which are not explicitly listed as a primary treatment here, though Aspirin is used).\n\nTherefore, based on the strict criteria provided\u2014requiring explicit evidence of an existing or actively managed lipid disorder\u2014the prediction for the next hospital visit must be \"No,\" even though the patient is high-risk. The current data does not support the coding of a lipid disorder diagnosis.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3638,
+    "completion_tokens": 239
+  }
+}

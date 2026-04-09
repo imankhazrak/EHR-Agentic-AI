@@ -1,0 +1,12 @@
+{
+  "sample_id": 11330,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next hospital visit.\n\n1. **Analysis of Current Diagnoses:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit evidence of a lipid disorder being present in the patient at the time of the current visit.\n\n2. **Analysis of Medications:**\nThe patient is prescribed **\"Rosuvastatin Calcium\"**. Rosuvastatin is a potent statin medication, which is a primary treatment for hyperlipidemia. While the use of statins alone is not sufficient to predict a future diagnosis, its prescription in conjunction with the existing hyperlipidemia diagnosis confirms that the lipid disorder is an active, managed condition.\n\n3. **Analysis of Comorbidities and Risk Factors:**\nThe patient presents with multiple significant comorbidities, including **Congestive heart failure**, **Coronary atherosclerosis**, and **Esophageal varices with bleeding**. These conditions are frequently associated with metabolic disturbances, including hyperlipidemia. Furthermore, the presence of **\"Other and unspecified hyperlipidemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1041,
+    "completion_tokens": 256
+  }
+}

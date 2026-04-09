@@ -1,0 +1,12 @@
+{
+  "sample_id": 2884,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors or the use of lipid-affecting medications alone.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe, acute, and chronic organ failure and complications related to transplantation and chronic hepatitis C/cirrhosis. The listed diagnoses include: Chronic hepatitis C, Cirrhosis of liver, Complications of transplanted liver, Acute and subacute necrosis of liver, Embolism and thrombosis, Acute respiratory failure, and Urinary complications. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed in the current diagnoses.**\n2. **Medications:** The medication list is extensive and primarily supports immunosuppression (Cyclosporine, Mycophenolate Mofetil, Steroids), infection control (Vancomycin, Cefazolin, etc.), and management of acute respiratory/cardiac issues (Metoprolol, Hydralazine, Insulin, Furosemide). While some medications (like Metoprolol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1277,
+    "completion_tokens": 256
+  }
+}

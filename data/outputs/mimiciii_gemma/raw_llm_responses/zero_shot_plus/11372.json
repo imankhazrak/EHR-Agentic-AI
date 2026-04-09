@@ -1,0 +1,12 @@
+{
+  "sample_id": 11372,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Other and unspecified hyperlipidemia\" present in the patient's current visit record.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: \"**Other and unspecified hyperlipidemia**.\" This meets the strict criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism,\" as hyperlipidemia is a core component of this category.\n\n2. **Supporting Comorbidities and Context:** While the patient has numerous complex comorbidities (Aortic valve disorders, Disturbances of sulphur-bearing amino-acid metabolism, etc.), the presence of documented hyperlipidemia provides the necessary explicit evidence, overriding the need to rely solely on general risk factors like hypertension or diabetes (which are not explicitly listed as primary drivers here).\n\n3. **Exclusion of Insufficient Evidence:** The prediction is not based solely on the use of medications like Metoprolol Tartrate or Clopidogrel, nor is it based only on the presence of cardiovascular issues like Aortic valve disorders. The diagnosis itself is the sufficient evidence.\n\n4. **Conclusion:** Since the patient is explicitly diagnosed with hyperlipidemia in the current record, there is strong and explicit evidence that this condition will be coded",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 256
+  }
+}

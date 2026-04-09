@@ -1,0 +1,12 @@
+{
+  "sample_id": 1732,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has numerous serious diagnoses, including Acute respiratory failure, Pneumonia, Chronic airway obstruction, Fistula of intestine, Urinary tract infection, Coronary atherosclerosis, Anemia, Atrial fibrillation, and Unspecified essential hypertension. These are significant comorbidities, but they do not explicitly state a lipid disorder (like hyperlipidemia or hypercholesterolemia).\n2. **Medications:** The patient is prescribed several medications, including Pantoprazole, Atenolol, Heparin, Metronidazole, Tiotropium Bromide, Allopurinol, Ferrous Sulfate, Digoxin, Paroxetine HCl, Fluconazole, Chlorhexidine Gluconate, Zinc Sulfate, Levothyroxine Sodium, Linez",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1058,
+    "completion_tokens": 256
+  }
+}

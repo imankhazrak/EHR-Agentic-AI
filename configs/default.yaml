@@ -52,13 +52,25 @@ llm:
     smoke_max_train_samples: 64
     smoke_max_eval_samples: 32
     smoke_max_steps: 3
+    gradient_checkpointing: true
+    force_fp32: true
+    max_grad_norm: 1.0
     max_length: 1024
-    learning_rate: 0.0002
+    learning_rate: 0.00005
     batch_size: 2
     num_train_epochs: 1
     lora_r: 8
     lora_alpha: 16
     lora_dropout: 0.05
+    # Needed by Gemma-4 with current peft versions.
+    lora_target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
   # Backward-compatible aliases used by legacy clients
   model: "models/hf_snapshots/google--gemma-4-e4b-it"
   # Optional: OpenAI-compatible proxy (e.g. Azure gateway). Default: api.openai.com

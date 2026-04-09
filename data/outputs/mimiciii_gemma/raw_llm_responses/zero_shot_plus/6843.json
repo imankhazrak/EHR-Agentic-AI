@@ -1,0 +1,12 @@
+{
+  "sample_id": 6843,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the patient's current visit record.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The patient's current diagnoses explicitly include \"Pure hypercholesterolemia.\" This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it represents a specific lipid abnormality.\n\n2. **Supporting Comorbidities:** The presence of several strong comorbidities strongly associated with lipid disorders further supports the likelihood of this diagnosis being maintained or re-diagnosed in subsequent visits:\n    * **Diabetes Mellitus:** The patient has multiple diagnoses related to uncontrolled diabetes (e.g., Diabetes with ketoacidosis, type II or unspecified type, uncontrolled; Diabetes with hyperosmolarity, type II or unspecified type, uncontrolled; Diabetes with renal manifestations, type II or unspecified type, uncontrolled; Polyneuropathy in diabetes; Gastroparesis). Diabetes is a major risk factor for dyslipidemia.\n    * **Obesity:** The patient is diagnosed with \"Obesity, unspecified,\" which is a significant metabolic risk factor.\n    * **Hypertension and CKD:** The patient has \"Hypertensive chronic",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1172,
+    "completion_tokens": 256
+  }
+}

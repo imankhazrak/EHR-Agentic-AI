@@ -1,0 +1,12 @@
+{
+  "sample_id": 9427,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of related medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are focused on infectious processes (Urinary tract infection, Bacteremia, Staphylococcus infection), chronic conditions (Chronic respiratory failure, Encephalopathy), and neurological/structural issues (Third or oculomotor nerve palsy, Tracheostomy status, Personal history of other lymphatic and hematopoietic neoplasms). There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed.\n2. **Medications:** The prescribed medications include antibiotics (Ciprofloxacin HCl, Vancomycin, Sulfameth/Trimethoprim SS, CefePIME), anti-inflammatory/steroid agents (Triamcinolone Acetonide, Dexamethasone), anticoagulants (Heparin, Aspirin), and supportive care drugs (Acetaminophen, Ranitidine, Docusate Sodium, Lactulose). Crucially, there are **no medications prescribed that are explicitly used for lipid management** (e.g",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1025,
+    "completion_tokens": 256
+  }
+}

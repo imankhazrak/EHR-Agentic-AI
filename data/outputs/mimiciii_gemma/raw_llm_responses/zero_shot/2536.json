@@ -1,0 +1,12 @@
+{
+  "sample_id": 2536,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details complex management of uncontrolled Type I Diabetes Mellitus, associated complications (nephropathy, retinopathy, ophthalmic manifestations, etc.), Gastroparesis, Acidosis, Dehydration, Chronic Kidney Disease, and Hypertension. While the patient is high-risk for dyslipidemia due to uncontrolled diabetes, the provided record does not contain any explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia). The management focuses on glycemic control, renal support, and managing associated complications, not specifically on lipid abnormalities. Therefore, based strictly on the evidence provided, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 162
+  }
+}

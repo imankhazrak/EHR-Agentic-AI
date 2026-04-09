@@ -1,0 +1,12 @@
+{
+  "sample_id": 9455,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and not based on general risk factors or medication use alone.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several serious diagnoses, including Chronic viral hepatitis B, Esophageal varices, Portal hypertension, Cirrhosis of liver, Unspecified essential hypertension, Thrombocytopenia, and Myelodysplastic syndrome. While hypertension is a risk factor for lipid disorders, it is not an explicit diagnosis of a lipid disorder itself.\n2. **Medications:** The patient is prescribed several medications, including traZODONE, Iso-Osmotic Dextrose, Nadolol, Pantoprazole, Neutra-Phos, Sucralfate, Bag, Magnesium Sulfate, Octreotide Acetate, and Spironolactone. Crucially, there is **no mention of any lipid-lowering agents** such as statins (e.g., Atorvastatin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

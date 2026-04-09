@@ -1,0 +1,12 @@
+{
+  "sample_id": 5526,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on severe, life-threatening conditions such as acute on chronic diastolic heart failure, severe sepsis, multiple organ failure (including acute kidney failure and pneumonia), and cardiac events. While the patient has morbid obesity, which is a general risk factor for dyslipidemia, and is receiving various medications, the record does not contain explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The factors present (morbid obesity, general risk factors) are insufficient to meet the threshold for predicting a future diagnosis of a specific lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 977,
+    "completion_tokens": 156
+  }
+}

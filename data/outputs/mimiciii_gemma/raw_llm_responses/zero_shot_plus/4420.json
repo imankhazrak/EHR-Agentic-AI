@@ -1,0 +1,12 @@
+{
+  "sample_id": 4420,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\n    * **Diagnoses:** The current diagnoses list several significant metabolic and cardiovascular risk factors: Diabetes mellitus (uncontrolled), Obesity (unspecified), Benign essential hypertension, and various cardiovascular conditions (Chronic diastolic heart failure, Congestive heart failure). These are strong *risk factors* for lipid disorders.\n    * **Medications:** The patient is prescribed **Simvastatin**, which is a lipid-lowering agent (statin). This indicates that the clinical team *suspects* or *manages* a lipid issue, but the criteria explicitly state that the *use of statins alone* is NOT sufficient evidence to predict a future diagnosis of the disorder itself.\n    * **Procedures:** No procedures were recorded.\n\n2. **Application of Strict Prediction Rules:**\n    * The rules mandate that the prediction must be based on *explicit evidence* of the disorder (e.g., a diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1154,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2599,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe analysis of the patient's current hospital visit record must strictly adhere to the provided instructions, which emphasize predicting the *coding* of a specific diagnosis (\"Disorders of Lipid Metabolism\") in the *next* visit, rather than predicting general clinical risk. The criteria for a \"Yes\" prediction are extremely narrow: there must be strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis).\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses listed are:\n* Infection and inflammatory reaction due to other vascular device, implant, and graft.\n* Other septicemia due to gram-negative organisms.\n* Bipolar I disorder, most recent episode (or current) unspecified.\n* Tracheostomy status and Ileostomy status.\n\nNone of the explicitly coded diagnoses in the current record point to an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Analysis of Medications and Procedures:**\nThe patient is on a complex medication regimen, including Loperamide HCl, NS, Metronidazole, Acetaminophen, Oxycodone, Salmeterol X",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 994,
+    "completion_tokens": 256
+  }
+}

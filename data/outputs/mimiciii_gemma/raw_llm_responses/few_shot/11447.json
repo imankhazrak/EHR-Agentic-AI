@@ -1,0 +1,12 @@
+{
+  "sample_id": 11447,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, life-threatening conditions, including Unspecified septicemia, Subendocardial infarction, Diabetes with ketoacidosis, Pneumonia, Septic shock, Acute systolic heart failure, and Congestive heart failure. These conditions represent a massive acute metabolic and cardiovascular crisis.\n\nWhile the patient is receiving Atorvastatin, which is a medication used for lipid management, the presence of this medication alone, along with the general comorbidities like Unspecified essential hypertension and Diabetes with ketoacidosis, does not meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit.\n\nThe instructions explicitly state that the use of statins (like Atorvastatin) and general risk factors (like hypertension or diabetes) are NOT sufficient evidence to predict a future diagnosis. The current record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would strongly and explicitly warrant the coding of this diagnosis in the subsequent visit, despite the presence of the statin.\n\nTherefore, based on the strict guidelines provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3765,
+    "completion_tokens": 247
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8360,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is receiving various medications and undergoing procedures, these factors alone\u2014including the use of Simvastatin or the general presence of other comorbidities like Hypotension or Anemia\u2014are insufficient, according to the strict guidelines, to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit. Therefore, based on the absence of explicit lipid disorder evidence, the prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3740,
+    "completion_tokens": 130
+  }
+}

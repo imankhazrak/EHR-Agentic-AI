@@ -1,0 +1,12 @@
+{
+  "sample_id": 723,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe acute illness, including Pneumonitis, Acute alcoholic intoxication, Alcohol withdrawal, Sepsis, Acidosis, and various gastrointestinal and neurological complications (e.g., Esophageal reflux, Hypotension, Suicide/self-inflicted injury). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality listed in the current diagnoses.\n2. **Medications:** The prescribed medications include various agents for managing severe acute conditions: antibiotics (Levofloxacin, Metronidazole), steroids (Prednisolone Acetate), agents for GI/neurological support (Pantoprazole, Diazepam, Labetalol HCl, Diltiazem), and agents for eye conditions (Latanoprost, Dorzolamide).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1190,
+    "completion_tokens": 256
+  }
+}

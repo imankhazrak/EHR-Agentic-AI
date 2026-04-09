@@ -1,0 +1,12 @@
+{
+  "sample_id": 5437,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include acute kidney failure, chronic kidney disease, various infections (UTI, Pseudomonas), cardiovascular issues (Coronary Atherosclerosis, PVD), diabetes mellitus, and respiratory failure.\n\nHowever, based on the strict criteria provided for predicting the *coding* of a diagnosis in the *next* visit, the current record lacks explicit, primary evidence of a diagnosed lipid disorder (such as primary hypercholesterolemia or hyperlipidemia) that is actively being managed or is the central focus of the current admission, beyond general risk factors.\n\n1. **Review of Diagnoses:** The diagnoses list includes general risk factors for lipid disorders (e.g., Diabetes Mellitus, Hypertension/CKD, Coronary Atherosclerosis), which are known comorbidities associated with dyslipidemia. However, a specific diagnosis like \"Pure hypercholesterolemia\" or \"Hyperlipidemia\" is absent from the list of diagnoses made.\n2. **Review of Medications:** The patient is prescribed various medications, including those used for cardiovascular and metabolic support (e.g., Insulin, Furosemide, Isosorbide Mononitrate). While the patient",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3878,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7885,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which is the primary criterion for predicting a \"Yes\" outcome. Specifically, the diagnosis list includes \"Pure hypercholesterolemia.\" This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a core component of this category.\n\nFurthermore, the patient is actively managed for this condition, evidenced by the prescription of \"Atorvastatin,\" a standard lipid-lowering medication. While the presence of statins alone is not sufficient for a \"Yes\" prediction, the explicit diagnosis of \"Pure hypercholesterolemia\" provides the necessary, strong, and explicit evidence required by the instructions.\n\nThe reasoning is further supported by the presence of other comorbidities commonly associated with lipid disorders, such as \"Diabetes mellitus without mention of complication, type II or unspecified type,\" and \"Unspecified essential hypertension,\" which are high-risk factors often managed alongside lipid abnormalities. However, the definitive factor driving the prediction is the explicit diagnosis of \"Pure hypercholesterolemia.\"\n\nTherefore, based on the explicit diagnosis of a lipid disorder in the current record, the prediction for the next",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3773,
+    "completion_tokens": 256
+  }
+}

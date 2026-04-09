@@ -1,0 +1,12 @@
+{
+  "sample_id": 4538,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current visit record is overwhelmingly dominated by severe, acute, and chronic respiratory, cardiac, and metabolic complications, but it lacks the explicit diagnostic evidence required to meet the \"Yes\" threshold.\n\n**1. Analysis of Explicit Lipid Disorder Evidence:**\nThe current diagnoses list includes several high-risk comorbidities commonly associated with lipid disorders, such as:\n*   **Obesity, unspecified:** A major risk factor for dyslipidemia.\n*   **Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled:** Diabetes is strongly linked to metabolic syndrome and dyslipidemia.\n*   **Percutaneous transluminal coronary angioplasty status; Atrial fibrillation; Chronic systolic heart failure:** These are severe cardiovascular conditions often co-occurring with metabolic/lipid issues.\n\nHowever, **none of the current diagnoses explicitly state a lipid abnormality** (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The presence of risk factors alone (Obesity, Diabetes, CVD) is explicitly excluded by the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1265,
+    "completion_tokens": 256
+  }
+}

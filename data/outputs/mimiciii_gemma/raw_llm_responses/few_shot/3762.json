@@ -1,0 +1,12 @@
+{
+  "sample_id": 3762,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses and treatments related to a severe closed fracture of the base of the skull, associated intracranial hemorrhages (subarachnoid, subdural, and extradural), and Type I Diabetes Mellitus. The medication and procedure lists reflect management for these acute and chronic conditions (Insulin, Phenytoin, Heparin, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Type I Diabetes, which is a known risk factor for dyslipidemia, the presence of this risk factor alone is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions mandate that a \"Yes\" prediction can only be made if there is \"strong and explicit evidence that a lipid disorder is present and likely to be diagnosed.\" Since the current record does not contain this explicit evidence, the prediction must be \"No,\" despite the patient's high-risk profile due to diabetes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3547,
+    "completion_tokens": 236
+  }
+}

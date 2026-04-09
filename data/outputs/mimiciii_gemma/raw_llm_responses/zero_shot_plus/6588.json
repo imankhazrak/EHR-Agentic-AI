@@ -1,0 +1,12 @@
+{
+  "sample_id": 6588,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are extensive but do not explicitly include any lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses focus on immune mechanism disorders, respiratory failure, hypertension, reflux, neurological/mood disorders, and anemia.\n2. **Medications:** The medication list is very long and covers numerous areas: respiratory support (Ipratropium, Albuterol, Insulin), immune/autoimmune management (Hydroxychloroquine, PredniSONE), pain management (HYDROmorphone, Fentanyl), and general support. Crucially, there is **no explicit mention of lipid-lowering agents** such as statins (e.g., Atorvastatin) or fibrates.\n3. **Risk Factors/Comorbidities:** The patient has Unspecified essential hypertension, which is a risk factor for lipid disorders, but hypertension alone",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1150,
+    "completion_tokens": 256
+  }
+}

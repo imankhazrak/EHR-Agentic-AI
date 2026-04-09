@@ -1,0 +1,12 @@
+{
+  "sample_id": 9885,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe infections (Septicemia, Cellulitis, etc.), End Stage Renal Disease, cardiac issues (CHF, Coronary Atherosclerosis), and complications related to transplantation and sepsis. While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the record does not contain any explicit diagnostic evidence (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly lead to the coding of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 937,
+    "completion_tokens": 141
+  }
+}

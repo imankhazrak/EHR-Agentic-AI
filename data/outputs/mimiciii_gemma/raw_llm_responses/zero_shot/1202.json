@@ -1,0 +1,12 @@
+{
+  "sample_id": 1202,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe infectious processes (septicemia, septic shock, pneumonia, abscess, acute respiratory failure), severe systemic conditions (diabetes with ketoacidosis, alcoholic cirrhosis, cocaine abuse, severe sepsis), and associated complications (alpha-1-antitrypsin deficiency, coagulation factor deficiency, delirium). While the patient is receiving extensive supportive care, there is no explicit mention of a primary lipid abnormality (such as hypercholesterolemia or hyperlipidemia) in the diagnoses or ongoing management that would strongly and explicitly evidence a future diagnosis of \"Disorders of Lipid Metabolism.\" The current focus is on infectious and metabolic crises unrelated to primary lipid dysregulation.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 873,
+    "completion_tokens": 142
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder present in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and explicit evidence of a lipid abnormality (hypercholesterolemia) that falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Management of Lipid Disorder:** The patient is actively managed for this condition, as evidenced by the prescription of **\"Atorvastatin\"**. While the use of statins alone is not sufficient to predict a future diagnosis, the *presence* of the underlying diagnosed condition (\"Pure hypercholesterolemia\") combined with its active management strongly supports the coding of this diagnosis in subsequent visits, especially when the condition is explicitly documented in the current record.\n\n3. **Comorbidities and Risk Factors:** The patient presents with numerous significant comorbidities that are strongly associated with lipid disorders, further reinforcing the clinical relevance of this diagnosis:\n    * **Diabetes Mellitus (Type II):** A major risk",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 256
+  }
+}

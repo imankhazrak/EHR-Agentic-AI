@@ -1,0 +1,12 @@
+{
+  "sample_id": 5751,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute metabolic and cardiovascular crises, including Diabetes with ketoacidosis, End stage renal disease, Congestive heart failure, and severe electrolyte imbalances (Hyperpotassemia, Hypovolemia). While the patient is on several medications that are commonly associated with cardiovascular and metabolic risk factors (e.g., Metoprolol, Carvedilol, Insulin), and the patient has a history of Coronary atherosclerosis, these factors alone do not constitute explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly lead to a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict guidelines provided. The medication profile includes Simvastatin, which is a lipid-lowering agent, but the guidelines explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of a lipid disorder. Furthermore, the current diagnoses do not explicitly state hyperlipidemia or hypercholesterolemia. Therefore, based on the strict requirement for explicit lipid disorder evidence, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3698,
+    "completion_tokens": 239
+  }
+}

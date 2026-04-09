@@ -1,0 +1,12 @@
+{
+  "sample_id": 4952,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made ([ICD9-DX:5191], Mechanical complication, Pulmonary insufficiency, Candidiasis, Pulmonary collapse, Unspecified essential hypertension, Esophageal reflux, Bronchiectasis, Streptococcus infection), there is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality coded in the current record.\n2. **Risk Factors and Comorbidities:** The patient does have several significant comorbidities, including **Unspecified essential hypertension** and **Diabetes** (implied by the prescription of Insulin), which are known risk factors for lipid disorders.\n3. **Medication Profile:** The patient is prescribed **Diltiazem** and **Albuterol**, but there is **no explicit prescription of a lipid-lowering agent** such as",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1172,
+    "completion_tokens": 256
+  }
+}

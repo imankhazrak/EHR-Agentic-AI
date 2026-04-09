@@ -1,0 +1,12 @@
+{
+  "sample_id": 13,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses related to severe infections (Pneumonitis, Septicemia, Sepsis), dehydration, and cardiac/renal issues (Other primary cardiomyopathies, Atrial fibrillation, Acute kidney failure). While the patient has multiple complex health issues, there is no explicit evidence in the diagnoses or ongoing management that points to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed, such as Aspirin, are general supportive treatments and do not explicitly confirm a lipid disorder diagnosis. Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 627,
+    "completion_tokens": 158
+  }
+}

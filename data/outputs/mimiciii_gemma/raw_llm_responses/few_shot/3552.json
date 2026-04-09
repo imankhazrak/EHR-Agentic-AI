@@ -1,0 +1,12 @@
+{
+  "sample_id": 3552,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe, acute metabolic and cardiovascular crises, primarily related to uncontrolled Type 1 Diabetes Mellitus, acute kidney failure, and associated hypertensive and neurological complications.\n\n**Analysis of Current Record:**\n1. **Primary Diagnoses:** The most prominent diagnoses are:\n    * Diabetes with ketoacidosis, type I [juvenile type], uncontrolled.\n    * Acute kidney failure, unspecified.\n    * Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease.\n    * Congestive heart failure, unspecified.\n    * Various uncontrolled manifestations of Type 1 Diabetes (renal, neurological, peripheral circulatory disorders).\n2. **Medication Profile:** The patient is receiving extensive supportive care, including:\n    * **Insulin/Metabolic Support:** Humulin-R Insulin, Insulin, Furosemide (for fluid overload related to CKD/CHF).\n    * **Cardiovascular/Renal Support:** Hydralazine HCl, Metoprolol XL, Lisinopril, Atorvastatin (a lipid-lowering agent), Furosemide.\n    * **Supportive Care:** Heparin, Aspirin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3715,
+    "completion_tokens": 256
+  }
+}

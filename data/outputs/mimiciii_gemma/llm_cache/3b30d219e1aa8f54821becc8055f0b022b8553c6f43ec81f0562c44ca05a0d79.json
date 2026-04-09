@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows numerous severe comorbidities, including Morbid obesity, Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Unspecified essential hypertension. These conditions are strong risk factors for hyperlipidemia and lipid disorders. However, according to the strict instructions, the presence of these risk factors alone (obesity, diabetes, hypertension) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality that would warrant coding in the next visit. The patient's management focuses heavily on acute issues (Cholangitis, Calculus of bile duct with acute cholecystitis, Unspecified pleural effusion, etc.) and general comorbidities, rather than an active, explicit lipid disorder requiring diagnosis. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3749,
+    "completion_tokens": 206
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7049,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\nThe most critical piece of evidence is the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is explicitly listed as a condition within this category.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that the prediction should NOT be based solely on:\n* Use of statins (None explicitly listed in the current record, though management might involve them).\n* Cardiovascular diseases (Atrial fibrillation, Unspecified essential hypertension are present, but these alone are insufficient).\n* General risk factors (Unspecified essential hypertension is present, but this alone is insufficient).\n\nSince the patient has an **explicit diagnosis of hypercholesterolemia**, this meets the strong and explicit evidence requirement for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n3. **Comprehensive Analysis of Comorbidities and Management:**\nWhile the patient has several comorbidities (Subdural hemorrhage, At",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 970,
+    "completion_tokens": 256
+  }
+}

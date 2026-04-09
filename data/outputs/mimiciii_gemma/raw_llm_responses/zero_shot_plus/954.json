@@ -1,0 +1,12 @@
+{
+  "sample_id": 954,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe liver disease (Cirrhosis, Hepatic encephalopathy, Viral hepatitis B with hepatic coma), portal hypertension, and associated complications (Varices, Blood in stool, Acquired coagulation factor deficiency). While severe liver disease is a major risk factor for various metabolic disturbances, none of the listed diagnoses explicitly state a lipid disorder (e.g., hyperlipidemia, hypercholesterolemia).\n2. **Medications:** The medication list is extensive and addresses the severe conditions present: Octreotide Acetate (for portal hypertension/varices), Levothyroxine Sodium (for hypothyroidism), Adefovir Dipivoxil (for viral hepatitis B), and various agents for GI/hepatic support (Lactulose, Ondansetron, etc.). Crucially, there is **no",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1101,
+    "completion_tokens": 256
+  }
+}

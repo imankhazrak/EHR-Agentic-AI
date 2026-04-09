@@ -1,0 +1,12 @@
+{
+  "sample_id": 11039,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is No because the current visit record lacks explicit, primary evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit, despite the presence of several high-risk factors and lipid-related medications.\n\nDetailed Analysis:\n\n1. Analysis of Diagnoses:\nThe diagnoses listed are overwhelmingly related to severe, acute neurological and cardiovascular events: Closed fracture of vault of skull with subarachnoid, subdural, and extradural hemorrhage, Cerebral edema, Subendocardial infarction, Encephalopathy, Acute respiratory failure, Obstructive hydrocephalus, Other primary cardiomyopathies, Coronary atherosclerosis of native coronary artery, etc. While Coronary atherosclerosis is a cardiovascular condition often associated with dyslipidemia, the diagnosis itself is a manifestation of vascular disease, not an explicit primary diagnosis of a lipid disorder (like hypercholesterolemia).\n\n2. Analysis of Medications:\nThe medication list includes **Atorvastatin**, which is a lipid-lowering agent (statin). This is a strong indicator of *risk* for dyslipidemia and ongoing *management*",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1267,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other postoperative infection; Methicillin susceptible Staphylococcus aureus septicemia; Sepsis; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; End stage renal disease; Acute posthemorrhagic anemia; Pressure ulcer, lower back; Infection with microorganisms resistant to penicillins; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Unspecified vascular insufficiency of intestine
+- Medications prescribed: Aspirin; Ketorolac; Haloperidol; Isotonic Sodium Chloride; Gentamicin; Gentamicin Sulfate; Meropenem; NS; D5W; NS (Mini Bag Plus); Olanzapine (Disintegrating Tablet); Lorazepam; Heparin Flush CVL  (100 units/ml); Heparin Flush PICC (100 units/ml); Nephrocaps; MetRONIDAZOLE (FLagyl); OxycoDONE (Immediate Release); Gabapentin; Vancomycin; Clopidogrel Bisulfate; Heparin; Simethicone; Insulin; Prochlorperazine; Furosemide; Sarna Lotion; Desmopressin Acetate; Pantoprazole Sodium; Acetaminophen; Vial; Iso-Osmotic Dextrose; Golytely; Ondansetron; Lidocaine Viscous 2%; Lidocaine Jelly 2% (Urojet); traZODONE HCl; Cinacalcet HCl; Iron Polysaccharides Complex; Sevelamer; Simvastatin; Phytonadione; Pantoprazole; Fluconazole; Miconazole Powder 2%; Oxycodone-Acetaminophen; Bisacodyl; Levofloxacin; FoLIC Acid; Docusate Sodium; Atenolol
+- Procedures performed: Excisional debridement of wound, infection, or burn; Excision of lesion of other soft tissue; Arteriography of other intra-abdominal arteries; Venous catheterization, not elsewhere classified; Hemodialysis; Venous catheterization for renal dialysis; Rigid proctosigmoidoscopy
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1735,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the umbrella of lipid disorders, which is the condition being predicted. Furthermore, the presence of \"Rosuvastatin Calcium\" in the medication list indicates active management of a lipid abnormality, reinforcing the likelihood of this diagnosis being coded in the next visit.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the umbrella of lipid disorders, which is the condition being predicted. Furthermore, the presence of \"Rosuvastatin Calcium\" in the medication list indicates active management of a lipid abnormality, reinforcing the likelihood of this diagnosis being coded in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 578,
+    "completion_tokens": 171
+  }
+}

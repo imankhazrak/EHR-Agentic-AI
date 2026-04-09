@@ -1,0 +1,12 @@
+{
+  "sample_id": 10135,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe cardiovascular disease (Diastolic heart failure, Coronary atherosclerosis, Old myocardial infarction, Atrial fibrillation, Congestive heart failure), severe infection (Unspecified septicemia, Sepsis, Urinary tract infection), and gallbladder pathology (Calculus of gallbladder with acute cholecystitis, Hydrops of gallbladder). While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record itself does not contain any explicit diagnostic evidence (such as documented hypercholesterolemia or hyperlipidemia) that mandates the coding of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 957,
+    "completion_tokens": 166
+  }
+}

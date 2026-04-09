@@ -1,0 +1,12 @@
+{
+  "sample_id": 2832,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record:**\nThe patient's current diagnoses include: Blood in stool; Unspecified schizophrenia; Atrial fibrillation; Anemia; Unspecified essential hypertension; Unspecified acquired hypothyroidism; and Personal history of venous thrombosis and embolism.\nThe patient is currently managed for: Atrial fibrillation (with Digoxin), Unspecified essential hypertension (with likely management), Unspecified acquired hypothyroidism (with Levothyroxine Sodium), and Unspecified schizophrenia (with Mirtazapine and Clozapine).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe guidelines explicitly state that the prediction cannot be based solely on:\n*   Use of statins (None are explicitly listed in the medications prescribed).\n*   Cardiovascular diseases (Atrial fibrillation is present, but this alone is insufficient).\n*   General risk factors (Unspecified essential hypertension is present, but this alone is insufficient).\n\n3. **Search for Explicit Lipid Disorder Evidence:**\nA thorough review of the diagnoses, medications, and procedures reveals **no explicit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 256
+  }
+}

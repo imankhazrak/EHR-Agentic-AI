@@ -1,0 +1,12 @@
+{
+  "sample_id": 8362,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like diabetes, hypertension, or cardiovascular disease.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current visit record (diagnoses, medications, procedures) does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Risk Factors Present:** The patient has several significant risk factors and comorbidities commonly associated with lipid disorders:\n    * Diabetes mellitus without mention of complication, type I [juvenile type].\n    * Coronary atherosclerosis of native coronary artery.\n    * Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease.\n    * Atrial fibrillation and Old myocardial infarction.\n    * Personal history of tobacco use.\n3. **Medication Profile:** The patient is prescribed Metoprolol Succinate XL, Lisinopril, and Insulin, which manage cardiovascular and diabetic conditions, but there is no explicit mention of lipid-lowering agents like statins (e.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1116,
+    "completion_tokens": 256
+  }
+}

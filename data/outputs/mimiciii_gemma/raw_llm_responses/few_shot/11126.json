@@ -1,0 +1,12 @@
+{
+  "sample_id": 11126,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, non-lipid-related critical illnesses. The primary diagnoses include Cirrhosis of liver without mention of alcohol, Hepatorenal syndrome, Pneumonia, Hemorrhage, Acute kidney failure, and Primary pulmonary hypertension. The medication profile is extensive and focused on managing these severe conditions, including insulin, furosemide, various antibiotics (Tacrolimus, Fluconazole, Vancomycin), and supportive care.\n\nCrucially, while the patient has a diagnosis of \"Other hemochromatosis,\" this is a specific diagnosis of iron metabolism disorder, not a general diagnosis of \"Disorders of Lipid Metabolism\" (CCS category 53). The instructions explicitly state that factors like the use of statins or general risk factors are insufficient to predict a future diagnosis.\n\nAlthough the patient is high-risk due to underlying liver disease and potential cardiovascular complications, there is no explicit, ongoing management or primary diagnosis of hypercholesterolemia or hyperlipidemia coded in the current record that would strongly and explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The presence of \"Other hemochromatosis\" is a separate metabolic category. Therefore, based on the strict criteria provided, the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3841,
+    "completion_tokens": 256
+  }
+}

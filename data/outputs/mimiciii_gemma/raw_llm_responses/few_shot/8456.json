@@ -1,0 +1,12 @@
+{
+  "sample_id": 8456,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, complex, and multi-systemic illnesses, primarily related to advanced liver disease (Cirrhosis of liver without mention of alcohol) and severe electrolyte/fluid disturbances (Hyposmolality and/or hyponatremia, Dehydration, Hypotension, Hyperpotassemia). The medication profile is heavily focused on managing these severe infections, organ support, and complications (e.g., PredniSONE, Tacrolimus, Albumin, Furosemide, various antibiotics).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. While advanced liver disease (Cirrhosis) is a known risk factor for metabolic disturbances, and some patients with cirrhosis may have dyslipidemia, the record itself does not code this condition, nor does it show explicit management (like a specific lipid panel result or a dedicated lipid-lowering regimen beyond general supportive care).\n\nFollowing the strict instructions provided:\n1. The prediction must be based on **explicit evidence** of an existing or actively managed lipid disorder.\n2. The use of general risk factors",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3908,
+    "completion_tokens": 256
+  }
+}

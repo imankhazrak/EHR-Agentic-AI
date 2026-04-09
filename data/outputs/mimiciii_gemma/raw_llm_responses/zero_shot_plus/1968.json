@@ -1,0 +1,12 @@
+{
+  "sample_id": 1968,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are extensive and cover several acute and chronic issues: Hemorrhage of gastrointestinal tract, unspecified; Acute posthemorrhagic anemia; Subendocardial infarction, initial episode of care; Thrombocytopenia, unspecified; Urinary tract infection, site not specified; Other emphysema; Acute kidney failure, unspecified; Dehydration; Acidosis; Hypocalcemia.\n\nThe patient's medication profile includes several agents relevant to cardiovascular and gastrointestinal management: Calcium Gluconate, Golytely, D5 1/2NS, Vial, Pantoprazole Sodium, Ferrous Sulfate, Latanoprost 0.005% Ophth. Soln., Sucralfate, Sodium Chloride 0.9% Flush, Lorazepam, Metoprolol, Pantoprazole, Ipr",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1015,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" Since the diagnosis of a specific lipid disorder (hypercholesterolemia) is present and actively managed within the current record, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record lists \"Pure hypercholesterolemia\" as a diagnosis. However, the strict rules provided for this prediction task state that the answer should only be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present AND likely to be diagnosed, while simultaneously excluding factors like general risk factors or the use of medications alone. Given the complex and overwhelming nature of the current diagnoses (Thrombotic microangiopathy, Acute kidney failure, Pneumonia, etc.), and the fact that the prediction task is highly constrained against predicting general risk, the system must default to \"No\" unless the evidence is *absolutely* explicit and isolated from the other severe conditions.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" As the diagnosis",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 256
+  }
+}

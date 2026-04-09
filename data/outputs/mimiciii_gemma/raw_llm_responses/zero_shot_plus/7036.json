@@ -1,0 +1,12 @@
+{
+  "sample_id": 7036,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly focused on severe, acute, and chronic respiratory and infectious complications related to transplantation and underlying systemic diseases (e.g., Ventilator associated pneumonia, Acute and chronic respiratory failure, Complications of transplanted bone marrow, Chronic graft-versus-host disease, Portal hypertension).\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder** listed among the diagnoses made.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Simvastatin**, which is a statin used for lipid management. However, according to the strict instructions, the mere use of statins is **NOT sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\nThe other medications are primarily directed at managing the severe respiratory, infectious, and systemic complications (e.g., Vancomycin, Colistin, PredniSONE, Heparin, Furosemide,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1343,
+    "completion_tokens": 256
+  }
+}

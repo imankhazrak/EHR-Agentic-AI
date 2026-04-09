@@ -1,0 +1,12 @@
+{
+  "sample_id": 1859,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe gastrointestinal bleeding, liver failure (Alcoholic cirrhosis, Esophageal varices, Portal hypertension, Hepatic encephalopathy), and associated complications (Hemorrhage, Unspecified essential hypertension). The medication and procedure profiles reflect intensive care management for these specific conditions (Lactulose, Nadolol, Octreotide Acetate, Endoscopic procedures).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Unspecified essential hypertension, and liver disease is a known risk factor for metabolic issues, the instructions strictly forbid predicting a future diagnosis based solely on hypertension or general risk factors.\n\nReviewing the demonstration cases:\n*   Cases 1, 2, and 3 all resulted in a \"Yes\" outcome, and in each of those cases, the current record explicitly included a diagnosis of a lipid disorder (e.g., Pure hypercholesterolemia in Case 2).\n*   Cases 4 and 5 resulted in a \"No\" outcome, and in those cases, the current record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3535,
+    "completion_tokens": 256
+  }
+}

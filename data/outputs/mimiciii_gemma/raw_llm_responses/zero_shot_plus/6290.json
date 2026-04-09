@@ -1,0 +1,12 @@
+{
+  "sample_id": 6290,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are:\n1. Alcoholic cirrhosis of liver\n2. Esophageal varices in diseases classified elsewhere, with bleeding\n3. Acute posthemorrhagic anemia\n4. Thrombocytopenia, unspecified\n5. Other and unspecified alcohol dependence, continuous\n\nThe patient's medication profile is:\n- None recorded.\n\nThe procedures performed are:\n- Endoscopic excision or destruction of lesion or tissue of esophagus\n- Other endoscopy of small intestine\n\nWe must examine the current record for explicit evidence of a lipid disorder. The current diagnoses focus entirely on severe consequences of chronic alcohol abuse (cirrhosis, varices, anemia, thrombocytopenia, alcohol dependence). There is no mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality in the current diagnoses.\n\nWe must also check",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 256
+  }
+}

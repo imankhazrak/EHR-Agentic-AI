@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record indicates a complex constellation of severe, non-metabolic, cardiovascular, and infectious issues. The primary diagnoses are: Atherosclerosis with gangrene, Diabetes Mellitus (uncontrolled), Cardiac Complications, Acute Myocardial Infarction, Atrial Fibrillation, Iron Deficiency Anemia, Kidney/Ureter Disorder, Hypertension, and Aortocoronary Bypass status.\n\nCrucially, the record **lacks any explicit diagnosis** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nThe instructions explicitly state that the mere use of cardiovascular disease diagnoses (like MI, Atrial Fibrillation, or Atherosclerosis) or general risk factors (like Diabetes Mellitus or Hypertension) are **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No,\" adhering strictly to the provided rules, despite the patient's high-risk profile.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3521,
+    "completion_tokens": 227
+  }
+}

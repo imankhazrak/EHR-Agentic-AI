@@ -1,0 +1,12 @@
+{
+  "sample_id": 1218,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are: Diabetes with ketoacidosis, type I [juvenile type], Volume depletion, unspecified, Acute kidney failure, unspecified, and Other and unspecified noninfectious gastroenteritis and colitis.\nWhile Diabetes Mellitus (Type I) is a known risk factor for developing lipid disorders, the diagnosis itself does not explicitly state the presence of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. The current focus of the hospitalization is on managing the acute metabolic crisis (ketoacidosis, volume depletion, AKI).\n\n2. **Analysis of Medications Prescribed:**\nThe medications prescribed are: Insulin Human Regular, NS, Dolasetron Mesylate, Insulin, Apri, Heparin, Sodium Chloride 0.9% Flush, Potassium Phosphate, D5 1/2NS, and Ibuprofen.\nCrucially, there are **no medications",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 256
+  }
+}

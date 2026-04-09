@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly mentions \"Other and unspecified hyperlipidemia\" as a diagnosis. However, according to the strict rules provided, the prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder that is *not* merely a general risk factor or a general mention of hyperlipidemia that is not actively managed as a specific lipid pathology. While \"Other and unspecified hyperlipidemia\" is a mention of a lipid abnormality, the provided rules are extremely restrictive, requiring evidence beyond a general mention of hyperlipidemia that is not actively managed as a specific lipid pathology. Given the context of the other diagnoses (Hepatitis, Diabetes, CKD, etc.), the mention of hyperlipidemia is categorized as a general finding rather than a specific, actively managed lipid pathology that meets the high threshold required by the strict rules for a \"Yes\" prediction.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" as a diagnosis. While this is a mention of a lipid abnormality, the strict rules provided for this prediction are extremely restrictive. The rules mandate that a \"Yes\" prediction can only be made if there is *strong and explicit evidence* of an existing",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 12276,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism.\" Furthermore, the prescription of \"Atorvastatin\" (a lipid-lowering agent) supports the ongoing management of a lipid abnormality. Given the explicit diagnosis of hyperlipidemia, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia.\" However, the strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed* lipid disorder, and that factors like the *use of statins* are NOT sufficient on their own. While hyperlipidemia is explicitly diagnosed, the context of the other severe diagnoses (pneumonia, heart failure, AKI) and the lack of further explicit *pathophysiological* evidence beyond the general term \"hyperlipidemia\" means that the prediction must be \"No\" to adhere to the strict constraints against predicting based solely on general or unspecified diagnoses, even if a stat",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 256
+  }
+}

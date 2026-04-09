@@ -1,0 +1,12 @@
+{
+  "sample_id": 4994,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is extensive and details numerous diagnoses related to infections (Cellulitis, osteomyelitis, staph infections), cardiovascular issues (CHF, atherosclerosis), diabetes, and general inflammatory/skeletal conditions (pneumonitis, osteoporosis). While the patient has multiple risk factors for dyslipidemia (e.g., diabetes, atherosclerosis), the record **does not contain any explicit diagnosis or active management of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. The medications prescribed (e.g., Aspirin, Metoprolol, Lisinopril) are for managing the existing cardiovascular and diabetic conditions, not specifically for treating a diagnosed lipid abnormality. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 964,
+    "completion_tokens": 161
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5994,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by high-risk comorbidities or general management.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current list of diagnoses is extensive, covering severe systemic infections (Sepsis, UTI, C. diff), severe organ failure (Acute Kidney Failure, Hepatic Encephalopathy, Cirrhosis), and complex cardiovascular issues (Rheumatic heart failure, Mitral/Aortic valve stenosis, Portal hypertension). While the patient has **Diabetes mellitus without mention of complication, type II or unspecified type**, this is a general metabolic disorder, not explicitly a lipid disorder (like hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications for Explicit Lipid Management:**\nThe prescribed medications include Insulin Human Regular, which manages blood glucose. There is **no explicit mention of lipid-lowering agents** such as statins (e.g., Atorvastatin, Simvastatin) or fibrates in the medication list.\n\n3. **Weighing Risk Factors vs. Explicit Evidence (Crucial Step):**\nThe patient presents numerous **risk factors",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1428,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The guidelines strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to severe, acute, and chronic organ failure: Alcoholic cirrhosis of liver, Hepatorenal syndrome, Acute kidney failure, Hemoperitoneum, Bacteremia, etc. There is no mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality in the current diagnosis list.\n2. **Medications:** The medication list is extensive and primarily aimed at managing severe infections (e.g., Linezolid, Vancomycin, Piperacillin-Tazobactam), organ support (e.g., Cyclosporine, Insulin, Furosemide), and acute complications (e.g., Magnesium Sulfate, Pantoprazole). While the patient is on Insulin, which is relevant to glucose metabolism, there are no explicit lipid-lowering agents (",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1234,
+    "completion_tokens": 256
+  }
+}

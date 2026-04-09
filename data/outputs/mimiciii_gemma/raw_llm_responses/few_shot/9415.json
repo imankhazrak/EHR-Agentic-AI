@@ -1,0 +1,12 @@
+{
+  "sample_id": 9415,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe trauma (Closed fracture of seventh cervical vertebra; Closed fracture of sacrum and coccyx without mention of spinal cord injury; Acute respiratory failure; Diastolic heart failure; Congestive heart failure), severe systemic illness (Unspecified protein-calorie malnutrition; Delirium due to conditions classified elsewhere; Dependence on respirator, status; Atrial fibrillation; Unspecified essential hypertension), and associated complications (Chronic airway obstruction, not elsewhere classified; Tachycardia, unspecified; Postsurgical hypothyroidism; Aortic valve disorders; Esophageal reflux).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several significant cardiovascular risk factors\u2014namely, Unspecified essential hypertension and Congestive heart failure\u2014and is receiving medications that are often used in the management of dyslipidemia (e.g., Atenolol, which is used for blood pressure control, and potentially others), the strict instructions mandate that the prediction cannot be based solely on the presence of hypertension or CHF, nor on the use of general cardiovascular medications.\n\nThe provided demonstration cases show",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3945,
+    "completion_tokens": 256
+  }
+}

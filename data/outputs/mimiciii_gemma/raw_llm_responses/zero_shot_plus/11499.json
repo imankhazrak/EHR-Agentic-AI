@@ -1,0 +1,12 @@
+{
+  "sample_id": 11499,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly related to severe neurological trauma and associated complications:\n*   Intervertebral disc disorder with myelopathy, cervical region; Quadriplegia, unspecified; Closed fracture of C5-C7 level with unspecified spinal cord injury; Unspecified fall; Phlebitis and thrombophlebitis of superficial veins of upper extremities; Anemia, unspecified; Pressure ulcer, buttock; Pressure ulcer, stage II; Dementia with lewy bodies; Dementia in conditions classified elsewhere without behavioral disturbance; Postprocedural fever.\nNone of these diagnoses explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and primarily targets neurological, pain, and infectious/thrombotic issues:\n*   Carbidopa-Levodopa, Lorazepam",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1124,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 62,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The analysis must strictly avoid basing the prediction on general risk factors, statin use, or cardiovascular diseases alone.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe acute and chronic conditions: Dissection of aorta, thoracoabdominal; Methicillin susceptible pneumonia due to Staphylococcus aureus; Acute respiratory failure; Congestive heart failure, unspecified; Acute kidney failure, unspecified; Pneumonitis due to inhalation of food or vomitus; Unspecified essential hypertension; Constipation, unspecified; Infection with microorganisms resistant to penicillins.\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder** listed in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and primarily targets the acute and chronic conditions listed above (e.g., Labetalol HCl, Nitroprusside Sodium, Furosemide, Acetylcysteine, etc.).\nWhile the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 256
+  }
+}

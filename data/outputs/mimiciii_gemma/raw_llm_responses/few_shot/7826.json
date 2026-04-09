@@ -1,0 +1,12 @@
+{
+  "sample_id": 7826,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including septicemia, peritonitis, UTI, and bladder rupture. The patient also has several significant comorbidities, such as Atrial fibrillation, TIA/cerebral infarction, and peripheral vascular disease. The medication profile includes Simvastatin, which is a lipid-lowering agent. However, according to the strict instructions, the mere prescription of a statin (Simvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient's other diagnoses are related to infection, inflammation, and cardiovascular instability, not an existing, actively managed lipid disorder. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to code a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3692,
+    "completion_tokens": 206
+  }
+}

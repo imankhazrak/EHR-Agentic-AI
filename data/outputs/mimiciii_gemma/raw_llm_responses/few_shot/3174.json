@@ -1,0 +1,12 @@
+{
+  "sample_id": 3174,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and subacute infectious, inflammatory, and organ failure processes. The primary diagnoses include:\n1. **Severe Organ Dysfunction:** Alcoholic cirrhosis of liver, acute and subacute necrosis of liver, portal hypertension, and severe sepsis/viral hepatitis C with hepatic coma.\n2. **Acute Respiratory/Cardiovascular Events:** Diastolic heart failure, acute respiratory failure, and acute posthemorrhagic anemia.\n3. **Metabolic/Infectious Complications:** Acquired coagulation factor deficiency, pneumonitis, and various shock states.\n\n**Analysis against Prediction Criteria:**\nThe prediction criteria strictly forbid basing a \"Yes\" prediction solely on:\n*   Use of statins (Not explicitly present in the current medication list, though general risk factors are high).\n*   Cardiovascular diseases (Diastolic heart failure is present, but this alone is insufficient).\n*   General risk factors (Alcohol dependence, which is in remission, is a risk factor, but not explicit lipid disorder evidence).\n\n**Evidence of Explicit Lipid Disorder:**\nCrucially, the current list of diagnoses made **does not explicitly include** any diagnosis of hypercholesterolemia,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3946,
+    "completion_tokens": 256
+  }
+}

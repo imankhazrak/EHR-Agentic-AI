@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record explicitly contains the diagnosis of **Pure hypercholesterolemia**.\n\nAccording to the instructions, the prediction should be \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The diagnosis of \"Pure hypercholesterolemia\" directly meets this criterion, as it is an explicit diagnosis of a lipid abnormality (hypercholesterolemia).\n\nWhile the patient has numerous other complex diagnoses (Intracerebral hemorrhage, Pneumonia, Unspecified essential hypertension, etc.), the presence of this specific, explicit lipid disorder diagnosis in the current record provides the strong and explicit evidence required to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe other factors, such as the use of medications like Aspirin or Metoprolol, or the presence of hypertension, are general risk factors or standard care elements and are explicitly excluded by the instructions as sufficient evidence on their own. The explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1205,
+    "completion_tokens": 235
+  }
+}

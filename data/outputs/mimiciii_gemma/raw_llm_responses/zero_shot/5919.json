@@ -1,0 +1,12 @@
+{
+  "sample_id": 5919,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record only indicates diagnoses of Cerebral aneurysm, nonruptured, and Unspecified essential hypertension, with no explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, even though the patient has other health conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 97
+  }
+}

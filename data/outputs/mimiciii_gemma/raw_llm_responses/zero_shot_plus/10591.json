@@ -1,0 +1,12 @@
+{
+  "sample_id": 10591,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of numerous other severe comorbidities.\n\n1. **Explicit Evidence of Lipid Disorder:**\nThe most direct and compelling evidence is the diagnosis explicitly listed in the current visit record: **\"Other and unspecified hyperlipidemia.\"** This diagnosis directly meets the criteria for a lipid disorder as defined in the target definition (hyperlipidemia).\n\n2. **Supporting Comorbidities and Risk Factors:**\nThe patient presents with a constellation of severe comorbidities that are highly associated with, and often lead to, lipid disorders:\n* **Diabetes Mellitus (Type II):** The patient has multiple diagnoses related to diabetes, including \"Diabetes with neurological manifestations,\" \"Diabetes with ophthalmic manifestations,\" and \"Diabetes with renal manifestations.\" Diabetes is a major risk factor for dyslipidemia.\n* **Obesity:** The diagnosis of **\"Obesity, unspecified\"** is a significant metabolic risk factor strongly linked to hyperlipidemia.\n* **Cardiovascular Disease:** The patient has extensive diagnoses of severe cardiovascular disease, including \"Subendocardial infarction,\" \"Coronary",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1226,
+    "completion_tokens": 256
+  }
+}

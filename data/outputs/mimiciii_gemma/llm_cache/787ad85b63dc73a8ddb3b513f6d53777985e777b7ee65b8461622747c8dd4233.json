@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly mandate that a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and not based on general risk factors or the use of medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses, including Subendocardial infarction, Congestive heart failure, Coronary atherosclerosis, Diabetes mellitus, and Unspecified essential hypertension. These conditions are well-known risk factors and comorbidities associated with dyslipidemia.\n2. **Medications:** The patient is prescribed numerous medications, including Metoprolol, Aspirin EC, and Clopidogrel Bisulfate, which are standard treatments for cardiovascular disease. While the patient is on various medications, there is no explicit mention of lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates in the prescribed list.\n3. **Procedures:** The patient underwent extensive cardiovascular procedures, including PTCA",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1171,
+    "completion_tokens": 256
+  }
+}

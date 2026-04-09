@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on general risk factors or the use of related medications.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses include:\n- Chronic or unspecified gastric ulcer with perforation, without mention of obstruction ([ICD9-DX:5672]).\n- Atrial fibrillation ([ICD9-DX:2765]).\n- Unspecified protein-calorie malnutrition.\n- Duodenitis, without mention of hemorrhage.\n- Alzheimer's disease and Dementia in conditions classified elsewhere without behavioral disturbance.\n- Unspecified essential hypertension.\n\nThe patient's medication profile includes:\n- Famotidine, Iso-Osmotic Sodium Chloride, Heparin, Pantoprazole Sodium, NS, Magnesium Sulfate, Ampicillin Sodium, Levofloxacin, Metronidazole, Dextrose 5%, Morphine Sulfate, Hydrocortisone Na Succ., Syringe, SW, Potassium",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 256
+  }
+}

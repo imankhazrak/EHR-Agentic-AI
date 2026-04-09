@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Mitral valve stenosis and aortic valve insufficiency; Atrial fibrillation; Sinoatrial node dysfunction; Coronary atherosclerosis of native coronary artery; Diseases of tricuspid valve; Anemia, unspecified; Impotence of organic origin; Personal history of colonic polyps; Long-term (current) use of anticoagulants
+- Medications prescribed: Acetaminophen; Glucagon; Dextrose 50%; Aspirin EC; Ranitidine; Docusate Sodium; Warfarin; Potassium Chloride; Amiodarone; Metoclopramide; Simethicone; Lisinopril; Furosemide; Sodium Chloride 0.9%  Flush; Propofol; Phenylephrine; D5W; Syringe; 5% Dextrose; SW; 0.9% Sodium Chloride; Nitroglycerin; Morphine Sulfate; Oxycodone-Acetaminophen; HydrALAzine; Aspirin; Metoprolol Tartrate; Atorvastatin; Bisacodyl; Insulin; Milk of Magnesia; D5 1/2NS; Atropine Sulfate; Multivitamins; Heparin Sodium; Pneumococcal Vac Polyvalent; LR; Neostigmine; Glycopyrrolate; CefazoLIN; Meperidine; Docusate Sodium (Liquid); Calcium Gluconate; Magnesium Sulfate; Insulin Human Regular; Chlorhexidine Gluconate 0.12% Oral Rinse
+- Procedures performed: Open and other replacement of mitral valve with tissue graft; Left heart cardiac catheterization; (Aorto)coronary bypass of one coronary artery; Single internal mammary-coronary artery bypass; Excision or destruction of other lesion or tissue of heart, open approach; Extracorporeal circulation auxiliary to open heart surgery; Coronary arteriography using two catheters
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

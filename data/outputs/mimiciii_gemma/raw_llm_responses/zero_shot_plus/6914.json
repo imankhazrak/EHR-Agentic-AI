@@ -1,0 +1,12 @@
+{
+  "sample_id": 6914,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made in the current visit record (Hypertensive chronic kidney disease, Mitral valve disorders, Complications of transplanted kidney, UTI, Acidosis, AKF, Inguinal hernia, Diabetes, Polycystic kidney, Hyperplasia of prostate, Polyneuropathy, Aortocoronary bypass status, Peripheral vascular disease, Gout) reveals **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\n2. **Risk Factors vs. Explicit Diagnosis:** The patient has numerous significant comorbidities that are known risk factors for lipid disorders, including:\n    *   Diabetes Mellitus Type II (with neurological manifestations).\n    *   Hypertension (leading to CKD Stage V/ESRD).\n    *   Peripheral Vascular Disease",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1280,
+    "completion_tokens": 256
+  }
+}

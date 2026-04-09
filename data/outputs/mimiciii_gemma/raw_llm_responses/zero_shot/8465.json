@@ -1,0 +1,12 @@
+{
+  "sample_id": 8465,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient has an explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the current visit record. This directly meets the criteria for evidence of an existing lipid disorder, as hypercholesterolemia is explicitly listed as a condition under \"Disorders of Lipid Metabolism.\" Therefore, it is highly likely that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 545,
+    "completion_tokens": 88
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9627,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The prediction must be based on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of specific medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are: Secondary malignant neoplasm of brain and spinal cord; Melanoma of skin, site unspecified; Depressive disorder, not elsewhere classified. None of these diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or primary lipid abnormality).\n2. **Medications Prescribed:** The medication list includes several drugs: LaMOTrigine, BuPROPion, Milk of Magnesia, Bisacodyl, Heparin, Dexamethasone, Lorazepam, Senna, Pantoprazole, Insulin, Sodium Chloride 0.9% Flush, Potassium Chl 20 mEq / 1000 mL D5NS, Iso-Osmotic Dextrose, CefazoLIN, Acetaminophen, Docusate Sodium, Oxycodone-Acetaminophen, Morphine Sulfate. While",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 968,
+    "completion_tokens": 256
+  }
+}

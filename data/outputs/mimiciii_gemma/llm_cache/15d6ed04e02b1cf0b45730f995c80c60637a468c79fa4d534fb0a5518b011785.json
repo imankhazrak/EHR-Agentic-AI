@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This meets the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders, further supporting the likelihood of this diagnosis being maintained or re-coded:\n    * **Diabetes Mellitus:** The patient has **\"Diabetes with ophthalmic manifestations, type II or unspecified type\"** and **\"Background diabetic retinopathy\"**. Diabetes is a major risk factor and comorbidity for dyslipidemia.\n    * **Hypertension:** The patient has **\"Unspecified essential hypertension\"**. Hypertension is a common comorbidity associated with cardiovascular and lipid health issues.\n    * **Cardiovascular Disease:** The patient has multiple severe cardiovascular diagnoses, including **\"Systolic heart failure, unspecified\"**, **\"Congestive heart failure, unspecified\"**, and **\"Coronary atherosclerosis of unspecified type of vessel, native or graft\"**. These",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1164,
+    "completion_tokens": 256
+  }
+}

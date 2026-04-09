@@ -1,0 +1,12 @@
+{
+  "sample_id": 8632,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition will be carried forward into the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and explicit evidence of a lipid abnormality (CCS category 53).\n\n2. **Supporting Comorbidities:** The presence of other conditions commonly associated with lipid disorders further supports the ongoing nature of this metabolic issue:\n    * **Diabetes Mellitus:** The patient has a diagnosis of **\"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\"**. Diabetes is a major risk factor and comorbidity for dyslipidemia.\n    * **Hypertension:** The patient has a diagnosis of **\"Unspecified essential hypertension\"**. Hypertension is also a key comorbidity associated with cardiovascular and metabolic risk profiles.\n    * **Cardiovascular Disease:** The patient has numerous severe cardiovascular diagnoses (e.g., **\"Acute myocardial infarction of other anterior wall, initial episode of care\"**, **\"Congestive heart failure, unspecified\"**, **\"Coronary atherosclerosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1356,
+    "completion_tokens": 256
+  }
+}

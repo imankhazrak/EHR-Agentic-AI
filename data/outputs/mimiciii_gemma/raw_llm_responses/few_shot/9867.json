@@ -1,0 +1,12 @@
+{
+  "sample_id": 9867,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of the diagnosis \"Other and unspecified hyperlipidemia\" in the Current Visit Record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the Current Visit Record contains several other strong indicators that support the likelihood of this diagnosis being coded in the next visit, even if the explicit hyperlipidemia diagnosis were to be removed:\n1. **Medication Management:** The patient is prescribed **Atorvastatin**, which is a primary medication used for managing hyperlipidemia. While statin use alone is not sufficient evidence, its presence alongside a hyperlipidemia diagnosis strongly indicates ongoing, active management of a lipid disorder.\n2. **Comorbidities:** The patient exhibits multiple strong comorbidities commonly associated with lipid disorders, including **Obesity (BMI 32.0-32.9)**, **Unspecified essential hypertension**, and **Coronary atherosclerosis**. These conditions are highly correlated with dyslipidemia.\n3. **Other Diagnoses:** The presence of **Other and unspecified hyperlipidemia** is the definitive piece of evidence.\n\nGiven the explicit diagnosis of \"Other and unspecified hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3856,
+    "completion_tokens": 256
+  }
+}

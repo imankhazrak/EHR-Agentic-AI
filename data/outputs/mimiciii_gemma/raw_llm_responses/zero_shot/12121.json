@@ -1,0 +1,12 @@
+{
+  "sample_id": 12121,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the strict rules, the presence of an explicit lipid disorder diagnosis (such as hyperlipidemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. This evidence overrides the general clinical risk factors and other non-lipid diagnoses present in the record.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis \"Other and unspecified hyperlipidemia.\" However, the strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed* lipid disorder. While \"Other and unspecified hyperlipidemia\" is a diagnosis, the context of the other severe, non-lipid diagnoses (e.g., Chronic systolic heart failure, Acute respiratory failure, Chronic kidney disease Stage IV) suggests that the primary focus of management is on these severe systemic issues, and the hyperlipidemia diagnosis might be secondary or not the primary driver for a future *coded* diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, despite the presence of the diagnosis itself.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 969,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Acute respiratory failure; Ventilator associated pneumonia; Pneumonitis due to inhalation of food or vomitus; Closed fracture of dorsal [thoracic] vertebra without mention of spinal cord injury; Other complications due to other vascular device, implant, and graft; [ICD9-DX:4538]; Urinary tract infection, site not specified; Paralytic ileus; Drug-induced delirium; Unspecified protein-calorie malnutrition; Hyperosmolality and/or hypernatremia; Glucocorticoid deficiency; Pulmonary collapse; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Anemia of other chronic disease; Other diseases of trachea and bronchus; Obesity, unspecified; Alcohol abuse, unspecified; Esophageal reflux; Nontoxic uninodular goiter; Other specified cardiac dysrhythmias; Accidental fall on or from other stairs or steps; Parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics causing adverse effects in therapeutic use; Surgical operation with implant of artificial internal device causing abnormal patient reaction, or later complication,without mention of misadventure at time of operation
+- Medications prescribed: Vancomycin; Aztreonam; Magnesium Sulfate; Potassium Chloride; Heparin; Levofloxacin; MetRONIDAZOLE (FLagyl); NS; Dextrose 5%; Insulin; Midazolam; Ranitidine (Liquid); Fentanyl Citrate; Chlorhexidine Gluconate 0.12% Oral Rinse; Diazepam; AcetaZOLamide; Warfarin; Nystatin Oral Suspension; Morphine Sulfate; SW; D5W; Furosemide; Hydrocortisone; Iso-Osmotic Dextrose; Haloperidol; Norepinephrine; Ondansetron; Fentanyl Patch; Senna; Docusate Sodium (Liquid); Polyethylene Glycol; Alteplase (Catheter Clearance); 1/2 NS; Phytonadione; D5 1/2NS; AcetaZOLamide Sodium; Sodium Chloride 0.9%  Flush; Hydrocortisone Na Succ.; Lactulose; Pantoprazole Sodium; Vial; Heparin Flush (10 units/ml); Phenylephrine; Cosyntropin; Fludrocortisone Acetate; Miconazole Powder 2%; Acetaminophen (Liquid); Albuterol MDI; Ipratropium Bromide MDI; Naloxone HCl
+- Procedures performed: Temporary tracheostomy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Percutaneous [endoscopic] gastrostomy [PEG]; Parenteral infusion of concentrated nutritional substances; Enteral infusion of concentrated nutritional substances; Other bronchoscopy; Closed [endoscopic] biopsy of bronchus; Laryngoscopy and other tracheoscopy; Percutaneous (endoscopic) jejunostomy [PEJ]; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

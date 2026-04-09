@@ -1,0 +1,12 @@
+{
+  "sample_id": 9477,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of related medications.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Diagnosis:** The current diagnoses list (Complications of transplanted liver; Hepatic encephalopathy; Candidiasis of other urogenital sites; Cirrhosis of liver without mention of alcohol; Anemia, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Osteoporosis, unspecified) **does not contain any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n\n2. **Risk Factors vs. Explicit Evidence:** The patient presents several significant risk factors commonly associated with lipid abnormalities:\n    * **Diabetes Mellitus (Type II/Unspecified):** This is a known comorbidity that increases the risk of dyslipidemia.\n    * **Unspecified Essential Hypertension:** Another common risk factor.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 256
+  }
+}

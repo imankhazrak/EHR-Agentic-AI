@@ -1,0 +1,12 @@
+{
+  "sample_id": 1534,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The primary diagnoses in the current visit record are related to severe infection and organ replacement: Unspecified septicemia, Septic shock, Kidney replaced by transplant, Severe sepsis, and Personal history of malignant neoplasm of breast. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n2. **Medications Prescribed:** The medication list is extensive and primarily targets severe infection, sepsis management, and organ support: Hydrocortisone Na Succ., Furosemide, Norepinephrine, Vancomycin HCl, Piperacillin-Tazobactam Na, etc. While the patient is on several medications that",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 256
+  }
+}

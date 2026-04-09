@@ -1,0 +1,12 @@
+{
+  "sample_id": 4387,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is heavily focused on severe liver disease (alcoholic cirrhosis, hepatitis C, hepatic encephalopathy, necrosis), electrolyte imbalances (hyposmolality/hyponatremia), and associated complications (coagulation factor deficiency, alcohol dependence). While the patient is receiving extensive medical care, there is no explicit evidence within the provided diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia). The medications prescribed are primarily for managing the severe infectious, inflammatory, and hepatic conditions. Therefore, based strictly on the evidence required, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 849,
+    "completion_tokens": 149
+  }
+}

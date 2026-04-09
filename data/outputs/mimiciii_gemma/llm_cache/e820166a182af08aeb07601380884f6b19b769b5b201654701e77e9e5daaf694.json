@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are:\n    * Other pulmonary embolism and infarction.\n    * Epilepsy, unspecified, without mention of intractable epilepsy.\n    * Personal history of malignant neoplasm of brain.\n    These diagnoses are related to pulmonary, neurological, and oncological issues, and they do not explicitly mention any lipid abnormalities (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Medications:** The patient is prescribed **None recorded**. Therefore, there is no evidence of ongoing lipid-lowering management (e.g., statins or fibrates) that would strongly suggest a pre-existing or actively managed lipid disorder.\n\n3. **Procedures:** The patient underwent:\n    * Interruption of the vena cava.\n    * Ang",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8013,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious diagnoses and a complex medication regimen. However, a thorough review of the diagnoses and medications prescribed does not reveal any explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia.\n\nThe patient has several significant comorbidities that are known risk factors for lipid disorders, including:\n- Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n- Unspecified essential hypertension.\n- Other chronic nonalcoholic liver disease.\n\nFurthermore, the patient is prescribed Simvastatin, which is a lipid-lowering medication. While the presence of a statin is a known risk factor and is used to manage dyslipidemia, the instructions explicitly state that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit.\n\nThe current diagnoses do not explicitly state a lipid abnormality. Therefore, based on the strict criteria provided in the instructions, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent. The patient is high-risk, but the prediction must be based on explicit coding evidence, which is missing.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3677,
+    "completion_tokens": 256
+  }
+}

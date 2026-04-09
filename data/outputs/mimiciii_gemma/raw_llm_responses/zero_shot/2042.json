@@ -1,0 +1,12 @@
+{
+  "sample_id": 2042,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to:\n1. **Vascular/Neurological Issues:** Cerebral aneurysm, nonruptured; Endovascular procedures.\n2. **Cardiovascular Issues:** Congestive heart failure, unspecified; Coronary atherosclerosis of native coronary artery; Cardiac pacemaker in situ.\n3. **Respiratory Issues:** Chronic airway obstruction, not elsewhere classified.\n4. **Endocrine Issues:** Unspecified acquired hypothyroidism.\n\nWhile the patient is on various medications (e.g., Tocopheryl, which is a vitamin, and others for cardiovascular/respiratory support), there is **no explicit evidence** in the current diagnoses or procedures performed that points to an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia). The management appears focused on the established diagnoses of CHF, coronary disease, and the aneurysm. Therefore, based strictly on the provided evidence, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 661,
+    "completion_tokens": 214
+  }
+}

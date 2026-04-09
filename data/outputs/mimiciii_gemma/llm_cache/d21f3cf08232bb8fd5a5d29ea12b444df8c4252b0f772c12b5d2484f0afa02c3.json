@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which mandate that a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record to predict a future diagnosis.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record details numerous severe, acute, and chronic conditions, including:\n*   Acute respiratory failure and Obstructive chronic bronchitis with exacerbation.\n*   Severe cardiovascular issues: Congestive heart failure, Atrial fibrillation, Unspecified essential hypertension, and other cardiac dysrhythmias.\n*   Metabolic/Renal issues: Acidosis, Alkalosis, Hyperosmolality and/or hypernatremia, and Unspecified disorder of kidney and ureter.\n*   Endocrine issues: Diabetes mellitus without mention of complication.\n\nWhile the patient has **Diabetes Mellitus** and **Unspecified essential hypertension**, these are listed as general risk factors and comorbid conditions, not as an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe guidelines explicitly state that the prediction **must NOT** be based solely on:",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1282,
+    "completion_tokens": 256
+  }
+}

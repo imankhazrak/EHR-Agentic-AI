@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Paroxysmal ventricular tachycardia; Congestive heart failure, unspecified; Pneumonia due to Pseudomonas; Chronic airway obstruction, not elsewhere classified; Long-term (current) use of steroids; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Tobacco use disorder; Unspecified essential hypertension; Aortocoronary bypass status; Esophageal reflux; Syncope and collapse; Other specified forms of chronic ischemic heart disease; Other malaise and fatigue; Backache, unspecified; Other postprocedural status; Other iatrogenic hypotension; Percutaneous transluminal coronary angioplasty status
+- Medications prescribed: Furosemide; Metoprolol; Pantoprazole; traZODONE HCl; Insulin; Lisinopril; Pioglitazone HCl; GlipiZIDE; Fentanyl Patch; Escitalopram Oxalate; Atorvastatin; Clopidogrel Bisulfate; Fluticasone-Salmeterol (100/50); Nicotine Patch; Aspirin EC; Sodium Chloride 0.9%  Flush; Heparin; Albuterol-Ipratropium; Magnesium Oxide; Prednisone; Cephalexin; Phenylephrine HCl; D5W; Propofol; Oxycodone-Acetaminophen; NS; Vial; Dextrose 5%; Magnesium Sulfate; MethylPREDNISolone Sodium Succ; Clindamycin; Levofloxacin; Pantoprazole Sodium
+- Procedures performed: Implantation or replacement of automatic cardioverter/defibrillator, total system [AICD]; Catheter based invasive electrophysiologic testing; Continuous invasive mechanical ventilation for less than 96 consecutive hours
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

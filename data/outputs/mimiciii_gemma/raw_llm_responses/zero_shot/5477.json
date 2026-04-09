@@ -1,0 +1,12 @@
+{
+  "sample_id": 5477,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. The diagnoses and medications listed are primarily related to acute respiratory failure, infection (Bacteremia), and cardiovascular instability (Congestive heart failure, unspecified; Heart valve replaced by other means). While the patient has cardiovascular issues, these are not sufficient, according to the strict guidelines, to predict a future diagnosis of \"Disorders of Lipid Metabolism\" without explicit lipid evidence in the current record.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 112
+  }
+}

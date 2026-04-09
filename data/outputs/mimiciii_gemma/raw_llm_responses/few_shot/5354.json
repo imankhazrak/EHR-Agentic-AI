@@ -1,0 +1,12 @@
+{
+  "sample_id": 5354,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is also prescribed \"Pravastatin\" and \"Simvastatin,\" which are lipid-lowering medications, and the diagnosis of \"Coronary atherosclerosis of native coronary artery\" and \"Old myocardial infarction\" are strong indicators of underlying cardiovascular risk often associated with lipid disorders. However, the primary and most decisive factor supporting a \"Yes\" prediction is the explicit diagnosis of hyperlipidemia in the current record, which meets the criteria for strong and explicit evidence.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3707,
+    "completion_tokens": 159
+  }
+}

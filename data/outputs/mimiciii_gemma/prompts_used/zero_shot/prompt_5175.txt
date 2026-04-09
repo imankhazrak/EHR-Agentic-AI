@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other shock without mention of trauma; End stage renal disease; Acute posthemorrhagic anemia; Bacteremia; Ulcer of other part of lower limb; Pressure ulcer, lower back; Pressure ulcer, other site; Streptococcus infection in conditions classified elsewhere and of unspecified site, other streptococcus; Chronic ulcer of other specified sites; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Pure hypercholesterolemia; Obstructive sleep apnea (adult)(pediatric); Personal history of venous thrombosis and embolism; Long-term (current) use of anticoagulants
+- Medications prescribed: Sevelamer; Aztreonam; D5W; SW; Prismasate (B22 K4); Potassium Chloride; Calcium Gluconate; OxycoDONE (Immediate Release); Vial; Epoetin Alfa; Codeine Sulfate; Acetaminophen; Morphine Sulfate; Iso-Osmotic Dextrose; Vancomycin; DiphenhydrAMINE; Sodium Polystyrene Sulfonate; Morphine Sulfate IR; Heparin; Papain-Urea Ointment; Warfarin; Promethazine HCl; Lactulose; Docusate Sodium (Liquid); Multivitamins; NS; Desmopressin Acetate; Acetaminophen (Liquid); Lidocaine 1%; Cosyntropin; Pantoprazole; Influenza Virus Vaccine; Calcium Acetate; Zinc Sulfate; Senna; Bisacodyl; Nephrocaps; Heparin Flush CVL  (100 units/ml); Docusate Sodium; FoLIC Acid; Insulin; Ascorbic Acid; Paroxetine; Phytonadione; Midodrine; ACD-A for CRRT
+- Procedures performed: Venous catheterization for renal dialysis; Hemodialysis; Phlebography of other specified sites using contrast material; Diagnostic ultrasound of heart; Nonexcisional debridement of wound, infection or burn
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

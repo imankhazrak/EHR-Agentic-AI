@@ -1,0 +1,12 @@
+{
+  "sample_id": 808,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute-on-chronic conditions related to advanced liver disease (Cirrhosis, Chronic hepatitis C, Malignant neoplasm of liver, Esophageal varices, Hepatic encephalopathy) and multi-organ failure (Acute kidney failure, Paralytic ileus, Thrombocytopenia). The medication profile is heavily focused on managing these acute complications, including vasoactive agents (Octreotide Acetate), antibiotics (Ciprofloxacin, Pantoprazole), and sedatives/analgesics (Midazolam HCl, Fentanyl Citrate, Lactulose, Zonisamide, Levetiracetam).\n\nCrucially, the current diagnoses and prescribed medications **do not contain any explicit evidence** of a primary or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient is high-risk due to cirrhosis, which is a known risk factor for metabolic disturbances, but the strict instructions mandate that a future diagnosis can only be predicted based on **explicit evidence** of an existing or actively managed lipid disorder, not merely on risk factors or the presence of related conditions like liver disease.\n\nTherefore, based on the strict criteria provided in the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3619,
+    "completion_tokens": 256
+  }
+}

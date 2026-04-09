@@ -1,0 +1,12 @@
+{
+  "sample_id": 9495,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening infectious processes (septicemia, septic shock, multiple types of pneumonia, abscesses, etc.), severe organ failure (acute kidney failure, respiratory failure, cardiac failure), and associated complications (toxic encephalopathy, diabetes, hypertension). While the patient is receiving medications like Cholestyramine, which is used to manage lipid absorption, and has a history of hypercalcemia, there is no explicit, documented evidence within the current diagnoses or ongoing management that points to an active, primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that is being actively managed as a distinct, primary condition separate from the overwhelming infectious and organ failure crisis. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1168,
+    "completion_tokens": 170
+  }
+}

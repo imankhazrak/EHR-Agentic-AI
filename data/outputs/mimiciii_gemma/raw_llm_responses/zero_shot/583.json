@@ -1,0 +1,12 @@
+{
+  "sample_id": 583,
+  "mode": "zero_shot",
+  "model": "google/gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This diagnosis directly meets the criteria for evidence of an existing lipid disorder, as defined in the prompt. Therefore, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current visit record includes the diagnosis of \"Pure hypercholesterolemia.\" However, the prompt's strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present AND likely to be diagnosed, while simultaneously stating that factors like \"Use of statins\" are NOT sufficient. Given the complexity and the need to strictly adhere to the negative constraints provided in the prompt, and in the absence of further explicit management evidence beyond the initial diagnosis, the prediction must be \"No\" to avoid over-predicting based solely on a static diagnosis.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This diagnosis directly meets the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 760,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6274,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\nThe current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\" [ICD9-DX:6000]**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (specifically, hypercholesterolemia).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that the prediction should NOT be based solely on:\n* Use of statins.\n* Cardiovascular diseases (CHF, AF, CABG, CAD).\n* General risk factors (hypertension, diabetes).\n\nSince the patient has an **explicit, coded diagnosis of hypercholesterolemia**, this evidence is strong and explicit, satisfying the primary condition for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n3. **Contextual Analysis (Supporting Factors):**\nWhile the primary evidence is the explicit diagnosis, the patient's overall clinical picture supports the presence of a significant, ongoing metabolic/cardiovascular issue:\n* **Cardiovascular Comorbidities:** The patient has diagnoses",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 916,
+    "completion_tokens": 256
+  }
+}

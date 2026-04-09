@@ -1,0 +1,12 @@
+{
+  "sample_id": 5092,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and NOT based on general risk factors or medication use alone.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list includes: Other postoperative infection; Acute osteomyelitis, pelvic region and thigh; Hyperpotassemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Coronary atherosclerosis of native coronary artery; Old myocardial infarction; Percutaneous transluminal coronary angioplasty status; Personal history of malignant neoplasm of prostate.\n    * **Crucially, there is NO explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder listed in the diagnoses made.**\n\n2. **Risk Factors and Comorbidities:** The patient has several significant risk factors and comorbidities commonly associated with lipid disorders:\n    * Diabetes mellitus (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1019,
+    "completion_tokens": 256
+  }
+}

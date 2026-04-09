@@ -1,0 +1,12 @@
+{
+  "sample_id": 10520,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record does not contain any explicit evidence of a primary lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is prescribed Rosuvastatin Calcium, this medication is used to manage dyslipidemia, but the record itself does not explicitly state that a lipid disorder is the primary diagnosis or that it is actively being managed based on explicit lipid lab findings. Furthermore, the presence of other diagnoses like Pneumonia, Diabetes mellitus, and Cardiovascular history are not sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria provided.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not explicitly state a diagnosis of a primary lipid disorder (e.g., hypercholesterolemia or hyperlipidemia). Although the patient is prescribed Rosuvastatin Calcium, this medication is used for dyslipidemia, the record does not explicitly confirm that a lipid disorder is the primary diagnosis or that it is actively being managed based on explicit lipid lab findings. The other listed conditions, such as Pneumonia, Diabetes mellitus, and Cardiovascular history, are not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 696,
+    "completion_tokens": 256
+  }
+}

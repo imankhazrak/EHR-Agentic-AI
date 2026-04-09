@@ -1,0 +1,12 @@
+{
+  "sample_id": 2304,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record does not contain explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is prescribed Atorvastatin, which is a medication used for lipid management, the presence of this medication alone is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The patient's diagnoses are primarily related to Hemorrhage complicating a procedure, Mitral valve disorders, Pneumonia, and Acute posthemorrhagic anemia. Therefore, based strictly on the provided rules, the explicit evidence required for a \"Yes\" prediction is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3603,
+    "completion_tokens": 143
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10563,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of other comorbidities.\n\n1. **Explicit Lipid Disorder Diagnosis:** The most critical piece of evidence is the diagnosis explicitly listed in the current visit record: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53). The presence of this explicit diagnosis strongly indicates that the condition is recognized and actively managed, making it highly probable that this diagnosis will be carried forward or confirmed in subsequent hospital encounters.\n\n2. **Active Lipid Management:** The medication profile confirms active management of the hypercholesterolemia. The patient is prescribed **\"Atorvastatin\"**, a potent statin used specifically to lower cholesterol levels. This active pharmacological intervention reinforces the clinical recognition and ongoing nature of the lipid abnormality.\n\n3. **Comorbidities and Context:** While the patient presents with numerous severe comorbidities\u2014including Coronary atherosclerosis, Acute kidney failure, Subclavian steal syndrome, and Diabetes mellitus\u2014these conditions are often intertwined with dyslipidemia. The presence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1342,
+    "completion_tokens": 256
+  }
+}

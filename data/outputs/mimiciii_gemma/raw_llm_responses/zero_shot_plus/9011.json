@@ -1,0 +1,12 @@
+{
+  "sample_id": 9011,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly focused on severe, multi-system organ failure, including:\n*   Acute kidney failure and End stage renal disease (ESRD).\n*   Severe cardiac issues (Acute on chronic diastolic heart failure, Congestive heart failure).\n*   Infectious processes (Pneumonia).\n*   Metabolic/Neurological complications (Toxic encephalopathy, Diabetes with renal manifestations).\n*   Comorbidities (Hypertensive chronic kidney disease, Morbid obesity, Anemia).\n\nWhile **Morbid obesity** and **Diabetes with renal manifestations** are strong risk factors for lipid disorders, they do not constitute an explicit diagnosis of a lipid disorder itself (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and covers numerous critical care needs. Crucially, the patient is prescribed:\n*   **Atorvastatin**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1364,
+    "completion_tokens": 256
+  }
+}

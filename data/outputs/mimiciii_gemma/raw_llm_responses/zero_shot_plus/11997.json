@@ -1,0 +1,12 @@
+{
+  "sample_id": 11997,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit evidence of a lipid disorder, which strongly supports the likelihood of this diagnosis being coded in the patient's next hospital visit, adhering strictly to the provided guidelines.\n\n1. **Explicit Evidence of Lipid Disorder:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53), as hyperlipidemia is a core component of this category.\n\n2. **Supporting Comorbidities and Management:**\nWhile the guidelines caution against predicting a diagnosis based *only* on statins, cardiovascular diseases, or general risk factors, the presence of an *explicit* diagnosis of hyperlipidemia elevates the certainty of a future coding. Furthermore, the record supports the ongoing management of metabolic and cardiovascular instability, which is intrinsically linked to lipid management:\n    * **Cardiovascular Instability:** Diagnoses such as \"Coronary atherosclerosis,\" \"Acute myocardial infarction,\" and \"Congestive heart failure\" are major risk factors and comorbidities for severe dyslipidemia.\n    * **Metabolic Instability:** The presence of \"Secondary diabetes mellitus\" and \"Unspecified",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1453,
+    "completion_tokens": 256
+  }
+}

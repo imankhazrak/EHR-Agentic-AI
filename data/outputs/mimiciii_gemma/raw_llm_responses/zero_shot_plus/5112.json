@@ -1,0 +1,12 @@
+{
+  "sample_id": 5112,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The analysis must focus on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are extensive and primarily revolve around:\n*   Malignancies (Secondary malignant neoplasm of other respiratory organs, Secondary malignant neoplasm of bone and bone marrow, Malignant neoplasm of thyroid gland, Secondary malignant neoplasm of lung).\n*   Cardiovascular issues (Atrial fibrillation).\n*   Pulmonary/Gastrointestinal issues (Asthma, unspecified type, unspecified; Ulcerative colitis, unspecified).\n*   Other (Personal history of venous thrombosis and embolism).\n\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder** listed in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed several medications, including:\n*   Mesalamine DR, Diltiazem Extended-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3743,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly forbid predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made, there is no explicit mention of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism.\"\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities, including:\n    *   Chronic kidney disease (Stage IV) and Hypertensive chronic kidney disease.\n    *   Congestive heart failure and Coronary atherosclerosis.\n    *   Diabetes (though not explicitly listed as a primary diagnosis, hypertension and CKD are strong risk factors).\n    *   Tobacco use disorder.\n    *   These conditions are strongly associated with dyslipidemia, but as per the strict instructions, these associations alone are insufficient to warrant a \"Yes\" prediction.\n3. **Medication Profile",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1318,
+    "completion_tokens": 256
+  }
+}

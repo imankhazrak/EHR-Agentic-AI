@@ -1,0 +1,12 @@
+{
+  "sample_id": 11251,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe analysis of the patient's current hospital visit record indicates a focus on acute neurological and vascular complications, specifically Subarachnoid hemorrhage and related procedures (Endovascular embolization, Arteriography). The patient is receiving medications for pain management (Oxycodone-Acetaminophen), seizure control (LeVETiracetam), gastrointestinal support (Famotidine, Ondansetron, Senna, Docusate Sodium), and vascular/neurological support (Aspirin, Nimodipine, Clopidogrel, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Furthermore, the medication list does not include any lipid-lowering agents (such as statins or fibrates) that would explicitly indicate ongoing management of a lipid disorder. The diagnoses are centered on nervous system complications and vascular interventions.\n\nAccording to the strict instructions, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record only details neurological and vascular interventions, and no lipid disorder diagnosis or explicit lipid management is present, the evidence required to predict",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 987,
+    "completion_tokens": 256
+  }
+}

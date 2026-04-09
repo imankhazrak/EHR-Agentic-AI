@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLM modes demo — Zero-shot, Zero-shot+, Few-shot, EHR-CoAgent</title>
+  <style>
+    :root {
+      --bg: #0c0f14;
+      --panel: #151b24;
+      --panel2: #1a222e;
+      --border: #2a3544;
+      --text: #e8edf4;
+      --muted: #8b98a8;
+      --accent: #4db8ff;
+      --zs: #7dd3fc;
+      --zsp: #a78bfa;
+      --fs: #4ade80;
+      --ca: #fb923c;
+      --yes: #4ade80;
+      --no: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      text-align: center;
+      padding: 1.75rem 1rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #122030 0%, var(--bg) 100%);
+    }
+    header h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+    header p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+
+    /* ---- Carousel ---- */
+    .carousel-wrap {
+      max-width: 720px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    .stage {
+      position: relative;
+      min-height: 320px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.35rem 1.5rem 3.25rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .scene {
+      display: none;
+      animation: fadeIn 0.45s ease;
+    }
+    .scene.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .scene .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .scene h2 {
+      margin: 0 0 0.65rem;
+      font-size: 1.12rem;
+      font-weight: 650;
+    }
+    .scene .lead {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0 0 0.85rem;
+    }
+    .scene pre, .scene .mono {
+      font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+      font-size: 0.72rem;
+      line-height: 1.5;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      margin: 0 0 0.65rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .chip {
+      font-size: 0.68rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel2);
+    }
+    .chip.zs { border-color: var(--zs); color: var(--zs); }
+    .chip.zsp { border-color: var(--zsp); color: var(--zsp); }
+    .chip.fs { border-color: var(--fs); color: var(--fs); }
+    .chip.ca { border-color: var(--ca); color: var(--ca); }
+    .chip.ok { border-color: var(--yes); color: #86efac; }
+    .chip.off { border-color: var(--no); color: #fca5a5; }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .carousel-controls button {
+      font: inherit;
+      font-size: 0.8rem;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--panel2);
+      color: var(--text);
+      cursor: pointer;
+    }
+    .carousel-controls button:hover { border-color: var(--accent); color: var(--accent); }
+    .dots {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+    }
+    .dots button {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border-radius: 50%;
+      border: none;
+      background: var(--border);
+      cursor: pointer;
+    }
+    .dots button.on { background: var(--accent); transform: scale(1.15); }
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #93d4ff);
+      width: 0%;
+      border-radius: 0 0 0 14px;
+      transition: width 0.1s linear;
+    }
+
+    /* ---- Reference sections ---- */
+    .ref {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+    .ref h2 {
+      font-size: 1.05rem;
+      margin: 0 0 1rem;
+      color: var(--accent);
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+    th, td {
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--panel2);
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.65rem;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(77, 184, 255, 0.04); }
+    code { font-family: ui-monospace, monospace; font-size: 0.9em; color: #a5d8ff; }
+
+    .cards {
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 860px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      background: var(--panel);
+    }
+    .card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card h3 .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .card.zs h3 .dot { background: var(--zs); }
+    .card.zsp h3 .dot { background: var(--zsp); }
+    .card.fs h3 .dot { background: var(--fs); }
+    .card.ca h3 .dot { background: var(--ca); }
+    .card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .card ul li { margin-bottom: 0.4rem; }
+    .card ul strong { color: var(--text); }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scene { animation: none; }
+      .progress-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Four LLM prediction modes</h1>
+    <p>
+      MIMIC-III task: from the <strong>current</strong> visit narrative only, predict whether
+      <strong>Disorders of Lipid Metabolism</strong> (CCS-53) will appear on the <strong>next</strong> admission.
+      The true label never includes next-visit text for the model. None of these modes fine-tunes weights.
+    </p>
+  </header>
+
+  <div class="carousel-wrap">
+    <div class="stage" id="stage" aria-live="polite">
+      <div class="progress-bar" id="progress" aria-hidden="true"></div>
+
+      <div class="scene active" data-i="0">
+        <span class="tag">Overview</span>
+        <h2>Same inference stack, different prompts</h2>
+        <p class="lead">Mode is selected in <code>src/llm/predictor.py</code> → Jinja template under <code>prompts/</code>. One completion per test row (plus CoAgent’s extra calls on a train calibration slice first).</p>
+        <div class="chips">
+          <span class="chip zs">zero_shot</span>
+          <span class="chip zsp">zero_shot_plus</span>
+          <span class="chip fs">few_shot</span>
+          <span class="chip ca">coagent</span>
+        </div>
+      </div>
+
+      <div class="scene" data-i="1">
+        <span class="tag">Shared</span>
+        <h2>What every mode shares</h2>
+        <ul class="mono" style="margin:0; padding-left:1.2rem; list-style:disc; color:var(--muted); font-size:0.82rem;">
+          <li>Input column: <code>narrative_current</code> (bulleted diagnoses / meds / procedures)</li>
+          <li>System message: medical expert role (same idea across templates)</li>
+          <li>Target definition + “prediction clarification” (e.g. don’t say Yes from statins/CHF alone)</li>
+          <li>Parsed output: first line <code>Prediction: Yes</code> or <code>No</code> → <code>src/llm/output_parser.py</code></li>
+        </ul>
+      </div>
+
+      <div class="scene" data-i="2">
+        <span class="tag">Comparison</span>
+        <h2>At a glance</h2>
+        <pre>                    │ train exemplars │ prevalence │ long [Instructions] │ extra pre-test LLM work
+────────────────────┼────────────────┼───────────┼──────────────────┼──────────────────────────
+Zero-shot           │       —        │     —     │        —         │            —
+Zero-shot+          │       —        │   ~27.6%  │       Yes        │            —
+Few-shot            │   6 (3+/3−)    │   ~27.6%  │       Yes        │     build demo block once
+EHR-CoAgent         │   same 6       │   ~27.6%  │       Yes        │ calibrate → critic → merge</pre>
+      </div>
+
+      <!-- Zero-shot -->
+      <div class="scene" data-i="3">
+        <span class="tag" style="color:var(--zs)">Zero-shot</span>
+        <h2>Template: <code>predictor_zero_shot.txt</code></h2>
+        <p class="lead">Minimal user message: task framing, target definition, prediction clarification, then <code>{{ narrative }}</code>, then compact output format.</p>
+        <div class="chips">
+          <span class="chip off">No demonstration cases</span>
+          <span class="chip off">No prevalence paragraph</span>
+          <span class="chip off">No long [Instructions] block</span>
+          <span class="chip ok">1× LLM / test row</span>
+        </div>
+      </div>
+
+      <div class="scene" data-i="4">
+        <span class="tag" style="color:var(--zs)">Zero-shot</span>
+        <h2>Prompt structure (schematic)</h2>
+        <pre>[Target Definition]
+[Prediction Clarification]
+[Current Visit Record]
+{{ narrative }}
+
+[Output Format]
+Prediction: Yes / No on first line …</pre>
+      </div>
+
+      <!-- Zero-shot+ -->
+      <div class="scene" data-i="5">
+        <span class="tag" style="color:var(--zsp)">Zero-shot+</span>
+        <h2>Template: <code>predictor_zero_shot_plus.txt</code></h2>
+        <p class="lead">Everything in zero-shot, plus structured <strong>[Instructions]</strong> (multihop reasoning recipe) and an explicit <strong>population base rate</strong> for MIMIC-III subsequent visits (~27.6%).</p>
+        <div class="chips">
+          <span class="chip off">Still no labeled train examples</span>
+          <span class="chip ok">1× LLM / test row</span>
+        </div>
+      </div>
+
+      <div class="scene" data-i="6">
+        <span class="tag" style="color:var(--zsp)">Zero-shot+</span>
+        <h2>Additions vs zero-shot</h2>
+        <pre>[Instructions]
+… approximately 27.6% of subsequent hospital visits include …
+(1) Medical knowledge …
+(2) Comprehensive analysis …
+(3) Interplay of diseases, medications, procedures …
+… multihop, step-by-step …</pre>
+      </div>
+
+      <!-- Few-shot -->
+      <div class="scene" data-i="7">
+        <span class="tag" style="color:var(--fs)">Few-shot</span>
+        <h2>Template: <code>predictor_few_shot.txt</code></h2>
+        <p class="lead">Same rich framing as zero-shot+–style instructions (including prevalence), plus <strong>[Demonstration Cases]</strong> filled by <code>format_exemplar_block()</code> in <code>src/data/exemplar_selector.py</code>.</p>
+        <div class="chips">
+          <span class="chip fs">Default: 3 positive + 3 negative from train</span>
+          <span class="chip ok">1× LLM / test row</span>
+        </div>
+      </div>
+
+      <div class="scene" data-i="8">
+        <span class="tag" style="color:var(--fs)">Few-shot</span>
+        <h2>Exemplar block (shape)</h2>
+        <pre>Case 1:
+- Diagnoses: …
+- Medications: …
+Outcome: Yes
+
+Case 2:
+…
+Outcome: No
+
+… through Case 6 …</pre>
+        <p class="lead" style="margin-top:0.75rem">Selected once per run; the <strong>same</strong> string is injected for every test patient. Script: <code>src/scripts/run_few_shot.py</code>.</p>
+      </div>
+
+      <!-- CoAgent -->
+      <div class="scene" data-i="9">
+        <span class="tag" style="color:var(--ca)">EHR-CoAgent</span>
+        <h2>Template: <code>predictor_coagent_base.txt</code></h2>
+        <p class="lead">Few-shot-style prompt with an extra section <strong>[Refined Criteria]</strong> ← <code>{{ critic_feedback }}</code> (consolidated text from a critic pass on calibration errors).</p>
+        <div class="chips">
+          <span class="chip ca">Same 6 demonstration cases as few-shot</span>
+          <span class="chip ok">1× LLM / test row</span>
+          <span class="chip">+ many calls on train calibration before test</span>
+        </div>
+      </div>
+
+      <div class="scene" data-i="10">
+        <span class="tag" style="color:var(--ca)">EHR-CoAgent</span>
+        <h2>Offline pipeline (<code>src/llm/coagent.py</code>)</h2>
+        <pre>1. Sample calibration set from train (default n=200)
+2. Run few-shot predictor on calibration → merge labels
+3. Keep mispredictions; sample up to n_wrong (e.g. 30)
+4. Critic LLM: critic_batch_reflection.txt — batches × rounds
+5. Consolidate (LLM or heuristic) → single feedback string
+6. Test: run_predictions(…, mode="coagent", critic_feedback=…)</pre>
+      </div>
+
+      <div class="scene" data-i="11">
+        <span class="tag" style="color:var(--ca)">EHR-CoAgent</span>
+        <h2>Extra prompt sections</h2>
+        <pre>[Demonstration Cases]
+{{ demonstration_cases }}
+
+[Refined Criteria]
+{{ critic_feedback }}
+
+… apply [Refined Criteria] to avoid common errors …</pre>
+        <p class="lead">If calibration has <strong>no</strong> errors, pipeline falls back to plain few-shot on test.</p>
+      </div>
+
+      <div class="scene" data-i="12">
+        <span class="tag">Recap</span>
+        <h2>No fine-tuning in any mode</h2>
+        <p class="lead">Differences are <strong>prompt text</strong> and, for CoAgent, <strong>additional LLM calls</strong> over a labeled calibration slice to produce critic feedback. Eval still uses held-out <code>test.csv</code> labels (<code>label_lipid_disorder</code>).</p>
+        <div class="chips">
+          <span class="chip ok">Scroll below for full table &amp; per-mode detail cards</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button type="button" id="btnPrev" aria-label="Previous slide">← Prev</button>
+      <button type="button" id="btnToggle" aria-pressed="false">Pause</button>
+      <button type="button" id="btnNext" aria-label="Next slide">Next →</button>
+    </div>
+    <div class="dots" id="dots" role="tablist" aria-label="Slide"></div>
+  </div>
+
+  <section class="ref">
+    <h2>Reference — comparison table</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>Config / code</th>
+            <th>Template file</th>
+            <th>In prompt</th>
+            <th>Not in prompt</th>
+            <th>LLM calls (typical)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--zs)">Zero-shot</strong></td>
+            <td><code>mode="zero_shot"</code></td>
+            <td><code>predictor_zero_shot.txt</code></td>
+            <td>Target definition, clarification, <code>narrative</code>, output format</td>
+            <td>Train exemplars, prevalence stats, long instruction recipe</td>
+            <td>1 × (# test rows)</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--zsp)">Zero-shot+</strong></td>
+            <td><code>mode="zero_shot_plus"</code></td>
+            <td><code>predictor_zero_shot_plus.txt</code></td>
+            <td>Above + ~27.6% prevalence + structured <code>[Instructions]</code></td>
+            <td>Train exemplars</td>
+            <td>1 × (# test rows)</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--fs)">Few-shot</strong></td>
+            <td><code>few_shot.*</code> in YAML; <code>run_few_shot.py</code></td>
+            <td><code>predictor_few_shot.txt</code></td>
+            <td>Above-style instructions + prevalence + <code>{{ demonstration_cases }}</code> (6 train rows)</td>
+            <td>Critic feedback</td>
+            <td>1 × (# test rows)</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--ca)">EHR-CoAgent</strong></td>
+            <td><code>coagent.*</code>; <code>run_coagent.py</code></td>
+            <td><code>predictor_coagent_base.txt</code></td>
+            <td>Same demonstration block + <code>{{ critic_feedback }}</code> as <code>[Refined Criteria]</code></td>
+            <td>—</td>
+            <td>Calibration few-shot + critic rounds + consolidation + 1 × (# test rows)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Reference — per-mode detail</h2>
+    <div class="cards">
+      <article class="card zs">
+        <h3><span class="dot" aria-hidden="true"></span> Zero-shot</h3>
+        <ul>
+          <li><strong>Goal:</strong> Smallest prompt — rules + current visit only.</li>
+          <li><strong>Variables:</strong> <code>narrative</code> (via Jinja).</li>
+          <li><strong>Script:</strong> <code>python -m src.scripts.run_zero_shot</code></li>
+        </ul>
+      </article>
+      <article class="card zsp">
+        <h3><span class="dot" aria-hidden="true"></span> Zero-shot+</h3>
+        <ul>
+          <li><strong>Goal:</strong> Richer reasoning scaffold + explicit base rate, still no in-context labels from train.</li>
+          <li><strong>Variables:</strong> <code>narrative</code> only.</li>
+          <li><strong>Script:</strong> <code>python -m src.scripts.run_zero_shot_plus</code></li>
+        </ul>
+      </article>
+      <article class="card fs">
+        <h3><span class="dot" aria-hidden="true"></span> Few-shot</h3>
+        <ul>
+          <li><strong>Goal:</strong> In-context learning from fixed labeled narratives (random balanced sample).</li>
+          <li><strong>Variables:</strong> <code>narrative</code>, <code>demonstration_cases</code>.</li>
+          <li><strong>Selection:</strong> <code>select_exemplars()</code> — default <code>n_positive=3</code>, <code>n_negative=3</code>, <code>strategy=random_balanced</code>.</li>
+          <li><strong>Script:</strong> <code>python -m src.scripts.run_few_shot</code></li>
+        </ul>
+      </article>
+      <article class="card ca">
+        <h3><span class="dot" aria-hidden="true"></span> EHR-CoAgent</h3>
+        <ul>
+          <li><strong>Goal:</strong> Same few-shot context plus instructions distilled from errors on a <strong>train calibration</strong> subset.</li>
+          <li><strong>Variables:</strong> <code>narrative</code>, <code>demonstration_cases</code>, <code>critic_feedback</code>.</li>
+          <li><strong>Defaults:</strong> <code>calibration_size=200</code>, <code>n_wrong_samples=30</code>, <code>critic_batch_size=10</code>, <code>n_critic_rounds=3</code>, <code>consolidation_method=llm</code>.</li>
+          <li><strong>Prompts:</strong> <code>critic_batch_reflection.txt</code>, <code>feedback_consolidation.txt</code>.</li>
+          <li><strong>Script:</strong> <code>python -m src.scripts.run_coagent</code></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    EHR-Agentic-AI — open <code>demo/llm_four_modes_demo.html</code> locally. Pair with <code>docs/llm_prompt_modes_explained.md</code> for narrative documentation.
+  </footer>
+
+  <script>
+(function () {
+  const scenes = Array.from(document.querySelectorAll("#stage .scene"));
+  const dotsEl = document.getElementById("dots");
+  const progress = document.getElementById("progress");
+  const btnPrev = document.getElementById("btnPrev");
+  const btnNext = document.getElementById("btnNext");
+  const btnToggle = document.getElementById("btnToggle");
+  const INTERVAL_MS = 5200;
+  let idx = 0;
+  let playing = true;
+  let timer = null;
+  let progTimer = null;
+  let segmentStart = Date.now();
+
+  scenes.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.title = "Slide " + (i + 1);
+    b.addEventListener("click", () => { go(i); resetTimer(); });
+    dotsEl.appendChild(b);
+  });
+  const dotButtons = () => Array.from(dotsEl.querySelectorAll("button"));
+
+  function show(i) {
+    idx = (i + scenes.length) % scenes.length;
+    scenes.forEach((el, j) => el.classList.toggle("active", j === idx));
+    dotButtons().forEach((b, j) => b.classList.toggle("on", j === idx));
+    segmentStart = Date.now();
+  }
+
+  function go(i) { show(i); }
+
+  function resetTimer() {
+    if (timer) clearInterval(timer);
+    if (progTimer) clearInterval(progTimer);
+    if (!playing) return;
+    segmentStart = Date.now();
+    timer = setInterval(() => { show(idx + 1); }, INTERVAL_MS);
+    progTimer = setInterval(() => {
+      if (!playing) return;
+      const p = Math.min(100, ((Date.now() - segmentStart) / INTERVAL_MS) * 100);
+      progress.style.width = p + "%";
+    }, 50);
+  }
+
+  btnPrev.addEventListener("click", () => { show(idx - 1); resetTimer(); });
+  btnNext.addEventListener("click", () => { show(idx + 1); resetTimer(); });
+  btnToggle.addEventListener("click", () => {
+    playing = !playing;
+    btnToggle.textContent = playing ? "Pause" : "Play";
+    btnToggle.setAttribute("aria-pressed", String(!playing));
+    if (playing) resetTimer();
+    else {
+      if (timer) clearInterval(timer);
+      if (progTimer) clearInterval(progTimer);
+      progress.style.width = "0%";
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") { show(idx + 1); resetTimer(); }
+    if (e.key === "ArrowLeft") { show(idx - 1); resetTimer(); }
+    if (e.key === " ") { e.preventDefault(); btnToggle.click(); }
+  });
+
+  show(0);
+  resetTimer();
+})();
+  </script>
+</body>
+</html>

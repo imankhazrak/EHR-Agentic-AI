@@ -1,0 +1,12 @@
+{
+  "sample_id": 8207,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly details diagnoses and treatments related to severe infection (Cholangitis, Unspecified septicemia, Severe sepsis, Septic shock) and associated supportive care. There is no explicit evidence within the provided record\u2014such as abnormal lipid panel results, documented hypercholesterolemia, or hyperlipidemia\u2014to strongly and explicitly support a diagnosis of \"Disorders of Lipid Metabolism.\" The medications and procedures listed are primarily for managing the severe infection and associated shock/supportive care, not for managing a primary lipid disorder. Therefore, based strictly on the evidence provided, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly supported.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 631,
+    "completion_tokens": 140
+  }
+}

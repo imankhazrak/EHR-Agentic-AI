@@ -1,0 +1,12 @@
+{
+  "sample_id": 6539,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is dominated by diagnoses related to severe, uncontrolled diabetes (including ketoacidosis, renal and ophthalmic manifestations), end-stage renal disease requiring dialysis, and associated complications (gastroparesis, polyneuropathy, anemia, hypertension). While the patient is high-risk due to diabetes and kidney disease, there is no explicit evidence in the current diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would necessitate a future diagnosis of \"Disorders of Lipid Metabolism.\" The medications prescribed (Insulin, Aspirin, Carvedilol, Lisinopril, Amlodipine) are primarily aimed at managing diabetes, hypertension, and cardiovascular risk associated with these conditions, not specifically managing a primary lipid abnormality. Therefore, based strictly on the evidence provided, a future diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 737,
+    "completion_tokens": 199
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2409,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit and strong evidence of an existing lipid disorder, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\nThe key evidence supporting this prediction is the explicit diagnosis of **\"Other and unspecified hyperlipidemia\"** in the current visit record. This diagnosis directly meets the criteria for an existing lipid disorder as defined in the target definition (hyperlipidemia).\n\nFurthermore, the patient's medical history provides several strong comorbid conditions that are highly associated with lipid disorders, reinforcing the likelihood of this diagnosis being maintained or re-coded:\n1. **Diabetes Mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled:** Diabetes is a major risk factor and comorbidity for hyperlipidemia.\n2. **Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease:** Chronic kidney disease is frequently associated with dyslipidemia.\n3. **Congestive heart failure, unspecified** and **Diastolic heart failure, unspecified:** Cardiovascular diseases are strongly linked to lipid abnormalities.\n\nThe patient is also actively managed with medications relevant to lipid management, specifically **Simvastatin**, which is a statin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1179,
+    "completion_tokens": 256
+  }
+}

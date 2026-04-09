@@ -1,0 +1,12 @@
+{
+  "sample_id": 6938,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record shows several serious diagnoses, including Subendocardial infarction, Pneumonia, Hemorrhage of gastrointestinal tract, and Cardiac pacemaker in situ. The medication list includes Atorvastatin, which is a statin used for lipid management. However, the strict instructions explicitly state that the mere use of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (such as hypercholesterolemia or hyperlipidemia). While the patient is on Atorvastatin, this only indicates a *treatment* for a potential or existing lipid issue, not the *coding* of the diagnosis itself in the next visit, according to the provided constraints. Therefore, based on the strict evidence required, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3590,
+    "completion_tokens": 181
+  }
+}

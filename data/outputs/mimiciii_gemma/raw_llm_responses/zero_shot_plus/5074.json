@@ -1,0 +1,12 @@
+{
+  "sample_id": 5074,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The patient's current diagnoses are \"Secondary malignant neoplasm of brain and spinal cord\" and \"Personal history of malignant neoplasm of bronchus and lung.\" These diagnoses relate to oncology and cancer history.\n2. **Medications Prescribed:** No medications were recorded. Therefore, there is no evidence of ongoing lipid management (e.g., statins or fibrates).\n3. **Procedures Performed:** The procedure was \"Other excision or destruction of lesion or tissue of brain,\" which is an oncological procedure.\n\nConclusion:\nThe current visit record provides no explicit evidence of an existing or actively managed lipid disorder. The patient's medical history and procedures are entirely focused on oncology. Since the instructions mandate that a future diagnosis of \"Disorders of Lipid Metabolism\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 851,
+    "completion_tokens": 256
+  }
+}

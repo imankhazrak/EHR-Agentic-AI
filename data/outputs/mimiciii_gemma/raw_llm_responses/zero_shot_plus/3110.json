@@ -1,0 +1,12 @@
+{
+  "sample_id": 3110,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, overriding the general risk factors and other comorbidities.\n\n1. **Explicit Lipid Disorder Evidence:** The patient's current diagnoses explicitly include **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Evidence (Management):** While the presence of \"Other and unspecified hyperlipidemia\" is sufficient, the patient's medication profile further supports the active management of lipid abnormalities. The prescription of **\"Atorvastatin\"** is a standard and explicit treatment for hyperlipidemia, indicating that the condition is not merely a passive risk factor but an actively managed diagnosis.\n\n3. **Exclusion of Insufficient Factors:** The reasoning explicitly adheres to the instructions by not relying solely on:\n    *   The presence of cardiovascular diseases (e.g., CHF, AF, CABG, CAD).\n    *   The use of statins (Atorvastatin) alone.\n    *   General risk",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1125,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10138,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by diagnoses related to advanced malignancy (Secondary malignant neoplasm of brain and spinal cord; Malignant neoplasm of liver, secondary; Secondary malignant neoplasm of lung; Secondary malignant neoplasm of bone and bone marrow; Personal history of malignant neoplasm of breast). The medication profile is extensive and covers supportive care for these severe conditions, including analgesics (Morphine Sulfate; Oxycodone-Acetaminophen), antiemetics (Ondansetron; CefazoLIN), and various supportive agents.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed, while numerous, do not include any explicit lipid-lowering agents (e.g., statins like Atorvastatin or Simvastatin, or fibrates like Gemfibrozil) that would serve as strong, explicit evidence of an actively managed lipid disorder, which is the threshold required by the instructions.\n\nTherefore, based strictly on the evidence provided in the current visit record, and adhering to the strict exclusion criteria (i.e., not predicting based on general",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3593,
+    "completion_tokens": 256
+  }
+}

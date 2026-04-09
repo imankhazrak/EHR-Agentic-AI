@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are heavily focused on complex, life-threatening conditions related to transplantation, malignancy, and chronic viral infections:\n    * Personal history of antineoplastic chemotherapy;\n    * Personal history of irradiation, presenting hazards to health;\n    * Other abnormal glucose (suggests glucose dysregulation, but not explicitly lipid disorder);\n    * Personal history of other malignant neoplasm of skin;\n    * Cirrhosis of liver without mention of alcohol;\n    * Malignant neoplasm of liver, primary;\n    * Chronic hepatitis C without mention of hepatic coma;\n    * Hepatitis B carrier.\n    * *Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed.*\n\n2. **Medications:**",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1160,
+    "completion_tokens": 256
+  }
+}

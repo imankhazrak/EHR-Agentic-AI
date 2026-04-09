@@ -1,0 +1,12 @@
+{
+  "sample_id": 10401,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly lists \"Other hemochromatosis\" as a diagnosis. Hemochromatosis is a disorder of iron metabolism, which falls under the broader category of lipid/metabolic disorders. However, the specific question asks to predict the coding of \"Disorders of Lipid Metabolism\" (CCS category 53), which primarily encompasses hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. While hemochromatosis is a metabolic disorder, it is distinct from the primary lipid disorders targeted by the CCS category 53 definition provided (hypercholesterolemia, hyperlipidemia). Furthermore, the current record does not provide explicit evidence of hypercholesterolemia or hyperlipidemia, which are the core components of the targeted CCS category 53 definition. Therefore, based strictly on the provided criteria, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 178
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4620,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details severe cardiovascular events (Acute myocardial infarction, Cardiogenic shock, Atrial flutter, etc.), associated complications (Hematoma, Anemia), and the management of Diabetes Mellitus. While the patient is prescribed Simvastatin, which is a lipid-lowering medication, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder. The presence of Simvastatin alone, along with the general high-risk profile (MI, Diabetes), is insufficient evidence to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict criteria provided.\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is overwhelmingly focused on acute, life-threatening cardiovascular pathology (Acute myocardial infarction, Cardiogenic shock, Atrial flutter, etc.), associated complications (Hematoma, Anemia), and the management of Diabetes Mellitus. Although the patient is prescribed Simvastatin, a medication used to manage lipid levels, the record lacks an explicit diagnosis of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). Based on the strict criteria, the presence of Simvastatin and the general high-risk profile are not sufficient evidence to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 256
+  }
+}

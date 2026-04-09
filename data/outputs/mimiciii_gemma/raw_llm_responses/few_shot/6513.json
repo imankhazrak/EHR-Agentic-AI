@@ -1,0 +1,12 @@
+{
+  "sample_id": 6513,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Pure hypercholesterolemia\" in the current visit record. According to the instructions, a \"Yes\" prediction is warranted when there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The current record explicitly lists this diagnosis. Furthermore, the patient is also managed with \"Simvastatin,\" which is a lipid-lowering agent, reinforcing the active management of a lipid abnormality. While the patient has numerous other high-risk factors (Diabetes mellitus, Unspecified essential hypertension, Old myocardial infarction, etc.), the explicit diagnosis of hypercholesterolemia is the decisive factor that meets the criteria for a \"Yes\" prediction, overriding the general risk factor exclusion rule. Therefore, it is highly likely that this diagnosis, or a related lipid disorder diagnosis, will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3938,
+    "completion_tokens": 185
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications like statins.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Diagnosis:** The current diagnoses list does not explicitly state hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism.\"\n2. **Risk Factors Present:** The patient exhibits several significant risk factors commonly associated with lipid disorders:\n    * **Morbid Obesity:** This is a major, explicit risk factor for dyslipidemia.\n    * **Cirrhosis of liver:** Liver disease is strongly associated with altered lipid metabolism.\n    * **Obstructive sleep apnea (adult)(pediatric):** OSA is a known risk factor for metabolic syndrome and dyslipidemia.\n    * **Morbid obesity** and **Cirrhosis of liver** are strong indicators of metabolic derangement, which often includes lipid abnormalities.\n3. **Medication",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 256
+  }
+}

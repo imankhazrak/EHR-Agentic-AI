@@ -1,0 +1,12 @@
+{
+  "sample_id": 1470,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or cardiovascular conditions.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Subendocardial infarction, Coronary atherosclerosis of native coronary artery, Tobacco use disorder, Chronic ulcer of other specified sites, and Personal history of Hodgkin's disease.\nThe patient's medications prescribed are: None recorded.\nThe patient's procedures performed are: (Aorto)coronary bypass of three coronary arteries, Left heart cardiac catheterization, Extracorporeal circulation auxiliary to open heart surgery, Coronary arteriography using two catheters, Angiocardiography of left heart structures.\n\nEvaluation against Strict Rules:\n1. **Explicit Lipid Disorder Evidence:** There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n2. **Exclusion of General Risk Factors:** The patient has several significant",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 904,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8754,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" as a diagnosis. However, the prediction criteria strictly require evidence of an *existing or actively managed* lipid disorder that is *not* solely based on general risk factors or the use of medications. While \"Other and unspecified hyperlipidemia\" is a diagnosis, the provided criteria for predicting a *future diagnosis* are highly restrictive, focusing on explicit, ongoing management or a clear, established lipid disorder diagnosis that goes beyond the general listing of \"unspecified hyperlipidemia\" in the context of the other numerous, non-lipid-related diagnoses. Given the overwhelming presence of other, non-lipid-related diagnoses (septicemia, AKI, cholecystitis, pancreatitis, etc.), and the restrictive nature of the prediction rules which aim to avoid predicting a future diagnosis based merely on a general listing of \"unspecified hyperlipidemia,\" the evidence is deemed insufficient to meet the high threshold for a *future* diagnosis prediction under these specific constraints.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" as a diagnosis. However, the prediction criteria strictly require evidence of an *existing or actively managed*",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 801,
+    "completion_tokens": 256
+  }
+}

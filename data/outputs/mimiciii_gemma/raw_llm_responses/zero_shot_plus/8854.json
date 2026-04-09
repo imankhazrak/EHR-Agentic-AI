@@ -1,0 +1,12 @@
+{
+  "sample_id": 8854,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is a direct and explicit evidence of a lipid disorder being present in the patient's current state.\n\n2. **Active Management and Comorbidities:** The presence of this diagnosis, combined with numerous other severe cardiovascular and metabolic comorbidities (Chronic systolic heart failure, Coronary atherosclerosis, Unspecified essential hypertension, Atrial fibrillation, etc.), indicates that the patient is under comprehensive, long-term medical management for multiple complex conditions, including the hyperlipidemia.\n\n3. **Exclusion of Insufficient Evidence:** The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors (like hypertension or heart failure) or the use of medications (like statins, which are not explicitly listed as prescribed, though lipid management is implied). However, the explicit diagnosis of **\"Other and unspecified hyperlipidemia\"** overrides this restriction, as it constitutes the required strong and explicit evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1066,
+    "completion_tokens": 256
+  }
+}

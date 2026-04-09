@@ -1,0 +1,12 @@
+{
+  "sample_id": 10148,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on gastrointestinal issues (Gastric ulcer), infectious processes (Other and unspecified mycoses), respiratory failure (Chronic respiratory failure, Attention to tracheostomy), neurological/cerebrovascular issues (Late effects of cerebrovascular disease, Epilepsy), and general instability (Other iatrogenic hypotension).\n2. **Medications:** The medication list is extensive and covers a wide range of conditions:\n    * **Respiratory/Cardiovascular Support:** Phenylephrine, Albuterol-Ipratropium, Diltiazem, Heparin, Metoprolol Tartrate, Furosemide, Acetaminophen, etc.\n    * **Infectious/Neurological Management:** Chlorhexidine Gluconate, Quetiapine Fumarate, Glucagon, Insulin, Vancom",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1067,
+    "completion_tokens": 256
+  }
+}

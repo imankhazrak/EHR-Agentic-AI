@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit and strong evidence of a lipid disorder, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\nThe most critical piece of evidence is the explicit diagnosis: **Pure hypercholesterolemia**.\n\nThis diagnosis directly meets the criteria for \"Disorders of Lipid Metabolism\" as defined (hypercholesterolemia is a core component). Furthermore, the patient is actively managed for this condition, evidenced by the prescription of **Atorvastatin**, a primary lipid-lowering agent.\n\nWhile the patient has numerous other comorbidities (e.g., Pneumonia, CHF, Spinal stenosis, Hypertension), these factors alone are insufficient to predict the future diagnosis, as per the instructions. The presence of the explicit diagnosis of hypercholesterolemia is the sole, sufficient, and explicit evidence required to predict a \"Yes.\"\n\nThe presence of Atorvastatin confirms the active management of the lipid abnormality, reinforcing the likelihood that this diagnosis will persist or be explicitly noted in the next encounter.\n\nTherefore, based on the explicit diagnosis of Pure hypercholesterolemia, the prediction is Yes.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1243,
+    "completion_tokens": 243
+  }
+}

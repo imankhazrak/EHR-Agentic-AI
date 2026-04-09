@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Few-shot LLM demo — EHR-Agentic-AI</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --border: #2d3a4f;
+      --text: #e7ecf3;
+      --muted: #8b9cb3;
+      --accent: #3d9ee5;
+      --yes: #4ade80;
+      --no: #f87171;
+      --warn: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: radial-gradient(ellipse 120% 80% at 50% -20%, #1e3a5f 0%, var(--bg) 55%);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.25rem;
+      color: var(--accent);
+    }
+    .sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .stage {
+      width: min(640px, 100%);
+      aspect-ratio: 16 / 10;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+    }
+    .scene {
+      position: absolute;
+      inset: 1.25rem 1.5rem;
+      opacity: 0;
+      animation: sceneCycle 24s infinite;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .scene:nth-child(1) { animation-delay: 0s; }
+    .scene:nth-child(2) { animation-delay: 4s; }
+    .scene:nth-child(3) { animation-delay: 8s; }
+    .scene:nth-child(4) { animation-delay: 12s; }
+    .scene:nth-child(5) { animation-delay: 16s; }
+    .scene:nth-child(6) { animation-delay: 20s; }
+
+    /* 24s loop: each scene holds ~3.8s (4s slot including fades) */
+    @keyframes sceneCycle {
+      0%, 2.5% { opacity: 0; transform: translateY(6px); }
+      4%, 19% { opacity: 1; transform: translateY(0); }
+      21%, 100% { opacity: 0; transform: translateY(-6px); }
+    }
+
+    .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+    .title-line {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    pre, .code {
+      font-family: ui-monospace, "Cascadia Code", monospace;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.65rem 0.75rem;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .chip {
+      font-size: 0.68rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: rgba(61, 158, 229, 0.12);
+    }
+    .chip.yes { border-color: var(--yes); color: var(--yes); }
+    .chip.no { border-color: var(--no); color: var(--no); }
+    .arrow {
+      color: var(--accent);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    .diagram {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.25rem;
+    }
+    .box {
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 0.5rem;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+    .progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #60c5ff);
+      animation: bar 24s linear infinite;
+    }
+    @keyframes bar {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    .hint {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      text-align: center;
+      max-width: 640px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Few-shot prediction loop</h1>
+  <p class="sub">MIMIC-III next-visit lipid disorder — in-context examples only (no weight updates)</p>
+
+  <div class="stage">
+    <div class="progress" aria-hidden="true"></div>
+
+    <div class="scene">
+      <span class="label">Step 1</span>
+      <div class="title-line">Load training split</div>
+      <p class="code">train.csv — each row: narrative_current + label_lipid_disorder (next visit)</p>
+      <div class="row">
+        <span class="chip">random_balanced</span>
+        <span class="chip">seed 42</span>
+        <span class="chip">n_positive: 3</span>
+        <span class="chip">n_negative: 3</span>
+      </div>
+    </div>
+
+    <div class="scene">
+      <span class="label">Step 2</span>
+      <div class="title-line">Select six exemplars from train only</div>
+      <pre>select_exemplars() → 3 rows label=1, 3 rows label=0
+Saved to outputs: llm_few_shot_exemplars.csv</pre>
+    </div>
+
+    <div class="scene">
+      <span class="label">Step 3</span>
+      <div class="title-line">format_exemplar_block()</div>
+      <pre>Case 1:
+- Diagnoses: Hyperlipidemia …
+Outcome: Yes
+
+Case 2:
+- Diagnoses: Pneumonia …
+Outcome: No
+
+… (Cases 3–6) …</pre>
+    </div>
+
+    <div class="scene">
+      <span class="label">Step 4</span>
+      <div class="title-line">One prompt per test row</div>
+      <p class="code">predictor_few_shot.txt: rules + [Current Visit Record] = this test narrative + fixed [Demonstration Cases]</p>
+      <div class="diagram">
+        <div class="box">Same 6 cases<br/>every test patient</div>
+        <span class="arrow">+</span>
+        <div class="box">This row’s<br/>narrative_current</div>
+      </div>
+    </div>
+
+    <div class="scene">
+      <span class="label">Step 5</span>
+      <div class="title-line">LLM completes once per row</div>
+      <pre>client.complete(messages)  →  temperature 0
+
+Prediction: Yes
+Reasoning: …</pre>
+    </div>
+
+    <div class="scene">
+      <span class="label">Step 6</span>
+      <div class="title-line">Evaluate vs held-out label</div>
+      <p class="code">parse_prediction() compares to label_lipid_disorder — model never sees next-visit text.</p>
+      <div class="row">
+        <span class="chip yes">parsed Yes / No</span>
+        <span class="chip no">true label</span>
+        <span class="chip">metrics</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="hint">For all four LLM modes (zero-shot, zero-shot+, few-shot, CoAgent), open <code style="color:var(--accent)">demo/llm_four_modes_demo.html</code>. For a schematic GIF: <code style="color:var(--accent)">pip install pillow</code> → <code style="color:var(--accent)">python -m src.scripts.render_few_shot_demo_gif</code> → <code style="color:var(--accent)">demo/few_shot_demo.gif</code>.</p>
+</body>
+</html>

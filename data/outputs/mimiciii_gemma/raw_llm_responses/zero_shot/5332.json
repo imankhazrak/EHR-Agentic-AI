@@ -1,0 +1,12 @@
+{
+  "sample_id": 5332,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nThe current visit record is dominated by diagnoses related to acute respiratory failure, uncontrolled diabetes, severe kidney disease (Stage V/ESRD), cardiac issues (Diastolic HF, Chronic Ischemic Heart Disease), and various infections/complications (Bacteremia, PD complications, etc.).\n\nWhile the patient is prescribed **Atorvastatin**, this medication is used for managing dyslipidemia, but the current record **does not contain an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that would explicitly warrant coding \"Disorders of Lipid Metabolism\" in the next visit, according to the strict rules provided.\n\nThe presence of Atorvastatin alone, or the general risk factors associated with the patient's severe comorbidities (Diabetes, CKD, HF), are insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria that require explicit lipid disorder evidence.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 881,
+    "completion_tokens": 192
+  }
+}

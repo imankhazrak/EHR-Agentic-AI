@@ -1,0 +1,12 @@
+{
+  "sample_id": 5139,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis, excluding general risk factors like obesity or diabetes.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current visit record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality in the \"Diagnoses made\" section.\n2. **Risk Factors Present:** The patient exhibits numerous significant risk factors strongly associated with lipid disorders, including:\n    * Morbid obesity.\n    * Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled.\n    * Coronary atherosclerosis of unspecified type of vessel, native or graft.\n    * Congestive heart failure, unspecified.\n3. **Medication Profile:** The patient is prescribed **Simvastatin**, which is a lipid-lowering agent (statin).\n4. **Exclusion Criteria Application:** According to the strict instructions, the mere use of statins (Simvastatin) and the presence of general risk factors (Morbid obesity, Diabetes) are **NOT** sufficient evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1188,
+    "completion_tokens": 256
+  }
+}

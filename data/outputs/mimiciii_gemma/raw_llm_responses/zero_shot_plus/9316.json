@@ -1,0 +1,12 @@
+{
+  "sample_id": 9316,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are: Alcohol withdrawal; Other convulsions; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Depressive disorder, not elsewhere classified; Lack of housing; Chronic hepatitis C without mention of hepatic coma.\nWhile Diabetes Mellitus and Unspecified essential hypertension are known risk factors for lipid disorders, the record **does not explicitly state** a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\n2. **Analysis of Medications and Procedures:**\nThe prescribed medications (Sodium Chloride 0.9% Flush, Diazepam, Heparin, Insulin, 1/2 NS, Potassium Chloride, 0.9% Sodium Chloride, FoLIC Acid, Multivitamin IV, Thiamine, 5% Dextrose) and procedures (None recorded) are primarily directed towards managing acute issues such as alcohol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 921,
+    "completion_tokens": 256
+  }
+}

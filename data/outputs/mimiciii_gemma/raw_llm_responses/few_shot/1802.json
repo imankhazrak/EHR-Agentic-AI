@@ -1,0 +1,12 @@
+{
+  "sample_id": 1802,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses listed are related to acute cardiovascular events (Coronary atherosclerosis, Intermediate coronary syndrome, Congestive heart failure, Atrial fibrillation), infections (Urinary tract infection), and general medical conditions (Unspecified essential hypertension, Hematoma). While the patient is clearly high-risk due to the presence of multiple cardiovascular comorbidities, the instructions strictly prohibit predicting a future diagnosis based solely on the use of cardiovascular diseases or general risk factors. The medication profile includes several cardiovascular and general supportive drugs, but there is no explicit evidence of an existing or actively managed lipid disorder (like a documented hyperlipidemia or a specific lipid disorder diagnosis) that would strongly and explicitly warrant a future coding of \"Disorders of Lipid Metabolism.\" Therefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3689,
+    "completion_tokens": 197
+  }
+}

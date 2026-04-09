@@ -1,0 +1,12 @@
+{
+  "sample_id": 4342,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly mandate that a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and not based on general risk factors or the use of specific medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe, acute infectious and inflammatory processes, including:\n    * Acute pancreatitis\n    * Septicemia due to E. coli\n    * Congestive heart failure (CHF)\n    * Acute kidney failure (AKI)\n    * Septic shock\n    * Cellulitis and abscess\n    * Severe sepsis\n    * Other acute complications (e.g., Thrombocytopenia, Hypocalcemia, Iatrogenic pneumothorax).\n    * **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1340,
+    "completion_tokens": 256
+  }
+}

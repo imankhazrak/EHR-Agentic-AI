@@ -1,0 +1,12 @@
+{
+  "sample_id": 4662,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient has an explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the current visit record. Since hypercholesterolemia is a direct form of a lipid disorder, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient has an explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the current visit record. However, the instructions strictly state that the prediction must be based on *explicit* evidence of an *existing or actively managed* lipid disorder, and the provided context does not allow for a definitive prediction of a *future* diagnosis based solely on a past diagnosis, even if that past diagnosis is present. Therefore, based on the strict constraints of the prompt, the prediction must be \"No\" if the evidence is not deemed sufficiently *active* or *explicitly* leading to a future coding decision beyond the current snapshot.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient has an explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the current visit record. Since hypercholesterolemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 509,
+    "completion_tokens": 256
+  }
+}

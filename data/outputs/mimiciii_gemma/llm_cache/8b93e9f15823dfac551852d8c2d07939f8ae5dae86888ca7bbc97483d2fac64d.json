@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, as well as critical cardiovascular and oncological issues. The diagnoses include Congestive heart failure, unspecified; Unspecified pleural effusion; Methicillin susceptible pneumonia due to Staphylococcus aureus; Hematoma complicating a procedure; Unspecified septicemia; Paroxysmal ventricular tachycardia; Aortic valve disorders; Hodgkin's disease, unspecified type, unspecified site, extranodal and solid organ sites; and Heart valve replaced by other means. The procedures performed and the critical care interventions (Continuous invasive mechanical ventilation for 96 consecutive hours or more) confirm a state of severe, acute illness.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed are none recorded, meaning there is no explicit lipid-lowering therapy (like statins or fibrates) being administered that would strongly suggest an active, coded lipid disorder requiring future documentation.\n\nBased on the strict instructions provided, which mandate that a diagnosis must be explicitly present or actively managed to predict a \"Yes,\" the absence of such",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3530,
+    "completion_tokens": 256
+  }
+}

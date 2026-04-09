@@ -1,0 +1,12 @@
+{
+  "sample_id": 3709,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record pertains to a premature twin birth and the associated neonatal complications. The diagnoses, medications, and procedures are overwhelmingly focused on managing the acute respiratory distress, prematurity, and infectious status of the newborns.\n\n1. **Analysis of Current Diagnoses:** The primary diagnoses are related to twin birth, prematurity (29-30 weeks), respiratory distress syndrome, neonatal jaundice, and congenital anomalies. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality in the current record.\n\n2. **Analysis of Medications and Procedures:** The medication profile is entirely geared towards neonatal support: caffeine citrate, gentamicin, ampicillin, parenteral nutrition (including fat emulsion), and supportive fluids. While **NEO*IV*Fat Emulsion** is present, this is administered as part of **NEO*IV*Parenteral Nutrition** to support the malnourished, premature infant, not as a treatment for a pre-existing lipid disorder. The presence of fat emulsion in this context is a nutritional support measure, not a diagnostic or therapeutic indicator of a lipid disorder.\n\n3. **Exclusion Criteria Application:** The instructions explicitly state that the prediction cannot be based on general risk factors",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1017,
+    "completion_tokens": 256
+  }
+}

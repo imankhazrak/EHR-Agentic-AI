@@ -1,0 +1,12 @@
+{
+  "sample_id": 9720,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the category of \"Disorders of Lipid Metabolism\" (CCS category 53). Therefore, there is strong and explicit evidence that this condition will be coded as a diagnosis in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 72
+  }
+}

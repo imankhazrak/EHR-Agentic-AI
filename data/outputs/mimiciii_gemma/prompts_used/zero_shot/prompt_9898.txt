@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other tracheostomy complications; Accidental puncture or laceration during a procedure, not elsewhere classified; Accidental cut, puncture, perforation or hemorrhage during other specified medical care; Epilepsy, unspecified, without mention of intractable epilepsy; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere; Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled; Background diabetic retinopathy; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Below knee amputation status
+- Medications prescribed: Cyanocobalamin; Dextrose 50%; Glucagon; Pantoprazole; Hydrochlorothiazide; Ipratropium Bromide Neb; SW; Propofol; Heparin; Albuterol 0.083% Neb Soln; Magnesium Sulfate; Famotidine; Heparin Flush (10 units/ml); 0.9% Sodium Chloride; Calcium Gluconate; Potassium Phosphate; Vancomycin; Iso-Osmotic Dextrose; HydrALAzine; Fentanyl Citrate; Midazolam; Chlorhexidine Gluconate 0.12% Oral Rinse; 5% Dextrose; Insulin; LR; Bisacodyl; Collagenase Ointment; Morphine Sulfate; Metoprolol Tartrate; Acetaminophen; Gabapentin; Docusate Sodium (Liquid); Aspirin; LeVETiracetam; Lansoprazole Oral Disintegrating Tab; Furosemide; Ciprofloxacin IV; Sodium Chloride 0.9%  Flush; Potassium Chloride (Powder); Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Vitamin D; Silver Sulfadiazine 1% Cream; Ferrous Sulfate
+- Procedures performed: Continuous invasive mechanical ventilation for less than 96 consecutive hours; Bronchoscopy through artificial stoma; Removal of tracheostomy tube; Insertion of endotracheal tube
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current visit record is overwhelmingly focused on severe, acute infectious and inflammatory processes, including Methicillin susceptible Staphylococcus aureus septicemia, Abscess of lung, Septic pulmonary embolism, Acute respiratory failure, Empyema, Acute and subacute bacterial endocarditis, and Severe sepsis. The patient is also managing multiple comorbidities related to substance use (Opioid and Alcohol dependence) and psychiatric conditions (Bipolar disorder, Anxiety state).\n\nCrucially, the current visit record **lacks any explicit evidence** of an existing or actively managed lipid disorder. There are no diagnoses of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medications prescribed do not include any explicit lipid-lowering agents such as statins or fibrates, which would be the strongest indicator of an actively managed lipid disorder.\n\nWhile the patient has several risk factors (e.g., chronic illness, substance use), the instructions strictly prohibit predicting a future diagnosis based solely on general risk factors or the use of non-lipid-specific medications (like antibiotics or sedatives). Since there is no explicit evidence of a lipid disorder in the current record, the prediction must be \"No\", adhering to the strict criteria provided in the instructions.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3812,
+    "completion_tokens": 255
+  }
+}

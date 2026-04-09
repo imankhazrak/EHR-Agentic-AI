@@ -1,0 +1,12 @@
+{
+  "sample_id": 10061,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder present in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it is a specific lipid abnormality.\n\n2. **Supporting Comorbidities and Risk Factors:** The patient presents with numerous significant comorbidities that are strongly associated with lipid disorders, further supporting the clinical context:\n    * **Obesity:** The diagnosis of **\"Morbid obesity\"** is a major, well-established risk factor for hypercholesterolemia and hyperlipidemia.\n    * **Diabetes Mellitus:** The patient has multiple diagnoses related to **\"Diabetes with renal manifestations\"** and **\"Diabetes with neurological manifestations\"**, which are strongly linked to dyslipidemia.\n    * **Hypertension:** The diagnosis of **\"Hypertensive chronic kidney disease\"** indicates underlying cardiovascular risk factors.\n\n3. **Medication Management Context:** The patient is currently prescribed **\"At",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1120,
+    "completion_tokens": 256
+  }
+}

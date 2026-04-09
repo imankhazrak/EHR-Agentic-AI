@@ -1,0 +1,12 @@
+{
+  "sample_id": 10962,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record contains several diagnoses and medications that are highly indicative of severe, multi-system critical illness, including cardiovascular events (Subendocardial infarction, Old myocardial infarction, Coronary atherosclerosis), respiratory failure (Acute respiratory failure, Acute edema of lung), and metabolic derangements (Hyperosmolality and/or hypernatremia, Acute kidney failure, Diabetes mellitus).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, that is *not* solely based on the use of statins or general cardiovascular risk factors.\n\nIn the Current Visit Record, while the diagnosis **\"Other and unspecified hyperlipidemia\"** is explicitly listed under Diagnoses made, this single diagnosis is insufficient to meet the high bar set by the instructions when weighed against the other complex, non-lipid-related critical diagnoses. Furthermore, the instructions explicitly caution against predicting a diagnosis based only on general risk factors or the use of medications like statins (though statins are not the primary focus here).\n\nGiven the overwhelming presence of other, more explicit and severe diagnoses (e.g., Acute respiratory failure, Acute kidney failure",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4037,
+    "completion_tokens": 256
+  }
+}

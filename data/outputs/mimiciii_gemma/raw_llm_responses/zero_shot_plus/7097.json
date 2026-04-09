@@ -1,0 +1,12 @@
+{
+  "sample_id": 7097,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The prediction must be based on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-related medications.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list does not explicitly state hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism.\"\n2. **Risk Factors Present:** The patient has several significant risk factors that are commonly associated with lipid disorders:\n    * **Diabetes Mellitus (Type II):** The patient is diagnosed with Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled. Diabetes is a major metabolic risk factor for dyslipidemia.\n    * **Alcoholic Hepatitis/Intoxication:** Chronic alcohol use is a known metabolic stressor and can be associated with altered lipid profiles.\n    * **Calculus of Bile Duct:** Biliary issues can sometimes be linked to metabolic disturbances.\n3. **Medication Profile Analysis:** The",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 256
+  }
+}

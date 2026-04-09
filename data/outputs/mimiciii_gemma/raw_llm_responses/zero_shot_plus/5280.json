@@ -1,0 +1,12 @@
+{
+  "sample_id": 5280,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), and explicitly exclude answering \"Yes\" based only on general risk factors, statin use, or cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Review of Diagnoses:** The current diagnoses are overwhelmingly related to severe critical illness: Infection and inflammatory reaction due to other vascular device, implant, and graft; Septicemia due to pseudomonas; Severe sepsis; Acute respiratory failure; Pneumonia due to Pseudomonas; Acute kidney failure, unspecified; Hyperpotassemia; Congestive heart failure, unspecified; Atrial fibrillation; Hyperosmolality and/or hypernatremia; Pressure ulcer, lower back; Sicca syndrome; Tracheostomy status; Anemia, unspecified; Gastrostomy status; Secondary hyperparathyroidism, non-renal.\n    * **Absence of Explicit Lipid Diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 256
+  }
+}

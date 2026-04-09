@@ -1,0 +1,12 @@
+{
+  "sample_id": 10773,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe trauma, infectious processes (Pneumonia), and acute metabolic derangements related to severe injury (Unspecified protein-calorie malnutrition, Traumatic pneumothorax, etc.). The diagnoses and medications listed are primarily aimed at stabilizing the patient's life-threatening injuries and infections.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has \"Other specified cardiac dysrhythmias\" and \"Esophageal reflux,\" these are general comorbidities and do not constitute evidence of a primary lipid metabolism disorder.\n\nThe instructions strictly prohibit predicting a future diagnosis based solely on the use of general risk factors (like those implied by severe trauma or malnutrition) or the presence of general cardiovascular issues (like dysrhythmias). Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" are not met. Therefore, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3820,
+    "completion_tokens": 235
+  }
+}

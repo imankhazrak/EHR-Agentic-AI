@@ -1,0 +1,12 @@
+{
+  "sample_id": 12127,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses and medications prescribed are primarily related to severe infections (septicemia, septic shock), neurological conditions (Multiple Sclerosis, Epilepsy), and associated complications (pancytopenia, UTI). While the patient is receiving various medications, none of them explicitly point to an ongoing management or diagnosis of a lipid abnormality. Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 662,
+    "completion_tokens": 140
+  }
+}

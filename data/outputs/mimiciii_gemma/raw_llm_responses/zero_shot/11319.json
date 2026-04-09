@@ -1,0 +1,12 @@
+{
+  "sample_id": 11319,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record details numerous severe, complex conditions, including alcoholic cirrhosis, portal hypertension, severe electrolyte imbalances (hypokalemia, hyposmolality), and infectious processes (Pneumonia, C. difficile). These conditions are highly associated with liver dysfunction and potential lipid abnormalities. However, the provided record **does not contain any explicit diagnosis or active management specifically targeting a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The medications prescribed (e.g., Spironolactone, Furosemide, Albumin) and procedures performed are aimed at managing the severe infectious, circulatory, and electrolyte crises associated with the cirrhosis, not the lipid profile itself. Therefore, based strictly on the evidence provided, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 909,
+    "completion_tokens": 189
+  }
+}

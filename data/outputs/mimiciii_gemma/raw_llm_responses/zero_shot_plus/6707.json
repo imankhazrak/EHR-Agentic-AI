@@ -1,0 +1,12 @@
+{
+  "sample_id": 6707,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, while strictly excluding predictions based on general risk factors, statin use, or cardiovascular diseases alone.\n\n**Analysis of Current Visit Record:**\n\n1. **Diagnoses Made:** The current diagnoses are: Hemorrhage, unspecified; Hyposmolality and/or hyponatremia; Systemic lupus erythematosus; Unspecified protein-calorie malnutrition; Urinary tract infection, site not specified; Iatrogenic pneumothorax; Iron deficiency anemia secondary to blood loss (chronic); Abnormal coagulation profile.\n    * **Lipid Disorder Evidence:** None of the listed diagnoses explicitly state hypercholesterolemia, hyperlipidemia, or any other form of primary lipid disorder.\n    * **Risk Factors Present:** Systemic lupus erythematosus (SLE) and chronic blood loss leading to anemia are significant comorbidities, but they do not constitute explicit evidence of a lipid disorder diagnosis.\n\n2. **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1061,
+    "completion_tokens": 256
+  }
+}

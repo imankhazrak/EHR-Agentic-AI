@@ -1,0 +1,12 @@
+{
+  "sample_id": 4835,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record indicates a severe acute coronary syndrome (Subendocardial infarction, Coronary atherosclerosis, Percutaneous transluminal coronary angioplasty status) and associated cardiac dysrhythmias (Paroxysmal ventricular tachycardia). The patient is receiving extensive supportive and anti-ischemic/anti-thrombotic care, including Heparin Sodium, Metoprolol XL, Enoxaparin Sodium, and Atorvastatin. While the prescription of Atorvastatin is a direct intervention for lipid management, the current diagnoses listed (Subendocardial infarction, Paroxysmal ventricular tachycardia, Coronary atherosclerosis) do not explicitly state a primary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict instructions, the mere use of a statin (Atorvastatin) or the presence of cardiovascular diseases (Coronary atherosclerosis, Subendocardial infarction) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since explicit evidence of an existing or actively managed lipid disorder (like a primary diagnosis of hyperlipidemia) is absent in the current record, the prediction must be \"No,\" despite the high-risk profile and the use of lipid-lowering medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3622,
+    "completion_tokens": 256
+  }
+}

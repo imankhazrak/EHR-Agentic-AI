@@ -1,0 +1,12 @@
+{
+  "sample_id": 3056,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to acute and chronic respiratory failure, acute kidney failure, hypertensive chronic kidney disease, congestive heart failure, and various infections (Clostridium difficile, Staphylococcus aureus, etc.). While the patient is prescribed Atorvastatin, which is a medication used to manage lipid abnormalities, the current record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 877,
+    "completion_tokens": 143
+  }
+}

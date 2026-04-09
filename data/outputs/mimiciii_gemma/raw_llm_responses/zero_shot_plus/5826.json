@@ -1,0 +1,12 @@
+{
+  "sample_id": 5826,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record provided pertains to a routine, non-pathological infant admission. The diagnoses listed are related to standard newborn care, including being a single liveborn, routine circumcision, and prophylactic vaccination against viral hepatitis. There is no mention of any specific metabolic or cardiovascular conditions, nor are there any explicit diagnoses of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder.\n\nThe patient's current medication profile is empty, meaning there is no ongoing pharmacological management for lipid abnormalities.\n\nThe instructions explicitly state that the prediction should NOT be based on general clinical risk factors (such as hypertension or diabetes, which are not present here) or the use of lipid-lowering medications (which are not present here). The prediction must rely on strong and explicit evidence of an existing or actively managed lipid disorder.\n\nSince the current record contains no evidence of an existing lipid disorder, and the patient is not being managed for one, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. The high incidence rate mentioned in the general instructions (27.6%) is noted, but it does not override the requirement for explicit evidence in",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 879,
+    "completion_tokens": 256
+  }
+}

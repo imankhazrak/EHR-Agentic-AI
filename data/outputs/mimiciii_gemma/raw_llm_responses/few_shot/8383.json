@@ -1,0 +1,12 @@
+{
+  "sample_id": 8383,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions related to renal failure, cardiovascular disease, and thromboembolic events. The diagnoses include Hypertensive chronic kidney disease, End stage renal disease, Subendocardial infarction, and various thromboembolic events. The medication list includes Atorvastatin, which is a lipid-lowering agent, and Cinacalcet, which is used for calcimimetic effects related to renal function.\n\nHowever, according to the strict instructions, the mere prescription of a statin (Atorvastatin) or the presence of cardiovascular disease (Subendocardial infarction, Hypertensive chronic kidney disease) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that these factors alone are insufficient to predict a future diagnosis.\n\nFurthermore, the current visit record does not contain an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other explicit lipid disorder. The presence of Atorvastatin is a *treatment* for a potential lipid disorder, not the *diagnosis* of one.\n\nTherefore, based on the strict criteria provided in the instructions, where explicit lipid disorder evidence must be present to predict a \"Yes,\" the absence of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3800,
+    "completion_tokens": 256
+  }
+}

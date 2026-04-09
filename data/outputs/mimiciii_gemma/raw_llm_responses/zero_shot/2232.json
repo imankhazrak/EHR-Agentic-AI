@@ -1,0 +1,12 @@
+{
+  "sample_id": 2232,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening conditions related to acute myeloid leukemia, thrombotic microangiopathy, complications of bone marrow transplant, acute respiratory failure, and severe organ dysfunction (CHF, AKI, Pneumonitis). There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis in the current record. The medications and procedures listed are related to managing these severe infectious, inflammatory, and organ failure states, not managing a primary lipid disorder. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 865,
+    "completion_tokens": 130
+  }
+}

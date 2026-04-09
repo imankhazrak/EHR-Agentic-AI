@@ -1,0 +1,12 @@
+{
+  "sample_id": 871,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which serves as strong and explicit evidence for the likelihood of this diagnosis being maintained or re-coded in the next hospital visit, despite the patient's complex and overwhelming array of other severe conditions.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it is a specific lipid abnormality. The presence of this explicit diagnosis is the strongest possible evidence required by the instructions to predict a future coding of this diagnosis.\n\n2. **Comorbid Conditions and Risk Factors:** While the patient presents with numerous severe comorbidities (e.g., Methicillin susceptible Staphylococcus aureus septicemia, Acute kidney failure, Intraspinal abscess, Severe sepsis, Atrial fibrillation), the presence of **\"Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled\"** further supports the underlying metabolic instability and risk profile commonly associated with lipid disorders.\n\n3. **Relevance of Other Diagnoses:** The diagnosis of **\"Pure hypercholesterolemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 256
+  }
+}

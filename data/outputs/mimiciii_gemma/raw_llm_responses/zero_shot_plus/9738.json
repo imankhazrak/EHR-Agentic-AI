@@ -1,0 +1,12 @@
+{
+  "sample_id": 9738,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has numerous severe and complex comorbidities: Blood in stool, End stage renal disease (ESRD), Human immunodeficiency virus [HIV] disease, Unspecified gastritis and gastroduodenitis, Chronic hepatitis C, Cirrhosis of liver, Unspecified chronic bronchitis, Diaphragmatic hernia, Thrombocytopenia, and Renal dialysis status.\n2. **Medications:** The prescribed medications (Tenofovir Disoproxil, Etravirine, sevelamer HYDROCHLORIDE, Nephrocaps, LaMIVudine, Ipratropium Bromide Neb, Albuterol 0.083% Neb Soln, Pantoprazole, Vial, Sodium Chloride 0.9% Flush) are primarily directed towards",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1008,
+    "completion_tokens": 256
+  }
+}

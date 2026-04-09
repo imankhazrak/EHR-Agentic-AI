@@ -1,0 +1,12 @@
+{
+  "sample_id": 12036,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is already diagnosed with a form of hyperlipidemia, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" is present and likely to be coded in the patient's next hospital visit, fulfilling the criteria for answering \"Yes.\" The other diagnoses and medications (e.g., statins like Simvastatin) are secondary factors and do not override the explicit lipid disorder diagnosis already present.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 158
+  }
+}

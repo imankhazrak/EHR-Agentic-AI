@@ -1,0 +1,12 @@
+{
+  "sample_id": 333,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and this prediction must be based on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or comorbidities.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has several severe, non-lipid-related diagnoses: Chronic hepatitis C with hepatic coma, Alcoholic cirrhosis of liver, Diabetes mellitus type II, Rheumatoid arthritis, and Tobacco use disorder. While Diabetes Mellitus is a known comorbidity associated with dyslipidemia, the diagnosis itself does not explicitly state a lipid abnormality (e.g., hypercholesterolemia).\n2. **Medications:** The prescribed medications are overwhelmingly focused on managing severe liver failure, infection, and critical care needs (Lactulose, Propofol, Rifaximin, Furosemide, Heparin, Insulin, etc.). Crucially, there is an absence of explicit lipid-lowering agents such as statins (e.g",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 989,
+    "completion_tokens": 256
+  }
+}

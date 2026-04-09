@@ -1,0 +1,12 @@
+{
+  "sample_id": 3298,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hypercholesterolemia.\" Since the patient is explicitly diagnosed with \"Pure hypercholesterolemia,\" there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nThe other diagnoses and procedures (Acute myocardial infarction, Congestive heart failure, Atrial fibrillation, Coronary atherosclerosis, Esophageal reflux, Unspecified essential hypertension, etc.) are significant cardiovascular and metabolic comorbidities, but the explicit diagnosis of hypercholesterolemia is the direct and sufficient evidence required by the instructions to predict a future diagnosis of a lipid disorder.\n\nTherefore, the explicit lipid disorder evidence overrides the general clinical risk assessment, leading to a prediction of \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 931,
+    "completion_tokens": 191
+  }
+}

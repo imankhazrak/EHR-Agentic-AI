@@ -1,0 +1,12 @@
+{
+  "sample_id": 11484,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which is \"Pure hypercholesterolemia.\" According to the instructions, the prediction should be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The presence of this specific diagnosis directly meets the criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's profile includes other high-risk factors commonly associated with lipid disorders, such as Obesity (BMI 45.0-49.9, adult) and Coronary atherosclerosis of native coronary artery, which reinforce the clinical context of a lipid abnormality, although the explicit diagnosis is the primary driver for the \"Yes\" prediction. The medication profile includes Simvastatin, a lipid-lowering agent, which is consistent with the management of hypercholesterolemia. Therefore, based on the explicit diagnosis of \"Pure hypercholesterolemia,\" the prediction for the next hospital visit is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3990,
+    "completion_tokens": 213
+  }
+}

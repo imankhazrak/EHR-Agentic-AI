@@ -1,0 +1,12 @@
+{
+  "sample_id": 10586,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe infectious processes (Empyema, Candidiasis), malignant disease (Malignant neoplasm of esophagus), cardiac issues (Old myocardial infarction, Coronary atherosclerosis), and general inflammatory/edema states. While the patient has multiple comorbidities, there is no explicit evidence within the diagnoses or ongoing management that points to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia). The medications prescribed, such as Atenolol and Aspirin, are standard for cardiac management and do not constitute explicit evidence of a lipid disorder requiring a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the strict criteria, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 852,
+    "completion_tokens": 153
+  }
+}

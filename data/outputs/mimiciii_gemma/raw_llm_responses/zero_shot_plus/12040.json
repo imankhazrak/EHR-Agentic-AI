@@ -1,0 +1,12 @@
+{
+  "sample_id": 12040,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Secondary malignant neoplasm of bone and bone marrow; Myelopathy in other diseases classified elsewhere; Atrial fibrillation; Unspecified essential hypertension; etc.) **does not contain any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other form of primary lipid abnormality.\n2. **Risk Factors and Comorbidities:** The patient has several significant risk factors and comorbidities, including:\n    * Unspecified essential hypertension.\n    * Atrial fibrillation (a cardiovascular condition).\n    * Multiple histories of malignant neoplasm (Secondary malignant neoplasm of bone and bone marrow; Personal history of malignant neoplasm of rectum, rectosigmoid junction, and anus; Personal history of malignant neoplasm of bronchus and lung).\n    * Chronic obstructive asthma and bronchitis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1286,
+    "completion_tokens": 256
+  }
+}

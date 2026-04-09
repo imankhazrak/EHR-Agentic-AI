@@ -1,0 +1,12 @@
+{
+  "sample_id": 3210,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are heavily focused on severe, acute cardiovascular events and associated comorbidities:\n- **Primary Cardiac Issues:** Ventricular fibrillation, Cardiac arrest, Coronary atherosclerosis of autologous vein bypass graft, Paroxysmal ventricular tachycardia, Congestive heart failure, unspecified, Aortocoronary bypass status, Heart valve replaced by other means.\n- **Other Comorbidities:** Urinary tract infection, site not specified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n\nAnalysis against Prediction Criteria:\n1. **Explicit Lipid Disorder Evidence:** There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record.\n2. **Risk Factors vs. Diagnosis:** While the patient has significant risk factors (Diabetes mellitus, severe cardiovascular",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 961,
+    "completion_tokens": 256
+  }
+}

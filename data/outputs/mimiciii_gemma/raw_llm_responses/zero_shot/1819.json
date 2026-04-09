@@ -1,0 +1,12 @@
+{
+  "sample_id": 1819,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record shows numerous diagnoses related to cardiovascular disease (Atrial fibrillation, Congestive heart failure, Atherosclerosis, etc.), kidney failure, and biliary disease. The patient is prescribed Atorvastatin, which is a lipid-lowering medication. However, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. Since the prediction criteria strictly require explicit evidence of an existing or actively managed lipid disorder (beyond general risk factors or medication use), and such evidence is absent, the prediction must be No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 125
+  }
+}

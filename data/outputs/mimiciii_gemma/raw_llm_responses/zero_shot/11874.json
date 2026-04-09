@@ -1,0 +1,12 @@
+{
+  "sample_id": 11874,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism.\" Furthermore, the patient is prescribed \"Atorvastatin,\" which is a medication commonly used to manage hyperlipidemia, reinforcing the active management of a lipid disorder. Given the explicit diagnosis of hyperlipidemia, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia.\" While this diagnosis is related to lipid disorders, the strict rules provided for predicting a *future* diagnosis require explicit evidence that the *next* diagnosis will be coded, and the provided context does not offer sufficient explicit evidence beyond the current diagnosis to guarantee the *next* coding, especially when considering the strict exclusion criteria for general risk factors. Therefore, based on the strict interpretation of the rules provided, the prediction for the *next* visit is No.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 883,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8782,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record provided pertains to a neonate admitted for various perinatal and infectious complications, specifically Septicemia [sepsis] of newborn, being born prematurely (29-30 weeks of gestation), and other associated conditions.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The primary diagnoses are related to the birth process (Single liveborn, born in hospital, delivered by cesarean section; Other preterm infants, 1,000-1,249 grams; 29-30 completed weeks of gestation) and infection (Septicemia [sepsis] of newborn; Narcotics affecting fetus or newborn via placenta or breast milk; Other specified conditions originating in the perinatal period).\n2. **Medications:** No medications were recorded as prescribed.\n3. **Procedures:** The procedures performed were standard for a premature and septic neonate, including Non-invasive mechanical ventilation and Umbilical vein catheterization.\n\nEvaluation against Prediction Criteria:\nThe criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10125,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are heavily focused on cardiovascular issues (Acute on chronic diastolic heart failure, Congestive heart failure, Esophageal reflux, Other chronic pulmonary heart diseases), renal issues (Acute kidney failure), electrolyte imbalances (Hyperosmolality and/or hypernatremia, Hypopotassemia), pulmonary issues (Asthma, Other chronic pulmonary heart diseases), and musculoskeletal issues (Osteoporosis, Other kyphoscoliosis and scoliosis).\n2. **Medications:** The prescribed medications primarily address the acute and chronic conditions listed above: Albuterol, Potassium Chloride, Magnesium Sulfate, Furosemide, Docusate Sodium, 5% Dextrose, Senna, Heparin, Pantoprazole, Acetaminophen, Fexofenadine, Ipratrop",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1021,
+    "completion_tokens": 256
+  }
+}

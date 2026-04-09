@@ -1,0 +1,12 @@
+{
+  "sample_id": 10845,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just general risk factors or the use of medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Diagnosis:** The current diagnoses list includes: Acute cystitis; Pressure ulcer, stage IV; Hyperosmolality and/or hypernatremia; Chronic diastolic heart failure; Congestive heart failure, unspecified; Other late effects of cerebrovascular disease; Unspecified essential hypertension; Vascular dementia, uncomplicated; Cerebral atherosclerosis; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Pressure ulcer, lower back; Adult failure to thrive. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.**\n\n2. **Risk Factors vs. Explicit Evidence:** The patient presents numerous significant risk factors and",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1037,
+    "completion_tokens": 256
+  }
+}

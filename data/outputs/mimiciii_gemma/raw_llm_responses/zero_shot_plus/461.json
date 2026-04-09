@@ -1,0 +1,12 @@
+{
+  "sample_id": 461,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Other and unspecified hyperlipidemia\" present in the patient's current visit record.\n\nThe instructions explicitly state that the prediction should be \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The current visit record clearly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**.\n\nThis explicit diagnosis serves as the strong and explicit evidence required by the guidelines. While the patient has numerous other complex comorbidities (End stage renal disease, Systemic lupus erythematosus, etc.), the presence of a documented hyperlipidemia diagnosis directly satisfies the criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe guidelines caution against predicting \"Yes\" based solely on general risk factors (like hypertension or ESRD) or the use of statins. However, the presence of a *documented* hyperlipidemia diagnosis moves the prediction beyond mere risk assessment and into the realm of explicit clinical coding evidence, which is the primary focus of the instructions.\n\nTherefore, because the current record explicitly codes a hyperlipidemia diagnosis, the prediction for the next visit is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1189,
+    "completion_tokens": 239
+  }
+}

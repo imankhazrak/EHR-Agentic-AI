@@ -1,0 +1,12 @@
+{
+  "sample_id": 2536,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence, and NOT based on general risk factors or the use of certain medications.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made in the current visit record reveals no explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Risk Factors Present:** The patient has several significant risk factors that are commonly associated with lipid disorders, including:\n    * Diabetes with neurological manifestations, type I [juvenile type], uncontrolled.\n    * Diabetes with renal manifestations, type I [juvenile type], uncontrolled.\n    * Unspecified essential hypertension.\n    * Background diabetic retinopathy.\n3. **Medication Profile:** The patient is currently prescribed various medications, including Insulin, Metoprolol, and Valsartan. Crucially, there is **no mention** of lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 256
+  }
+}

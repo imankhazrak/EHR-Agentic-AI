@@ -1,0 +1,12 @@
+{
+  "sample_id": 5087,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" in the patient's current visit record. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), which includes hypercholesterolemia.\n\nFurthermore, the patient's current record provides several supporting factors that reinforce the likelihood of this diagnosis being maintained or explicitly coded in the next visit:\n\n1. **Explicit Lipid Diagnosis:** The presence of \"Pure hypercholesterolemia\" is the strongest and most direct evidence. It meets the strict criteria for answering \"Yes\" because it is an existing, coded lipid disorder.\n2. **Pharmacological Management:** The patient is currently prescribed \"Atorvastatin,\" a medication specifically used to manage hypercholesterolemia and lipid abnormalities. The ongoing use of this targeted therapy strongly suggests that the underlying lipid condition is recognized and actively managed, making a future diagnosis highly probable.\n3. **Comorbidities:** The patient presents with several significant comorbidities known to be associated with dyslipidemia, including:\n    * **Diabetes Mellitus (Type II):** A major risk factor for lipid abnormalities.\n    * **Hypertension:** A common com",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1029,
+    "completion_tokens": 256
+  }
+}

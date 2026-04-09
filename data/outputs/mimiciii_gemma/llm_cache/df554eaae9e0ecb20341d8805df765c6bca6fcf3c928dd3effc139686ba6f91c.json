@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk factors.\n\n**Analysis of Current Visit Record:**\nThe current visit record details several significant diagnoses, medications, and procedures:\n*   **Diagnoses:** Chronic or unspecified duodenal ulcer with hemorrhage, Atrial fibrillation, Chronic airway obstruction, Ulcer of other part of foot, Chronic or unspecified gastric ulcer with hemorrhage, Tobacco use disorder, Diabetes mellitus type II, Unspecified essential hypertension, Old myocardial infarction.\n*   **Medications:** NS, Pantoprazole Sodium, Insulin, Calcium Carbonate, Captopril, Amlodipine Besylate, Prednisone, Pantoprazole, Venlafaxine, Ciprofloxacin Ophth Soln, Gabapentin, Oxycodone (Sustained Release), Promethazine HCl, Acetaminophen, Oxycodone, Calcitonin Salmon, Multivitamins, Vitamin D.\n*   **Procedures:** Other endoscopy",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 978,
+    "completion_tokens": 256
+  }
+}

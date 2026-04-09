@@ -1,0 +1,12 @@
+{
+  "sample_id": 7443,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. The diagnoses listed are related to septicemia, shock, cholangitis, acidosis, acute respiratory failure, diabetes mellitus, hypothyroidism, hypertension, and a history of malignant neoplasm. Since there is no explicit evidence of an existing or actively managed lipid disorder, the prediction for a future diagnosis of \"Disorders of Lipid Metabolism\" is No, despite the patient being high-risk for other conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 114
+  }
+}

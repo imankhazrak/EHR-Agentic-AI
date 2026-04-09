@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This is direct and explicit evidence of a lipid disorder. Furthermore, the patient is currently prescribed \"Simvastatin,\" which is a medication specifically used to manage hypercholesterolemia. Given the explicit diagnosis of a lipid disorder, it is highly likely that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Pure hypercholesterolemia.\" However, the strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed* lipid disorder that is *likely to be diagnosed* in the *next* visit, and that factors like general risk factors or medication use alone are not sufficient. While \"Pure hypercholesterolemia\" is present, the context of the current visit is overwhelmingly dominated by severe infections, sepsis, and end-stage renal disease. The explicit evidence of the lipid disorder is overshadowed, and without further explicit documentation or management plan specifically focused on the lipid profile in the *next* visit, the prediction defaults to \"No\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 256
+  }
+}

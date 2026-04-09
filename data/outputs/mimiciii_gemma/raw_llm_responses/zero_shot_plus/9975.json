@@ -1,0 +1,12 @@
+{
+  "sample_id": 9975,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nA comprehensive analysis of the patient's current visit record reveals a complex presentation dominated by severe acute medical and surgical emergencies:\n1. **Primary Diagnoses:** The patient is suffering from acute vascular insufficiency of the intestine, acute respiratory failure, unspecified septicemia, sepsis, hemorrhage, and various complications related to invasive procedures (e.g., calculus of gallbladder, systemic sclerosis, acidosis).\n2. **Medication Profile:** The prescribed medications are overwhelmingly focused on managing these acute crises:\n    * **Infection/Sepsis Management:** Vancomycin, Ciprofloxacin IV, Acyclovir, Meropenem, Chlorhexidine Gluconate.\n    * **Respiratory/Metabolic Support:** Albuterol, Amino Acids 4.25% W/ Dextrose 5%, Sodium Bicarbonate, Alteplase.\n    * **Pain/Sedation",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1334,
+    "completion_tokens": 256
+  }
+}

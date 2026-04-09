@@ -1,0 +1,12 @@
+{
+  "sample_id": 11861,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic cardiovascular, renal, and infectious/neoplastic issues. The diagnoses include Atrial fibrillation, Acute on chronic combined systolic and diastolic heart failure, Acute kidney failure, and various complications related to chronic disease and cancer treatment. The medications prescribed are primarily for managing these severe conditions (e.g., Diltiazem, Metoprolol, Furosemide, Amiodarone).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. While the patient has multiple cardiovascular risk factors (hypertension, heart failure, coronary atherosclerosis), the instructions strictly forbid predicting a future diagnosis based solely on these risk factors or the use of general cardiovascular medications.\n\nThe demonstration cases show that a diagnosis of lipid disorder is coded when there is explicit evidence of the disorder itself (e.g., Case 2: Pure hypercholesterolemia). Since the current record does not contain this explicit evidence, despite the high-risk profile, the prediction must be \"No\" according to the strict guidelines provided. The presence of cardiovascular disease does not automatically translate",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3770,
+    "completion_tokens": 256
+  }
+}

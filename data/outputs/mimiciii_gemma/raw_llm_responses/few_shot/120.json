@@ -1,0 +1,12 @@
+{
+  "sample_id": 120,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to multi-organ failure, primarily involving the liver, cardiovascular system, and respiratory system. The key diagnoses include Cirrhosis of liver without mention of alcohol, Hepatic encephalopathy, Congestive heart failure, Portal hypertension, and various acute infections and respiratory failures.\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nThe patient is high-risk due to the presence of Diabetes mellitus type II, which is a known comorbidity associated with dyslipidemia. Furthermore, the patient is on various medications, including Insulin, which is often used in conjunction with lipid management. However, the instructions explicitly state that the **use of statins (e.g., Atorvastatin) or general risk factors (e.g., diabetes)** alone are **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder coded in the current record, the prediction must be \"No,\" adhering strictly to the provided guidelines. The focus of the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3881,
+    "completion_tokens": 256
+  }
+}

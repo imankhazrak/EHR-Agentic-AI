@@ -1,0 +1,12 @@
+{
+  "sample_id": 9747,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder, which strongly supports the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe key piece of evidence is the diagnosis: **\"Other and unspecified hyperlipidemia\"**.\n\nAccording to the instructions, the prediction should be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The presence of a coded diagnosis of hyperlipidemia in the current record meets this criterion.\n\nFurthermore, the patient is receiving **\"Simvastatin\"** as a medication. While the instructions caution against predicting \"Yes\" based *only* on statin use, the presence of the *coded diagnosis* of hyperlipidemia provides the necessary explicit evidence to override this caution. The statin is a treatment for the existing, coded condition.\n\nThe other diagnoses and medications (e.g., Coronary atherosclerosis, Old myocardial infarction, Unspecified essential hypertension, Atrial fibrillation) are significant risk factors for dyslipidemia, but they alone are insufficient to predict the future diagnosis. The explicit diagnosis of **\"Other and unspecified hyperlipidemia\"** is the definitive factor driving the \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3657,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8022,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain any explicit evidence of a diagnosed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient's record includes several high-risk factors and comorbid conditions commonly associated with lipid disorders, such as Unspecified essential hypertension, Human immunodeficiency virus [HIV] disease, and Chronic hepatitis C without mention of hepatic coma. Furthermore, the patient is prescribed medications that are often used in the management of cardiovascular risk factors, such as Metoprolol and Atazanavir. However, according to the strict instructions, the mere presence of hypertension, HIV, or the use of cardiovascular/antiretroviral medications alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since explicit evidence of an existing or actively managed lipid disorder is absent in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3852,
+    "completion_tokens": 187
+  }
+}

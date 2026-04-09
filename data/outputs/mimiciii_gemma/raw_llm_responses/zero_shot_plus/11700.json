@@ -1,0 +1,12 @@
+{
+  "sample_id": 11700,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, while strictly excluding predictions based on general risk factors, statin use, or cardiovascular diseases alone.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Evidence:** A thorough review of the diagnoses made in the current visit record reveals no explicit mention of any lipid abnormality. The diagnoses are overwhelmingly focused on severe infectious processes (Septicemia, Septic Shock, UTI, C. difficile infection, Proteus infection), severe systemic inflammation (Severe sepsis), neurological issues (Secondary malignant neoplasm of brain and spinal cord, Other convulsions), and associated metabolic/infectious complications (B-complex deficiencies, Magnesium disorders, Esophageal reflux).\n2. **Medication Profile Review:** The medication list includes **Atenolol**, which is a beta-blocker, and **Ciprofloxacin HCl**, which is an antibiotic. While the record does not explicitly list a lipid-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1127,
+    "completion_tokens": 256
+  }
+}

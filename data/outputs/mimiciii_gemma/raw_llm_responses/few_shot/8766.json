@@ -1,0 +1,12 @@
+{
+  "sample_id": 8766,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe acute and chronic respiratory issues, infectious processes (Viral hepatitis B, etc.), metabolic derangements (Hyperosmolality/Hypernatremia, Secondary Diabetes Mellitus), and musculoskeletal problems (Pathologic fracture, Osteoporosis).\n\nCrucially, the current record **lacks any explicit evidence** of an existing or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\n1. **Review of Diagnoses:** The diagnoses list focuses on:\n    * Respiratory: Obstructive chronic bronchitis, Chronic respiratory failure, Pulmonary collapse.\n    * Infectious/Metabolic: Viral hepatitis B, Secondary diabetes mellitus, Hyperosmolality/Hypernatremia.\n    * Musculoskeletal: Pathologic fracture, Osteoporosis.\n    * Other: RLS, Adrenal steroid use.\n    * *No mention of lipid abnormalities.*\n\n2. **Review of Medications:** The medication list is extensive, covering:\n    * Respiratory/Pain: Ipratropium Bromide, Albuterol, Oxycodone, MethylPREDNISolone.\n    * Infectious: Vancomycin, Sulfameth/Trimethop",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 256
+  }
+}

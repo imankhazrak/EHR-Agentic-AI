@@ -1,0 +1,12 @@
+{
+  "sample_id": 9081,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record, beyond general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current diagnoses list numerous severe comorbidities, including:\n*   Morbid obesity (BMI 40.0-44.9)\n*   Diabetes with unspecified complication, type II\n*   Chronic systolic heart failure\n*   Coronary atherosclerosis of unspecified type of vessel\n*   Hypertensive chronic kidney disease\n*   Obstructive sleep apnea (adult)(pediatric)\n\nWhile these conditions are *strongly associated* with hyperlipidemia and lipid disorders, the record **does not explicitly code** a diagnosis such as \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipoid Metabolism Disorder.\" The presence of obesity and diabetes are risk factors, not the explicit diagnosis itself, according to the instructions.\n\n2. **Analysis of Medications for Explicit Lipid Management:**\nThe patient is prescribed **Atorvastatin** and **Simvastatin**. These are lipid-lowering agents. However, the instructions explicitly state",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1533,
+    "completion_tokens": 256
+  }
+}

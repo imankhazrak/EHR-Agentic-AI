@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly lists diagnoses related to Cholangitis, Cirrhosis of liver, Diabetes mellitus, Unspecified acquired hypothyroidism, and Esophageal reflux. The medications prescribed are for managing these conditions, as well as for managing the liver transplant and associated infections (e.g., Mycophenolate Mofetil, Cyclosporine, Heparin).\n\nCrucially, the current visit record **does not** contain any explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses and medications are focused on managing the existing liver disease, diabetes, and transplant status. Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, even though the patient is high-risk for general cardiovascular issues.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 659,
+    "completion_tokens": 186
+  }
+}

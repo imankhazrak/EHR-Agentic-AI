@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and NOT based on general risk factors or the use of specific medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe chronic liver disease (Cirrhosis, Hepatic encephalopathy, Hepatorenal syndrome, Chronic hepatitis C, etc.), severe infection (Pneumonia, UTI), and malignancy (Malignant neoplasm of liver). While severe liver disease is a major risk factor for various metabolic disturbances, none of the listed diagnoses explicitly state a lipid disorder (e.g., hyperlipidemia, hypercholesterolemia, or dyslipoproteinemia).\n2. **Medications:** The medication list is extensive and primarily focused on managing the severe liver failure, infection, and associated complications (e.g., Lactulose, Rifaximin, Ciprofloxacin, Ceftria",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1152,
+    "completion_tokens": 256
+  }
+}

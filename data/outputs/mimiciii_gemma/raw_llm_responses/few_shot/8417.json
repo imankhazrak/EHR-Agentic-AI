@@ -1,0 +1,12 @@
+{
+  "sample_id": 8417,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by diagnoses related to severe acute and chronic respiratory and cardiac conditions, as well as infectious processes. The key diagnoses include:\n*   **Respiratory/Cardiac:** Acute on chronic diastolic heart failure, Congestive heart failure, unspecified, Chronic airway obstruction, not elsewhere classified, Acute respiratory failure, Atrial fibrillation, Peripheral vascular disease, unspecified.\n*   **Infectious/Metabolic:** Intestinal infection due to Clostridium difficile, Candidiasis of mouth, Personal history of malignant neoplasm of bronchus and lung, Osteoporosis, Restless legs syndrome (RLS).\n\n**Analysis against Prediction Criteria:**\n\n1.  **Absence of Explicit Lipid Disorder Evidence:** The current diagnoses list does **not** explicitly include any diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient is high-risk due to multiple cardiovascular comorbidities (CHF, AFib, PVD), which are known risk factors for lipid disorders, but the *diagnosis* itself is absent from the record.\n2.  **Exclusion of Insufficient Evidence:** According to the strict instructions, the mere presence of cardiovascular diseases (CHF, AFib) or the use of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3714,
+    "completion_tokens": 256
+  }
+}

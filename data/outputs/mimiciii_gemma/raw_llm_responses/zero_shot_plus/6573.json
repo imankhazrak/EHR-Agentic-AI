@@ -1,0 +1,12 @@
+{
+  "sample_id": 6573,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, while strictly excluding predictions based only on general risk factors, statin use, or cardiovascular diseases.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made (Malignant mast cell tumors, Other primary cardiomyopathies, Abdominal pain, Chest pain, Acute myocardial infarction, Internal hemorrhoids) and the medications prescribed does not contain any explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities:\n    * **Cardiovascular Disease:** Acute myocardial infarction and other primary cardiomyopathies are present.\n    * **Hypertension/Cardiovascular Management:** The patient is on Lisinopril and Nitroglycerin Oint. 2%, indicating",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1069,
+    "completion_tokens": 256
+  }
+}

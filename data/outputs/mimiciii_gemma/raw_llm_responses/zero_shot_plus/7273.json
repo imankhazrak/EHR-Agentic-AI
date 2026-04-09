@@ -1,0 +1,12 @@
+{
+  "sample_id": 7273,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made, medications prescribed, and procedures performed in the current visit record, there is **no explicit mention** of a lipid disorder diagnosis (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities, including Congestive Heart Failure (CHF), Osteoporosis, and Malignant Neoplasms. CHF is a condition often associated with dyslipidemia, and the patient is on Furosemide and Metoprolol, which are used to manage CHF. However, the presence of CHF alone, or the use of these medications, does not constitute explicit evidence of a lipid disorder diagnosis.\n3. **Medication Profile:** The medication list includes Furosemide, Metoprolol,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1330,
+    "completion_tokens": 256
+  }
+}

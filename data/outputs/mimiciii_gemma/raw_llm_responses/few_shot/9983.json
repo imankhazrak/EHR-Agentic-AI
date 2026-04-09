@@ -1,0 +1,12 @@
+{
+  "sample_id": 9983,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is overwhelmingly focused on severe, acute respiratory failure, multiple infectious processes (Pneumonia, Tuberculosis, Sepsis), and critical care complications (Mechanical ventilation, Delirium). While the patient has several significant comorbidities, including **Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled** and **Unspecified essential hypertension**, these conditions are general risk factors for dyslipidemia, not explicit evidence of an existing or actively managed lipid disorder (like hypercholesterolemia or hyperlipidemia) that would mandate a future diagnosis coding. The medication profile includes **Insulin** for diabetes management, but there are no explicit lipid-lowering agents such as statins or fibrates prescribed for a diagnosed lipid abnormality. Therefore, based strictly on the rule that explicit lipid disorder evidence must be present, the prediction must be \"No\", despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4068,
+    "completion_tokens": 184
+  }
+}

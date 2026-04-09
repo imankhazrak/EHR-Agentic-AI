@@ -1,0 +1,12 @@
+{
+  "sample_id": 7893,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on **respiratory and pulmonary conditions** (Other diseases of trachea and bronchus; Chronic respiratory failure; Chronic airway obstruction, not elsewhere classified; Other chronic pulmonary heart diseases; Obstructive sleep apnea (adult)(pediatric); Tracheostomy status; Gastrostomy status).\nThere is a diagnosis of **Hypertensive chronic kidney disease** and **Chronic kidney disease**.\nThere is a diagnosis of **Depressive disorder**.\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder** listed in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed several medications, including **Heparin, Metoprolol Tartrate, Furosemide, Famotidine, Lorazepam, Fentanyl Cit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 256
+  }
+}

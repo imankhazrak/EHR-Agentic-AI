@@ -1,0 +1,12 @@
+{
+  "sample_id": 4839,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Presence of Comorbidities:** The patient has several significant comorbidities that are *associated* with lipid disorders, including:\n    * Diabetes mellitus without mention of complication, type II or unspecified type.\n    * Unspecified essential hypertension.\n    * Coronary atherosclerosis of native coronary artery.\n    * Chronic systolic heart failure.\n    * Anemia, unspecified.\n    * Other and unspecified alcohol dependence, unspecified.\n\n2. **Medication Profile:** The patient is prescribed several medications, including:\n    * Warfarin (an anticoagulant).\n    * Metoprolol Tartrate (a beta-blocker).\n    * Captopril (an ACE inhibitor).\n    * Insulin (used for diabetes management).\n    * Heparin Sodium/Heparin (anticoagulants).\n    * Pantoprazole Sodium (a proton pump inhibitor).\n\n3. **Procedures:** The patient has undergone",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1343,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2091,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, cardiovascular diseases, or the use of statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has diagnoses related to severe cardiovascular disease (Coronary atherosclerosis, Intermediate coronary syndrome, Congestive heart failure, Atrial fibrillation, etc.), hypertension, and Gout. While these conditions are strongly associated with dyslipidemia, the record **does not explicitly list** any diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Medications:** The record states \"None recorded\" for medications prescribed. Therefore, there is no evidence of ongoing lipid-lowering therapy (like statins or fibrates) that would strongly suggest an actively managed lipid disorder requiring a future diagnosis.\n3. **Procedures:** The procedures performed are all related to complex cardiac surgery and diagnostics (Coronary bypass, Cardiac catheterization, etc.). These procedures confirm severe cardiovascular pathology but do",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 923,
+    "completion_tokens": 256
+  }
+}

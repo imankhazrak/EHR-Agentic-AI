@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to cardiovascular events (Subendocardial infarction, Aortocoronary bypass status, Congestive heart failure), infectious diseases (Pneumonia, Candidal esophagitis), kidney issues (Acute kidney failure, Complications of transplanted kidney), and uncontrolled diabetes (Diabetes with neurological manifestations, type I [juvenile type], uncontrolled, Diabetes with ketoacidosis, type I [juvenile type], uncontrolled). While the patient is prescribed Atorvastatin, which is a lipid-lowering medication, and has a history of cardiovascular disease, the record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly mandate a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient to predict a future diagnosis of a lipid disorder.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 846,
+    "completion_tokens": 196
+  }
+}

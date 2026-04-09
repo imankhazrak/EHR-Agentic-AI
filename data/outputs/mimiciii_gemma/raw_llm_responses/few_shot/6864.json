@@ -1,0 +1,12 @@
+{
+  "sample_id": 6864,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe gastrointestinal issues (Other specified disorders of intestine; Cyst and pseudocyst of pancreas; Mechanical complication of colostomy and enterostomy; Portal hypertension; Chronic pancreatitis) and acute vascular events (Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity). The medication profile includes several agents for managing these conditions, such as Alteplase, Magnesium Sulfate, Heparin, and various antibiotics (Levofloxacin, Vancomycin, Linezolid).\n\nCrucially, while the patient has Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, this diagnosis alone, along with the presence of other high-risk comorbidities like portal hypertension and chronic pancreatitis, does not constitute explicit evidence of an active or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly lead to a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict guidelines provided.\n\nThe medication profile does include **Cholestyramine**, which is a bile acid sequestrant used in the management of hyperlipidemia. However, the guidelines explicitly state that",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3793,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 340,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or related conditions.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The recorded diagnoses include Pneumonitis, Cardiomyopathies, Disturbances of amino-acid transport, Diastolic heart failure, Hypoxemia, Atrial fibrillation, Chronic kidney disease, Restless legs syndrome, Epistaxis, Esophageal reflux, and Benign neoplasm of pancreas. **Crucially, none of the explicit diagnoses listed are \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other direct diagnosis of a lipid disorder.**\n2. **Medications:** The patient is prescribed several medications, including Captopril, MetRONIDAZOLE, Levofloxacin, Furosemide, Aspirin, Allopurinol, Ropinirole HCl, Oxycodone SR, Gabapentin, Multivitamins, Senna, Docusate Sodium,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1030,
+    "completion_tokens": 256
+  }
+}

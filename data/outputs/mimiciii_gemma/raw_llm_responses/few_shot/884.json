@@ -1,0 +1,12 @@
+{
+  "sample_id": 884,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe, acute, life-threatening conditions, primarily related to respiratory failure, trauma (diaphragmatic hernia, pneumothorax), and cardiac events (cardiac arrest, heart valve replacement).\n\n1. **Analysis of Current Diagnoses and Procedures:** The diagnoses listed (Acute respiratory failure, Perforation of esophagus, Spontaneous tension pneumothorax, Cardiac arrest, Diaphragmatic hernia) and the procedures performed (Continuous invasive mechanical ventilation for 96+ hours, Thoracentesis, Repair of diaphragmatic hernia) point to a critical care trajectory focused on managing acute organ failure and trauma.\n\n2. **Evaluation for Explicit Lipid Disorder Evidence:** The core requirement for predicting a \"Yes\" is the presence of *explicit* evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) or active, explicit management of such a condition.\n    *   Reviewing the diagnoses made, there is **no explicit mention** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n    *   The patient has a history of venous thrombosis and embolism, which is a vascular issue, but this does not equate to a primary",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3872,
+    "completion_tokens": 256
+  }
+}

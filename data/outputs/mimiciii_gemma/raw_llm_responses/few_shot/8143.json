@@ -1,0 +1,12 @@
+{
+  "sample_id": 8143,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, non-lipid-related critical illnesses. The primary diagnoses include Acute kidney failure, Chronic hepatitis C with hepatic coma, Urinary tract infection, Glucocorticoid deficiency, Hyposmolality and/or hyponatremia, Acidosis, Hypercalcemia, Cirrhosis, Systemic lupus erythematosus, Asymptomatic HIV infection, Cervicalgia, and Backache.\n\nCrucially, the current diagnoses list **does not explicitly include** any diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific form of lipid disorder (CCS category 53).\n\nThe medications prescribed include several drugs that are commonly used in critical care and can affect metabolism (e.g., Spironolactone, Lactulose, Dexamethasone, Furosemide), and some are used for HIV management (Lopinavir-Ritonavir, Emtricitabine, Tenofovir), but the presence of these medications alone, or the presence of general risk factors like Cirrhosis or HIV, **does not meet the strict criteria** for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" as per the instructions.\n\nThe instructions explicitly state that factors such as",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3625,
+    "completion_tokens": 256
+  }
+}

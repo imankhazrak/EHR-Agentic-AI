@@ -1,0 +1,12 @@
+{
+  "sample_id": 7601,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are primarily related to severe acute infections (Meningitis, Acute mastoiditis) and neurological conditions (Generalized convulsive epilepsy, Other bipolar disorders). The medications prescribed are overwhelmingly directed towards managing these acute conditions (Acyclovir, CeftriaXONE, Vancomycin, Propofol, etc.). While the patient is critically ill, and critical illness itself is a known risk factor for metabolic disturbances, the instructions explicitly state that general risk factors and the mere use of medications like statins (which are not present in this record) are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\" according to the strict guidelines provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3594,
+    "completion_tokens": 199
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10706,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous critical conditions, including severe infections (Diverticulosis, Peritoneal abscess, Pneumonia), organ failure (Acute kidney failure, Encephalopathy), and cardiovascular instability (Cardiac arrest, Atrial fibrillation, CHF). The patient is undergoing complex life support and management.\n\nHowever, the record **lacks any explicit evidence** of a primary or actively managed lipid disorder, such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed (e.g., Amiodarone, Diltiazem) are used for cardiac and infectious management, not specifically for lipid control. The procedures performed and diagnoses listed are overwhelmingly related to trauma, infection, and organ failure.\n\nTherefore, based strictly on the criteria provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, even though the patient is high-risk for general cardiovascular issues.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1073,
+    "completion_tokens": 211
+  }
+}

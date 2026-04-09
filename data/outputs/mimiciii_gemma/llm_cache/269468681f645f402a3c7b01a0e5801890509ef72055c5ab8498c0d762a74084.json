@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence of an existing or actively managed lipid disorder, while excluding predictions based solely on general risk factors, statin use, or cardiovascular diseases.\n\n**Analysis of Current Visit Record:**\n\n1. **Diagnoses Made:** The current diagnoses are heavily focused on:\n    * Gastrointestinal issues (Chronic or unspecified duodenal ulcer with hemorrhage, Acidosis).\n    * Renal/Transplant issues (Complications of transplanted kidney, Acute kidney failure, Aortocoronary bypass status).\n    * Infectious/Systemic issues (Urinary tract infection, Major depressive affective disorder).\n    * **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the current diagnoses.**\n\n2. **Medications Prescribed:** The medication list includes several agents relevant to metabolic or cardiovascular health:\n    *",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1031,
+    "completion_tokens": 256
+  }
+}

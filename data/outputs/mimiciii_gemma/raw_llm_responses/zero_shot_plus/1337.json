@@ -1,0 +1,12 @@
+{
+  "sample_id": 1337,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, such as a documented hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on the use of statins, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses list includes several severe, non-lipid-related conditions: Acute pericarditis, Atrial fibrillation, Congestive heart failure, Hyposmolality, Other primary cardiomyopathies, Epilepsy, and Diarrhea. While these conditions (especially CHF and AF) are strongly associated with cardiovascular risk factors that often include dyslipidemia, the diagnoses themselves do not explicitly state a lipid abnormality (e.g., hypercholesterolemia or hyperlipidemia).\n2. **Medications:** The patient is prescribed **Atorvastatin**. This medication is a lipid-lowering agent (statin). However, according to the strict instructions, the mere prescription of a statin is **NOT** sufficient evidence to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1047,
+    "completion_tokens": 256
+  }
+}

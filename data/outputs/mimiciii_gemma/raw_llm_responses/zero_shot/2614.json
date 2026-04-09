@@ -1,0 +1,12 @@
+{
+  "sample_id": 2614,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, multi-system critical illness, including severe renal failure (ESRD/CKD Stage V), multiple cardiac issues (CHF, Atrial Fibrillation, Mitral Valve Disorders), severe infections (Pneumonia, C. difficile), and severe complications (Shock, Encephalopathy, Diabetes complications). While the patient has multiple diagnoses related to diabetes (which can be a risk factor for lipid disorders), and the patient is on various medications, there is **no explicit diagnosis or clear ongoing management documented in the current record that points specifically to an existing or actively managed lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or a specific lipid panel abnormality). Therefore, based strictly on the evidence required, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 905,
+    "completion_tokens": 177
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Acute pancreatitis; Acute respiratory failure; Methicillin susceptible pneumonia due to Staphylococcus aureus; Bacteremia; Alcohol withdrawal delirium; Foreign body in trachea; Chronic pancreatitis; Esophageal reflux; Pure hypercholesterolemia; Infection with microorganisms resistant to penicillins; [ICD9-DX:0414]; Unspecified essential hypertension; Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus; Unspecified sleep apnea; Asthma, unspecified type, unspecified; Depressive disorder, not elsewhere classified; Tachycardia, unspecified; Other and unspecified alcohol dependence, episodic; Inhalation and ingestion of other object causing obstruction of respiratory tract or suffocation; Hypopotassemia; Diarrhea; Personal history of tobacco use; Dysphagia, unspecified
+- Medications prescribed: LR; NS; D5 1/2NS; Iso-Osmotic Dextrose; Insulin; Clonazepam; Vancomycin; MetRONIDAZOLE (FLagyl); Albuterol 0.083% Neb Soln; Sodium Chloride 0.9%  Flush; Albuterol MDI; Chlorhexidine Gluconate 0.12% Oral Rinse; Methadone; Meropenem; Piperacillin-Tazobactam Na; D5W; NS (Mini Bag Plus); Loperamide; Heparin Flush (10 units/ml); Fentanyl Citrate; Linezolid; Metoprolol Tartrate; Metoclopramide; Furosemide; Papain 2.5 % Solution; Lorazepam; Ciprofloxacin IV; Sodium Bicarbonate; Ciprofloxacin HCl; Senna; Nystatin Oral Suspension; Pantoprazole; Acetaminophen; Ipratropium Bromide MDI; Quetiapine Fumarate; Tizanidine; BuPROPion; Docusate Sodium (Liquid); Soln; SW; Potassium Chloride; Magnesium Sulfate; Clonidine Patch 0.3 mg/24 hr; DiphenhydrAMINE; Aspirin; Dexmedetomidine; Midazolam; Phenylephrine; Norepinephrine; Potassium Phosphate
+- Procedures performed: Temporary tracheostomy; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Arterial catheterization; Fiber-optic bronchoscopy; Venous catheterization, not elsewhere classified; Replacement of tracheostomy tube
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

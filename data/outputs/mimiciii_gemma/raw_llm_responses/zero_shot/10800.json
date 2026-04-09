@@ -1,0 +1,12 @@
+{
+  "sample_id": 10800,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. The diagnoses listed relate to intestinal infection, diverticulosis, vascular insufficiency, benign neoplasm, gallbladder calculus, and coronary atherosclerosis. Since there is no explicit evidence of an existing or actively managed lipid disorder, the prediction for a future diagnosis of \"Disorders of Lipid Metabolism\" is No, despite the patient having other significant comorbidities.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 521,
+    "completion_tokens": 101
+  }
+}

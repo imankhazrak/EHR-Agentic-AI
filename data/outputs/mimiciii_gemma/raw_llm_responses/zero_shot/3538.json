@@ -1,0 +1,12 @@
+{
+  "sample_id": 3538,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly lists diagnoses of Intracerebral hemorrhage and Acute respiratory failure, and the prescribed medications and procedures are related to managing these acute conditions (e.g., mechanical ventilation, anti-hypertensives, steroids, etc.). There is no explicit evidence within the provided record\u2014such as abnormal lipid panel results, a diagnosis of hypercholesterolemia, or hyperlipidemia\u2014to suggest that \"Disorders of Lipid Metabolism\" is present or is likely to be coded in the next hospital visit. The management focus is entirely on the acute neurological and respiratory crises.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 562,
+    "completion_tokens": 126
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition is actively managed and highly likely to be coded again in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and explicit evidence of a lipid abnormality (CCS category 53).\n\n2. **Active Lipid Management:** The presence of this diagnosis is coupled with the prescription of **\"Simvastatin\"** (a statin), which is the standard pharmacological intervention for hypercholesterolemia. This confirms that the condition is not merely a risk factor but an actively managed, coded diagnosis.\n\n3. **Supporting Comorbidities and Risk Factors:** While the primary driver for the \"Yes\" prediction is the explicit diagnosis, the record also contains several significant comorbidities and risk factors that support the ongoing need for lipid management:\n    * **Cardiovascular Disease:** The patient has diagnoses of **\"Coronary atherosclerosis of native coronary artery\"** and **\"Unspecified essential hypertension\"**, which are major risk factors for and often coexist with hypercholesterolemia.\n    *",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1353,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis \"Other and unspecified hyperlipidemia.\" Since the criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require strong and explicit evidence of an existing or actively managed lipid disorder, the presence of this diagnosis strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record lists the diagnosis \"Other and unspecified hyperlipidemia.\" However, the strict rules for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" state that the answer should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed* lipid disorder, and that factors like general risk factors are NOT sufficient. While \"hyperlipidemia\" is a lipid disorder, the provided context implies that the prediction must be based on evidence *beyond* a simple listed diagnosis if that diagnosis is not explicitly tied to a specific, ongoing, complex management plan that overrides the general risk factor exclusion. Therefore, based on the strict interpretation of the exclusion criteria provided, the prediction is \"No.\"\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 922,
+    "completion_tokens": 256
+  }
+}

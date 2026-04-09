@@ -1,0 +1,12 @@
+{
+  "sample_id": 9064,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like diabetes or hypertension.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific diagnosis falling under \"Disorders of Lipid Metabolism.\"\n2. **Comorbid Conditions:** The patient has numerous severe comorbidities, including:\n    * Diabetes with ketoacidosis, type II or unspecified type, uncontrolled.\n    * Unspecified essential hypertension.\n    * Severe nonproliferative diabetic retinopathy.\n    * Hypotension, unspecified.\n    * Alcohol abuse, unspecified.\n    * Unspecified essential hypertension.\n    * These conditions (Diabetes, Hypertension) are strong *risk factors* for lipid disorders, but according to the instructions, these risk factors alone are **not sufficient** to predict a future diagnosis of the disorder itself.\n3. **Medication Profile:** The prescribed medications include Insulin, various antibiotics (Vancomycin, Cephalexin, Levofloxacin,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1229,
+    "completion_tokens": 256
+  }
+}

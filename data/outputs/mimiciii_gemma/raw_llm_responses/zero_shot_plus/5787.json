@@ -1,0 +1,12 @@
+{
+  "sample_id": 5787,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The instructions strictly mandate that a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder, such as a specific diagnosis of hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Review of Diagnoses:** The current diagnoses include several significant comorbidities: Chronic or unspecified duodenal ulcer with hemorrhage, Acute posthemorrhagic anemia, Pneumonia, Hyperosmolality and/or hypernatremia, Chronic kidney disease Stage V, Hypertensive chronic kidney disease, Diabetes mellitus type II, and Other persistent mental disorders. While Diabetes Mellitus and Hypertension are known risk factors for dyslipidemia, their presence alone, as per the strict instructions, is insufficient to warrant a \"Yes\" prediction for a future diagnosis of a lipid disorder.\n2. **Review of Medications:** The medication list includes several agents: NIFEdipine CR (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1139,
+    "completion_tokens": 256
+  }
+}

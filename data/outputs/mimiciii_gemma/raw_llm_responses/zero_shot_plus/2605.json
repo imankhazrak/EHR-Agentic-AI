@@ -1,0 +1,12 @@
+{
+  "sample_id": 2605,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on whether explicit evidence of an existing or actively managed lipid disorder is present, not just general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly related to severe, acute cardiovascular and vascular emergencies: Mechanical complication of other vascular device, implant, and graft; Aortic valve disorders; Pulmonary collapse; Dissection of aorta, thoracic; Thoracic aneurysm, ruptured; etc. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and primarily supports critical care management for severe cardiovascular instability (e.g., Nitroglycerin, Nitroprusside Sodium, Phenylephrine HCl, Norepinephrine, Metoprolol, Labetalol HCl, Furosemide, etc.).\nCrucially, the patient is prescribed **Atorvastatin**. While Atorvastatin is a statin used to manage",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1177,
+    "completion_tokens": 256
+  }
+}

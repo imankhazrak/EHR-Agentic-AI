@@ -1,0 +1,12 @@
+{
+  "sample_id": 3747,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record contains numerous diagnoses and medications related to cardiovascular issues (Percutaneous transluminal coronary angioplasty status, Atorvastatin, Metolazone, Doxazosin, Aspirin, Heparin), diabetes (Type I), and various other systemic conditions (Esophageal reflux, Acute edema of lung, etc.). While the patient is prescribed Atorvastatin, which is used to manage lipid levels, the record does not contain an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly warrant coding a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 951,
+    "completion_tokens": 164
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3684,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), and explicitly exclude prediction based solely on general risk factors, statin use, or cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on severe, complex cardiovascular and infectious conditions: Mitral valve disorders, Diseases of tricuspid valve, Constrictive pericarditis, Congestive heart failure, Hemorrhage, Cirrhosis of liver, and severe infections (Staphylococcus aureus, resistant to penicillins).\n2. **Medications:** The record explicitly states that **None** of the medications were recorded. Therefore, there is no evidence of active lipid-lowering therapy (like statins or fibrates) that would strongly suggest ongoing management of a lipid disorder.\n3. **Procedures:** The procedures performed are extensive and relate to severe cardiac and respiratory interventions (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 975,
+    "completion_tokens": 256
+  }
+}

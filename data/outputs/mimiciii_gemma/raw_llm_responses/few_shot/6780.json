@@ -1,0 +1,12 @@
+{
+  "sample_id": 6780,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit diagnosis of a lipid disorder, such as hyperlipidemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. While the patient has numerous other serious comorbidities (e.g., End stage renal disease, Chronic systolic heart failure), the explicit coding of hyperlipidemia overrides the need to rely on general risk factors or the use of lipid-lowering medications (like Atorvastatin) alone. Therefore, the explicit diagnosis of hyperlipidemia strongly supports a \"Yes\" prediction for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3790,
+    "completion_tokens": 146
+  }
+}

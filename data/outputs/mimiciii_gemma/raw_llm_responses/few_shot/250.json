@@ -1,0 +1,12 @@
+{
+  "sample_id": 250,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care events unrelated to primary lipid metabolism disorders. The key diagnoses include Subdural hemorrhage following injury, Accidental fall, Atrial fibrillation, Acute kidney failure, Hypertensive chronic kidney disease (Stage V/ESRD), Acute posthemorrhagic anemia, Cardiac arrest, and Diabetes with renal manifestations.\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the medication list is empty, meaning there is no current management or prescription of lipid-lowering agents such as statins or fibrates.\n\nAccording to the strict instructions provided, a prediction of \"Yes\" can **only** be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. The presence of comorbid conditions like Diabetes and Hypertension are risk factors, but they are explicitly stated as **insufficient** on their own to predict a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit.\n\nTherefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3558,
+    "completion_tokens": 246
+  }
+}

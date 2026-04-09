@@ -1,0 +1,12 @@
+{
+  "sample_id": 10731,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record is dominated by severe acute and chronic conditions unrelated to primary lipid metabolism disorders. The primary diagnoses include Acute pancreatitis, Occlusion and stenosis of carotid artery with cerebral infarction, Acute cholecystitis, Iatrogenic cerebrovascular infarction or hemorrhage, Hemorrhage complicating a procedure, Acute posthemorrhagic anemia, Cardiac complications, not elsewhere classified, Subendocardial infarction, initial episode of care, Iatrogenic pneumothorax, Other and unspecified infection due to central venous catheter, Other specified diseases of pancreas, Malnutrition of moderate degree, and Phlebitis and thrombophlebitis of upper extremities, unspecified.\n\nCrucially, while the patient is prescribed Simvastatin, which is a lipid-lowering agent, the instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality coded in the current visit record.\n\nThe presence of Simvastatin is a treatment for a potential lipid issue, but without an explicit diagnosis of a lipid disorder in the current record, and adhering strictly to the rule that statin use alone",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3867,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Malignant neoplasm of liver, primary; Portal hypertension; Iatrogenic pneumothorax; Other ascites; Atrial fibrillation; Hyperpotassemia; Alcoholic cirrhosis of liver; Other iatrogenic hypotension; Oliguria and anuria; Other specified disorders of stomach and duodenum
+- Medications prescribed: Furosemide; Metoprolol Tartrate; Neutra-Phos; Spironolactone; Morphine Sulfate; Heparin Flush (10 units/ml); Vial; 5% Dextrose; 0.9% Sodium Chloride; Pantoprazole; Phenylephrine; Calcium Gluconate; Pneumococcal Vac Polyvalent; Multivitamins; Sodium Chloride 0.9%  Flush; Heparin; Thiamine; FoLIC Acid; D5 1/2NS; Magnesium Sulfate; Sodium Phosphate; SW; Docusate Sodium; OxycoDONE (Immediate Release); Potassium Chloride; Nadolol; Senna; 0.9% Sodium Chloride (Mini Bag Plus); Ampicillin-Sulbactam; Albumin 5% (25g / 500mL); Glucagon
+- Procedures performed: Partial hepatectomy
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

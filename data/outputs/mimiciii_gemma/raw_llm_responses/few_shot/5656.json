@@ -1,0 +1,12 @@
+{
+  "sample_id": 5656,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is sufficient evidence to predict a future diagnosis, even if other high-risk factors (like Coronary atherosclerosis or Atrial fibrillation) are present. The presence of this specific diagnosis (\"Other and unspecified hyperlipidemia\") meets the threshold for strong and explicit evidence required by the instructions. Therefore, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 130
+  }
+}

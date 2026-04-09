@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are overwhelmingly related to acute intoxication, withdrawal, poisoning, and psychiatric/neurological issues:\n- Poisoning by aromatic analgesics, not elsewhere classified\n- Acute respiratory failure\n- Alcohol withdrawal\n- Suicide and self-inflicted poisoning by analgesics, antipyretics, and antirheumatics\n- Acute alcoholic intoxication in alcoholism, continuous\n- Attention deficit disorder with hyperactivity\n- Abrasion or friction burn of elbow, forearm, and wrist, without mention of infection\n- Suicide and self-inflicted injury by cutting and piercing instrument\n- Unspecified psychosis\n- Unspecified episodic mood disorder\n\nThe patient's medications and procedures are focused on acute stabilization and detoxification:\n- Medications include Fentanyl Citrate, Thiamine, Midazolam, Acetylcysteine (IV), Propofol, Diazepam, etc.,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1030,
+    "completion_tokens": 256
+  }
+}

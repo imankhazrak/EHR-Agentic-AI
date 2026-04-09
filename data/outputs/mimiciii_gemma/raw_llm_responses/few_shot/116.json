@@ -1,0 +1,12 @@
+{
+  "sample_id": 116,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, complicated by end-stage renal disease and uncontrolled diabetes. The diagnoses include: Infection and inflammatory reaction due to other vascular device, implant, and graft; Methicillin susceptible Staphylococcus aureus septicemia; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Diabetes with peripheral circulatory disorders, type I [juvenile type]; Sepsis; Other atherosclerosis of native arteries of the extremities; Coronary atherosclerosis of native coronary artery; Kidney dialysis as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Hypercalcemia. The medication profile includes Simvastatin, which is a lipid-lowering agent. However, the strict instructions explicitly state that the mere use of statins (e.g., Simvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid abnormality (such as hypercholesterolemia or hyperlipidemia) as a primary or active condition requiring diagnosis, despite the presence of cardiovascular risk factors (atherosclerosis, diabetes). The presence of Simvastatin alone, without",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3731,
+    "completion_tokens": 256
+  }
+}

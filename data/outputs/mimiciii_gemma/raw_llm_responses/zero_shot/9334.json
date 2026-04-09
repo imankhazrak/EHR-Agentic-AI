@@ -1,0 +1,12 @@
+{
+  "sample_id": 9334,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex trauma (skull fracture, pneumohemothorax, splenic injury, liver/kidney injury, etc.), severe infection (pneumonia, viral hepatitis C), and associated complications (trauma shock, toxic encephalopathy, anemia). While the patient has a history of severe alcohol dependence and cirrhosis, and is receiving various medications, there is **no explicit evidence** in the current record\u2014such as abnormal lab results indicating hypercholesterolemia or hyperlipidemia, or a specific diagnosis of a lipid disorder\u2014that warrants coding \"Disorders of Lipid Metabolism\" in the next visit, despite the high-risk history. The focus remains on the acute, life-threatening trauma and infection.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1242,
+    "completion_tokens": 156
+  }
+}

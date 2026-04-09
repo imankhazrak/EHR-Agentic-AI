@@ -1,0 +1,12 @@
+{
+  "sample_id": 11353,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening conditions such as Nodular lymphoma, Acute kidney failure, Hepatic encephalopathy, Acute respiratory failure, and various infectious processes (Pseudomonas, Ventilator associated pneumonia). There is no explicit mention of hypercholesteroleolemia, hyperlipidemia, or any other specific lipid abnormality in the diagnoses or ongoing management that would strongly and explicitly support a future diagnosis of \"Disorders of Lipid Metabolism.\" The medications prescribed, while extensive, do not include explicit lipid-lowering agents (like statins) that would be sufficient evidence on their own to predict a future diagnosis, and the existing diagnoses do not point toward a primary lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 927,
+    "completion_tokens": 147
+  }
+}

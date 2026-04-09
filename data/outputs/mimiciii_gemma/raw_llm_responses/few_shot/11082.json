@@ -1,0 +1,12 @@
+{
+  "sample_id": 11082,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions related to advanced organ failure, including Streptococcal septicemia, Hepatorenal syndrome, Primary pulmonary hypertension, Chronic hepatitis C with hepatic coma, Alcoholic cirrhosis of liver, and Sepsis. The medication and procedure profiles reflect intensive care management for these acute and chronic failures (e.g., Vancomycin, Albumin, Octreotide Acetate, Rifaximin, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While severe liver disease (cirrhosis) is a known risk factor for various metabolic disturbances, the current documentation does not explicitly code or strongly imply an active, primary lipid abnormality that would necessitate a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.\n\nTherefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No,\" adhering strictly to the instruction that general risk factors (like cirrhosis) are insufficient to predict a future diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3661,
+    "completion_tokens": 243
+  }
+}

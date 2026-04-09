@@ -1,0 +1,12 @@
+{
+  "sample_id": 4403,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record explicitly contains the diagnosis of **Pure hypercholesterolemia**.\n\nAccording to the strict rules provided:\n1. The target definition includes hypercholesterolemia as a component of \"Disorders of Lipid Metabolism.\"\n2. The instructions explicitly state that the prediction should be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).\n3. The current visit record lists **Pure hypercholesterolemia** under \"Diagnoses made.\"\n\nThe presence of this explicit lipid disorder diagnosis in the current record provides the strong and explicit evidence required to predict that this diagnosis will be coded in the patient's next hospital visit.\n\nFurthermore, the patient is also prescribed **Atorvastatin**, which is a medication used for managing hypercholesterolemia, reinforcing the active management of a lipid abnormality. However, the primary and most definitive evidence is the explicit diagnosis itself.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3782,
+    "completion_tokens": 233
+  }
+}

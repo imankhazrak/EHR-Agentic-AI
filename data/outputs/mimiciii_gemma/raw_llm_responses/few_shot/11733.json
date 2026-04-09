@@ -1,0 +1,12 @@
+{
+  "sample_id": 11733,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current visit record contains several diagnoses and medications that indicate a high-risk profile for various metabolic and cardiovascular conditions. Specifically, the diagnoses include \"Morbid obesity,\" \"Diabetes mellitus without mention of complication, type II or unspecified type,\" and \"Hypertensive chronic kidney disease.\" The medication profile includes \"Simvastatin,\" which is a lipid-lowering agent.\n\nHowever, according to the strict instructions provided, the mere presence of high-risk factors (obesity, diabetes, hypertension) or the use of lipid-lowering medications (Simvastatin) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nFurthermore, while the patient has the diagnosis \"Other and unspecified hyperlipidemia,\" this diagnosis is present in the *current* visit record. The instructions require predicting the diagnosis for the *NEXT* hospital visit. While the presence of this current diagnosis strongly suggests a future one, the strict rule set emphasizes explicit evidence of an *existing or actively managed* lipid disorder that goes beyond just the current coding. Given the complexity and the need for explicit evidence beyond the current coding, and adhering strictly to the demonstration cases where general risk factors alone led",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3929,
+    "completion_tokens": 256
+  }
+}

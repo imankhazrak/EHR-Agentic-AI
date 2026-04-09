@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe acute medical conditions, including Acute respiratory failure, Pneumonia, Malignant neoplasm, Pulmonary collapse, Bacteremia, and Diabetes mellitus. While the patient has Diabetes mellitus (a known risk factor for dyslipidemia), and the patient is high-risk overall, the current record **lacks any explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or specific lipid abnormalities). The medications prescribed include general supportive care, antibiotics (Levofloxacin, Vancomycin), and cardiovascular/respiratory support (Diltiazem, Albuterol, Ipratropium Bromide). Crucially, there are **no statins or fibrates** explicitly listed in the medication profile that would serve as strong, explicit evidence of ongoing lipid management, which is required by the strict prediction rules. Based on the demonstration cases, a future diagnosis of \"Disorders of Lipid Metabolism\" is only predicted when explicit lipid disorder evidence is present. Since this evidence is absent in the current record, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 234
+  }
+}

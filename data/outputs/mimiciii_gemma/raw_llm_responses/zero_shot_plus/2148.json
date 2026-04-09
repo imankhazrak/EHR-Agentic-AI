@@ -1,0 +1,12 @@
+{
+  "sample_id": 2148,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, general risk factors, or general high-risk status.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The primary diagnoses in the current visit record are related to severe acute conditions: Myasthenia gravis exacerbation, Acute respiratory failure, Cellulitis/abscess, and various infections/phlebitis related to vascular access. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n2. **Medications Prescribed:** The medication profile is overwhelmingly focused on managing the acute infectious, inflammatory, and respiratory crises: Prednisone (for Myasthenia gravis/inflammation), Cefazolin/Cephalexin (for infection), Mycophenolate Mofetil",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1012,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5629,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to chronic obstructive asthma, acute kidney failure, heart failure, pneumonia, and respiratory failure. While the patient has morbid obesity and is on various medications, there is no explicit evidence in the diagnoses or procedures performed that points to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed, such as Fexofenadine and Aspirin, are general treatments and do not explicitly confirm a lipid disorder diagnosis. Therefore, based on the strict criteria, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 842,
+    "completion_tokens": 131
+  }
+}

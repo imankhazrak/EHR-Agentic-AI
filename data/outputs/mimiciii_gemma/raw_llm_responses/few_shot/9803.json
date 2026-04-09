@@ -1,0 +1,12 @@
+{
+  "sample_id": 9803,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, complex cardiovascular and inflammatory conditions, including Constrictive pericarditis, Diastolic heart failure, Coronary atherosclerosis, and Congestive heart failure. The patient is receiving multiple medications for these conditions, including Metoprolol Tartrate and Furosemide.\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone is not enough evidence.\n\nReviewing the entire record:\n1. **Diagnoses:** The diagnoses listed (Constrictive pericarditis, CHF, Atherosclerosis, etc.) are primarily related to structural heart disease and inflammation, not explicitly a primary lipid disorder (like primary hypercholesterolemia or hyperlipidemia).\n2. **Medications:** The presence of Atorvastatin is a *treatment* for potential lipid issues, but the instructions mandate that this treatment alone does not constitute the *evidence* required to predict a future diagnosis.\n3. **Procedures:** The procedures performed (Pericardiectomy, Cardiac Catheterization",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3768,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 648,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and treatments related to Hypoxemia, Multiple Myeloma, Pneumonia, and associated treatments (e.g., Antineoplastic drugs, Thyroid issues). There is no explicit mention of lipid abnormalities, hypercholesterolemia, or hyperlipidemia in the current diagnoses or management plan. The medications prescribed (e.g., Hydrocortisone, Furosemide, Insulin, Levofloxacin, etc.) and procedures performed do not provide sufficient explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism,\" even though the patient is receiving various treatments.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 671,
+    "completion_tokens": 130
+  }
+}

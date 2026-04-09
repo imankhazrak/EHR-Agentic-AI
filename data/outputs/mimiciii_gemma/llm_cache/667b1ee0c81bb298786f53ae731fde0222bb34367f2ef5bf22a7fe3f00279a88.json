@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record, beyond general risk factors or the use of lipid-lowering medications alone.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe infectious processes (Septicemia, Septic shock, Cholangitis, Severe sepsis), organ failure (Acute kidney failure, Liver replaced by transplant), and complex cardiovascular/endocrine comorbidities (Atrial fibrillation, Unspecified essential hypertension, Diabetes mellitus). While these conditions are *risk factors* for lipid disorders, none of the current diagnoses explicitly state a lipid abnormality (e.g., hypercholesterolemia, hyperlipidemia, or lipoid disorder).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Rosuvastatin Calcium**. Rosuvastatin is a potent statin, which is a *treatment* for dyslipidemia. However, according to the strict instructions, the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of the underlying disorder.\n\n3. **Analysis of Procedures Performed:**\nThe procedures performed (ERCP,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1241,
+    "completion_tokens": 256
+  }
+}

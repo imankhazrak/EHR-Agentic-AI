@@ -1,0 +1,12 @@
+{
+  "sample_id": 5526,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require predicting a *coded diagnosis* in the next visit, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A thorough review of the diagnoses made, medications prescribed, and procedures performed reveals **no explicit diagnosis** of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) being coded in the current visit record.\n2. **Risk Factors Present:** The patient exhibits several significant risk factors and comorbid conditions commonly associated with lipid disorders:\n    * **Obesity:** The diagnosis of \"Morbid obesity\" is present.\n    * **Hypertension:** The diagnosis of \"Hypertensive chronic kidney disease\" is present.\n    * **Cardiovascular Disease:** Multiple severe cardiovascular diagnoses are present, including \"Acute on chronic diastolic heart failure,\" \"Congestive heart failure, unspecified,\" and \"Atrial fibrillation.\"\n3. **Medication Profile:** The medication list includes \"Metoprolol\" and \"Isosorbide Dinitrate,\" which are used",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1361,
+    "completion_tokens": 256
+  }
+}

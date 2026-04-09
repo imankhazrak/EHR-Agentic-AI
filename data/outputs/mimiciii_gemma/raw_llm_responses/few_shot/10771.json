@@ -1,0 +1,12 @@
+{
+  "sample_id": 10771,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe chronic kidney disease (End stage renal disease, Hypertensive chronic kidney disease, Secondary hyperparathyroidism), liver cirrhosis, and various associated complications (Anemia, Volume depletion, etc.). The medication profile includes treatments for these conditions (e.g., Calcium Carbonate, Omeprazole, sevelamer HYDROCHLORIDE, Metoprolol Tartrate).\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a primary lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has multiple comorbidities (Hypertension, Cirrhosis), which are risk factors for dyslipidemia, the instructions strictly forbid predicting a future diagnosis based solely on these general risk factors or the use of related medications (like statins, which are absent here).\n\nThe patient's current diagnoses and medications do not provide the strong and explicit evidence required to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. Therefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3739,
+    "completion_tokens": 241
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10554,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for strong and explicit evidence of an existing lipid disorder, which is sufficient to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" While the patient has other conditions, the absence of explicit lipid disorder evidence means the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 155
+  }
+}

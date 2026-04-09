@@ -1,0 +1,12 @@
+{
+  "sample_id": 8085,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute cardiovascular and renal failure, complicated by multiple infectious processes and severe malnutrition. The primary diagnoses include Acute myocardial infarction, Diastolic heart failure, Congestive heart failure, Acute kidney failure, and various infectious/metabolic complications (e.g., UTI, malnutrition, hyposmolality).\n\nCrucially, while the patient is on Simvastatin (a lipid-lowering agent) and has a history of Coronary atherosclerosis, the current record **does not explicitly state a primary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder** that is actively being managed as the *reason* for the current hospitalization, beyond the general risk associated with their coronary disease.\n\nAccording to the strict instructions provided:\n1. The prediction must be based on **explicit evidence** of a lipid disorder being present and likely to be diagnosed.\n2. The use of statins (Simvastatin) or the presence of Coronary atherosclerosis alone are **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince the current record lacks a specific, coded diagnosis of a lipid abnormality (CCS category 53), the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3993,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8531,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is dominated by diagnoses related to critical care, infection, cardiovascular instability (Atrial flutter, Atrial fibrillation, Hypertension, Cardiac arrest), and general medical complications (Hypotension, Pressure ulcer, Alkalosis, etc.). While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the record **lacks explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would necessitate a future diagnosis of \"Disorders of Lipid Metabolism.\" The presence of Atorvastatin alone, or the general high-risk status of the patient, is insufficient evidence to predict that this specific diagnosis will be coded in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 978,
+    "completion_tokens": 155
+  }
+}

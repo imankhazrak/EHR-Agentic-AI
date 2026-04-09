@@ -1,0 +1,12 @@
+{
+  "sample_id": 3849,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record indicates diagnoses of Spondylosis with myelopathy, Atrial flutter, and Obesity. The procedures performed relate to spinal fusion and ostectomy. While the patient has obesity, there is no explicit evidence in the current record (diagnoses, medications, or procedures) to suggest an existing or actively managed primary lipid disorder such as hypercholesterolemia or hyperlipidemia. The factors present (Obesity, Atrial flutter) are general risk factors or conditions unrelated to a confirmed lipid metabolism disorder, and therefore, there is no strong and explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 135
+  }
+}

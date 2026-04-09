@@ -1,0 +1,12 @@
+{
+  "sample_id": 11639,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, life-threatening respiratory and infectious complications, as well as critical care support measures. The primary diagnoses include: Mechanical complication of tracheostomy; Acute and chronic respiratory failure; Ventilator associated pneumonia; Methicillin resistant pneumonia due to Staphylococcus aureus; Bacteremia; and Delirium.\n\nWhile the patient has several comorbidities that are commonly associated with lipid disorders, such as:\n1. **Diabetes with renal manifestations, type II:** This is a significant risk factor for dyslipidemia.\n2. **Morbid obesity:** Obesity is a major risk factor for hyperlipidemia.\n3. **Hypertensive chronic kidney disease:** Hypertension and CKD are associated with metabolic disturbances.\n\nHowever, according to the strict instructions provided, the prediction must be based on **explicit evidence** of an existing or actively managed lipid disorder, not merely on risk factors. The current record does not explicitly state a diagnosis such as \"Pure hypercholesterolemia\" or \"Pure hyperlipidemia.\" The presence of statins (Metoprolol Tartrate is present, but this is a beta-blocker, not a statin; no explicit statin like Atorvastatin is listed) or clear ongoing",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4014,
+    "completion_tokens": 256
+  }
+}

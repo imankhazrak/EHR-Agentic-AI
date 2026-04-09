@@ -1,0 +1,12 @@
+{
+  "sample_id": 3480,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record primarily details diagnoses and procedures related to cardiovascular issues (Aortic valve disorders, Coronary atherosclerosis, Atrial fibrillation, etc.) and general conditions (Hypertension, Hypopotassemia, etc.). There is no explicit evidence within the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly predict that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the patient being high-risk for general cardiovascular disease. The factors present (like hypertension or cardiovascular disease) are insufficient on their own to meet the strict criteria for predicting a future lipid disorder diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 514,
+    "completion_tokens": 147
+  }
+}

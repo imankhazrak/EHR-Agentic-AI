@@ -1,0 +1,12 @@
+{
+  "sample_id": 9961,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of an existing lipid disorder is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient has multiple significant comorbidities commonly associated with lipid disorders, such as Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled, and Congestive heart failure, unspecified, which reinforces the clinical context of a lipid abnormality. While the use of Atorvastatin is noted, the explicit diagnosis of hyperlipidemia is the primary and sufficient evidence to meet the criteria for a \"Yes\" prediction, as per the strict rules provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3627,
+    "completion_tokens": 153
+  }
+}

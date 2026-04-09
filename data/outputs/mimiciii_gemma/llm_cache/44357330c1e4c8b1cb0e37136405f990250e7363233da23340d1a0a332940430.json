@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or related conditions.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses, including Mitral valve insufficiency, aortic valve stenosis, Rheumatic heart failure, Paroxysmal ventricular tachycardia, Acute kidney failure, Pneumonia, and Diabetes mellitus type II. While Diabetes mellitus is a known risk factor for dyslipidemia, its presence alone does not constitute an explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia).\n2. **Medications:** The record explicitly states that **None** medications were prescribed. Therefore, there is no evidence of active lipid management (e.g., statins or fibrates) which would strongly suggest a current or impending diagnosis of a lipid disorder.\n3. **Procedures:** The patient underwent extensive cardiovascular and respiratory procedures, including aortic valve replacement, coronary bypass, and mechanical ventilation. These procedures",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 978,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Other complications due to other cardiac device, implant, and graft; Systolic heart failure, unspecified; Congestive heart failure, unspecified; Mitral valve disorders; Coronary atherosclerosis of native coronary artery; Occlusion and stenosis of multiple and bilateral precerebral arteries without mention of cerebral infarction; Unspecified late effects of cerebrovascular disease; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Long-term (current) use of insulin; Stricture of artery
+- Medications prescribed: Insulin; Heparin; Nitroglycerin SL; 1/2 NS; Isosorbide Mononitrate (Extended Release); Atenolol; Morphine Sulfate; Lisinopril; Clopidogrel Bisulfate; Furosemide; Heparin Sodium; D5W; Senna; Docusate Sodium; Acetaminophen; Sertraline HCl; Aspirin EC; Travatan; Atropine Sulfate; Atorvastatin; Pantoprazole; Fluticasone-Salmeterol (100/50); Ipratropium Bromide Neb; Metoprolol; Nitroglycerin; Eptifibatide; Magnesium Sulfate; SW; Sodium Chloride 0.9%  Flush; Lorazepam; Lactulose; Milk of Magnesia; Isosorbide Dinitrate; Vancomycin HCl; Iso-Osmotic Dextrose; Bisacodyl; Gabapentin; Calcium Chloride; Potassium Chloride; Calcium Gluconate
+- Procedures performed: [ICD9-PX:3601]; Insertion of drug-eluting coronary artery stent(s); Left heart cardiac catheterization; Coronary arteriography using two catheters; Injection or infusion of platelet inhibitor
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

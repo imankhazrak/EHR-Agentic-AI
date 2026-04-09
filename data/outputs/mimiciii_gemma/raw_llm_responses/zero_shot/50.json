@@ -1,0 +1,12 @@
+{
+  "sample_id": 50,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly details diagnoses related to acute gastric ulcer, subendocardial infarction, coronary atherosclerosis, anemia, and polymyalgia rheumatica. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific evidence of a lipid disorder being present or actively managed. While the patient has multiple cardiovascular and inflammatory conditions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.\nASSISTANT:\nPrediction: No\n\nReasoning: The current hospital visit record focuses on diagnoses such as acute gastric ulcer, subendocardial infarction, coronary atherosclerosis, anemia, and polymyalgia rheumatica. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific evidence of a lipid disorder being present or actively managed. While the patient has multiple cardiovascular and inflammatory conditions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 579,
+    "completion_tokens": 213
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2887,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict rule for predicting \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or related conditions.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are extensive and primarily relate to severe cardiovascular disease, endocrine issues, and metabolic risk factors:\n- Cardiovascular: Coronary atherosclerosis, Intermediate coronary syndrome, Atrial fibrillation, Congestive heart failure, Peripheral vascular disease.\n- Endocrine/Metabolic Risk Factors: Thyrotoxicosis, Obesity.\n- Other: Retention of urine, Mitral valve disorders.\n\nMedications and Procedures:\n- Medications: None recorded.\n- Procedures: Extensive open-heart surgery (Coronary bypass, Extracorporeal circulation).\n\nEvaluation against Strict Rules:\n1. **Explicit Lipid Disorder Evidence:** There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n2. **Exclusion Criteria Check:** The patient has several strong risk factors and comorbidities commonly associated",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 922,
+    "completion_tokens": 256
+  }
+}

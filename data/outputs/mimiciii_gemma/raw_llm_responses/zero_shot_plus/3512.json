@@ -1,0 +1,12 @@
+{
+  "sample_id": 3512,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for a \"Yes\" prediction require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just general risk factors or the use of specific medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has numerous severe, acute, and chronic conditions: Subendocardial infarction, Shock, Hyperpotassemia, Hypertensive chronic kidney disease (Stage V/ESRD), End stage renal disease, and various cardiac/pulmonary issues. While ESRD is a known risk factor for dyslipidemia, the diagnosis itself does not explicitly state \"Hyperlipidemia\" or \"Hypercholesterolemia.\"\n2. **Medications:** The patient is prescribed **Simvastatin** (a statin). The presence of a statin is a strong indicator that the clinician *suspects* or *manages* a lipid issue. However, according to the strict instructions, the use of statins alone is **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 256
+  }
+}

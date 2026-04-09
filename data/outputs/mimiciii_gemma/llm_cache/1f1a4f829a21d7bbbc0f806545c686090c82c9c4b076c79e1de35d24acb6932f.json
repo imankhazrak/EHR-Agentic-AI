@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe gastrointestinal issues (Rectal prolapse, Other specified disorders of rectum and anus, Abdominal proctopexy, Exteriorization of large intestine), severe cardiovascular issues (Atrial fibrillation, Congestive heart failure, Mitral valve disorders), renal failure (Acute kidney failure, unspecified), and metabolic/endocrine issues (Diabetes mellitus, Unspecified acquired hypothyroidism, Monoclonal paraproteinemia).\n\nCrucially, the current record **lacks any explicit diagnosis** of a primary lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is managed with medications like Amlodipine and Losartan (which manage hypertension, a risk factor for dyslipidemia), and the patient has Diabetes Mellitus (a risk factor), the instructions strictly forbid predicting a future diagnosis based solely on these risk factors or the use of antihypertensive/antidiabetic medications.\n\nThe patient's medication profile includes Warfarin and Heparin, which are used for anticoagulation related to Atrial Fibrillation, not for lipid management. While statins are a common treatment for dyslipidemia, **no statin (e.g",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3772,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 12239,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is dominated by severe infectious and inflammatory processes, including Septicemia due to anaerobes, HIV disease, Septic shock, and various secondary complications like Acidosis, Hyposmolality, and Volume depletion. The medication profile is heavily focused on managing these acute infections (e.g., Vancomycin, Linezolid, Metronidazole, Antivirals) and supportive care (e.g., fluid resuscitation, electrolyte replacement, steroids).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has multiple severe comorbidities (HIV, which is a risk factor for metabolic issues, and general systemic inflammation), the strict instruction is to predict a *coded diagnosis* based on *explicit evidence* of a lipid disorder, not general risk.\n\nThe medications prescribed include Alendronate Sodium (a bone health drug) and various supportive agents, but there is no clear indication of lipid-lowering therapy (like high-dose statins or fibrates) being the primary focus of the current management, nor is a lipid abnormality explicitly listed in the diagnoses.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3812,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8003,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence present in the CURRENT visit record.\n\n**Analysis of Current Visit Record:**\n\n1. **Diagnoses Made:** The current diagnoses are overwhelmingly related to severe malignancy and associated complications: Pneumonia, Malignant neoplasm of liver, Secondary malignant neoplasm of lung, Secondary malignant neoplasm of bone and bone marrow, Secondary malignant neoplasm of brain and spinal cord, and Other primary cardiomyopathies. While \"Other primary cardiomyopathies\" is a cardiovascular diagnosis, it is not explicitly a lipid disorder (like hypercholesterolemia or hyperlipidemia).\n\n2. **Medications Prescribed:** The medication list is extensive and primarily supports the management of severe infection (Levofloxacin, Vancomycin, Heparin), malignancy/complications (Paroxetine, Ranitidine, Docusate Sodium), and acute symptoms (Oxycodone-Acetaminophen, Zolpidem Tartrate, Al",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 992,
+    "completion_tokens": 256
+  }
+}

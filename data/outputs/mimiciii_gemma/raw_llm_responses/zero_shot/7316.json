@@ -1,0 +1,12 @@
+{
+  "sample_id": 7316,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record does not contain any explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) in the diagnoses or procedures performed. The patient's current diagnoses are related to Cholangitis, Cirrhosis, complications of liver transplant, Hemorrhage, Bacteremia, and malnutrition. While the patient is receiving medications like Aspirin and Clopidogrel, which are often used in patients with cardiovascular risk factors, and is receiving general supportive care, there is no explicit evidence of an existing or actively managed lipid disorder that would strongly and explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria provided. The medications listed do not, by themselves, meet the threshold for predicting a future diagnosis of a primary lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 896,
+    "completion_tokens": 174
+  }
+}

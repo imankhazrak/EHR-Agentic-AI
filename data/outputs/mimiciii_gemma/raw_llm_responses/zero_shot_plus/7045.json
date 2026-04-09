@@ -1,0 +1,12 @@
+{
+  "sample_id": 7045,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of lipid-lowering medications.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Other nervous system complications; Pulmonary collapse; Hyposmolality and/or hyponatremia; Subarachnoid hemorrhage; Obstructive hydrocephalus; Other pulmonary embolism and infarction; Other pulmonary embolism and infarction.\nThe patient's medications prescribed are: None recorded.\nThe patient's procedures performed are: Other endovascular procedures on other vessels; Ventricular shunt to abdominal cavity and organs; Interruption of the vena cava; Incision of lung; Venous catheterization, not elsewhere classified.\n\nEvaluation against Prediction Rules:\n1. **Explicit Lipid Disorder Evidence:** There is no mention of any lipid abnormalities (e.g., elevated cholesterol, triglycerides) in the current diagnoses.\n2. **Exclusion of General Risk Factors/Medications:** The current record does not list any diagnoses such as hypertension or diabetes, which are common risk factors for lipid disorders. Furthermore, no lipid-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 894,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 12323,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for strong and explicit evidence of an existing lipid disorder, which is sufficient to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia.\" However, the strict rules state that the prediction must be based on *explicit* evidence of a lipid disorder that is *not* merely a general risk factor or a condition managed by general means. While \"Other and unspecified hyperlipidemia\" is a lipid diagnosis, the context of the other diagnoses (Aortic valve disorders, Angiodysplasia, Acquired hemolytic anemia, Diabetes, CKD, etc.) suggests that the hyperlipidemia might be secondary or part of a broader, non-explicitly managed condition in this specific record, thus failing the strict threshold for a guaranteed future diagnosis based on the provided constraints.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 704,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9878,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on risk factors or the use of related medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on infectious, renal, and pleural issues: Unspecified pleural effusion, Acute kidney failure, HIV infection status, Hemorrhage, Anemia, Hyposmolality, Cirrhosis, Chronic hepatitis C, etc. There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality listed in the current diagnoses.\n2. **Medications:** The medication list is extensive and addresses the current acute issues: Ondansetron (for nausea), Furosemide/Spironolactone (for fluid/renal management), Heparin (for clotting), Raltegravir/Emtricitabine-Tenofovir (for HIV), and various agents for GI/pain management. Crucially, there are **no medications prescribed**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1057,
+    "completion_tokens": 256
+  }
+}

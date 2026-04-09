@@ -1,0 +1,12 @@
+{
+  "sample_id": 4788,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to orthopedic issues (Closed fracture of intertrochanteric section of neck of femur), infectious processes (Pneumonia), neurological conditions (Alzheimer's disease, Dementia), and general systemic issues (Anemia, Unspecified essential hypertension, Unspecified acquired hypothyroidism). **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed in the diagnoses.**\n2. **Medications:** The medication list includes **Atenolol** (a beta-blocker) and **Levofloxacin** (an antibiotic), but **there is no explicit prescription of a lipid-lowering agent such as a statin (e.g., Atorvastatin, which is mentioned in the general context but not explicitly prescribed here),",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1100,
+    "completion_tokens": 256
+  }
+}

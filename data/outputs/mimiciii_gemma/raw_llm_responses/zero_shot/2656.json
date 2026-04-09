@@ -1,0 +1,12 @@
+{
+  "sample_id": 2656,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record focuses entirely on the care of a premature newborn, including diagnoses such as twin birth, extreme immaturity, respiratory distress syndrome, neonatal bradycardia, and anemia of prematurity. There is no explicit mention of any lipid disorder, such as hypercholesterolemia or hyperlipidemia, in the current diagnoses or procedures. Since the criteria require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis, and such evidence is absent, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 107
+  }
+}

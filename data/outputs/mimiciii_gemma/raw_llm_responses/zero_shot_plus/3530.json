@@ -1,0 +1,12 @@
+{
+  "sample_id": 3530,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition is actively managed and likely to be coded in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is direct evidence of a lipid abnormality.\n\n2. **Active Lipid Management:** The patient is currently prescribed **\"Simvastatin,\"** which is a medication specifically used to manage hyperlipidemia. The presence of both the diagnosis and the targeted pharmacological intervention confirms that the lipid disorder is an active and recognized component of the patient's current health status.\n\n3. **Comorbidities and Context:** While the patient has numerous other severe comorbidities (e.g., Obstructive chronic bronchitis, Chronic respiratory failure, Unspecified protein-calorie malnutrition), the presence of the documented hyperlipidemia alongside cardiovascular risk factors (Coronary atherosclerosis, Old myocardial infarction, Unspecified essential hypertension) places the lipid disorder in a high-priority management category.\n\n4. **Conclusion:** Because the current record contains the explicit diagnosis of hyperlipidemia and the corresponding treatment (Simvastatin), there is strong and explicit evidence that a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1084,
+    "completion_tokens": 256
+  }
+}

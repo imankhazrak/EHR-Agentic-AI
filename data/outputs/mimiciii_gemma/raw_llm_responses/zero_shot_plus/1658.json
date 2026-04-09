@@ -1,0 +1,12 @@
+{
+  "sample_id": 1658,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like hypertension or diabetes.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current diagnoses list includes several significant comorbidities:\n*   Congestive heart failure, unspecified (CHF)\n*   Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled\n*   Coronary atherosclerosis of native coronary artery\n*   Intracerebral hemorrhage, Cerebral artery occlusion, etc.\n\nWhile CHF and Coronary Atherosclerosis are strongly associated with dyslipidemia, and Diabetes is a major risk factor, **none of the current diagnoses explicitly state a lipid abnormality** (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis).\n\n2. **Analysis of Medications for Lipid Management:**\nThe medication list includes several agents:\n*   Aspirin, Metoprolol, Hydralazine HCl (used for cardiovascular/hypertensive management)\n*   Insulin, Humulin-R (used for diabetes management)\n*   **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1367,
+    "completion_tokens": 256
+  }
+}

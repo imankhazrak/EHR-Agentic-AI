@@ -1,0 +1,12 @@
+{
+  "sample_id": 11121,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the patient's current hospital visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hypercholesterolemia.\" Since the patient is explicitly diagnosed with \"Pure hypercholesterolemia,\" there is strong and explicit evidence that a lipid disorder is present.\n\nThe instructions mandate answering \"Yes\" only if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The current record provides this explicit evidence.\n\nWhile the patient has numerous other complex diagnoses (Secondary malignant neoplasm, Obstruction of bile duct, Unspecified essential hypertension, etc.), these comorbidities alone would not be sufficient to predict a future diagnosis according to the strict rules. However, the explicit diagnosis of \"Pure hypercholesterolemia\" overrides this limitation and provides the necessary strong and explicit evidence required by the instructions.\n\nTherefore, based on the explicit diagnosis of hypercholesterolemia, the prediction is Yes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 217
+  }
+}

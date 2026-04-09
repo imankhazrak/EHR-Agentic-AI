@@ -1,0 +1,12 @@
+{
+  "sample_id": 2044,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record:**\nThe patient's current diagnoses are: Dissection of carotid artery; Other convulsions; Cerebral aneurysm, nonruptured; Late effects of cerebrovascular disease, hemiplegia affecting unspecified side.\nThe patient's current medications are: Enoxaparin Sodium; Warfarin; D5W; Heparin Sodium; Sodium Chloride 0.9% Flush; NS; Docusate Sodium; Phenytoin; Acetaminophen; Nicotine Patch.\nNo explicit lipid-lowering medications (such as statins or fibrates) are prescribed, nor are there any explicit diagnoses of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia recorded.\n\n2. **Evaluation Against Prediction Rules:**\nThe guidelines explicitly state that the prediction cannot be based solely on:\n*   Use of statins (None are prescribed).\n*   Cardiovascular diseases (The patient has carotid artery dissection, but this is not sufficient evidence alone).\n*   General risk factors (The",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 893,
+    "completion_tokens": 256
+  }
+}

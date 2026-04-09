@@ -1,0 +1,12 @@
+{
+  "sample_id": 10073,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous diagnoses, medications, and procedures across various critical care domains. However, a thorough review of the provided data reveals an absence of explicit evidence coding for \"Disorders of Lipid Metabolism\" in the current visit.\n\n1. **Analysis of Current Diagnoses:** The diagnoses list includes significant comorbidities such as Unspecified essential hypertension, Obesity, and Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled. These are known risk factors for lipid disorders. Furthermore, the patient is on treatment for cardiovascular issues (Aortocoronary bypass status, Late effects of cerebrovascular disease, cognitive deficits), which are often associated with dyslipidemia.\n\n2. **Analysis of Medications:** The patient is prescribed Pravastatin. Pravastatin is a statin, a medication explicitly used for managing hypercholesterolemia/hyperlipidemia. This is a strong indicator of *ongoing management* of a lipid abnormality.\n\n3. **Application of Prediction Rules:** The instructions explicitly state that the use of statins (e.g., Pravastatin) *alone* is NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded, even",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3990,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3566,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are overwhelmingly related to toxic effects of organophosphate and carbamate, acute respiratory failure, toxic encephalopathy, and various poisoning/suicide-related issues. The medications prescribed, while extensive, do not include any specific lipid-lowering agents (like statins or fibrates) that would explicitly point to an ongoing, diagnosed lipid disorder requiring future coding. Although the patient has unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 175
+  }
+}

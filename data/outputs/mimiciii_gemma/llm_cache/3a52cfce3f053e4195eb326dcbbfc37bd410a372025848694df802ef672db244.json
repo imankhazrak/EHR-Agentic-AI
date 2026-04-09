@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia\" (ICD9-DX:9974). Since the patient is actively diagnosed with a lipid disorder (hyperlipidemia), there is strong and explicit evidence that this condition will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nAlthough the current visit record lists \"Other and unspecified hyperlipidemia\" as a diagnosis, the strict rules provided for predicting a *future* diagnosis require explicit evidence of an *actively managed* or *explicitly diagnosed* lipid disorder that goes beyond the initial listing, especially when the context is complex and the rules are highly restrictive. Given the overwhelming presence of other severe, acute, and complex diagnoses (e.g., acute vascular insufficiency, perforation, severe malnutrition, multiple infections, and cancer), the explicit evidence required to confidently predict a *future* coding of \"Disorders of Lipid Metabolism\" is deemed insufficient under the provided restrictive guidelines.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Other and unspecified hyperlipidemia.\" This constitutes explicit evidence of a lipid disorder. Therefore, based on the",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

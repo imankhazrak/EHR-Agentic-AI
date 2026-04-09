@@ -1,0 +1,12 @@
+{
+  "sample_id": 9737,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder, which strongly supports the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe key evidence is found in the diagnoses made: **\"Other and unspecified hyperlipidemia\"**. This diagnosis explicitly meets the criteria for a lipid disorder as defined in the target definition (hyperlipidemia).\n\nFurthermore, the patient's profile includes several strong comorbidities commonly associated with lipid disorders, which reinforces the clinical context:\n1. **Obesity, unspecified:** A major risk factor for hyperlipidemia.\n2. **Unspecified essential hypertension:** Hypertension is frequently comorbid with dyslipidemia.\n3. **Coronary atherosclerosis of unspecified type of vessel, native or graft:** Atherosclerosis is strongly linked to chronic lipid abnormalities.\n\nWhile the patient is also receiving medications like **Simvastatin** (a statin), the prediction is based on the *explicit diagnosis* of hyperlipidemia already present in the current record, not solely on the use of the medication. The presence of the diagnosis itself is the strong and explicit evidence required by the instructions.\n\nTherefore, based on the existing diagnosis of hyperlipidemia, the prediction is \"Yes",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3661,
+    "completion_tokens": 256
+  }
+}

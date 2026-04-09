@@ -1,0 +1,12 @@
+{
+  "sample_id": 8640,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient has an explicit diagnosis of \"Other and unspecified hyperlipidemia\" in the current visit record. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism.\" Furthermore, the patient is prescribed \"Atorvastatin,\" which is a medication commonly used to manage hyperlipidemia, reinforcing the active management of a lipid disorder.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not contain an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or explicitly stated as the primary issue requiring diagnosis in the next visit. While the patient is prescribed Atorvastatin, this medication alone is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict rules provided.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient has an explicit diagnosis of \"Other and unspecified hyperlipidemia\" in the current visit record. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism.\" The prescription of \"Atorvastatin\" further supports the active management of this lipid disorder.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 712,
+    "completion_tokens": 256
+  }
+}

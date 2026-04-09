@@ -1,0 +1,12 @@
+{
+  "sample_id": 3149,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record shows a complex constellation of diagnoses, including Congestive Heart Failure, Urinary Tract Infection, Pneumonitis, Chronic Airway Obstruction, Atrial Fibrillation, Acidosis, and Chronic Diastolic Heart Failure. The patient is receiving extensive supportive care, including various antibiotics (Vancomycin, Levofloxacin, Ceftriaxone), cardiac medications (Lisinopril, Metoprolol, Nitroglycerin), and supportive fluids/medications.\n\nCrucially, while the patient is prescribed **Atorvastatin** (a lipid-lowering agent), the current visit record **does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder.**\n\nAccording to the strict instructions provided, the mere prescription of a statin (Atorvastatin) is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that we must look for explicit evidence of an existing or actively managed lipid disorder. Since the current diagnoses list does not include a lipid disorder, and the prescription of Atorvastatin alone does not meet the threshold for a guaranteed future diagnosis, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3732,
+    "completion_tokens": 254
+  }
+}

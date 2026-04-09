@@ -1,0 +1,12 @@
+{
+  "sample_id": 11465,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current diagnoses explicitly state \"Pure hypercholesterolemia.\" This is direct and explicit evidence of a lipid disorder. Furthermore, the patient is prescribed \"Simvastatin,\" which is a medication specifically used to manage hypercholesterolemia. Based on this explicit evidence of an existing lipid disorder, it is highly likely that the diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current diagnoses explicitly state \"Pure hypercholesterolemia.\" However, the instructions strictly state that the prediction should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed* lipid disorder, and that factors like the *use of statins* are NOT sufficient on their own to predict a future diagnosis. While the patient has hypercholesterolemia, the instructions provided in the prompt for this specific turn are contradictory regarding the sufficiency of the diagnosis itself versus the management. Given the strict constraints provided in the prompt for this turn, and the need to avoid predicting based solely on the presence of a diagnosis that is also being managed, the prediction must be \"No\" to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 760,
+    "completion_tokens": 256
+  }
+}

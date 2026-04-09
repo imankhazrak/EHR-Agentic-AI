@@ -1,0 +1,12 @@
+{
+  "sample_id": 4512,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Diagnoses:**\nThe current diagnoses include several significant comorbidities: Chronic diastolic heart failure, Acute kidney failure, Acute cystitis, Alkalosis, Unspecified essential hypertension, Congestive heart failure, Aortic valve disorders, Diabetes mellitus (uncontrolled), Bronchiectasis, Constipation, and Anemia. While Diabetes Mellitus and Hypertension are known risk factors for lipid disorders, their presence alone does not constitute an explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications:**\nThe prescribed medications include Metoprolol Tartrate, Lisinopril, Acetaminophen, CefePIME, Ciprofloxacin HCl, Ciprofloxacin IV, Furosemide, 5% Dextrose, Polyethylene Glycol, Senna, HydrALAzine, NIFEdipine CR, Aspirin, Omeprazole",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1061,
+    "completion_tokens": 256
+  }
+}

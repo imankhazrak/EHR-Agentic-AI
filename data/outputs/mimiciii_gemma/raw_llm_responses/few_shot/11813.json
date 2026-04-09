@@ -1,0 +1,12 @@
+{
+  "sample_id": 11813,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Furthermore, the presence of this explicit lipid disorder diagnosis provides strong and direct evidence that a diagnosis of \"Disorders of Lipid Metabolism\" is present and likely to be coded in the patient's next hospital visit, satisfying the strict criteria for answering \"Yes.\" The other diagnoses and medications, such as the prescription of Simvastatin (a lipid-lowering agent) or the presence of Diabetes Mellitus, are considered general risk factors or management strategies, which alone are insufficient to predict the future diagnosis, but the explicit diagnosis of hypercholesterolemia overrides this limitation.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3691,
+    "completion_tokens": 163
+  }
+}

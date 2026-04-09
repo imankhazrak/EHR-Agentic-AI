@@ -1,0 +1,12 @@
+{
+  "sample_id": 3680,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses related to various malignant neoplasms (Secondary malignant neoplasm of brain and spinal cord; Secondary malignant neoplasm of bone and bone marrow; Benign neoplasm of cerebral meninges; Personal history of malignant neoplasm of bronchus and lung) and other general conditions (Other emphysema; Unspecified essential hypertension; Esophageal reflux; Obesity, unspecified; Fall from other slipping, tripping, or stumbling).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nThe presence of risk factors like **Obesity, unspecified** and **Unspecified essential hypertension** are known comorbidities associated with lipid disorders. However, according to the strict instructions provided, these general risk factors and comorbidities **alone are NOT sufficient** to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit.\n\nFurthermore, the patient's medication profile is **None recorded**, meaning there is no explicit ongoing management of a lipid disorder via lipid-lowering agents (like statins or fibrates) that would strongly suggest a future diagnosis.\n\nSince the strict rule requires",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3485,
+    "completion_tokens": 256
+  }
+}

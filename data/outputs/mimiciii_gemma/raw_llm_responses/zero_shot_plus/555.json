@@ -1,0 +1,12 @@
+{
+  "sample_id": 555,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit and direct evidence of a lipid disorder already present in the patient's current hospital visit record.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and unambiguous coding of a lipid abnormality (hypercholesterolemia), which falls directly under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Sufficient Evidence for Future Diagnosis:** Because the patient is explicitly diagnosed with a primary lipid disorder in the current admission, there is strong and explicit evidence that this condition will be maintained and coded in the patient's next hospital visit, even if the specific diagnosis changes or the patient is discharged. The presence of a primary diagnosis is the strongest possible indicator for a future coding of that category.\n\n3. **Exclusion of Insufficient Evidence:** The reasoning correctly avoids relying solely on general risk factors (like Unspecified essential hypertension or Diverticulosis) or the use of medications (like Metoprolol or Heparin) as the basis for the prediction. The prediction is anchored entirely on the explicit diagnosis of **\"Pure hypercholesterolemia\"**.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1271,
+    "completion_tokens": 256
+  }
+}

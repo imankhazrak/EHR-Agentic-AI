@@ -1,0 +1,12 @@
+{
+  "sample_id": 5058,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and multi-system diseases, including severe infections (bacteremia, staph infections, gram-negative organisms), end-stage renal disease, severe cardiovascular issues (CHF, AF, Atherosclerosis, Coronary Atherosclerosis), and complex diabetic complications (diabetic retinopathy, polyneuropathy, diabetic nephropathy). While the patient is on medication including Atorvastatin (a lipid-lowering agent), and has a history of atherosclerosis, these factors alone do not constitute explicit evidence of an *active, diagnosed* lipid disorder (like hypercholesterolemia or hyperlipidemia) that is separate from the other severe conditions. The current record does not provide the necessary explicit evidence of a primary lipid abnormality to warrant a \"Yes\" prediction for a future diagnosis, despite the presence of risk factors and lipid-lowering medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 988,
+    "completion_tokens": 186
+  }
+}

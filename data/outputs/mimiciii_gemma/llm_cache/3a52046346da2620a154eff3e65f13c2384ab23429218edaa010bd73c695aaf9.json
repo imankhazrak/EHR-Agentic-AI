@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The presence of this specific diagnosis in the current record provides strong and explicit evidence that a lipid disorder is present and likely to be coded in the next hospital visit, satisfying the primary condition for a \"Yes\" prediction. Although the patient is receiving Simvastatin, which is a lipid-lowering medication, the diagnosis of hyperlipidemia itself is the definitive evidence required by the instructions, rather than the medication alone. The other diagnoses (Pulmonary alveolar proteinosis, Acute edema of lung, Hypoxemia) and the extensive medication/procedure list relate to critical care management but do not override the explicit lipid disorder diagnosis. Therefore, the strong evidence of existing hyperlipidemia leads to a prediction of \"Yes.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3580,
+    "completion_tokens": 197
+  }
+}

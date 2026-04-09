@@ -1,0 +1,12 @@
+{
+  "sample_id": 7608,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly focused on severe infectious and acute cardiovascular events:\n*   Infectious/Surgical: Other postoperative infection; Acute osteomyelitis, other specified sites; Disruption of internal operation (surgical) wound; Pulmonary collapse; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Infection with microorganisms resistant to penicillins.\n*   Cardiovascular: Coronary atherosclerosis of native coronary artery; Aortocoronary bypass status; Acute myocardial infarction of other specified sites, subsequent episode of care; Tobacco use disorder.\n\nWhile Coronary Atherosclerosis is a strong risk factor for lipid disorders, it is a *comorbidity* and a *risk factor*, not an explicit diagnosis of a lipid abnormality (like hypercholesterolemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes several agents relevant to cardiovascular and metabolic health:\n*   **Lipid Management Agents:** Simvastatin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1222,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), and explicitly exclude answering \"Yes\" based only on general risk factors, cardiovascular diseases, or the use of statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are extensive and primarily relate to severe cardiovascular disease (Coronary atherosclerosis, Paroxysmal ventricular tachycardia, Atherosclerosis of native arteries of the extremities), hematological issues (Chronic myeloid leukemia), and other acute/chronic conditions (Urinary tract infection, Unspecified acquired hypothyroidism, Unspecified disorder of kidney and ureter).\n2. **Medications:** No medications were recorded as prescribed. Therefore, there is no evidence of active lipid management (e.g., statins or fibrates).\n3. **Procedures:** The procedures performed are highly invasive and focused on severe cardiovascular intervention (Stent insertion",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 957,
+    "completion_tokens": 256
+  }
+}

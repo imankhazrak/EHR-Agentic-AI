@@ -1,0 +1,12 @@
+{
+  "sample_id": 8347,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are focused on severe acute and chronic conditions: Pneumococcal septicemia, Chronic viral hepatitis B, Cirrhosis of liver, Hyperpotassemia, Sepsis, Anemia, unspecified. None of the explicitly listed diagnoses are \"Hyperlipidemia,\" \"Hypercholesterolemia,\" or any other direct diagnosis of a lipid disorder.\n2. **Medications Prescribed:** The medication list is extensive and primarily addresses the acute and chronic issues present: Sodium Polystyrene Sulfonate (for hyperpotassemia), Albumin, Midazolam, Famotidine, Insulin, Heparin, Ibuprofen, Entecavir (for Hepatitis B), various antibiotics (CeftriaXONE, CefePIME, Van",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1060,
+    "completion_tokens": 256
+  }
+}

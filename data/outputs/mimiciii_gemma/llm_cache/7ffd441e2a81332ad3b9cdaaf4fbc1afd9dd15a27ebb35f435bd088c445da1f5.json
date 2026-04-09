@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just general risk factors or the use of specific medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are overwhelmingly related to severe, acute critical illness: Cardiac arrest, Anoxic brain damage, Other convulsions, Alcohol abuse, unspecified, Acute and subacute necrosis of liver, Acquired coagulation factor deficiency, Other shock without mention of trauma, Acidosis, and History of fall. None of these diagnoses explicitly state or imply a primary or ongoing diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia).\n2. **Medications Prescribed:** The medication list is extensive and focused on managing severe metabolic, infectious, and neurological crises: D5NS, D5W, Potassium Phosphate, Potassium Chloride, Calcium Gluconate, NS,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1049,
+    "completion_tokens": 256
+  }
+}

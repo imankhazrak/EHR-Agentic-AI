@@ -1,0 +1,12 @@
+{
+  "sample_id": 3505,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly mandate that a \"Yes\" prediction can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis), and explicitly exclude \"Yes\" based only on general risk factors, statin use, or cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to advanced liver disease (Cirrhosis, Chronic hepatitis C, Malignant neoplasm of liver, Hepatic encephalopathy, Portal hypertension, Esophageal varices, etc.), gastrointestinal complications (Esophageal varices, etc.), and hematological issues (Anemia, Hyposmolality/Hyponatremia). While advanced liver disease is a significant metabolic derangement, the current record **does not explicitly list** hypercholesterolemia, hyperlipidemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism.\"\n2. **Medications:** The prescribed",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1035,
+    "completion_tokens": 256
+  }
+}

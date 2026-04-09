@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit and strong evidence of a lipid disorder diagnosis, which meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia.\"** This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Active Lipid Management:** The patient is actively managed for this condition, evidenced by the prescription of **\"Simvastatin.\"** While statins alone are not sufficient to predict a diagnosis, the *combination* of an explicit diagnosis *and* active management for that specific diagnosis provides the strongest possible evidence that this condition will be coded in the next visit.\n\n3. **Comorbid Conditions and Risk Factors:** The patient presents with numerous severe comorbidities that are highly associated with lipid disorders, including:\n    * **Severe Cardiovascular Disease:** Acute myocardial infarction, Coronary atherosclerosis, Congestive heart failure, Atrial fibrillation.\n    * **Renal Disease:** End stage renal disease, Hypertensive chronic kidney disease.\n    * **Metabolic/Vascular",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1368,
+    "completion_tokens": 256
+  }
+}

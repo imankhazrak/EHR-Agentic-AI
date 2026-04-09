@@ -1,0 +1,12 @@
+{
+  "sample_id": 4342,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on severe, life-threatening infections (sepsis, septic shock, cellulitis, E. coli infection), cardiovascular instability (CHF, pulmonary collapse, tachycardia), and acute organ failure (AKI, paralytic ileus). While the patient has \"Other disorders of plasma protein metabolism\" listed, this is a general category and does not explicitly confirm a primary, ongoing, or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would warrant a specific diagnosis of \"Disorders of Lipid Metabolism\" in the next visit. The listed medications and procedures are primarily aimed at managing the severe infectious and inflammatory processes, not specifically managing a primary lipid abnormality. Therefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 956,
+    "completion_tokens": 170
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4028,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of medications like statins or cardiovascular disease diagnoses alone.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made (Acute kidney failure, Peritoneal abscess, Dehydration, Arterial embolism, Diverticulitis, Depressive disorder, Anxiety state, Atrial fibrillation, Anemia, Hypercalcemia, Lumbosacral spondylosis, Infection, Colostomy status) and the medications prescribed does **not** contain any explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Exclusion of Insufficient Evidence:** The current record contains several conditions that are known risk factors for lipid disorders, such as:\n    * **Cardiovascular Conditions:** Atrial fibrillation and Arterial embolism/thrombosis are present.\n    * **Metabolic/Inflammatory Conditions:** Acute kidney failure",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1066,
+    "completion_tokens": 256
+  }
+}

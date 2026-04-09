@@ -1,0 +1,12 @@
+{
+  "sample_id": 8261,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe cardiovascular events, including Subendocardial infarction, Ventricular fibrillation, Systolic heart failure, and Congestive heart failure. The medication profile includes several agents relevant to cardiovascular and metabolic management, such as Lisinopril, Furosemide, and Atorvastatin.\n\nHowever, based on the strict instructions provided, the mere prescription of a statin (Atorvastatin) or the presence of cardiovascular diseases (CHF, MI) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other explicit lipid disorder diagnosis. While the patient is clearly high-risk due to their cardiac history, the instructions mandate that explicit evidence of an existing or actively managed lipid disorder must be present to predict a future diagnosis of \"Yes.\" Since this explicit evidence is absent in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3873,
+    "completion_tokens": 212
+  }
+}

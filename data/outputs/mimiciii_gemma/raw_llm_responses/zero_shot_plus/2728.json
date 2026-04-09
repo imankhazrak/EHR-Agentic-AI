@@ -1,0 +1,12 @@
+{
+  "sample_id": 2728,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly rely on explicit evidence of an existing or actively managed lipid disorder, not on general risk factors or related cardiovascular conditions.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are: Coronary atherosclerosis of autologous vein bypass graft; Coronary atherosclerosis of native coronary artery; Atrial fibrillation; Hyposmolality and/or hyponatremia; Congestive heart failure, unspecified; Asthma, unspecified type, unspecified; Iatrogenic pulmonary embolism and infarction; Hemorrhage, unspecified.\nNone of these explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The presence of severe cardiovascular disease (Coronary atherosclerosis, CHF) is a known risk factor for lipid disorders, but this alone is insufficient to meet the strict criteria for predicting a future diagnosis of the disorder itself.\n\n2. **Analysis of Medications and Procedures:**\nThe patient has no medications recorded, and the procedures performed are primarily related to advanced cardiovascular intervention (stenting, cardiac catheterization",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 953,
+    "completion_tokens": 256
+  }
+}

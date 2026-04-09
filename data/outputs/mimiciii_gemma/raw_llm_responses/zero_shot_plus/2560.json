@@ -1,0 +1,12 @@
+{
+  "sample_id": 2560,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, while strictly excluding predictions based on general risk factors, statin use, or cardiovascular disease alone.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are extensive and severe, including Hyperpotassemia, Other convulsions, Congestive heart failure, unspecified, Hypertensive chronic kidney disease (Stage V/ESRD), Other primary cardiomyopathies, Acute respiratory failure, Other specified congenital anomalies, Unspecified pruritic disorder, Other specified hypoglycemia, Insulins and antidiabetic agents causing adverse effects in therapeutic use, Other and unspecified special symptoms or syndromes, Delirium, and Anemia in chronic kidney disease.\n2. **Medications:** The prescribed medications are focused on managing severe acute and chronic conditions: Neutra-Phos, D5W, Lorazepam, Propofol, HydrALAZINE HCl, Haloperidol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1038,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11506,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which provides strong and explicit evidence for a future diagnosis.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly meets the criteria for a lipid disorder (CCS category 53) and provides the strongest possible evidence that this condition will be coded in the next hospital visit.\n\n2. **Supporting Comorbidities and Risk Factors:** The patient presents with numerous severe comorbidities that are strongly associated with lipid disorders, further supporting the ongoing clinical relevance of this diagnosis:\n    * **Diabetes Mellitus (Type I, uncontrolled):** This is a major risk factor for dyslipidemia.\n    * **Hypertension (Chronic Kidney Disease related):** A key risk factor for cardiovascular and metabolic issues.\n    * **Cardiovascular Disease:** The presence of **\"Coronary atherosclerosis\"** and **\"Acute diastolic heart failure\"** indicates severe underlying cardiovascular disease, which is intrinsically linked to lipid abnormalities.\n    * **Chronic Kidney Disease (Stage IV):** CKD itself is a metabolic disorder that often involves dyslipidemia.\n\n3. **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 256
+  }
+}

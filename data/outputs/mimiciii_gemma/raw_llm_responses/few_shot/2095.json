@@ -1,0 +1,12 @@
+{
+  "sample_id": 2095,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record for the patient is dominated by diagnoses related to extreme immaturity, respiratory distress syndrome in newborn, chronic respiratory disease, neonatal jaundice, anemia of prematurity, and suspected infectious conditions. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific diagnosis that falls under the umbrella of \"Disorders of Lipid Metabolism\" (CCS category 53). Furthermore, the patient's medication profile is empty, meaning there is no ongoing management of a lipid disorder through pharmacological intervention (e.g., statins or fibrates). Based on the strict instructions provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this evidence is absent in the current record, the prediction must be \"No\", despite the general knowledge that lipid disorders are present in a certain percentage of subsequent visits in this population.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3464,
+    "completion_tokens": 185
+  }
+}

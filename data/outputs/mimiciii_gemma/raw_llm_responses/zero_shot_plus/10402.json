@@ -1,0 +1,12 @@
+{
+  "sample_id": 10402,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence from the CURRENT visit record.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The recorded diagnoses are: Subdural hemorrhage following injury without mention of open intracranial wound, Accidental fall on or from other stairs or steps, Benign neoplasm of cerebral meninges, and Personal history of irradiation. None of these diagnoses explicitly mention or suggest a primary or secondary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Medications Prescribed:** The medication profile includes Senna, OxycoDONE, Phenytoin Sodium Extended, Docusate Sodium, HYDROmorphone, Acetaminophen, Glucagon, Dextrose 50%, Insulin, HydrALAzine, etc. While Insulin is present, which is a metabolic condition, the record does not explicitly link this to a diagnosed lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 950,
+    "completion_tokens": 256
+  }
+}

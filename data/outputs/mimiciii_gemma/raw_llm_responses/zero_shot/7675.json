@@ -1,0 +1,12 @@
+{
+  "sample_id": 7675,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses and medications listed are overwhelmingly related to chronic respiratory conditions, gastrointestinal issues (Barrett's esophagus, reflux), infections (Pneumonia, E. coli), chronic graft-versus-host disease, and associated complications (anemia, osteoporosis, etc.). Therefore, there is no strong and explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 922,
+    "completion_tokens": 116
+  }
+}

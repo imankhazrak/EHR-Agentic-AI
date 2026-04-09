@@ -1,0 +1,12 @@
+{
+  "sample_id": 7505,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The instructions strictly mandate that a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis), and explicitly exclude predictions based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made in the current visit record, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder.\n2. **Risk Factors Present:** The patient presents with numerous significant risk factors and comorbid conditions commonly associated with lipid disorders, including:\n    * Diabetes with ketoacidosis, type I [juvenile type], uncontrolled.\n    * Chronic kidney disease, Stage IV (severe).\n    * Hypertensive chronic kidney disease, unspecified.\n    * Diabetes with ophthalmic manifestations, type I [juvenile",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1168,
+    "completion_tokens": 256
+  }
+}

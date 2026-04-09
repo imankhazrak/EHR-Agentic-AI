@@ -1,0 +1,12 @@
+{
+  "sample_id": 5024,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the explicit presence of a diagnosed or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) in the current visit record, as per the strict instructions.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current diagnoses list includes several significant comorbidities:\n*   Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n*   Obesity, unspecified.\n*   Unspecified essential hypertension.\n*   Congestive heart failure, unspecified.\n*   Cardiogenic shock.\n\nWhile Diabetes Mellitus, Obesity, and Hypertension are major **risk factors** for developing lipid disorders, they do not constitute an explicit diagnosis of a lipid disorder itself (like hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications for Explicit Lipid Management:**\nThe medication list is extensive, covering respiratory, cardiac, infectious, and endocrine needs.\n*   The patient is on **Insulin Human Regular** and **Insulin** for diabetes management.\n*   The patient is on **Furosemide** and **Metoprolol** for cardiac/fluid management.\n*   The patient is on **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1284,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11016,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record primarily details severe cardiovascular instability, dehydration, and infectious processes (systolic heart failure, atrial flutter, UTI, intestinal infection). While the patient is receiving Atorvastatin, which is a medication used for lipid management, the explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) is absent from the current diagnoses list. According to the strict instructions, the mere prescription of a statin (Atorvastatin) is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The other factors present\u2014such as cardiovascular disease and general risk factors\u2014also do not meet the threshold for a guaranteed future diagnosis based on the provided guidelines and demonstration cases. Therefore, in the absence of an explicit lipid disorder diagnosis, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3639,
+    "completion_tokens": 170
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 120,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous critical conditions, including Cirrhosis, Hepatic Encephalopathy, Acquired Coagulation Factor Deficiency, Esophageal Varices, Grand Mal Status, Pneumonia, Acute Respiratory Failure, Congestive Heart Failure, Portal Hypertension, Diabetes Mellitus, and various supportive/procedural interventions.\n\nHowever, the record **lacks any explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) in the current diagnoses or procedures. The medications prescribed, while extensive, do not include specific lipid-lowering agents (like high-dose statins or fibrates) that would explicitly point to an ongoing, managed lipid disorder in this context.\n\nTherefore, based strictly on the evidence provided, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, even though the patient has other high-risk factors (like diabetes and liver disease).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 909,
+    "completion_tokens": 226
+  }
+}

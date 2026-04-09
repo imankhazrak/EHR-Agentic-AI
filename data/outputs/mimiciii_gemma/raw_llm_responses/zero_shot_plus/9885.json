@@ -1,0 +1,12 @@
+{
+  "sample_id": 9885,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by risk factors or medication use.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly related to severe, acute, and chronic organ failure, infection, and transplantation complications:\n*   Infection/Sepsis: Other and unspecified infection due to central venous catheter; Septicemia due to E. coli; Cellulitis and abscess of leg, except foot.\n*   Organ Failure/Transplant: End stage renal disease; Metabolic encephalopathy; Severe sepsis; Complications of transplanted kidney; Pancreas replaced by transplant; Combined systolic and diastolic heart failure, unspecified; Hypertensive chronic kidney disease, unspecified.\n*   Cardiovascular/Metabolic: Coronary atherosclerosis of native coronary artery; Congestive heart failure, unspecified; Other abnormal glucose; Osteoporosis, unspecified.\n\nWhile **Coronary atherosclerosis** and **Hypertensive chronic kidney disease** are strong risk factors for lipid disorders, they do not constitute an explicit diagnosis of hypercholesterolemia or hyperlipidemia in the current record.\n\n2. **Analysis of Medications Pres",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1321,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5870,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the strict rules, the presence of an explicit lipid disorder diagnosis (such as hyperlipidemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. This evidence overrides general clinical risk factors and other non-lipid diagnoses.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia.\" However, the strict rules state that the prediction should only be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present AND likely to be diagnosed, and that factors like general risk factors are NOT sufficient. While \"Other and unspecified hyperlipidemia\" is a diagnosis, the context of the entire record is dominated by severe non-lipid conditions (e.g., Acute myeloid leukemia, Chronic graft-versus-host disease, Influenza, etc.). Given the strict instruction to NOT predict based on general risk factors, and the complexity of the record, the explicit evidence for a *future* diagnosis of \"Disorders of Lipid Metabolism\" is deemed insufficient to warrant a \"Yes\" prediction, despite the current diagnosis.\n\nASS",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 890,
+    "completion_tokens": 256
+  }
+}

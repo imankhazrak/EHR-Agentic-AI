@@ -1,0 +1,12 @@
+{
+  "sample_id": 3000,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to gastrointestinal issues (Angiodysplasia, Pressure Ulcers, Gastrostomy), cardiovascular conditions (Chronic Systolic Heart Failure, Atrial Fibrillation, CHF), and neurological/infectious issues (Hematuria, TIA, etc.). The medication profile includes treatments for these conditions (Furosemide, Carvedilol, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). While the patient has multiple cardiovascular risk factors (hypertension implied by CHF, TIA, etc.), the instructions strictly forbid predicting a future diagnosis based solely on these general risk factors or the use of cardiovascular/GI medications.\n\nTherefore, based on the strict evidence-based criteria provided, there is no strong and explicit evidence in the current record to warrant a prediction of a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3720,
+    "completion_tokens": 212
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details severe cardiovascular and gastrointestinal issues, including Aortic valve disorders, Coronary atherosclerosis, Atrial fibrillation, and Unspecified essential hypertension. The procedures performed (Open and other replacement of aortic valve; Extracorporeal circulation auxiliary to open heart surgery) are highly invasive and focused on cardiac repair.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Furthermore, the medication profile is empty, meaning there is no current management indicated for lipid abnormalities (e.g., statins or fibrates).\n\nAccording to the strict guidelines provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires **strong and explicit evidence** of an existing or actively managed lipid disorder. Since the current record only shows high-risk comorbidities (hypertension, coronary disease) but no coded lipid abnormality, the evidence threshold is not met. Therefore, the prediction must be \"No\", despite the general high-risk nature of the patient's overall clinical picture.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3486,
+    "completion_tokens": 231
+  }
+}

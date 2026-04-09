@@ -1,0 +1,12 @@
+{
+  "sample_id": 4763,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This is direct evidence of a lipid disorder. Furthermore, the patient is being managed with \"Atorvastatin,\" which is a treatment for hypercholesterolemia. Because the current record explicitly documents a lipid disorder diagnosis, there is strong and explicit evidence that this condition will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 91
+  }
+}

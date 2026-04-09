@@ -1,0 +1,12 @@
+{
+  "sample_id": 9692,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hypercalcemia (CCS category 53). The analysis must strictly look for explicit evidence of a lipid disorder diagnosis or active management of such a condition, excluding general risk factors, statin use, or cardiovascular diseases alone.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder Evidence:**\nThe current diagnoses list includes several significant comorbidities:\n*   Closed fracture of subtrochanteric section of neck of femur;\n*   Chronic lymphoid leukemia, without mention of having achieved remission;\n*   Pneumonia due to Pseudomonas;\n*   Pneumonia in other systemic mycoses;\n*   Autoimmune hemolytic anemias;\n*   Bacteremia;\n*   Hypogammaglobulinemia, unspecified;\n*   Acute bronchiolitis due to respiratory syncytial virus (RSV);\n*   Delirium due to conditions classified elsewhere;\n*   Peptic ulcer of unspecified site;\n*   Congestive heart failure, unspecified;\n*   Streptococcus infection in conditions classified elsewhere and of unspecified site, other streptococcus;",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1373,
+    "completion_tokens": 256
+  }
+}

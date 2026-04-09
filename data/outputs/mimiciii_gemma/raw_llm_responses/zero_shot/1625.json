@@ -1,0 +1,12 @@
+{
+  "sample_id": 1625,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to severe infections (Bacteremia, SBP, Streptococcus), advanced organ failure (CHF, Cirrhosis, CKD), and associated comorbidities (Diabetes, Hypertension, Depressive disorder). While the patient is on various medications, including Warfarin and Albumin, which can be associated with lipid management or cardiovascular risk, there is no explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) present in the current record. Therefore, based strictly on the evidence required, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 146
+  }
+}

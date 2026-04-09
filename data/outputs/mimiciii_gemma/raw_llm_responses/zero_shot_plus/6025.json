@@ -1,0 +1,12 @@
+{
+  "sample_id": 6025,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and this prediction must be based on *explicit* evidence of a lipid disorder, not just general risk factors or the use of lipid-lowering medications.\n\n**Analysis of Current Visit Record:**\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record **does not** contain any explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The listed diagnoses are: Vascular dementia, with delirium; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Atrioventricular block, complete; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Peripheral vascular disease, unspecified; Personal history of other diseases of circulatory system.\n\n2. **Medication Profile Analysis (Statins):** The patient is prescribed **Atorvastatin**. While Atorvastatin is a primary treatment",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 975,
+    "completion_tokens": 256
+  }
+}

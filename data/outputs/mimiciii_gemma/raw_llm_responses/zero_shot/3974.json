@@ -1,0 +1,12 @@
+{
+  "sample_id": 3974,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly indicates the presence of a lipid disorder that is actively being managed or is a primary feature of the patient's current condition. According to the strict rules, the presence of an explicit lipid disorder diagnosis is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's NEXT hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nWhile the current visit record includes the diagnosis \"Other and unspecified hyperlipidemia,\" the strict rules provided for predicting a *future* diagnosis require more than just the presence of a current diagnosis to guarantee a *future* coding. The rules state that \"If explicit lipid disorder evidence is absent, answer 'No', even if the patient is high-risk.\" Although \"Other and unspecified hyperlipidemia\" is present, the context of the other diagnoses (primarily cardiovascular, renal, and infectious) does not provide the *strong and explicit evidence* required to guarantee the *future* coding of the broader category \"Disorders of Lipid Metabolism\" beyond the current, specific mention. Therefore, based on the strict constraints against predicting future coding solely from a current, specific",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 256
+  }
+}

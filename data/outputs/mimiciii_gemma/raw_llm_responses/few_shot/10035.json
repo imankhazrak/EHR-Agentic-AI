@@ -1,0 +1,12 @@
+{
+  "sample_id": 10035,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily documents diagnoses related to acute alcohol withdrawal and associated alcohol dependence. The prescribed medications (Acetaminophen, Diazepam, Lorazepam, Heparin, Ondansetron, 0.9% Sodium Chloride) and procedures (None recorded) do not contain any explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia. While the patient's history of alcohol dependence is a known risk factor for various metabolic issues, the strict rule requires explicit evidence of a lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since this explicit evidence is absent in the current record, the prediction must be \"No,\" regardless of the general statistical likelihood or the presence of general risk factors.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3442,
+    "completion_tokens": 162
+  }
+}

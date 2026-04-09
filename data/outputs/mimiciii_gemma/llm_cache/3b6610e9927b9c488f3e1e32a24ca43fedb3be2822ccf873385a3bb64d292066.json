@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several severe, chronic conditions: Edema of larynx, End stage renal disease (ESRD), Hypertensive chronic kidney disease (CKD Stage V/ESRD), and Diabetes mellitus (Type II, unspecified, not uncontrolled). These conditions are significant risk factors for lipid disorders, as CKD and Diabetes are strongly associated with dyslipidemia.\n2. **Medications:** The patient is prescribed **Simvastatin** (a statin) and **Heparin**. The presence of Simvastatin indicates that the clinical team is managing a condition that requires lipid lowering, which strongly suggests underlying hyperlipidemia or hypercholesterolemia.\n3. **Risk Factors vs. Explicit Diagnosis:** While the patient has multiple high-risk comorbidities (Diabetes, CKD",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 982,
+    "completion_tokens": 256
+  }
+}

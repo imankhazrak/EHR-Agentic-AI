@@ -1,0 +1,12 @@
+{
+  "sample_id": 3559,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses related to substance abuse (Poisoning by other opiates, Cocaine abuse), HIV disease, liver disease (Cirrhosis, Chronic hepatitis C), kidney failure, and cardiovascular issues (Coronary atherosclerosis, Hypertension). While the patient is prescribed Atorvastatin, which is used to manage dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The prescription of Atorvastatin alone, along with the presence of general risk factors, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record details multiple complex conditions, including substance abuse, HIV disease, severe liver disease (Cirrhosis, Chronic hepatitis C), kidney failure, and cardiovascular disease. Although the patient is prescribed Atorvastatin, which is a medication for dyslipidemia, the record lacks an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia). Based on the strict criteria that require explicit evidence of an existing or actively managed lipid disorder, the prescription of Atorvastatin alone is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 599,
+    "completion_tokens": 256
+  }
+}

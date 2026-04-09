@@ -1,0 +1,12 @@
+{
+  "sample_id": 8153,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53), which includes hyperlipidemia.\n\nFurthermore, the patient is currently prescribed Simvastatin, a medication specifically used for managing hyperlipidemia. While the prescription of statins alone is not sufficient evidence for a future diagnosis, the combination of the explicit diagnosis of hyperlipidemia *and* the ongoing management with a lipid-lowering agent (Simvastatin) provides strong and explicit evidence that this condition is present and actively managed, making a future diagnosis highly likely.\n\nAdditionally, the patient has multiple other comorbidities that are commonly associated with lipid disorders, such as Coronary atherosclerosis of native coronary artery and Unspecified essential hypertension. These conditions further support the clinical context of a lipid abnormality.\n\nIn summary, the explicit diagnosis of \"Other and unspecified hyperlipidemia\" is the primary and most compelling piece of evidence supporting the prediction of a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe prediction is strongly supported by the explicit diagnosis of **\"Other",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1102,
+    "completion_tokens": 256
+  }
+}

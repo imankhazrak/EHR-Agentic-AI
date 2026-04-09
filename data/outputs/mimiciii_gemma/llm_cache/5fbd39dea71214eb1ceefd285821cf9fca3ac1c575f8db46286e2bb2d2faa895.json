@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition is actively managed and likely to be coded in the next visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This meets the primary criterion for predicting a future diagnosis, as it is an explicit evidence of a lipid disorder.\n\n2. **Active Lipid Management:** The medication profile confirms active management of this hypercholesterolemia and related metabolic issues:\n    * **Statins:** The patient is prescribed **\"Simvastatin\"** and **\"Atorvastatin\"**. These are primary treatments for hypercholesterolemia.\n    * **Ezetimibe:** The patient is prescribed **\"Ezetimibe\"**, which works synergistically with statins to lower cholesterol.\n    * **Fibrates:** The patient is prescribed **\"Gemfibrozil\"**, a fibrate used to manage lipid abnormalities.\n\n3. **Comorbid Conditions:** The presence of multiple high-risk comorbidities further supports the ongoing need for lipid management:\n    * **Coronary Atherosclerosis:** The patient has",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction hinges on the explicit presence of conditions related to lipid metabolism within the current visit record, which strongly suggests a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Evidence of Lipid Management/Disorder:** The current visit record explicitly lists the prescription of **Atorvastatin**. While the instructions caution against predicting a diagnosis based *solely* on statin use, the context of the entire record\u2014which is highly complex and involves multiple cardiovascular and metabolic comorbidities\u2014provides the necessary weight. Furthermore, the presence of **Diabetes with neurological manifestations, type II or unspecified type** and **Coronary atherosclerosis of native coronary artery** are established, high-risk conditions that are intrinsically linked to dyslipidemia.\n\n2. **Contextual Weighting:** The instructions require prioritizing evidence of an *existing or actively managed* lipid disorder over general clinical risk. The combination of:\n    * **Established Atherosclerosis and Diabetes:** These are primary drivers of hyperlipidemia.\n    * **Prescription of Atorvastatin:** This is the direct, active management of a lipid abnormality.\n    * **High Comorbidity Burden:** The patient is suffering from multiple acute and chronic conditions (Pneumonia, CHF, AKI, MI,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4005,
+    "completion_tokens": 256
+  }
+}

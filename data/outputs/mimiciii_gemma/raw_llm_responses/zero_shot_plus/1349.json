@@ -1,0 +1,12 @@
+{
+  "sample_id": 1349,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\n**Analysis of Current Visit Record:**\nThe current visit record is dominated by severe acute medical and substance use disorders:\n*   **Primary Diagnoses:** Alcohol withdrawal, Acute respiratory failure, Opioid abuse, Chronic hepatitis C, etc.\n*   **Medications:** Primarily supportive care (Thiamine, Docusate, Heparin, etc.) and psychiatric/substance management (Diazepam, Quetiapine Fumarate, Propofol).\n*   **Procedures:** Endotracheal intubation and mechanical ventilation.\n\n**Evaluation against Prediction Rules:**\nThe strict rules for predicting \"Yes\" require *explicit evidence* of an existing or actively managed lipid disorder (e.g., documented hypercholesterolemia or hyperlipidemia).\n\n1.  **Absence of Explicit Lipid Diagnosis:** The current diagnoses list does not include any mention of hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 981,
+    "completion_tokens": 256
+  }
+}

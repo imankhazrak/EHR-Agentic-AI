@@ -1,0 +1,12 @@
+{
+  "sample_id": 3241,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The presence of this explicit diagnosis in the current record provides strong and explicit evidence that a lipid disorder is present and likely to be coded in the next hospital visit, even if other risk factors (like hypertension or the use of statins) are also present. The other diagnoses and medications (like Atorvastatin) support the ongoing management of a lipid abnormality. Therefore, the prediction is Yes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3497,
+    "completion_tokens": 137
+  }
+}

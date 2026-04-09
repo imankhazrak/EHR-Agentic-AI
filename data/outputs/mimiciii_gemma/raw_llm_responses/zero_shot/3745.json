@@ -1,0 +1,12 @@
+{
+  "sample_id": 3745,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details management for Diabetes, Hypothyroidism, and Coronary Atherosclerosis. While the patient is prescribed Atorvastatin, which is a lipid-lowering medication, this alone does not constitute explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The other diagnoses listed (Diabetes, Hypothyroidism, Coronary Atherosclerosis) are not sufficient evidence of a primary lipid disorder.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record details management for several conditions, including Diabetes, Hypothyroidism, and Coronary Atherosclerosis. Although the patient is prescribed Atorvastatin, this medication alone is not sufficient evidence to explicitly predict a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, as per the strict criteria. The other diagnoses listed do not provide explicit evidence of an existing lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 218
+  }
+}

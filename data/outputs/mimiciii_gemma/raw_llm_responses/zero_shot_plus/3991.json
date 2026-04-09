@@ -1,0 +1,12 @@
+{
+  "sample_id": 3991,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to severe infectious processes and respiratory complications: Pneumococcal septicemia, Pneumococcal pneumonia, Acute kidney failure, Severe sepsis, Chronic airway obstruction, and Anemia. There is no mention of any lipid abnormality (e.g., hyperlipidemia, hypercholesterolemia) in the current list of diagnoses.\n2. **Medications:** The medication list is extensive and primarily targets the severe infections and respiratory status: Levofloxacin, Vancomycin, CeftriaXONE, Piperacillin-Tazobactam, etc. While the patient is prescribed Aspirin and Heparin (which are used in cardiovascular risk management), and Fluticasone-Salmeterol Diskus (which is for respiratory management), there is no explicit prescription of a lipid-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1085,
+    "completion_tokens": 256
+  }
+}

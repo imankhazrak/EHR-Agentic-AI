@@ -1,0 +1,12 @@
+{
+  "sample_id": 731,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is dominated by severe, complex cardiovascular and renal diseases, including Diastolic heart failure, Hypertensive chronic kidney disease Stage V, Atrial fibrillation, and Congestive heart failure. The patient also has significant comorbidities such as Diabetes with renal manifestations, Atherosclerosis, and Unspecified osteomyelitis. The medication profile includes several agents for managing these conditions, such as Metoprolol, Furosemide, and Aspirin.\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) or active, explicit management of such a condition, beyond general risk factors. While the patient has multiple risk factors for dyslipidemia (Hypertension, Diabetes, Atherosclerosis), the current diagnoses and prescribed medications do not explicitly state a lipid abnormality or a lipid-lowering regimen (like a statin or fibrate) that would strongly suggest a future coding of this specific diagnosis, according to the provided constraints.\n\nThe presence of cardiovascular disease and diabetes alone, while being strong risk factors, are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3680,
+    "completion_tokens": 256
+  }
+}

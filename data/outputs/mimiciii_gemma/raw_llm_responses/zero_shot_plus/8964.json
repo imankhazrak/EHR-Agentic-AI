@@ -1,0 +1,12 @@
+{
+  "sample_id": 8964,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are focused on respiratory issues (Other diseases of trachea and bronchus; Chronic respiratory failure), malignancy (Malignant neoplasm of anterior mediastinum), and infectious/gastrointestinal issues (Diarrhea; Carrier or suspected carrier of other specified bacterial diseases). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder coded in the current record.\n2. **Medications:** The medication list is extensive and primarily targets the acute critical care needs: respiratory support (Ipratropium Bromide MDI; Albuterol), infection/fungal control (Heparin; MetRONIDAZOLE; CefePIME; Amikacin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 256
+  }
+}

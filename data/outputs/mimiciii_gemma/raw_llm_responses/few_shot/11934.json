@@ -1,0 +1,12 @@
+{
+  "sample_id": 11934,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include Subendocardial infarction, Acute on chronic systolic heart failure, Coronary atherosclerosis, Atrial fibrillation, and Hypertensive chronic kidney disease. The medication profile includes Simvastatin, which is a lipid-lowering agent, and the patient has a history of cardiovascular disease.\n\nHowever, according to the strict instructions provided, the mere use of a statin (Simvastatin) or the presence of cardiovascular diseases (Subendocardial infarction, CHF, etc.) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.).\n\nThe current record lists diagnoses such as \"Subendocardial infarction,\" \"Acute on chronic systolic heart failure,\" and \"Hypertensive chronic kidney disease,\" but it does not explicitly code a diagnosis of \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid abnormality in the current visit record. Therefore, based on the strict criteria set forth in the instructions, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4015,
+    "completion_tokens": 256
+  }
+}

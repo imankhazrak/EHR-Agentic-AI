@@ -1,0 +1,12 @@
+{
+  "sample_id": 9334,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record, not merely implied by high-risk factors or general comorbidities.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current list of diagnoses is overwhelmingly focused on severe, acute trauma and subsequent complications:\n*   Severe head trauma (Skull fracture, Toxic encephalopathy, Prolonged LOC).\n*   Acute abdominal/thoracic trauma (Splenectomy, Pneumohemothorax, Liver/Kidney injury).\n*   Infection/Metabolic stress (Pneumonia, Alcoholic cirrhosis, Alcohol dependence).\n*   Fractures (Multiple closed and open fractures).\n\nCrucially, **there is no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed among the diagnoses made.\n\n2. **Evaluation of Risk Factors and Comorbidities:**\nThe patient has several significant comorbidities that are *associated* with lipid disorders, but these associations alone are insufficient for a \"Yes\" prediction:\n*   **Alcoholic Cirrhosis and Alcohol Dependence:** This is a major metabolic comorbidity. While",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1626,
+    "completion_tokens": 256
+  }
+}

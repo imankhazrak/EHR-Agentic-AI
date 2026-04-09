@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-metabolic critical care issues. The primary diagnoses include: Acute vascular insufficiency of intestine, Acute respiratory failure, Unspecified septicemia, Sepsis, Hemorrhage complicating a procedure, and Systemic sclerosis. The medication profile is extensive, focusing on managing these acute infections, organ support (e.g., Albumin, Furosemide, Metoprolol), and procedural complications (e.g., Alteplase).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is receiving general supportive care, the prescribed medications (Metoprolol, Levothyroxine, etc.) and procedures (Cholecystectomy, etc.) do not meet the strict criteria outlined in the instructions for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict requirement to only predict a future diagnosis when explicit lipid disorder evidence is present, the prediction must be \"No.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3922,
+    "completion_tokens": 239
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and crucially, the prediction must be based on *explicit* evidence of a lipid disorder, not just general risk factors or the use of lipid-related medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient currently has diagnoses of Malignant essential hypertension and Diabetes with neurological manifestations, type I. These are significant comorbidities that are *risk factors* for lipid disorders, but they do not constitute an *explicit diagnosis* of a lipid disorder (like hypercholesterolemia or hyperlipidemia) in the current record. Other diagnoses include peripheral autonomic neuropathy, gastroparesis, and unspecified kidney/ureter issues.\n2. **Medications:** The patient is prescribed numerous medications, including Labetalol HCl, Lisinopril, Amlodipine, and Metoprolol XL, which are used for managing hypertension and cardiovascular risk. The patient is also on Insulin and Aspirin. While the",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 968,
+    "completion_tokens": 256
+  }
+}

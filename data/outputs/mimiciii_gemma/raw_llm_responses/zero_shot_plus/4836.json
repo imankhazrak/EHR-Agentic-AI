@@ -1,0 +1,12 @@
+{
+  "sample_id": 4836,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder already present in the patient's current visit record, which provides strong and explicit evidence that this condition is likely to be coded in the patient's next hospital visit.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses explicitly include **\"Pure hypercholesterolemia\"**. This is a direct and explicit diagnosis of a lipid abnormality, falling under the definition of Disorders of Lipid Metabolism (CCS category 53).\n\n2. **Evaluation of Supporting Evidence (Comorbidities and Management):**\nWhile the presence of other severe comorbidities (Congestive heart failure, Coronary atherosclerosis, Diabetes mellitus) are significant risk factors, the prediction hinges on the *explicit* diagnosis.\n*   **Diabetes Mellitus:** The patient also has Diabetes mellitus, which is a known comorbidity associated with dyslipidemia.\n*   **Cardiovascular Disease:** The presence of Coronary atherosclerosis and CHF indicates severe cardiovascular risk, which is often compounded by lipid abnormalities.\n*   **Medication Management:** The prescription of **Atorvastatin** (a statin) confirms that the patient is actively being managed for hypercholesterolemia, reinforcing",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 966,
+    "completion_tokens": 256
+  }
+}

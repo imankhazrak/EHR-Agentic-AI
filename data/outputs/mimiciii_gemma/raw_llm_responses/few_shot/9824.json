@@ -1,0 +1,12 @@
+{
+  "sample_id": 9824,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under Diagnoses made. This is direct evidence of a lipid disorder. However, the strict instructions state that the prediction should be based on *strong and explicit evidence* that a lipid disorder is present and *likely to be diagnosed* in the *next* visit, and that factors like the use of statins alone are insufficient.\n\nIn this specific case, while the diagnosis of \"Other and unspecified hyperlipidemia\" is present in the *current* record, the instructions for predicting the *next* visit require a level of certainty that goes beyond simply listing a diagnosis in the current record, especially when the patient has numerous other severe, non-lipid-related comorbidities (like ESRD, CHF, etc.).\n\nReviewing the demonstration cases:\n- Case 1 (Outcome: Yes): Had septicemia/pneumonia, but no explicit lipid diagnosis listed.\n- Case 2 (Outcome: Yes): Explicitly listed \"Pure hypercholesterolemia.\"\n- Case 3 (Outcome: Yes): Explicitly listed \"Diabetes mellitus... uncontrolled\" (a strong metabolic risk factor often linked to lipid issues, though not a direct lipid diagnosis).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3701,
+    "completion_tokens": 256
+  }
+}

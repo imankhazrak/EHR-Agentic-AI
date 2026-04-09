@@ -1,0 +1,12 @@
+{
+  "sample_id": 3237,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the explicit presence or active management of a primary lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) in the current record, as per the strict instructions.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are: Malignant neoplasm of lower lobe, bronchus or lung; Atrial fibrillation; Kidney replaced by transplant; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\nNone of these diagnoses explicitly state a primary lipid disorder (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Pravastatin**, which is a statin used for lipid management. However, the instructions explicitly state that the *use of statins alone* is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\nOther medications (Insulin, Amiodarone HCl, Metoprolol, etc.) manage other conditions (Diabetes, AF, etc.) and do not explicitly confirm a primary lipid abnormality.\n\n3. **Analysis of Procedures Performed:**\nThe procedures performed (Mediastinoscopy, Simple excision of other lymphatic structure, Fiber-optic bronch",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 986,
+    "completion_tokens": 256
+  }
+}

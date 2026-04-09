@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Although the patient also has other high-risk conditions such as Diabetes with ketoacidosis, unspecified type II or unspecified type, uncontrolled, Unspecified essential hypertension, and Coronary atherosclerosis of native coronary artery, these conditions alone are not sufficient to predict a future diagnosis. The explicit diagnosis of hyperlipidemia overrides the need to rely on general risk factors or the use of statins (Atorvastatin) alone. Therefore, based on the explicit coding of a lipid disorder in the current record, the prediction for the next visit is \"Yes\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3627,
+    "completion_tokens": 169
+  }
+}

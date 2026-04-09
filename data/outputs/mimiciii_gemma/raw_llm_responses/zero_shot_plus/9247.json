@@ -1,0 +1,12 @@
+{
+  "sample_id": 9247,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly requires evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a diagnosis based solely on the use of statins (e.g., Atorvastatin), cardiovascular diseases (e.g., CHF, AF, CABG, CAD), or general risk factors (e.g., hypertension, diabetes).\n\nAnalysis of the Current Visit Record:\n1. **Lipid Disorder Evidence:** The current diagnoses list does not explicitly state any lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.).\n2. **Medication Profile:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a lipid-lowering agent, the instructions explicitly state that the *use* of statins alone is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\n3. **Comorbidities and Risk Factors:** The patient has several significant comorbidities, including Alcoholic cirrhosis of liver, Occlusion and stenosis of carotid artery, and Alcohol withdrawal. These conditions are associated with general cardiovascular and metabolic risk, but they do not constitute explicit evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1124,
+    "completion_tokens": 256
+  }
+}

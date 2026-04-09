@@ -119,9 +119,13 @@ def main(
         lora_r=int(train_cfg.get("lora_r", 8)),
         lora_alpha=int(train_cfg.get("lora_alpha", 16)),
         lora_dropout=float(train_cfg.get("lora_dropout", 0.05)),
+        lora_target_modules=train_cfg.get("lora_target_modules"),
         max_train_samples=int(train_cfg.get("smoke_max_train_samples", 64)) if use_smoke else None,
         max_eval_samples=int(train_cfg.get("smoke_max_eval_samples", 32)) if use_smoke else None,
         max_steps=int(train_cfg.get("smoke_max_steps", 3)) if use_smoke else None,
+        gradient_checkpointing=bool(train_cfg.get("gradient_checkpointing", False)),
+        force_fp32=bool(train_cfg.get("force_fp32", False)),
+        max_grad_norm=float(train_cfg.get("max_grad_norm", 1.0)),
         smoke=use_smoke,
     )
 

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6781,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Furthermore, the presence of this explicit lipid disorder diagnosis provides strong and direct evidence that a diagnosis of \"Disorders of Lipid Metabolism\" is present and likely to be coded in the patient's NEXT hospital visit, satisfying the strict criteria for answering \"Yes.\" The other factors, such as the use of Atorvastatin (a lipid-lowering medication) or the presence of Chronic lymphoid leukemia, do not override this explicit diagnostic evidence. Therefore, the explicit diagnosis of hypercholesterolemia is the determining factor.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3482,
+    "completion_tokens": 155
+  }
+}

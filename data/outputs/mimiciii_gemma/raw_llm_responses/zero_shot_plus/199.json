@@ -1,0 +1,12 @@
+{
+  "sample_id": 199,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record contains explicit and strong evidence of an existing lipid disorder, which strongly indicates that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The most compelling evidence is the explicit diagnosis recorded in the current visit record: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Active Lipid Management:** The patient is actively managed for this condition, as evidenced by the prescription of multiple lipid-lowering agents: **\"Atorvastatin\"** and **\"Ezetimibe\"**, along with **\"Gemfibrozil\"** and **\"Niacin\"**. The combination of these medications confirms that the lipid abnormality is not merely a risk factor but an actively managed, existing condition.\n\n3. **Comorbid Conditions:** The presence of other significant comorbidities, such as **\"Hypertensive chronic kidney disease\"**, **\"Diabetes with renal manifestations\"**, and **\"Atherosclerosis of native arteries of the extremities with ulceration\"**, are all strongly associated",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1274,
+    "completion_tokens": 256
+  }
+}

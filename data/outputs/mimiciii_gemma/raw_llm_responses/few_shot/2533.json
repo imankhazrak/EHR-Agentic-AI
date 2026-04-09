@@ -1,0 +1,12 @@
+{
+  "sample_id": 2533,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, including unspecified septicemia, septic shock, acute kidney failure, acute respiratory failure, and pneumonia. The medication profile is heavily focused on managing these life-threatening conditions (e.g., Heparin, Ceftazidime, Albuterol, Prednisone, etc.).\n\nCrucially, the current diagnoses list does not contain any explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. While the patient has several high-risk comorbidities (e.g., metabolic encephalopathy, acute vascular insufficiency of intestine, which can be related to underlying vascular issues), the strict instruction is to predict the *coding* of the diagnosis, not the general risk.\n\nThe provided demonstration cases show that a diagnosis of lipid disorder is coded when there is explicit evidence of the disorder (Case 2, Case 3). In this current record, the evidence is absent. The presence of general risk factors like metabolic encephalopathy or acute vascular insufficiency, while potentially related to vascular health, does not meet the strict threshold for predicting a future *coded* diagnosis of \"Disorders of Lipid Metabolism\" based on the provided guidelines. Therefore,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3839,
+    "completion_tokens": 256
+  }
+}

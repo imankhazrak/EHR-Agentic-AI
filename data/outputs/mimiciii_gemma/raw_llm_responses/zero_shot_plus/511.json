@@ -1,0 +1,12 @@
+{
+  "sample_id": 511,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on severe acute and chronic respiratory, renal, and oncological issues: Acute respiratory failure, Malignant neoplasm of main bronchus, Traumatic subcutaneous emphysema, Hyperosmolality and/or hypernatremia, Chronic obstructive asthma, Acute kidney failure, Pleurisy with effusion, Unspecified essential hypertension, and Unspecified disorder of kidney and ureter.\n2. **Medications:** The medication list is extensive and primarily targets the acute and chronic conditions listed above (e.g., Humulin-R Insulin, D5W, NS, Midazolam HCl, Fentanyl Citrate, Lansoprazole Oral Suspension, Heparin, Ipratropium Bromide MDI, Bisacodyl, Acetaminophen, Albuterol, Methylprednisolone",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1179,
+    "completion_tokens": 256
+  }
+}

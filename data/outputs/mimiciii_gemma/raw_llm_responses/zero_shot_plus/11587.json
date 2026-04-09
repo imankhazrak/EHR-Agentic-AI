@@ -1,0 +1,12 @@
+{
+  "sample_id": 11587,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, according to the strict guidelines.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list includes \"Coronary atherosclerosis of native coronary artery,\" \"Unspecified essential hypertension,\" and \"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\" While these conditions are strongly associated with dyslipidemia, the record **does not explicitly state** a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\n2. **Medication Review:** The medication list includes \"Insulin\" and \"MetFORMIN (Glucophage),\" which are used for diabetes management. There is **no explicit mention** of lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates in the prescribed medications.\n\n3. **Exclusion Criteria Application:** The guidelines explicitly state that predicting a future diagnosis based *only* on the presence of cardiovascular diseases (like \"Coronary atherosclerosis\") or general risk factors (like \"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1278,
+    "completion_tokens": 256
+  }
+}

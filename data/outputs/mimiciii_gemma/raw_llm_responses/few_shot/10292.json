@@ -1,0 +1,12 @@
+{
+  "sample_id": 10292,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Furthermore, the presence of this explicit lipid disorder diagnosis provides strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, satisfying the strict criteria for answering \"Yes.\" The other factors, such as the use of Simvastatin and Atorvastatin, while related to lipid management, are not the sole determining factor, but the explicit diagnosis of hypercholesterolemia is the definitive evidence required.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3900,
+    "completion_tokens": 137
+  }
+}

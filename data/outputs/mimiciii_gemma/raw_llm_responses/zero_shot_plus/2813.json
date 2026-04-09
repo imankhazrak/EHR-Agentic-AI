@@ -1,0 +1,12 @@
+{
+  "sample_id": 2813,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are overwhelmingly related to severe acute critical care issues: Acute respiratory failure, Pneumonia due to Pseudomonas, Cryptococcosis, Hemorrhage of gastrointestinal tract, Atrial fibrillation, Urinary tract infection, Bacteremia, and Chronic airway obstruction.\nThe patient's procedures and interventions are focused on life support: Temporary tracheostomy, Continuous invasive mechanical ventilation, Enteral/Parenteral nutrition, and Thoracentesis.\nThe patient's medication profile is recorded as \"None recorded.\"\n\nEvaluation against Prediction Criteria:\n1. **Explicit Lipid Disorder Evidence:** There is no mention of any specific lipid abnormality in the current diagnoses (e.g., hypercholesterolemia, hyperlipidemia, etc.).\n2. **Exclusion Criteria Check:** The record contains several cardiovascular diagnoses (Atrial",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 940,
+    "completion_tokens": 256
+  }
+}

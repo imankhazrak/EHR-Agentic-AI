@@ -1,0 +1,12 @@
+{
+  "sample_id": 3104,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe patient's current hospital visit record primarily documents severe acute cardiovascular events and the subsequent interventional management thereof. The key diagnoses are Acute myocardial infarction of inferoposterior wall and Coronary atherosclerosis of native coronary artery. The procedures performed are extensive, including left heart cardiac catheterization, coronary arteriography, and stent insertion.\n\nThe instructions explicitly state that the prediction should NOT be based on general clinical risk factors or the use of cardiovascular diseases (like AMI or Coronary Atherosclerosis) alone, even though these conditions are highly associated with hyperlipidemia. The current record lacks any explicit diagnosis of a lipid abnormality (such as hypercholesterolemia or hyperlipidemia) or any explicit ongoing management targeting lipid levels (such as the prescription of statins or fibrates).\n\nWhile the patient has significant cardiovascular disease, which is a known risk factor for lipid disorders, the strict criteria require explicit evidence of a lipid disorder or active lipid management to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since the current record is focused entirely on the acute ischemic event and revascularization, and lacks the required explicit lipid evidence, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 897,
+    "completion_tokens": 241
+  }
+}

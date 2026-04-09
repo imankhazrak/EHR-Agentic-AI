@@ -1,0 +1,12 @@
+{
+  "sample_id": 1280,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record provided pertains exclusively to a critically ill **newborn** undergoing intensive care for various **perinatal and respiratory complications**. The diagnoses, medications, and procedures listed are overwhelmingly focused on managing **preterm birth, respiratory distress syndrome (RDS), persistent fetal circulation, and associated neonatal complications** such as jaundice, bradycardia, and cardiac defects (Patent ductus arteriosus, Atrial septal defect).\n\nA comprehensive review of the current record reveals **no explicit evidence** of an existing or actively managed **Disorder of Lipid Metabolism** in this newborn. Specifically:\n1. **Diagnoses:** The diagnoses are centered on the perinatal period (e.g., *Respiratory distress syndrome in newborn*, *Neonatal jaundice*, *Persistent fetal circulation*), not on lipid abnormalities (e.g., *Hypercholesterolemia*, *Hyperlipidemia*).\n2. **Medications:** The medications prescribed are standard for neonatal critical care, including antibiotics (*Ampicillin Sodium*, *NEO*IV*Gentamicin*), supportive care (*D10W*, *NEO*IV*Parenteral Nutrition*), and management of respiratory/cardiac issues (*NEO*IV*Dexamethasone*,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1075,
+    "completion_tokens": 256
+  }
+}

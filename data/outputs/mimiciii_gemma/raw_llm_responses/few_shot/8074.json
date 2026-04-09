@@ -1,0 +1,12 @@
+{
+  "sample_id": 8074,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous critical diagnoses and ongoing management for severe, multi-system illnesses. These include Unspecified septicemia, Acute respiratory failure, Pneumonia, Acute pyelonephritis, Acidosis, Sepsis, and Congestive heart failure. The patient is also managed for severe psychiatric conditions (Major depressive affective disorder with psychotic behavior) and diabetes with renal and ophthalmic manifestations.\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) or clear, ongoing management specifically for such a condition.\n\nReviewing the current diagnoses and medications:\n1. **Diagnoses:** While the patient has Congestive heart failure (CHF) and Unspecified essential hypertension, these are general cardiovascular risk factors and do not explicitly code as a lipid disorder. The patient has Diabetes, which is a metabolic disorder, but the record does not specify hyperlipidemia or dyslipidemia as a primary or secondary diagnosis related to lipid metabolism.\n2. **Medications:** The patient is prescribed various medications, including Warfarin (anticoagulant), Metoprolol Tartrate (beta-block",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4047,
+    "completion_tokens": 256
+  }
+}

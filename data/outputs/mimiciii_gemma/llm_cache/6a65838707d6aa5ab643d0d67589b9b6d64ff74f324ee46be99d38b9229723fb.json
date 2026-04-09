@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence of an existing or actively managed lipid disorder.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has several significant comorbidities, including Cirrhosis of liver, Diabetes mellitus type II, Unspecified essential hypertension, and Autoimmune hepatitis. These conditions are known risk factors for developing lipid disorders.\n2. **Medications:** The patient is prescribed Insulin, Hydrochlorothiazide, and Lisinopril, which manage diabetes and hypertension. While the patient is on Insulin, there is no explicit mention of lipid-lowering medications such as statins (e.g., Atorvastatin) or fibrates.\n3. **Procedures:** The procedures performed are related to gastrointestinal and endoscopic management, not directly related to the diagnosis or management of primary lipid disorders.\n\nEvaluation against Strict Rules:\nThe instructions explicitly state that answering \"Yes\" requires *strong and explicit evidence* that a",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 256
+  }
+}

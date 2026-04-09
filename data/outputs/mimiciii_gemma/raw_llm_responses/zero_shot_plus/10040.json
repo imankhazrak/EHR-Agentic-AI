@@ -1,0 +1,12 @@
+{
+  "sample_id": 10040,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions explicitly state that general risk factors, the use of statins, or the presence of cardiovascular diseases alone are insufficient to predict a future diagnosis.\n\nAnalysis of the Current Visit Record:\nThe patient's current visit record is overwhelmingly dominated by severe, acute infectious and inflammatory processes:\n- **Diagnoses:** Cellulitis and abscess of leg, Necrotizing fasciitis, Unspecified septicemia, Severe sepsis, Toxic epidermal necrolysis, Paraplegia, Spina bifida, Chronic obstructive asthma, Mild intellectual disabilities, etc.\n- **Medications:** The prescribed medications are primarily for managing severe sepsis, infection (Vancomycin, Meropenem, Clindamycin), cardiovascular instability (Norepinephrine, DOBUTamine), and acute neurological/septic complications (Midazolam, Vecuronium Bromide, Propofol, etc.).\n- **Procedures:** The procedures performed are related to critical care management of sepsis and respiratory failure (Mechanical ventilation, Arterial catheter",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 256
+  }
+}

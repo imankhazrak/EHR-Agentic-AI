@@ -1,0 +1,12 @@
+{
+  "sample_id": 11138,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by critical care diagnoses related to severe respiratory failure, cardiac arrest, anoxic brain damage, and multiple severe comorbidities such as diabetes, chronic heart failure, and kidney failure. While the patient has several cardiovascular diagnoses (e.g., Coronary atherosclerosis, Atrial fibrillation, Chronic systolic heart failure), these diagnoses alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that would serve as strong and explicit evidence for coding this diagnosis in the next visit. The presence of diabetes and cardiovascular disease are high-risk factors for lipid disorders, but the instructions explicitly forbid basing the prediction on these general risk factors or the use of associated medications (like Warfarin or Metoprolol Tartrate, which are not primary lipid management drugs in this context). Since explicit evidence of an existing or actively managed lipid disorder is absent, the prediction must be \"No,\" adhering strictly to the provided guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3905,
+    "completion_tokens": 230
+  }
+}

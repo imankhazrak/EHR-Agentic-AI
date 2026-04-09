@@ -1,0 +1,12 @@
+{
+  "sample_id": 8602,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to cerebrovascular events, pulmonary insufficiency, congestive heart failure, coronary atherosclerosis, and diabetes mellitus. While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, and the patient has general risk factors, the record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that is independent of the other severe conditions. Therefore, based on the strict criteria, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 123
+  }
+}

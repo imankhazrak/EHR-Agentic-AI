@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, not just general risk factors or comorbidities.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are:\n1. Pneumonitis due to inhalation of food or vomitus; [ICD9-DX:2765]\n2. Generalized nonconvulsive epilepsy, with intractable epilepsy; [ICD9-DX:3483]\n3. Unspecified intellectual disabilities; [ICD9-DX:3483] (Note: The record lists this twice, but the primary diagnosis is listed as 3483 for epilepsy, and the other is for intellectual disabilities, though the ICD code is the same in the provided text).\n4. Hypopotassemia\n5. Disorders of magnesium metabolism\n6. Anemia, unspecified\n\nThe patient's medications prescribed are: None recorded.\nThe procedures performed include:",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 914,
+    "completion_tokens": 256
+  }
+}

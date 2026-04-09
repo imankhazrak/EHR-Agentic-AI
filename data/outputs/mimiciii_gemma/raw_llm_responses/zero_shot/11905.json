@@ -1,0 +1,12 @@
+{
+  "sample_id": 11905,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to severe respiratory conditions (Acute and chronic respiratory failure, Obstructive chronic bronchitis with acute bronchitis, Obstructive sleep apnea), cardiac issues (Chronic diastolic heart failure, Congestive heart failure), and general/inflammatory conditions (Polycythemia, Leukocytosis, Unspecified essential hypertension, Osteoarthrosis).\n\nCrucially, the record **lacks any explicit evidence** of an existing or actively managed lipid disorder, such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed (Heparin, Albuterol, Fluticasone-Salmeterol, Ipratropium Bromide, PredniSONE, Azithromycin, CeftriaXONE, Furosemide) are directed towards respiratory, cardiac, or infectious management, not lipid management.\n\nTherefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 669,
+    "completion_tokens": 227
+  }
+}

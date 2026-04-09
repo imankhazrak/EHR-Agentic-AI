@@ -1,0 +1,12 @@
+{
+  "sample_id": 10040,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses and medications are overwhelmingly related to severe sepsis, necrotizing fasciitis, cellulitis, and associated critical care management (e.g., mechanical ventilation, high-dose antibiotics, etc.). Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit based on the provided information.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 747,
+    "completion_tokens": 120
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is receiving \"Atorvastatin,\" which is a medication used for managing hypercholesterolemia. While the instructions caution against basing the prediction solely on statin use, the presence of the explicit diagnosis of \"Pure hypercholesterolemia\" overrides this caution and provides the necessary strong evidence for a \"Yes\" prediction. The presence of this explicit diagnosis, combined with the ongoing management indicated by the prescription of Atorvastatin, strongly supports the conclusion that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3642,
+    "completion_tokens": 185
+  }
+}

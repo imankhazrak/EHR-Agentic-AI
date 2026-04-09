@@ -1,0 +1,12 @@
+{
+  "sample_id": 11762,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to infectious processes (Urinary tract infection, Friedl?nder's bacillus infection), severe cardiovascular conditions (Acute on chronic diastolic heart failure, Congestive heart failure, Atrial fibrillation, Primary pulmonary hypertension, Coronary atherosclerosis), and chronic organ dysfunction (Chronic kidney disease, Diabetes mellitus). While the patient has several significant risk factors for dyslipidemia, such as Diabetes mellitus type II and Coronary atherosclerosis, these factors alone, according to the strict instructions, are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current medication profile includes several drugs for managing these comorbidities (Furosemide, Metoprolol Tartrate, Ciprofloxacin, Warfarin, Heparin), but there is no explicit evidence in the current diagnoses or prescribed medications that points to an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis). Therefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3697,
+    "completion_tokens": 226
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 241,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of certain medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses include Secondary malignant neoplasm of pleura, Urinary tract infection, Constrictive pericarditis, Neutropenia, Asthma, and Unspecified essential hypertension. While Unspecified essential hypertension is a risk factor for lipid disorders, it is not an explicit diagnosis of a lipid disorder itself.\n2. **Medications Prescribed:** The medication list is extensive and primarily targets pain management (Oxycodone-Acetaminophen, Morphine Sulfate IR, Fentanyl Patch, Fentanyl Citrate), infection control (Ciprofloxacin HCl, Ondansetron ODT), cardiovascular/respiratory support (Metoprolol, Albuterol 0.083% Neb Soln, Ipratropium Bromide Neb), and other conditions (Docusate Sodium, Megest",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1019,
+    "completion_tokens": 256
+  }
+}

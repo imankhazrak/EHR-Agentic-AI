@@ -1,0 +1,12 @@
+{
+  "sample_id": 3955,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly limit the prediction to explicit evidence of an existing or actively managed lipid disorder, excluding general risk factors, statin use, or cardiovascular diseases alone.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has numerous severe, acute, and chronic conditions, including Varices, Esophageal varices with bleeding, GI hemorrhage, Acute posthemorrhagic anemia, Diastolic heart failure, Acidosis, Unspecified essential hypertension, Diabetes mellitus, Heart valve replacement, Long-term anticoagulants, Atrial fibrillation, Cirrhosis, and various other chronic conditions.\n2. **Medications:** The patient is prescribed Furosemide, Warfarin, Insulin, Lisinopril, Metoprolol Tartrate, etc.\n3. **Procedures:** The patient underwent an endoscopy.\n\n**Evaluation against Strict Criteria:**\nThe current record demonstrates significant risk factors for lipid disorders, such as:\n*   **Diabetes Mellitus:** A known risk factor for dyslipidemia.\n*   **Unspecified essential hypertension:** A known risk factor",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1053,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3549,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just risk factors or medication use.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses: Diabetes with ketoacidosis, type I; Acute kidney failure; Colitis; Iron deficiency anemia; Unspecified essential hypertension; Coronary atherosclerosis; Angina pectoris. While Diabetes Mellitus and Hypertension are known risk factors for dyslipidemia, they are not explicit diagnoses of lipid disorders themselves.\n2. **Medications:** The patient is prescribed **Atorvastatin**, a statin used for lipid management. However, according to the strict instructions, the use of statins alone is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\n3. **Comorbidities/Risk Factors:** The patient has Diabetes and Hypertension, which are strong risk factors for hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 992,
+    "completion_tokens": 256
+  }
+}

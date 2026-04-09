@@ -1,0 +1,12 @@
+{
+  "sample_id": 11121,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Furthermore, the instructions state that the answer should be \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition). Since \"Pure hypercholesterolemia\" is a direct and explicit evidence of a lipid disorder, this meets the threshold for a \"Yes\" prediction, overriding the general risk factors or the mere use of other medications/procedures. The presence of this specific diagnosis strongly indicates that the diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3503,
+    "completion_tokens": 187
+  }
+}

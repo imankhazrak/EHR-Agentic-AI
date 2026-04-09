@@ -1,0 +1,12 @@
+{
+  "sample_id": 11996,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are dominated by infectious and hematological issues: Pneumonia, Multiple myeloma, Pulmonary collapse, Hepatitis, Hypoxemia, Hypotension, and Neutropenia. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed.\n2. **Medications:** The prescribed medications include antibiotics (Micafungin, Vancomycin, Cefpodoxime Proxetil, Levofloxacin, Oseltamivir Phosphate, Acyclovir), corticosteroids (PredniSONE, Hydrocortisone Na Succ.), and supportive care agents (Guaifenesin, Potassium Phosphate/Chloride",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1003,
+    "completion_tokens": 256
+  }
+}

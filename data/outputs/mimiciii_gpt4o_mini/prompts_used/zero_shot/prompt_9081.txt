@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Intraspinal abscess; Subendocardial infarction, initial episode of care; Acute and chronic respiratory failure; Acute kidney failure, unspecified; Atrioventricular block, complete; Pressure ulcer, lower back; Pressure ulcer, stage IV; Chronic kidney disease, Stage III (moderate); Acute osteomyelitis, other specified sites; Intervertebral disc disorder with myelopathy, thoracic region; Pathologic fracture of vertebrae; Delirium due to conditions classified elsewhere; Ulcer of heel and midfoot; Hyperosmolality and/or hypernatremia; Aneurysm of heart (wall); Paraplegia; Body Mass Index 40.0-44.9, adult; Chronic systolic heart failure; Chronic airway obstruction, not elsewhere classified; Obstructive sleep apnea (adult)(pediatric); Sinoatrial node dysfunction; Other chronic pulmonary heart diseases; Streptococcus infection in conditions classified elsewhere and of unspecified site, other streptococcus; Congestive heart failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Pressure ulcer, heel; Atrial fibrillation; Coronary atherosclerosis of unspecified type of vessel, native or graft; Morbid obesity; Diabetes with unspecified complication, type II or unspecified type, not stated as uncontrolled; Pressure ulcer, stage II; Other and unspecified special symptoms or syndromes, not elsewhere classified; Abdominal aneurysm without mention of rupture; Anemia, unspecified; Unspecified acquired hypothyroidism; Personal history of tobacco use
+- Medications prescribed: Haloperidol; Midodrine; 5% Dextrose; Furosemide; Collagenase Ointment; Heparin Flush (10 units/ml); Sterile Water; 0.9% Sodium Chloride; Midazolam; PHENYLEPHrine; NORepinephrine; Fentanyl Citrate; Soln; Atorvastatin; OLANZapine (Disintegrating Tablet); Famotidine; Heparin; Fluticasone Propionate 110mcg; Iso-Osmotic Dextrose; Vancomycin; CeftriaXONE; Clopidogrel; Insulin; Morphine Sulfate; HYDROmorphone (Dilaudid); Quetiapine Fumarate; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Potassium Chloride; Etomidate; Succinylcholine; Piperacillin-Tazobactam; Heparin Sodium; Ipratropium Bromide MDI; Albuterol Inhaler; Chlorhexidine Gluconate 0.12% Oral Rinse; Bag; Magnesium Sulfate; Calcium Gluconate; Docusate Sodium (Liquid); Simvastatin; Glucagon; Levothyroxine Sodium; Calcitriol; Dextrose 50%; Vitamin D; Aspirin; Neutra-Phos; Docusate Sodium; Fluticasone-Salmeterol Diskus (250/50)
+- Procedures performed: Dorsal and dorsolumbar fusion of the posterior column, posterior technique; Excision or destruction of lesion of spinal cord or spinal meninges; Other excision of joint, other specified sites; Excisional debridement of wound, infection, or burn; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Fusion or refusion of 4-8 vertebrae; Central venous catheter placement with guidance; Diagnostic ultrasound of heart; Non-invasive mechanical ventilation; Insertion of endotracheal tube; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

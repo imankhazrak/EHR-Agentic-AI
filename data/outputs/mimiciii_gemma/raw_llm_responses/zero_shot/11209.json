@@ -1,0 +1,12 @@
+{
+  "sample_id": 11209,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on cardiovascular, renal, pulmonary, and psychiatric conditions (e.g., heart failure, kidney failure, diabetes, COPD, etc.). While the patient has multiple comorbidities, there is no explicit evidence within the diagnoses or ongoing management that points to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid metabolism disorder). The medications prescribed, such as Aspirin and Metoprolol, are related to cardiovascular management, not specific lipid disorder management as defined by the strict criteria. Therefore, based on the strict evidence required, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 934,
+    "completion_tokens": 150
+  }
+}

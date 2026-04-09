@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a diagnosed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are primarily related to metabolic issues (Diabetes with hyperosmolarity, type II or unspecified type, uncontrolled; Acidosis; Chronic hepatitis C without mention of hepatic coma; Gastroparesis; Esophageal reflux; Asthma, unspecified type, unspecified; Rheumatoid arthritis; Unspecified essential hypertension). While the patient has several risk factors for lipid disorders, such as uncontrolled diabetes and hypertension, and is in the high-risk MIMIC-III population, the instructions strictly prohibit predicting a future diagnosis based solely on these general risk factors or the use of associated medications (like Lisinopril or Insulin). Furthermore, the current record does not show any explicit lipid disorder diagnosis or ongoing management specifically targeting a lipid abnormality that would strongly suggest a future coding of this diagnosis. Therefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3619,
+    "completion_tokens": 213
+  }
+}

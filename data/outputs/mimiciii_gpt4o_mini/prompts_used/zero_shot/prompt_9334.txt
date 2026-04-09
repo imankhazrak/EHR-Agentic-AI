@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other closed skull fracture with cerebral laceration and contusion, with prolonged [more than 24 hours] loss of consciousness, without return to pre-existing conscious level; Traumatic shock; Traumatic pneumohemothorax without mention of open wound into thorax; Injury to spleen without mention of open wound into cavity, laceration extending into parenchyma; Toxic encephalopathy; [ICD9-DX:5185]; Pneumonia due to other gram-negative bacteria; Accidental fall from or out of building or other structure; Contusion of orbital tissues; Injury to other intra-abdominal organs without mention of open wound into cavity, peritoneum; Injury to liver without mention of open wound into cavity laceration, unspecified; Injury to kidney without mention of open wound into cavity, unspecified injury; Contusion of lung without mention of open wound into thorax; Acute posthemorrhagic anemia; Other optic neuritis; Closed Colles' fracture; Closed fracture of eight or more ribs; Bimalleolar fracture, open; Unspecified viral hepatitis C without hepatic coma; Closed fracture of malar and maxillary bones; Closed fracture of other facial bones; Closed fracture of clavicle, unspecified part; Closed fracture of metacarpal bone(s), site unspecified; Closed fracture of middle or proximal phalanx or phalanges of hand; Closed fracture of mandible, ramus, unspecified; Closed fracture of mandible, condylar process; Closed dislocation of interphalangeal (joint), hand; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, continuous
+- Medications prescribed: Sodium Chloride 0.9%  Flush; Acetaminophen; Haloperidol; traZODONE; Ciprofloxacin IV; 5% Dextrose; Methadone; Fentanyl Citrate; Olanzapine; 0.9% Sodium Chloride; Ketorolac; Insulin; Lorazepam; PNEUMOcoccal Vac Polyvalent; Influenza Virus Vaccine; CloniDINE; Heparin Flush (10 units/ml); LeVETiracetam; Vancomycin; Methylnaltrexone; Iso-Osmotic Dextrose; Piperacillin-Tazobactam; HYDROmorphone (Dilaudid); Neutra-Phos; Bisacodyl; Gastroview (Diatrizoate Meglumine & Sodium); LR; Vigamox; Bacitracin/Polymyxin B Sulfate Opht. Oint; Milk of Magnesia; Erythromycin 0.5% Ophth Oint; Senna; Propofol; Soln; Bacitracin Ointment; FoLIC Acid; Citalopram; Ferrous Sulfate; Multivitamins; Heparin; Thiamine; D5 1/2NS; Docusate Sodium (Liquid); CefazoLIN; Famotidine; Clonidine Patch 0.2 mg/24 hr; Oxycodone-Acetaminophen; Ciprofloxacin 0.3% Ophth Soln; 0.9% Sodium Chloride (Mini Bag Plus); Calcium Gluconate
+- Procedures performed: Total splenectomy; Temporary tracheostomy; Interruption of the vena cava; Open reduction of fracture with internal fixation, tibia and fibula; Open reduction of fracture with internal fixation, carpals and metacarpals; Open reduction of malar and zygomatic fracture; Central venous catheter placement with guidance; Percutaneous [endoscopic] gastrostomy [PEG]; Debridement of open fracture site, tibia and fibula; Bronchoscopy through artificial stoma; Other bronchoscopy; Magnetic removal of embedded foreign body from cornea; Application of external fixator device, carpals and metacarpals; Other skin graft to hand; Insertion of synthetic implant in facial bone; Other incision of pleura; Closure of skin and subcutaneous tissue of other sites; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Closed reduction of fracture without internal fixation, phalanges of hand; Closed reduction of dislocation of hand and finger
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

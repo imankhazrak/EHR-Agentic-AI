@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe, complex, non-lipid-related critical care diagnoses and management. The primary diagnoses include Chronic hepatitis C with hepatic coma, Acute respiratory failure, Alcoholic cirrhosis of liver, Congestive heart failure, and various associated complications (ascites, coagulopathy, etc.).\n\n**Analysis against Prediction Criteria:**\n\n1. **Absence of Explicit Lipid Disorder Evidence:** The current diagnoses list does not explicitly include hypercholesterolemia, hyperlipidemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism\" (CCS category 53). The presence of Congestive Heart Failure (CHF) is a cardiovascular diagnosis, not an explicit lipid disorder diagnosis, and therefore does not meet the strict criteria for a \"Yes\" prediction.\n\n2. **Exclusion of Insufficient Evidence:** The patient is receiving numerous medications, including those that might be used in the management of metabolic or cardiovascular conditions (e.g., Furosemide, Nadolol, Lactulose, Pantoprazole). However, the strict instructions explicitly state that the mere use of cardiovascular medications or general risk factors (like those associated with cirrhosis or CHF) is **not** sufficient evidence to predict a future",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3701,
+    "completion_tokens": 256
+  }
+}

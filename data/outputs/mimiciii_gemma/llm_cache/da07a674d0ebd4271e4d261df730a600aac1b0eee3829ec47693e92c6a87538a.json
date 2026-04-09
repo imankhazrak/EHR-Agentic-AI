@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors or medication use alone.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are focused on severe cardiovascular and cerebrovascular events: Coronary atherosclerosis, Intermediate coronary syndrome, Unspecified essential hypertension, Tobacco use disorder, and Occlusion/stenosis of precerebral arteries. While these conditions are strongly *associated* with lipid disorders, they do not explicitly *state* a lipid disorder diagnosis (e.g., \"Hypercholesterolemia\" or \"Hyperlipidemia\").\n2. **Medications:** The patient is prescribed **Atorvastatin**. This is a lipid-lowering medication, which strongly *suggests* the presence of a lipid abnormality that is being managed. However, according to the strict instructions, the mere use of a statin is **NOT** sufficient evidence to predict a future diagnosis of the disorder itself.\n3. **Other Factors:** The patient has hypertension and cardiovascular disease, which are risk factors for lipid disorders, but these factors alone are explicitly excluded from being sufficient",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1124,
+    "completion_tokens": 256
+  }
+}

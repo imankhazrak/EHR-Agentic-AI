@@ -1,0 +1,12 @@
+{
+  "sample_id": 8312,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily documents acute neurological and gastrointestinal issues, specifically Intracerebral hemorrhage, Aphasia, and Other dysphagia. The prescribed medications and performed procedures are overwhelmingly related to managing these acute conditions (e.g., Mannitol, Heparin, Enteral infusion, etc.).\n\nCrucially, there is no explicit evidence within the current record\u2014such as a documented diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality\u2014that would strongly and explicitly support the coding of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict guidelines provided.\n\nWhile the patient is receiving various medications, some of which are used in general critical care settings, and some of which might be associated with metabolic health (like Enalaprilat, which is an ACE inhibitor), these factors alone do not meet the threshold for predicting a future diagnosis of a lipid disorder, as per the instructions. The absence of explicit lipid disorder evidence leads to the prediction of \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3557,
+    "completion_tokens": 215
+  }
+}

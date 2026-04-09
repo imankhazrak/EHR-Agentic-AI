@@ -1,0 +1,12 @@
+{
+  "sample_id": 11394,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record.\n\n1. **Analysis of Current Visit Record for Lipid Disorder Evidence:**\nThe patient's current diagnoses explicitly include: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid disorder, which meets the primary criterion for predicting a future diagnosis.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe prediction is NOT based solely on:\n*   Use of statins (No statins are explicitly listed in the medications).\n*   Cardiovascular diseases (While \"Other specified disorders of circulatory system\" and \"Unspecified essential hypertension\" are present, the prediction is driven by the explicit hyperlipidemia diagnosis, not these conditions alone).\n*   General risk factors (While Diabetes and Hypertension are present, the explicit hyperlipidemia diagnosis overrides the need to rely on these risk factors).\n\n3. **Conclusion:**\nSince the patient is explicitly diagnosed with a lipid disorder (\"Other and unspecified hyperlipidemia\") in the current record, there is strong and explicit evidence that this condition is present and highly likely to be coded again or maintained in the patient's next hospital visit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1038,
+    "completion_tokens": 256
+  }
+}

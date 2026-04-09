@@ -1,0 +1,12 @@
+{
+  "sample_id": 10118,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the strict rules provided for predicting a *future* diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an *existing or actively managed* lipid disorder that is *not* solely based on general risk factors or the presence of other related conditions. While \"Other and unspecified hyperlipidemia\" is a diagnosis, the provided rules for predicting a *future* diagnosis are extremely restrictive and do not explicitly state that the presence of a diagnosis in the *current* visit guarantees a *future* diagnosis under these specific, narrow criteria. Furthermore, the rules explicitly state that factors alone are NOT sufficient to predict a future diagnosis, and the presence of a diagnosis in the current visit does not automatically satisfy the strict criteria for predicting a *future* diagnosis under these narrow constraints.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the strict rules provided for predicting a *future* diagnosis of \"Disorders of Lipid Metabolism\" are extremely restrictive. While \"Other and unspecified hyperlipidemia\" is a diagnosis in the *current* visit, the rules for predicting",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 877,
+    "completion_tokens": 256
+  }
+}

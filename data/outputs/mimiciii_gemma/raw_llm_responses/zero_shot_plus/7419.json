@@ -1,0 +1,12 @@
+{
+  "sample_id": 7419,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses include several significant comorbidities that are *risk factors* for lipid disorders, such as:\n    * Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n    * Unspecified essential hypertension.\n    * Congestive heart failure, unspecified.\n    * Personal history of malignant neoplasm of thyroid.\n\nWhile these conditions are strongly associated with dyslipidemia, the *presence* of these risk factors alone, as per the instructions, is explicitly insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and covers numerous conditions (e.g., opiates, AKI, CHF, diabetes, hypertension). Crucially, the list **does not contain any explicit lipid-lowering agents** such as statins (e.g., Atorvastatin, Simvastatin) or fibrates. The presence of insulin and Metformin addresses the diabetes, and",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1068,
+    "completion_tokens": 256
+  }
+}

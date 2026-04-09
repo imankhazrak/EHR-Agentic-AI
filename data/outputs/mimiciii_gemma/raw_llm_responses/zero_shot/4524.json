@@ -1,0 +1,12 @@
+{
+  "sample_id": 4524,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" Since this is a direct and explicit evidence of a lipid disorder, it strongly supports the likelihood that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current hospital visit record does not explicitly state a diagnosis of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or is the primary focus of the current treatment, despite the presence of other risk factors. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" Since this is a direct and explicit evidence of a lipid disorder, it strongly supports the likelihood that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current hospital visit record does not",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 680,
+    "completion_tokens": 256
+  }
+}

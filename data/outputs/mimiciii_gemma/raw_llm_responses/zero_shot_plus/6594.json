@@ -1,0 +1,12 @@
+{
+  "sample_id": 6594,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on severe cardiovascular and respiratory compromise:\n*   Acute on chronic systolic heart failure; Congestive heart failure, unspecified; Other primary cardiomyopathies.\n*   Acute respiratory failure; Obstructive sleep apnea (adult)(pediatric).\n*   Metabolic/Obesity factors: Body Mass Index 70 and over, adult; Morbid obesity.\n*   Other comorbidities: Atrial fibrillation; Depressive disorder, not elsewhere classified; Other psoriasis.\n\nWhile **Morbid obesity** and **Body Mass Index 70 and over** are significant risk factors strongly associated with hyperlipidemia and lipid disorders, they are classified as *risk factors* in the context of the prediction rules, not as an *explicit diagnosis* of a lipid disorder itself (like hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications and Procedures:**\nThe medication list is comprehensive for managing heart failure, arrhythmias, and respiratory issues (e.g",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1059,
+    "completion_tokens": 256
+  }
+}

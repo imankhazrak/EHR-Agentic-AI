@@ -1,0 +1,12 @@
+{
+  "sample_id": 10194,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record contains several diagnoses and medications that indicate severe, complex, and multi-systemic illness, including malignant processes (Secondary malignant neoplasm of retroperitoneum and peritoneum, Malignant ascites, Malignant neoplasm of ovary), severe infections (Urinary tract infection, site not specified; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]), and critical organ dysfunction (Acute kidney failure, unspecified; Malignant ascites).\n\nCrucially, the current visit record *does* contain the diagnosis: **\"Other and unspecified hyperlipidemia\"**.\n\nAccording to the strict rules provided:\n- Answer \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).\n- DO NOT answer \"Yes\" based only on: Use of statins, Cardiovascular diseases, or General risk factors.\n\nSince the diagnosis **\"Other and unspecified hyperlipidemia\"** is explicitly present in the current visit record, this constitutes the strong and explicit evidence required to predict that a diagnosis of \"Disorders of Lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3709,
+    "completion_tokens": 256
+  }
+}

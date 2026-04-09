@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses include:\n- Other and unspecified cerebral laceration and contusion, without mention of open intracranial wound, unspecified state of consciousness; [ICD9-DX:E888]\n- Atrial fibrillation\n- Urinary tract infection, site not specified\n- Pneumonia, organism unspecified\n- Congestive heart failure, unspecified\n- Mitral valve disorders\n- Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\n- Unspecified essential hypertension\n\nMedications and Procedures:\n- Medications prescribed: None recorded.\n- Procedures performed: None recorded.\n\nEvaluation against Prediction Rules:\n1. **Explicit Lipid Disorder Evidence:** There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current visit",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 909,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1705,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient's medical history includes several significant risk factors commonly associated with lipid disorders, such as Diabetes mellitus, Unspecified essential hypertension, and Coronary atherosclerosis, which further supports the clinical context of a lipid abnormality. The presence of Simvastatin in the medication list indicates ongoing management related to lipid levels, which aligns with the explicit diagnosis. Therefore, based on the explicit diagnosis of hypercholesterolemia, the prediction is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3733,
+    "completion_tokens": 159
+  }
+}

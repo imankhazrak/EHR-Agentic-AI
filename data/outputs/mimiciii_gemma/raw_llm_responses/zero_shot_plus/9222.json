@@ -1,0 +1,12 @@
+{
+  "sample_id": 9222,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for a \"Yes\" prediction require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), and explicitly exclude predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are primarily related to acute neurological events (Subarachnoid hemorrhage, Hyposmolality/hyponatremia), infectious/inflammatory processes (Leukocytosis, Asthma, Orthostatic hypotension), and acute/chronic management of neurological/endocrine issues (Drug-induced psychotic disorder, Long-term steroid use, Adrenal cortical steroids). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the diagnoses made.\n2. **Medications:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a statin used for lipid management, the instructions explicitly state that",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1103,
+    "completion_tokens": 256
+  }
+}

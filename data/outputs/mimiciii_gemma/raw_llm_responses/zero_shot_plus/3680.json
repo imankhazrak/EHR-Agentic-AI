@@ -1,0 +1,12 @@
+{
+  "sample_id": 3680,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or comorbidities.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current diagnoses include: Secondary malignant neoplasm of brain and spinal cord; Secondary malignant neoplasm of bone and bone marrow; Other emphysema; Benign neoplasm of cerebral meninges; Unspecified essential hypertension; Esophageal reflux; Obesity, unspecified; Personal history of malignant neoplasm of bronchus and lung; Fall from other slipping, tripping, or stumbling.\nThere is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder coded in the current record.\n\n2. **Evaluation of Comorbidities and Risk Factors:**\nThe patient does present several risk factors and comorbidities commonly associated with lipid disorders:\n*   **Obesity, unspecified:** Obesity is a significant metabolic risk factor often linked to dyslipidemia.\n*   **Unspecified essential hypertension:** Hypertension is a common com",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 897,
+    "completion_tokens": 256
+  }
+}

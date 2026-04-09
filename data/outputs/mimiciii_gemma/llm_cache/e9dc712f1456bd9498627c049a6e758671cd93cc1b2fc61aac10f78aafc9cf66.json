@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for evidence of an existing lipid disorder, which is the core requirement for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\" Although the patient has numerous other serious conditions (e.g., AMI, Coronary Atherosclerosis, Hypertension), the explicit presence of a hyperlipidemia diagnosis is the sufficient and explicit evidence required by the rules to predict a future coding of this specific diagnosis.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 107
+  }
+}

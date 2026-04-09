@@ -1,0 +1,12 @@
+{
+  "sample_id": 6729,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to severe, acute infections (Streptococcal meningitis, Orbital osteomyelitis, Unspecified otitis media, etc.), severe acute respiratory failure, and associated complications (Cerebral artery occlusion, Hyposmolality/hyponatremia, Anemia). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality listed.\n2. **Medications:** The medication list is extensive and focused on managing severe infections (Vancomycin, Penicillin G, Meropenem, Gentamicin), managing acute respiratory/neurological issues (Olanzapine, Dexamethasone, Heparin), and managing electrolyte imbalances (Iso-Osmotic Dextrose, Potassium Chloride). Crucially, there is no mention of lipid-low",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1196,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses and medications related to severe cardiovascular conditions (Acute on chronic systolic heart failure, Coronary atherosclerosis, Congestive heart failure, Atrial fibrillation, Hypotension, etc.) and renal issues. While the patient is prescribed Rosuvastatin Calcium, this medication is used for managing dyslipidemia. However, the current visit record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The presence of Rosuvastatin is a treatment, not a diagnosis of the disorder itself, and based on the strict rules, this is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nASSISTANT:\nPrediction: No\n\nReasoning: The provided record is heavily focused on managing severe cardiac and renal failure (Systolic heart failure, Coronary atherosclerosis, Atrial fibrillation, CKD, etc.). Although the patient is prescribed Rosuvastatin Calcium, which is a lipid-lowering agent, the record lacks an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia). According to the strict guidelines, the prescription of a lipid-lowering agent alone is not sufficient evidence to predict a future diagnosis",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 696,
+    "completion_tokens": 256
+  }
+}

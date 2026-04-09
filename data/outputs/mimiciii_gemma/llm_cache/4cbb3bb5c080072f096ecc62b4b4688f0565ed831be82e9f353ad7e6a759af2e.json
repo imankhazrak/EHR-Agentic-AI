@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on the use of statins, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe cardiovascular issues (Acute on chronic diastolic heart failure, Mitral valve insufficiency, Aortic valve insufficiency, Atrial fibrillation), gastrointestinal bleeding, renal failure, and infections. While these conditions are often *associated* with lipid disorders, the record does not explicitly state a lipid abnormality (e.g., hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis.\n2. **Medications:** The patient is prescribed **Simvastatin**, which is a lipid-lowering agent (statin). The presence of a statin is a strong *indicator* of underlying or suspected dyslipidemia, but according to the strict instructions, the mere prescription",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1012,
+    "completion_tokens": 256
+  }
+}

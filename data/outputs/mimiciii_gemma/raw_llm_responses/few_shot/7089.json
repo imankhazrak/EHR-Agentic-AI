@@ -1,0 +1,12 @@
+{
+  "sample_id": 7089,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe alcoholic liver disease, alcohol withdrawal, acute pancreatitis, and related complications (Alcoholic cirrhosis of liver; Alcohol withdrawal delirium; Acute pancreatitis; Acute alcoholic intoxication in alcoholism, continuous; Acute alcoholic hepatitis; Hemangioma of intra-abdominal structures; Contusion of multiple sites, not elsewhere classified; Other accidental fall from one level to another). The prescribed medications and procedures are focused entirely on managing these acute alcoholic and gastrointestinal crises (Magnesium Sulfate; Zolpidem Tartrate; Potassium Chloride; Magnesium Oxide; Lorazepam; Morphine Sulfate; Docusate Sodium; D5W; NS; Pantoprazole Sodium; Calcium Gluconate; Metoprolol; Heparin; Thiamine HCl; Folic Acid; Alcohol detoxification).\n\nCrucially, the current record contains **no explicit evidence** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While severe alcoholic liver disease is a known risk factor for metabolic disturbances, the current documentation does not explicitly code this as a lipid disorder.\n\nFollowing the strict instructions provided, a prediction of \"Yes\" is only warranted if there is strong and explicit evidence of an existing or actively managed",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3573,
+    "completion_tokens": 256
+  }
+}

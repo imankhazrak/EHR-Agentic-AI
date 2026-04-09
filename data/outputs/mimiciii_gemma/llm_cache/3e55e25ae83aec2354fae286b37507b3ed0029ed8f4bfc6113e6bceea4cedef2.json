@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Chronic hepatitis C with hepatic coma; Acute respiratory failure; Other ascites; Alkalosis; Cirrhosis of liver without mention of alcohol; Alcoholic cirrhosis of liver; Obstructive sleep apnea (adult)(pediatric); Other chronic pulmonary heart diseases; Unspecified acquired hypothyroidism; Nausea with vomiting; Anemia, unspecified; Thrombocytopenia, unspecified) **does not contain any explicit diagnosis of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n2. **Risk Factors and Comorbidities:** The patient has severe comorbidities, including advanced liver disease (Cirrhosis/Hepatic Coma), which is a significant metabolic stressor and is often associated with dyslipidemia. The patient also has Obstructive Sleep Apnea and",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1114,
+    "completion_tokens": 256
+  }
+}

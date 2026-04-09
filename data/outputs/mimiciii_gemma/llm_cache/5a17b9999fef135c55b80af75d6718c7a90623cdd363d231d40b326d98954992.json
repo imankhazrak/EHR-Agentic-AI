@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses related to chronic heart failure, end-stage renal disease, diabetes, and associated complications (e.g., hypertension, acidosis, hyperpotassemia, polyneuropathy, atrial fibrillation, coronary atherosclerosis). While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict rules, the presence of a diagnosis of a lipid disorder is required to predict a \"Yes\" for the next visit, and the prescription of Atorvastatin alone is not sufficient evidence to meet this criterion. Therefore, based on the explicit evidence provided, the prediction is \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 737,
+    "completion_tokens": 161
+  }
+}

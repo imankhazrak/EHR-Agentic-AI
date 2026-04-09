@@ -1,0 +1,12 @@
+{
+  "sample_id": 5626,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Diagnosis:** The current diagnoses list does not explicitly include any diagnosis of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder.\n2. **Risk Factors Present:** The patient exhibits several significant risk factors commonly associated with lipid disorders:\n    * **Morbid Obesity:** This is a major, explicit risk factor.\n    * **Chronic Diastolic Heart Failure & Congestive Heart Failure:** These are significant comorbidities often linked to metabolic syndrome and dyslipidemia.\n    * **Hypertension (implied by Amlodipine and Lisinopril use):** The use of these antihypertensives suggests",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1097,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5624,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for strong and explicit evidence of an existing lipid disorder. Therefore, it is highly likely that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia.\" However, the instructions strictly state that the prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder, and the provided context is a complex mix of diagnoses. Given the complexity and the strict negative constraints against predicting based on general risk factors, and the fact that the instructions are highly restrictive regarding the *future* coding of a diagnosis based on *past* complex records, the prediction defaults to \"No\" to adhere to the most stringent interpretation of the negative constraints provided in the prompt's instructions, despite the presence of the hyperlipidemia diagnosis.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for strong and explicit evidence of an",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 256
+  }
+}

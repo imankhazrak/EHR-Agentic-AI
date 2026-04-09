@@ -1,0 +1,12 @@
+{
+  "sample_id": 4657,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict requirement to identify explicit evidence of an existing or actively managed lipid disorder, rather than relying on general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current diagnoses list includes several significant comorbidities:\n*   Diabetes mellitus (Type II, not uncontrolled, long-term insulin use).\n*   Abnormal coagulation profile and Anemia.\n*   Cardiovascular history (Heart valve replaced by other means, Below knee amputation status, Great toe amputation status).\n*   Infectious/Inflammatory issues (Empyema, Pleurisy, Methicillin susceptible Staphylococcus aureus, Disease of spleen).\n\nCrucially, **none of the listed diagnoses explicitly state a lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\n2. **Analysis of Medications for Lipid Management:**\nThe medication list includes several agents:\n*   **Warfarin and Heparin/Heparin Flush PICC:** These are anticoagulants, not lipid-lowering agents.\n*   **Insulin:** Used for Diabetes Mellitus.\n*   **Metoprolol:** Used for cardiovascular/blood",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 256
+  }
+}

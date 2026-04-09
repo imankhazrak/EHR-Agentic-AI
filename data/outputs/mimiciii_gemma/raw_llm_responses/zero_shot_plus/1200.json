@@ -1,0 +1,12 @@
+{
+  "sample_id": 1200,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on whether explicit evidence of a lipid disorder is present in the current visit record, not on general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses:** The patient's current diagnoses are overwhelmingly focused on severe, acute cardiovascular and respiratory events:\n    * Acute myocardial infarction of other anterior wall, initial episode of care.\n    * Congestive heart failure, unspecified.\n    * Acute respiratory failure.\n    * Methicillin susceptible pneumonia due to Staphylococcus aureus.\n    * Acute kidney failure, unspecified.\n    * Unspecified septicemia.\n    * Defibrination syndrome.\n    * Atrial fibrillation.\n    * Unspecified pleural effusion.\n    These diagnoses represent severe acute illness requiring critical care intervention, but none of them explicitly state a primary or secondary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\n2. **Analysis of Medications and Procedures:**\n    * **Medications:** None were recorded as prescribed. Therefore, there is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 958,
+    "completion_tokens": 256
+  }
+}

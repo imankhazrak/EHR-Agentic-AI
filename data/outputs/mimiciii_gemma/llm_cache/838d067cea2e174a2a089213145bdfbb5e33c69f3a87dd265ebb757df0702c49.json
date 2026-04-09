@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the strict rules provided state that the prediction should only be \"Yes\" if there is strong and explicit evidence of an *existing or actively managed lipid disorder* that is *not* based on general risk factors or the use of statins/cardiovascular diseases. While \"Other and unspecified hyperlipidemia\" is a diagnosis, the provided constraints are highly restrictive, requiring evidence beyond a mere listed diagnosis of hyperlipidemia to warrant a \"Yes\" prediction for a *future* diagnosis. Furthermore, the extensive list of other diagnoses (fractures, infections, delirium, etc.) suggests the primary focus of the current hospitalization is not the management of a primary lipid disorder, making the explicit evidence for a *future* diagnosis of \"Disorders of Lipid Metabolism\" insufficient under the strict constraints.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 181
+  }
+}

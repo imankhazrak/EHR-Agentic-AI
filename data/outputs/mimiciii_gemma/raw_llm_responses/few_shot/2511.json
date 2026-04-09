@@ -1,0 +1,12 @@
+{
+  "sample_id": 2511,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe gastrointestinal, infectious, and general critical care issues. The primary diagnoses include Incisional ventral hernia with obstruction, Fistula of intestine, Anomalies of cerebrovascular system, and Diabetes mellitus. While the patient has several risk factors commonly associated with lipid disorders\u2014namely **Obesity**, **Diabetes mellitus**, and **Unspecified essential hypertension**\u2014these factors alone, as per the strict instructions, are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The medication profile includes **Amlodipine** and **Metoprolol**, which manage hypertension and cardiac symptoms, but there is no explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) in the current diagnoses or procedures. Therefore, based on the strict criteria that require explicit lipid disorder evidence, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3773,
+    "completion_tokens": 192
+  }
+}

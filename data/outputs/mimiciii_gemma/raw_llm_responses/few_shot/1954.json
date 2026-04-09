@@ -1,0 +1,12 @@
+{
+  "sample_id": 1954,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are overwhelmingly related to severe gastrointestinal and hepatic pathology: Alcoholic cirrhosis of liver, Iron deficiency anemia secondary to blood loss, Esophageal varices, Portal hypertension, and intestinal malabsorption. The medication profile is focused on managing these severe complications (e.g., Spironolactone, Nadolol, Octreotide Acetate, Pantoprazole Sodium, Folic Acid, etc.). While the patient has multiple risk factors for cardiovascular disease and metabolic issues (e.g., chronic liver disease, alcohol abuse history), the strict instructions mandate that a prediction of \"Yes\" can *only* be made if there is explicit evidence of an existing or actively managed lipid disorder. Since this explicit evidence is absent in the current record, the prediction must be \"No\", regardless of the patient's general high-risk status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3588,
+    "completion_tokens": 207
+  }
+}

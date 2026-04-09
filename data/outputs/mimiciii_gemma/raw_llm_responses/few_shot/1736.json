@@ -1,0 +1,12 @@
+{
+  "sample_id": 1736,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe acute and chronic conditions related to respiratory failure, cardiac dysfunction (diastolic and congestive heart failure), hemorrhage, and infectious processes (Influenza). The medication profile is extensive, focusing on managing these acute and chronic issues, including respiratory agents (Albuterol, Ipratropium Bromide), cardiac support (Furosemide), infectious treatments (Vancomycin, Azithromycin, Oseltamivir), and neurological/pain management (Clonazepam, Morphine Sulfate, Carbidopa-Levodopa).\n\nCrucially, the current diagnoses list does not explicitly include any primary or secondary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). While the patient has multiple comorbidities that are known risk factors for dyslipidemia (e.g., chronic heart failure, which is often associated with metabolic syndrome), the instructions strictly prohibit predicting a future diagnosis based solely on these risk factors or the use of general cardiovascular medications.\n\nThe current medication list includes Sertraline and Insulin, which are relevant to general metabolic health, but there is no explicit evidence of ongoing management for a lipid disorder (e.g., prescription",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3854,
+    "completion_tokens": 256
+  }
+}

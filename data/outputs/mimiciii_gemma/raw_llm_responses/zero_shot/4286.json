@@ -1,0 +1,12 @@
+{
+  "sample_id": 4286,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by severe, acute, and chronic conditions such as Congestive Heart Failure, Pneumonia, Acute Kidney Failure, and Malignant Neoplasm. While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a future diagnosis of \"Disorders of Lipid Metabolism.\" The presence of Atorvastatin alone, along with general risk factors like hypertension and diabetes, is insufficient evidence to predict a future diagnosis of a lipid disorder.\n\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is dominated by severe, acute, and chronic conditions such as Congestive Heart Failure, Pneumonia, Acute Kidney Failure, and Malignant Neoplasm. While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a future diagnosis of \"Disorders of Lipid Metabolism.\" The presence of Atorvastatin alone, along with general risk factors like hypertension",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4418,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and management related to severe respiratory conditions (Obstructive chronic bronchitis, Acute respiratory failure, Chronic systolic heart failure, Congestive heart failure, Acidosis, Hypovolemia, Influenza, Anemia, etc.) and uncontrolled Diabetes Mellitus and Obesity. While the patient is on medications like Aspirin and Metformin, and has a history of cardiovascular issues, there is no explicit evidence in the provided diagnoses or ongoing management that points to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). Therefore, based on the strict criteria, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 149
+  }
+}

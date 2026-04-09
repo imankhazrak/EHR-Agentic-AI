@@ -1,0 +1,12 @@
+{
+  "sample_id": 8084,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details complications related to vascular devices, acute posthemorrhagic anemia, and various manifestations of uncontrolled diabetes (ophthalmic, renal, neurological, polyneuropathy), alongside unspecified essential hypertension and a revision of a vascular procedure.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient is high-risk due to the presence of uncontrolled diabetes and hypertension, which are known risk factors for dyslipidemia. However, according to the strict instructions, the mere presence of these risk factors (diabetes, hypertension) or the use of related procedures (vascular revision) is **not sufficient evidence** to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit.\n\nThe medication profile is also empty, meaning there is no current management of lipid levels via drugs like statins or fibrates, which would constitute strong evidence for an actively managed lipid disorder.\n\nTherefore, based on the strict requirement to only predict a future diagnosis when explicit lipid disorder evidence is present, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3514,
+    "completion_tokens": 246
+  }
+}

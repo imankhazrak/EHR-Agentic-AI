@@ -1,0 +1,12 @@
+{
+  "sample_id": 9079,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia\" in the diagnoses made section. This directly meets the criterion for strong and explicit evidence of an existing lipid disorder. Furthermore, the patient is prescribed \"Simvastatin\" and \"Gemfibrozil,\" which are lipid-lowering medications, supporting the active management of a hyperlipidemia condition. Therefore, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 916,
+    "completion_tokens": 113
+  }
+}

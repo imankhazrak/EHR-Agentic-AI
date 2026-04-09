@@ -1,0 +1,12 @@
+{
+  "sample_id": 3108,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, cardiovascular diseases, or the use of lipid-lowering medications (which are absent here).\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses are heavily focused on severe, acute critical care events:\n1. **Infectious/Inflammatory:** Other septicemia due to gram-negative organisms; Candidiasis of other urogenital sites.\n2. **Cardiovascular/Metabolic:** Acute myocardial infarction of anterolateral wall; Congestive heart failure, unspecified; Aortocoronary bypass status; Heart valve replaced by transplant; Peripheral vascular disease, unspecified.\n3. **Respiratory/Acute:** Acute respiratory failure; Ulcer of heel and midfoot.\n\nMedications and Procedures:\nNo medications were recorded, and the procedures were related to life support (mechanical ventilation, endotracheal intubation).\n\nWeighing Evidence:\nThe patient exhibits numerous severe cardiovascular comorbidities (AMI, CHF, P",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 910,
+    "completion_tokens": 256
+  }
+}

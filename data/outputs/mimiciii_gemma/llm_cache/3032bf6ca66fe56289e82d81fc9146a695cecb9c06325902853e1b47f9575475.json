@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis), not just risk factors or general management.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses, including Diabetes mellitus type II, unspecified, and Unspecified essential hypertension. These are known risk factors for developing lipid disorders, and they are often comorbid with them. However, the current list of diagnoses **does not explicitly include** hypercholesterolemia, hyperlipidemia, or any other specific diagnosis within the CCS category 53 related to lipid abnormalities.\n2. **Medications:** The patient has **no medications recorded**. Therefore, there is no evidence of active lipid management (e.g., statins or fibrates) that would strongly suggest a current or impending diagnosis of a lipid disorder.\n3. **Procedures:** The procedures performed are primarily",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 966,
+    "completion_tokens": 256
+  }
+}

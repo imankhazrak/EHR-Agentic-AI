@@ -1,0 +1,12 @@
+{
+  "sample_id": 7697,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or strongly implied by the current visit record, beyond general risk factors or the use of specific medications like statins.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe, acute, and chronic inflammatory, infectious, and renal/cardiac crises:\n*   **Inflammatory/Infectious:** Cholangitis, Acute pancreatitis, Calculus of bile duct with acute cholecystitis, Septic shock, Urinary tract infection, Intestinal infection due to Clostridium difficile, Unspecified septicemia, Severe sepsis.\n*   **Renal/Cardiovascular:** Acute kidney failure with lesion of tubular necrosis, Hypertensive chronic kidney disease (Stage V/ESRD), End stage renal disease, Atrial fibrillation, Other primary cardiomyopathies, Acidosis.\n*   **Other:** Intestinal infection due to Clostridium difficile, Hypertensive chronic kidney disease, Hypertrophy (benign) of prostate.\n\n2. **Analysis of Medications and Procedures:**\nThe medication and procedure lists confirm intensive critical care management:\n*   **Medications:** The patient",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1335,
+    "completion_tokens": 256
+  }
+}

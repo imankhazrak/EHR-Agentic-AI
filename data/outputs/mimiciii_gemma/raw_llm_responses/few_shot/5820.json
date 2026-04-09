@@ -1,0 +1,12 @@
+{
+  "sample_id": 5820,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses related to acute infections (Acute kidney failure, unspecified; Urinary tract infection, site not specified; Acute bronchitis) and cardiovascular instability (Atrial fibrillation; Congestive heart failure, unspecified). Furthermore, the patient has a history of Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, which is a known risk factor for lipid disorders. However, according to the strict guidelines provided, the mere presence of risk factors like diabetes or cardiovascular disease is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Since explicit evidence of an existing or actively managed lipid disorder is absent, the prediction must be \"No\", adhering strictly to the provided constraints.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3474,
+    "completion_tokens": 182
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1550,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record shows several serious comorbidities, including Congestive Heart Failure, Acute Kidney Failure, Hemorrhage of the Gastrointestinal Tract, Diabetes Mellitus, Anemia, and Coronary Atherosclerosis. The patient is also receiving multiple medications, including Atorvastatin, which is a lipid-lowering agent.\n\nHowever, according to the strict instructions provided, the mere use of a lipid-lowering agent (Atorvastatin) or the presence of general risk factors (like Diabetes Mellitus or CHF) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nThe instructions explicitly state: \"DO NOT answer 'Yes' based only on: Use of statins (e.g., Atorvastatin) [...] General risk factors (e.g., hypertension, diabetes).\"\n\nSince the current record does not contain an explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or is the primary focus of the current admission, and the presence of Atorvastatin is insufficient evidence on its own, the prediction must be \"No\". The patient is high-risk",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3581,
+    "completion_tokens": 256
+  }
+}

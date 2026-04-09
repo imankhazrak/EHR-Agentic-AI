@@ -1,0 +1,12 @@
+{
+  "sample_id": 4456,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses related to coronary atherosclerosis, complications of a transplanted kidney, chronic glomerulonephritis, anemia, and hypertension. While the patient is prescribed Atorvastatin and Rosiglitazone Maleate, these medications are used for managing dyslipidemia, but the record itself does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The presence of these medications alone, without an explicit underlying lipid diagnosis in the current record, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict guidelines provided. The record is dominated by non-lipid related conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 140
+  }
+}

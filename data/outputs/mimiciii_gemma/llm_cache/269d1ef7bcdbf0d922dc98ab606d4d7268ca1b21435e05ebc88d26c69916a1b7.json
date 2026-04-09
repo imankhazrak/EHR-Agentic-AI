@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the current visit record. This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\nFurthermore, the current visit record provides several strong contextual factors that support the continued or explicit coding of a lipid disorder diagnosis in the next visit:\n\n1. **Explicit Diagnosis:** The diagnosis \"Other and unspecified hyperlipidemia\" is the most direct and compelling evidence. This explicitly codes a lipid disorder, which is the core element required for a \"Yes\" prediction.\n\n2. **Pharmacological Management:** The patient is currently prescribed **Rosuvastatin Calcium**. Rosuvastatin is a potent HMG-CoA reductase inhibitor (a statin), which is the primary pharmacological intervention used to manage hyperlipidemia and reduce cardiovascular risk associated with lipid disorders. The continued use of this medication strongly suggests that the underlying lipid abnormality is being actively managed and is likely to remain a coded diagnosis in subsequent visits.\n\n3. **Comorbid Conditions:** The patient has several significant comorbidities that are strongly associated with lipid disorders, including:\n    * **Unspecified essential hypertension:** Hypertension is a major risk factor for both",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1348,
+    "completion_tokens": 256
+  }
+}

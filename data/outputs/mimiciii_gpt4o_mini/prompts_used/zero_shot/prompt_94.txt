@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Acute and chronic respiratory failure; Pneumonitis due to inhalation of food or vomitus; Empyema with fistula; Atherosclerosis of native arteries of the extremities with gangrene; Pressure ulcer, lower back; [ICD9-DX:5118]; Congestive heart failure, unspecified; Iatrogenic pneumothorax; Hypovolemia; Atrial fibrillation; Urinary tract infection, site not specified; Thyrotoxicosis without mention of goiter or other cause, and without mention of thyrotoxic crisis or storm; Pneumonia, organism unspecified; Below knee amputation status; Long-term (current) use of steroids; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Long-term (current) use of insulin; Emphysematous bleb; Emphysema (subcutaneous) (surgical) resulting from procedure; Candidiasis of vulva and vagina; [ICD9-DX:0414]
+- Medications prescribed: D5W; Fentanyl Citrate; Midazolam HCl; Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; Docusate Sodium (Liquid); Metoprolol; Diltiazem; Heparin; Aspirin; Sodium Chloride 0.9%  Flush; Lansoprazole Oral Suspension; Senna; Acetaminophen; Accolate; Clopidogrel Bisulfate; Methimazole; Insulin; Levothyroxine Sodium; Potassium Chloride; Furosemide; Vial; Gabapentin; Haloperidol; Nortriptyline; Dextrose 50%; Lorazepam; Ciprofloxacin HCl; Meropenem; NS (Mini Bag Plus); Ferrous Sulfate; Olanzapine; Sodium Polystyrene Sulfonate; Vancomycin HCl; Methylprednisolone Na Succ; Fluticasone Propionate 110mcg; Albuterol; Prednisone; Olanzapine (Disintegrating Tablet); Azithromycin; Insulin Human Regular; NS; Ipratropium Bromide MDI; Methylprednisolone Na Succ.; Syringe (IV Room); Metolazone; Alteplase (Catheter Clearance); Oxymetazoline HCl; traZODONE HCl; Zolpidem Tartrate
+- Procedures performed: Temporary tracheostomy; Percutaneous [endoscopic] gastrostomy [PEG]; Other intubation of respiratory tract; Non-invasive mechanical ventilation; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Injection into thoracic cavity; Injection of antibiotic; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Insertion of intercostal catheter for drainage; Transfusion of packed cells; Closed [endoscopic] biopsy of bronchus
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

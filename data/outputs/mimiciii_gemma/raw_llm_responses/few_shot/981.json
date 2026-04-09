@@ -1,0 +1,12 @@
+{
+  "sample_id": 981,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious processes (Pneumonia due to Pseudomonas, Methicillin susceptible pneumonia due to Staphylococcus aureus), acute and chronic respiratory failure, severe metabolic derangements (Hypovolemia, Hyperpotassemia, Acute kidney failure, Chronic kidney disease), and cardiac issues (Acute diastolic heart failure, Chronic obstructive asthma). While the patient has several risk factors for dyslipidemia, such as long-term use of insulin and the presence of cardiovascular disease, the current record lacks any explicit, coded diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The medications prescribed include Rosiglitazone Maleate, which is a thiazolidinedione known to be associated with metabolic changes, but the presence of this medication alone, or the presence of general risk factors like insulin use or heart failure, is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based strictly on the requirement for explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3913,
+    "completion_tokens": 232
+  }
+}

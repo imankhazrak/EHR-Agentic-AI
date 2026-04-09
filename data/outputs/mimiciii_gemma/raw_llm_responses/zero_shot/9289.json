@@ -1,0 +1,12 @@
+{
+  "sample_id": 9289,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly lists diagnoses related to Acute pancreatitis, Chronic pancreatitis, and Esophageal reflux. The prescribed medications and procedures are primarily aimed at managing these gastrointestinal and acute conditions, as well as electrolyte balance (Potassium, Magnesium, Calcium). There is no explicit evidence in the current record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. The management focus is clearly on the existing GI and acute conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 564,
+    "completion_tokens": 129
+  }
+}

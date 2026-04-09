@@ -1,0 +1,12 @@
+{
+  "sample_id": 1498,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses related to neurological issues (cerebral laceration and contusion), cardiac conditions (Atrial fibrillation, Congestive heart failure, Mitral valve disorders), infections (Urinary tract infection, Pneumonia), and metabolic/vascular conditions (Diabetes mellitus, Unspecified essential hypertension). There is no explicit evidence in the current record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly predict that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the presence of other high-risk factors.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 525,
+    "completion_tokens": 134
+  }
+}

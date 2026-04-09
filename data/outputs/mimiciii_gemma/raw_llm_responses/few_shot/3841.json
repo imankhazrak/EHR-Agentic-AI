@@ -1,0 +1,12 @@
+{
+  "sample_id": 3841,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains the explicit diagnosis of \"Pure hypercholesterolemia\" in the Diagnoses made section. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Although the patient has other high-risk factors (Diabetes mellitus, Unspecified essential hypertension, etc.), the explicit diagnosis of hypercholesterolemia meets the threshold for a \"Yes\" prediction, as it is a direct coding of the target condition. The prescription of Rosuvastatin Calcium further supports the active management of this lipid abnormality.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 148
+  }
+}

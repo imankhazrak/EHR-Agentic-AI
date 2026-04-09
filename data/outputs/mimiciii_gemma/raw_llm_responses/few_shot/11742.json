@@ -1,0 +1,12 @@
+{
+  "sample_id": 11742,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe acute medical crises, including poisoning by aromatic analgesics, acute respiratory failure, alcohol withdrawal, and suicide attempts. The prescribed medications and procedures are entirely geared towards stabilizing these life-threatening conditions (e.g., Fentanyl Citrate, Thiamine, Midazolam, Continuous invasive mechanical ventilation).\n\nCrucially, the current record contains **no explicit evidence** of an existing or actively managed lipid disorder. There are no diagnoses of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication list does not include any lipid-lowering agents such as statins or fibrates, which would serve as explicit evidence of ongoing lipid management.\n\nIn accordance with the strict instructions, predicting a future diagnosis based solely on general risk factors (such as those potentially associated with severe alcoholism or acute illness) is insufficient. Since the current record lacks the explicit evidence of a lipid disorder, the prediction for the next hospital visit must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3618,
+    "completion_tokens": 213
+  }
+}

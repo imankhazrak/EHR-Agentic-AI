@@ -1,0 +1,12 @@
+{
+  "sample_id": 7923,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are extensive and relate primarily to severe chronic conditions: Cirrhosis of liver, chronic hepatitis, neoplasm, complications of transplantation, pancreatic disorders, adrenal issues, polycythemia vera, and tobacco use disorder. None of the listed diagnoses explicitly mention hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Medications:** The prescribed medications include immunosuppressants (Tacrolimus, Mycophenolate Mofetil, PredniSONE), antibiotics (Ampicillin-Sulbactam, Sulfameth/Trimethoprim SS), and supportive care drugs (Insulin, Furosemide, Heparin). Crucially, there is no mention of lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1160,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1369,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid abnormalities in the current visit record, which strongly suggests that this condition will be coded in the next hospital visit.\n\n1. **Evidence of Lipid Disorder in Current Record:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is direct evidence of a lipid disorder being present and actively managed during this hospitalization.\n\n2. **Management and Context:** The patient is also prescribed **\"Pravastatin\"** and **\"Atorvastatin\"**, which are lipid-lowering medications (statins). While the use of statins alone is not sufficient for a \"Yes\" prediction, they serve as strong corroborating evidence that the underlying hyperlipidemia is a significant, ongoing, and actively managed condition requiring specific diagnosis coding.\n\n3. **Exclusion of Insufficient Evidence:** The prediction adheres strictly to the rule that general risk factors (like Diabetes Mellitus or Atherosclerosis) or the use of statins alone are insufficient. The presence of the explicit diagnosis **\"Other and unspecified hyperlipidemia\"** elevates the evidence level above these insufficient categories.\n\n4. **Conclusion:** Because the current record contains the explicit diagnosis of a lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3737,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1911,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to liver failure, infection, and metabolic derangements, specifically: Hepatic encephalopathy, Alcoholic cirrhosis of liver, Pneumonia, Acidosis, and Hyperosmolality. The medication profile is extensive, focusing on supportive care, managing infection (Vancomycin, Ciprofloxacin, Metronidazole), and treating complications of cirrhosis (Lactulose, Albumin, Sodium Bicarbonate).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. While alcoholic cirrhosis is a condition that carries a high risk for dyslipidemia, the current documentation does not explicitly code this lipid abnormality.\n\nFollowing the strict instructions provided:\n1. **Exclusion of Risk Factors:** The presence of Alcoholic Cirrhosis is a major risk factor for lipid disorders, but the instructions explicitly state that general risk factors alone (like cirrhosis) are **NOT sufficient** to predict a future diagnosis.\n2. **Absence of Explicit Evidence:** There is no mention of elevated cholesterol, triglycerides, or any specific lipid abnormality in the diagnoses or procedures performed.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 256
+  }
+}

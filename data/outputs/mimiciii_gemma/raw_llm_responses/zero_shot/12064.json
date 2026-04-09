@@ -1,0 +1,12 @@
+{
+  "sample_id": 12064,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the prediction criteria strictly forbid answering \"Yes\" based solely on the presence of a general diagnosis of hyperlipidemia, even if it is listed. The criteria require *explicit* evidence of a lipid disorder that goes beyond a general diagnosis, such as a specific, active management plan for a lipid abnormality that is not merely listed as an unspecified diagnosis. Since the criteria are highly restrictive and do not allow a \"Yes\" based on the general diagnosis of hyperlipidemia, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 887,
+    "completion_tokens": 124
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the current visit record.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: \"Other and unspecified hyperlipidemia.\" This meets the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities and Risk Factors:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders, further supporting the likelihood of this diagnosis being maintained or re-coded:\n    * **Obesity:** The patient has a Body Mass Index (BMI) of 33.0-33.9, which is classified as obesity.\n    * **Hypertension:** The patient has \"Unspecified essential hypertension.\"\n    * **Diabetes Mellitus:** The patient has \"Diabetes mellitus without mention of complication, type II or unspecified type.\"\n    * **Dyslipidemia Management:** The patient is currently prescribed \"Simvastatin\" and \"Docusate Sodium,\" which are medications used in the management of hyperlipidemia.\n\n3. **Conclusion:** Since the current record contains an explicit diagnosis of hyperlipidemia, and this is supported by multiple high-risk",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1302,
+    "completion_tokens": 256
+  }
+}

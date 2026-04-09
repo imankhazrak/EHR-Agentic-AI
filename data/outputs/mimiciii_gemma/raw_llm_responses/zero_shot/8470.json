@@ -1,0 +1,12 @@
+{
+  "sample_id": 8470,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criterion for strong and explicit evidence of an existing lipid disorder. Furthermore, the prescription of \"Pravastatin\" (a lipid-lowering agent) supports the active management of this condition. Therefore, it is highly likely that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 100
+  }
+}

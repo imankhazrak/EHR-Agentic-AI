@@ -1,0 +1,12 @@
+{
+  "sample_id": 10696,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is a direct and explicit coding of a lipid abnormality, which falls under the scope of \"Disorders of Lipid Metabolism.\"\n\n2. **Active Lipid Management:** The medication profile further supports the active management of lipid abnormalities. The patient is prescribed **\"Ezetimibe\"** and **\"Niacin SR,\"** both of which are pharmacologically relevant to managing hyperlipidemia. While the instructions caution against predicting based solely on statins, the presence of other specific lipid-lowering agents alongside the explicit diagnosis provides strong evidence of ongoing, targeted management of a lipid disorder.\n\n3. **Comorbid Conditions:** The patient also presents with several significant comorbidities commonly associated with metabolic and cardiovascular health, including:\n    * **\"Unspecified essential hypertension\"**\n    * **\"Atrial fibrillation\"**\n    * **\"Other and unspecified hyperlipidemia\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1115,
+    "completion_tokens": 256
+  }
+}

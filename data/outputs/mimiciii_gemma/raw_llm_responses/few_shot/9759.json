@@ -1,0 +1,12 @@
+{
+  "sample_id": 9759,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, multi-systemic illnesses, including acute kidney failure with tubular necrosis, hepatorenal syndrome, hepatic encephalopathy, portal hypertension, and alcoholic cirrhosis. The patient is being managed for sepsis, uncontrolled diabetes, and various electrolyte imbalances. While the patient has several high-risk comorbidities, such as uncontrolled diabetes and portal hypertension, these conditions are not explicitly coded as a primary diagnosis of \"Disorders of Lipid Metabolism\" (e.g., hypercholesterolemia or hyperlipidemia) in the current record. The medications prescribed, such as Warfarin and Insulin, are for managing the existing severe conditions, not for the explicit treatment of a primary lipid disorder. Furthermore, the strict instructions dictate that the use of statins or general risk factors alone are insufficient to predict a future diagnosis of a lipid disorder. Since there is no explicit evidence of a coded lipid disorder in the current record, the prediction must be \"No\", despite the patient's overall high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3915,
+    "completion_tokens": 213
+  }
+}

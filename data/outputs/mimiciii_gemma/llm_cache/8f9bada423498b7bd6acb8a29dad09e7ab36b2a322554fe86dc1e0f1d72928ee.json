@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to cardiovascular disease (Aortic valve disorders, Acute on chronic systolic heart failure, Coronary atherosclerosis, Congestive heart failure, Diabetes mellitus, etc.) and renal issues (Acute kidney failure, Chronic kidney disease). While the patient is receiving medications such as Ezetimibe, which is used to manage cholesterol, this medication alone, along with the presence of cardiovascular risk factors, does not constitute explicit evidence of an *existing* or *actively managed* lipid disorder (like hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The criteria explicitly exclude predicting a diagnosis based solely on the use of cholesterol-lowering agents or general risk factors. Therefore, based on the strict evidence required, the prediction is No.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 183
+  }
+}

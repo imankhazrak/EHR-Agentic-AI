@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Acute respiratory failure; Necrotizing fasciitis; Acute on chronic diastolic heart failure; Acute posthemorrhagic anemia; Acute kidney failure, unspecified; Delirium due to conditions classified elsewhere; Urinary tract infection, site not specified; Vascular disorders of male genital organs; Severe sepsis; Leukocytosis, unspecified; Other specified bacterial infections in conditions classified elsewhere and of unspecified site, other gram-negative organisms; Chronic kidney disease, unspecified; Personal history of Methicillin resistant Staphylococcus aureus; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Diabetes with neurological manifestations, type II or unspecified type, uncontrolled; Gastroparesis; Pure hypercholesterolemia; Knee joint replacement; Congestive heart failure, unspecified
+- Medications prescribed: Vancomycin; LR; Albumin 5% (12.5g / 250mL); D5LR; Erythromycin; Soln; Fentanyl Citrate; Furosemide; Metoprolol Tartrate; Iso-Osmotic Dextrose; Aspirin; Simvastatin; Insulin; Midazolam; Ciprofloxacin IV; 5% Dextrose; Piperacillin-Tazobactam; OxycoDONE Liquid; Syringe; Iso-Osmotic Sodium Chloride; Famotidine; Influenza Virus Vaccine; HydrALAzine; Potassium Chloride; Sterile Water; D5 1/2NS; HYDROmorphone (Dilaudid); Heparin Flush (10 units/ml); Ondansetron; 0.9% Sodium Chloride; Potassium Phosphate; CloniDINE; Sodium Chloride 0.9%  Flush; Methylnaltrexone; Magnesium Sulfate; Calcium Gluconate; Bag; Heparin; 0.83% Sodium Chloride; Ciprofloxacin HCl; NiCARdipine IV; Propofol; Dextrose 50%; Glucagon; 0.9% Sodium Chloride (Mini Bag Plus); Pantoprazole; Senna; Insulin Human Regular; Phenylephrine; Chlorhexidine Gluconate 0.12% Oral Rinse
+- Procedures performed: Temporary colostomy; Temporary tracheostomy; Excisional debridement of wound, infection, or burn; Excision of lesion of other soft tissue; Other incision of soft tissue; Other repair of testis; Other bronchoscopy; Excision or destruction of lesion or tissue of scrotum; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

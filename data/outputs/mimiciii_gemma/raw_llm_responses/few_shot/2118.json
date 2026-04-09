@@ -1,0 +1,12 @@
+{
+  "sample_id": 2118,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record is extremely complex, involving multiple severe and overlapping critical illnesses, including Septicemia, Acute and subacute necrosis of liver, Chronic viral hepatitis B, Chronic hepatitis C, Cirrhosis of liver, Acute respiratory failure, and Severe sepsis. While the record does not explicitly list \"Hypercholesterolemia\" or \"Hyperlipidemia\" as a current diagnosis, the presence of **Cirrhosis of liver** and **Diabetes mellitus type II** (even if not explicitly stated as uncontrolled) are strong, well-established comorbidities that are intrinsically linked to, and often managed alongside, lipid metabolism disorders. Furthermore, the patient is on **Insulin** for Diabetes management, and the overall metabolic stress of severe sepsis and liver failure strongly suggests underlying or developing dyslipidemia, which is a common feature of these conditions. Given the high prevalence of lipid disorders in the MIMIC-III critical care population (27.6% of subsequent visits), and the presence of major metabolic risk factors (Cirrhosis, Diabetes), the explicit evidence of metabolic derangement, even if not explicitly coded in the current diagnosis list, is sufficient to strongly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3941,
+    "completion_tokens": 256
+  }
+}

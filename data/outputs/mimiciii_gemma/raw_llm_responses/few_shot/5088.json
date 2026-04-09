@@ -1,0 +1,12 @@
+{
+  "sample_id": 5088,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of the diagnosis \"Pure hypercholesterolemia\" in the Current Visit Record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nFurthermore, the Current Visit Record also includes the prescription of \"Atorvastatin,\" which is a medication specifically used for managing hypercholesterolemia. While the use of statins alone is not sufficient to predict a future diagnosis, the combination of the explicit diagnosis (\"Pure hypercholesterolemia\") and the targeted management (prescription of \"Atorvastatin\") provides robust confirmation that the condition is actively being managed as a lipid disorder, strongly supporting a future coding of this diagnosis.\n\nThe presence of other risk factors, such as \"Diabetes mellitus without mention of complication, type II or unspecified type\" and \"Hypertensive chronic kidney disease,\" further contextualizes the patient's overall high-risk metabolic profile, but the definitive evidence rests on the explicit diagnosis of hypercholesterolemia.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 228
+  }
+}

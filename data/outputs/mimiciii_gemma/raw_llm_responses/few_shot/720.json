@@ -1,0 +1,12 @@
+{
+  "sample_id": 720,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record shows several serious medical conditions, including Congenital stenosis of aortic valve, Atrial fibrillation, Thoracic aneurysm without mention of rupture, and Tobacco use disorder. The patient is receiving extensive supportive care, including various medications for cardiac and respiratory support (e.g., Labetalol HCl, Nitroglycerin, Furosemide, Albuterol Neb Soln) and general supportive medications.\n\nHowever, the current visit record **does not contain any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed include various supportive agents (e.g., Simethicone, Oxazepam, Prochlorperazine, Oxycodone-Acetaminophen, etc.), but there is no mention of lipid-lowering agents like statins or fibrates being prescribed for a diagnosed lipid abnormality.\n\nBased on the strict instructions provided, which mandate that a prediction of \"Yes\" must be based on **explicit evidence of an existing or actively managed lipid disorder**, and since such evidence is absent in the current record, the prediction must be \"No\", despite the patient's high-risk profile for cardiovascular",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 256
+  }
+}

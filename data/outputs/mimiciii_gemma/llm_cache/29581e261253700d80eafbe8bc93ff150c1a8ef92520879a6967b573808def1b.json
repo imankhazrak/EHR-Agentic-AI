@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of hyperlipidemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is receiving \"Rosuvastatin Calcium,\" which is a lipid-lowering medication, indicating ongoing management of a lipid-related condition. While the instructions caution against predicting based solely on statin use, the presence of the explicit hyperlipidemia diagnosis overrides this caution, as it confirms the underlying condition that the medication is managing. Therefore, based on the explicit diagnosis of hyperlipidemia, the prediction is Yes.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3629,
+    "completion_tokens": 144
+  }
+}

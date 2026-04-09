@@ -1,0 +1,12 @@
+{
+  "sample_id": 5170,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like diabetes or hypertension alone.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Comorbid Conditions:** The patient has several significant comorbidities, including:\n    * **Diabetes Mellitus (Type II):** This is a known risk factor for dyslipidemia, but as per the instructions, the presence of diabetes alone is insufficient to predict a future diagnosis of a lipid disorder.\n    * **Other Conditions:** The patient also has acute respiratory failure, pneumonia, malignant neoplasm, and bacteremia, which are the primary focus of the current critical care management.\n3. **Medication Profile:** The prescribed medications include various agents for critical care (e.g., antibiotics like Levofloxacin, Vancomycin; vasopressors; anti-fungals; anti-platelets like Heparin). There is no explicit mention of lipid-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1208,
+    "completion_tokens": 256
+  }
+}

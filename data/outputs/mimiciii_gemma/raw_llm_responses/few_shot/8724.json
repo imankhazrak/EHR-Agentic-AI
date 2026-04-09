@@ -1,0 +1,12 @@
+{
+  "sample_id": 8724,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of a lipid disorder is sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism,\" even if other risk factors like hypertension or cardiovascular diseases are present. Furthermore, the patient is actively managed with medications relevant to lipid management, such as \"Atorvastatin\" and \"Cinacalcet HCl,\" which are used in the context of metabolic and cardiovascular health, reinforcing the presence of an underlying lipid abnormality that is likely to be coded in the next visit. The presence of \"Other and unspecified hyperlipidemia\" is the most direct and explicit evidence supporting the \"Yes\" prediction, overriding the general risk factors alone.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3902,
+    "completion_tokens": 182
+  }
+}

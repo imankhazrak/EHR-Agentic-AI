@@ -1,0 +1,12 @@
+{
+  "sample_id": 7575,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record contains several diagnoses and medications that indicate severe, complex critical illness, including: Intestinal or peritoneal adhesions with obstruction (postoperative) (postinfection); Pneumonia due to Pseudomonas; Urinary tract infection, site not specified; Unspecified protein-calorie malnutrition; Acute kidney failure, unspecified; Acute respiratory failure; Unspecified septicemia; Severe sepsis; Liver replaced by transplant; Hyperpotassemia; Other specified cardiac dysrhythmias; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Other urinary incontinence; Hypotension, unspecified; Personal history of malignant neoplasm of rectum, rectosigmoid junction, and anus; Other and unspecified hyperlipidemia; Unspecified essential hypertension; Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS).\n\nWhile the diagnosis \"Other and unspecified hyperlipidemia\" is explicitly present in the current record, the strict instructions for predicting a *future* diagnosis require explicit evidence of an *existing or actively managed* lipid disorder that goes beyond general risk factors or the mere presence of a vague diagnosis.\n\nThe instructions explicitly state: \"DO NOT answer 'Yes' based only on:",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3958,
+    "completion_tokens": 256
+  }
+}

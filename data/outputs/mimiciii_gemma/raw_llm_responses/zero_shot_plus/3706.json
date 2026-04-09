@@ -1,0 +1,12 @@
+{
+  "sample_id": 3706,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are extensive and primarily revolve around severe cardiovascular, pulmonary, and infectious issues:\n*   Cardiovascular: Aortic valve disorders, Congestive heart failure, Coronary atherosclerosis, Subendocardial infarction, Peripheral vascular complications, Coronary artery bypass.\n*   Pulmonary/Infectious: Chronic airway obstruction, Pneumonitis, Unspecified essential hypertension, Anemia, Phlebitis.\n\nWhile the patient has multiple cardiovascular risk factors (hypertension, coronary artery disease, CHF), **none of the current diagnoses explicitly state a lipid disorder** (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is comprehensive, covering management for the identified conditions:\n*   Cardiovascular/Hypertensive: Carvedilol, Lisinopril, Amlodipine, Captopril, Nitroglycerin.\n*   Infectious/Inflammatory: Vancom",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1251,
+    "completion_tokens": 256
+  }
+}

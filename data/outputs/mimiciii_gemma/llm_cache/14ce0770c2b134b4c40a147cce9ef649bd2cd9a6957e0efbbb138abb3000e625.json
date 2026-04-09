@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and metabolic complications, including Congestive Heart Failure, Atrial Fibrillation, Coronary Atherosclerosis, and Diabetes Mellitus. These conditions are well-known risk factors for lipid disorders. However, the strict instruction for this prediction is to determine if a diagnosis of \"Disorders of Lipid Metabolism\" will *actually be coded* in the next visit, and this requires explicit evidence of an existing or actively managed lipid disorder. The current record does not contain any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the patient's medication profile is empty, meaning there is no explicit ongoing management of a lipid disorder (e.g., statins or fibrates) that would strongly suggest a future coding of this diagnosis, despite the high-risk profile. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3483,
+    "completion_tokens": 202
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4706,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges strictly on the presence of explicit evidence of an existing or actively managed lipid disorder in the current visit record, as per the strict instructions provided.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\nThe current visit record details numerous severe and complex comorbidities, including:\n*   Pneumonia due to Pseudomonas\n*   Obstructive chronic bronchitis with (acute) exacerbation\n*   Candidiasis of mouth\n*   Hypertensive chronic kidney disease (Stage V/ESRD)\n*   Ischemic heart disease\n*   Diabetes mellitus (Type II)\n*   HIV infection\n*   Hypertension\n\nWhile the patient has **Diabetes Mellitus Type II** and **Ischemic Heart Disease**, these are recognized risk factors for developing lipid disorders, but the instructions explicitly state that **general risk factors (e.g., hypertension, diabetes) are NOT sufficient to predict a future diagnosis** of \"Disorders of Lipid Metabolism.\"\n\n2. **Analysis of Medication Profile for Lipid Management:**\nThe medication list includes several drugs, but none are explicitly listed as standard lipid-lowering agents (e.g., Atorvastatin, Rosuvastatin, Ezetimibe, or Fibrates",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1265,
+    "completion_tokens": 256
+  }
+}

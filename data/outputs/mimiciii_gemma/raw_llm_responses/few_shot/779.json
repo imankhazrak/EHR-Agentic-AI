@@ -1,0 +1,12 @@
+{
+  "sample_id": 779,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and surgical emergencies. The primary diagnoses include Dissection of aorta, thoracic; Aortic valve disorders; Hemopericardium; Hemorrhage complicating a procedure; Subendocardial infarction, initial episode of care; Atrial fibrillation; Coronary atherosclerosis of native coronary artery; Unspecified essential hypertension; and Constipation, unspecified. The medications prescribed are none recorded. The procedures performed are extensive, involving complex open-heart surgery, aortic valve replacement, and cardiac catheterization.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong evidence of an existing or actively managed lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Unspecified essential hypertension and Coronary atherosclerosis, these are general cardiovascular risk factors and are explicitly excluded by the instructions from being sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based strictly on the evidence provided in the current visit record, there is no strong and explicit indication that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the patient's high-risk",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3537,
+    "completion_tokens": 256
+  }
+}

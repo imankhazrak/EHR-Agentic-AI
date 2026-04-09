@@ -1,0 +1,12 @@
+{
+  "sample_id": 10599,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to malignancy (Secondary malignant neoplasm of bone and bone marrow; Secondary malignant neoplasm of brain and spinal cord; Personal history of malignant neoplasm of kidney; Personal history of malignant neoplasm of other endocrine glands and related structures), severe acute organ failure (Acute kidney failure, unspecified; Hemoperitoneum (nontraumatic); Hypovolemia), and severe acute/chronic cardiovascular/coagulation issues (Other pulmonary embolism and infarction; Primary hypercoagulable state; Atrial fibrillation; Abnormal coagulation profile; Ostium secundum type atrial septal defect).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\nThe medications prescribed include several agents that are commonly used in the management of cardiovascular risk factors (e.g., Metoprolol Tartrate, Diltiazem, Warfarin, Heparin/Enoxaparin), and the patient has a history of Atrial Fibrillation, which is a major risk factor for cardiovascular disease. However, the instructions",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3674,
+    "completion_tokens": 256
+  }
+}

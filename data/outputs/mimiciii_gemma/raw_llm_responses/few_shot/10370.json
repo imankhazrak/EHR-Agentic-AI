@@ -1,0 +1,12 @@
+{
+  "sample_id": 10370,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record primarily details severe cardiovascular issues and associated complications, including Mitral valve disorders, Ostium secundum type atrial septal defect, Congestive heart failure, unspecified, and Atrial fibrillation. The procedures performed (Annuloplasty, repair of atrial septal defect, Extracorporeal circulation) and the diagnoses made are overwhelmingly focused on structural and functional cardiac repair and management of heart failure.\n\nCrucially, the current visit record contains **no explicit evidence** of a primary or actively managed lipid disorder. There are no diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication profile is recorded as \"None recorded,\" meaning there is no evidence of lipid-lowering agents like statins or fibrates being administered, which would be a strong indicator for a future diagnosis based on the strict rules provided.\n\nWhile the patient has multiple cardiovascular risk factors (CHF, AF), the instructions explicitly state that the mere presence of cardiovascular diseases or general risk factors is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict requirement to find explicit evidence of an existing or actively managed lipid disorder, the prediction",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3468,
+    "completion_tokens": 256
+  }
+}

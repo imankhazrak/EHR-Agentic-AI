@@ -1,0 +1,12 @@
+{
+  "sample_id": 656,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis), not just risk factors or the use of lipid-lowering medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are focused on severe, acute, and chronic conditions related to blood pressure and kidney function: Hypertensive encephalopathy, Hypertensive chronic kidney disease (Stage V/ESRD), Diabetes with renal manifestations, and Nephritis/Nephropathy. While Diabetes and Hypertension are major risk factors for dyslipidemia, they are not explicit diagnoses of a lipid disorder themselves.\n2. **Medications:** The patient is prescribed numerous medications for blood pressure control (Captopril, Hydralazine HCl, Lisinopril, Amlodipine Besylate, Atenolol), kidney protection (Sevelamer), and other severe conditions (Insulin, Metoprolol, Heparin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1000,
+    "completion_tokens": 256
+  }
+}

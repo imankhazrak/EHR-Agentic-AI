@@ -1,0 +1,12 @@
+{
+  "sample_id": 10326,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and multi-systemic issues, including severe viral hepatitis C, toxic encephalopathy, acute kidney failure, and post-transplant complications. While the patient is on medications like Cholestyramine and Colesevelam (which are used to manage cholesterol/lipid absorption), these medications alone, in the context of the provided diagnoses, do not constitute explicit evidence of an *existing* or *actively managed* primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, beyond the general management of the underlying liver disease. The focus remains on infectious, renal, and neurological complications.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 843,
+    "completion_tokens": 158
+  }
+}

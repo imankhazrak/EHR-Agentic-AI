@@ -1,0 +1,12 @@
+{
+  "sample_id": 4372,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on the use of statins (Atorvastatin), cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe cardiovascular pathology: Paroxysmal ventricular tachycardia, Other primary cardiomyopathies, Coronary atherosclerosis, and Old myocardial infarction. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality listed in the diagnoses made.\n2. **Medications:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a lipid-lowering agent, the instructions explicitly state that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Yes\" for Disorders of Lipid Metabolism.\n3. **Comorbidities/Risk Factors:** The patient has several cardiovascular risk factors (e.g., Coronary atherosclerosis, hypertension implied by Quinapril use, and general cardiac disease), but these factors alone are insufficient to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 898,
+    "completion_tokens": 256
+  }
+}

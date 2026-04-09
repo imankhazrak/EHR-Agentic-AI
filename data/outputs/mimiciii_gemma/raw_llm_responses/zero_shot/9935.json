@@ -1,0 +1,12 @@
+{
+  "sample_id": 9935,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis \"Other and unspecified hyperlipidemia.\" According to the strict rules, the presence of an explicit lipid disorder diagnosis (hyperlipidemia) is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. This evidence overrides general clinical risk factors and other co-morbidities listed.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 86
+  }
+}

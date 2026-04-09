@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record. According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The presence of this specific diagnosis provides strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit, satisfying the strict criteria outlined in the [Prediction Clarification].\n\nFurthermore, the patient's current diagnoses also include \"Coronary atherosclerosis of native coronary artery\" and \"Hypertensive chronic kidney disease, benign, with chronic kidney disease stage I through stage IV, or unspecified,\" which are common comorbidities associated with lipid disorders. While these conditions alone are not sufficient to predict a future diagnosis, they support the overall clinical context where a lipid disorder is already established. The explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor that leads to the \"Yes\" prediction.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3778,
+    "completion_tokens": 231
+  }
+}

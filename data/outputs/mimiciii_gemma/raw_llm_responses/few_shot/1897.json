@@ -1,0 +1,12 @@
+{
+  "sample_id": 1897,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and organ failure processes. The primary diagnoses include: Infection and inflammatory reaction due to cardiac device, implant, and graft; Acute and subacute bacterial endocarditis; Acute kidney failure with lesion of tubular necrosis; Bacteremia; Congestive heart failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Acidosis; Hyposmolality and/or hyponatremia.\n\nWhile the patient is receiving **Atorvastatin** (a lipid-lowering agent) and has a history of **Hypertensive chronic kidney disease** and **Congestive heart failure** (conditions often associated with dyslipidemia), the current record **lacks an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n\nAccording to the strict instructions provided, the use of statins (Atorvastatin) and the presence of cardiovascular diseases (CHF) or general risk factors (Hypertension) are **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3828,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8085,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe cardiovascular events (Acute myocardial infarction, Diastolic heart failure, Coronary atherosclerosis, Atrial fibrillation, Cardiogenic shock, etc.), severe renal failure (Acute kidney failure, Hypertensive chronic kidney disease), and associated complications (Diabetes, Anemia, Malnutrition). While the patient is on Simvastatin, which is a lipid-lowering agent, the record does not explicitly state a primary diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder that is actively being managed as the main focus of the current care plan. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1021,
+    "completion_tokens": 145
+  }
+}

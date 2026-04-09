@@ -1,0 +1,12 @@
+{
+  "sample_id": 12219,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly lists the primary diagnosis as \"Malignant neoplasm of upper lobe, bronchus or lung.\" The medications and procedures listed are related to the management of this oncological condition (e.g., CefazoLIN, HYDROmorphone, Heparin, Regional lymph node excision). There is no explicit evidence in the provided record\u2014such as abnormal lipid panel results, documented hypercholesterolemia, or a specific diagnosis of hyperlipidemia\u2014to strongly and explicitly support the coding of \"Disorders of Lipid Metabolism\" in the patient's next visit, despite the patient's general health status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 532,
+    "completion_tokens": 135
+  }
+}

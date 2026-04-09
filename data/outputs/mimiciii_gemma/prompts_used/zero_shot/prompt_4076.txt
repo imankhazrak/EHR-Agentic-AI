@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Diabetes with renal manifestations, type I [juvenile type], not stated as uncontrolled; Kidney replaced by transplant; Other postoperative infection; Cellulitis and abscess of trunk; Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled; Gastroparesis; Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled; Background diabetic retinopathy; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere
+- Medications prescribed: traMADOL; Magnesium Oxide; Tacrolimus; Prednisone; Lorazepam; Magnesium Sulfate; Oxycodone-Acetaminophen; Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; Amlodipine Besylate; Mycophenolate Mofetil; Acetaminophen; Ondansetron; Metoprolol; Meperidine; Hydromorphone; Heparin; NS; Bisacodyl; Amoxicillin-Clavulanic Acid; Olanzapine; Artificial Tears; Hydrocodone-Acetaminophen; Levofloxacin; Methylprednisolone Sodium Succ; Unasyn; D5W; Heparin Sodium; Morphine Sulfate; Methylprednisolone Na Succ.; Syringe (IV Room); Sirolimus; Azathioprine; Pantoprazole; Anti-Thymocyte Globulin (Rabbit); Insulin; Daclizumab; Hydralazine HCl; 1/2 NS; Docusate Sodium; Fluoxetine HCl; Furosemide; AMP; Octreotide Acetate; Humulin-R Insulin; Pamidronate; Famotidine (IV); Iso-Osmotic Sodium Chloride; Aspirin; Clotrimazole
+- Procedures performed: Homotransplant of pancreas; Reopening of recent laparotomy site; Excisional debridement of wound, infection, or burn
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

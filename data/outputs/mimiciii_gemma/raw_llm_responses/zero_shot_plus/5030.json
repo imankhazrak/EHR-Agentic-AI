@@ -1,0 +1,12 @@
+{
+  "sample_id": 5030,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for answering \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses include Subarachnoid hemorrhage, Inflammatory conditions of jaw, Unspecified essential hypertension, Other late effects of cerebrovascular disease, Unspecified sleep apnea, Unspecified chronic bronchitis, Nontoxic uninodular goiter, and Old myocardial infarction. None of these diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or dyslipidemia).\n2. **Medications:** The patient is prescribed Atorvastatin. While Atorvastatin is a lipid-lowering agent, the instructions explicitly state that the *use* of statins alone is NOT sufficient evidence to predict a future diagnosis of a lipid disorder. The other medications (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1060,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3197,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has diagnoses including Intracerebral hemorrhage, Unspecified essential hypertension, Pneumonia, Atrial fibrillation, and Hemiplegia. While Unspecified essential hypertension is a known risk factor for dyslipidemia, it does not constitute explicit evidence of a lipid disorder itself.\n2. **Medications:** The medication list is extensive and primarily focused on managing acute critical care issues such as hypertension (Nitroprusside, Labetalol, Nitroprusside, Diltiazem, Prazosin, Captopril, Enalapril, Clonidine), infection (Piperacillin-Tazobactam Na, Augmentin Suspension), and neurological/cardiac stability (Amiodarone HCl, Phenytoin Sodium, Heparin).\n3. **Lipid Management Evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1173,
+    "completion_tokens": 256
+  }
+}

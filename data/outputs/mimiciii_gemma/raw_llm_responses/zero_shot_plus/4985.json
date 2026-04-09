@@ -1,0 +1,12 @@
+{
+  "sample_id": 4985,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe analysis focuses strictly on the explicit evidence of an existing or actively managed lipid disorder, as per the strict instructions provided.\n\n1. **Review of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record details several severe cardiovascular and cardiac conditions:\n*   Diagnoses: Coronary atherosclerosis of autologous vein bypass graft; Congestive heart failure, unspecified; Paroxysmal ventricular tachycardia; Automatic implantable cardiac defibrillator in situ.\n*   Procedures/Interventions: Extensive cardiac catheterization, angiography, stent implantation, and radioactive element implantation.\n*   Medications: None recorded.\n\nCrucially, **there is no explicit diagnosis of a lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) listed in the current diagnoses.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that the following factors alone are **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism\":\n*   Use of statins (None recorded).\n*   Cardiovascular diseases (Coronary atherosclerosis, CHF, etc., are present, but this is an exclusion criterion).\n*   General risk factors (Hypertension or Diabetes",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 921,
+    "completion_tokens": 256
+  }
+}

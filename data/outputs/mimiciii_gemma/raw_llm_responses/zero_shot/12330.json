@@ -1,0 +1,12 @@
+{
+  "sample_id": 12330,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. The diagnoses and medications listed are related to secondary malignant neoplasm, personal history of malignant melanoma, and general supportive care (e.g., antibiotics, pain management, fluid balance). Therefore, there is no strong and explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 577,
+    "completion_tokens": 93
+  }
+}

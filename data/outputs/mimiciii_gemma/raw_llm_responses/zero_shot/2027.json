@@ -1,0 +1,12 @@
+{
+  "sample_id": 2027,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The provided current visit record is overwhelmingly focused on managing severe cardiovascular conditions (acute diastolic heart failure, subendocardial infarction, atrial fibrillation, etc.), infections (bacteremia, endocarditis), and associated complications (hypertension, coronary atherosclerosis). While the patient is high-risk due to these underlying conditions, there is no explicit evidence within the diagnoses or procedures performed that points to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia). Therefore, based on the strict criteria provided, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported by the current record, and the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 913,
+    "completion_tokens": 141
+  }
+}

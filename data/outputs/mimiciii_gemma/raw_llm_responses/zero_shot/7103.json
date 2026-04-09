@@ -1,0 +1,12 @@
+{
+  "sample_id": 7103,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on the care of a premature newborn, including diagnoses related to respiratory distress syndrome, neonatal jaundice, and various complications of prematurity (e.g., Retrolental fibroplasia, Anemia of prematurity). While the patient is receiving intravenous fat emulsion (a component related to lipid management), this is part of the general nutritional support for a critically ill neonate. Crucially, the record lacks any explicit diagnosis of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would warrant a specific diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, despite the presence of general nutritional support components. Therefore, based on the strict criteria, the evidence is insufficient to predict a future diagnosis of a primary lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1040,
+    "completion_tokens": 165
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6482,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record indicates several diagnoses related to the patient's birth and observation for a suspected genetic or metabolic condition, along with a family history of diabetes mellitus and the need for prophylactic immunotherapy. While these factors suggest a potential underlying metabolic issue, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The guidelines strictly prohibit predicting a future diagnosis based solely on the use of statins, cardiovascular diseases, or general risk factors like diabetes. Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction for the next hospital visit is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3444,
+    "completion_tokens": 137
+  }
+}

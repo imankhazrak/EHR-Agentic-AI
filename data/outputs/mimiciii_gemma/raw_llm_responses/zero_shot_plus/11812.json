@@ -1,0 +1,12 @@
+{
+  "sample_id": 11812,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe acute and chronic cardiopulmonary, renal, and gastrointestinal issues: Subendocardial infarction, Acute respiratory failure, Obstructive chronic bronchitis, Acute kidney failure, Mitral valve disorders, Anemia, Chronic gastric ulcer, Dehydration, etc. None of the primary diagnoses explicitly state a lipid abnormality (e.g., hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and covers numerous acute and chronic conditions:\n*   **Cardiopulmonary/Renal Management:** PredniSONE, Captopril, Azithromycin, Labetalol, Metoprolol Tartrate, Albuterol, etc.\n*   **Gastrointestinal/Renal Support:** Pantoprazole, Lisinopril, Potassium Chloride, etc.\n*   **Acute/Supportive Care:** Fentanyl Citrate",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1105,
+    "completion_tokens": 256
+  }
+}

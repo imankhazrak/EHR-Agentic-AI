@@ -1,0 +1,12 @@
+{
+  "sample_id": 9987,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record does not contain any explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses and medications listed primarily relate to pulmonary, infectious, cardiac, and metabolic issues (e.g., Hb-SS crisis, pulmonary embolism, fluid overload, Vitamin D deficiency). While the patient is high-risk based on other factors, the strict criteria require explicit evidence of a lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 116
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1677,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly details diagnoses and medications related to a severe traumatic event (Closed fracture of vault of skull, Cerebral edema, Accidental fall, etc.) and associated supportive care (Mechanical ventilation, Phenytoin, etc.). There is no explicit evidence within the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly support the prediction that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the patient being high-risk for general cardiovascular issues. The record focuses entirely on acute trauma and supportive management.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 649,
+    "completion_tokens": 133
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11137,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipidemia disorders (CCS category 53). The analysis must focus on whether there is strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current list of diagnoses is extensive, covering severe cardiovascular disease (Atherosclerosis, CHF, Atrial Fibrillation, Coronary Atherosclerosis), diabetes complications (Polyneuropathy, Diabetes with neurological manifestations), renal issues (CKD, Oliguria), and various complications from procedures/treatments (Hematoma, Mechanical complication).\nCrucially, **none of the listed diagnoses explicitly state a lipid disorder** such as \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipoid Metabolism Disorder.\"\n\n2. **Analysis of Medications for Lipid Management:**\nThe patient is prescribed **Simvastatin**. Simvastatin is a statin, a primary medication used to treat dyslipidemia (hypercholesterolemia/hyperlipidemia). While the prescription of a statin strongly *suggests*",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1245,
+    "completion_tokens": 256
+  }
+}

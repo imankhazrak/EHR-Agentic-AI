@@ -1,0 +1,12 @@
+{
+  "sample_id": 12439,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and management for chronic obstructive asthma, urinary tract infection, mixed acid-base balance disorder, bronchiectasis, esophageal reflux, essential hypertension, anxiety, anemia, and knee joint replacement. While the patient is prescribed Simvastatin, which is used to manage lipid levels, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict guidelines, the presence of a diagnosis of a lipid disorder is required to predict a future diagnosis, and the current record lacks this explicit diagnostic evidence, despite the use of lipid-lowering medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 758,
+    "completion_tokens": 135
+  }
+}

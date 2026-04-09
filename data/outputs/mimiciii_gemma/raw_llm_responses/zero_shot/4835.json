@@ -1,0 +1,12 @@
+{
+  "sample_id": 4835,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details cardiac events (Subendocardial infarction, Coronary atherosclerosis, Paroxysmal ventricular tachycardia, etc.) and associated management (Heparin, Metoprolol, Aspirin, Atorvastatin, etc.). While the patient is prescribed Atorvastatin, which is used to manage lipid levels, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The management of the cardiac condition is the primary focus, and the prescription of Atorvastatin alone, without an explicit lipid diagnosis, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria provided.\n\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is heavily focused on managing severe cardiovascular disease, including Subendocardial infarction, Coronary atherosclerosis, and Paroxysmal ventricular tachycardia. While the patient is prescribed Atorvastatin, which is a lipid-lowering agent, the record does not explicitly state a diagnosis of hypercholesteroleolemia, hyperlipidemia, or any other specific lipid disorder. According to the strict criteria, the prescription of Atorvastatin alone, without an explicit lipid diagnosis, is not sufficient evidence to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 650,
+    "completion_tokens": 256
+  }
+}

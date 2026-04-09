@@ -1,0 +1,12 @@
+{
+  "sample_id": 1609,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details severe trauma, infectious processes (Pneumonia due to Klebsiella pneumoniae), and associated complications (Perforation of intestine, Acute vascular insufficiency of intestine). While the patient is receiving medications such as Simvastatin and Amlodipine, and has a history of general risk factors (implied by the use of these medications), the record does not contain any explicit diagnostic evidence of a primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that is actively being managed or diagnosed in this specific visit. Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 846,
+    "completion_tokens": 156
+  }
+}

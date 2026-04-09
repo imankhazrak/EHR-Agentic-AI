@@ -1,0 +1,12 @@
+{
+  "sample_id": 1819,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious comorbid conditions, including Atrial fibrillation, Congestive heart failure, Acute kidney failure, and Atherosclerosis. The medication list includes Atorvastatin, which is a primary treatment for hypercholesterolemia and is strongly associated with lipid disorders. However, according to the strict instructions provided, the mere prescription of a statin (Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other explicit lipid disorder diagnosis. The other diagnoses are related to vascular complications, cardiac issues, and biliary tract issues. Since the strict rule requires explicit evidence of an existing or actively managed lipid disorder beyond the use of statins, and this explicit evidence is absent in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3744,
+    "completion_tokens": 196
+  }
+}

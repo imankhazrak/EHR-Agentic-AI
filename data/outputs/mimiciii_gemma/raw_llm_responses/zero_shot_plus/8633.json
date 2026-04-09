@@ -1,0 +1,12 @@
+{
+  "sample_id": 8633,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder, rather than relying on general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\n   The current visit record lists several significant comorbidities, including Diabetes Mellitus (Type II or unspecified), Hypertension (Hypertensive chronic kidney disease), and Coronary Atherosclerosis. These conditions are well-known risk factors for hyperlipidemia and lipid disorders. Furthermore, the patient is prescribed **Atorvastatin**, a statin used explicitly for lipid management.\n\n2. **Application of Exclusion Criteria:**\n   The instructions explicitly state that the following factors *alone* are NOT sufficient to predict a future diagnosis:\n   - Use of statins (e.g., Atorvastatin)\n   - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)\n   - General risk factors (e.g., hypertension, diabetes)\n\n3. **Conclusion Based on Strict Rules:**\n   Despite the presence of strong risk factors (Diabetes, Hypertension, CAD) and the active use of a lipid-lowering agent (Atorvastatin), the current record **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1081,
+    "completion_tokens": 256
+  }
+}

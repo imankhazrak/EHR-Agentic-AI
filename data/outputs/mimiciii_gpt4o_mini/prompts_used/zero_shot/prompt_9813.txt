@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; End stage renal disease; Other acute and subacute forms of ischemic heart disease, other; Tachypnea; Other respiratory abnormalities; Unspecified hereditary and idiopathic peripheral neuropathy; Other fluid overload; Diabetes with other specified manifestations, type II or unspecified type, uncontrolled; Other chronic pain; Anemia, unspecified; Esophageal reflux; Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS); Personal history of traumatic brain injury; Renal dialysis status
+- Medications prescribed: Nitroglycerin; Insulin; D5W; Dextrose 50%; Carvedilol; Senna; Heparin; Brimonidine Tartrate 0.15% Ophth.; Calcium Acetate; Acetaminophen; Amlodipine; Docusate Sodium; Finasteride; Epoetin Alfa; 0.9% Sodium Chloride; Vial; Gabapentin; Glucagon; Isosorbide Mononitrate; Levobunolol 0.25%; Lidocaine 5% Patch; Lisinopril; Nephrocaps; Omeprazole; Pilocarpine 1%; Polyethylene Glycol; Doxercalciferol; Lidocaine 1%; Sodium Chloride 0.9%  Flush; D10W; Quetiapine Fumarate; Ipratropium Bromide Neb
+- Procedures performed: Hemodialysis; Non-invasive mechanical ventilation
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

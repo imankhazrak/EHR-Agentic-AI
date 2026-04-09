@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Acute respiratory failure; Pneumonia, organism unspecified; Unspecified pleural effusion; Acute pyelonephritis without lesion of renal medullary necrosis; Kidney replaced by transplant; Liver replaced by transplant; Acidosis; Delirium due to conditions classified elsewhere; Major depressive affective disorder, single episode, severe, specified as with psychotic behavior; Sepsis; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Congestive heart failure, unspecified; Unspecified essential hypertension; Esophageal reflux; Obstructive sleep apnea (adult)(pediatric); Long-term (current) use of anticoagulants; Atrial fibrillation; Mitral valve disorders; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled; Background diabetic retinopathy; Anemia in chronic kidney disease; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Epilepsy, unspecified, without mention of intractable epilepsy; Incisional hernia without mention of obstruction or gangrene
+- Medications prescribed: Sulfameth/Trimethoprim SS; Insulin; Omeprazole; Acetaminophen; Tacrolimus; 0.9% Sodium Chloride (Mini Bag Plus); Meropenem; Lidocaine Jelly 2% (Urojet); Furosemide; Metoprolol Tartrate; Linezolid; 5% Dextrose; D5W; Ganciclovir; Morphine Sulfate; Docusate Sodium; Bisacodyl; Senna; Citalopram Hydrobromide; Warfarin; Sodium Chloride 0.9%  Flush; Hydrocodone-Acetaminophen; ValGANCIclovir; Lorazepam; Nystatin Oral Suspension; D5 1/2NS; Acetylcysteine 20%; Sodium Bicarbonate; Mycophenolate Mofetil; LeVETiracetam; PredniSONE; Heparin Flush (10 units/ml); Amlodipine; Heparin Sodium; Iso-Osmotic Dextrose; Vancomycin; traZODONE; Haloperidol; HYDROmorphone (Dilaudid); 0.9% Sodium Chloride; Calcium Gluconate; HydrALAzine; Magnesium Sulfate; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Pantoprazole; Prochlorperazine; Ondansetron; Propofol; Chlorhexidine Gluconate 0.12% Oral Rinse
+- Procedures performed: Thoracoscopic drainage of pleural cavity; Thoracoscopic decortication of lung; Incisional hernia repair; Injection into thoracic cavity; Insertion of intercostal catheter for drainage; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; Closed [endoscopic] biopsy of bronchus; Closed (percutaneous) [needle] biopsy of liver; Arteriography of other intra-abdominal arteries; Venous catheterization, not elsewhere classified; Injection or infusion of oxazolidinone class of antibiotics
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

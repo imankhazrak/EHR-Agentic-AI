@@ -1,0 +1,12 @@
+{
+  "sample_id": 4366,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record primarily details the care of a single liveborn infant who experienced respiratory distress syndrome, neonatal jaundice, and other complications related to prematurity. The diagnoses made are centered around these birth and newborn complications (e.g., Respiratory distress syndrome in newborn, Neonatal jaundice associated with preterm delivery, Anemia of prematurity, Atresia and stenosis of large intestine). The medications prescribed are standard neonatal care agents (e.g., NEO*IV*Ampicillin Sodium, NEO*IV*Gentamicin, NEO*IV*Fat Emulsion, NEO*IV*Parenteral Nutrition).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The presence of neonatal jaundice is a metabolic issue, but it is not explicitly coded as a primary lipid metabolism disorder in the context of the required prediction criteria.\n\nFollowing the strict instructions, which mandate that a prediction of \"Yes\" must be based on *explicit* evidence of an existing or actively managed lipid disorder, and not merely on general risk factors or related metabolic symptoms like jaundice, the evidence is insufficient. Therefore, the prediction must",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3646,
+    "completion_tokens": 256
+  }
+}

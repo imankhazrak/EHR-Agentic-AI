@@ -1,0 +1,12 @@
+{
+  "sample_id": 3627,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or comorbidities.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are: Abscess of liver; Abscess of anal and rectal regions; Acute kidney failure, unspecified; Other drugs and medicinal substances causing adverse effects in therapeutic use; Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled; [ICD9-DX:2765]; Paranoid type schizophrenia, unspecified; Personal history of malignant neoplasm of ovary; Ileostomy status.\nNone of these explicit diagnoses point to a primary or secondary lipid disorder (e.g., hypercholesterolemia, hyperlipidemia).\n\n2. **Analysis of Comorbidities and Risk Factors:**\nThe patient has several significant comorbidities, including uncontrolled Diabetes mellitus type II, which is a known risk factor for dyslipidemia. The patient also has a history of malignant neoplasm of the ovary. While these conditions increase the *risk* of developing lipid disorders, the instructions explicitly state",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 925,
+    "completion_tokens": 256
+  }
+}

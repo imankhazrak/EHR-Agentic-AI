@@ -1,0 +1,12 @@
+{
+  "sample_id": 3654,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or general comorbidities.\n\nAnalysis of the Current Visit Record:\n1. **Comorbidities and Risk Factors:** The patient presents with numerous severe comorbidities, including Hypertensive chronic kidney disease, End stage renal disease, Diabetes with various uncontrolled manifestations, and Coronary atherosclerosis. These conditions (Diabetes, Hypertension, Atherosclerosis) are well-known, strong risk factors for developing lipid disorders (hyperlipidemia, hypercholesterolemia).\n2. **Medication Profile:** The patient is prescribed several medications, including Aspirin and Metoprolol, which are used for cardiovascular protection. However, there is **no explicit mention** of lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates in the prescribed medication list.\n3. **Explicit Diagnosis:** Crucially, the patient's current list of diagnoses **does not include** any explicit diagnosis of hypercholester",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1125,
+    "completion_tokens": 256
+  }
+}

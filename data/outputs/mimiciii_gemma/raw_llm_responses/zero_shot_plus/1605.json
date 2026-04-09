@@ -1,0 +1,12 @@
+{
+  "sample_id": 1605,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to predict a future diagnosis of \"Yes.\"\n\nAnalysis of Current Visit Record:\nThe current visit record is entirely focused on neurological and spinal interventions:\n- Diagnoses made: Compression of brain\n- Medications prescribed: None recorded\n- Procedures performed: Other excision or destruction of lesion or tissue of brain; Other exploration and decompression of spinal canal; Other repair of cerebral meninges\n\nEvaluation against Prediction Rules:\n1. **Explicit Lipid Disorder Evidence:** There is absolutely no mention of any lipid abnormality, hypercholesterolemia, hyperlipidemia, or related metabolic condition in the current record.\n2. **Exclusion Criteria Check:** The current record does not contain any of the factors that are insufficient to predict a \"Yes\" diagnosis, such as the use of statins, cardiovascular diseases (CHF, AF, CABG, CAD), or general risk factors (hypertension, diabetes).\n3. **Conclusion:** Since the entire clinical focus of the current visit is on neurological compression and subsequent surgical/exploratory procedures, and there is zero",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 848,
+    "completion_tokens": 256
+  }
+}

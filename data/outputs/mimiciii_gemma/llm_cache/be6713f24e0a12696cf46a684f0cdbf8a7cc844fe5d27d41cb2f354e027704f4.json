@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe current visit record indicates the following:\n- Diagnoses made: Single liveborn, born in hospital, delivered without mention of cesarean section; Need for prophylactic vaccination and inoculation against viral hepatitis; Observation for suspected infectious condition.\n- Medications prescribed: None recorded.\n- Procedures performed: Prophylactic administration of vaccine against other diseases.\n\nEvaluation against Prediction Criteria:\n1. **Explicit Lipid Disorder Evidence:** There is absolutely no mention of any lipid abnormality, such as elevated cholesterol or triglycerides, in the current diagnoses.\n2. **Risk Factors/Comorbidities:** The record does not mention any established risk factors for lipid disorders (e.g., hypertension, diabetes, obesity) or comorbid conditions commonly associated with them.\n3. **Medication Profile:** No medications were prescribed, so there is no",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 860,
+    "completion_tokens": 256
+  }
+}

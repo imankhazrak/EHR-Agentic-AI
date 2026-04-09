@@ -1,0 +1,12 @@
+{
+  "sample_id": 6371,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors.\n\nAnalysis of Current Visit Record:\n1. **Comorbidities:** The patient has several significant comorbidities: Diabetes with hyperosmolarity, type I [juvenile type], Hypertensive chronic kidney disease stage V, and ischemic heart disease. Diabetes and cardiovascular disease are known risk factors for lipid disorders, but their presence alone does not meet the strict criteria for predicting a future diagnosis of a *coded* lipid disorder.\n2. **Medications:** The prescribed medications include Captopril, Lisinopril, Metoprolol, and Aspirin, which are used for managing hypertension and cardiovascular risk. While some of these conditions are associated with dyslipidemia, the record does not explicitly list lipid-lowering agents (like statins or fibrates) or evidence of elevated lipid panels (hypercholesterolemia/hyperlipidemia).\n3. **Explicit Evidence Check:** A thorough review of the diagnoses made and medications prescribed reveals no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality diagnosis. The patient",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1177,
+    "completion_tokens": 256
+  }
+}

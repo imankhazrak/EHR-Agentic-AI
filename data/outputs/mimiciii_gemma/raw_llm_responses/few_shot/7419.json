@@ -1,0 +1,12 @@
+{
+  "sample_id": 7419,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several risk factors for dyslipidemia, including Diabetes Mellitus and Unspecified Essential Hypertension, these factors alone are explicitly excluded by the instructions as being insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The medication profile includes several cardiovascular and metabolic agents (e.g., Labetalol HCl, Lisinopril, Metoprolol, Insulin, Metformin), but there is no evidence of active management or diagnosis of a lipid abnormality (e.g., no statins or fibrates are explicitly listed as the primary driver for a future diagnosis, and even if they were, the instructions caution against relying solely on them). Therefore, based strictly on the evidence required by the instructions, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3656,
+    "completion_tokens": 195
+  }
+}

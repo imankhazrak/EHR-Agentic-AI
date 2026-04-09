@@ -1,0 +1,12 @@
+{
+  "sample_id": 8022,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly requires evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a diagnosis based solely on the use of statins, cardiovascular diseases, or general risk factors like hypertension or diabetes.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made in the current visit record (Intestinal or peritoneal adhesions with obstruction, HIV disease, Chronic hepatitis C, Chronic airway obstruction, Clostridium difficile, Pressure ulcer, Calculus of gallbladder, Pneumonitis, Acute kidney failure, Unspecified essential hypertension, Paralytic ileus, etc.), there is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded.\n\n2. **Medication Review (Statins):** The patient is prescribed **Atazanavir** and **Emtricitabine-Tenofovir**, which are antiretroviral medications. While the medication list includes **Insulin** and **Metoprolol**, and the patient has **Unspecified essential hypertension**, the record **does not explicitly state** that the patient",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1264,
+    "completion_tokens": 256
+  }
+}

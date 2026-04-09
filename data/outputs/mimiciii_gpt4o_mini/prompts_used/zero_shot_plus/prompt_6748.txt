@@ -1,0 +1,64 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. You will be presented with the patient's medical history and guidelines to aid your prediction. Please provide your reasoning and make your prediction.
+
+You are presented with the following:
+1. [Target Definition] The definition of the prediction target.
+2. [Current Visit Record] The patient's current hospital visit record, capturing diagnoses made, medications prescribed, and procedures performed.
+3. [Instructions] Guidelines on analyzing the record, providing reasoning, and making predictions.
+4. [Output Format] The required format for your response.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified protein-calorie malnutrition; Acute alcoholic intoxication in alcoholism, continuous; Combinations of opioid type drug with any other drug dependence, continuous; Systemic lupus erythematosus; Closed fracture of base of skull without mention of intra cranial injury, with no loss of consciousness; Unspecified pleural effusion; Pneumonia, organism unspecified; Urinary tract infection, site not specified; Alcohol withdrawal; Adult failure to thrive; Peptic ulcer of unspecified site, unspecified as acute or chronic, without mention of hemorrhage or perforation, without mention of obstruction; Iron deficiency anemia, unspecified; Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus; Unspecified inflammatory disease of female pelvic organs and tissues; Personal history of noncompliance with medical treatment, presenting hazards to health; Hypopotassemia
+- Medications prescribed: OxycoDONE (Immediate Release); Haloperidol; Magnesium Sulfate; Potassium Chloride; NS; SW; Multivitamins; Thiamine HCl; FoLIC Acid; Calcium Gluconate; Morphine Sulfate; Diazepam; D5W; Ciprofloxacin; D5 1/2NS; Acetaminophen; Heparin Flush CVL  (100 units/ml); LR; Pantoprazole; Nicotine Patch; Lorazepam; D5LR; Vial; Pantoprazole Sodium; Docusate Sodium; Heparin; Senna; Potassium Chl 40 mEq / 1000 mL D5 1/2 NS; Neutra-Phos; Potassium Phosphate; Potassium Chl 40 mEq / 1000 mL NS
+- Procedures performed: Venous catheterization, not elsewhere classified
+
+[Instructions]
+Based on the patient's current visit record, provide reasoning on whether Disorders of Lipid Metabolism will be present in the patient's next hospital visit.
+
+You should know that: in the MIMIC-III critical care population, approximately 27.6% of subsequent hospital visits include a diagnosis of Disorders of Lipid Metabolism.
+
+Please:
+(1) Use your medical knowledge about lipid metabolism disorders, their risk factors, and associated conditions.
+(2) Perform a comprehensive analysis of the patient's current visit record.
+(3) Consider the interplay of diseases, medications, and procedures. Make sure to:
+    - Identify and weigh both risk factors and protective factors evident in the patient's medical history.
+    - Consider the presence of comorbid conditions commonly associated with lipid disorders (e.g., diabetes mellitus, obesity, hypertension, cardiovascular diseases).
+    - Examine the patient's medication profile to identify drugs relevant to lipid management (e.g., statins, fibrates) or drugs that may affect lipid levels.
+    - Evaluate medical or surgical procedures the patient has undergone that could relate to metabolic or cardiovascular health.
+(4) Utilize a step-by-step reasoning approach to systematically analyze the data.
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide a detailed reasoning process below.
+Ensure that your analysis is thorough and based on the information provided, leading logically to your final prediction.

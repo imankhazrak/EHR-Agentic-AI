@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient currently has diagnoses of Intracerebral hemorrhage, Encounter for palliative care, Unspecified essential hypertension, and Coronary atherosclerosis of native coronary artery. These diagnoses indicate severe, acute critical illness, primarily focused on neurological and cardiovascular events, but none explicitly state a primary lipid disorder (like hypercholesterolemia or hyperlipidemia).\n2. **Medications:** The medication list is extensive and reflects aggressive critical care management for hemorrhage, hypertension, and cardiac instability (e.g., Labetalol HCl, Nitroprusside Sodium, Heparin, Cefepime, etc.). Crucially, the medication list **does not contain any explicit lipid-lowering agents",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1040,
+    "completion_tokens": 256
+  }
+}

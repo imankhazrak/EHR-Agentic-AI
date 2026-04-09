@@ -1,0 +1,12 @@
+{
+  "sample_id": 4560,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly details diagnoses related to Diabetes with ketoacidosis, Acute kidney failure, Unspecified protein-calorie malnutrition, Cachexia, and various gastrointestinal and psychiatric conditions. While the patient is high-risk due to these underlying severe conditions, the record does not contain any explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia. The medications and procedures listed are primarily aimed at managing the severe metabolic, renal, and gastrointestinal complications. Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 662,
+    "completion_tokens": 140
+  }
+}

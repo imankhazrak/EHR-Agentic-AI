@@ -1,0 +1,12 @@
+{
+  "sample_id": 8014,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record contains numerous diagnoses related to sepsis, kidney failure, hypertension, diabetes, and various gastrointestinal and malignant conditions. While the patient has a history of Coronary Atherosclerosis, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that is actively being managed or explicitly diagnosed. The medications prescribed, such as Metoprolol XL, are related to cardiovascular management, but this alone is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict criteria provided. Therefore, based on the absence of explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 140
+  }
+}

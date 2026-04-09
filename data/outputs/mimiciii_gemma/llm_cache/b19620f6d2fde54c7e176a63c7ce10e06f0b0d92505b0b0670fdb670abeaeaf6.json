@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record contains explicit and strong evidence of an existing lipid disorder, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The patient's current diagnoses explicitly include **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, satisfying the primary criterion for predicting a future diagnosis.\n\n2. **Presence of Strong Comorbidities:** The patient exhibits numerous severe comorbidities that are strongly associated with lipid disorders, reinforcing the clinical reality of the condition:\n    * **Diabetes Mellitus (Type II):** The patient has \"Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled,\" which is a major risk factor and comorbidity for dyslipidemia.\n    * **Obesity:** The patient has \"Morbid obesity,\" a powerful driver of metabolic syndrome and hyperlipidemia.\n    * **Hypertension:** The patient has \"Unspecified essential hypertension,\" another key component of metabolic syndrome often linked to lipid abnormalities.\n\n3. **Active Lipid Management:** The patient is actively managed for lipid abnormalities, as evidenced by the prescription of **\"Ator",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1132,
+    "completion_tokens": 256
+  }
+}

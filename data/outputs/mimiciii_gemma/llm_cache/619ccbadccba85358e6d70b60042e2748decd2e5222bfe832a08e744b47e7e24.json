@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record. This diagnosis directly meets the criteria for \"Disorders of Lipid Metabolism\" as defined in the target definition (hypercholesterolemia is a core component).\n\nFurthermore, the patient is actively managed for this condition, as evidenced by the prescription of \"Rosuvastatin Calcium,\" a statin medication specifically used to treat hypercholesterolemia.\n\nAlthough the patient has numerous other comorbidities (Diabetes mellitus, Bipolar disorder, Osteoporosis, etc.), the presence of the explicit lipid disorder diagnosis and the corresponding lipid-lowering medication provides strong and explicit evidence that this condition is present and likely to be coded in the next hospital visit. The explicit diagnosis overrides the need to rely on general risk factors or other comorbidities alone.\n\nThe presence of the explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor supporting the \"Yes\" prediction.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1164,
+    "completion_tokens": 208
+  }
+}

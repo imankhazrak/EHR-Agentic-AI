@@ -1,0 +1,12 @@
+{
+  "sample_id": 11607,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid abnormalities in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is direct evidence of a lipid disorder being present in the patient's current state.\n\n2. **Active Lipid Management:** The medication profile confirms that the patient is under active management for this condition. The patient is prescribed multiple agents specifically targeting lipid levels: **\"Atorvastatin\"** (a statin) and **\"Ezetimibe\"** (a cholesterol absorption inhibitor). The combination of a diagnosed hyperlipidemia and the prescription of targeted lipid-lowering medications provides strong, explicit evidence of an existing and actively managed lipid disorder.\n\n3. **Exclusion of Insufficient Evidence:** The reasoning adheres strictly to the instructions by not relying solely on the use of statins or general risk factors. The prediction is based on the *combination* of the explicit diagnosis (\"Other and unspecified hyperlipidemia\") AND the active management (Atorvastatin/Ezetimibe",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 256
+  }
+}

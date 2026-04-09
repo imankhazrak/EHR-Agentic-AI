@@ -1,0 +1,12 @@
+{
+  "sample_id": 1838,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record does not contain any explicit evidence of a primary lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is prescribed Atorvastatin, this medication is used for managing dyslipidemia, but the record itself does not explicitly state that a lipid disorder is the primary diagnosis or that there is explicit evidence of one beyond the use of the medication. Furthermore, the presence of other diagnoses such as Atrial fibrillation, Congestive heart failure, and Hypertensive chronic kidney disease does not automatically equate to a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 659,
+    "completion_tokens": 153
+  }
+}

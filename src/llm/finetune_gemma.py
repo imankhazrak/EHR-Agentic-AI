@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import shutil
 import tempfile
 from pathlib import Path
@@ -63,9 +64,13 @@ def finetune_gemma_lora(
     lora_r: int = 8,
     lora_alpha: int = 16,
     lora_dropout: float = 0.05,
+    lora_target_modules: Optional[List[str]] = None,
     max_train_samples: Optional[int] = None,
     max_eval_samples: Optional[int] = None,
     max_steps: Optional[int] = None,
+    gradient_checkpointing: bool = False,
+    force_fp32: bool = False,
+    max_grad_norm: float = 1.0,
     smoke: bool = False,
 ) -> Path:
     """Fine-tune Gemma with LoRA and save adapter/tokenizer locally."""
@@ -117,14 +122,47 @@ def finetune_gemma_lora(
                 "and re-run the smoke test."
             ) from exc
         raise
+    # Gemma-4 requires explicit LoRA target modules with current peft releases.
+    default_target_modules = [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj",
+    ]
     lora_cfg = LoraConfig(
         r=lora_r,
         lora_alpha=lora_alpha,
         lora_dropout=lora_dropout,
+        target_modules=lora_target_modules or default_target_modules,
         bias="none",
         task_type="CAUSAL_LM",
     )
-    model = get_peft_model(model, lora_cfg)
+    try:
+        model = get_peft_model(model, lora_cfg)
+    except ValueError as exc:
+        if "Gemma4ClippableLinear" in str(exc):
+            logger.warning(
+                "LoRA target modules are incompatible with Gemma4ClippableLinear. "
+                "Reloading base model and retrying with target_modules=['linear']."
+            )
+            # Reload a clean base model before second PEFT attempt to avoid double-wrap side effects.
+            model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+            lora_cfg = LoraConfig(
+                r=lora_r,
+                lora_alpha=lora_alpha,
+                lora_dropout=lora_dropout,
+                target_modules=["linear"],
+                bias="none",
+                task_type="CAUSAL_LM",
+            )
+            model = get_peft_model(model, lora_cfg)
+        else:
+            raise
+    if gradient_checkpointing:
+        model.gradient_checkpointing_enable()
     logger.info("LoRA parameters prepared for model=%s", model_name)
 
     if max_train_samples is not None:
@@ -157,32 +195,52 @@ def finetune_gemma_lora(
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
     effective_max_steps = max_steps if max_steps is not None else -1
-    use_cuda = torch.cuda.is_available()
-    args = TrainingArguments(
+    use_cuda = torch.cuda.is_available() and not force_fp32
+    args_kwargs = dict(
         output_dir=str(output_path / "checkpoints"),
         learning_rate=learning_rate,
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size,
         num_train_epochs=num_train_epochs,
         max_steps=effective_max_steps,
-        evaluation_strategy="steps" if tokenized_val is not None else "no",
         eval_steps=1 if smoke else 20,
         logging_steps=1 if smoke else 20,
         save_steps=200,
         save_total_limit=2,
+        gradient_checkpointing=gradient_checkpointing,
+        max_grad_norm=max_grad_norm,
         bf16=False,
         fp16=use_cuda,
         report_to=[],
     )
-    trainer = Trainer(
+    eval_mode = "steps" if tokenized_val is not None else "no"
+    try:
+        args = TrainingArguments(evaluation_strategy=eval_mode, **args_kwargs)
+    except TypeError:
+        # transformers>=5 renamed this argument.
+        args = TrainingArguments(eval_strategy=eval_mode, **args_kwargs)
+    trainer_kwargs = dict(
         model=model,
         args=args,
         train_dataset=tokenized_train,
         eval_dataset=tokenized_val,
-        tokenizer=tokenizer,
         data_collator=data_collator,
     )
+    try:
+        trainer = Trainer(tokenizer=tokenizer, **trainer_kwargs)
+    except TypeError:
+        # transformers>=5 removed `tokenizer` from Trainer.__init__.
+        trainer = Trainer(**trainer_kwargs)
     trainer.train()
+    if trainer.state.log_history:
+        for row in trainer.state.log_history:
+            for key in ("loss", "eval_loss", "grad_norm"):
+                val = row.get(key)
+                if isinstance(val, float) and not math.isfinite(val):
+                    raise RuntimeError(
+                        f"Smoke training produced non-finite metric: {key}={val}. "
+                        "Reduce LR / disable fp16 / adjust LoRA settings before full run."
+                    )
 
     model.save_pretrained(output_path)
     tokenizer.save_pretrained(output_path)

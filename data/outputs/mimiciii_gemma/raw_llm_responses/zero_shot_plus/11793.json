@@ -1,0 +1,12 @@
+{
+  "sample_id": 11793,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Diagnoses:**\nThe current diagnoses list includes several significant comorbidities: Muscle weakness, Acute on chronic systolic heart failure, Acute kidney failure, Acidosis, Congestive heart failure, Diabetes mellitus, Hypertensive chronic kidney disease, Gout, Atrial fibrillation, and Coronary atherosclerosis. While Diabetes Mellitus and Hypertension are known risk factors for lipid disorders, their presence alone does not constitute a diagnosis of a lipid disorder (e.g., hypercholesterolemia).\n\n2. **Analysis of Medications:**\nThe medication list includes **Simvastatin** and **Glyburide**. Simvastatin is a statin, a drug used to treat hypercholesterolemia. The presence of a statin strongly suggests that the patient *has* or *is being treated for* a lipid abnormality. However, according to the strict instructions, the mere use of a statin is **NOT** sufficient evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1103,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9004,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains multiple, explicit diagnoses of lipid abnormalities, which strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe explicit evidence supporting this prediction includes:\n1. **Direct Lipid Diagnoses:** The patient record explicitly lists the following diagnoses related to lipid disorders:\n    * **\"Other and unspecified hyperlipidemia\"**\n    * **\"Pure hyperglyceridemia\"**\n    These diagnoses are direct coding of lipid abnormalities and meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Management of Lipid Risk Factors:** While the instructions caution against predicting based solely on statin use or general risk factors, the presence of *explicit* lipid diagnoses alongside the management of severe metabolic comorbidities confirms the active and ongoing nature of the lipid disorder. The patient is being managed for:\n    * **Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled**\n    * **Chronic kidney disease, Stage III (moderate)**\n    * **Hypertensive chronic kidney disease, unspecified**\n    * **Coronary atherosclerosis of native coronary artery",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1395,
+    "completion_tokens": 256
+  }
+}

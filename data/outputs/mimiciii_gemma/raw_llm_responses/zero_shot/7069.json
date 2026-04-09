@@ -1,0 +1,12 @@
+{
+  "sample_id": 7069,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to severe infection (MRSA septicemia, severe sepsis, septic shock), end-stage renal disease (ESRD), and cardiovascular issues (CHF, coronary atherosclerosis). While the patient is on Simvastatin, which is used to manage dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder. The presence of Simvastatin alone, along with general risk factors like ESRD and CHF, is insufficient evidence to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines provided.\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to severe infection (MRSA septicemia, severe sepsis, septic shock), end-stage renal disease (ESRD), and cardiovascular issues (CHF, coronary atherosclerosis). While the patient is on Simvastatin, which is used to manage dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder. The presence of Simvastatin alone, along with general risk factors like ESRD and CHF, is insufficient evidence to explicitly predict a future diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 760,
+    "completion_tokens": 256
+  }
+}

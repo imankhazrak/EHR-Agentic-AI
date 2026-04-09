@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care diagnoses, including Unspecified septicemia, Acute respiratory failure, Septic shock, Pneumonia, Atrial flutter, and Congestive heart failure. The medication list includes Atorvastatin, which is a lipid-lowering agent. However, the strict instructions explicitly state that the mere use of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a coded diagnosis. While the patient has risk factors such as Diabetes mellitus type II and Hypertensive chronic kidney disease, these factors alone are insufficient to meet the strict criteria for predicting a future diagnosis based on the provided guidelines. Therefore, in the absence of explicit evidence of an existing or actively managed lipid disorder, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3850,
+    "completion_tokens": 200
+  }
+}

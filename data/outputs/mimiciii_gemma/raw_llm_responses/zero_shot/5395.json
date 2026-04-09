@@ -1,0 +1,12 @@
+{
+  "sample_id": 5395,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses listed are related to pulmonary embolism, phlebitis, lung diseases, osteoarthritis, osteoporosis, and a history of breast cancer. No mention of hypercholesterolemia, hyperlipidemia, or any other condition explicitly falling under \"Disorders of Lipid Metabolism\" is present, and no lipid-related medications are recorded. Therefore, based strictly on the provided evidence, a diagnosis of \"Disorders of Lipid Metabolism\" is not supported for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 497,
+    "completion_tokens": 118
+  }
+}

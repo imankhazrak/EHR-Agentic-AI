@@ -1,0 +1,12 @@
+{
+  "sample_id": 7118,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of hyperlipidemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is receiving \"Simvastatin,\" which is a medication used for managing hyperlipidemia. While the instructions caution against predicting a diagnosis based solely on statin use, the presence of the explicit hyperlipidemia diagnosis in the current record provides the necessary strong and explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The combination of the explicit diagnosis and the ongoing lipid-lowering management strengthens the prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3655,
+    "completion_tokens": 145
+  }
+}

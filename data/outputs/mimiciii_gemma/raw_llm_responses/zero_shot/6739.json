@@ -1,0 +1,12 @@
+{
+  "sample_id": 6739,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record details diagnoses related to a subdural hemorrhage, convulsions, HIV disease, and essential hypertension. There is no explicit evidence in the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder\u2014to support the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. The listed conditions are related to neurological and infectious/hypertensive issues, not an existing or actively managed lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 110
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9932,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the patient's next hospital visit, adhering strictly to the provided guidelines.\n\n1. **Explicit Lipid Disorder Evidence in Current Record:**\nThe patient's current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, which meets the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities and Risk Factors:**\nThe presence of other conditions in the current record further supports the metabolic context associated with lipid disorders:\n* **Obesity, unspecified:** Obesity is a major, well-established risk factor for hyperlipidemia.\n* **Hypertensive chronic kidney disease, unspecified:** Hypertension and CKD are frequently comorbid with dyslipidemia.\n* **Congestive heart failure, unspecified:** Cardiovascular disease is strongly linked to metabolic syndrome and dyslipidemia.\n\n3. **Medication Profile Relevance:**\nThe medication profile includes **\"Simvastatin\"**, which is a lipid-lowering agent (statin). While the guidelines caution against predicting a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1333,
+    "completion_tokens": 256
+  }
+}

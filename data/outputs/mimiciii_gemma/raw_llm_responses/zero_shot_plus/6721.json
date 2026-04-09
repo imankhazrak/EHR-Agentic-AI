@@ -1,0 +1,12 @@
+{
+  "sample_id": 6721,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder, rather than general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on acute and severe respiratory and cardiovascular events:\n* Mechanical complication of tracheostomy; Acute respiratory failure; Congestive heart failure, unspecified; Accidental puncture or laceration during a procedure, not elsewhere classified; Intestinal infection due to Clostridium difficile; Pulmonary collapse; Unspecified essential hypertension.\n* **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed in the current diagnoses.**\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Simvastatin**, which is a statin used for lipid management.\n* **However, according to the strict instructions, the mere use of statins is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.**\n* The other medications (Furosemide, Metoprolol, Quinapril, etc.) are primarily for managing heart failure, hypertension, and respiratory distress.\n\n3. **Analysis of Procedures Per",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1230,
+    "completion_tokens": 256
+  }
+}

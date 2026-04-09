@@ -1,0 +1,12 @@
+{
+  "sample_id": 10058,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence present in the CURRENT visit record.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are overwhelmingly related to neurological and post-injury complications:\n    * Localization-related (focal) (partial) epilepsy and epileptic syndromes with simple partial seizures, with intractable epilepsy.\n    * Late effect of intracranial injury without mention of skull fracture.\n    * Late effects of accidental fall.\n    * Long-term (current) use of other medications.\n    * Postprocedural fever.\n    * Dermatitis due to drugs and medicines taken internally.\n    * Penicillins causing adverse effects in therapeutic use.\n    * Postconcussion syndrome.\n    * **Crucially, there is no mention of any primary or secondary lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) in the current",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1072,
+    "completion_tokens": 256
+  }
+}

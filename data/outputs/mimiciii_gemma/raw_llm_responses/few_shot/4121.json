@@ -1,0 +1,12 @@
+{
+  "sample_id": 4121,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on the explicit presence of evidence for a lipid disorder in the current visit record, as per the strict instructions.\n\n1. **Analysis of Current Visit Record for Lipid Disorder Evidence:**\nThe current visit record details numerous severe, acute conditions:\n*   **Infectious/Respiratory:** Acute respiratory failure, Methicillin susceptible pneumonia due to Staphylococcus aureus, Obstructive chronic bronchitis with (acute) exacerbation, Bacteremia, Streptococcus infection.\n*   **Cardiovascular/Metabolic:** Unspecified essential hypertension, Ostium secundum type atrial septal defect, Ulcerative colitis, unspecified.\n*   **Procedural/Supportive:** Continuous invasive mechanical ventilation, Arterial catheterization, Enteral infusion.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that the following factors *alone* are **NOT** sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\":\n*   Use of statins (e.g., Atorvastatin).\n*   Cardiovascular diseases (e.g., CHF, AF, CABG, CAD).\n*   General risk factors (e.g., hypertension, diabetes).\n\n3. **Review of Medications and Diagnoses:**",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3755,
+    "completion_tokens": 256
+  }
+}

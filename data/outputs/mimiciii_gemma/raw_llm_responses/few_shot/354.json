@@ -1,0 +1,12 @@
+{
+  "sample_id": 354,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is heavily focused on managing severe respiratory and cardiovascular complications, specifically Obstructive Chronic Bronchitis with exacerbation, Pulmonary Collapse, Coronary Atherosclerosis, and Takotsubo Syndrome. The medication profile is dominated by bronchodilators (Fluticasone, Ipratropium, Albuterol, Levalbuterol), anti-hypertensives (Diltiazem, Lisinopril), anticoagulants (Heparin, Warfarin, Clopidogrel), and general supportive care.\n\nCrucially, the current record **lacks any explicit diagnosis or active management of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Coronary Atherosclerosis, this is a *complication* of vascular disease, not necessarily an explicit, coded diagnosis of a primary lipid disorder in this specific record. Furthermore, the medication list does not contain any explicit lipid-lowering agents like statins or fibrates that would serve as strong, explicit evidence for an ongoing, coded lipid disorder management plan, which is a requirement for a \"Yes\" prediction according to the instructions.\n\nTherefore, based strictly on",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3721,
+    "completion_tokens": 256
+  }
+}

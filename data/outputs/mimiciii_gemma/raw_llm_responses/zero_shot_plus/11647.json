@@ -1,0 +1,12 @@
+{
+  "sample_id": 11647,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications/comorbidities.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on gastrointestinal issues (Benign neoplasm of stomach, Other specified gastritis, Portal hypertension, Esophageal varices, Chronic gastric ulcer, Esophageal reflux, etc.), hematological issues (Acute posthemorrhagic anemia, Iron deficiency anemia), and systemic issues (Hypoxemia, Unspecified viral hepatitis C, Unspecified essential hypertension).\n2. **Medications:** The prescribed medications are primarily supportive and aimed at managing the acute and chronic conditions listed (e.g., Ondansetron for nausea, Octreotide Acetate for portal hypertension, Pantoprazole for reflux/ulcers, CeftriaXONE for infection, Thiamine/Multivitamin for deficiencies).\n3. **Pro",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1022,
+    "completion_tokens": 256
+  }
+}

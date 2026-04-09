@@ -1,0 +1,12 @@
+{
+  "sample_id": 4387,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly focused on severe, acute, and chronic liver disease (Acute and subacute necrosis of liver, Unspecified viral hepatitis C without hepatic coma, Alcoholic cirrhosis of liver, Hepatic encephalopathy), severe electrolyte imbalances (Hyposmolality and/or hyponatremia), and associated complications (Acquired coagulation factor deficiency, Other alteration of consciousness, etc.).\n2. **Medications:** The medication list is extensive and primarily supports the management of severe infection, liver failure, and electrolyte disturbances (e.g., Pamidronate, NS, PredniSONE, Tacrolimus, Rifaximin, Insulin, Furosemide, Lactulose, etc.). While the patient is receiving various medications, there is no explicit mention of lipid-lowering agents (like stat",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1233,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Infection and inflammatory reaction due to indwelling urinary catheter; Urinary tract infection, site not specified; Atrial flutter; Chronic airway obstruction, not elsewhere classified; Chronic diastolic heart failure; Congestive heart failure, unspecified; Atrial fibrillation; Other tracheostomy complications; Acute posthemorrhagic anemia; Other complications due to other vascular device, implant, and graft; Chronic respiratory failure; Pressure ulcer, lower back; Gout, unspecified; Personal history of malignant neoplasm of bronchus and lung; Unspecified essential hypertension; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Esophageal reflux; Gastrostomy status; Personal history of malignant neoplasm of prostate; Unspecified sleep apnea
+- Medications prescribed: Senna; Amiodarone HCl; Potassium Chloride; Sulfameth/Trimethoprim DS; Magnesium Sulfate; Dextrose 50%; Thrombin; Diltiazem; Docusate Sodium; Haloperidol; Ascorbic Acid; Multivitamins; Morphine Sulfate (Oral Soln.); Lansoprazole Oral Suspension; Zinc Sulfate; Insulin; Ipratropium Bromide MDI; Fluticasone Propionate 110mcg; Albuterol; Vitamin D; Azithromycin; D5W (EXCEL BAG); SW; D5W; NS; Phytonadione; Furosemide; Levofloxacin; Bisacodyl; Ipratropium Bromide Neb; Lansoprazole; Iso-Osmotic Dextrose; Ceftriaxone; Aspirin; Zolpidem Tartrate; Paroxetine HCl; Heparin Flush CVL  (100 units/ml); Fentanyl Patch; Warfarin
+- Procedures performed: Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Transfusion of other serum; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

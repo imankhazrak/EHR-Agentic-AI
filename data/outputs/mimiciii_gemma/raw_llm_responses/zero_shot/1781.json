@@ -1,0 +1,12 @@
+{
+  "sample_id": 1781,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record contains numerous serious diagnoses and ongoing medical management, including Closed fracture, Cardiac arrest, Anoxic brain damage, Chronic kidney disease, Coronary atherosclerosis, and Diabetes mellitus. The patient is receiving various medications, including Simvastatin, which is a lipid-lowering agent. However, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is *not* solely based on the use of lipid-lowering medications (like Simvastatin) or general risk factors. Since the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder, the prediction must be \"No\" according to the strict guidelines provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 976,
+    "completion_tokens": 173
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8707,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and non-lipid-related critical care issues. The primary diagnoses include: Observation following other accident, Acidosis, Acute alcoholic intoxication in alcoholism, unspecified, Epilepsy, unspecified, Pain in joint, shoulder region, Lumbago, Chronic airway obstruction, not elsewhere classified, Unspecified essential hypertension, Other diseases of lung, not elsewhere classified, Hepatitis C carrier, Dysthymic disorder, Esophageal reflux, Diaphragmatic hernia without mention of obstruction or gangrene, Old myocardial infarction, and Tobacco use disorder.\n\nCrucially, the record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). While the patient has Unspecified essential hypertension and an Old myocardial infarction, these are general cardiovascular risk factors and are explicitly excluded by the instructions from being sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medications prescribed (Propofol, Heparin, Calcium Gluconate, Lorazepam, etc.) are standard critical care supportive and anti-seizure/anti-acidotic agents and do not indicate active management of a primary lipid disorder (e.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3590,
+    "completion_tokens": 256
+  }
+}

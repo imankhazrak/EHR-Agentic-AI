@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), and explicitly exclude prediction based on general risk factors, statin use, or cardiovascular diseases alone.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to acute toxic effects of organophosphate and carbamate, acute respiratory failure, toxic encephalopathy, convulsions, pneumonitis, suicide/self-inflicted poisoning, tachycardia, unspecified essential hypertension, and depressive disorder. There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed.\n2. **Medications:** The prescribed medications include Lorazepam, D5W, NS, Pralidoxime Chloride, Heparin, Lansoprazole Oral Solution, Propofol, Atropine Sulfate, Acetaminophen, Metronidazole, Levofloxacin, SW, Magnesium Sulfate, Potassium Chloride",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 999,
+    "completion_tokens": 256
+  }
+}

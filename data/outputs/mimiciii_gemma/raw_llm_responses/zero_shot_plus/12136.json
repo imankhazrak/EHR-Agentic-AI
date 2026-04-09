@@ -1,0 +1,12 @@
+{
+  "sample_id": 12136,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of lipid-affecting medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to neurological complications (mechanical complication of nervous system device, epilepsy, etc.), pulmonary/venous thromboembolism (PE, VTE), psychiatric/neurological conditions (alcohol withdrawal, delirium, bipolar disorder, etc.), and malignancy. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the current diagnoses.\n2. **Medications:** The patient is prescribed various medications, including Metoprolol Tartrate, Warfarin, and Diltiazem Extended-Release. While some of these medications (like certain beta-blockers or anticoagulants) can be associated with cardiovascular risk factors that often accompany lipid disorders, the prescription itself does not constitute an explicit diagnosis of a lipid disorder. Furthermore, there are no explicit lipid-lowering agents (like statins or fibrates) listed in the current medication profile.\n3. **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 256
+  }
+}

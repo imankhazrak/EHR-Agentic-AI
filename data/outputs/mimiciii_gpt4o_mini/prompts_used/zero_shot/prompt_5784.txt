@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified intestinal obstruction; Atrial fibrillation; Chronic kidney disease, unspecified; Urinary complications, not elsewhere classified; Acute kidney failure with lesion of tubular necrosis; Other complications due to other vascular device, implant, and graft; Acute venous embolism and thrombosis of unspecified deep vessels of lower extremity; Chronic airway obstruction, not elsewhere classified; Acidosis; Pneumonia, organism unspecified; Dehydration; [ICD9-DX:2766]; Malignant neoplasm of corpus uteri, except isthmus; Long-term (current) use of anticoagulants; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Removal of other organ (partial) (total) causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Coronary atherosclerosis of native coronary artery; Old myocardial infarction; Personal history of malignant neoplasm of breast; Torsion of ovary, ovarian pedicle, or fallopian tube; Benign neoplasm of ovary; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Other and unspecified hyperlipidemia; Osteoporosis, unspecified; Iron deficiency anemia, unspecified; Constipation, unspecified; Unspecified transient mental disorder in conditions classified elsewhere
+- Medications prescribed: Aspirin; NS; Metoprolol; Olanzapine (Disintegrating Tablet); Acetaminophen; SW; Magnesium Sulfate; Haloperidol; Potassium Chloride; Warfarin; Olanzapine; NIFEdipine CR; Enoxaparin Sodium; Furosemide; Valsartan; CloniDINE; Nitroglycerin Patch; LR; Calcium Gluconate; Heparin Flush CVL  (100 units/ml); Dextrose 5%; Iso-Osmotic Sodium Chloride; Levofloxacin; Famotidine; D5W; Sodium Phosphate; Morphine Sulfate; Oxycodone-Acetaminophen; Nystatin Oral Suspension; HydrALAzine; Pantoprazole; Docusate Sodium; Neutra-Phos; OxycoDONE (Immediate Release); Sodium Chloride 0.9%  Flush; MetRONIDAZOLE (FLagyl); Heparin; Nitroglycerin SL; Atenolol; Phytonadione; Ibuprofen; HYDROmorphone (Dilaudid); Docusate Sodium (Liquid); Milk of Magnesia
+- Procedures performed: Intra-abdominal manipulation of large intestine; Other removal of both ovaries and tubes at same operative episode; Removal of impacted feces; Transfusion of packed cells
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

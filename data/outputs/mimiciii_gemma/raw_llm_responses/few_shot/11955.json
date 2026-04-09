@@ -1,0 +1,12 @@
+{
+  "sample_id": 11955,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on the strict criteria provided: we must find explicit evidence of an existing or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) in the current record, not just general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe, complex, and life-threatening conditions:\n    *   Malignancy (Secondary malignant neoplasm of bone and bone marrow, Secondary malignant neoplasm of pleura, Personal history of malignant neoplasm of breast).\n    *   Cardiopulmonary emergencies (Acute pericarditis, Cardiac tamponade, Malignant pleural effusion, Iatrogenic pneumothorax, Asthma exacerbation).\n    *   Metabolic/Infectious issues (Hyperpotassemia, Candidiasis of vulva and vagina).\n    *   General conditions (Unspecified essential hypertension, Depressive disorder, Lumbago).\n\n2. **Search for Explicit Lipid Disorder Evidence:** A thorough review of the diagnoses list reveals **no explicit mention** of hypercholesterolemia, hyperlipidemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n3",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3742,
+    "completion_tokens": 256
+  }
+}

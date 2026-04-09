@@ -1,0 +1,12 @@
+{
+  "sample_id": 2731,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or comorbidities.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record details severe acute and postoperative complications: Intestinal or peritoneal adhesions with obstruction, Perforation of intestine, Paralytic ileus, Pneumonia, Acute pancreatitis, and Unspecified hereditary and idiopathic peripheral neuropathy.\nThe prescribed medications list is empty.\nThe procedures performed are related to acute surgical and critical care management (e.g., Reopening of recent laparotomy site, Continuous invasive mechanical ventilation).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe current record contains no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\nThe existing diagnoses (e.g., Acute pancreatitis, Pneumonia, Adhesions) are not inherently indicative of a primary lipid disorder, nor do they constitute explicit evidence of one.\nThe patient's current state is dominated by severe gastrointestinal and infectious/inflammatory processes, not metabolic lipid dys",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 935,
+    "completion_tokens": 256
+  }
+}

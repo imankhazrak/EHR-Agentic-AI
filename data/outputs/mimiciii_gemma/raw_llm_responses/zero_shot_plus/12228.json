@@ -1,0 +1,12 @@
+{
+  "sample_id": 12228,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, etc.) to be coded in the next hospital visit. The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are overwhelmingly related to acute neurological events (Other closed skull fracture with subarachnoid, subdural, and extradural hemorrhage, with no loss of consciousness), acute psychiatric/delirium states (Adult physical abuse, Delirium due to conditions classified elsewhere, Assault by other specified means, Perpetrator of child and adult abuse, by other specified person, Headache), and acute physical symptoms. **There is no mention of any diagnosis related to lipid abnormalities, hypercholesterolemia, hyperlipidemia, or any other metabolic/lipid disorder.**\n\n2. **Medications Prescribed:** The medication profile is extensive and primarily targets acute symptoms: pain management (Morphine Sulfate, Acetaminophen-Caff-Butalbital, OxycoDONE), seizure control (LeVETiracetam,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 976,
+    "completion_tokens": 256
+  }
+}

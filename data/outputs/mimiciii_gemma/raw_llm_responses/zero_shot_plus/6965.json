@@ -1,0 +1,12 @@
+{
+  "sample_id": 6965,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly mandate that a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder, such as a documented hypercholesterolemia or hyperlipidemia, and not merely based on risk factors or the use of lipid-lowering medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on severe, acute cardiovascular events and associated complications: Subendocardial infarction, Congestive heart failure, Diastolic heart failure, Coronary atherosclerosis, Unspecified essential hypertension, and various cardiac dysrhythmias. While hypertension is a known risk factor for lipid disorders, it is not a diagnosis of a lipid disorder itself.\n2. **Medications:** The patient is prescribed **Atorvastatin**, which is a lipid-lowering medication (statin). The instructions explicitly state that the *use* of statins alone is NOT sufficient evidence to predict a future diagnosis of a lipid disorder. Other medications like Aspirin and Clopidogrel Bisulfate are",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 256
+  }
+}

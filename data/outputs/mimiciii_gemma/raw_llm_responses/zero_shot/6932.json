@@ -1,0 +1,12 @@
+{
+  "sample_id": 6932,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to severe, uncontrolled diabetes mellitus, multiple organ failure (including end-stage renal disease and acute kidney failure), hypertension, and associated complications (such as diabetic retinopathy, neuropathy, and anemia). While the patient is currently prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record does not contain any explicit diagnostic evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or diagnosed as a primary condition alongside the renal and diabetic crises. According to the strict guidelines, the presence of a medication (Atorvastatin) alone is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" if explicit diagnostic evidence is absent. Therefore, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 818,
+    "completion_tokens": 164
+  }
+}

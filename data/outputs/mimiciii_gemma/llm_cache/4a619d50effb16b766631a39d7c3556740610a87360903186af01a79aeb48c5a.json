@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this diagnosis will be explicitly coded in the patient's NEXT hospital visit, based on strong and explicit evidence, and not merely on risk factors or medication use.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient has several severe, acute diagnoses: Unspecified septicemia, Pneumonitis, UTI, C. difficile infection, Atrial fibrillation, Acidosis, Unspecified acquired hypothyroidism, and other chronic pulmonary heart diseases. These are primarily infectious, inflammatory, and acute metabolic/cardiac issues.\n2. **Medications:** The patient is receiving a wide array of medications for these acute conditions (e.g., NS, Norepinephrine, Ceftazidime, Vancomycin, Dobutamine, Levofloxacin, etc.). Crucially, the patient is prescribed **Atorvastatin**.\n3. **Instructions Compliance Check:** The instructions explicitly state that the use of statins (like Atorvastatin) alone is **NOT** sufficient evidence to predict",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1031,
+    "completion_tokens": 256
+  }
+}

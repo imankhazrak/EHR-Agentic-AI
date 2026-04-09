@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is a specific diagnosis: \"Disorders of Lipid Metabolism\" (CCS category 53), which includes hypercholesterolemia, hyperlipidemia, etc. The instructions strictly limit the prediction to explicit evidence of an existing or actively managed lipid disorder, excluding general risk factors, statin use, or cardiovascular disease alone.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\n    * **Diagnoses:** The current diagnoses list numerous severe conditions: Unspecified septicemia, Subendocardial infarction, Diabetes with ketoacidosis, Pneumonia, Metabolic encephalopathy, Acute kidney failure, Septic shock, Acute systolic heart failure, Unspecified essential hypertension, etc. While Diabetes and Hypertension are major risk factors for lipid disorders, they are not explicit diagnoses of lipid disorders themselves (like hypercholesterolemia).\n    * **Medications:** The patient is prescribed **Atorvastatin**. This is a lipid-lowering agent. However, according to the strict instructions, the *use* of a statin alone is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n    * **Procedures:** Central venous catheter placement and Arterial catheterization are procedural",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1177,
+    "completion_tokens": 256
+  }
+}

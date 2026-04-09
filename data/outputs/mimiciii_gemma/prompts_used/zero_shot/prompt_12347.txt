@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Streptococcal septicemia; Acute on chronic combined systolic and diastolic heart failure; Urinary tract infection, site not specified; Chronic lymphoid leukemia, without mention of having achieved remission; Other disorders of neurohypophysis; Chronic pulmonary embolism; Hemorrhage of gastrointestinal tract, unspecified; Other ascites; Sepsis; Congestive heart failure, unspecified; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Atrial fibrillation; Other emphysema; Long-term (current) use of anticoagulants; Essential and other specified forms of tremor; Antidepressants causing adverse effects in therapeutic use; Other and unspecified hyperlipidemia; Other chronic pulmonary heart diseases; Unspecified essential hypertension; Depressive disorder, not elsewhere classified; Tobacco use disorder; Abdominal aneurysm without mention of rupture; Other diseases of lung, not elsewhere classified; Diarrhea
+- Medications prescribed: 0.9% Sodium Chloride; Diltiazem; Furosemide; Sodium Chloride 0.9%  Flush; OxycoDONE (Immediate Release); Magnesium Sulfate; Potassium Chloride; Lidocaine 5% Patch; Senna; Docusate Sodium; Magnesium Oxide; Bisacodyl; Ciprofloxacin HCl; SW; Warfarin; Simethicone; Ampicillin Sodium; 0.9% Sodium Chloride (Mini Bag Plus); Phenazopyridine; Heparin Flush (10 units/ml); Fentanyl Citrate; 5% Dextrose; Phytonadione; Midazolam; Ciprofloxacin IV; Acetaminophen; Lorazepam; Oxycodone-Acetaminophen; Morphine Sulfate; Golytely; Lidocaine Jelly 2% (Urojet); Miconazole Powder 2%; Metoprolol Tartrate; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Vancomycin; Xopenex Neb; Iso-Osmotic Dextrose; Daptomycin; Piperacillin-Tazobactam; Aspirin; Multivitamins; Zolpidem Tartrate; Nystatin Oral Suspension; Tiotropium Bromide; D5W; Linezolid; CefePIME; Meropenem; Ondansetron
+- Procedures performed: Other endoscopy of small intestine; Closed [endoscopic] biopsy of large intestine; Diagnostic ultrasound of heart; Injection or infusion of oxazolidinone class of antibiotics; Percutaneous abdominal drainage; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

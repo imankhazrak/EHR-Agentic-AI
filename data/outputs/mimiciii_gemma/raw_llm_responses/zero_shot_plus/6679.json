@@ -1,0 +1,12 @@
+{
+  "sample_id": 6679,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly rely on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly focused on severe cardiovascular and pulmonary issues: Mitral valve disorders, Cardiac complications, Atrial fibrillation, Congestive heart failure, Pulmonary collapse, and related surgical/procedural complications. There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed in the current record.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list is extensive and covers numerous areas: anticoagulation (Warfarin, Aspirin), cardiac management (Metoprolol, Nitroglycerin, Captopril), fluid/electrolyte balance (Furosemide, Potassium Chloride), and various supportive care (Hydromorphone, Pantoprazole, etc.). While the patient is on **Insulin** (which is relevant to glucose metabolism, a closely related metabolic area), there is **no explicit prescription of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1167,
+    "completion_tokens": 256
+  }
+}

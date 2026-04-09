@@ -1,0 +1,12 @@
+{
+  "sample_id": 6077,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses made are related to severe postoperative complications, including a persistent postoperative fistula, subdural hemorrhage, congestive heart failure, atrial fibrillation, hematoma, and gastrostomy status. While the patient has several cardiovascular comorbidities (CHF, AF), these alone are insufficient to meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism,\" as per the instructions. Furthermore, the medication profile is empty, meaning there is no explicit management of a lipid disorder (e.g., statins or fibrates) to suggest a future coding of this diagnosis. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3543,
+    "completion_tokens": 155
+  }
+}

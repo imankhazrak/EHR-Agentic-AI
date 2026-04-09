@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record contains explicit and strong evidence of a lipid disorder, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\nThe most direct and explicit evidence is the diagnosis made in the current visit record: **Pure hypercholesterolemia**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary lipid abnormality.\n\nFurthermore, the patient's medication profile includes **Simvastatin**, which is a medication specifically prescribed for managing hypercholesterolemia and lipid abnormalities. While the presence of statins alone is not sufficient for a \"Yes\" prediction, the combination of the explicit diagnosis *and* the specific lipid-lowering medication provides overwhelming evidence that the condition is actively managed and will be coded in the next visit.\n\nAdditionally, the patient has **Fish Oil (Omega 3)** prescribed, which is also used in the management of cardiovascular and lipid health.\n\nThe presence of **Pure hypercholesterolemia** is the decisive factor, as it is an explicit diagnosis of a lipid disorder. This explicit diagnosis overrides the general risk factors (like",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1103,
+    "completion_tokens": 256
+  }
+}

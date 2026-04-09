@@ -1,0 +1,12 @@
+{
+  "sample_id": 6916,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates several significant comorbidities, including Congestive heart failure, Chronic airway obstruction, Coronary atherosclerosis, Diabetes mellitus, and Unspecified essential hypertension. These conditions are well-known risk factors for the development of lipid disorders. However, the strict instructions explicitly state that the prediction must be based on *explicit evidence* of an existing or actively managed lipid disorder, not merely on the presence of risk factors. The current record does not contain any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the patient is not prescribed any medications specifically for lipid management (such as statins or fibrates). Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3456,
+    "completion_tokens": 190
+  }
+}

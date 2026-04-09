@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which strongly indicates that this condition will be maintained and likely to be diagnosed in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This is a direct and explicit evidence of a lipid disorder.\n\n2. **Relevance to Future Diagnosis:** Because a specific lipid disorder (hypercholesterolemia) is already documented, there is strong and explicit evidence that this condition is an active part of the patient's clinical picture and will be maintained and likely to be coded in the next hospital visit, fulfilling the criteria for a \"Yes\" prediction.\n\n3. **Exclusion of Insufficient Evidence:** The prediction is not based solely on the presence of other risk factors such as Acute on chronic systolic heart failure, Diabetes with neurological manifestations, or Hypertensive chronic kidney disease. Instead, it is based on the direct, documented diagnosis of hypercholesterolemia.\n\n4. **Supporting Context (Not Primary Basis):** While the patient has numerous comorbidities (e.g., CHF, Diabetes, Hypertension), these factors alone would not warrant",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1355,
+    "completion_tokens": 256
+  }
+}

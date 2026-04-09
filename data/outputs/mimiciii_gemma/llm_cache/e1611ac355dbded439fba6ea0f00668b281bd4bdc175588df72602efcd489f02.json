@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with a form of hypercholesterolemia, which is a direct manifestation of a lipid disorder, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit. Furthermore, the patient is also prescribed \"Atorvastatin,\" a medication used for managing hypercholesterolemia, which supports the ongoing management of a lipid abnormality. The presence of this explicit diagnosis overrides the exclusion criteria, as the rule states that explicit lipid disorder evidence is required for a \"Yes\" prediction.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3821,
+    "completion_tokens": 185
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1775,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management for Diabetes, Congestive Heart Failure, various valve disorders, anemia, and other conditions. While the patient is prescribed Atorvastatin, which is used to manage dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The prescription of Atorvastatin alone, along with the presence of general risk factors (Diabetes, CHF), is insufficient evidence to explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, according to the strict guidelines provided.\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record details diagnoses and management for Diabetes, Congestive Heart Failure, various valve disorders, anemia, and other conditions. Although the patient is prescribed Atorvastatin, which is a medication for dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. Based on the strict guidelines, the prescription of Atorvastatin alone, without an explicit diagnosis of a lipid disorder, is not sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 655,
+    "completion_tokens": 256
+  }
+}

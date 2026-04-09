@@ -1,0 +1,12 @@
+{
+  "sample_id": 307,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details complex management for Cirrhosis, Chronic Hepatitis C, Delirium, and various associated complications requiring immunosuppressive and antiviral therapies (e.g., Tacrolimus, Mycophenolate Mofetil, Heparin). While the patient has complex liver disease, there is no explicit evidence in the diagnoses or ongoing management that points specifically to a primary, active lipid disorder such as hypercholesterolemia or hyperlipidemia that is being actively managed or is the focus of the current treatment plan. The medications prescribed (e.g., Heparin, Tacrolimus) are related to the underlying liver/immune status, not specifically to a lipid abnormality. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 752,
+    "completion_tokens": 163
+  }
+}

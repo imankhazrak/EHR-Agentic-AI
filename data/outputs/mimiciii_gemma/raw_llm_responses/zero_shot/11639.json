@@ -1,0 +1,12 @@
+{
+  "sample_id": 11639,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and life-threatening respiratory and infectious conditions (e.g., Mechanical complication of tracheostomy, Acute and chronic respiratory failure, Ventilator associated pneumonia, Methicillin resistant pneumonia, Bacteremia, etc.). While the patient has several co-morbidities listed, including Diabetes with renal manifestations, Morbid obesity, Gout, and Hypercalcemia, there is no explicit evidence in the current record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific diagnosis of a lipid disorder\u2014that strongly and explicitly supports the coding of \"Disorders of Lipid Metabolism\" in the next hospital visit, despite the presence of general risk factors. The listed conditions are primarily related to infectious, respiratory, and renal complications.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1042,
+    "completion_tokens": 165
+  }
+}

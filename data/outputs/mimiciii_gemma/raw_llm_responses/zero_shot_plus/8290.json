@@ -1,0 +1,12 @@
+{
+  "sample_id": 8290,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly related to acute gastrointestinal issues (Foreign body in intestine and colon, Duodenitis, Other specified gastritis), psychiatric/substance abuse issues (Suicide, Cocaine abuse, Borderline personality disorder, etc.), and general medical conditions (Unspecified essential hypertension, Tobacco use disorder).\n2. **Medications:** The prescribed medications are primarily for acute management of GI distress (Pantoprazole, Docusate Sodium, Senna, Bisacodyl), psychiatric stabilization (Propofol, Lorazepam, Quetiapine Fumarate, Olanzapine, Divalproex Sodium), and acute pain/hemodynamic support (Ketorolac, Morphine Sulfate, Heparin).\n3. **Procedures:** The procedures performed are focused on acute GI management (Other endoscopy",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11532,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and chronic non-lipid-related conditions, including severe infections (Pseudomonas, cellulitis, osteomyelitis), cardiovascular issues (Atrial Fibrillation, Atherosclerosis, Arterial Embolism), severe metabolic issues (Diabetes, Morbid Obesity), and complex inflammatory/surgical complications. While the patient is prescribed Atorvastatin, which indicates a history of dyslipidemia management, the record lacks explicit, current evidence of a *diagnosed* lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that is actively driving the current management plan, separate from the general risk factors associated with diabetes and obesity. Therefore, based strictly on the rule requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1194,
+    "completion_tokens": 163
+  }
+}

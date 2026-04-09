@@ -1,0 +1,12 @@
+{
+  "sample_id": 6914,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record is extensive, detailing numerous severe and complex comorbidities, including Hypertensive chronic kidney disease (Stage V/ESRD), Mitral valve disorders, complications of kidney transplantation, severe infections (UTI, Acidosis), metabolic derangements (Acute kidney failure, Acidosis), and multiple chronic conditions (Diabetes, Gout, Peripheral vascular disease). The patient is receiving intensive care and complex medication regimens.\n\nHowever, based on the strict criteria provided for predicting the *coding* of a diagnosis in the *next* visit, there is no explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) within the current diagnoses or procedures.\n\nThe patient's diagnoses include several risk factors for dyslipidemia, such as Diabetes Mellitus and Peripheral Vascular Disease, and the patient is receiving medications that are often co-prescribed in high-risk patients (e.g., Metoprolol, Aspirin, Clopidogrel Bisulfate). However, according to the instructions, the mere use of these risk factors or co-prescribed medications (like statins, which are not explicitly listed in the current medications, though they are common) is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3868,
+    "completion_tokens": 256
+  }
+}

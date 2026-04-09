@@ -1,0 +1,12 @@
+{
+  "sample_id": 11363,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or the use of specific medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on neurological issues (Poisoning by benzodiazepine-based tranquilizers, Drug-induced delirium, Other persistent mental disorders), renal failure (End stage renal disease, Hypertensive chronic kidney disease, Kidney replaced by transplant), and pulmonary issues (Chronic obstructive asthma, Other chronic pulmonary heart diseases). While **Diabetes mellitus without mention of complication, type II or unspecified type** is present, this is a risk factor, not an explicit diagnosis of a lipid disorder itself. **Myelodysplastic syndrome** is also present, which can be associated with various metabolic issues.\n2. **Medications:** The patient is prescribed **Simvastatin** and **Albuterol Inhaler**. Simvastatin is a statin, which is used",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1025,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2721,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on the explicit presence of a lipid disorder diagnosis or active, explicit management of such a disorder in the current visit record, as per the strict guidelines provided.\n\n1. **Review of Current Visit Record for Lipid Disorder Evidence:**\nThe current visit record is dominated by severe, acute critical care diagnoses:\n*   **Infectious/Inflammatory:** Unspecified septicemia, Septic shock, Methicillin susceptible pneumonia, Severe sepsis, Infection with microorganisms resistant to penicillins.\n*   **Metabolic/Renal:** Acute kidney failure, Hyperpotassemia, Hyperosmolality and/or hypernatremia, Diabetes with renal manifestations, Hypertensive chronic kidney disease.\n*   **Cardiopulmonary:** Congestive heart failure, Pneumonitis, Septic shock.\n*   **Neurological:** Paranoid type schizophrenia, unspecified.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Atorvastatin**. This is a strong indicator of *risk management* for dyslipidemia, as statins are prescribed to lower cholesterol. However, the strict instructions explicitly state that the *use of statins alone* is **NOT sufficient** to predict a future diagnosis of \"Disorders",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3893,
+    "completion_tokens": 256
+  }
+}

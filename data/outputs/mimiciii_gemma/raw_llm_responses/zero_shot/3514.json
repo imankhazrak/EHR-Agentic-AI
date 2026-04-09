@@ -1,0 +1,12 @@
+{
+  "sample_id": 3514,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly lists diagnoses related to Cholangitis, Acute pancreatitis, Calculus of bile duct, Acidosis, and Unspecified essential hypertension. While the patient has undergone ERCP and biliary procedures, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific evidence of a primary lipid disorder (such as hyperlipoproteinemia or lipid metabolism disorder) in the listed diagnoses or procedures. Therefore, based strictly on the provided evidence, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 537,
+    "completion_tokens": 122
+  }
+}

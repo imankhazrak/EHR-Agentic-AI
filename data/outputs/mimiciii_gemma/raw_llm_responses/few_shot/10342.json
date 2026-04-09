@@ -1,0 +1,12 @@
+{
+  "sample_id": 10342,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-metabolic conditions. The primary diagnoses include multiple closed fractures (fibula/tibia, rib), severe alcohol dependence/withdrawal, acute posthemorrhagic anemia, and acute respiratory/cardiovascular complications (pleural effusion, carotid occlusion, hypertension).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is on medications like Allopurinol (used for gout, which is a separate metabolic issue) and is hypertensive, these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication profile includes various supportive and anti-infective agents, but there is no clear evidence of ongoing, active management specifically for a primary lipid abnormality (e.g., a documented hyperlipidemia requiring specific lipid-lowering therapy beyond general supportive care).\n\nTherefore, based on the strict criteria that require explicit evidence of an existing or actively managed lipid disorder, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3826,
+    "completion_tokens": 241
+  }
+}

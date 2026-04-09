@@ -1,0 +1,12 @@
+{
+  "sample_id": 82,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53). Therefore, there is strong and explicit evidence that this condition is present and likely to be diagnosed in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nWhile the current visit record includes the diagnosis of \"Other and unspecified hyperlipidemia,\" the provided instructions for the prediction are extremely strict and state that the prediction should only be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present AND likely to be diagnosed, while simultaneously stating that factors like \"General risk factors (e.g., hypertension, diabetes)\" are NOT sufficient.\n\nHowever, the presence of the explicit diagnosis \"Other and unspecified hyperlipidemia\" *is* strong and explicit evidence of a lipid disorder. Therefore, based on the explicit diagnosis, the correct prediction should be \"Yes,\" not \"No.\" The reasoning provided in the prompt's example is contradictory to the evidence presented.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis \"Other and unspecified hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 706,
+    "completion_tokens": 256
+  }
+}

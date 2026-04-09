@@ -1,0 +1,12 @@
+{
+  "sample_id": 7267,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on whether explicit evidence of an existing or actively managed lipid disorder is present in the current visit record, rather than general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are heavily focused on substance use, withdrawal, and associated psychiatric/neurological conditions: Alcohol withdrawal, Acidosis, Unspecified episodic mood disorder, Chronic hepatitis C, Acute alcoholic intoxication, Drug abuse, Hypoxemia, PTSD, Antisocial personality disorder, Migraine, Lumbago, Epilepsy, and Tobacco use disorder.\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder** listed in the diagnoses made.\n\n2. **Analysis of Medications Prescribed:**\nThe prescribed medications include supportive care (0.45% Sodium Chloride, 0.9% Sodium Chloride), anti-convulsants (Phenobarbital, Diazepam), mood stabilizers (Amitriptyline, Mirtazapine, Olanzapine",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1001,
+    "completion_tokens": 256
+  }
+}

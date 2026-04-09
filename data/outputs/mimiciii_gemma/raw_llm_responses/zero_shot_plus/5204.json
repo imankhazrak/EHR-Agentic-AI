@@ -1,0 +1,12 @@
+{
+  "sample_id": 5204,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has diagnoses of Occlusion and stenosis of vertebral artery, Diabetes mellitus type II (unspecified/not controlled), Unspecified essential hypertension, and Personal history of malignant neoplasm of prostate.\n2. **Medications:** None were recorded.\n3. **Procedures:** The patient underwent Angioplasty, Stent insertion, and Arteriography of cerebral arteries.\n\nWe must weigh the presence of comorbidities against the strict evidence requirement:\n*   **Comorbidities:** The patient has established risk factors for metabolic and cardiovascular disease, including Diabetes Mellitus and Unspecified essential hypertension. These conditions are known to be strongly associated with lipid abnormalities.\n*   **Evidence Check:** Despite the presence of these significant comorbidities (Diabetes and Hypertension), the current visit record **does not explicitly state",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 906,
+    "completion_tokens": 256
+  }
+}

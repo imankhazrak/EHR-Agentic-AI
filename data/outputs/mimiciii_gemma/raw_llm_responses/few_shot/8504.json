@@ -1,0 +1,12 @@
+{
+  "sample_id": 8504,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) in the diagnoses made. The diagnoses listed are: Other malignant lymphomas, unspecified site, extranodal and solid organ sites; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified acquired hypothyroidism; Chronic kidney disease, unspecified; and other related conditions (Aortocoronary bypass status, Percutaneous transluminal coronary angioplasty status, Cardiac pacemaker in situ). While the patient has several significant comorbidities, including Diabetes Mellitus and a history of cardiovascular procedures (Aortocoronary bypass status, Percutaneous transluminal coronary angioplasty status), these factors alone, according to the strict instructions, are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The medication profile includes various supportive and cardiovascular medications (Metoprolol Tartrate, Insulin, etc.), but there is no explicit mention of lipid-lowering agents like statins or fibrates in the prescribed list that would strongly suggest an actively managed lipid disorder requiring a future diagnosis. Therefore, based on the strict evidence-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3687,
+    "completion_tokens": 256
+  }
+}

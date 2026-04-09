@@ -1,0 +1,12 @@
+{
+  "sample_id": 1706,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and treatments related to severe infections (septicemia, acute respiratory failure, acute kidney failure), cardiac issues (CHF, Atrial fibrillation), and other acute conditions (anemia, pleural effusion, diverticulitis). While the patient is receiving medications like Insulin and Multivitamin, and has a history of cardiac issues, there is no explicit evidence within the provided diagnoses or ongoing management that points specifically to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed, such as Furosemide, Metoprolol, and Insulin, are related to the primary acute and chronic conditions listed, not specifically to a lipid disorder. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 167
+  }
+}

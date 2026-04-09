@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis \"Pure hypercholesterolemia.\" This is a direct and explicit piece of evidence confirming the presence of a lipid disorder. According to the strict rules, the presence of an explicit lipid disorder diagnosis is sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. The other listed conditions (e.g., Subendocardial infarction, Congestive heart failure, Diabetes mellitus, etc.) are general risk factors or complications, but the explicit diagnosis of hypercholesterolemia meets the required threshold.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 131
+  }
+}

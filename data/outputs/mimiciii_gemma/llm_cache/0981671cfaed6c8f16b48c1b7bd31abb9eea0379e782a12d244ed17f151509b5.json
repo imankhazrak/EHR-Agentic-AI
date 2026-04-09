@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly focused on severe, acute, and subacute organ failure and severe liver disease: Acute and subacute necrosis of liver, Cirrhosis of liver without mention of alcohol, Acquired coagulation factor deficiency, Hemorrhage complicating a procedure, Chronic hepatitis C with hepatic coma, Acute kidney failure, Hyposmolality and/or hyponatremia, Bacteremia, Hemoperitoneum.\n2. **Medications:** The medication profile is extensive and primarily directed at managing severe infections, organ failure, and liver complications: Cyclosporine Modified (Neoral), Unasyn, Furosemide, Prednisone, Valganciclovir HCl, Albumin 25%, Heparin, Fluconazole, Sulfameth/Trimethoprim SS, Insulin",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1231,
+    "completion_tokens": 256
+  }
+}

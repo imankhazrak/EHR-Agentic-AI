@@ -1,0 +1,12 @@
+{
+  "sample_id": 217,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of lipid-affecting medications.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Infection and inflammatory reaction due to other internal orthopedic device, implant, and graft; Pyogenic arthritis, pelvic region and thigh; Methicillin susceptible Staphylococcus aureus septicemia; Unspecified pleural effusion; Disseminated candidiasis; Infection and inflammatory reaction due to other vascular device, implant, and graft; Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled; Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled; Complications of transplanted kidney) **does not contain any explicit diagnosis of a primary lipid disorder** (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities, including **Diabetes Mellitus Type I** (both neurological and ophthalmic manifestations) and **Complications of transplanted kidney**. Diabetes is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1253,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3580,
+  "mode": "zero_shot",
+  "model": "google/gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses related to cardiac issues (Congestive heart failure, Atrial fibrillation, Mitral valve disorders, Coronary atherosclerosis, Cardiac pacemaker) and general health conditions (Diabetes mellitus, Hematoma complicating a procedure, Personal history of malignant neoplasm). While the patient is high-risk due to these conditions, there is no explicit evidence in the current record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis\u2014to strongly and explicitly predict that \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, according to the strict criteria provided. The presence of cardiac risk factors alone is insufficient for a \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 511,
+    "completion_tokens": 149
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7245,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or related conditions.\n\nAnalysis of the Current Visit Record:\nThe patient's current visit record is dominated by severe, acute, and life-threatening neurological and infectious conditions:\n1. **Neurological Trauma:** Cerebellar or brain stem laceration with open intracranial wound, Open fracture of orbital floor (blow-out), Ocular laceration with prolapse or exposure of intraocular tissue, Cerebrospinal fluid rhinorrhea.\n2. **Infectious/Inflammatory Comorbidities:** Bacteremia, Disseminated candidiasis, Infection and inflammatory reaction due to other vascular device, implant, and graft, Phlebitis and thrombophlebitis of other sites.\n3. **Other Severe Conditions:** Suicide and self-inflicted injury by other and unspecified firearm, Infection and inflammatory reaction due to other vascular device, implant, and",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 988,
+    "completion_tokens": 256
+  }
+}

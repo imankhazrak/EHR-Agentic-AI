@@ -1,0 +1,12 @@
+{
+  "sample_id": 3913,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is prescribed Simvastatin, which is a medication used for lipid management, the presence of a statin alone is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's current diagnoses are related to Giant cell arteritis, Malignant neoplasm of bronchus and lung, Central retinal artery occlusion, Mononeuritis of lower limb, Unspecified essential hypertension, and Cervical spondylosis, none of which explicitly confirm an existing lipid disorder. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3557,
+    "completion_tokens": 190
+  }
+}

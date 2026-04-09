@@ -1,0 +1,12 @@
+{
+  "sample_id": 11577,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly requires evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The strict rule mandates that a \"Yes\" answer can only be given if there is strong and explicit evidence of an existing or actively managed lipid disorder.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are centered around severe acute and chronic organ failure:\n- Acute respiratory failure and Acute edema of lung, unspecified: Indicate severe cardiopulmonary compromise.\n- End stage renal disease and Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Renal dialysis status: Indicate severe, chronic renal failure requiring dialysis.\n- Hyperpotassemia: Indicates severe electrolyte imbalance.\n\nMedications and Procedures:\nThe prescribed medications (Sodium Chloride 0.9% Flush, CefTAZidime, 0.9% Sodium Chloride (Mini Bag Plus), Amlodipine, Fentanyl Citrate, Labetalol, Heparin, Docusate Sodium (Liquid), Propofol) and procedures (Continuous invasive mechanical ventilation, Insertion of endotr",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 943,
+    "completion_tokens": 256
+  }
+}

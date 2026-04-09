@@ -1,0 +1,12 @@
+{
+  "sample_id": 2505,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record explicitly lists \"Other and unspecified hyperlipidemia\" under diagnoses. However, the strict rules provided state that the prediction should NOT be based on general risk factors or the mere presence of hyperlipidemia/hypercholesterolemia, but rather on *explicit* evidence of an existing or actively managed lipid disorder that warrants a future diagnosis. Since the provided rules explicitly exclude basing the prediction on \"general risk factors\" or the \"mere presence of hyperlipidemia/hypercholesterolemia,\" and the current record only lists this as a general diagnosis without further explicit management or evidence that *forces* the future coding of a specific \"Disorders of Lipid Metabolism\" diagnosis beyond the general listing, the prediction must be \"No\" according to the strict constraints.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 989,
+    "completion_tokens": 161
+  }
+}

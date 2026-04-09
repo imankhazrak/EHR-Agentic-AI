@@ -1,0 +1,12 @@
+{
+  "sample_id": 8911,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe cardiovascular disease (Paroxysmal ventricular tachycardia, Chronic systolic heart failure, Coronary atherosclerosis, Atrial fibrillation, etc.), severe systemic illness (Chronic systolic heart failure, Aortocoronary bypass status, Old myocardial infarction, etc.), and general systemic conditions (Unspecified essential hypertension, Dysthymic disorder, Legal blindness). The medication profile includes Simvastatin, which is a lipid-lowering agent (a statin).\n\nHowever, according to the strict instructions provided, the mere prescription of a statin (Simvastatin) or the presence of cardiovascular risk factors (hypertension, heart failure) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nThe current record lacks explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that would warrant a future diagnosis coding, even though the patient is on lipid-management medication. Therefore, based on the strict criteria, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3665,
+    "completion_tokens": 241
+  }
+}

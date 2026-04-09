@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Pneumococcal septicemia [Streptococcus pneumoniae septicemia]; Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia]; Septic shock; Acute kidney failure, unspecified; Paralytic ileus; Unspecified protein-calorie malnutrition; Aspergillosis; Herpes simplex with other specified complications; Other pulmonary insufficiency, not elsewhere classified; Hyperosmolality and/or hypernatremia; Acute diastolic heart failure; Severe sepsis; Chronic airway obstruction, not elsewhere classified; Anemia, unspecified; Unspecified glaucoma; Acute suppurative otitis media with spontaneous rupture of eardrum; Congestive heart failure, unspecified
+- Medications prescribed: Heparin; Albuterol 0.083% Neb Soln; Docusate Sodium; Acetylcysteine 20%; Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; D5W; Diazepam; Voriconazole; Alteplase (Catheter Clearance); Vancomycin; NS; Lactulose; Chlorhexidine Gluconate 0.12% Oral Rinse; Phenylephrine; Potassium Chloride; Furosemide; Famotidine; Acyclovir; Fentanyl Patch; Insulin; Lorazepam; PNEUMOcoccal Vac Polyvalent; Calcium Gluconate; SW; Bisacodyl; Senna; Influenza Virus Vaccine; AcetaZOLamide; AcetaZOLamide Sodium; Midazolam; Fentanyl Citrate; Magnesium Sulfate; Ipratropium Bromide MDI; Albuterol; LR; CeftriaXONE; Heparin Flush CVL  (100 units/ml); Penicillin G Potassium; Dextrose 5%; Levofloxacin; Acetaminophen (Liquid); Miconazole Powder 2%; Metoclopramide; Ciprofloxacin 0.3% Ophth Soln; Dexamethasone Ophthalmic Soln 0.1%; Ipratropium Bromide Neb; MetRONIDAZOLE (FLagyl); Iso-Osmotic Sodium Chloride; Latanoprost 0.005% Ophth. Soln.
+- Procedures performed: Temporary tracheostomy; Percutaneous [endoscopic] gastrostomy [PEG]; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Closed [endoscopic] biopsy of bronchus; Enteral infusion of concentrated nutritional substances; Transfusion of packed cells; Venous catheterization, not elsewhere classified; Arterial catheterization
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

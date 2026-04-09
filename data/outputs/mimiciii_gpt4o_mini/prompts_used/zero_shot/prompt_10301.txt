@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Acute myocardial infarction of other inferior wall, initial episode of care; Cardiogenic shock; Hemorrhage complicating a procedure; Chronic vascular insufficiency of intestine; [ICD9-DX:9974]; Intestinal or peritoneal adhesions with obstruction (postoperative) (postinfection); Coronary atherosclerosis of native coronary artery; Chronic cholecystitis; Unspecified essential hypertension; Pressure ulcer, heel; Pressure ulcer, other site; Pressure ulcer, unstageable
+- Medications prescribed: Iso-Osmotic Dextrose; D5W; Syringe; 5% Dextrose; Phenylephrine; NS; 0.9% Sodium Chloride; Morphine Sulfate; Docusate Sodium; Heparin (IABP); Norepinephrine; Metoclopramide; Chlorhexidine Gluconate 0.12% Oral Rinse; Docusate Sodium (Liquid); Artificial Tears; Milk of Magnesia; Acetaminophen; Dextrose 50%; SW; Sterile Water; Potassium Chloride; Insulin Human Regular; Magnesium Sulfate; Calcium Gluconate; Midazolam; Furosemide; HydrALAzine; Metoprolol Tartrate; Aspirin EC; Milrinone; Vecuronium Bromide; Sodium Bicarbonate; Piperacillin-Tazobactam; Fentanyl Citrate; Vancomycin; Aspirin; DOPamine; D10W; Heparin Sodium; Albumin 25% (12.5g / 50mL); Albumin 5% (12.5g / 250mL); Ranitidine; Oxycodone-Acetaminophen; Neostigmine; Glycopyrrolate; Propofol; Iso-Osmotic Sodium Chloride; Fluconazole; Nitroglycerin; Soln
+- Procedures performed: Insertion of temporary non-implantable extracorporeal circulatory assist device; Percutaneous transluminal coronary angioplasty [PTCA]; Implant of pulsation balloon; Incision of mediastinum; Removal of external heart assist system(s) or device(s); Other partial resection of small intestine; Other small-to-large intestinal anastomosis; Cholecystectomy; Other lysis of peritoneal adhesions; Procedure on single vessel; Left heart cardiac catheterization; Coronary arteriography using two catheters; Other gastrostomy; Enteral infusion of concentrated nutritional substances; Parenteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11304,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like obesity or diabetes.\n\n1. **Analysis of Comorbid Conditions (Risk Factors):**\nThe patient presents with several conditions strongly associated with lipid disorders:\n*   **Morbid Obesity:** This is a major risk factor for dyslipidemia.\n*   **Diabetes Mellitus (Type II, uncontrolled):** Diabetes is a significant comorbidity linked to metabolic syndrome and dyslipidemia.\n*   **Hypertensive Chronic Kidney Disease:** Hypertension is a known risk factor for cardiovascular and metabolic issues.\n*   **Coronary Atherosclerosis:** This indicates underlying cardiovascular disease, which often coexists with dyslipidemia.\n\n2. **Analysis of Medication Profile (Management):**\nThe patient is prescribed several medications relevant to metabolic and cardiovascular health:\n*   **Pioglitazone:** This is a thiazolidinedione, used for diabetes management, and is associated with metabolic changes.\n*   **Pravastatin:** This is a statin, explicitly used for lowering cholesterol.\n*   **Heparin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1516,
+    "completion_tokens": 256
+  }
+}

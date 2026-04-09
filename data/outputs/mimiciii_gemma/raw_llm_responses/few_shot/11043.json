@@ -1,0 +1,12 @@
+{
+  "sample_id": 11043,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), encompassing hyperlipidemia. Furthermore, the patient is receiving \"Gemfibrozil,\" which is a known lipid-lowering agent (a fibrate), indicating active management of a lipid abnormality. While the patient has numerous other serious comorbidities (Diabetes, CHF, etc.), the presence of the explicit diagnosis of hyperlipidemia and the use of a fibrate provides the strong and explicit evidence required by the instructions to predict a future coding of this diagnosis. Therefore, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3732,
+    "completion_tokens": 168
+  }
+}

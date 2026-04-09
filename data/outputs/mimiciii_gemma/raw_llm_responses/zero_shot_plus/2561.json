@@ -1,0 +1,12 @@
+{
+  "sample_id": 2561,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a lipid disorder diagnosis), not just general risk factors or the use of related medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are dominated by severe, acute, and chronic conditions: Acute respiratory failure, Congestive heart failure, Hypertensive chronic kidney disease, Acidosis, Other convulsions, End stage renal disease, Anemia, and various other systemic/neurological issues. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.**\n2. **Medications:** The patient is prescribed several medications, including **Aspirin** and **Lisinopril**, which are used for cardiovascular and renal protection, respectively. The patient is also on **Isosorbide Dinitrate** and **Met",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 990,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6307,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to renal failure, cardiovascular disease, and infection. The diagnoses include Acute kidney failure, Hypertensive chronic kidney disease stage V, Congestive heart failure, Bacteremia, and Gout. While these conditions (especially hypertension and CHF) are known risk factors for dyslipidemia, the current record **does not contain an explicit diagnosis** of a lipid disorder (such as hypercholesterolemia or hyperlipidemia). Furthermore, the patient's medication profile is recorded as \"None recorded,\" meaning there is no explicit ongoing management of a lipid disorder via medications like statins or fibrates. According to the strict guidelines provided, predicting a future diagnosis requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this explicit evidence is absent in the current record, the prediction must be \"No,\" despite the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3509,
+    "completion_tokens": 195
+  }
+}

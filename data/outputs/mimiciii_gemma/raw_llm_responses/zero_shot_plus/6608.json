@@ -1,0 +1,12 @@
+{
+  "sample_id": 6608,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, despite the patient's high-risk status.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to severe, acute critical illness: Septicemia, Septic shock, Subendocardial infarction, Acute kidney failure, Severe sepsis, and various infectious and gastrointestinal complications. While the patient has \"Other specified forms of chronic ischemic heart disease,\" this is a general cardiovascular diagnosis, not an explicit lipid disorder diagnosis.\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed **Atorvastatin**. This medication is a lipid-lowering agent, which strongly suggests that the patient *has* or *is being treated for* a lipid abnormality. However, according to the strict instructions, the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n3. **Evaluation Against Strict Rules:**\nThe instructions explicitly state: \"DO NOT answer 'Yes' based only on: Use of statins (e.g.,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1294,
+    "completion_tokens": 256
+  }
+}

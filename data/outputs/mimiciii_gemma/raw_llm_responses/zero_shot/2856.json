@@ -1,0 +1,12 @@
+{
+  "sample_id": 2856,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details complications related to vascular procedures, including arterial embolism, thrombosis, hematoma, and iron deficiency anemia. While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the provided diagnoses do not explicitly state an existing lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary diagnosis. The presence of Atorvastatin alone, along with general cardiovascular risk factors (like coronary atherosclerosis and prior MI), is insufficient evidence to explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the NEXT hospital visit, according to the strict guidelines provided. The guidelines require explicit evidence of an existing or actively managed lipid disorder, which is absent in the stated diagnoses.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 699,
+    "completion_tokens": 159
+  }
+}

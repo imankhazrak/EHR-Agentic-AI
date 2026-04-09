@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Subendocardial infarction, initial episode of care; Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Pneumonia, organism unspecified; Metabolic encephalopathy; Acute kidney failure with lesion of tubular necrosis; Septic shock; Acute systolic heart failure; Acidosis; Long-term (current) use of insulin; Unspecified essential hypertension; Unspecified glaucoma; Personal history of malignant neoplasm of large intestine; Insulin pump status; Volume depletion, unspecified; Essential thrombocythemia; Severe sepsis; Congestive heart failure, unspecified
+- Medications prescribed: Insulin; Clopidogrel; Dextrose 50%; Sterile Water; Bag; 0.9% Sodium Chloride; D5 1/2NS; Iso-Osmotic Dextrose; Aspirin; Heparin; Pneumococcal Vac Polyvalent; Aztreonam; Sodium Chloride 0.9%  Flush; Atorvastatin; Brimonidine Tartrate 0.15% Ophth.; Latanoprost 0.005% Ophth. Soln.; Vancomycin; 5% Dextrose; Potassium Chloride; Furosemide; Neutra-Phos; Magnesium Sulfate; Metoprolol Tartrate; Levofloxacin; Dextrose 5%; Glucagon; Albuterol 0.083% Neb Soln; MetRONIDAZOLE (FLagyl); Insulin Human Regular; NS; Lidocaine Jelly 2% (Urojet); 0.45% Sodium Chloride; Lactated Ringers; Sodium Phosphate; Heparin Sodium; Losartan Potassium; Lisinopril; Miconazole Powder 2%
+- Procedures performed: Central venous catheter placement with guidance; Arterial catheterization
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

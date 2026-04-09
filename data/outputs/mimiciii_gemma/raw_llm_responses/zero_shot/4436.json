@@ -1,0 +1,12 @@
+{
+  "sample_id": 4436,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is extensive and details numerous serious conditions, including acute kidney failure, congestive heart failure, diabetes, and various cardiovascular and renal complications. However, the record does not contain any explicit diagnosis of a primary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that is actively being managed or explicitly stated as a diagnosis. The medications prescribed (Simvastatin, Clopidogrel Bisulfate, Warfarin, Heparin) are often used in the context of cardiovascular risk management associated with these other severe conditions (like atherosclerosis and CHF), but the presence of a *coded* lipid disorder diagnosis is absent. Therefore, based on the strict criteria, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1085,
+    "completion_tokens": 165
+  }
+}

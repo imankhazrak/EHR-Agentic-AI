@@ -1,0 +1,12 @@
+{
+  "sample_id": 7665,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record contains numerous diagnoses and medications related to severe cardiovascular disease (CHF, AF, CAD, MI), renal disease (ESRD, Hemodialysis), diabetes, and coagulation issues. The patient is on Atorvastatin, which is a lipid-lowering medication. However, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The presence of Atorvastatin alone, or the general risk factors associated with the patient's complex medical history, is insufficient evidence to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines provided.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record is extremely complex, featuring diagnoses such as End Stage Renal Disease (ESRD), Chronic Systolic Heart Failure (CHF), Atrial Fibrillation (AF), and Coronary Atherosclerosis. The patient is currently prescribed Atorvastatin, a medication used to manage lipid levels. However, the strict guidelines require explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since the record only lists",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 672,
+    "completion_tokens": 256
+  }
+}

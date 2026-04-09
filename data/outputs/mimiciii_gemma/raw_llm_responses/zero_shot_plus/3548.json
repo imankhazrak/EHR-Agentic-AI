@@ -1,0 +1,12 @@
+{
+  "sample_id": 3548,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-lowering medications alone.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\nThe current visit record does not explicitly list a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (e.g., hyperlipoproteinemia) in the \"Diagnoses made\" section.\n\n2. **Analysis of Risk Factors and Comorbidities:**\nThe patient has several significant comorbidities that are known risk factors for lipid disorders:\n*   **Diabetes with ketoacidosis, type I [juvenile type]:** Diabetes is a major metabolic risk factor associated with dyslipidemia.\n*   **Unspecified essential hypertension:** Hypertension is a common comorbidity with dyslipidemia.\n*   **Aortocoronary bypass status:** Indicates underlying cardiovascular disease risk.\n\n3. **Analysis of Medication Profile:**\nThe patient is prescribed **Atorvastatin**. Atorvastatin is a statin, a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 256
+  }
+}

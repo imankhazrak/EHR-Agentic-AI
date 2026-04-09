@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other specified forms of chronic ischemic heart disease; Congestive heart failure, unspecified; Hemorrhage complicating a procedure; Atrial fibrillation; Obstructive chronic bronchitis with acute bronchitis; Thrombocytopenia, unspecified; Candidiasis of mouth; Hypovolemia; Coronary atherosclerosis of native coronary artery; Other and unspecified angina pectoris; Unspecified essential hypertension; Percutaneous transluminal coronary angioplasty status; Old myocardial infarction; Abdominal aneurysm without mention of rupture; Hypopotassemia; Esophageal reflux; Long-term (current) use of steroids; Diarrhea; Atherosclerosis of native arteries of the extremities, unspecified; Stricture of artery; Other iatrogenic hypotension; Pain in joint, shoulder region; Urinary incontinence, unspecified; [ICD9-DX:7876]
+- Medications prescribed: Potassium Chloride; Pneumococcal Vac Polyvalent; Prednisone; Neutra-Phos; Bisacodyl; OxycodONE (Immediate Release); Acetaminophen; Triamterene; Hydrochlorothiazide; Isosorbide Mononitrate (Extended Release); Aluminum-Magnesium Hydrox.-Simethicone; Senna; Docusate Sodium; Psyllium Wafer; Metoprolol; traZODONE HCl; NS; Artificial Tears; Metoprolol XL; Spironolactone; Maalox/Diphenhydramine/Lidocaine; Nystatin Oral Suspension; Pantoprazole; Aspirin EC; Furosemide; Heparin; Heparin Flush CVL  (100 units/ml); Albuterol; SW; Propoxyphene Nap.-Apap (N-100); Benicar; Albuterol 0.083% Neb Soln; Sodium Phosphate; Ciprofloxacin HCl; Atorvastatin; Potassium Phosphate; D5W; Dextrose 5%; Insulin Human Regular; DopAmine; Levofloxacin; Calcium Gluconate; Iso-Osmotic Dextrose; Metronidazole; Vancomycin HCl; LR; Magnesium Sulfate; MethylPREDNISolone Sodium Succ; Propofol; Vial
+- Procedures performed: Insertion of drug-eluting coronary artery stent(s); Control of hemorrhage, not otherwise specified; Aortography; Procedure on single vessel; Insertion of one vascular stent; Diagnostic ultrasound of heart; Arteriography of other intra-abdominal arteries; Transfusion of packed cells; Transfusion of other serum; Transfusion of coagulation factors; Transfusion of platelets; Infusion of vasopressor agent; Percutaneous transluminal coronary angioplasty [PTCA]
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

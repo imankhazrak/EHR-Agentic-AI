@@ -1,0 +1,12 @@
+{
+  "sample_id": 785,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided instructions, which mandate that a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record to predict a future diagnosis.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record is dominated by severe, acute-on-chronic liver failure, renal failure, and infectious processes:\n*   **Primary Diagnoses:** Acute respiratory failure, Hepatic encephalopathy, Unspecified viral hepatitis C with hepatic coma, Cirrhosis, Thrombocytopenia, Acute kidney failure, End stage renal disease, Bacteremia, etc.\n*   **Medications:** The prescribed medications are overwhelmingly directed at managing these acute crises (e.g., Piperacillin-Tazobactam, Vancomycin, Lactulose, Rifaximin, Epoetin Alfa, Insulin, etc.).\n*   **Procedures:** Procedures are focused on life support (Mechanical ventilation, Hemodialysis, Transfusion).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that a prediction cannot be made based solely on:\n*   Use of statins (None are explicitly listed in the medications).\n*",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1150,
+    "completion_tokens": 256
+  }
+}

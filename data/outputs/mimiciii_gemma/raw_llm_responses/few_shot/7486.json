@@ -1,0 +1,12 @@
+{
+  "sample_id": 7486,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains multiple explicit diagnoses that fall under the umbrella of \"Disorders of Lipid Metabolism,\" which are: **Pure hypercholesterolemia** and **Other and unspecified hyperlipidemia**. These diagnoses are explicit evidence of a lipid disorder existing in the patient. According to the strict rules provided, the presence of explicit lipid disorder evidence is sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient is receiving **Simvastatin** as a medication, which is a lipid-lowering agent, supporting the active management of a lipid abnormality. While the patient has numerous other severe comorbidities (CHF, ESRD, HTN CKD), the prediction hinges on the explicit coding of the lipid disorder itself, which is present in the current record. Therefore, the evidence strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3711,
+    "completion_tokens": 182
+  }
+}

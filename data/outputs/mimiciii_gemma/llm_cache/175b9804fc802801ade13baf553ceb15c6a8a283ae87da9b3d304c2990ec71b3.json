@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record contains several diagnoses related to infections (Pneumonia, Septic shock, etc.), surgical complications (Acute vascular insufficiency of intestine, etc.), and general health issues (Unspecified essential hypertension, Congestive heart failure, etc.). While the record explicitly mentions \"Other and unspecified hyperlipidemia,\" this diagnosis alone, in the context of the overwhelming presence of other severe, acute conditions (sepsis, multi-organ failure), does not meet the strict criteria for predicting a *future* diagnosis of \"Disorders of Lipid Metabolism\" based on explicit, ongoing management of a primary lipid disorder, as defined by the prompt's constraints. The prompt requires explicit evidence of an existing or actively managed lipid disorder beyond general hyperlipidemia to predict a future diagnosis, and the current record is dominated by acute infectious and surgical crises.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1040,
+    "completion_tokens": 175
+  }
+}

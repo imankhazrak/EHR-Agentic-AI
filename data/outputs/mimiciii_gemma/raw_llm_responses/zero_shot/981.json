@@ -1,0 +1,12 @@
+{
+  "sample_id": 981,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nThe current visit record is overwhelmingly focused on severe infectious processes (Pneumonia, Candidiasis, Methicillin-resistant infections), respiratory failure, cardiac instability (Diastolic heart failure), and renal failure. While the patient is on Rosiglitazone (a thiazolidinedione, which is used to manage lipid/glucose issues), the explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder is absent from the current list of diagnoses. Therefore, based strictly on the evidence provided, there is no strong and explicit indication that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, even though the patient is on lipid-related medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 941,
+    "completion_tokens": 147
+  }
+}

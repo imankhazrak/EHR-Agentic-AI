@@ -1,0 +1,12 @@
+{
+  "sample_id": 8231,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for a \"Yes\" prediction require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on **vascular and cardiac issues**: Cerebral aneurysm, nonruptured; Cerebral thrombosis; Atrial septal defect; Essential hypertension; TIA/Cerebral infarction. While these conditions are *risk factors* for lipid disorders, they do not explicitly state a lipid abnormality (like hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis.\n2. **Medications:** The patient is prescribed **Simvastatin**, which is a statin used for lipid management. However, according to the strict instructions, the *use of statins alone* is NOT sufficient evidence to predict a future diagnosis of the disorder itself. Other medications like Cl",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1073,
+    "completion_tokens": 256
+  }
+}

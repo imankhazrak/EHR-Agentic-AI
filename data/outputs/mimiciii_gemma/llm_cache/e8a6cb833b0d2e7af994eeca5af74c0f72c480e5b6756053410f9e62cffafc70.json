@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" Since this is a direct and explicit evidence of a lipid disorder, it strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not explicitly list a diagnosis of \"Pure hypercholesterolemia\" or any other explicit evidence of a lipid disorder (such as hyperlipidemia or hyperlipoproteinemia). Although the patient is on Simvastatin, which is a lipid-lowering medication, the presence of medication alone is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict rules provided.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" This is direct and explicit evidence of a lipid disorder, which strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not explicitly list a diagnosis of",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 716,
+    "completion_tokens": 256
+  }
+}

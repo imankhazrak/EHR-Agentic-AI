@@ -1,0 +1,12 @@
+{
+  "sample_id": 2366,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has several significant diagnoses, including Hyposmolality/hyponatremia, Cellulitis/abscess, Congestive Heart Failure (CHF), Ulcer of lower limb, Hypovolemia, Unspecified essential hypertension, Epilepsy, Anemia, and various neurological/musculoskeletal issues. While Congestive Heart Failure and Unspecified essential hypertension are known risk factors for dyslipidemia, they are not explicit diagnoses of a lipid disorder themselves.\n2. **Medications:** The prescribed medications include Sodium Chloride 0.9% Flush, Acetaminophen, NS, Cosyntropin, Vancomycin HCl, Iso-Osmotic Dextrose, Heparin, Dolasetron Mesylate, Senna, Ampicillin-Sulbact",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1003,
+    "completion_tokens": 256
+  }
+}

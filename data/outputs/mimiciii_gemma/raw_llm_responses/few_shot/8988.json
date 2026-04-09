@@ -1,0 +1,12 @@
+{
+  "sample_id": 8988,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are overwhelmingly related to the complications of a liver transplant, including hepatic infarction, portal hypertension, and embolism. While the patient has unspecified essential hypertension, which is a risk factor for dyslipidemia, and is receiving various medications, the record lacks the specific diagnostic coding for a lipid abnormality. Following the strict instructions, a diagnosis of \"Disorders of Lipid Metabolism\" will only be coded in the next visit if there is strong and explicit evidence of such a disorder present in the current record or actively managed. Since this explicit evidence is absent, the prediction must be \"No\", despite the patient's high-risk profile associated with transplant complications and hypertension.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3724,
+    "completion_tokens": 174
+  }
+}

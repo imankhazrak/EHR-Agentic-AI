@@ -1,0 +1,12 @@
+{
+  "sample_id": 11420,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe, acute, and complex infectious, hemorrhagic, and organ failure processes. The primary diagnoses include Hemorrhage complicating a procedure, Unspecified septicemia, Encephalopathy, Pressure ulcer, Severe sepsis, and various organ complications (Hydronephrosis, Paraplegia, etc.).\n\nA comprehensive review of the medications prescribed shows the patient is receiving broad-spectrum antibiotics (Piperacillin-Tazobactam, Linezolid, CefePIME), anticoagulants (Warfarin, Heparin), and pain management (HYDROmorphone, Lorazepam). While the patient has a personal history of venous thrombosis and embolism, and is on anticoagulants, this history alone does not constitute an explicit, active diagnosis of a *lipid disorder* (like hypercholesterolemia or hyperlipidemia) that would mandate a future coding of that specific diagnosis.\n\nCrucially, the patient's current diagnoses list does not explicitly include any primary lipid abnormality (e.g., \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipid Disorder\"). The presence of statins or fibrates in the medication list is not required for a \"Yes\" prediction, but even if",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3879,
+    "completion_tokens": 256
+  }
+}

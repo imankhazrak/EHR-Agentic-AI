@@ -1,0 +1,12 @@
+{
+  "sample_id": 1371,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Primary Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe hematological malignancy (Acute lymphoid leukemia), complications of transplantation (Complications of transplanted bone marrow), and severe acute organ failure (Acute kidney failure, Pneumonitis, Pulmonary insufficiency).\n2. **Medication Profile:** The patient is on a complex regimen of immunosuppressants (Cyclosporine, Methotrexate), chemotherapy (Cyclophosphamide, Cytarabine), and broad-spectrum antibiotics/antivirals. While the patient is receiving *Furosemide* (a diuretic) and *Phytonadione* (Vitamin K), and *Cyclosporine* can sometimes affect renal function, there is **no explicit evidence** in the diagnoses or medication list of a primary lipid abnormality (e.g., elevated LDL, triglycerides, or a diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1269,
+    "completion_tokens": 256
+  }
+}

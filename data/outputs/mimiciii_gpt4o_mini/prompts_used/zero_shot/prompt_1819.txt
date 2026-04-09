@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Other complications due to other vascular device, implant, and graft; Accidental puncture or laceration during a procedure, not elsewhere classified; Atrial fibrillation; Congestive heart failure, unspecified; Acute kidney failure, unspecified; Calculus of gallbladder and bile duct with acute cholecystitis, without mention of obstruction; Atherosclerosis of native arteries of the extremities with intermittent claudication; Coronary atherosclerosis of native coronary artery; Aneurysm of artery of lower extremity
+- Medications prescribed: Acetylcysteine 20%; Metoprolol; Aspirin EC; Clopidogrel Bisulfate; Iso-Osmotic Dextrose; Cefazolin; Fexofenadine; Furosemide; Guaifenesin; Morphine Sulfate; Bisacodyl; Meperidine; Dextrose 5%; Levofloxacin; NS; Metronidazole; Lorazepam; Isosorbide Mononitrate; Isosorbide Mononitrate (Extended Release); traZODONE HCl; Amiodarone HCl; Paroxetine HCl; Pantoprazole; Atorvastatin; Docusate Sodium; Acetaminophen; Potassium Chloride; Eptifibatide; SW; Zolpidem Tartrate; Atropine Sulfate; Ondansetron; Promethazine HCl
+- Procedures performed: Incision of vessel, other thoracic vessels; Angioplasty of other non-coronary vessel(s); Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s); Injection or infusion of platelet inhibitor; Other revision of vascular procedure; Endoscopic removal of stone(s) from biliary tract; Endoscopic sphincterotomy and papillotomy
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

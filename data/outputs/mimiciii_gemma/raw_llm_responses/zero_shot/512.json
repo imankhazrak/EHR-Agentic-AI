@@ -1,0 +1,12 @@
+{
+  "sample_id": 512,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on severe, life-threatening infections (septicemia, septic shock, pneumonia, acute kidney failure, respiratory failure, malignant neoplasm) and associated complications (cachexia, cachexia, etc.). While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the record does not contain explicit diagnostic evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) being actively managed or diagnosed in the context of the current severe illness. The prescription of Atorvastatin alone, along with the presence of general risk factors, is insufficient evidence to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit, as per the strict guidelines provided.\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on severe, life-threatening infections (septicemia, septic shock, pneumonia, acute kidney failure, respiratory failure, malignant neoplasm) and associated complications (cachexia, cachexia, etc.). While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the record does not contain explicit diagnostic evidence of a lipid disorder (such as hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 861,
+    "completion_tokens": 256
+  }
+}

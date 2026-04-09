@@ -1,0 +1,12 @@
+{
+  "sample_id": 3155,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include severe infections (Unspecified septicemia, Septic shock, Cellulitis and abscess of leg), cardiovascular issues (Chronic diastolic heart failure, Congestive heart failure, Atrial fibrillation), metabolic issues (Diabetes mellitus without mention of complication), and other chronic conditions (Atherosclerosis of native arteries of the extremities with ulceration).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit* evidence of a lipid disorder (like hypercholesterolemia or hyperlipidemia) or *active, explicit management* of such a disorder, beyond general risk factors.\n\n1. **Review of Diagnoses:** The diagnoses list includes **Atherosclerosis of native arteries of the extremities with ulceration** and **Diabetes mellitus**, both of which are strong risk factors for lipid disorders. However, the diagnosis itself is not explicitly coded as \"Hypercholesterolemia\" or \"Hyperlipidemia.\"\n2. **Review of Medications:** The patient is prescribed **Simvastatin**. Statins are the primary pharmacological intervention for managing dyslipidemia. While the *prescription* of a statin strongly suggests that",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3782,
+    "completion_tokens": 256
+  }
+}

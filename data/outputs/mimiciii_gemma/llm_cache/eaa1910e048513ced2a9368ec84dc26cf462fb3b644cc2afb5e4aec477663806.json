@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe acute cardiovascular events and subsequent surgical interventions, including Subendocardial infarction, Coronary atherosclerosis, Atrial fibrillation, and Congestive heart failure. The procedures performed are extensive, involving (Aorto)coronary bypass, single internal mammary-coronary artery bypass, and extracorporeal circulation.\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Furthermore, the patient's medication profile is recorded as \"None recorded,\" meaning there is no explicit ongoing management for a lipid abnormality (e.g., statins or fibrates) that would strongly suggest a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nWhile the patient has multiple cardiovascular risk factors (Coronary atherosclerosis, CHF, Atrial fibrillation), the instructions strictly prohibit predicting a future diagnosis based solely on these risk factors or the use of cardiovascular medications/procedures. Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No,\" adhering to the strict evidence-based criteria provided in the guidelines.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3510,
+    "completion_tokens": 254
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of numerous other complex comorbidities.\n\n1. **Explicit Lipid Disorder Evidence:** The patient's current diagnoses explicitly include **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, satisfying the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities:** The presence of other conditions strongly associated with lipid disorders further reinforces this prediction:\n    * **Cardiovascular Disease:** Diagnoses such as \"Acute myocardial infarction of other inferior wall, initial episode of care,\" \"Coronary atherosclerosis of native coronary artery,\" and \"Hypertensive chronic kidney disease\" are classic comorbidities associated with dyslipidemia.\n    * **Metabolic/Renal Disease:** Diagnoses like \"Diabetes mellitus without mention of complication, type II or unspecified type\" and \"Chronic kidney disease\" are frequently comorbid with hyperlipidemia.\n\n3. **Management Evidence:** The patient is actively managed for lipid abnormalities, evidenced by the prescription of **\"Atorvastatin\"**.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1184,
+    "completion_tokens": 256
+  }
+}

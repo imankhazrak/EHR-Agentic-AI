@@ -1,0 +1,12 @@
+{
+  "sample_id": 8499,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly look for explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses for Explicit Lipid Disorder:**\nThe current diagnoses listed are: Pneumonia due to Pseudomonas; Complications of transplanted bone marrow; Nodular lymphoma, unspecified site, extranodal and solid organ sites; Jaundice, unspecified, not of newborn; Acute sinusitis, unspecified; Neutropenia, unspecified; Hypotension, unspecified; Unspecified disease of respiratory system; Unspecified essential hypertension; and Surgical operation with transplant of whole organ causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation.\nNone of these diagnoses explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. While \"Jaundice\" is present, this is a symptom and not a definitive diagnosis of a primary lipid disorder like hyperbilirubinemia secondary to severe liver disease, which is distinct from the CCS category 53 lipid disorders being targeted.\n\n2",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1227,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5491,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include Congestive Heart Failure, Diastolic Heart Failure, Acute Posthemorrhagic Anemia, Anemia in Chronic Kidney Disease, Atrial Fibrillation, Aortic Valve Disorders, Acute Kidney Failure, Urinary Tract Infection, Benign Neoplasm, Diabetes with Renal Manifestations, and Unspecified Acquired Hypothyroidism. The medication profile is similarly complex, involving numerous agents for managing these conditions, including Furosemide, Warfarin, Metoprolol, Lisinopril, and various antibiotics and supportive care drugs.\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a primary lipid disorder such as \"Pure hypercholesterolemia\" or \"Hyperlipidemia.\" The presence of other high-risk factors like Diabetes and Cardiovascular Disease, while common comorbidities associated with lipid disorders, are explicitly excluded by the instructions as sufficient evidence for a future diagnosis.\n\nTherefore, based on the strict criteria requiring explicit evidence of an existing or actively managed",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 256
+  }
+}

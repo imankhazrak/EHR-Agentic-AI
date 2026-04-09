@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to respiratory failure, cardiovascular disease (Atherosclerosis, Coronary Atherosclerosis, Heart Valve Replacement, Hypertension), and Diabetes Mellitus. The medication profile includes several agents commonly used in managing these conditions, such as Metoprolol, Furosemide, Enalapril, Insulin, and Simvastatin.\n\nHowever, based on the strict instructions provided, the mere prescription of a statin (Simvastatin) or the presence of cardiovascular disease (Atherosclerosis, Coronary Atherosclerosis) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that these factors alone are insufficient to predict a future diagnosis.\n\nWhile the patient is clearly high-risk for lipid disorders due to comorbidities like Diabetes Mellitus and Hypertension, the current record lacks explicit evidence\u2014such as a documented diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia\u2014that would strongly and explicitly warrant the coding of \"Disorders of Lipid Metabolism\" in the next visit, according to the defined criteria. Therefore, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3740,
+    "completion_tokens": 248
+  }
+}

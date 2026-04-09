@@ -1,0 +1,12 @@
+{
+  "sample_id": 11026,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of the diagnosis \"Other and unspecified hyperlipidemia\" in the patient's current hospital visit record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the patient is receiving \"Atorvastatin,\" which is a medication used for lipid management. While the rules caution against predicting a future diagnosis based *solely* on statin use, the combination of the explicit diagnosis of hyperlipidemia *and* the ongoing management with a lipid-lowering agent provides a robust foundation for predicting that this condition will be formally coded in the next visit.\n\nThe current diagnoses also include \"Unspecified protein-calorie malnutrition,\" which is a significant metabolic comorbidity, further supporting the likelihood of ongoing metabolic monitoring, which often includes lipid panels.\n\nIn summary, the explicit diagnosis of hyperlipidemia overrides the cautionary rules regarding statin use alone, leading to a prediction of \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3727,
+    "completion_tokens": 216
+  }
+}

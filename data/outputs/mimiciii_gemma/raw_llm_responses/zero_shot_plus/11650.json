@@ -1,0 +1,12 @@
+{
+  "sample_id": 11650,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit and strong evidence of a lipid disorder, which strongly indicates that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nThe most explicit piece of evidence is the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This diagnosis directly falls under the umbrella of \"Disorders of Lipid Metabolism\" (CCS category 53) and serves as strong, explicit evidence required by the instructions.\n\nFurthermore, the current visit record provides several strong comorbid conditions and risk factors commonly associated with lipid disorders, which reinforce the likelihood of this diagnosis being maintained or explicitly coded in the future:\n\n1. **Hypertension:** The diagnosis **\"Benign essential hypertension\"** is a major risk factor for dyslipidemia and cardiovascular disease, which is often comorbid with lipid disorders.\n2. **Cardiovascular Disease:** The presence of **\"Coronary atherosclerosis of native coronary artery\"** and **\"Aortic valve disorders\"** indicates significant underlying cardiovascular pathology, which is frequently associated with dyslipidemia.\n3. **Other Comorbidities:** The diagnosis **\"Other and unspecified hyperlipidemia\"** itself is the primary driver. Additionally",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1377,
+    "completion_tokens": 256
+  }
+}

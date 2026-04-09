@@ -1,0 +1,12 @@
+{
+  "sample_id": 3348,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just risk factors or related conditions.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are heavily focused on acute and chronic metabolic and renal issues: Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Diabetes with renal manifestations, type I [juvenile type], uncontrolled; Nephritis and nephropathy; Nausea with vomiting; Diarrhea; Other chest pain; Dysthymic disorder; Backache; Goiter; Hypovolemia; Other chronic pain.\n2. **Medications:** The prescribed medications are primarily for managing the acute and chronic conditions listed above: Insulin, Prochlorperazine, Ketorolac, Neutra-Phos, Lorazepam, Potassium Chloride, 5% Dextrose, Acetaminophen, Pantoprazole, Acetaminophen w/Codeine, Sodium Chloride 0.9% Flush, D5NS, Oxycodone",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1055,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 550,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is dominated by severe, acute cardiovascular and aortic emergencies. The diagnoses include Dissection of aorta, thoracoabdominal; Aortic valve disorders; Cardiac complications, not elsewhere classified; Paroxysmal ventricular tachycardia; Ventricular fibrillation; Atrial fibrillation; Congestive heart failure, unspecified; Coronary atherosclerosis of native coronary artery. The medication profile is extensive and focused on managing these life-threatening conditions, including antiarrhythmics (Amiodarone HCl), vasodilators (Phenylephrine HCl, Nitroprusside Sodium, Hydralazine HCl), and supportive care.\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Coronary atherosclerosis, this is a *complication* of severe cardiovascular disease, not an explicit, independently coded lipid disorder in the context required by the strict prediction rules. The presence of statins (Amlodipine is listed, but the context does not confirm a lipid-lowering dose for hyperlipidemia, and the primary focus is on cardiac stabilization) and general risk factors (like hypertension, which is implied by",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3734,
+    "completion_tokens": 256
+  }
+}

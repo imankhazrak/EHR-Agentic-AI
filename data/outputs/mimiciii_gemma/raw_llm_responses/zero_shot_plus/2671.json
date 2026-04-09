@@ -1,0 +1,12 @@
+{
+  "sample_id": 2671,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" recorded in the patient's current hospital visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hypercholesterolemia.\" Since this condition is explicitly diagnosed in the current record, there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nFurthermore, the presence of other related conditions, such as Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Unspecified disorder of kidney and ureter, are comorbid conditions that are often associated with lipid disorders, reinforcing the clinical context.\n\nThe medication profile includes Docusate Sodium and Allopurinol, which are used for various conditions, but the primary driver for the prediction is the explicit diagnosis of hypercholesterolemia.\n\nIn summary, the explicit diagnosis of \"Pure hypercholesterolemia\" meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 925,
+    "completion_tokens": 220
+  }
+}

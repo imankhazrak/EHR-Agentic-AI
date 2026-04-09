@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record is dominated by severe acute and chronic cardiovascular, pulmonary, and gastrointestinal emergencies. The diagnoses include Subendocardial infarction, Congestive heart failure, Acute pancreatitis, Calculus of bile duct with obstruction, Cholangitis, Primary pulmonary hypertension, and Stricture of artery. The patient is undergoing intensive care, evidenced by the combined right and left heart cardiac catheterization, implant of pulsation balloon, and continuous invasive mechanical ventilation.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has multiple cardiovascular risk factors (Subendocardial infarction, CHF, Family history of ischemic heart disease), these factors alone, as per the strict instructions, are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the prediction must be based on **strong and explicit evidence** of an existing or actively managed lipid disorder. Since no such evidence is present in the current diagnoses, the prediction must be \"No,\" regardless of the patient's high-risk status. This aligns with the strict criteria established in the prompt and demonstrated in the provided demonstration cases",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3524,
+    "completion_tokens": 256
+  }
+}

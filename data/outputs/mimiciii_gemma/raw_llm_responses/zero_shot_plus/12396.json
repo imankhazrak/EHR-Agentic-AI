@@ -1,0 +1,12 @@
+{
+  "sample_id": 12396,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are extensive and include several significant metabolic and chronic conditions:\n*   **Diabetes with ketoacidosis, type II or unspecified type, uncontrolled:** This is a major metabolic comorbidity often associated with dyslipidemia.\n*   **Unspecified essential hypertension:** Hypertension is a known risk factor for cardiovascular and lipid abnormalities.\n*   **Nutritional marasmus:** This indicates severe malnutrition, which can affect overall metabolic status.\n*   **Chronic pancreatitis and Acute pancreatitis:** These are the primary acute/chronic issues driving the current hospitalization.\n\n2. **Analysis of Medications and Procedures:**\n*   **Medications:** The patient is prescribed **Amlodipine** (a calcium channel blocker, used for hypertension) and **Insulin** (for diabetes). Crucially, **no explicit lipid-lowering agents** such as statins (e.g., Atorvastatin) or fibrates are listed in the prescribed medications.\n*   **Procedures:** The",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1174,
+    "completion_tokens": 256
+  }
+}

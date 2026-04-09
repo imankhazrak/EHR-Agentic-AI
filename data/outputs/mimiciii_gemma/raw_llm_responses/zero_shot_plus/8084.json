@@ -1,0 +1,12 @@
+{
+  "sample_id": 8084,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or comorbidities.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current diagnoses list includes: Other complications due to other vascular device, implant, and graft; Acute posthemorrhagic anemia; Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled; Background diabetic retinopathy; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Unspecified essential hypertension.\nCrucially, **none** of the listed diagnoses explicitly state hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific diagnosis within the CCS category 53 related to lipid abnormalities.\n\n2. **Evaluation of Comorbidities and Risk Factors:**\nThe patient exhibits several significant comorbidities that are known risk factors for",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 926,
+    "completion_tokens": 256
+  }
+}

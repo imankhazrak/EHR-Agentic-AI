@@ -1,0 +1,12 @@
+{
+  "sample_id": 6919,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis, according to the strict guidelines.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are:\n1. Congestive heart failure, unspecified\n2. Atrial fibrillation\n3. Coronary atherosclerosis of native coronary artery\n4. Acute myocardial infarction of other anterior wall, subsequent episode of care\n5. Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\n\nThe patient's medication profile and procedures performed are both empty.\n\nEvaluation against Strict Guidelines:\nThe guidelines explicitly state that a prediction of \"Yes\" can ONLY be made if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. Furthermore, the guidelines strictly exclude basing the prediction on:\n- Use of statins (None recorded)\n- Cardiovascular diseases (CHF, AF, CABG, CAD are present, but this is explicitly excluded as sufficient evidence)\n- General risk factors (Diabetes mellitus is present, but this is explicitly excluded as sufficient evidence)\n\nIn this specific",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 872,
+    "completion_tokens": 256
+  }
+}

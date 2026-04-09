@@ -1,0 +1,12 @@
+{
+  "sample_id": 12064,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is direct evidence of a lipid abnormality being present in the patient.\n\n2. **Active Lipid Management:** The medication profile confirms active management of this condition. The patient is prescribed **\"Atorvastatin\"**, which is a primary treatment for hyperlipidemia and dyslipidemia. The presence of both the diagnosis and the specific lipid-lowering medication confirms that the condition is not merely a risk factor but an actively managed clinical entity.\n\n3. **Conclusion based on Explicit Evidence:** Given the explicit diagnosis of \"Other and unspecified hyperlipidemia\" and the concurrent prescription of a statin (Atorvastatin) for this purpose, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. The guidelines explicitly state that the presence of an existing or actively managed lipid disorder is sufficient evidence to predict a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1271,
+    "completion_tokens": 256
+  }
+}

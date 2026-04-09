@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record indicates several serious diagnoses, including Coronary atherosclerosis of native coronary artery, Intermediate coronary syndrome, and Tobacco use disorder. The patient is receiving various medications, including Aspirin, and is undergoing complex procedures such as Aorto-coronary bypass of three coronary arteries and Single internal mammary-coronary artery bypass.\n\nHowever, the current visit record **does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.** While the patient is prescribed **Atorvastatin**, which is a medication used for lipid management, the strict instructions state that the mere use of statins is **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the other diagnoses (Coronary atherosclerosis, Intermediate coronary syndrome, Tobacco use disorder) are cardiovascular and lifestyle-related, not explicit lipid disorders.\n\nBased on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014and the absence of such a diagnosis in the current record, the prediction must be \"No\", despite the patient being high-risk and receiving lipid-lowering medication.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3617,
+    "completion_tokens": 248
+  }
+}

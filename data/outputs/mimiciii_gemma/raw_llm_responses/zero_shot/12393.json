@@ -1,0 +1,12 @@
+{
+  "sample_id": 12393,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening infections (Septicemia, Pneumonia, Sepsis), acute organ failure (Acute kidney failure, Chronic respiratory failure), and complex management related to transplantation and critical care (Ventilator, Renal dialysis, etc.). While the patient has general risk factors such as Obesity and Unspecified essential hypertension, and is on medications like Warfarin, there is no explicit evidence within the provided diagnoses or ongoing management that points to an existing or actively managed primary lipid disorder (e.g., documented hypercholesterolemia, hyperlipidemia, or a specific lipid metabolism diagnosis). Therefore, based on the strict criteria, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1029,
+    "completion_tokens": 158
+  }
+}

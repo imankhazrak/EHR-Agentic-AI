@@ -1,0 +1,12 @@
+{
+  "sample_id": 5002,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of medications like statins.\n\n**Analysis of Current Visit Record:**\n1. **Diagnoses:** The current diagnoses include Cirrhosis, Esophageal varices, Chronic hepatitis C, HIV disease, Thrombocytopenia, Opioid abuse, Diabetes mellitus type II, Depressive disorder, and Epistaxis. While Diabetes mellitus is a known risk factor for dyslipidemia, and Cirrhosis can be associated with altered metabolism, none of the current diagnoses explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n2. **Medications:** The prescribed medications include Pantoprazole, Glyburide, Paroxetine HCl, Nadolol, Sucralfate, Magnesium Sulfate, NS, Magnesium Oxide, Lactulose, Pantoprazole Sodium, Octreotide Acetate, Morphine Sulfate, Insulin, and D5W. Crucially, there are **no lipid-lowering medications** such as stat",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 961,
+    "completion_tokens": 256
+  }
+}

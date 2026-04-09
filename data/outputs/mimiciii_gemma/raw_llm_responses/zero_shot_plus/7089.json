@@ -1,0 +1,12 @@
+{
+  "sample_id": 7089,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are heavily focused on severe alcohol-related pathology: Alcoholic cirrhosis of liver, Alcohol withdrawal delirium, Acute pancreatitis, Acute alcoholic intoxication, and Acute alcoholic hepatitis. While chronic liver disease (cirrhosis) is a known risk factor for various metabolic disturbances, including those affecting lipid metabolism, the diagnosis itself does not explicitly state a lipid disorder (e.g., hyperlipidemia, hypercholesterolemia).\n\n2. **Analysis of Medications and Procedures:**\nThe prescribed medications and performed procedures are primarily aimed at managing acute alcohol withdrawal, electrolyte imbalances, and acute pancreatitis/intoxication. The medication list includes supportive care agents (Magnesium Sulfate, Zolpidem Tartrate, Potassium Chloride, Lorazepam, Morphine Sulfate, Docusate Sodium, D5W, NS, Thiamine HCl, Folic Acid, etc.). Crucially",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 985,
+    "completion_tokens": 256
+  }
+}

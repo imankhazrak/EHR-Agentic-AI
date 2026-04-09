@@ -1,0 +1,12 @@
+{
+  "sample_id": 11787,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to be coded in the next hospital visit. The current visit record does not contain any explicit diagnosis related to lipid abnormalities.\n\nAnalysis of the Current Visit Record:\nThe diagnoses made in the current visit are: Alcohol withdrawal; Acute kidney failure, unspecified; Acidosis; Acute alcoholic intoxication in alcoholism, continuous; Dysthymic disorder; Unspecified essential hypertension; Attention deficit disorder with hyperactivity.\nThese diagnoses primarily relate to acute intoxication, withdrawal, renal issues, and psychiatric conditions.\n\nAnalysis of Medications and Procedures:\nThe medications prescribed (Diazepam, Venlafaxine XR, Multivitamins, FoLIC Acid, Thiamine, Amlodipine, Atenolol, etc.) and procedures performed (None recorded) do not include any specific lipid-lowering agents (like statins or fibrates) that would explicitly indicate an ongoing, managed lipid disorder, nor do they contain any explicit lipid disorder diagnosis.\n\nApplication of Strict Rules:\nThe instructions strictly prohibit answering \"Yes\" based solely on general risk factors (like Unspecified essential hypertension) or the use of general medications",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3507,
+    "completion_tokens": 256
+  }
+}

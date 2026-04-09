@@ -1,0 +1,12 @@
+{
+  "sample_id": 5553,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record contains numerous diagnoses and medications related to infectious diseases (Methicillin susceptible pneumonia, Urinary tract infection, Infection with microorganisms resistant to penicillins), cardiovascular diseases (Chronic diastolic heart failure, Congestive heart failure, Unspecified essential hypertension), and musculoskeletal issues (Pathologic fracture of vertebrae, Osteoporosis). While the patient is receiving various medications, none of the provided diagnoses or prescribed medications explicitly indicate an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or a specific lipid metabolism diagnosis). Therefore, based on the strict criteria, there is no explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 846,
+    "completion_tokens": 142
+  }
+}

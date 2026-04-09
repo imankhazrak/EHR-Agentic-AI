@@ -1,0 +1,12 @@
+{
+  "sample_id": 5446,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to neurological, cardiovascular, and psychiatric conditions:\n*   Other convulsions; Other acute and subacute forms of ischemic heart disease, other; Cerebral artery occlusion, unspecified with cerebral infarction; Other specified paralytic syndrome; Other persistent mental disorders due to conditions classified elsewhere; Depressive disorder, not elsewhere classified; Spinal stenosis, lumbar region, without neurogenic claudication.\nNone of these diagnoses explicitly state or imply a primary or secondary lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or primary metabolic syndrome).\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed several medications, including: Diltiazem Extended-Release, Donepezil, Fluoxetine HCl, Acetaminophen, Bisacodyl, Metoprolol, Aspirin EC, Pantoprazole, Docusate Sodium,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 925,
+    "completion_tokens": 256
+  }
+}

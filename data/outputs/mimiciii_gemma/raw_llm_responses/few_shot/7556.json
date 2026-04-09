@@ -1,0 +1,12 @@
+{
+  "sample_id": 7556,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). The presence of this explicit diagnosis in the current record provides strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, satisfying the criteria for answering \"Yes.\" Furthermore, the patient is being managed with \"Atorvastatin,\" a medication specifically used for lipid management, which supports the ongoing nature of the lipid disorder. The other diagnoses, such as \"Acute myocardial infarction of other lateral wall\" and \"Coronary atherosclerosis of native coronary artery,\" are related cardiovascular conditions, but the explicit diagnosis of hyperlipidemia is the primary evidence supporting the prediction of a future lipid disorder diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3576,
+    "completion_tokens": 197
+  }
+}

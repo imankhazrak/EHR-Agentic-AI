@@ -1,0 +1,12 @@
+{
+  "sample_id": 7282,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The current diagnoses are overwhelmingly focused on severe infectious and respiratory complications: Methicillin susceptible pneumonia due to Staphylococcus aureus, Acute and chronic respiratory failure, Hyperosmolality and/or hypernatremia, Anemia of other chronic disease, Gastrostomy status, Personal history of malignant neoplasm of prostate, and Tracheostomy status. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality listed.**\n2. **Medications Prescribed:** The medication list is extensive and addresses the acute infectious, respiratory, and electrolyte crises: Iso-Osmotic Dextrose, D5W, Insulin, Neutra-Phos, Ceftazidime, Metoprolol, Potassium Chloride, SW,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1051,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6060,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which mandate that a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record to predict a future diagnosis.\n\n1. **Analysis of Current Visit Record:**\nThe current visit record is overwhelmingly focused on severe, acute respiratory and infectious processes:\n*   **Respiratory/Infectious:** Acute respiratory failure, Pulmonary collapse, Acute bronchitis, Intestinal infection due to Clostridium difficile, Methicillin susceptible Staphylococcus aureus, Personal history of malignant neoplasm of bronchus and lung, Tracheostomy status.\n*   **Procedural/Supportive:** Continuous invasive mechanical ventilation, Bronchoscopy, Thoracentesis, Diagnostic ultrasound of heart.\n*   **Other:** Unspecified pleural effusion, Ulcer of heel and midfoot.\n\n2. **Evaluation for Explicit Lipid Disorder Evidence:**\nA comprehensive review of the diagnoses, medications, and procedures reveals **no explicit evidence** of a primary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n*   **Diagnoses:** None of the listed diagnoses relate directly to lipid abnormalities.\n*   **Medications:** No",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 931,
+    "completion_tokens": 256
+  }
+}

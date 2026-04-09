@@ -1,0 +1,12 @@
+{
+  "sample_id": 5550,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record focuses entirely on the newborn's delivery, prematurity, respiratory distress syndrome, and supportive care (mechanical ventilation, nutritional infusion). There is no explicit mention of any lipid abnormality, hypercholesterolemia, or hyperlipidemia in the current diagnoses or procedures. Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, even though the patient is high-risk for general health issues.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 109
+  }
+}

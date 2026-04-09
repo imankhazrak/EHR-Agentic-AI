@@ -1,0 +1,12 @@
+{
+  "sample_id": 2942,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary lipid abnormality.\n\n2. **Supporting Evidence (Management):** The patient is currently being managed for this condition, evidenced by the prescription of **\"Atorvastatin\"**, a medication specifically used to treat hypercholesterolemia and manage lipid abnormalities.\n\n3. **Conclusion:** Because the current record contains a definitive diagnosis of a lipid disorder (\"Pure hypercholesterolemia\") and ongoing management for it, there is strong and explicit evidence that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit. The presence of this explicit diagnosis overrides the general statistical likelihood and risk factor analysis.\n\n***\n*Self-Correction/Review against Instructions:*\n*   *Did I answer Yes/No first?* Yes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 256
+  }
+}

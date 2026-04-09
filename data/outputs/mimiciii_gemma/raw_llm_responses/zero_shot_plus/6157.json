@@ -1,0 +1,12 @@
+{
+  "sample_id": 6157,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses include Hemorrhage of gastrointestinal tract, unspecified; Atrial fibrillation; Abnormal coagulation profile; Anemia, unspecified; Anticoagulants causing adverse effects in therapeutic use; Helicobacter pylori [H. pylori]; Internal hemorrhoids without mention of complication; Benign neoplasm of colon.\n2. **Medications:** The prescribed medications include Acetaminophen, Ondansetron, Influenza Virus Vaccine, Calcium Gluconate, Heparin Sodium, Heparin, D5W, Furosemide, Lisinopril, Labetalol HCl, Mexiletine HCl, Potassium Chloride, Fentanyl Citrate, Midazolam HCl, Pantoprazole, Golytely, Levofloxacin, Metoprolol, Amoxicillin, Clarithromycin, Zol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 256
+  }
+}

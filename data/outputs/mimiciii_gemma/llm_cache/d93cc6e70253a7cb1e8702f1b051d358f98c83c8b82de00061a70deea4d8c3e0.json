@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on general risk factors, cardiovascular diseases, or medication use (like statins).\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has multiple severe cardiovascular and inflammatory diagnoses: Mitral valve disorders, Acute myocardial infarction, Pneumonitis, Congestive heart failure, Coronary atherosclerosis, Raynaud's syndrome, and Rheumatoid arthritis. These conditions are known risk factors for dyslipidemia, but their presence alone does not meet the strict criteria for predicting a future diagnosis of *coded* lipid disorder.\n2. **Medications:** The record explicitly states \"None recorded\" for medications prescribed. Therefore, there is no evidence of active lipid management (e.g., statins or fibrates) that would strongly suggest a coded lipid disorder diagnosis in the next visit.\n3. **Pro",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 961,
+    "completion_tokens": 256
+  }
+}

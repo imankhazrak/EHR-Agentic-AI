@@ -1,0 +1,12 @@
+{
+  "sample_id": 832,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous serious conditions, including Atherosclerosis, Diastolic heart failure, Atrial fibrillation, Chronic kidney disease, Diabetes, and various gastrointestinal issues. The patient is on multiple medications, including Atorvastatin, which is a lipid-lowering agent. However, the provided record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) in the current diagnoses list. Furthermore, the presence of Atorvastatin alone, or the general risk factors like Diabetes or Atherosclerosis, are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based strictly on the provided evidence, a future diagnosis of \"Disorders of Lipid Metabolism\" cannot be explicitly predicted.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 178
+  }
+}

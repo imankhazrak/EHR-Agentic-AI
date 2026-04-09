@@ -1,0 +1,12 @@
+{
+  "sample_id": 4601,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on complex cardiac issues (Mitral stenosis, Tricuspid valve diseases, Atrial flutter, Rheumatic heart failure, Atrial fibrillation, etc.), primary hypercoagulable state, and associated management (Warfarin, Heparin, etc.). While the patient is high-risk due to these conditions, the record **does not contain any explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The management is primarily directed towards the cardiac and coagulation issues.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 828,
+    "completion_tokens": 147
+  }
+}

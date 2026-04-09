@@ -1,0 +1,12 @@
+{
+  "sample_id": 6486,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record primarily documents diagnoses related to alcoholic cirrhosis, esophageal varices, portal hypertension, alcohol withdrawal, and hypothyroidism/hypertension. There is no explicit evidence within the provided record (diagnoses or medications) to indicate an existing or actively managed lipid disorder such as hypercholesterolemia or hyperlipidemia. Therefore, based strictly on the evidence provided, there is no strong basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 497,
+    "completion_tokens": 108
+  }
+}

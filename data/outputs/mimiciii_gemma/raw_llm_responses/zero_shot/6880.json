@@ -1,0 +1,12 @@
+{
+  "sample_id": 6880,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses listed are related to Pneumonitis, Quadriplegia, Urinary tract infection, Bacteremia, Alkalosis, Iron deficiency anemia, and Hypotension. No mention of hypercholesterolemia, hyperlipidemia, or any other condition explicitly falling under \"Disorders of Lipid Metabolism\" is present. Therefore, there is no strong and explicit evidence to predict this diagnosis in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 511,
+    "completion_tokens": 105
+  }
+}

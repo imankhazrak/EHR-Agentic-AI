@@ -1,0 +1,12 @@
+{
+  "sample_id": 7394,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The primary diagnoses in the current visit record are Subarachnoid hemorrhage following injury, Pneumonia, and Unspecified fall. None of these diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Medications Prescribed:** The medication list is extensive and primarily addresses the acute conditions: Subarachnoid hemorrhage (Phenytoin, Labetalol HCl, Fentanyl Citrate, etc.), Pneumonia (Acetaminophen, etc.), and general support (Insulin, Potassium Chloride, etc.). Crucially, the medication list **does not contain any explicit lipid-lowering agents** such as statins (e.g., Atorvastatin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 256
+  }
+}

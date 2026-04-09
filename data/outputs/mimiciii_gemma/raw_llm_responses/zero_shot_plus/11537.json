@@ -1,0 +1,12 @@
+{
+  "sample_id": 11537,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are extensive and primarily revolve around severe, complex comorbidities:\n*   Gastrointestinal issues (Chronic gastric ulcer with hemorrhage).\n*   Cardiovascular issues (Chronic systolic heart failure, Coronary atherosclerosis, Atrial fibrillation, Hypertensive chronic kidney disease).\n*   Infectious/Metabolic issues (Chronic osteomyelitis, Diabetes with other specified manifestations, Hyperpotassemia, Unspecified acquired hypothyroidism).\n*   Other severe conditions (Chronic kidney disease Stage III, Depressive disorder, etc.).\n\nWhile the patient has **Diabetes with other specified manifestations, type II or unspecified type**, and **Hypertensive chronic kidney disease**, these are general metabolic and cardiovascular risk factors, not explicit evidence of a primary lipid disorder (like hypercholesterolemia or hyperlipidemia) being actively managed or diagnosed in the current record.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes **Atorvastatin**. This is a lipid-lowering agent (statin).",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1146,
+    "completion_tokens": 256
+  }
+}

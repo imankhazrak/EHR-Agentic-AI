@@ -1,0 +1,12 @@
+{
+  "sample_id": 11010,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), which includes hypercholesterolemia.\n\nFurthermore, the presence of other comorbid conditions such as Diabetes mellitus without mention of complication, type II or unspecified type, and Unspecified essential hypertension, are known risk factors and frequently associated conditions with lipid disorders. While these conditions alone would not be sufficient for a \"Yes\" prediction, the explicit diagnosis of hypercholesterolemia provides the necessary strong and explicit evidence required by the instructions.\n\nThe patient's current record also shows other significant cardiovascular events (Coronary atherosclerosis, Peripheral vascular disease) and procedures (Aorto-coronary bypass, Extracorporeal circulation), which indicate a complex metabolic and cardiovascular profile often intertwined with lipid abnormalities.\n\nSince the explicit diagnosis of \"Pure hypercholesterolemia\" is present, the criteria for a \"Yes\" prediction are strongly and explicitly met, overriding the limitations set by the instructions regarding general risk factors or statin use alone. The diagnosis itself confirms the presence of a lipid disorder",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 256
+  }
+}

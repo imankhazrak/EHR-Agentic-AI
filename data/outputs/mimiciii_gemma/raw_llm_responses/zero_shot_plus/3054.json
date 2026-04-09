@@ -1,0 +1,12 @@
+{
+  "sample_id": 3054,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid metabolism in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of numerous other severe and unrelated conditions.\n\n1. **Explicit Lipid Disorder Evidence in Current Record:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid disorder. According to the instructions, answering \"Yes\" is warranted when there is strong and explicit evidence that a lipid disorder is present.\n\n2. **Supporting Comorbidities:**\nThe patient presents with several significant comorbidities that are strongly associated with lipid disorders, further supporting the clinical relevance of this diagnosis:\n* **Diabetes Mellitus Type I:** The patient has multiple diagnoses related to Diabetes Mellitus Type I, including **\"Diabetes with neurological manifestations, type I\"** and **\"Diabetes with ophthalmic manifestations, type I\"**. Diabetes is a major, well-established risk factor for dyslipidemia.\n* **Cardiovascular Disease:** The patient has diagnoses of **\"Coronary atherosclerosis of native coronary artery\"** and **\"Subendocardial infarction, initial",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1366,
+    "completion_tokens": 256
+  }
+}

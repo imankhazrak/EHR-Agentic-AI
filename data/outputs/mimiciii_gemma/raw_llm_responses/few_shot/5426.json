@@ -1,0 +1,12 @@
+{
+  "sample_id": 5426,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and metabolic comorbidities, including Mitral valve insufficiency, aortic valve stenosis, Atrial fibrillation, Coronary atherosclerosis, and Diabetes with neurological manifestations. The medication profile includes Rosuvastatin Calcium and Rosiglitazone Maleate, which are lipid-lowering and glucose-lowering agents, respectively. However, according to the strict instructions, the mere prescription of statins (Rosuvastatin Calcium) or the presence of general risk factors (Diabetes, Hypertension, Cardiovascular disease) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. Therefore, based on the strict criteria provided, the prediction must be \"No\", even though the patient is clearly high-risk and is being managed with lipid-lowering medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3748,
+    "completion_tokens": 196
+  }
+}

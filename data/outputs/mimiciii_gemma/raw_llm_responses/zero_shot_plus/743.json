@@ -1,0 +1,12 @@
+{
+  "sample_id": 743,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit, according to the strict guidelines provided.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Gastroesophageal laceration-hemorrhage syndrome; Gastroparesis; Hemorrhage of gastrointestinal tract, unspecified; Urinary tract infection, site not specified; Candidiasis of mouth; Unspecified gastritis and gastroduodenitis, without mention of hemorrhage; Diaphragmatic hernia without mention of obstruction or gangrene; Reflex sympathetic dystrophy, unspecified.\nThe patient's medications prescribed are: None recorded.\nThe procedures performed are: Other endoscopy of small intestine.\n\nEvaluation against Prediction Rules:\n1. **Explicit Lipid Disorder Evidence:** There is absolutely no mention of any lipid abnormality, hypercholesterolemia, hyperlipidemia, or related lipid disorder diagnosis within the current visit record.\n2. **Exclusion Criteria Check:** The current record does not contain any diagnoses of Cardiovascular diseases (e.g., CHF, AF, CABG, CAD) or general risk factors",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 908,
+    "completion_tokens": 256
+  }
+}

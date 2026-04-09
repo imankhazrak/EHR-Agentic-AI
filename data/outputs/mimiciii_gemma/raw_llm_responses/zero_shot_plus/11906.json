@@ -1,0 +1,12 @@
+{
+  "sample_id": 11906,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current record, not merely implied by risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly focused on severe cardiovascular, renal, and respiratory failure:\n*   Acute on chronic systolic heart failure; Congestive heart failure, unspecified; Mitral valve insufficiency and aortic valve stenosis; Coronary atherosclerosis of native coronary artery; Other specified forms of chronic ischemic heart disease.\n*   Acute kidney failure, unspecified; Hypertensive chronic kidney disease, unspecified; Chronic kidney disease, Stage III (moderate).\n*   Respiratory failure; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n\nWhile the patient has **Diabetes Mellitus** and **Hypertension**, which are major risk factors for dyslipidemia, these diagnoses alone do not constitute an explicit diagnosis of a lipid disorder (like hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed **Rosuvastatin Calcium**. Rosuvastatin is a potent HMG-",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1356,
+    "completion_tokens": 256
+  }
+}

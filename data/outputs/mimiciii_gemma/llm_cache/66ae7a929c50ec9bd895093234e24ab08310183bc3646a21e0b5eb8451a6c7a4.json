@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a lipid disorder diagnosis in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis **\"Pure hypercholesterolemia\"** under Diagnoses made. This is a direct and explicit evidence of a lipid abnormality (hypercholesterolemia) that falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Supporting Comorbidities:** The patient also presents with several strong comorbidities commonly associated with lipid disorders, which further support the ongoing management and coding of this diagnosis:\n    * **Obesity:** The diagnosis **\"Obesity, unspecified\"** is present.\n    * **Hypertension:** The diagnosis **\"Unspecified essential hypertension\"** is present.\n    * **Cardiovascular Disease:** The patient has multiple severe cardiovascular diagnoses, including **\"Coronary atherosclerosis of native coronary artery,\"** **\"Long-term (current) use of anticoagulants,\"** and **\"Diastolic heart failure, unspecified,\"** all of which are strongly linked to dyslipidemia",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1307,
+    "completion_tokens": 256
+  }
+}

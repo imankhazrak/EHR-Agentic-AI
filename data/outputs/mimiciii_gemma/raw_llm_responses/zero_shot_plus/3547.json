@@ -1,0 +1,12 @@
+{
+  "sample_id": 3547,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of related medications.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are \"Mechanical complication of nervous system device, implant, and graft\" and \"Obstructive hydrocephalus.\" These diagnoses are related to neurosurgery and device complications and do not explicitly indicate any underlying lipid disorder.\n2. **Medications:** The prescribed medications include NS (Glass Bottle), Phenytoin Sodium, Cefazolin, Iso-Osmotic Dextrose, Acetaminophen, Morphine Sulfate, Docusate Sodium, Oxycodone-Acetaminophen, and Phenytoin. None of these medications are lipid-lowering agents (such as statins or fibrates) that would explicitly point to an ongoing lipid management issue, nor do they suggest an underlying metabolic derangement related to lipids.\n3. **Procedures:** The procedure performed is \"Gingivoplasty,\" which is a dental procedure and is not related to metabolic or cardiovascular health.\n\nConclusion:\nThe patient's current clinical picture is entirely focused on",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 879,
+    "completion_tokens": 256
+  }
+}

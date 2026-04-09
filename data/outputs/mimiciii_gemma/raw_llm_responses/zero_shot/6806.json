@@ -1,0 +1,12 @@
+{
+  "sample_id": 6806,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to severe cardiovascular disease (Congestive heart failure, Subendocardial infarction, Coronary atherosclerosis, etc.), chronic respiratory issues (Chronic airway obstruction, Acute respiratory failure), and diabetes mellitus. While the patient is on Simvastatin, which is used to manage lipid levels, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The management is focused on the other severe conditions listed. Therefore, based strictly on the evidence provided, there is no explicit indication that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, even though the patient is on a lipid-lowering medication.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 634,
+    "completion_tokens": 156
+  }
+}

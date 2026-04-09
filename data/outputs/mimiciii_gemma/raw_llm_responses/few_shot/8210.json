@@ -1,0 +1,12 @@
+{
+  "sample_id": 8210,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on acute, life-threatening cardiovascular events (Subendocardial infarction, Coronary atherosclerosis, Congestive heart failure, Cardiac arrest, Atrial fibrillation, etc.), severe infections (Methicillin susceptible pneumonia, Bacteremia), and associated complications (Delirium, Iatrogenic pneumothorax, Hydronephrosis). While the patient is managed with **Atorvastatin** and **Aspirin**, these medications are standard of care for cardiovascular risk reduction and are **not sufficient** on their own to meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" as per the instructions. The instructions explicitly state that the use of statins alone is **not sufficient** evidence. Furthermore, the current diagnoses list does not explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) as a primary or secondary diagnosis. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 211
+  }
+}

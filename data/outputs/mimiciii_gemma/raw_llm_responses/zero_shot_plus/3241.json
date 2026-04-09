@@ -1,0 +1,12 @@
+{
+  "sample_id": 3241,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder already present in the patient's current visit record, which provides strong and explicit evidence that this condition is likely to be coded again in the next hospital visit.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses explicitly include **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit diagnosis of a lipid abnormality, falling under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\n2. **Analysis of Medications and Management:**\nThe patient is currently prescribed **\"Atorvastatin\"**, a medication specifically used for managing hyperlipidemia and lowering cholesterol. The prescription of a lipid-lowering agent in conjunction with the existing diagnosis confirms that the lipid disorder is actively managed and is a central component of the patient's current and likely future care plan.\n\n3. **Weighing Other Factors (Contextual Analysis):**\nWhile the patient also has diagnoses such as Cerebral artery occlusion, unspecified with cerebral infarction, Unspecified essential hypertension, and Iodine hypothyroidism, these conditions alone would not be sufficient to predict the diagnosis, as per the instructions. However, the presence of **\"Other and unspecified hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 909,
+    "completion_tokens": 256
+  }
+}

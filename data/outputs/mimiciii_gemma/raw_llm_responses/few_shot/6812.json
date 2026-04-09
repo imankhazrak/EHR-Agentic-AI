@@ -1,0 +1,12 @@
+{
+  "sample_id": 6812,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is sufficient evidence to predict a future diagnosis, even if other risk factors (like diabetes or hypertension) are present. Furthermore, the prescription of \"Atorvastatin\" indicates ongoing management related to lipid abnormalities, which reinforces the likelihood of this diagnosis being coded in the next visit. Therefore, based on the explicit diagnosis and management, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3776,
+    "completion_tokens": 136
+  }
+}

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Single liveborn, born in hospital, delivered by cesarean section; Respiratory distress syndrome in newborn; Neonatal jaundice associated with preterm delivery; [ICD9-DX:7793]; Other preterm infants, 1,000-1,249 grams; 27-28 completed weeks of gestation; Primary apnea of newborn; Anemia of prematurity; Retrolental fibroplasia; Conjunctival edema; Exophthalmos, unspecified; Hemangioma of other sites; Hemangioma of skin and subcutaneous tissue; Other specified hemorrhage of fetus or newborn; Cutaneous hemorrhage of fetus or newborn; Ostium secundum type atrial septal defect; Nonspecific (abnormal) findings on radiological and other examination of skull and head; Observation for suspected infectious condition; Routine or ritual circumcision; [ICD9-DX:V721]; Need for prophylactic vaccination and inoculation against viral hepatitis; Need for prophylactic vaccination and inoculation against diphtheria-tetanus-pertussis, combined [DTP] [DTaP]; Need for prophylactic vaccination and inoculation against poliomyelitis; Other specified vaccinations against hemophilus influenza, type B [Hib]; Other specified vaccinations against streptococcus pneumoniae [pneumococcus]
+- Medications prescribed: Prednisolone Oral Solution; Erythromycin 0.5% Ophth Oint; Artificial Tear Ointment; Pediatric Vitamins ADC; NEO*IM*Palivizumab; Syringe (Neonatal); Heparin (Preservative Free); D10W; Starter PN D5; Heparin Flush; NEO*IV*Ampicillin Sodium; NEO*IV*Gentamicin; Send 500mg Vial; Syringe (Neonatal) *D5W*; NEO*IV*Parenteral Nutrition; Sodium Chloride; Potassium Chloride; NEO*IV*Fat Emulsion; NEO*IV*Caffeine Citrate; NEO*PO*Caffeine Citrate; NEO*PO*Ferrous Sulfate Elixir; NEO*PO*Vitamin E Drops; NEO*PO*MCT Oil; NEO*PO*Ranitidine; Cyclopentolate 1%; Proparacaine HCl 0.5% Opth.; NEO*IV*Vancomycin; Syringe (Neonatal) *NS*; Heparin Sodium (Preservative Free); NEO*SC*Polio Vaccine (Inactive); NEO*IM*Haemophilus B  Conj Vac; NEO*IM*DT  & Acellular Pertussis; NEO*IM*Pneumococcal 7-Valent; Acetaminophen (Liquid)
+- Procedures performed: Other phototherapy; Umbilical vein catheterization; Circumcision; Prophylactic administration of vaccine against other diseases; Administration of diphtheria-tetanus-pertussis, combined; Administration of poliomyelitis vaccine; Prophylactic vaccination against influenza; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Other oxygen enrichment; Non-invasive mechanical ventilation; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Methicillin susceptible Staphylococcus aureus septicemia; Infection and inflammatory reaction due to other internal orthopedic device, implant, and graft; Pyogenic arthritis, lower leg; Intracranial abscess; Intraspinal abscess; Subendocardial infarction, initial episode of care; Psoas muscle abscess; Urinary tract infection, site not specified; Cerebral embolism with cerebral infarction; Acute and subacute bacterial endocarditis; Drug-induced delirium; Congestive heart failure, unspecified; Acute kidney failure, unspecified; Iron deficiency anemia secondary to blood loss (chronic); Dehydration; Toxic encephalopathy; Surgical operation with implant of artificial internal device causing abnormal patient reaction, or later complication,without mention of misadventure at time of operation; Unspecified inflammatory spondylopathy; Unspecified essential hypertension; Adrenal cortical steroids causing adverse effects in therapeutic use; Disturbance of salivary secretion; Personal history of malignant neoplasm of large intestine; Sciatica; Personal history of irradiation, presenting hazards to health; Barrett's esophagus; Severe sepsis
+- Medications prescribed: OxycoDONE (Immediate Release); Zolpidem Tartrate; PredniSONE; Furosemide; Albumin 25% (12.5 g); Potassium Chloride; Ciprofloxacin HCl; Clonazepam; Magnesium Sulfate; NS; Lansoprazole Oral Disintegrating Tab; Sucralfate; SW; Metoprolol; Heparin Flush CVL  (100 units/ml); HYDROmorphone (Dilaudid); Dexamethasone; Lorazepam; Lidocaine Jelly 2%; MetRONIDAZOLE (FLagyl); Prochlorperazine; Fentanyl Patch; Midazolam; Fentanyl Citrate; Glycopyrrolate; Simvastatin; Miconazole Powder 2%; Lisinopril; DiphenhydrAMINE; Aspirin; Heparin; Sarna Lotion; Pantoprazole; Fluconazole; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Magnesium Oxide; Haloperidol; Heparin Flush PICC (100 units/ml); Paroxetine; Quetiapine Fumarate; Rifampin; Morphine Sulfate; Iso-Osmotic Dextrose; Nafcillin; Sodium Chloride 0.9%  Flush; Labetalol HCl; D5W; Insulin; Phytonadione; Pantoprazole Sodium
+- Procedures performed: Other arthrotomy, hip; Other arthrotomy, knee; Synovectomy, knee; Other exploration and decompression of spinal canal; Venous catheterization, not elsewhere classified; Diagnostic ultrasound of heart; Enteral infusion of concentrated nutritional substances; Transfusion of packed cells
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

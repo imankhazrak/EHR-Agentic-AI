@@ -1,0 +1,12 @@
+{
+  "sample_id": 5999,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, acute cardiovascular and renal pathology (True posterior wall infarction, Cardiogenic shock, Congestive heart failure, Acute kidney failure, Coronary atherosclerosis, etc.). While the patient is prescribed Atorvastatin, this medication alone, in the context of these severe cardiac and renal diagnoses, does not constitute explicit evidence of an ongoing, actively managed *lipid disorder* (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The criteria explicitly exclude predicting a diagnosis based solely on the use of statins or general cardiovascular risk factors.\n\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, acute cardiovascular and renal pathology (True posterior wall infarction, Cardiogenic shock, Congestive heart failure, Acute kidney failure, Coronary atherosclerosis, etc.). While the patient is prescribed Atorvastatin, this medication alone, in the context of these severe cardiac and renal diagnoses, does not constitute explicit evidence of an ongoing, actively managed *lipid disorder* (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 839,
+    "completion_tokens": 256
+  }
+}

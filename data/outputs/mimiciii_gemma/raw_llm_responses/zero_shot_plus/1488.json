@@ -1,0 +1,12 @@
+{
+  "sample_id": 1488,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of conditions like hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia, not just general risk factors or the use of lipid-lowering medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe acute infectious and inflammatory processes: Streptococcal septicemia, Severe sepsis, Septic shock, Acute respiratory failure, End stage renal disease, and various wound/infection complications. While the patient has Atrial fibrillation and Osteoarthrosis, these are not explicit lipid disorders.\n2. **Medications:** The patient is prescribed **Simvastatin** and **Clopidogrel**. Simvastatin is a statin, a medication used to manage hyperlipidemia. However, according to the strict instructions, the *use* of a statin alone is **NOT** sufficient evidence to predict a future diagnosis of a lipid disorder.\n3. **Risk Factors/Comorbidities:** The patient has several significant comorbidities, including End stage renal disease (ESRD) and Atrial fibrillation (AF). ESRD is often associated with metabolic disturbances, and AF is a cardiovascular risk",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1189,
+    "completion_tokens": 256
+  }
+}

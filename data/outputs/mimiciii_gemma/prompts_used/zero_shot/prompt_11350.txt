@@ -1,0 +1,42 @@
+[system]
+You are a medical expert specializing in metabolic and lipid disorders. Your task is to predict whether a patient will have Disorders of Lipid Metabolism diagnosed during their next hospital visit, based on the clinical record of their current visit.
+---
+[user]
+Task: Based on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Provide your prediction and reasoning.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+
+Important: Your task is NOT to predict general clinical risk or likelihood of dyslipidemia.
+
+Your task is to predict whether a diagnosis of "Disorders of Lipid Metabolism" will actually be coded in the patient's NEXT hospital visit.
+
+Follow these strict rules:
+
+- Answer "Yes" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).
+
+- DO NOT answer "Yes" based only on:
+  - Use of statins (e.g., Atorvastatin)
+  - Cardiovascular diseases (e.g., CHF, AF, CABG, CAD)
+  - General risk factors (e.g., hypertension, diabetes)
+
+- These factors alone are NOT sufficient to predict a future diagnosis.
+
+- If explicit lipid disorder evidence is absent, answer "No", even if the patient is high-risk.
+
+Always prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.
+
+[Current Visit Record]
+- Diagnoses made: Subarachnoid hemorrhage; Cerebral edema; Compression of brain; Cerebral artery occlusion, unspecified with cerebral infarction; Acute respiratory failure following trauma and surgery; Obstructive hydrocephalus; Unspecified pleural effusion; Candidiasis of mouth; Iatrogenic cerebrovascular infarction or hemorrhage; Unspecified protein-calorie malnutrition; Takotsubo syndrome; Unspecified essential hypertension; Pure hypercholesterolemia; Myalgia and myositis, unspecified; Esophageal reflux; Osteoporosis, unspecified; Asthma, unspecified type, unspecified
+- Medications prescribed: NORepinephrine; PHENYLEPHrine; Vancomycin; Iso-Osmotic Dextrose; CefePIME; 0.9% Sodium Chloride (Mini Bag Plus); Rocuronium; Fentanyl Citrate; Nystatin Oral Suspension; Insulin; Nimodipine; Heparin Flush (10 units/ml); 5% Dextrose; Heparin; Propofol; CeftriaXONE; Lactated Ringers; 0.9% Sodium Chloride; Acetaminophen; Omeprazole; Lorazepam; Bisacodyl; Lansoprazole Oral Disintegrating Tab; Fluticasone Propionate 110mcg; Albuterol Inhaler; Morphine Sulfate; Senna; Potassium Phosphate; Dexmedetomidine; Famotidine; LeVETiracetam; Atropine Sulfate; Acetaminophen IV; Ciprofloxacin IV; Iso-Osmotic Sodium Chloride; NiCARdipine IV; 0.83% Sodium Chloride; Sterile Water; Bag; Magnesium Sulfate; Calcium Gluconate; Sodium Chloride 0.9%  Flush; Potassium Chloride; Atorvastatin; Dextrose 50%; HydrALAzine; Docusate Sodium (Liquid); Glucagon; Chlorhexidine Gluconate 0.12% Oral Rinse; Albumin 5% (12.5g / 250mL)
+- Procedures performed: Other craniectomy; Temporary tracheostomy; Endovascular (total) embolization or occlusion of head and neck vessels; Insertion or replacement of external ventricular drain [EVD]; Angioplasty of other non-coronary vessel(s); Continuous invasive mechanical ventilation for 96 consecutive hours or more; Arteriography of cerebral arteries; Percutaneous [endoscopic] gastrostomy [PEG]; Enteral infusion of concentrated nutritional substances; Procedure on single vessel
+
+[Output Format]
+Your response MUST begin with exactly one of the following on the first line:
+Prediction: Yes
+or
+Prediction: No
+
+Then provide your reasoning below.

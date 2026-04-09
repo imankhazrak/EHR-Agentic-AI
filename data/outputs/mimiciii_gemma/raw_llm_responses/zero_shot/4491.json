@@ -1,0 +1,12 @@
+{
+  "sample_id": 4491,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record focuses heavily on infectious diseases (septicemia, pneumonia, septic shock, etc.), inflammatory conditions (pulmonary fibrosis), and general cardiovascular/neoplastic issues (diastolic heart failure, lymphomas). There is no explicit mention of lipid abnormalities, hypercholesterolemia, or hyperlipidemia in the diagnoses or ongoing management. The medications prescribed are primarily for infection, inflammation, and general support (e.g., Levofloxacin, CefTRIAXone, Furosemide, Insulin). Therefore, based strictly on the provided evidence, there is no strong and explicit basis to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 718,
+    "completion_tokens": 143
+  }
+}

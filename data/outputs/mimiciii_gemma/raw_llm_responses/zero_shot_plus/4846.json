@@ -1,0 +1,12 @@
+{
+  "sample_id": 4846,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors or the mere use of lipid-lowering medications like statins.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n2. **Risk Factors Present:** The patient has numerous significant risk factors and comorbidities commonly associated with lipid disorders, including:\n    * Diabetes with neurological manifestations, type II or unspecified type.\n    * Atherosclerosis of native arteries of the extremities with gangrene.\n    * Congestive heart failure.\n    * Atrial fibrillation.\n    * Chronic kidney disease.\n    * Old myocardial infarction.\n    * Hypertension (implied by multiple cardiovascular diagnoses and medications like Lisinopril/Nitroglycerin).\n3. **Medication Profile:** The patient is prescribed **Atorvastatin**, which is a lipid-lowering agent. However, according to the strict instructions, the mere prescription of a statin",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1121,
+    "completion_tokens": 256
+  }
+}

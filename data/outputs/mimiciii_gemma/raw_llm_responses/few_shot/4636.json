@@ -1,0 +1,12 @@
+{
+  "sample_id": 4636,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with hypercholesterolemia, there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, satisfying the criteria for answering \"Yes.\" The other diagnoses (Asthma, Acute respiratory failure, etc.) and medications (Potassium Chloride, Prednisone, etc.) are related to the acute respiratory and hypertensive issues, but the hypercholesterolemia diagnosis is the direct and sufficient evidence required by the instructions to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3584,
+    "completion_tokens": 186
+  }
+}

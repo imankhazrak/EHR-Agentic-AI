@@ -1,0 +1,12 @@
+{
+  "sample_id": 12330,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses and treatments related to a secondary malignant neoplasm of the brain and spinal cord, personal history of malignant melanoma, and associated supportive care (e.g., Dexamethasone, Pantoprazole, etc.). The medication profile includes supportive and anti-infective agents (e.g., Dolasetron Mesylate, Cefazolin, Heparin) and agents for managing symptoms related to the primary diagnosis (e.g., Acetaminophen, Morphine Sulfate, Levothyroxine Sodium).\n\nCrucially, the current visit record **lacks any explicit evidence** of an existing or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is receiving Levothyroxine Sodium, which can affect metabolism, and has other general health issues, the record does not contain the specific diagnostic or management markers required to predict a future coding of \"Disorders of Lipid Metabolism\" according to the strict guidelines provided.\n\nTherefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3549,
+    "completion_tokens": 234
+  }
+}

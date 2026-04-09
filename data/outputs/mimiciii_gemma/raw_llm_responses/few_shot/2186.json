@@ -1,0 +1,12 @@
+{
+  "sample_id": 2186,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include Diabetes with ketoacidosis, Acute kidney failure, Unspecified viral infection, Diabetes with neurological manifestations, Gastroparesis, Unspecified hereditary and idiopathic peripheral neuropathy, Toxic diffuse goiter, Unspecified viral hepatitis C, Anemia, Asthma, Esophageal reflux, Migraine, and Depressive disorder.\n\nThe medication profile includes Simvastatin, which is a lipid-lowering agent (a statin). The presence of Simvastatin is a strong indicator that the clinical team is managing a lipid abnormality, likely hypercholesterolemia, which falls under the definition of \"Disorders of Lipid Metabolism.\"\n\nHowever, the strict instructions provided for this prediction are crucial:\n1. The prediction must be based on **strong and explicit evidence** that a lipid disorder is present and likely to be diagnosed.\n2. The instructions explicitly state that the **use of statins (e.g., Simvastatin) alone is NOT sufficient** to predict a future diagnosis of the coded diagnosis, even if the clinical team is managing a lipid abnormality.\n3. The prediction must be based on **explicit lipid disorder evidence** being present, not just general",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 256
+  }
+}

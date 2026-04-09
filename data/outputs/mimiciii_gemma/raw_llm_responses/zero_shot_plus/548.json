@@ -1,0 +1,12 @@
+{
+  "sample_id": 548,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record.\n\n1. **Analysis of Current Visit Record for Lipid Disorder Evidence:**\nThe patient's current diagnoses explicitly include **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary form of lipid abnormality.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe prediction is **not** based solely on:\n*   Use of statins (No statins are explicitly listed in the medications prescribed).\n*   Cardiovascular diseases (While hypertension is present, the prediction is based on the explicit lipid diagnosis, not the hypertension alone).\n*   General risk factors (While hypertension is present, the prediction is based on the explicit lipid diagnosis, not the hypertension alone).\n\n3. **Conclusion for Future Diagnosis:**\nSince the patient is explicitly diagnosed with a lipid disorder (\"Pure hypercholesterolemia\") in the current visit, there is strong and explicit evidence that this condition is present and is highly likely to be coded as a diagnosis in the patient'",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 973,
+    "completion_tokens": 256
+  }
+}

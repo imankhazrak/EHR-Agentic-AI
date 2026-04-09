@@ -1,0 +1,12 @@
+{
+  "sample_id": 11886,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and treatments related to severe head trauma (Subdural hemorrhage, Subarachnoid hemorrhage, Delirium, Accidental fall, Closed fractures) and associated supportive care (mechanical ventilation, medications like Phenytoin, Labetalol, Atenolol). While the patient has a diagnosis of unspecified essential hypertension, there is no explicit evidence within the provided records\u2014such as abnormal lipid panel results, documented hypercholesterolemia, or hyperlipidemia\u2014to strongly and explicitly support the diagnosis of \"Disorders of Lipid Metabolism.\" The medications prescribed (e.g., Atenolol, Labetalol) and the presence of hypertension are general clinical risk factors, which, according to the strict guidelines, are insufficient to predict a future diagnosis of a lipid disorder. Therefore, based on the absence of explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 185
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2191,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details complex diagnoses related to uncontrolled Type I Diabetes, acute kidney failure, gastrointestinal issues, and associated complications (e.g., neuropathy, retinopathy, hypertension). While the patient is prescribed Simvastatin, this medication alone, along with the general risk factors present (like diabetes and hypertension), is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions require explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) to warrant a \"Yes\" prediction, which is absent in the provided diagnoses and procedures.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 811,
+    "completion_tokens": 136
+  }
+}

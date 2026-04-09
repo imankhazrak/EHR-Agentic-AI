@@ -1,0 +1,12 @@
+{
+  "sample_id": 821,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit and ongoing documentation of lipid abnormalities within the patient's current hospital visit record, which strongly indicates that this diagnosis is likely to be maintained or re-coded in the patient's next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is direct evidence of a lipid disorder being present.\n\n2. **Comorbid Conditions Supporting Lipid Diagnosis:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders, reinforcing the clinical relevance of this diagnosis:\n    * **Diabetes Mellitus:** The diagnosis of \"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\" is a major risk factor and comorbidity for dyslipidemia.\n    * **Hypertension:** The diagnosis of \"Unspecified essential hypertension\" is another common comorbidity associated with lipid abnormalities.\n    * **Cardiovascular Disease:** The presence of \"Congestive heart failure, unspecified\" and \"Mitral valve disorders\" indicates underlying cardiovascular stress, which is frequently linked to dyslipidemia.\n\n3. **Active Lipid Management:** The patient is actively managed for lipid issues, as evidenced by",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 256
+  }
+}

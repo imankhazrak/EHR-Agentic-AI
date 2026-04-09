@@ -1,0 +1,12 @@
+{
+  "sample_id": 12183,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current diagnoses listed are: Acute kidney failure, unspecified; Acidosis; Hyposmolality and/or hyponatremia; Urinary tract infection, site not specified; Other ascites; Hypovolemia; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, in remission; Personal history of tobacco use; Hypotension, unspecified; Awaiting organ transplant status.\nCrucially, **none of these listed diagnoses explicitly state a lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Evaluation Against Exclusion Criteria:**\nThe instructions explicitly state that the prediction cannot be based solely on:\n*   Use of statins (No statins are listed in the medications prescribed).\n*   Cardiovascular diseases (While the patient has hypotension and is awaiting transplant, these are not explicitly coded as primary lipid disorders like CAD or CHF).\n*   General risk factors (The patient has hypertension/hypotension and alcohol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1068,
+    "completion_tokens": 256
+  }
+}

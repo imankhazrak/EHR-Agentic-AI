@@ -1,0 +1,12 @@
+{
+  "sample_id": 11297,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, despite the presence of numerous other complex comorbidities.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis.\n\n2. **Active Lipid Management:** The patient is actively managed for lipid abnormalities, evidenced by the prescription of the lipid-lowering agent **\"Pravastatin\"**. The ongoing use of a statin confirms that the lipid disorder is not merely a historical risk factor but an actively managed, coded condition.\n\n3. **Comorbidities and Context:** While the patient suffers from numerous severe comorbidities (Acute on chronic systolic heart failure, End stage renal disease, Atrial fibrillation, etc.), the presence of the coded hyperlipidemia diagnosis and the active use of Pravastatin places the lipid disorder as a central, documented component of the patient's current and expected future care plan.\n\n4. **Exclusion Criteria Check:** The prediction is not",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1285,
+    "completion_tokens": 256
+  }
+}

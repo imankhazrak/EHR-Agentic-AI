@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The current visit record primarily details the management of Diabetes with ketoacidosis, type I [juvenile type].\n\nAnalysis of Current Visit Record:\n1. **Primary Diagnosis:** The main diagnosis is Diabetes with ketoacidosis, type I [juvenile type]. This is a severe acute metabolic condition requiring intensive care, which is consistent with the provided record.\n2. **Medications:** The prescribed medications are focused entirely on managing the acute diabetic crisis: Insulin, Potassium Chloride, NS, Neutra-Phos, Magnesium Sulfate, and D5 solutions. There is no mention of lipid-lowering agents such as statins or fibrates.\n3. **Procedures:** No procedures were performed.\n4. **Comorbidities/Risk Factors:** While Diabetes Mellitus is a known risk factor for developing lipid disorders, the current record does not explicitly state a diagnosis of hyperlipidemia, hypercholesterolemia, or any other specific lipid abnormality. The presence of diabetes alone, without explicit evidence of",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 912,
+    "completion_tokens": 256
+  }
+}

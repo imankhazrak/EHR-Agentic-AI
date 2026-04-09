@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, overriding general risk factors or medication use alone.\n\n1. **Explicit Lipid Disorder Evidence:** The patient's current diagnoses explicitly include **\"Pure hypercholesterolemia.\"** This is a direct and explicit diagnosis of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Evidence (Medication Management):** The patient is currently prescribed **\"Atorvastatin.\"** While the use of statins alone is not sufficient to predict a diagnosis, in conjunction with the explicit diagnosis of hypercholesterolemia, the prescription confirms active, targeted management of a lipid disorder.\n\n3. **Contextual Comorbidities:** The patient presents with several significant comorbidities, including Coronary atherosclerosis, Intermediate coronary syndrome, and Unspecified essential hypertension. These conditions are highly correlated with dyslipidemia, providing a strong clinical context for the existing diagnosis.\n\n4. **Conclusion:** Since the current record contains the explicit diagnosis of **\"Pure hypercholesterolemia,\"** which falls directly",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1104,
+    "completion_tokens": 256
+  }
+}

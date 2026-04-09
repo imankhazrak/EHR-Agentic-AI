@@ -1,0 +1,12 @@
+{
+  "sample_id": 11462,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record. This diagnosis directly meets the criteria for the prediction target, as hyperlipidemia is a core component of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the patient's current record provides strong contextual evidence supporting the likelihood of this diagnosis being maintained or re-coded in a subsequent visit:\n\n1. **Explicit Diagnosis:** The diagnosis \"Other and unspecified hyperlipidemia\" is explicitly listed under \"Diagnoses made.\" This is the strongest piece of evidence, as it directly codes the condition targeted by the prediction.\n2. **Comorbidities:** The patient exhibits multiple severe comorbidities that are strongly associated with lipid disorders, including:\n    * **Diabetes Mellitus:** Diagnosed with \"Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled\" and \"Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled.\" Diabetes is a major risk factor for dyslipidemia.\n    * **Hypertension:** Diagnosed with \"Unspecified essential hypertension.\"\n    * **Cardiovascular Disease:** Diagnosed with \"Chronic diastolic heart failure,\" \"Congestive heart failure",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1304,
+    "completion_tokens": 256
+  }
+}

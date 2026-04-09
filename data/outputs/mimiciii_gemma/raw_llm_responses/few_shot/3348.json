@@ -1,0 +1,12 @@
+{
+  "sample_id": 3348,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe metabolic and infectious issues, specifically Diabetes with ketoacidosis, uncontrolled, and associated renal manifestations and nephropathy. The medication profile includes various supportive and symptomatic treatments such as Prochlorperazine, Insulin, Ketorolac, and various antiemetics and pain medications. While the patient has comorbidities like Diabetes, which is a known risk factor for lipid disorders, the current record **lacks any explicit diagnosis or active management of a primary lipid disorder** (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Crucially, the record does not show the prescription of lipid-lowering agents like statins or fibrates, nor does it explicitly state a lipid abnormality as a diagnosis. Following the strict instructions provided, which mandate that a future diagnosis can only be predicted based on **explicit evidence** of an existing or actively managed lipid disorder, and not merely on general risk factors like uncontrolled diabetes, the prediction must be \"No\". The demonstration cases confirm that explicit lipid diagnoses (Case 2) lead to a \"Yes\" outcome, whereas the absence of such explicit evidence (Case 4, Case 5, Case 6) leads to a \"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3643,
+    "completion_tokens": 256
+  }
+}

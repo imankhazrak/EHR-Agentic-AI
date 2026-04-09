@@ -1,0 +1,12 @@
+{
+  "sample_id": 5635,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record:**\nThe patient's current diagnoses are: Diabetes with ketoacidosis, type II or unspecified type, uncontrolled; Acute pancreatitis; Infection and inflammatory reaction due to other vascular device, implant, and graft; Acute kidney failure, unspecified; Mixed acid-base balance disorder; Unspecified essential hypertension; Hyperosmolality and/or hypernatremia; Other and unspecified alcohol dependence, unspecified; and [ICD9-DX:2765].\n\n2. **Weighing Risk Factors vs. Explicit Lipid Disorder Evidence:**\nWhile the patient has several significant risk factors commonly associated with lipid disorders\u2014namely, **Diabetes with ketoacidosis, type II or unspecified type, uncontrolled** and **Unspecified essential hypertension**\u2014these conditions alone are explicitly excluded by the prediction guidelines as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n3. **Evaluation of Medication and Procedures:**\nThe current record shows **None recorded** for medications prescribed and procedures performed. Therefore",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 256
+  }
+}

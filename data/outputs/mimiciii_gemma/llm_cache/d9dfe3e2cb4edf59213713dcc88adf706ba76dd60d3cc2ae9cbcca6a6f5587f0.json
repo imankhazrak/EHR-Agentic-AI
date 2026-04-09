@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record is overwhelmingly focused on severe, acute critical care issues, including Septicemia due to anaerobes, Acute kidney failure with lesion of tubular necrosis, Pneumonia due to Pseudomonas, Ventilator associated pneumonia, Chronic respiratory failure, Complications of transplanted kidney, Severe sepsis, and Delirium. The patient's medication profile is dominated by broad-spectrum antibiotics (Vancomycin, Mycophenolate Mofetil, Tacrolimus, etc.), anti-septic/anti-coagulant agents (Heparin, Warfarin), and medications to manage acute organ failure and sepsis (Furosemide, Hydrocortisone Na Succ., etc.).\n\nCrucially, the current record **lacks explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Unspecified essential hypertension and Obesity, these are general risk factors, and according to the strict instructions, these factors alone are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication list includes Warfarin and Tacrolimus, which are used for anticoagulation and immunosuppression related to the transplanted kidney, respectively",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4001,
+    "completion_tokens": 256
+  }
+}

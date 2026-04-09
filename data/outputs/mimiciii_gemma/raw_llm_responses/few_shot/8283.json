@@ -1,0 +1,12 @@
+{
+  "sample_id": 8283,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious comorbidities. These include Hypertensive chronic kidney disease, acute kidney failure, pneumonia, various infections, and systemic autoimmune diseases (SLE, RA). The medication profile is complex, involving management for hypertension (Clonidine, Losartan, Diltiazem), cardiac issues (Nitroglycerin, Isosorbide, Metoprolol), diabetes (Insulin, Metformin), and infections (Levofloxacin, Vancomycin).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) or active, explicit management of such a condition, beyond general risk factors.\n\nReviewing the diagnoses made in the current visit record:\n- The diagnoses focus on renal, infectious, cardiac, and autoimmune pathology.\n- There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record.\n\nReviewing the medications prescribed:\n- While the patient is on several medications that *can* affect lipid levels (e.g., some anti-hypertensives or steroids),",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3844,
+    "completion_tokens": 256
+  }
+}

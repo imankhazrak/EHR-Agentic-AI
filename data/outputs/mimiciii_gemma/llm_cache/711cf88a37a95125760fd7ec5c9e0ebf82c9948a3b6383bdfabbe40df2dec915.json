@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several serious diagnoses and ongoing management for acute cardiovascular events, infections, and respiratory issues. Specifically, the diagnoses include Acute myocardial infarction of other inferior wall, Coronary atherosclerosis, and Unspecified essential hypertension. The patient is receiving various medications, including Atorvastatin, which is a lipid-lowering agent.\n\nHowever, based on the strict instructions provided, the mere prescription of a statin (Atorvastatin) or the presence of cardiovascular diseases (AMI, Coronary Atherosclerosis) and hypertension are NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the NEXT hospital visit.\n\nThe current record does not contain an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that would serve as strong and explicit evidence for a future coding. Therefore, adhering strictly to the prediction clarification rules, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3672,
+    "completion_tokens": 200
+  }
+}

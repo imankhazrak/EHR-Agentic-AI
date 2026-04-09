@@ -1,0 +1,12 @@
+{
+  "sample_id": 8707,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or comorbidities.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient has numerous serious diagnoses, including Observation following other accident, Acidosis, Acute alcoholic intoxication in alcoholism, unspecified, Epilepsy, unspecified, without mention of intractable epilepsy, Pain in joint, shoulder region, Lumbago, Chronic airway obstruction, not elsewhere classified, Unspecified essential hypertension, Other diseases of lung, not elsewhere classified, Hepatitis C carrier, Dysthymic disorder, Esophageal reflux, Diaphragmatic hernia without mention of obstruction or gangrene, and Old myocardial infarction.\n2. **Medications:** The prescribed medications are primarily supportive and critical care-related: Propofol, Heparin, Calcium Gluconate, Lorazepam, Iso-Osmotic Sodium Chloride, SW, Thiamine, D5W, NS, Famotidine, Potassium Chloride, Magnesium Sulfate",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1002,
+    "completion_tokens": 256
+  }
+}

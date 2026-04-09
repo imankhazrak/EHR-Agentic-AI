@@ -1,0 +1,12 @@
+{
+  "sample_id": 4422,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current hospital visit record primarily details diagnoses and management related to acute duodenal ulcer with hemorrhage, chronic airway obstruction, and related gastrointestinal and procedural complications (e.g., partial gastrectomy, total splenectomy, portal hypertension). While the patient is receiving various medications and undergoing extensive procedures, there is no explicit evidence within the provided diagnoses or management plan that points to an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The management focuses on ulcer healing, anemia, and airway/gastrointestinal issues, not lipid abnormalities. Therefore, based on the strict criteria, a diagnosis of \"Disorders of Lipid Metabolism\" is not explicitly supported for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 862,
+    "completion_tokens": 150
+  }
+}

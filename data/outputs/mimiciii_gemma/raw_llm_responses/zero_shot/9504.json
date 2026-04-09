@@ -1,0 +1,12 @@
+{
+  "sample_id": 9504,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to valvular heart disease (Mitral valve stenosis, Aortic valve stenosis, Rheumatic heart disease) and cardiac rhythm disturbances (Atrial fibrillation), along with associated management (anticoagulants, pulmonary heart diseases). The medications and procedures are overwhelmingly focused on these cardiac and pulmonary conditions. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis or ongoing management related to lipid abnormalities in the provided record. Therefore, based strictly on the evidence provided, there is no strong and explicit basis to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 762,
+    "completion_tokens": 137
+  }
+}

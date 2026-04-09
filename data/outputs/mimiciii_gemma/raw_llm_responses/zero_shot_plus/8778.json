@@ -1,0 +1,12 @@
+{
+  "sample_id": 8778,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on whether explicit evidence of a lipid disorder is present in the current record, not just general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are heavily focused on severe cardiovascular disease (Congestive heart failure, Combined systolic and diastolic heart failure, Chronic ischemic heart disease, Coronary atherosclerosis, Atrial fibrillation, Mitral valve disorders) and associated comorbidities (Chronic kidney disease, Rheumatoid arthritis, Depressive disorder).\nCrucially, there is **no explicit diagnosis** of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) listed among the current diagnoses.\n\n2. **Analysis of Medications Prescribed:**\nThe medication list includes several drugs relevant to cardiovascular and metabolic management (e.g., Warfarin, Digoxin, Carvedilol, Captopril, Furosemide, Amiodarone).\nWhile the patient is on **Aspirin**, which is often used in high-risk patients,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1086,
+    "completion_tokens": 256
+  }
+}

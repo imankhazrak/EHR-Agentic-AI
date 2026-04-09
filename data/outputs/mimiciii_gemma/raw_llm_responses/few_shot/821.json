@@ -1,0 +1,12 @@
+{
+  "sample_id": 821,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains multiple explicit indicators of lipid abnormalities that strongly suggest a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Diagnosis of Hyperlipidemia:** The record explicitly lists the diagnosis: \"**Other and unspecified hyperlipidemia**.\" This is the most direct and strongest evidence required by the instructions.\n2. **Presence of Lipid-Lowering Medication:** The patient is prescribed \"**Atorvastatin**\" and \"**Rosiglitazone Maleate**\" (a thiazolidinedione, often used in conjunction with lipid management in diabetic patients). While the instructions caution against relying *only* on statins, the combination of an *explicit diagnosis* of hyperlipidemia *and* the prescription of a lipid-lowering agent provides overwhelming evidence that this condition is actively managed and will be coded in the next visit.\n3. **Comorbid Conditions:** The patient also has \"**Diabetes mellitus without mention of complication, type II or unspecified type**\" and \"**Unspecified essential hypertension**,\" which are well-known risk factors and comorbidities associated with hyperlipidemia, further supporting the clinical reality of the condition.\n\nGiven the explicit diagnosis of \"Other and unspecified hyperlipidemia\" in the current record, the evidence",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3636,
+    "completion_tokens": 256
+  }
+}

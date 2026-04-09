@@ -1,0 +1,12 @@
+{
+  "sample_id": 153,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Visit Record:**\nThe patient's current diagnoses include:\n*   [ICD9-DX:2880] (This code is not explicitly defined in the context, but is listed as a diagnosis).\n*   Autoimmune hemolytic anemias.\n*   Thrombocytopenia, unspecified.\n*   Systemic lupus erythematosus (SLE).\n*   Unspecified essential hypertension.\n\nThe patient's medication profile is \"None recorded.\" Procedures performed include a Biopsy of bone marrow and a Biopsy of lymphatic structure.\n\n2. **Evaluation Against Prediction Criteria:**\nThe guidelines explicitly state that a prediction of \"Yes\" can *only* be made if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia, lipid disorder diagnosis, or clear ongoing management of such condition).\n\nThe current record **does not contain** any explicit diagnosis of a lipid disorder (such as hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 864,
+    "completion_tokens": 256
+  }
+}

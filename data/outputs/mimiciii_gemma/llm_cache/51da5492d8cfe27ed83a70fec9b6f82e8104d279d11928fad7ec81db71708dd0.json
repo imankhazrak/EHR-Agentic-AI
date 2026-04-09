@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include Pneumonia, Acute kidney failure, multiple forms of heart failure (Acute on chronic combined systolic and diastolic heart failure, Congestive heart failure, unspecified), Urinary tract infection, Intestinal infection due to Clostridium difficile, multiple pulmonary issues (Other pulmonary embolism and infarction, Other specified hypotension), and various infectious and inflammatory conditions (Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus], Polymyalgia rheumatica, Intestinal infection due to Clostridium difficile).\n\nThe patient is also managed for several severe cardiovascular and metabolic issues, including Acute myocardial infarction, Atrial fibrillation, Coronary atherosclerosis, and Unspecified essential hypertension. Furthermore, the patient has other metabolic diagnoses such as Disorders of phosphorus metabolism and Hypocalcemia.\n\nCrucially, the instructions strictly limit the prediction to the explicit coding of a \"Disorders of Lipid Metabolism\" diagnosis in the *next* visit, and explicitly exclude basing the prediction on:\n1. The use of statins (e.g., Atorvastatin).\n2. Cardiovascular diseases (e.g., CHF, AF, CABG, CAD",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3873,
+    "completion_tokens": 256
+  }
+}

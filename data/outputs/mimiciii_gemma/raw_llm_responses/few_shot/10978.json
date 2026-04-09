@@ -1,0 +1,12 @@
+{
+  "sample_id": 10978,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the diagnosis of \"Pure hypercholesterolemia\" is explicitly present in the current record, there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, satisfying the criteria for answering \"Yes.\" The other diagnoses (Acute pancreatitis, Alcohol withdrawal, Pneumonia, Hyperosmolality, Hypotension, Unspecified sleep apnea, Unspecified essential hypertension) are general or acute conditions, but the presence of the specific lipid diagnosis overrides the need to rely on general risk factors or the use of medications (which were not recorded). Therefore, the explicit evidence of hypercholesterolemia strongly supports a future diagnosis of Disorders of Lipid Metabolism.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3502,
+    "completion_tokens": 215
+  }
+}

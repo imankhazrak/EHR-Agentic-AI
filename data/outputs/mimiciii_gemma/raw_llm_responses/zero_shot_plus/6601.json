@@ -1,0 +1,12 @@
+{
+  "sample_id": 6601,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record.\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\nThe current visit record explicitly lists the diagnosis: **\"Pure hypercholesterolemia\"**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary component of this disorder.\n\n2. **Evaluation of Supporting Evidence (Contextual Analysis):**\nWhile the explicit diagnosis is the strongest evidence, the current record provides significant contextual support that reinforces the likelihood of this diagnosis being maintained or re-coded in the next visit:\n* **Medication Management:** The patient is prescribed **\"Pravastatin\"**, which is a statin medication specifically used for the management of hypercholesterolemia and dyslipidemia. The ongoing prescription of this targeted therapy strongly indicates that the underlying lipid abnormality is considered active and requires continued management.\n* **Comorbidities:** The patient exhibits multiple severe atherosclerotic conditions (Occlusion and stenosis of multiple and bilateral precerebral arteries; Coronary atherosclerosis; Atherosclerosis of renal artery; Atherosclerosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 999,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9759,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by severe, complex medical conditions including acute kidney failure, hepatorenal syndrome, hepatic encephalopathy, portal hypertension, and alcoholic cirrhosis. While the patient has uncontrolled diabetes and is on insulin, and has other general risk factors, there is no explicit evidence in the current diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The factors present (diabetes, general risk factors) are insufficient on their own to meet the explicit evidence threshold.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 943,
+    "completion_tokens": 144
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record explicitly includes the diagnosis of **Pure hypercholesterolemia**.\n\nAccording to the strict rules provided, the prediction must be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The diagnosis of \"Pure hypercholesterolemia\" directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it is a specific lipid abnormality.\n\nWhile the patient has numerous other comorbidities (e.g., Hemoperitoneum, Malignant neoplasm, CHF, Diabetes mellitus, Hypertension, Atrial fibrillation), these factors alone would not be sufficient to predict a future diagnosis according to the instructions. However, the explicit diagnosis of **Pure hypercholesterolemia** provides the necessary strong and explicit evidence that a lipid disorder is present and actively managed/diagnosed in the current setting, making it highly likely that this diagnosis, or a related lipid disorder, will be coded in the next hospital visit.\n\nThe presence of this explicit lipid diagnosis overrides the limitations set by the instructions regarding general risk factors or the mere use of lipid-affecting medications (like statins, which are",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1063,
+    "completion_tokens": 256
+  }
+}

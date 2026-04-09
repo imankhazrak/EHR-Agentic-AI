@@ -1,0 +1,12 @@
+{
+  "sample_id": 11209,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like hypertension or diabetes.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record is extensive, detailing numerous severe comorbidities, including:\n*   Cardiovascular issues: Acute on chronic combined systolic and diastolic heart failure; Congestive heart failure, unspecified; Coronary atherosclerosis of native coronary artery; Peripheral vascular disease, unspecified.\n*   Metabolic/Renal issues: Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Chronic kidney disease, Stage III (moderate); Hypertensive chronic kidney disease, unspecified.\n*   Other severe conditions: Obesity hypoventilation syndrome; Anemia, unspecified; Bipolar I disorder; Rheumatoid arthritis; Schizoaffective disorder.\n\nWhile the patient has multiple risk factors strongly associated with lipid disorders (Diabetes, Obesity, Hypertension, Coronary Atherosclerosis), **there is no explicit diagnosis of a lipid abnormality** (e.g., hypercholesterolemia, hyperlipidemia, or a specific",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1318,
+    "completion_tokens": 256
+  }
+}

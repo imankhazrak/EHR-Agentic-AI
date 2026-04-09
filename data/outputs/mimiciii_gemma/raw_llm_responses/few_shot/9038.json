@@ -1,0 +1,12 @@
+{
+  "sample_id": 9038,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" While the patient also has numerous other high-risk conditions (Aortic valve disorders, Coronary atherosclerosis, Diabetes mellitus, Hypertension), these factors alone are insufficient to meet the prediction criteria. The coded diagnosis of hyperlipidemia directly satisfies the requirement for strong and explicit evidence of an existing lipid disorder. Therefore, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3585,
+    "completion_tokens": 127
+  }
+}

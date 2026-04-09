@@ -1,0 +1,12 @@
+{
+  "sample_id": 4372,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is heavily focused on severe cardiovascular and pulmonary issues. The primary diagnoses include Paroxysmal ventricular tachycardia, Other primary cardiomyopathies, Coronary atherosclerosis, and Old myocardial infarction. The medications prescribed reflect management for these conditions (Metoprolol XL, Lidocaine, Amiodarone HCl, Quinapril, Heparin, Aspirin, etc.).\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication is a treatment for hypercholesterolemia/hyperlipidemia, which falls under the definition of \"Disorders of Lipid Metabolism.\" However, the strict instructions state that the mere **use of statins** is **NOT sufficient** to predict a future diagnosis of the disorder itself, even if the patient is high-risk.\n\nFurthermore, the current diagnoses **do not explicitly state** a lipid disorder (e.g., \"Hypercholesterolemia\" or \"Hyperlipidemia\") as a primary or secondary diagnosis. The presence of Atorvastatin is a *management strategy* for a potential lipid disorder, not an *explicit diagnosis* of the disorder itself in the current record.\n\nComparing this to the demonstration cases:\n*   Case 1, 2, and 3",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3486,
+    "completion_tokens": 256
+  }
+}

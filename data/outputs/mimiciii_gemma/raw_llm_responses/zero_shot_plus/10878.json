@@ -1,0 +1,12 @@
+{
+  "sample_id": 10878,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of a lipid disorder present in the current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the diagnosis: **Pure hypercholesterolemia**. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it is a specific lipid abnormality.\n\n2. **Supporting Evidence (Management/Comorbidities):** While the explicit diagnosis is sufficient, the record also contains supporting evidence that reinforces the clinical context of a lipid disorder:\n    * **Lipid Management:** The patient is prescribed **Simvastatin**, a medication specifically used for managing hypercholesterolemia.\n    * **Comorbidities:** The patient has multiple cardiovascular and metabolic comorbidities, including **Coronary atherosclerosis of native coronary artery** and **Unspecified essential hypertension**, which are strongly associated with dyslipidemia.\n\n3. **Conclusion:** Because the current record contains the explicit diagnosis of **Pure hypercholesterolemia**, which is a direct manifestation of a lipid disorder, there is strong and explicit evidence that this diagnosis will be maintained",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1231,
+    "completion_tokens": 256
+  }
+}

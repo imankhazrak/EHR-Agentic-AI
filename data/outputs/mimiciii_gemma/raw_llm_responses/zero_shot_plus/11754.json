@@ -1,0 +1,12 @@
+{
+  "sample_id": 11754,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly look for explicit evidence of an existing or actively managed lipid disorder, not just general risk factors.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are: Methicillin susceptible pneumonia due to Staphylococcus aureus; Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Bacteremia; Other specified cardiac dysrhythmias; Unspecified essential hypertension; Long-term (current) use of insulin; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Alcohol abuse, unspecified.\nWhile the patient has **Unspecified essential hypertension** and **Diabetes with ketoacidosis, type I**, these are recognized risk factors for lipid disorders, but they do not constitute an explicit diagnosis of a lipid disorder (like hypercholesterolemia or hyperlipidemia) in the current record.\n\n2. **Analysis of Medications Prescribed:**\nThe medications prescribed include Insulin, Levofloxacin, 0.9% Sodium Chloride, Insulin Human Regular, Albuterol, Ipratropium Bromide, Heparin Flush, Iso",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1115,
+    "completion_tokens": 256
+  }
+}

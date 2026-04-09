@@ -1,0 +1,12 @@
+{
+  "sample_id": 7443,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care diagnoses, including Other septicemia due to gram-negative organisms, Other shock without mention of trauma, Cholangitis, Acidosis, Acute respiratory failure, and Diabetes mellitus. While the patient has a history of Unspecified essential hypertension and Diabetes mellitus, these are general risk factors and do not constitute explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) in the current record. The medication profile is empty, meaning there is no current management of a lipid disorder via drugs like statins or fibrates. Based on the strict instructions, which require explicit evidence of a lipid disorder to predict a future diagnosis, the absence of such evidence in the current record leads to the prediction of \"No,\" despite the patient's high-risk status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3500,
+    "completion_tokens": 182
+  }
+}

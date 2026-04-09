@@ -1,0 +1,12 @@
+{
+  "sample_id": 8718,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of \"Other and unspecified hyperlipidemia\" constitutes strong and explicit evidence of a lipid disorder. Furthermore, the patient is receiving \"Simvastatin,\" which is a medication used for managing hyperlipidemia. While the patient has numerous other severe comorbidities (Subendocardial infarction, Congestive heart failure, Atrial fibrillation, Cardiogenic shock, etc.), the presence of the explicit hyperlipidemia diagnosis overrides the general risk factors and the use of statins alone, satisfying the criteria for a strong and explicit prediction of a future diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 136
+  }
+}

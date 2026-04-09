@@ -1,0 +1,12 @@
+{
+  "sample_id": 1369,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid abnormalities in the current visit record, which strongly indicates that this condition is actively being managed and is highly likely to be coded again in the next visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is direct evidence of a lipid disorder being present in the patient's current state.\n\n2. **Active Lipid Management:** The patient's medication profile confirms active management of lipid issues. The record includes the prescription of **\"Pravastatin\"** and **\"Atorvastatin\"**, which are both high-intensity statins used specifically for treating hyperlipidemia.\n\n3. **Comorbid Conditions:** The presence of other metabolic and cardiovascular comorbidities, such as **\"Diabetes mellitus without mention of complication, type II or unspecified type\"** and **\"Atherosclerosis of native arteries of the extremities with ulceration\"**, are strong risk factors and are commonly associated with, and often co-diagnosed with, hyperlipidemia.\n\n4. **Conclusion:** Because the patient currently has an explicit diagnosis of hyperlipidemia and is receiving specific, targeted pharmacological treatment (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1149,
+    "completion_tokens": 256
+  }
+}

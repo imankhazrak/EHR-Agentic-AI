@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to respiratory failure, cardiac failure, and end-stage renal disease (ESRD). The primary diagnoses are: Chronic obstructive asthma with (acute) exacerbation, Acute on chronic diastolic heart failure, End stage renal disease, Hypertensive chronic kidney disease, Pulmonary collapse, and Congestive heart failure.\n\nWhile the patient has several significant risk factors for lipid disorders, such as Diabetes Mellitus (Type II, unspecified) and Hypertension (leading to CKD Stage V/ESRD), these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication profile includes Simvastatin, which is a lipid-lowering agent (a statin). However, the instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\n\nFurthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia coded in the current visit record. The current record focuses on managing acute respiratory and cardiac decompensation alongside renal failure.\n\nTherefore, based on the strict criteria requiring explicit evidence of an existing",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3640,
+    "completion_tokens": 256
+  }
+}

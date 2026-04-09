@@ -1,0 +1,12 @@
+{
+  "sample_id": 7286,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses listed are: [ICD9-DX:5185] (which is not explicitly defined in the context but is listed), Acute and subacute bacterial endocarditis, Other specified septicemias, [ICD9-DX:7070] (Cirrhosis of liver without mention of alcohol), Rheumatic heart failure (congestive), Pneumonia due to Klebsiella pneumoniae, Unspecified pleural effusion, and Candidiasis of mouth.\nCrucially, **none of the explicitly listed diagnoses** point to a primary or active diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality (CCS category 53).\n\n2. **Analysis of Medications and Procedures:**\nThe medication list is extensive, covering infectious disease management (Vancomycin, Gentamicin, Meropenem), cardiac support (Alteplase, Norepinephrine, Captopril, Furosemide), and general supportive care.\nThe",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1206,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 6374,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not merely on risk factors, diabetes, or hypertension.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly focused on severe chronic conditions: End stage renal disease (ESRD), Hypertensive chronic kidney disease (CKD Stage V), various forms of diabetes (Type I, with renal, neurological, and ophthalmic manifestations), pulmonary issues (Pleural effusion, Pulmonary collapse), and associated complications (Gastroparesis, Polyneuropathy, Diabetic retinopathy).\n2. **Medications:** The prescribed medications include agents for renal management (Lisinopril, NIFEdipine CR, Nephrocaps), diabetes control (Insulin), blood pressure control (Labetalol, Minoxidil), and gastrointestinal/pulmonary support (Pantoprazole, Senna, Docusate Sodium, Ondansetron).\n3",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 256
+  }
+}

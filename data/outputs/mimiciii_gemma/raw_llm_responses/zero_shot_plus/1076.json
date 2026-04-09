@@ -1,0 +1,12 @@
+{
+  "sample_id": 1076,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of statins.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on severe cardiopulmonary disease: Acute respiratory failure, Congestive heart failure, unspecified, Chronic airway obstruction, not elsewhere classified, Other primary cardiomyopathies, Mitral valve disorders, Primary pulmonary hypertension, Unspecified essential hypertension, and Major depressive affective disorder, recurrent episode, unspecified. There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the diagnoses made.\n\n2. **Medications:** The patient is prescribed **Atorvastatin**, which is a lipid-lowering agent. However, according to the strict instructions, the mere use of a statin is **NOT sufficient** evidence to predict a future diagnosis of the underlying lipid disorder. The other medications (Risperidone, Citalopram Hydro",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1028,
+    "completion_tokens": 256
+  }
+}

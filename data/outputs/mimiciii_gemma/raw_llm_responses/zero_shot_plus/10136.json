@@ -1,0 +1,12 @@
+{
+  "sample_id": 10136,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Other and unspecified hyperlipidemia\" in the patient's current visit record, which directly meets the criteria for evidence of an existing lipid disorder.\n\nFurthermore, the patient's current record provides multiple strong contextual factors that support the likelihood of this diagnosis being maintained or explicitly coded in the next visit:\n\n1. **Explicit Lipid Diagnosis:** The diagnosis \"Other and unspecified hyperlipidemia\" is explicitly listed under diagnoses made. This is the strongest piece of evidence, as it directly confirms the presence of a lipid abnormality that falls under the scope of \"Disorders of Lipid Metabolism.\"\n\n2. **Comorbidities Supporting Lipid Risk:** The patient exhibits several significant comorbidities strongly associated with hyperlipidemia and metabolic syndrome:\n    * **Obesity and BMI:** The patient is diagnosed with \"Morbid obesity\" and a high BMI (\"Body Mass Index 45.0-49.9, adult\"), which are major risk factors for dyslipidemia.\n    * **Metabolic Conditions:** The patient has \"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\" and \"Unspecified essential hypertension,\" both of which are strongly linked to dyslipidemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1296,
+    "completion_tokens": 256
+  }
+}

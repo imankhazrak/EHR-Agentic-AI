@@ -1,0 +1,12 @@
+{
+  "sample_id": 11546,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\"\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are:\n1. Malignant neoplasm of thyroid gland\n2. Secondary and unspecified malignant neoplasm of lymph nodes of head, face, and neck\n3. Secondary malignant neoplasm of other respiratory organs\n4. Other diseases of lung, not elsewhere classified\n5. Personal history of tobacco use\n\nThe patient's medication profile is:\n- None recorded.\n\nThe patient's procedures performed are:\n- Radical laryngectomy.\n\nEvaluation against Prediction Rules:\nThe strict rules for predicting \"Yes\" require strong and explicit evidence of an existing or actively managed lipid disorder. The current record contains no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality diagnosis.\n\nThe patient's comorbidities are primarily related to advanced malignancy (thyroid cancer, lymph node involvement, lung cancer) and tobacco use. While these conditions are associated with general cardiovascular risk, they do not constitute explicit evidence of a coded",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 871,
+    "completion_tokens": 256
+  }
+}

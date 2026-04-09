@@ -1,0 +1,12 @@
+{
+  "sample_id": 7262,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to acute alcohol intoxication, withdrawal delirium, bipolar disorder, and various musculoskeletal/intoxication symptoms (e.g., chest pain, joint pain, falls). The prescribed medications are primarily for managing these acute conditions (e.g., Lorazepam, Diazepam, Metoprolol, Thiamine HCl, Acetaminophen, Oxycodone).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is not sufficient evidence on its own to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe presence of Atenolol (a beta-blocker) and Metoprolol (also a beta-blocker) are relevant to cardiovascular health, but their use in this context is primarily related to managing hypertension or general cardiac symptoms associated with intoxication/withdrawal, not necessarily indicating an underlying, actively managed lipid disorder that would be coded in the next visit.\n\nTherefore, based on the strict requirement to only predict",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3579,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of cardiovascular diseases, or the use of statins.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Intestinal infection due to other organism, not elsewhere classified; Human immunodeficiency virus [HIV] disease; Drug-induced delirium; Other specified analgesics and antipyretics causing adverse effects in therapeutic use; Dermatitis due to drugs and medicines taken internally; Ulcer of heel and midfoot; Acute kidney failure, unspecified.\n\nReview of Comorbid Conditions and Medications:\nThe current record does not explicitly list any diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the patient's medication profile is recorded as \"None recorded,\" meaning there is no evidence of ongoing lipid-lowering therapy (such as statins or fibrates) that would strongly suggest an actively managed lipid disorder. The listed comorbidities (HIV, AKI, infections)",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 911,
+    "completion_tokens": 256
+  }
+}

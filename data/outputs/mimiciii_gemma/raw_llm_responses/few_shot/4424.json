@@ -1,0 +1,12 @@
+{
+  "sample_id": 4424,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and life-threatening conditions, primarily related to respiratory failure, cardiac failure, kidney failure, and severe infections (Bacteremia, Pneumonia). The medication profile is extensive and focused on managing these acute crises (e.g., Diltiazem, Atenolol, Furosemide, Warfarin, Vancomycin, etc.).\n\nCrucially, the current record **lacks explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several high-risk comorbidities commonly associated with lipid disorders\u2014namely **Morbid obesity** and **Hypertension** (managed with Losartan and Atenolol)\u2014and is on **Aspirin**, these factors alone, as per the strict instructions, are **insufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that factors like general risk factors (hypertension, obesity) or the use of cardiovascular medications (Aspirin) are **NOT** sufficient to predict a future diagnosis. Since there is no explicit diagnosis or clear ongoing management of a lipid abnormality in the current",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3830,
+    "completion_tokens": 256
+  }
+}

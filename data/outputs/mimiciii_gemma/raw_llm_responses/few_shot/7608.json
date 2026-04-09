@@ -1,0 +1,12 @@
+{
+  "sample_id": 7608,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains several strong indicators that a diagnosis of \"Disorders of Lipid Metabolism\" is likely to be coded in the next hospital visit, despite the absence of an explicit lipid disorder diagnosis in the current record. The reasoning is based on the interplay of high-risk comorbidities and the active management of cardiovascular disease, which strongly suggests underlying dyslipidemia.\n\n1. **High-Risk Comorbidities:** The patient has multiple severe, chronic conditions that are intrinsically linked to dyslipidemia:\n    * **Coronary Atherosclerosis:** This is a direct manifestation of chronic vascular disease, which is the primary pathology associated with hyperlipidemia.\n    * **Acute Myocardial Infarction (AMI):** AMI is a major clinical event strongly correlated with underlying atherosclerotic plaque instability, which is driven by dyslipidemia.\n    * **Tobacco Use Disorder:** This is a significant, independent risk factor for both atherosclerosis and dyslipidemia.\n\n2. **Active Cardiovascular Management:** The patient is receiving aggressive treatment for severe cardiovascular events, which necessitates the management of associated metabolic risks:\n    * **Aortocoronary Bypass Status:** This indicates severe, established coronary artery disease, a condition almost universally associated with long-standing hyperlipidemia",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3810,
+    "completion_tokens": 256
+  }
+}

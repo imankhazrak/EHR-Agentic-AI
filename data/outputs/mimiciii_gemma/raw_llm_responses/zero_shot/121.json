@@ -1,0 +1,12 @@
+{
+  "sample_id": 121,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous severe, life-threatening conditions, including sepsis, multiple organ failure (AKI, HE), cardiac issues (PVT), and severe infections. However, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis) is absent from the provided diagnoses and procedures. While the patient is receiving Ezetimibe, which is used to manage lipid abnormalities, the presence of this medication alone, or the general high-risk status derived from other comorbidities, is insufficient to meet the strict criteria for predicting a future diagnosis of a lipid disorder based on the provided rules. Therefore, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 160
+  }
+}

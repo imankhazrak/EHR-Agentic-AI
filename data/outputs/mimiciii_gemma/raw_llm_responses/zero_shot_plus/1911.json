@@ -1,0 +1,12 @@
+{
+  "sample_id": 1911,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\"\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are primarily related to severe acute illness: Hepatic encephalopathy, Alcoholic cirrhosis of liver, Pneumonia, Acidosis, Hyperosmolality, UTI, and Candidiasis. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality in the current diagnosis list.\n2. **Medications:** The medication list is extensive and focuses on managing severe acute complications of liver failure, infection, and acidosis (e.g., Lactulose, Albumin, Antibiotics, Bicarbonate, etc.). There are no medications prescribed that are specifically for lipid management (such as statins or fibrates).\n3. **Procedures:** The procedures performed are related to critical care management (e.g., mechanical ventilation, nutritional infusions, transfusions). These procedures do not provide direct evidence of an existing lipid disorder.\n\nConclusion:\nThe patient's current clinical picture is dominated by",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1189,
+    "completion_tokens": 256
+  }
+}

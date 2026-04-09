@@ -1,0 +1,12 @@
+{
+  "sample_id": 9305,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses are focused on Malignant neoplasm of parietal lobe, Other convulsions, and Unspecified essential hypertension. The medications prescribed are primarily for managing these conditions, along with supportive care (Dexamethasone, D5W, etc.). While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is not sufficient evidence to predict a future diagnosis of Disorders of Lipid Metabolism. Furthermore, the medication profile does not include any explicit lipid-lowering agents (like statins or fibrates) that would strongly suggest an ongoing, actively managed lipid disorder. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3501,
+    "completion_tokens": 183
+  }
+}

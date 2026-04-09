@@ -1,0 +1,12 @@
+{
+  "sample_id": 3512,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care events, including Subendocardial infarction, Shock, Hyperpotassemia, and End stage renal disease (ESRD). The primary focus of the current care is managing these life-threatening metabolic and cardiovascular crises.\n\nWhile the patient is prescribed **Simvastatin** (a lipid-lowering agent) and has a history of **Hypertensive chronic kidney disease**, these factors alone, as per the strict instructions, are insufficient to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded in the next visit.\n\nThe instructions explicitly state that the use of statins (like Simvastatin) and general risk factors (like hypertension/CKD) are **NOT** sufficient evidence to predict a future diagnosis.\n\nFurthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record that would strongly and explicitly warrant a future diagnosis based on the provided criteria. The current diagnoses are overwhelmingly focused on renal failure, cardiac events, and electrolyte imbalance.\n\nTherefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3621,
+    "completion_tokens": 249
+  }
+}

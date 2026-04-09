@@ -1,0 +1,12 @@
+{
+  "sample_id": 4021,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Lipid Disorder Diagnosis:** The current diagnoses explicitly list **\"Other and unspecified hyperlipidemia.\"** This meets the primary criterion for predicting a future diagnosis, as it confirms the presence of the condition itself, rather than just risk factors or medication use.\n\n2. **Supporting Comorbidities:** The patient also presents with several strong comorbidities commonly associated with lipid disorders, which further contextualize the diagnosis:\n    * **Diabetes Mellitus:** The presence of **\"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\"** is a major risk factor and comorbidity frequently linked to dyslipidemia.\n    * **Cardiovascular Disease:** Diagnoses such as **\"Coronary atherosclerosis of native coronary artery\"** and **\"Congestive heart failure, unspecified\"** are classic manifestations of metabolic syndrome, which includes hyperlipidemia.\n    * **Hypertension:** **\"Unspecified essential hypertension\"** is another key component of the metabolic profile.\n\n3. **Medication Management:** The patient is currently prescribed **\"Ator",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3749,
+    "completion_tokens": 256
+  }
+}

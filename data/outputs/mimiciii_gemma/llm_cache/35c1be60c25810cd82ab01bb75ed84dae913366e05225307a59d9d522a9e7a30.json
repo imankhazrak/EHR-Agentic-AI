@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several severe, life-threatening conditions, including Diabetes with neurological manifestations, End stage renal disease, Hypertensive chronic kidney disease, Bacteremia, Gastroparesis, and Coronary atherosclerosis. The medication list includes Atorvastatin, which is a lipid-lowering agent, and Aspirin/Clopidogrel, which are antiplatelet agents.\n\nHowever, according to the strict instructions provided, the mere prescription of a statin (Atorvastatin) or the presence of cardiovascular diseases (Coronary atherosclerosis) or general risk factors (Diabetes) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nThe current diagnoses do not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipoid Metabolism Disorder.\" While the patient is clearly high-risk and is being managed with lipid-lowering medication, the explicit diagnostic evidence required by the instructions is absent. Therefore, based on the strict criteria, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3621,
+    "completion_tokens": 231
+  }
+}

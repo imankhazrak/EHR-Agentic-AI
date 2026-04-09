@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses related to neurological issues (Subdural hemorrhage, Compression of brain), coagulation disorders (Acquired coagulation factor deficiency, Immune thrombocytopenpura), liver disease (Cirrhosis of liver without mention of alcohol, Portal hypertension), and cardiovascular issues (Chronic diastolic heart failure, Atrial fibrillation). While the patient is on medications like Cholestyramine and Allopurinol, which are used to manage lipid-related issues, these medications alone, along with the general high-risk status derived from the other diagnoses (e.g., Cirrhosis, CHF), do not constitute explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of these medications is insufficient evidence to meet the strict threshold for predicting a future diagnosis of a lipid disorder.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 880,
+    "completion_tokens": 202
+  }
+}

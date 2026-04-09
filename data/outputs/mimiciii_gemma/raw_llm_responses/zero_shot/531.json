@@ -1,0 +1,12 @@
+{
+  "sample_id": 531,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly lists diagnoses such as Acute kidney failure, Duodenal ulcer, Diabetes mellitus, and Anemia. The medications prescribed include Sevelamer, Pantoprazole, Insulin, Metoprolol, and Heparin, which are related to these conditions. However, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis in the current record. Therefore, based on the strict criteria requiring explicit evidence of an existing or actively managed lipid disorder, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 600,
+    "completion_tokens": 114
+  }
+}

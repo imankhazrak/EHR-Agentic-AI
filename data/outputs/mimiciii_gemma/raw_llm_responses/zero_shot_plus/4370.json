@@ -1,0 +1,12 @@
+{
+  "sample_id": 4370,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record provided pertains to a single liveborn infant who was delivered via cesarean section and presented with several neonatal conditions, including \"Other 'heavy-for-dates' infants,\" \"Unspecified fetal and neonatal jaundice,\" and the need for prophylactic vaccinations. The medications prescribed are limited to \"Neo*Nasal*Sodium Chloride 0.9%,\" and procedures performed include \"Other phototherapy\" and prophylactic vaccination.\n\nCrucially, the current visit record **lacks any explicit evidence** of a primary or actively managed lipid disorder in the infant. There are no documented diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the current diagnoses focus on general neonatal health issues (jaundice, birth complications, need for vaccination) and an observation for a general \"genetic or metabolic condition,\" which is not specific to lipid metabolism.\n\nAccording to the strict instructions, a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record does not meet this threshold\u2014it does not document a lipid abnormality, nor does it document ongoing management specifically for a lipid disorder (like statin therapy or a confirmed lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 891,
+    "completion_tokens": 256
+  }
+}

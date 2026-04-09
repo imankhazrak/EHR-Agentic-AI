@@ -1,0 +1,12 @@
+{
+  "sample_id": 10164,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which mandate that a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly evidenced in the current visit record to predict a future diagnosis.\n\n1. **Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\nThe current visit record (diagnoses, medications, and procedures) is overwhelmingly focused on severe orthopedic, neurological, and infectious complications stemming from an accidental fall and subsequent spinal/vertebral trauma.\n*   **Diagnoses:** The primary diagnoses include Closed fracture of lumbar vertebra, Other retroperitoneal abscess, Psoas muscle abscess, Intraspinal abscess, Cauda equina syndrome, Paralysis agitans, and Unspecified essential hypertension. While **Unspecified essential hypertension** is present, this is a general risk factor and, according to the instructions, is **not sufficient** to predict a future diagnosis of a specific lipid disorder.\n*   **Medications:** The medication list includes **Quinapril** and **Atenolol** (for hypertension management), and **Insulin** and **Amlodipine** (for general metabolic/hypertensive management). Crucially, the record **does not contain any explicit diagnosis** of hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1260,
+    "completion_tokens": 256
+  }
+}

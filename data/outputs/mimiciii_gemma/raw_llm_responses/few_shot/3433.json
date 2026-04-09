@@ -1,0 +1,12 @@
+{
+  "sample_id": 3433,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnoses made include **\"Other and unspecified hyperlipidemia.\"** According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the primary and sufficient evidence to predict a future coding of this diagnosis, overriding the need to rely solely on risk factors or medication use. While the patient has numerous comorbidities (e.g., obesity, hypertension, duodenal/gastric ulcers), the explicit diagnosis of hyperlipidemia is the direct indicator required by the instructions. Therefore, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3979,
+    "completion_tokens": 141
+  }
+}

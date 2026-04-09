@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, complex, and multi-systemic critical care diagnoses, primarily revolving around renal failure, cardiac failure, gastrointestinal hemorrhage, and chronic pancreatitis. The diagnoses include: Acute kidney failure, unspecified; Acute on chronic diastolic heart failure; Congestive heart failure, unspecified; Hypertensive chronic kidney disease, unspecified; Chronic kidney disease, Stage III (moderate); Hemorrhage of gastrointestinal tract, unspecified; Chronic pancreatitis; and Coronary atherosclerosis of native coronary artery.\n\nCrucially, the patient's current record **lacks any explicit diagnosis** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has numerous cardiovascular risk factors (Hypertensive CKD, CHF, Coronary Atherosclerosis, Atrial Fibrillation), and is receiving medications that are often co-prescribed in dyslipidemia management (e.g., Metoprolol, Aspirin), the strict instruction is to **not** predict a future diagnosis based solely on these risk factors or the use of general cardiovascular/anticoagulant medications.\n\nThe patient's medication profile includes several agents, such as Metoprolol Succinate",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3740,
+    "completion_tokens": 256
+  }
+}

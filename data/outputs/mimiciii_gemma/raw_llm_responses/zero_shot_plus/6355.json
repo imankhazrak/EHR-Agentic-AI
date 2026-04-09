@@ -1,0 +1,12 @@
+{
+  "sample_id": 6355,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction is based on a strict interpretation of the provided guidelines, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses and Risk Factors:**\nThe patient's current diagnoses include several significant comorbidities: Congestive heart failure, unspecified; Unspecified essential hypertension; Old myocardial infarction; and Automatic implantable cardiac defibrillator in situ. These conditions are known risk factors for dyslipidemia. However, the guidelines explicitly state that the presence of cardiovascular diseases (e.g., CHF, MI, AF, CAD) and general risk factors (e.g., hypertension) alone are **NOT** sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Analysis of Medications and Procedures:**\nThe medication list contains several drugs relevant to cardiovascular and metabolic management (e.g., Metoprolol, Diltiazem, Lisinopril, Furosemide, Insulin). While some of these drugs are used in patients with dyslipidemia, the list **does not** contain any explicit lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1228,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 124,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit evidence of a lipid disorder already present in the patient's current hospital visit record, which strongly indicates that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit.\n\n1. **Analysis of Current Diagnoses (Explicit Evidence):**\nThe patient's current diagnoses explicitly include the diagnosis: **\"Other and unspecified hyperlipidemia.\"**\nThis is direct, explicit evidence of a lipid abnormality (hyperlipidemia) already being coded in the current admission. According to the strict rules, the presence of an existing, coded lipid disorder is the strongest indicator that this diagnosis will be maintained or explicitly coded in subsequent visits.\n\n2. **Analysis of Comorbidities and Risk Factors (Supporting Evidence):**\nThe patient presents with numerous severe comorbidities that are strongly associated with metabolic and lipid disorders, further supporting the likelihood of this diagnosis being maintained:\n*   **End Stage Renal Disease (ESRD) and Hypertensive CKD:** ESRD is a major metabolic derangement that frequently coexists with and exacerbates dyslipidemia.\n*   **Acidosis and Hypovolemia:** These indicate severe systemic metabolic stress.\n*   **Other Comorbidities:** The patient has",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1013,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11292,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic non-lipid-related conditions. The primary diagnoses include Abdominal aneurysm, ruptured; Diastolic heart failure, unspecified; Other complications due to other vascular device, implant, and graft; Acute posthemorrhagic anemia; Unspecified pleural effusion; Pulmonary collapse; Chronic airway obstruction, not elsewhere classified; Chronic kidney disease, unspecified; Atherosclerosis of renal artery; Aneurysm of iliac artery; Unspecified essential hypertension; Coronary atherosclerosis of native coronary artery; Other diseases of lung, not elsewhere classified; Obstructive sleep apnea (adult)(pediatric); Knee joint replacement.\n\nWhile the patient is on Simvastatin, which is a lipid-lowering agent, the instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current visit record. The patient's hypertension and atherosclerosis are general cardiovascular risk factors, which, according to the strict guidelines, are insufficient to predict a future diagnosis of a lipid disorder.\n\nTherefore,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3784,
+    "completion_tokens": 256
+  }
+}

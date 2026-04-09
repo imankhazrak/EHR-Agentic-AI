@@ -1,0 +1,12 @@
+{
+  "sample_id": 9701,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is dominated by severe, complex, non-lipid-related critical care diagnoses and management. The primary diagnoses include multiple forms of Atherosclerosis (of other specified arteries and native arteries of the extremities with rest pain), End Stage Renal Disease (ESRD), Sinoatrial Node Dysfunction, Atrial Fibrillation, Congestive Heart Failure (CHF), and Anemia in chronic kidney disease. The medication profile is extensive, focusing on managing these severe cardiovascular and renal complications (e.g., Metoprolol Tartrate, Amiodarone, Diltiazem, Clopidogrel, Levothyroxine Sodium, Heparin). The procedures performed are highly invasive and relate to cardiac and vascular interventions (e.g., dual-chamber device insertion, angioplasty, hemodialysis). Crucially, the current visit record **lacks any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.** While the patient has numerous cardiovascular risk factors (Atherosclerosis, CHF), the instructions strictly prohibit predicting a future diagnosis based solely on the presence of these risk factors or the use of related medications (like statins, which are not explicitly listed as a primary management focus here,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3678,
+    "completion_tokens": 256
+  }
+}

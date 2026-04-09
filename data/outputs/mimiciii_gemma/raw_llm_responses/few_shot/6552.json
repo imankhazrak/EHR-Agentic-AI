@@ -1,0 +1,12 @@
+{
+  "sample_id": 6552,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes the entry: **\"Other and unspecified hyperlipidemia.\"** According to the instructions, a \"Yes\" prediction is warranted when there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The presence of this specific diagnosis meets this criterion. Furthermore, the patient is receiving **\"Atorvastatin\"** as a prescribed medication, which is a primary treatment for hyperlipidemia. While the instructions caution against predicting a \"Yes\" based *only* on statin use, the combination of the explicit diagnosis (\"Other and unspecified hyperlipidemia\") and the active management (Atorvastatin) provides the strong, explicit evidence required to predict a future coding of this diagnosis. The other comorbidities, such as hypertension and diabetes, are risk factors, but the explicit diagnosis of hyperlipidemia is the decisive factor for this prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4019,
+    "completion_tokens": 208
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4301,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on general risk factors, cardiovascular diseases, or medication use (like statins).\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are: Hematoma complicating a procedure; Other pulmonary insufficiency, not elsewhere classified; Congestive heart failure, unspecified; Other pulmonary embolism and infarction; Other specified conduction disorders; Bacteremia; Pneumonitis due to inhalation of food or vomitus; Acute kidney failure, unspecified; and Polycythemia vera.\nThe patient's medications prescribed are: None recorded.\nThe patient's procedures performed include: Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Transfusion of packed cells; Percutaneous [endoscopic] gastrostomy [PEG]; and Continuous invasive mechanical ventilation for 96 consecutive hours or more.\n\nEvaluation against Prediction Criteria:\n1. **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 927,
+    "completion_tokens": 256
+  }
+}

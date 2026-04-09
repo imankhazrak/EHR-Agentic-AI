@@ -1,0 +1,12 @@
+{
+  "sample_id": 6057,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe cardiovascular events (Acute myocardial infarction, Congestive heart failure, Systolic heart failure, Septic shock, etc.), respiratory failure, and associated infections (Pneumococcal pneumonia, etc.). While the patient is receiving multiple medications, including Aspirin and Clopidogrel Bisulfate, which are often used in the context of cardiovascular risk management, and the patient has a history of severe cardiac procedures, there is **no explicit evidence** within the provided diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would necessitate a future diagnosis of \"Disorders of Lipid Metabolism.\" The current management is primarily directed at stabilizing cardiac and respiratory function.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 863,
+    "completion_tokens": 164
+  }
+}

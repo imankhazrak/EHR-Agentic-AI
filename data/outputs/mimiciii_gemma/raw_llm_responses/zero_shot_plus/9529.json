@@ -1,0 +1,12 @@
+{
+  "sample_id": 9529,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made (Other pulmonary embolism and infarction; Acute and subacute bacterial endocarditis; Unspecified pleural effusion; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Opioid abuse, continuous; Cocaine abuse, continuous; Tachycardia, unspecified; Asthma, unspecified type, unspecified; Tobacco use disorder; Enlargement of lymph nodes; Heart valve replaced by transplant; Anxiety state, unspecified; Depressive disorder, not elsewhere classified; Anemia, unspecified; Abnormal coagulation profile; Septic pulmonary embolism) and the medications prescribed does not contain any explicit diagnosis or active management for a primary lipid abnormality (such as hypercholesterolemia or hyperlipidemia).\n\n2. **Exclusion of Insufficient Evidence:** The patient has several significant comorbidities and risk factors, including:",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1141,
+    "completion_tokens": 256
+  }
+}

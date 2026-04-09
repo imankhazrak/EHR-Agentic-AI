@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence, and not general risk factors or medication use alone.\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses are extensive and primarily revolve around severe, complex, and life-threatening conditions related to advanced liver disease, malignancy, and associated complications:\n- Malignant neoplasm of liver, primary; Portal hypertension; Alcoholic cirrhosis of liver; Other ascites; Atrial fibrillation; Hyperpotassemia; Oliguria and anuria.\n- The patient is also managed for iatrogenic complications (pneumothorax, hypotension, etc.) and other gastrointestinal issues.\n\nAnalysis of Medications and Procedures:\nThe medication profile is dominated by supportive care, management of electrolyte imbalances (Furosemide, Spironolactone, Potassium Chloride, Magnesium Sulfate), anticoagulation (Heparin Flush, Heparin), management of cardiac issues (Metoprolol Tartrate, Nadolol), and supportive nutrition/GI",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 256
+  }
+}

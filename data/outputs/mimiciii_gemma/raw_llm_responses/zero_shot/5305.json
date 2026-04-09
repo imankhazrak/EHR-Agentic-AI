@@ -1,0 +1,12 @@
+{
+  "sample_id": 5305,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" Since hypercholesterolemia is a form of lipid disorder, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current visit record includes the diagnosis of \"Pure hypercholesterolemia.\" However, the strict rules state that the prediction must be based on *explicit* evidence of an *existing or actively managed* lipid disorder, and the provided context for the prediction is highly restrictive. Given the presence of other non-lipid related diagnoses (Subdural hemorrhage, Unspecified fall, Aortocoronary bypass status) and the medication (Atorvastatin) which is a general management tool, the prediction must adhere to the rule that *only* explicit lipid disorder evidence is sufficient. If the system interprets the presence of Atorvastatin and the other non-lipid diagnoses as overriding the explicit hypercholesterolemia diagnosis for the purpose of the strict prediction rule, the answer defaults to \"No\".\n\nASSISTANT:\nPrediction: Yes",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 541,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 12330,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses Made:** The primary diagnoses are \"Secondary malignant neoplasm of brain and spinal cord\" and \"Personal history of malignant melanoma of skin.\" These diagnoses relate to oncology and skin cancer, not directly to a primary lipid disorder.\n2. **Medications Prescribed:** The medication list includes various agents for managing cancer, infection, pain, and general support (e.g., Dolasetron Mesylate, Dexamethasone, Cefazolin, Morphine Sulfate, Levothyroxine Sodium). While some medications (like Pantoprazole) are used for general support, there is a complete absence of explicit lipid-lowering agents such as statins (e.g., Atorvastatin), fibrates, or other drugs specifically indicated for managing hyperlipidemia or hypercholesterolemia.\n3. **Procedures",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 961,
+    "completion_tokens": 256
+  }
+}

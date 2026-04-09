@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain any explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is critically ill and has numerous comorbidities (Acute myeloid leukemia, Pneumonia, Acute kidney failure, Bacteremia, etc.), the medication profile includes Cholestyramine, which is a lipid-lowering agent. However, the strict instructions state that the prediction cannot be based solely on the use of lipid-lowering agents or general risk factors. Furthermore, the record lacks a specific diagnosis of a lipid abnormality. Therefore, based on the strict criteria provided, the prediction for the next hospital visit is \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3878,
+    "completion_tokens": 149
+  }
+}

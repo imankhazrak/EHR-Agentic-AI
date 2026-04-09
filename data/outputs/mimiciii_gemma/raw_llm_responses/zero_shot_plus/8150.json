@@ -1,0 +1,12 @@
+{
+  "sample_id": 8150,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\n   A review of the current visit record (Diagnoses made, Medications prescribed, Procedures performed) reveals no explicit diagnosis of a primary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\n2. **Evaluation of Risk Factors and Comorbidities:**\n   The patient has numerous significant comorbidities that are *associated* with lipid disorders, including:\n   *   Diabetes Mellitus (Type II, with various manifestations and complications).\n   *   Hypertensive Chronic Kidney Disease (Stage V/ESRD).\n   *   Late effects of Cerebrovascular Disease (Stroke/Hemiplegia/Aphasia).\n   *   Cardiovascular history (Old Myocardial Infarction, Aortocoronary Bypass status).\n\n3. **Evaluation of Medication Profile:**\n   The patient is prescribed **Simvastatin**, which is a lipid-lowering agent (statin). This indicates that the clinical team is *managing* a risk factor or",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1261,
+    "completion_tokens": 256
+  }
+}

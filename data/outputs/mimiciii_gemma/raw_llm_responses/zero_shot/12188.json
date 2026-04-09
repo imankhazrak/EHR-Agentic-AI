@@ -1,0 +1,12 @@
+{
+  "sample_id": 12188,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly dominated by diagnoses related to severe cardiovascular events (Cardiogenic shock, Cardiac arrest, Acute myocardial infarction, Coronary atherosclerosis, Congestive heart failure, etc.), severe infections (Infection and inflammatory reaction, Acute respiratory failure), and renal/cerebral complications. While the patient is prescribed Atorvastatin, which is a medication used to manage hyperlipidemia, the record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or explicitly stated as the primary condition requiring diagnosis. According to the strict rules, the presence of a medication (Atorvastatin) alone is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1022,
+    "completion_tokens": 165
+  }
+}

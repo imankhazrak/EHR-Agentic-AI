@@ -1,0 +1,12 @@
+{
+  "sample_id": 1398,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses include:\n- Chronic or unspecified gastric ulcer with hemorrhage, without mention of obstruction.\n- Acute posthemorrhagic anemia.\n- Congestive heart failure, unspecified.\n- Chronic airway obstruction, not elsewhere classified.\n- Heart valve replaced by other means.\n- Long-term (current) use of anticoagulants.\n- Hypopotassemia.\n- Cardiac pacemaker in situ.\n- Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n\nThe patient's medication profile is recorded as \"None recorded.\"\n\nThe patient's procedures include:\n- Other endoscopy of small intestine.\n- Colonoscopy.\n\nWe must weigh the risk factors against the explicit evidence of a lipid disorder:\n1. **Risk Factors Present",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 910,
+    "completion_tokens": 256
+  }
+}

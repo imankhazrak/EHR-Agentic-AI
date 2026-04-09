@@ -1,0 +1,12 @@
+{
+  "sample_id": 2696,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. The prediction must be based on strong and explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-lowering medications.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are primarily related to gastrointestinal issues (Fistula of intestine, Urinary tract infection, Candidiasis of mouth, Hyposmolality/hyponatremia, Acidosis, Adjustment disorder, Personal history of malignant neoplasm of bladder). None of these diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Medications:** No medications were recorded as prescribed. Therefore, there is no evidence of active lipid management (e.g., statins or fibrates).\n3. **Procedures:** The procedures performed are surgical (Other partial resection of small intestine, Other lysis of peritoneal adhesions, Other permanent ileostomy, Venous catheterization, Enteral/Parenteral infusion). These procedures relate to the patient's GI and nutritional status",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 938,
+    "completion_tokens": 256
+  }
+}

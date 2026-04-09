@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit and strong evidence of an existing lipid disorder, which meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Diagnosis of Lipid Disorder:** The patient's current diagnoses explicitly include **\"Other and unspecified hyperlipidemia.\"** This is a direct and explicit coding of a lipid abnormality, satisfying the primary requirement for predicting a future diagnosis.\n\n2. **Presence of Lipid-Related Management:** The patient's medication list includes **\"Pravastatin.\"** While the instructions caution against predicting a diagnosis based *only* on statin use, the presence of an *explicit diagnosis* of hyperlipidemia combined with the *active management* of that condition (Pravastatin) provides overwhelming evidence that this condition is central to the patient's ongoing care and is highly likely to be coded again in the next visit.\n\n3. **Comorbid Conditions Supporting Lipid Risk:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders, further supporting the likelihood of this diagnosis being maintained:\n    * **Diabetes Mellitus (Type II):** Diabetes is a major risk factor and comorbidity frequently",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1350,
+    "completion_tokens": 256
+  }
+}

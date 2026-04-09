@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid abnormalities in the patient's current visit record, which provides strong and explicit evidence for the likelihood of this diagnosis being coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The patient's current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid disorder, meeting the primary criterion for predicting a future diagnosis.\n\n2. **Medication Management:** The patient is prescribed **\"Simvastatin\"**. While the instructions caution against predicting a diagnosis based *only* on statin use, the presence of an *existing* diagnosis of hyperlipidemia combined with the *active management* of that condition via a lipid-lowering agent (Simvastatin) strongly reinforces the clinical reality of the lipid disorder and the necessity of its continued coding.\n\n3. **Comorbidities and Risk Factors:** The patient presents with numerous severe comorbidities that are highly correlated with dyslipidemia, including:\n    * **Severe Cardiovascular Disease:** Acute on chronic systolic heart failure, Congestive heart failure, unspecified, Coronary atherosclerosis of native coronary artery, Atrial fibrillation.\n    * **Met",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1140,
+    "completion_tokens": 256
+  }
+}

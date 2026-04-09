@@ -1,0 +1,12 @@
+{
+  "sample_id": 12021,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are heavily focused on severe metabolic and infectious complications stemming from alcohol use and diabetes (Alcohol withdrawal; Diabetes with ketoacidosis, type II or unspecified type, uncontrolled; Acute pancreatitis; Chronic pancreatitis; Cellulitis and abscess of hand, except fingers and thumb; Acute alcoholic intoxication in alcoholism, continuous; Thrombocytopenia, unspecified; Chronic hepatitis C without mention of hepatic coma; Insomnia, unspecified; Tobacco use disorder; Long-term (current) use of insulin; Depressive disorder, not elsewhere classified; Lack of housing). While the patient has Diabetes Mellitus, which is a known risk factor for dyslipidemia, and is receiving Insulin, the record does not explicitly state a lipid abnormality diagnosis or ongoing, explicit management of a lipid disorder (like a statin or fibrate prescription, which are excluded as sole evidence). Following the strict instructions, which mandate explicit evidence of an existing or actively managed lipid disorder, the absence of such evidence leads to the prediction of \"No\" for the next hospital visit, despite the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3618,
+    "completion_tokens": 256
+  }
+}

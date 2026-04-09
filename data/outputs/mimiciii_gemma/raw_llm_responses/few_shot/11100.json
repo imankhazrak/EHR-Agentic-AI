@@ -1,0 +1,12 @@
+{
+  "sample_id": 11100,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current record to predict a future diagnosis, excluding general risk factors or mere use of lipid-related medications (like statins).\n\n1. **Analysis of Current Visit Record:** The current diagnoses list includes severe infections (Urinary tract infection, Pneumonia, Proteus infection), neurological issues (Encephalopathy, Epilepsy), and chronic conditions (Unspecified essential hypertension, Pressure ulcer, Late effects of cerebrovascular disease).\n2. **Absence of Explicit Lipid Disorder Evidence:** Crucially, the current diagnoses **do not** explicitly state hypercholesterolemia, hyperlipidemia, or any other specific diagnosis falling under \"Disorders of Lipid Metabolism\" (CCS category 53).\n3. **Evaluation of Medications:** The patient is prescribed Warfarin and Heparin Flush, which are anticoagulants, and LeVETiracetam, which is an anti-epileptic. While the patient has a history of pulmonary embolism, the medications prescribed (Potassium Chloride, Warfarin, Heparin Flush, etc.) are not explicitly for managing a primary lipid disorder. The use of statins (which",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3726,
+    "completion_tokens": 256
+  }
+}

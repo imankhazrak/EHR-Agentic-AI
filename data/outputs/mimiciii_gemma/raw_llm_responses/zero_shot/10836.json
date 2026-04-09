@@ -1,0 +1,12 @@
+{
+  "sample_id": 10836,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is extensive and details numerous diagnoses related to gastrointestinal issues (duodenal ulcer, Clostridium difficile infection, H. pylori), cardiovascular conditions (Atrial flutter, Chronic diastolic heart failure, Congestive heart failure, Aortocoronary bypass status, Diabetes mellitus, Hypertensive chronic kidney disease), and pulmonary issues (Chronic airway obstruction, Atrial fibrillation, Peripheral vascular disease). While the patient is on medication including Rosuvastatin Calcium, this medication alone is not sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines provided. The guidelines explicitly state that the presence of an explicit lipid disorder diagnosis (e.g., hypercholesterolemia, hyperlipidemia) is required, and the use of statins alone is insufficient evidence to predict a future diagnosis. Therefore, based on the strict criteria, the prediction must be No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 922,
+    "completion_tokens": 188
+  }
+}

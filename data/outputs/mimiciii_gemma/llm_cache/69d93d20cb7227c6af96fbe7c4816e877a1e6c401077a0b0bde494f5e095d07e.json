@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record shows several significant comorbidities, including Hypertensive chronic kidney disease stage V/ESRD, Congestive heart failure, Diabetes mellitus type II, and Hypertension. Furthermore, the patient is prescribed Atorvastatin, which is a medication used for managing lipid disorders. However, according to the strict instructions provided, the mere use of statins (Atorvastatin) and the presence of general risk factors (Hypertension, Diabetes) are NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit. The instructions explicitly state that if explicit lipid disorder evidence (like documented hypercholesterolemia or hyperlipidemia) is absent, the answer must be \"No\", even if the patient is high-risk. Since the current record does not explicitly state a diagnosis of hypercholesterolemia or hyperlipidemia, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3597,
+    "completion_tokens": 196
+  }
+}

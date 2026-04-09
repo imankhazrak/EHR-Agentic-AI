@@ -1,0 +1,12 @@
+{
+  "sample_id": 4327,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex, and life-threatening infectious and inflammatory conditions (e.g., Methicillin susceptible Staphylococcus aureus septicemia, Acute and subacute bacterial endocarditis, Septic shock, Acute kidney failure, etc.). While the patient has documented Unspecified essential hypertension and Other and unspecified alcohol dependence, these are general risk factors and do not provide explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The record lacks specific laboratory or clinical evidence of a lipid abnormality.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 902,
+    "completion_tokens": 146
+  }
+}

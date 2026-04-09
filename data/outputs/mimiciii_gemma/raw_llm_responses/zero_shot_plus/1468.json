@@ -1,0 +1,12 @@
+{
+  "sample_id": 1468,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of lipid-lowering medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are: Hepatic encephalopathy; Acute respiratory failure; Cirrhosis of liver without mention of alcohol; Unspecified viral hepatitis C without hepatic coma; Opioid type dependence, continuous; Portal hypertension; Unspecified essential hypertension; Unspecified disorder of kidney and ureter; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n* **Lipid Disorder Evidence:** None of the listed diagnoses explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. While Diabetes Mellitus and Hypertension are known risk factors for dyslipidemia, their presence alone does not constitute an explicit diagnosis of a lipid disorder.\n\n2. **Analysis of Medications Prescribed:**\nThe medications include: Lactulose; Glipizide; Pantoprazole; Insulin; Furosemide; Ferrous Sulfate; Propranolol HCl",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1062,
+    "completion_tokens": 256
+  }
+}

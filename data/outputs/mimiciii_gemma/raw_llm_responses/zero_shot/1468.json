@@ -1,0 +1,12 @@
+{
+  "sample_id": 1468,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and management related to severe liver disease (Cirrhosis, Hepatic encephalopathy, Portal hypertension, Viral hepatitis C), acute respiratory failure, and associated complications (Hypertension, Diabetes). While the patient is high-risk due to their underlying conditions, there is no explicit evidence in the provided diagnoses or management plan that points to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). The medications prescribed (e.g., Glipizide, Insulin, Warfarin, Amlodipine) address other conditions, and the factors listed (Hypertension, Diabetes) are insufficient on their own to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 678,
+    "completion_tokens": 161
+  }
+}

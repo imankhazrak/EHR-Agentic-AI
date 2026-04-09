@@ -1,0 +1,12 @@
+{
+  "sample_id": 10017,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit diagnosis of a lipid disorder, such as hyperlipidemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. While the patient has numerous other comorbidities (hypertensive heart disease, heart failure, diabetes, etc.), the explicit coding of \"Other and unspecified hyperlipidemia\" meets the threshold for a \"Yes\" prediction, as this is a direct diagnosis of a lipid abnormality.\n\nFinal Prediction: Yes",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3817,
+    "completion_tokens": 126
+  }
+}

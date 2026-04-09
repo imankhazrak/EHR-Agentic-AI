@@ -1,0 +1,12 @@
+{
+  "sample_id": 4017,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia, in the patient's diagnoses or ongoing management. The diagnoses are primarily related to gastrointestinal complications (colostomy/enterostomy, cholecystitis, volvulus) and other conditions (obesity, mild intellectual disabilities). Therefore, there is no strong and explicit evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 102
+  }
+}

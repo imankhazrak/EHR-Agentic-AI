@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning: The current visit record is dominated by diagnoses and treatments related to severe cardiovascular events (Subendocardial infarction, Congestive heart failure, Cardiogenic shock, Atrial fibrillation), severe infections (Pneumonia), and renal failure. While the patient is prescribed Atorvastatin, which is a lipid-lowering medication, the record lacks any explicit diagnostic evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, beyond the general risk associated with the prescribed medication. The other factors present (CHF, MI, etc.) are not sufficient to predict a future diagnosis of a primary lipid disorder.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 781,
+    "completion_tokens": 149
+  }
+}

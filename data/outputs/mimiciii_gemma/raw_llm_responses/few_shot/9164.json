@@ -1,0 +1,12 @@
+{
+  "sample_id": 9164,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to gastrointestinal issues (Chronic or unspecified duodenal ulcer with perforation, Unspecified peritonitis, Surgical operation with anastomosis, bypass, or graft), infectious processes (Cellulitis and abscess, Unspecified peritonitis), and cardiovascular/respiratory instability (Cardiac complications, Atrial fibrillation, Chronic obstructive asthma, Unspecified essential hypertension).\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nThe medications prescribed include Diltiazem, Verapamil, Furosemide, Warfarin, and various antibiotics, which are standard treatments for the current constellation of illnesses. While the patient has hypertension and cardiac complications, these are general risk factors and **do not constitute explicit evidence** of an existing or actively managed lipid disorder, as per the strict instructions provided.\n\nThe instructions explicitly state that the use of statins (which are not explicitly listed as the primary management for a lipid disorder in this record, though some cardiovascular drugs are present) or general risk factors (hypertension, cardiac complications) are **NOT sufficient** to predict a future diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3721,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4303,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is heavily focused on severe cardiovascular events and associated complications, including Coronary atherosclerosis, Intermediate coronary syndrome, Cardiac complications, Atrial fibrillation, and Aortic valve disorders. The patient has undergone major surgical interventions such as (Aorto)coronary bypass and Extracorporeal circulation.\n\nCrucially, the current diagnoses made in this record **do not explicitly include** any diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53).\n\nThe patient's medical history includes several risk factors commonly associated with lipid disorders, such as Coronary atherosclerosis and Atrial fibrillation. However, according to the strict instructions provided, the mere presence of these risk factors, or the fact that the patient is undergoing cardiovascular management (like CABG), is **not sufficient evidence** to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the next hospital visit.\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\", adhering strictly to the provided guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3508,
+    "completion_tokens": 238
+  }
+}

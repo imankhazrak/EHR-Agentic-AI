@@ -1,0 +1,12 @@
+{
+  "sample_id": 241,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record does not contain any explicit evidence of a diagnosed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are primarily related to secondary malignant neoplasm of pleura, urinary tract infection, constrictive pericarditis, venous thrombosis, neutropenia, asthma, and essential hypertension. While the patient has several risk factors for dyslipidemia, such as essential hypertension and venous thrombosis, these factors alone are explicitly excluded by the instructions as being insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the medication profile does not include any explicit lipid-lowering agents (like statins or fibrates) that would strongly suggest an ongoing, actively managed lipid disorder requiring a future diagnosis. Therefore, based strictly on the evidence required by the instructions, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3607,
+    "completion_tokens": 183
+  }
+}

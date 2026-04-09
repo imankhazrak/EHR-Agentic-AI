@@ -1,0 +1,12 @@
+{
+  "sample_id": 7047,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute infectious processes (Streptococcal septicemia, Methicillin susceptible Staphylococcus aureus septicemia, Regional enteritis, Acute and subacute bacterial endocarditis, Sepsis, etc.), severe inflammatory/metabolic complications (Nutritional marasmus, Sepsis, etc.), and severe cardiovascular events (Coronary atherosclerosis, Acute myocardial infarction, Acute venous embolism). While the patient has several risk factors commonly associated with lipid disorders, such as Unspecified essential hypertension and Coronary atherosclerosis, these factors alone are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, a review of the prescribed medications reveals the presence of Cholestyramine, which is a lipid-lowering agent, but the instructions strictly prohibit basing a prediction on the mere use of lipid-lowering agents or general risk factors. Since there is no explicit, coded diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder present in the current record that would strongly and explicitly evidence a future diagnosis, the prediction must be \"No,\" despite the high-risk clinical picture.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3950,
+    "completion_tokens": 245
+  }
+}

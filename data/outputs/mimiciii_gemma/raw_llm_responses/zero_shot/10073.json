@@ -1,0 +1,12 @@
+{
+  "sample_id": 10073,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record details numerous complex medical issues, including severe hypertension, diabetes mellitus, hypothyroidism, obesity, and various infectious and vascular complications. While the patient is on medications such as Pravastatin, which is used to manage lipid levels, and has a history of cardiovascular issues, the record does not contain any explicit diagnosis of a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed or explicitly stated as the reason for the current or future diagnosis. The presence of Pravastatin alone, or the general high-risk status due to other comorbidities, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 150
+  }
+}

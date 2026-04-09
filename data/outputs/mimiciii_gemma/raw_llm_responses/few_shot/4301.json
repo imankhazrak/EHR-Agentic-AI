@@ -1,0 +1,12 @@
+{
+  "sample_id": 4301,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are: Hematoma complicating a procedure; Other pulmonary insufficiency, not elsewhere classified; Congestive heart failure, unspecified; Other pulmonary embolism and infarction; Other specified conduction disorders; Bacteremia; Pneumonitis due to inhalation of food or vomitus; Acute kidney failure, unspecified; Polycythemia vera. None of these diagnoses explicitly point to a primary or actively managed lipid abnormality. Furthermore, the medication profile is empty, meaning there is no explicit lipid-lowering therapy (like statins or fibrates) being administered that would strongly suggest an ongoing, coded lipid disorder management in the immediate future. While the patient has several serious comorbidities (CHF, Polycythemia vera, AKI), these are general high-risk factors and do not, by the strict rules provided, constitute sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the strict requirement for explicit evidence of a lipid disorder, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3515,
+    "completion_tokens": 240
+  }
+}

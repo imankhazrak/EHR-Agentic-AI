@@ -1,0 +1,12 @@
+{
+  "sample_id": 1030,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the next hospital visit, adhering to the strict criteria provided.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality, satisfying the primary requirement for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities and Risk Factors:** The patient presents with numerous significant comorbidities that are highly associated with lipid disorders, further reinforcing the clinical context:\n    * **Cardiovascular Disease:** The patient has multiple severe cardiac issues, including Atrial fibrillation, Atrial flutter, Diastolic heart failure, Congestive heart failure, and Coronary atherosclerosis. These conditions are strongly linked to dyslipidemia.\n    * **Metabolic/Vascular Risk Factors:** The patient has Unspecified essential hypertension, which is a major risk factor for both cardiovascular disease and hyperlipidemia.\n    * **Other Comorbidities:** The presence of chronic conditions like Iron deficiency anemia and Depressive disorder adds to the overall complexity",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1123,
+    "completion_tokens": 256
+  }
+}

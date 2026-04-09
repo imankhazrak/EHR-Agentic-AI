@@ -1,0 +1,12 @@
+{
+  "sample_id": 10825,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly requires evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a future diagnosis based solely on the use of statins (like Simvastatin) or the presence of cardiovascular diseases (like CHF, AF, or CAD), or general risk factors (like hypertension or diabetes, which are not explicitly listed as a primary diagnosis here).\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The primary diagnoses listed are related to severe infection and cardiovascular instability: Intestinal infection due to Clostridium difficile; Unspecified septicemia; Septic shock; Acute kidney failure, unspecified; Severe sepsis; Acute respiratory failure; Atrial flutter; Acute on chronic diastolic heart failure; Congestive heart failure, unspecified; Atrial fibrillation; Iron deficiency anemia, unspecified; Hypoxemia; Aortic valve disorders. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed.**\n2. **Medications:** The patient is prescribed **Simvastatin** and **Sertraline**, along with **Cl",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1127,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9574,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, and strictly excluding predictions based on general risk factors, statin use, or cardiovascular diseases alone.\n\n**Analysis of Current Visit Record:**\n\n1. **Diagnoses Made:** The current diagnoses are heavily focused on infectious processes (Cellulitis and abscess of face), autoimmune/immunodeficiency issues (Other selective immunoglobulin deficiencies, Chronic fatigue syndrome), neurological/psychiatric issues (Depressive disorder, not elsewhere classified, Depressive disorder, not elsewhere classified), and general systemic issues (Thrombocytopenia, Hypotension, Abdominal pain, Hypopotassemia, Diarrhea).\n2. **Medications Prescribed:** The medication list is dominated by antibiotics (Nafcillin, DiCLOXacillin, Vancomycin), supportive care (D5W, LR, Sodium Chloride 0.9% Flush), and medications for infectious/inflammatory/neurological",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3969,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The instructions strictly require predicting the *coding* of this diagnosis in the next visit, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made, medications prescribed, and procedures performed in the current visit record reveals **no explicit diagnosis** of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Risk Factors vs. Explicit Diagnosis:** The patient has several general risk factors and comorbidities, such as:\n    * Unspecified essential hypertension.\n    * Unspecified protein-calorie malnutrition and Anorexia nervosa (which can affect metabolism).\n    * Other general comorbidities (e.g., Cervical spondylosis, epilepsy, etc.).\n3. **Medication Profile Review:** The medication list includes several drugs, but **no explicit lipid-lowering agents** such as statins (e.g., Atorvastatin) or fibrates are prescribed. The medications listed are primarily for managing orthopedic complications",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1165,
+    "completion_tokens": 256
+  }
+}

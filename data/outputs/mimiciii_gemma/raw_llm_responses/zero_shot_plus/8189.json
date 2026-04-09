@@ -1,0 +1,12 @@
+{
+  "sample_id": 8189,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit evidence of a lipid disorder diagnosis and ongoing management of such a condition, which meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Diagnosis of Lipid Disorder:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is a direct coding of a lipid abnormality, which is the core evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Active Lipid Management:**\nThe patient is actively managed for lipid abnormalities through the prescription of multiple lipid-lowering agents: **\"Atorvastatin\"** and **\"Rosuvastatin Calcium.\"** The combination of a coded diagnosis and active pharmacological intervention for lipid abnormalities strongly supports the continuation and coding of this diagnosis in subsequent visits.\n\n3. **Comorbid Conditions and Context:**\nThe patient presents with numerous severe cardiovascular and metabolic comorbidities, including:\n*   **Cardiovascular Disease:** Acute myocardial infarction, Cardiogenic shock, Coronary atherosclerosis, Old myocardial infarction.\n*   **Metabolic/Vascular Risk Factors:** Unspecified essential hypertension, Essential thrombocythemia, Other vitamin B",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1067,
+    "completion_tokens": 256
+  }
+}

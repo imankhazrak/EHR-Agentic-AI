@@ -1,0 +1,12 @@
+{
+  "sample_id": 10169,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict rule for answering \"Yes\" is the presence of strong and explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of specific medications like statins.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made, medications prescribed, and procedures performed in the current visit record, there is **no explicit diagnosis** of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities, including:\n    *   Malignant neoplasm of liver, primary; Cirrhosis of liver without mention of alcohol; Portal hypertension; Chronic hepatitis C without mention of hepatic coma. These conditions are known to be associated with metabolic disturbances, which *can* include lipid abnormalities.\n    *   Other abnormal glucose: This indicates a glucose/metabolic issue, which is a risk factor for dyslipidemia.\n    *   Chronic cholecystitis: This is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1192,
+    "completion_tokens": 256
+  }
+}

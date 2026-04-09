@@ -1,0 +1,12 @@
+{
+  "sample_id": 11816,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or strongly implied by existing, actively managed lipid disorder evidence, not merely by general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly focused on severe, acute, and chronic conditions related to:\n*   **Malignancy:** Personal history of malignant neoplasm of large intestine and stomach.\n*   **Gastrointestinal/Infectious:** Persistent postoperative fistula, Peritonitis (acute) generalized, Unspecified protein-calorie malnutrition.\n*   **Cardiovascular:** Chronic systolic heart failure, Congestive heart failure, unspecified, Coronary atherosclerosis of native coronary artery.\n*   **Renal/Metabolic:** Acute kidney failure with lesion of tubular necrosis, Gout, unspecified, Unspecified essential hypertension.\n*   **Neurological/Acute:** Paroxysmal ventricular tachycardia, Volume depletion, unspecified.\n\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality** listed in the current diagnoses.\n\n2. **Analysis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1228,
+    "completion_tokens": 256
+  }
+}

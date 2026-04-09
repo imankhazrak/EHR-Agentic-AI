@@ -1,0 +1,12 @@
+{
+  "sample_id": 6167,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which require explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses are overwhelmingly related to acute respiratory issues, cardiac failure, chronic pulmonary disease, renal issues, and infectious processes:\n*   Acute respiratory failure; Pneumonitis; Obstructive chronic bronchitis; Diastolic/Congestive heart failure; Atrial fibrillation; Chronic kidney disease; Urinary tract infection; Diabetes mellitus.\n\nWhile the patient has **Diabetes mellitus** and **Unspecified essential hypertension**, these are classified as general risk factors and comorbid conditions, not explicit diagnoses of lipid disorders (like hypercholesterolemia or hyperlipidemia).\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed **Simvastatin**. Simvastatin is a statin, a medication used to treat dyslipidemia. However, according to the strict instructions, the *use of statins alone* is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n3. **Evaluation Against Strict Criteria",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1089,
+    "completion_tokens": 256
+  }
+}

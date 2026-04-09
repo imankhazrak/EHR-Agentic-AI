@@ -1,0 +1,12 @@
+{
+  "sample_id": 3712,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record explicitly includes the diagnosis of **Pure hypercholesterolemia**.\n\nAccording to the instructions, the prediction must be \"Yes\" only if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The diagnosis of \"Pure hypercholesterolemia\" directly meets this criterion, as hypercholesterolemia is a core component of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\nWhile the patient has numerous other comorbidities (Coronary atherosclerosis, Unspecified essential hypertension, etc.), the explicit diagnosis of hypercholesterolemia provides the necessary, strong, and explicit evidence required by the guidelines, overriding the need to rely on general risk factors or the use of medications alone.\n\nTherefore, based on the explicit diagnostic evidence present in the current record, it is highly likely that this diagnosis, or a related lipid disorder diagnosis, will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1078,
+    "completion_tokens": 213
+  }
+}

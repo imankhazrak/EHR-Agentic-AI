@@ -1,0 +1,12 @@
+{
+  "sample_id": 3202,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit evidence of a lipid disorder already present in the patient's current hospital visit record, which strongly indicates that this diagnosis will be maintained or explicitly coded in the patient's next hospital visit.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses explicitly include: **\"Other and unspecified hyperlipidemia.\"** This is direct, explicit evidence of a lipid abnormality (hyperlipidemia) already present in the patient's clinical status.\n\n2. **Evaluation Against Exclusion Criteria:**\nThe prediction is NOT based solely on:\n*   Malignant essential hypertension.\n*   Heart valve replaced by transplant.\n*   Chronic airway obstruction, not elsewhere classified.\n*   Other non-autoimmune hemolytic anemias.\n*   Hypopotassemia.\n*   Unspecified acquired hypothyroidism.\n*   Other and unspecified hyperlipidemia (This is the *evidence*, not the *sole basis* for the prediction, but it is the core finding).\n\nThe presence of the diagnosis **\"Other and unspecified hyperlipidemia\"** meets the strict requirement for strong and explicit evidence of an existing lipid disorder, which is the primary driver for predicting a future diagnosis of \"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 998,
+    "completion_tokens": 256
+  }
+}

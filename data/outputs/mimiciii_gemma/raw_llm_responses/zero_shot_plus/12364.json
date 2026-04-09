@@ -1,0 +1,12 @@
+{
+  "sample_id": 12364,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) to be coded in the next hospital visit. The instructions strictly prohibit predicting a diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current diagnoses list (Unspecified septicemia; Septic shock; Fistula of intestine, excluding rectum and anus; Regional enteritis of unspecified site; Candidiasis of mouth; Severe sepsis; Candidiasis of skin and nails; Asthma, unspecified type, unspecified; Coronary atherosclerosis of native coronary artery; Rheumatoid arthritis; Dysthymic disorder; Personal history of tobacco use; Personal history of venous thrombosis and embolism; Ileostomy status; Acquired absence of intestine (large) (small)) **does not contain any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\n2. **Risk Factors vs. Explicit Diagnosis:** The record contains several significant risk factors and comorbidities commonly associated with lipid disorders, such as:\n    * **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1079,
+    "completion_tokens": 256
+  }
+}

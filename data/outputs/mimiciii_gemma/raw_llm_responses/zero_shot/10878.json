@@ -1,0 +1,12 @@
+{
+  "sample_id": 10878,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53). Therefore, there is strong and explicit evidence that this condition will be coded as part of the patient's ongoing or future diagnosis of lipid metabolism disorders.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This diagnosis directly falls under the scope of \"Disorders of Lipid Metabolism\" (CCS category 53). Therefore, there is strong and explicit evidence that this condition will be coded as part of the patient's ongoing or future diagnosis of lipid metabolism disorders.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 167
+  }
+}

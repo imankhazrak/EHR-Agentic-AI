@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-lipid-related critical illnesses. The primary diagnoses include Unspecified septicemia, Urinary tract infection, Acute myocardial infarction, Congestive heart failure, Acute kidney failure, Anemia, Unspecified essential hypertension, and Coronary atherosclerosis. These conditions represent a severe, multi-organ failure state that is currently being managed aggressively with broad-spectrum antibiotics (Metronidazole, Levofloxacin, Norepinephrine), cardiac support (Dobutamine, Furosemide, Metoprolol), and general critical care interventions.\n\nCrucially, while the patient is prescribed **Atorvastatin** (a lipid-lowering agent), the instructions explicitly state that the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality. The prescription of Atorvastatin is a *treatment* for a potential or known lipid issue, but without a corresponding *diagnosis* of a lipid disorder in the current record, we cannot meet the strict evidence threshold required to predict a future diagnosis.\n\nThe other medications",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3622,
+    "completion_tokens": 256
+  }
+}

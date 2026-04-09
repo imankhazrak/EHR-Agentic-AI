@@ -1,0 +1,12 @@
+{
+  "sample_id": 3337,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" While the patient also has other serious comorbidities (Diabetes with ketoacidosis, Acute kidney failure, Dehydration), the documented hyperlipidemia provides the necessary explicit evidence that meets the strict criteria for a \"Yes\" prediction, overriding the general risk factors alone. The presence of this specific diagnosis strongly indicates that the condition is actively recognized and managed, making it highly likely to be coded again in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3595,
+    "completion_tokens": 141
+  }
+}

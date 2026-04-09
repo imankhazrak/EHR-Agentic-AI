@@ -1,0 +1,12 @@
+{
+  "sample_id": 535,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors like hypertension or cardiovascular disease.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** A review of the diagnoses made in the current visit record does not explicitly list any diagnosis related to lipid abnormalities (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n2. **Risk Factors Present:** The patient has several significant risk factors and comorbid conditions that are commonly associated with lipid disorders:\n    * Unspecified essential hypertension.\n    * Congestive heart failure, unspecified.\n    * Atrial fibrillation.\n    * Severe sepsis/Septic shock (which can be associated with metabolic derangements).\n    * Thyrotoxicosis of other specified origin.\n3. **Medication Profile:** The patient is prescribed \"Fish Oil (Omega 3),\" which is a lipid-related supplement, but this alone does not constitute a diagnosis of a lipid disorder. Furthermore, while the patient is on various cardiovascular and infectious agents, there is no explicit mention of a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1308,
+    "completion_tokens": 256
+  }
+}

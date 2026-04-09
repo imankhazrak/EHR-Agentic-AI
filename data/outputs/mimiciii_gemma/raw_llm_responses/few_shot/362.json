@@ -1,0 +1,12 @@
+{
+  "sample_id": 362,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses related to malignant neoplasms (Secondary malignant neoplasm of brain and spinal cord; Malignant neoplasm of lower lobe, bronchus or lung; Tobacco use disorder) and associated supportive care (Phenytoin Sodium; Clonidine TTS 1 Patch; NS (Glass Bottle); Clonidine HCl; Insulin; Gabapentin; Nicotine; Hydrocodone-Acetaminophen; Lorazepam; Phenytoin; Dexamethasone; Docusate Sodium; Acetaminophen; Bisacodyl; Iso-Osmotic Sodium Chloride; Famotidine; Oxycodone-Acetaminophen; Albuterol Neb Soln; Hydromorphone; Zolpidem Tartrate; Prochlorperazine).\n\nCrucially, the current record **lacks any explicit evidence** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed, while extensive, do not include any specific lipid-lowering agents (like statins or fibrates) that would strongly suggest an actively managed lipid disorder, nor are there any diagnoses that point toward a metabolic abnormality related to lipid processing.\n\nTherefore, based strictly on the evidence provided in the current visit record, there",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3540,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5407,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses related to Ulcerative colitis, Iatrogenic pulmonary embolism and infarction, Urinary tract infection, Multiple sclerosis, Anemia, Asthma, and surgical complications. The medications prescribed are largely for managing these conditions (e.g., Prednisone, Levofloxacin, Metoprolol, etc.). While the patient is on Warfarin and has some cardiovascular-related procedures (Angiocardiography, Phlebography), there is no explicit evidence within the provided diagnoses or ongoing management that points specifically to an existing or actively managed primary lipid disorder (such as hypercholesterolemia or hyperlipidemia). The factors present, such as the use of Warfarin or general risk factors, are insufficient to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" as per the strict guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 719,
+    "completion_tokens": 174
+  }
+}

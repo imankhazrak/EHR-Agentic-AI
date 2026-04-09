@@ -1,0 +1,12 @@
+{
+  "sample_id": 7045,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe neurological and pulmonary complications, including Subarachnoid hemorrhage, Obstructive hydrocephalus, Pulmonary collapse, and Hyposmolality. The medications prescribed are none, and the procedures performed are primarily related to managing these acute, life-threatening conditions (e.g., Ventricular shunt, Interruption of the vena cava).\n\nCrucially, the current record contains **no explicit evidence** of a primary or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are entirely focused on CNS/Pulmonary pathology.\n\nAccording to the strict guidelines provided:\n1. We must predict the *coding* of the diagnosis in the *next* visit, not general risk.\n2. We must **NOT** answer \"Yes\" based only on general risk factors (like those potentially associated with CNS/Pulmonary issues) or the use of general supportive care.\n3. We must answer \"No\" if explicit lipid disorder evidence is absent.\n\nSince the current record lacks any mention of lipid abnormalities, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3482,
+    "completion_tokens": 243
+  }
+}

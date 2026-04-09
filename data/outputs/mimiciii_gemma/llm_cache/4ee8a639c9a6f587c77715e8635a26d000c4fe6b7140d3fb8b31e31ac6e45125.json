@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis, excluding general risk factors or the use of statins/cardiovascular disease diagnoses alone.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The patient presents with a complex constellation of severe, acute, and chronic conditions, including Septic shock, Cardiogenic shock, Acute kidney failure, Malignant neoplasm, Congestive heart failure, and various infectious processes. While these conditions (especially CHF and CKD) are known risk factors for dyslipidemia, the record **does not explicitly list** a diagnosis of hypercholesterolemia, hyperlipidemia, or any specific lipid abnormality.\n2. **Medications:** The medication list includes Metoprolol XL (a beta-blocker) and Aspirin EC. Crucially, the record **does not list** the prescription of any lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates.\n3. **Procedures:** The procedures performed are related to managing shock, infection, and pulmonary hypertension (Thoracentesis, Ven",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1146,
+    "completion_tokens": 256
+  }
+}

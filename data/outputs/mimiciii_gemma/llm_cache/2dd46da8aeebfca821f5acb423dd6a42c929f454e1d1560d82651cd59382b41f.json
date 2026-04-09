@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include Diabetes with peripheral circulatory disorders, Acute edema of lung, Infection and inflammatory reaction due to other vascular device, implant, and graft, Unspecified osteomyelitis, Cellulitis and abscess of foot, Ulcer of heel and midfoot, Atherosclerosis of native arteries of the extremities with ulceration, and Major depressive affective disorder.\n\nThe analysis focuses strictly on the explicit evidence of a *current* or *actively managed* lipid disorder, as per the instructions, to predict a *future* diagnosis.\n\n1. **Review of Lipid Disorder Evidence in Current Record:**\n    * The current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipid Disorder.\"\n    * The patient is diagnosed with **Atherosclerosis of native arteries of the extremities with ulceration** and **Arterial embolism and thrombosis of lower extremity**. These are severe manifestations of underlying vascular disease, which is strongly *associated* with dyslipidemia, but they are not a direct diagnosis of a *metabolic lipid disorder* (like primary hyperlipidemia).\n    * The patient is prescribed **Atorvastatin",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4166,
+    "completion_tokens": 256
+  }
+}

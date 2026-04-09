@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is already diagnosed with a form of hyperlipidemia, there is strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit, satisfying the criteria for answering \"Yes.\" While the patient has numerous other serious comorbidities (e.g., Acute myocardial infarction, Acute diastolic heart failure, Diabetes mellitus, Coronary atherosclerosis), the presence of the explicit hyperlipidemia diagnosis is the primary and sufficient evidence to meet the strict prediction criteria, overriding the need to rely on general risk factors or medication use alone.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3772,
+    "completion_tokens": 187
+  }
+}

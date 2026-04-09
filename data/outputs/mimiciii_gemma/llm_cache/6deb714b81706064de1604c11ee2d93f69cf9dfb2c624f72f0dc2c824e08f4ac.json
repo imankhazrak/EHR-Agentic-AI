@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit answering \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of Current Visit Record:\nThe patient's current diagnoses are:\n1. Benign neoplasm of parathyroid gland; Primary hyperparathyroidism\n2. Unspecified essential hypertension\n3. Osteoporosis, unspecified\n\nThe patient's current medication profile is: None recorded.\nThe patient's procedures include: Other and unspecified hysterectomy.\n\nWe must examine the current record for explicit evidence of a lipid disorder. The current diagnoses do not include any mention of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid abnormality. While the patient has essential hypertension, which is a known risk factor for dyslipidemia, the instructions explicitly state that general risk factors alone are NOT sufficient evidence to predict a future diagnosis of \"Yes.\"\n\nConclusion:\nSince the current visit record lacks any explicit diagnosis or active management related",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 850,
+    "completion_tokens": 256
+  }
+}

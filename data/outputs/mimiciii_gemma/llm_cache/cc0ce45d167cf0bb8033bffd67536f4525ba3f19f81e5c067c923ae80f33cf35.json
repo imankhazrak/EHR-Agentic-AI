@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, cardiovascular diseases, or the use of lipid-lowering medications (like statins).\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses include:\n- [ICD9-DX:3488]: Swelling, mass, or lump in chest.\n- Unspecified disorder of adrenal glands.\n- Tobacco use disorder.\n- Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled.\n- Unspecified essential hypertension.\n- Coronary atherosclerosis of native coronary artery.\n- Percutaneous transluminal coronary angioplasty status.\n\nThe patient is also noted to have:\n- Diabetes mellitus (a known risk factor for dyslipidemia).\n- Unspecified essential hypertension (a known risk factor for dyslipidemia).\n- Coronary atherosclerosis (a known risk factor for dyslipidemia).\n\nMedications and Procedures:\n- Medications prescribed: None",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 899,
+    "completion_tokens": 256
+  }
+}

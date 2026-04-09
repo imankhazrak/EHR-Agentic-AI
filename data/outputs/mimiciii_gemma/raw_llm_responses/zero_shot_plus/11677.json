@@ -1,0 +1,12 @@
+{
+  "sample_id": 11677,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The strict criteria for predicting \"Yes\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia diagnosis, or clear ongoing management of such condition), explicitly excluding predictions based solely on statin use, cardiovascular diseases, general risk factors, or general risk.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses list includes several significant comorbidities: Unspecified essential hypertension, Unspecified acquired hypothyroidism, and Mitral valve disorders. These are general risk factors or cardiovascular conditions, which, according to the instructions, are insufficient evidence on their own to predict a future diagnosis of a lipid disorder. There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality listed in the diagnoses.\n2. **Medications:** The prescribed medications include Levothyroxine Sodium (for hypothyroidism) and Heparin (for cardiovascular support). There is no mention of any lipid-lowering agents such as statins (e.g.,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1057,
+    "completion_tokens": 256
+  }
+}

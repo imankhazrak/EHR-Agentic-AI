@@ -1,0 +1,12 @@
+{
+  "sample_id": 842,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or strongly evidenced in the current record, beyond general risk factors or the use of lipid-related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are overwhelmingly focused on severe, acute infectious and renal crises:\n*   Infectious/Sepsis: Other postoperative infection, Methicillin susceptible Staphylococcus aureus septicemia, Sepsis, Infection with microorganisms resistant to penicillins.\n*   Renal/Metabolic: Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease, End stage renal disease, Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled.\n*   Other Comorbidities: Acute posthemorrhagic anemia, Pressure ulcer, lower back, Unspecified vascular insufficiency of intestine.\n\nCrucially, **no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia is listed** among the current diagnoses.\n\n2. **Analysis of Medications and Procedures (Excluding Risk Factors):**\nThe medication list includes **Simvastatin** and **Cinacalcet HCl**.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1228,
+    "completion_tokens": 256
+  }
+}

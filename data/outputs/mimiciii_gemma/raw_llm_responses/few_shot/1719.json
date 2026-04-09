@@ -1,0 +1,12 @@
+{
+  "sample_id": 1719,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, primarily Acute miliary tuberculosis, Acute respiratory failure, and Congestive heart failure. While the patient is receiving multiple medications, including Atorvastatin (a lipid-lowering agent), this medication alone, along with the presence of hypertension and cardiovascular comorbidities (CHF, Subendocardial infarction), does not meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the use of statins (like Atorvastatin) and general cardiovascular diseases/risk factors (like hypertension or CHF) are NOT sufficient evidence to predict a future diagnosis.\n\nAlthough the patient is high-risk due to hypertension and receiving Atorvastatin, there is no explicit evidence in the current record\u2014such as a documented hypercholesterolemia or hyperlipidemia diagnosis\u2014that mandates the coding of \"Disorders of Lipid Metabolism\" in the next visit. Therefore, based on the strict guidelines provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3821,
+    "completion_tokens": 218
+  }
+}

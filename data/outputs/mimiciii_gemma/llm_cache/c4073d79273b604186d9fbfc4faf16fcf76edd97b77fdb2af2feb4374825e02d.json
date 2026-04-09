@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" This diagnosis directly meets the criteria for evidence of an existing lipid disorder that is likely to be coded in the patient's next hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nWhile the patient has several risk factors and is on medication for hyperlipidemia (Atorvastatin), the current visit record does not explicitly state a confirmed diagnosis of a lipid disorder (like hypercholesterolemia or hyperlipidemia) that meets the strict evidence criteria for predicting a future diagnosis. The presence of general risk factors and medication alone is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 746,
+    "completion_tokens": 148
+  }
+}

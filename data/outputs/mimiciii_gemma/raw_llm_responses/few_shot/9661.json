@@ -1,0 +1,12 @@
+{
+  "sample_id": 9661,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Since this explicit lipid disorder diagnosis is present in the current record, there is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, fulfilling the criteria for answering \"Yes.\" The presence of this specific diagnosis overrides the need to rely on general risk factors or medication use alone.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3815,
+    "completion_tokens": 120
+  }
+}

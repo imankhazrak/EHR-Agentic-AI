@@ -1,0 +1,12 @@
+{
+  "sample_id": 2713,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are dominated by severe infectious processes (Unspecified septicemia, Severe sepsis), respiratory issues (Pneumonitis, Acute respiratory failure), autoimmune/muscular conditions (Polymyositis), neurological/psychiatric conditions (Paranoid type schizophrenia, chronic), and severe organ failure (Acute kidney failure, Dehydration, Rheumatic heart failure).\n2. **Medications:** The prescribed medications are primarily aimed at managing the acute infectious, inflammatory, and organ failure states (e.g., Levofloxacin, Vancomycin HCl, Prednisone, Heparin, Fludrocortisone Acetate, Norepinephrine). While some medications like Aspirin and Vitamin D are present, there is no explicit evidence of lipid-lowering agents (statins or fibrates) being",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1085,
+    "completion_tokens": 256
+  }
+}

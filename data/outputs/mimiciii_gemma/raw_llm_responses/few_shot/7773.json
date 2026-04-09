@@ -1,0 +1,12 @@
+{
+  "sample_id": 7773,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe acute and chronic respiratory failure, obstructive chronic bronchitis exacerbation, and associated cardiovascular instability (Atrial fibrillation, Hypotension). The medication profile is heavily focused on managing these pulmonary and cardiac issues (Albuterol, PredniSONE, Furosemide, Heparin, Aspirin, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several risk factors that are commonly associated with lipid disorders\u2014namely, chronic respiratory disease and Atrial fibrillation (which can be linked to metabolic issues)\u2014the instructions strictly forbid predicting a future diagnosis based solely on these general risk factors or the use of related medications (like Aspirin or Heparin).\n\nThe current medication list does not include any explicit lipid-lowering agents (like statins or fibrates) that would serve as strong, explicit evidence of an actively managed lipid disorder.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present to predict a future diagnosis\u2014the prediction must be \"No\", even",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3658,
+    "completion_tokens": 256
+  }
+}

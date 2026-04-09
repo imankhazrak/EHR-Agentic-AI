@@ -1,0 +1,12 @@
+{
+  "sample_id": 5055,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is extensive and details numerous serious conditions, including cardiovascular disease (Atherosclerosis, Cardiomyopathies), renal disease (Hypertensive CKD Stage V), diabetes (multiple manifestations), and other systemic issues (Viral Hepatitis C, Polyneuropathy). The patient is on medication, including Atorvastatin, which is a lipid-lowering agent. However, the record *does not* contain explicit, primary diagnoses of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder that is actively being managed or explicitly stated as the primary reason for the current visit. The presence of Atorvastatin is a treatment for a *suspected* or *secondary* risk factor, not an explicit diagnosis of a lipid disorder itself. Therefore, based on the strict criteria requiring explicit lipid disorder evidence, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 862,
+    "completion_tokens": 178
+  }
+}

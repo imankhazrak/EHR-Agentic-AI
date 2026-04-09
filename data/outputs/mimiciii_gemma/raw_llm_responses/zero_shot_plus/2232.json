@@ -1,0 +1,12 @@
+{
+  "sample_id": 2232,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) in the current record, not just general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe, life-threatening conditions: Acute myeloid leukemia, Thrombotic microangiopathy, Complications of transplanted bone marrow, Acute respiratory failure, Congestive heart failure, Critical illness myopathy, Acute kidney failure, Pneumonitis, and Aspergillosis. None of these diagnoses explicitly state or imply a primary or secondary lipid disorder (e.g., primary hyperlipidemia or secondary hypercholesterolemia due to a known condition).\n\n2. **Analysis of Medications and Procedures:** The medication profile is extensive and focused on managing the acute, critical illnesses listed above (e.g., Humulin-R Insulin for glycemic control, Caspofungin for fungal infection, Norepinephrine for hypotension, Methotrexate for cancer management). While the patient is on various medications, there is no explicit mention of lipid-lowering agents (like statins or fibrates) being prescribed, nor is there",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 256
+  }
+}

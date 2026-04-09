@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current hospital visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hypercholesterolemia.\" Since the patient is explicitly diagnosed with \"Pure hypercholesterolemia,\" there is strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit.\n\nThe other diagnoses, such as Coronary atherosclerosis, Hematoma, Hemorrhage, Vascular disorders of penis, Fall, Delirium, and Aortic valve disorders, represent significant comorbidities, but the explicit lipid diagnosis is the primary driver for this prediction, as per the strict instructions.\n\nThe presence of other risk factors (like personal history of tobacco use) and comorbidities (like Coronary atherosclerosis) supports the overall clinical picture of a patient with complex metabolic and cardiovascular health, but the explicit diagnosis of hypercholesterolemia is the definitive factor that meets the criteria for a \"Yes\" prediction.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 923,
+    "completion_tokens": 219
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11292,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The instructions strictly prohibit predicting \"Yes\" based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** The current visit record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality in the \"Diagnoses made\" section.\n2. **Medication Profile:** The patient is prescribed **Simvastatin** and **Aspirin**. While Simvastatin is a lipid-lowering agent, the instructions explicitly state that the *use* of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Yes.\"\n3. **Comorbidities and Risk Factors:** The patient has numerous significant comorbidities, including:\n    * Unspecified essential hypertension\n    * Atherosclerosis of renal artery\n    * Coronary atherosclerosis of native coronary artery\n    * Chronic kidney disease\n    * Abdominal aneurysm/Iliac artery aneurysm\n    * Obstructive",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1196,
+    "completion_tokens": 256
+  }
+}

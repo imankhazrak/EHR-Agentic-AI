@@ -1,0 +1,12 @@
+{
+  "sample_id": 11406,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record contains the diagnosis \"Other and unspecified hyperlipidemia.\" However, the prediction rules explicitly state that the presence of general risk factors or the diagnosis of \"Other and unspecified hyperlipidemia\" alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" under the strict criteria provided. Furthermore, the rules emphasize that explicit evidence of an *existing or actively managed lipid disorder* beyond general risk factors must be present to predict a future diagnosis. Since the rules are highly restrictive and do not allow for the mere presence of \"Other and unspecified hyperlipidemia\" to trigger a \"Yes\" prediction, the answer must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 934,
+    "completion_tokens": 140
+  }
+}

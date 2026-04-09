@@ -1,0 +1,12 @@
+{
+  "sample_id": 7477,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record is overwhelmingly focused on managing severe cardiovascular disease (Subendocardial infarction, Acute on chronic systolic heart failure, Congestive heart failure, Coronary atherosclerosis, End stage renal disease, Hypertensive chronic kidney disease, Diabetes, Peripheral vascular disease) and associated complications (Acute kidney failure, Ulcer of ankle, Closed fracture of rib(s), Diabetes).\n\nWhile the patient is prescribed Atorvastatin, which is a lipid-lowering medication, the record does not explicitly state a primary diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that is actively being managed as the main focus of the current care, separate from the cardiovascular and renal crises.\n\nAccording to the strict guidelines, the prescription of Atorvastatin alone, in the context of severe cardiovascular and renal disease, is not sufficient evidence to predict that a primary diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the NEXT hospital visit. The focus remains on the acute and chronic management of the cardiac and renal conditions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 218
+  }
+}

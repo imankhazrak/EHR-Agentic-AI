@@ -1,0 +1,12 @@
+{
+  "sample_id": 4438,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe infections (septic shock, UTI, candidiasis), respiratory failure, renal failure (ESRD, CKD), and cardiovascular issues (CHF, CAD). While the patient is on Atorvastatin, which is a medication used to manage hyperlipidemia, the record does not contain any explicit diagnostic evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) being present or actively managed as a primary diagnosis alongside the other severe conditions. Therefore, based on the strict criteria requiring explicit diagnostic evidence of a lipid disorder, the prediction is No.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 128
+  }
+}

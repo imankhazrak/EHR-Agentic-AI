@@ -1,0 +1,12 @@
+{
+  "sample_id": 10577,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening infections (sepsis, septic shock, pneumonia, candidiasis, etc.), acute organ failure (kidney, respiratory), and severe inflammatory/inflammatory complications. While the patient has several risk factors associated with metabolic issues (Morbid obesity, Obstructive sleep apnea), and is on medications that manage cardiovascular risk (Warfarin, Metoprolol), there is no explicit evidence in the current diagnoses or active management that points to an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of general risk factors or cardiovascular management alone is insufficient to meet the prediction criteria.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1052,
+    "completion_tokens": 170
+  }
+}

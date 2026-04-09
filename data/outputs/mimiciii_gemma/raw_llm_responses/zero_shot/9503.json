@@ -1,0 +1,12 @@
+{
+  "sample_id": 9503,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" This is direct evidence of an existing lipid disorder. Furthermore, the patient is prescribed \"Atorvastatin,\" which is the standard pharmacological management for hypercholesterolemia. Because the current record explicitly confirms a lipid disorder diagnosis, it is highly explicit evidence that this diagnosis will be coded in the patient's NEXT hospital visit.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly lists the diagnosis of \"Pure hypercholesterolemia.\" This is direct evidence of an existing lipid disorder. Furthermore, the patient is prescribed \"Atorvastatin,\" which is the standard pharmacological management for hypercholesterolemia. Because the current record explicitly confirms a lipid disorder diagnosis, it is highly explicit evidence that this diagnosis will be coded in the patient's NEXT hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 187
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9770,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on strong and explicit evidence of an existing or actively managed lipid disorder, while strictly excluding predictions based on general risk factors, statin use, or cardiovascular diseases alone.\n\n**Analysis of Current Visit Record for Explicit Lipid Disorder Evidence:**\n\n1. **Review of Diagnoses:** The current diagnoses list includes several significant metabolic and organ system issues: Metabolic encephalopathy, Pneumonia, Acute kidney failure, Acute venous embolism, Blood in stool, Other ureteric obstruction, Hydronephrosis, Hyperpotassemia, Diabetes mellitus (Type II, unspecified, not uncontrolled), Epilepsy, Osteoporosis, Thrombocytopenia, Anemia in CKD, Iron deficiency anemia, and Hypertensive CKD.\n    * **Absence of Explicit Lipid Diagnosis:** Crucially, the list of diagnoses **does not contain** any explicit mention of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1252,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9982,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details complex gastrointestinal issues (Cirrhosis, Esophageal varices, Portal vein thrombosis, Ascites, Acute kidney failure) and associated complications (Hypothyroidism, Duodenitis, etc.). While the patient is receiving Cholestyramine, which is used to manage cholesterol, this medication alone, in the context of the provided diagnoses, does not constitute explicit evidence of an actively managed or existing primary lipid disorder (like hypercholesterolemia or hyperlipidemia) that would explicitly mandate a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, beyond the general use of a cholesterol-lowering agent. The other diagnoses listed are related to liver failure and GI bleeding, not primary lipid pathology. Therefore, based strictly on the evidence required, the diagnosis is not explicitly supported.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 170
+  }
+}

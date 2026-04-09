@@ -1,0 +1,12 @@
+{
+  "sample_id": 2039,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Although the patient has numerous other serious comorbidities (e.g., CHF, AKI, chronic respiratory failure), the presence of the specific lipid diagnosis overrides the general risk factors, fulfilling the strict criteria for a \"Yes\" prediction. The medication profile includes Atorvastatin, which is consistent with the management of hypercholesterolemia, further supporting the explicit nature of the lipid disorder present.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3887,
+    "completion_tokens": 147
+  }
+}

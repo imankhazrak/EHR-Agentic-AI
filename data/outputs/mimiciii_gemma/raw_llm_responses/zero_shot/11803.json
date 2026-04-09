@@ -1,0 +1,12 @@
+{
+  "sample_id": 11803,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details complex cardiac issues (Mitral valve stenosis, Aortic valve insufficiency, Atrial fibrillation, Coronary atherosclerosis) and associated management (Anticoagulants, Atorvastatin). While Atorvastatin is prescribed, this medication alone, along with the presence of cardiovascular diseases, does not constitute explicit evidence of an existing or actively managed lipid disorder (like hypercholesterolemia or hyperlipidemia) that is sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" based on the strict criteria provided. The criteria explicitly exclude predicting a diagnosis based solely on statin use or general cardiovascular risk factors.\n\nASSISTANT:\nPrediction: No\n\nReasoning: The current visit record details complex cardiac conditions (Mitral valve stenosis, Aortic valve insufficiency, Atrial fibrillation, Coronary atherosclerosis) and associated management. Although Atorvastatin is prescribed, the strict criteria require explicit evidence of an existing lipid disorder (e.g., documented hypercholesterolemia or hyperlipidemia) beyond just statin use or general cardiovascular risk factors to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since this explicit evidence is absent, the prediction must be No.\n\nASSISTANT:\nPrediction: No",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 798,
+    "completion_tokens": 256
+  }
+}

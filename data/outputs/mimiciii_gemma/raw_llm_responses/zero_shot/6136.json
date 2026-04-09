@@ -1,0 +1,12 @@
+{
+  "sample_id": 6136,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" This diagnosis directly meets the criteria for evidence of an existing lipid disorder that is likely to be coded in the next hospital visit. Furthermore, the patient is actively managed with \"Ezetimibe\" and \"Atorvastatin,\" which are lipid-lowering agents, reinforcing the ongoing management of this specific lipid condition.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe patient's current visit record includes several diagnoses related to cardiovascular disease (Subendocardial infarction, Congestive heart failure, Atrial fibrillation, Coronary atherosclerosis, Aortocoronary bypass status) and metabolic conditions (Diabetes mellitus, Chronic kidney disease, Gout). While the patient is prescribed lipid-lowering medications (Atorvastatin, Ezetimibe), the record does not explicitly state a primary diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) that would explicitly warrant coding \"Disorders of Lipid Metabolism\" in the next visit, based on the strict rules provided.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe patient's current visit record explicitly includes the diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 738,
+    "completion_tokens": 256
+  }
+}

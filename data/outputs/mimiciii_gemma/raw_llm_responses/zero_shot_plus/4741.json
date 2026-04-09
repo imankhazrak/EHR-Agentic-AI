@@ -1,0 +1,12 @@
+{
+  "sample_id": 4741,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the patient's current hospital visit record contains explicit and strong evidence of a lipid disorder diagnosis, which strongly indicates that this diagnosis will be coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Diagnosis:** The patient's current diagnoses explicitly include **\"Pure hypercholesterolemia\"**. This is a direct and undeniable diagnosis of a lipid abnormality (CCS category 53), satisfying the primary criterion for predicting a future diagnosis.\n\n2. **Active Lipid Management:** The patient is actively managed for this condition, as evidenced by the prescription of **\"Cholestyramine\"** and **\"Simvastatin\"**. These medications are specifically used to treat hypercholesterolemia and manage lipid levels, confirming ongoing clinical focus on this disorder.\n\n3. **Comorbid Conditions:** While the patient has numerous severe comorbidities (e.g., Chronic diastolic heart failure, Hypertensive chronic kidney disease, Coronary atherosclerosis), the presence of the explicit lipid diagnosis and active management elevates the certainty of this diagnosis being maintained or re-coded in subsequent visits, as per the instructions.\n\nConclusion:\nSince the current record provides explicit evidence of **\"Pure hypercholesterolemia\"** and active",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1109,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7824,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly focus on whether explicit evidence of an existing or actively managed lipid disorder is present in the current visit record, rather than general risk factors or the use of lipid-affecting medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses are: Other pulmonary embolism and infarction; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Malignant neoplasm of upper lobe, bronchus or lung; Unspecified essential hypertension; Atherosclerosis of aorta.\nNone of these diagnoses explicitly state a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While Atherosclerosis of aorta is a strong indicator of underlying cardiovascular risk, it is a consequence of chronic vascular disease, not an explicit diagnosis of a primary lipid abnormality itself, according to the strict criteria provided.\n\n2. **Analysis of Medications Prescribed:**\nThe medications prescribed include Heparin Sodium, Potassium Chloride, Docusate Sodium, Sodium Chloride 0.9% Flush, Senna, Influenza Virus Vaccine, Amlod",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 952,
+    "completion_tokens": 256
+  }
+}

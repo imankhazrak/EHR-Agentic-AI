@@ -1,0 +1,12 @@
+{
+  "sample_id": 3615,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction hinges on the strict criteria provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Analysis of Explicit Lipid Disorder Evidence:**\n   Reviewing the current diagnoses made, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia coded in the patient's record. The patient has several metabolic issues (e.g., Hypercalcemia, Disorders of phosphorus metabolism, Diabetes mellitus), but these are not explicitly categorized as primary lipid disorders.\n\n2. **Analysis of Risk Factors and Comorbidities:**\n   The patient presents with numerous significant risk factors and comorbidities commonly associated with lipid disorders:\n   *   **Diabetes Mellitus (Type II):** A major risk factor for dyslipidemia.\n   *   **Hypertension:** A major risk factor.\n   *   **Cardiovascular Disease (CHF, CAD):** Indicates underlying vascular risk.\n   *   **Chronic Kidney Disease (Stage V/ESRD):** Associated with metabolic disturbances, including lipid abnormalities.\n\n3. **Analysis of Medication Profile:**\n   The patient is prescribed **Atorvastatin**, which is a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1215,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe infectious processes (Malignant neoplasm, Pneumonia due to Pseudomonas, Obstructive chronic bronchitis with exacerbation, Acute respiratory failure) and severe systemic complications (Congestive heart failure, Hyperosmolality, Diabetes mellitus). While the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone is not enough evidence to code a future diagnosis. Furthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder coded in the current record. Therefore, based on the strict criteria provided, the prediction must be \"No,\" even though the patient is high-risk and is receiving lipid-lowering therapy.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3775,
+    "completion_tokens": 189
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10929,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or related lipid abnormalities (CCS category 53). The instructions strictly prohibit predicting a future diagnosis based solely on general risk factors, the use of statins, or the presence of cardiovascular diseases.\n\nA comprehensive analysis of the patient's current visit record reveals the following:\n1. **Diagnoses Made:** The primary diagnoses are related to malignancy (Secondary malignant neoplasm of lung, Secondary malignant neoplasm of other parts of nervous system, Personal history of malignant neoplasm of breast, Personal history of malignant neoplasm of thyroid), respiratory issues (Pneumonia, organism unspecified, Obstructive chronic bronchitis without exacerbation), and other systemic issues (Hypovolemia, Anemia, unspecified, Esophageal reflux, Unspecified hereditary and idiopathic peripheral neuropathy, Postsurgical hypothyroidism).\n2. **Medications Prescribed:** The medication list includes treatments for respiratory distress (Ipratropium Bromide Neb, Pantoprazole, D5 1/2NS, etc.), malignancy/systemic support (Metoprolol Tartrate, Lorazepam, Xopenex, etc",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1173,
+    "completion_tokens": 256
+  }
+}

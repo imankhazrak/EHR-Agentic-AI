@@ -1,0 +1,12 @@
+{
+  "sample_id": 10066,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit and ongoing documentation of a lipid disorder in the patient's current visit record, which provides strong evidence for a future diagnosis.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The patient's current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This is direct evidence that a lipid abnormality is present and is being managed as a condition.\n\n2. **Active Lipid Management:** The patient is actively receiving medication for lipid management, specifically **\"Atorvastatin.\"** The prescription of a statin confirms that the hyperlipidemia is not merely a risk factor but an active, coded condition requiring therapeutic intervention.\n\n3. **Comorbid Conditions:** The presence of multiple severe comorbidities, including **\"Coronary atherosclerosis,\" \"Intermediate coronary syndrome,\"** and **\"Hypertensive chronic kidney disease,\"** are all strongly associated with dyslipidemia. While these conditions alone are insufficient for a \"Yes\" prediction, they reinforce the clinical necessity of maintaining the lipid disorder diagnosis.\n\n4. **Conclusion:** Because the patient has an explicit diagnosis of hyperlipidemia *and* is actively managed with a lipid-lowering agent (Atorvastatin), there is strong and explicit evidence that the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7878,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the strict rules, the presence of explicit evidence of an existing lipid disorder (such as hypercholesterolemia) is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's NEXT hospital visit.\n\nASSISTANT:\nPrediction: No\n\nReasoning:\nThe current visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia). Although the patient is on various medications and has other diagnoses, the strict rules require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since this explicit evidence is absent, the prediction is No.\n\nASSISTANT:\nPrediction: Yes\n\nReasoning:\nThe current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the strict rules, the presence of explicit evidence of an existing lipid disorder (such as hypercholesterolemia) is strong and explicit evidence that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's NEXT hospital visit.\n\nASSIST",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 972,
+    "completion_tokens": 256
+  }
+}

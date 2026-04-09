@@ -1,0 +1,12 @@
+{
+  "sample_id": 4927,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record explicitly details diagnoses related to Diabetes (with renal, ophthalmic, and neurological manifestations), Chronic Kidney Disease (Stage V/ESRD), and electrolyte imbalances (Hyperpotassemia, Hypocalcemia). While the patient has a history of tobacco use and is undergoing Hemodialysis, there is no explicit evidence in the provided record\u2014such as documented hypercholesterolemia, hyperlipidemia, or a specific diagnosis of a lipid disorder\u2014to strongly and explicitly predict that \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. The existing diagnoses are focused on metabolic and renal complications, not primary lipid abnormalities.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 546,
+    "completion_tokens": 138
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which explicitly includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, and this prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n**Analysis of Current Visit Record:**\n1. **Diagnoses:** The primary diagnoses recorded are:\n    * Closed fracture of base of skull with associated intracranial hemorrhages.\n    * Diabetes with other specified manifestations, type I (juvenile type).\n    * Unspecified fall.\n    * Long-term use of insulin.\n    * *Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder listed.*\n\n2. **Medications:** The patient is prescribed several medications, including:\n    * Insulin (for Diabetes).\n    * Metoprolol (for cardiovascular support/hypertension management).\n    * Phenytoin (for seizure control).\n    * Heparin/",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 959,
+    "completion_tokens": 256
+  }
+}

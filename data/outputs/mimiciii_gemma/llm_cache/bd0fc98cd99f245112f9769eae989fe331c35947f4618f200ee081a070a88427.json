@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, while strictly excluding predictions based only on general risk factors, statin use, or cardiovascular diseases.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The patient's current diagnoses are overwhelmingly related to severe, life-threatening infections and respiratory failure: Human immunodeficiency virus [HIV] disease, Acute respiratory failure, Unspecified septicemia, Septic shock, Severe sepsis, Pneumocystosis, Acidosis, Nonspecific elevation of levels of transaminase or lactic acid dehydrogenase [LDH], and Anemia.\n2. **Medications:** The medication profile is extensive and focused on managing HIV, severe sepsis, and respiratory distress. Key medications include antiretrovirals (RiTONAvir, Darunavir, Emtricitabine-Tenofovir), broad-spectrum antibiotics (Azithromycin, Vancomycin, Levofloxacin, Sulf",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1136,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular, infectious, and autoimmune conditions. The primary diagnoses include Aortic valve disorders, Atrial fibrillation, Coronary atherosclerosis, and Lupus erythematosus. The medication profile includes Atorvastatin, which is a lipid-lowering agent. However, according to the strict instructions, the mere prescription of a statin (Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality coded in the current record. The other diagnoses and procedures relate to cardiac surgery, pacemaker fitting, and autoimmune flares, not an existing, coded lipid disorder. Therefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3734,
+    "completion_tokens": 179
+  }
+}

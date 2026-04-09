@@ -1,0 +1,12 @@
+{
+  "sample_id": 925,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on managing acute coronary syndrome, cardiac complications (Subendocardial infarction, Coronary atherosclerosis, Aorto-coronary bypass), and acute kidney failure. While the patient is prescribed Atorvastatin, which is a lipid-lowering medication, the record does not provide explicit evidence of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly lead to a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria. The presence of Atorvastatin alone is insufficient to meet the explicit evidence requirement.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 729,
+    "completion_tokens": 135
+  }
+}

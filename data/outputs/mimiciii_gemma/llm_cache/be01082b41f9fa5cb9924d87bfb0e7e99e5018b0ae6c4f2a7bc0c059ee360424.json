@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record.\n\n1. **Explicit Evidence of Lipid Disorder:** The patient's current diagnoses explicitly include \"Pure hypercholesterolemia.\" This meets the strict criterion for strong and explicit evidence of a lipid disorder, as defined in the target definition.\n\n2. **Analysis of Current Record:** The presence of this specific diagnosis confirms that the patient is currently being managed for a lipid abnormality. Given that the diagnosis is explicitly coded, it is highly probable that this condition, or a related lipid disorder, will be maintained or re-diagnosed in the next hospital visit, especially since the patient is undergoing complex cardiovascular and metabolic management.\n\n3. **Exclusion of Insufficient Evidence:** The prediction is not based solely on the prescription of Atorvastatin (a statin) or the presence of cardiovascular diseases (Coronary atherosclerosis, Intermediate coronary syndrome). While these factors are present, the explicit diagnosis of \"Pure hypercholesterolemia\" provides the necessary, sufficient evidence to meet the prediction criteria.\n\n4. **Conclusion:** Because the patient has an explicit, coded diagnosis of a lipid disorder (\"Pure hyper",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1223,
+    "completion_tokens": 256
+  }
+}

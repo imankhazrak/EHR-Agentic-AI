@@ -1,0 +1,12 @@
+{
+  "sample_id": 1372,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe current visit record primarily details diagnoses and management related to acute respiratory failure, various forms of heart failure (diastolic and congestive), atrial fibrillation, and associated cardiovascular/endocrine issues (hypertension, hypothyroidism). While the patient is prescribed Atorvastatin, which is used to manage dyslipidemia, the provided record lacks explicit diagnostic evidence (such as documented hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis) to strongly and explicitly predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, according to the strict criteria provided. The presence of Atorvastatin alone is insufficient evidence for a future diagnosis under these guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 681,
+    "completion_tokens": 146
+  }
+}

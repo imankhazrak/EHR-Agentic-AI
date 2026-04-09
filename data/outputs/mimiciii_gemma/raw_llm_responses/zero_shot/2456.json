@@ -1,0 +1,12 @@
+{
+  "sample_id": 2456,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. The diagnoses and procedures listed are related to gastric ulcer, acute myocardial infarction, atrial fibrillation, diabetes, and other cardiovascular/pulmonary issues. While the patient has several risk factors (diabetes, hypertension, history of MI), these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 104
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 11972,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because there is explicit and strong evidence of a lipid disorder already present and actively managed in the patient's current visit record, which strongly indicates that this diagnosis will be coded again in the next hospital visit.\n\n1. **Explicit Diagnosis of Lipid Disorder:** The patient's current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is direct evidence of a lipid abnormality.\n\n2. **Active Lipid Management:** The patient is actively being managed for this condition, as evidenced by the prescription of **\"Rosuvastatin Calcium\"**. Rosuvastatin is a potent statin used specifically for the treatment of hyperlipidemia.\n\n3. **Comorbid Conditions Supporting Lipid Risk:** The patient presents with several significant comorbidities that are strongly associated with lipid disorders and cardiovascular risk, reinforcing the need for this diagnosis:\n    * **Diabetes Mellitus:** The diagnosis of **\"Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled\"** is a major risk factor for dyslipidemia.\n    * **Hypertension:** The diagnosis of **\"Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage I through stage IV, or unspecified\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1309,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1657,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The analysis must strictly rely on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe current diagnoses listed are:\n* Other specified infectious and parasitic diseases of mother, antepartum condition or complication\n* Pneumonia, organism unspecified\n* Unspecified septicemia\n* Sepsis\n* Acidosis\n* Anemia of mother, antepartum condition or complication\n* Thyroid dysfunction of mother, antepartum condition or complication\n* Nontoxic uninodular goiter\n\nNone of these diagnoses explicitly state or imply a primary or secondary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient's primary acute issues revolve around severe infection (Sepsis, Pneumonia, Septicemia), metabolic derangement (Acidosis), and maternal/antepartum complications.\n\n2. **Analysis of Medications and Procedures:**\nThe medications prescribed and procedures performed are primarily aimed at managing the acute infectious, metabolic, and supportive care",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1044,
+    "completion_tokens": 256
+  }
+}

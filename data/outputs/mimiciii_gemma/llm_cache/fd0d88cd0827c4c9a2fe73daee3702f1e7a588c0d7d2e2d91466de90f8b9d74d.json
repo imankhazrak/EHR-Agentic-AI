@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53). Furthermore, the patient is actively managed with the medication **\"Pravastatin,\"** which is a lipid-lowering agent used to treat hyperlipidemia. While the presence of statins alone is not sufficient for a \"Yes\" prediction, the combination of an explicit diagnosis of hyperlipidemia *and* the active prescription of a statin provides strong, explicit evidence that a lipid disorder is present and likely to be coded in the next hospital visit. The other comorbidities, such as uncontrolled Diabetes mellitus and Chronic hepatitis C, are risk factors, but the explicit diagnosis of hyperlipidemia is the primary and sufficient evidence for this prediction, overriding the exclusion criteria.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3752,
+    "completion_tokens": 209
+  }
+}

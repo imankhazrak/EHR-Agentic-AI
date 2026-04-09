@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with a form of hypercholesterolemia, which is a direct component of a lipid disorder, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit, fulfilling the criteria for a \"Yes\" prediction. The other diagnoses and medications (e.g., septicemia, pneumonia, AKI, cirrhosis, hypertension, diabetes) are high-risk comorbidities but do not supersede the explicit evidence of the existing lipid disorder diagnosis.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3664,
+    "completion_tokens": 177
+  }
+}

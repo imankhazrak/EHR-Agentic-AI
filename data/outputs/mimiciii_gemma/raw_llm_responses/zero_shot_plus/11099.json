@@ -1,0 +1,12 @@
+{
+  "sample_id": 11099,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia. The strict criteria for predicting a \"Yes\" diagnosis in the next visit require explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-affecting medications.\n\nAnalysis of the Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** Reviewing the diagnoses made in the current visit record, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, or any other specific lipid disorder.\n2. **Risk Factors and Comorbidities:** The patient has several significant comorbidities, including Unspecified essential hypertension, Epilepsy, and a history of venous thrombosis and embolism. While hypertension is a known risk factor for dyslipidemia, the presence of hypertension alone, without a concurrent diagnosis of a lipid abnormality, does not meet the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n3. **Medication Profile:** The patient is prescribed Warfarin and other medications, but there is no mention of lipid-lowering agents such as statins (e.g., Atorvastatin)",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1216,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10467,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Other and unspecified hyperlipidemia\" present in the patient's current visit record.\n\nThe definition of \"Disorders of Lipid Metabolism\" explicitly includes \"hyperlipidemia.\" Since the patient is currently diagnosed with \"Other and unspecified hyperlipidemia,\" there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nThe presence of this explicit diagnosis overrides the need to rely on general risk factors (such as Unspecified essential hypertension or Malignant neoplasm) or the use of medications (which are none recorded). The explicit diagnosis of hyperlipidemia meets the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nIn summary, the explicit diagnosis of hyperlipidemia provides strong evidence that the condition will be coded in the next hospital visit, aligning with the strict guidelines provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 899,
+    "completion_tokens": 184
+  }
+}

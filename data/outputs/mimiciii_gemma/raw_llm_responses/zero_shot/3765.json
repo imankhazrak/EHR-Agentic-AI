@@ -1,0 +1,12 @@
+{
+  "sample_id": 3765,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record primarily details diagnoses and treatments related to acute infections (Pneumonia, Iatrogenic pulmonary embolism), neurological conditions (Syringomyelia, Compression of brain), and surgical complications (Hematoma, Other specified surgical operations). There is no explicit mention of any lipid abnormalities, hypercholesterolemia, or hyperlipidemia in the current diagnoses or medication list. The medications prescribed (Acetaminophen, Metoprolol, Levofloxacin, Warfarin, etc.) are related to managing these existing conditions, not managing a primary lipid disorder. Therefore, based strictly on the evidence provided, there is no strong and explicit basis to predict a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 735,
+    "completion_tokens": 153
+  }
+}

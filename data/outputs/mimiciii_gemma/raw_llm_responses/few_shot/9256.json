@@ -1,0 +1,12 @@
+{
+  "sample_id": 9256,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on managing severe malignant neoplasms (Secondary malignant neoplasm of brain and spinal cord, Secondary malignant neoplasm of lung, etc.), communicating hydrocephalus, and associated severe symptoms (Nausea with vomiting, Hemangioma, etc.). The medication profile is extensive, covering pain management (Morphine Sulfate, Fentanyl Citrate, Oxycodone-Acetaminophen), antiemetics (DiphenhydrAMINE, Ondansetron, Metoclopramide), antibiotics (Gentamicin, Vancomycin), and supportive care for hydrocephalus and cancer (Insulin, Dexamethasone, Pantoprazole).\n\nCrucially, the current visit record **lacks any explicit evidence** of an existing or actively managed lipid disorder. There are no diagnoses of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication list does not include any lipid-lowering agents such as statins (e.g., Atorvastatin) or fibrates.\n\nAccording to the strict instructions provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires **strong and explicit evidence** of such a disorder being present or actively managed. Since the current record is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3713,
+    "completion_tokens": 256
+  }
+}

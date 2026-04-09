@@ -1,0 +1,12 @@
+{
+  "sample_id": 6266,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnoses made include \"Pure hypercholesterolemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is sufficient evidence to answer \"Yes,\" even if other risk factors like hypertension or cardiovascular diseases are present. Furthermore, the patient is being managed with \"Atorvastatin,\" a medication commonly used for lipid management, which aligns with the active management of a lipid disorder. The demonstration cases also show that explicit lipid disorder diagnoses (Case 2: Pure hypercholesterolemia) have resulted in a \"Yes\" outcome. Therefore, based on the explicit diagnosis of hypercholesterolemia, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3991,
+    "completion_tokens": 180
+  }
+}

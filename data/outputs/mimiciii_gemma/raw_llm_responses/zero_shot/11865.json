@@ -1,0 +1,12 @@
+{
+  "sample_id": 11865,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, complex liver disease (Autoimmune hepatitis, Chronic hepatitis C with hepatic coma, Cirrhosis, Hepatorenal syndrome, Portal hypertension, etc.) and associated complications (Obstruction of bile duct, Acute kidney failure, etc.). While the patient has Secondary diabetes mellitus, this is listed without explicit evidence of uncontrolled hyperlipidemia or a primary lipid disorder diagnosis. The medications prescribed (e.g., Insulin, Spironolactone, Lactulose) are primarily for managing the severe liver/renal/metabolic state, not explicitly for managing a primary lipid disorder like hypercholesterolemia or hyperlipidemia. Therefore, based strictly on the provided evidence, there is no strong and explicit indication that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit, as the existing evidence points to severe organ failure rather than a primary lipid abnormality.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1037,
+    "completion_tokens": 188
+  }
+}

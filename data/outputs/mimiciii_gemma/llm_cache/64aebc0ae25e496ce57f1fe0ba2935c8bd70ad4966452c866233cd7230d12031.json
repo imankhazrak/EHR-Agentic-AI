@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is \"Yes\" because the current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the likelihood of this diagnosis being coded in the patient's next hospital visit, despite the presence of numerous other severe comorbidities.\n\n1. **Explicit Lipid Disorder Evidence:**\nThe current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit coding of a lipid abnormality (CCS category 53), fulfilling the primary criterion for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n2. **Supporting Comorbidities and Management:**\nThe presence of other conditions in the record strongly supports the context of ongoing lipid management and metabolic disturbance:\n* **Obesity:** The diagnosis **\"Obesity, unspecified\"** is a major, well-established risk factor for hyperlipidemia.\n* **Diabetes Mellitus:** The patient has multiple diagnoses related to uncontrolled diabetes (**\"Diabetes with hyperosmolarity, type II or unspecified type, uncontrolled\"** and **\"Diabetes with ketoacidosis, type II or unspecified type, uncontrolled\"**), which is strongly associated with dyslipidemia.\n* **Cardiovascular Disease:** The presence of **\"Coronary atherosclerosis",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1398,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2931,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current hospital visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or any other condition explicitly categorized as a disorder of lipid metabolism. The diagnoses listed relate to asthma, fracture, GI hemorrhage, electrolyte imbalance, and neurological conditions. Therefore, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 531,
+    "completion_tokens": 101
+  }
+}

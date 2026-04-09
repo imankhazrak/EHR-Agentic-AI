@@ -1,0 +1,12 @@
+{
+  "sample_id": 3449,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are related to mechanical complications from implants, malignant neoplasm of the bronchus, and foreign body in the bronchus. The medications prescribed are primarily for managing respiratory issues (e.g., Albuterol, Finasteride, Dexamethasone, Prednisone, Pantoprazole) and general supportive care (e.g., Docusate Sodium, Lansoprazole, D5W, Midazolam HCl, Zolpidem Tartrate, Fentanyl Citrate, Lorazepam, Levofloxacin, Metronidazole, Heparin, Famotidine, Codeine Sulfate, Guaifenesin LA, Senna, Bisacodyl). While the patient is receiving various treatments, none of these explicitly point to an existing or actively managed lipid abnormality that would strongly and explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of general risk factors or the use of supportive medications alone is insufficient to meet the threshold for a \"Yes\" prediction. Therefore, based on",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3646,
+    "completion_tokens": 256
+  }
+}

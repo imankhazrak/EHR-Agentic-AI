@@ -1,0 +1,12 @@
+{
+  "sample_id": 11016,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The instructions strictly require that a prediction of \"Yes\" must be based on strong and explicit evidence of an existing or actively managed lipid disorder, such as hypercholesterolemia or hyperlipidemia, and explicitly exclude predictions based solely on the use of statins, cardiovascular diseases, or general risk factors.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses are overwhelmingly focused on severe cardiovascular issues (Acute on chronic systolic heart failure, Atrial flutter, Congestive heart failure, Atrial fibrillation, Mitral valve disorders, Diseases of tricuspid valve, Other primary cardiomyopathies), infectious processes (Urinary tract infection, Intestinal infection), and dehydration. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder listed in the diagnoses made.**\n2. **Medications:** The patient is prescribed **Atorvastatin**. While Atorvastatin is a lipid-lowering agent and its prescription strongly suggests the *presence* of underlying dyslipidemia, the instructions",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1051,
+    "completion_tokens": 256
+  }
+}

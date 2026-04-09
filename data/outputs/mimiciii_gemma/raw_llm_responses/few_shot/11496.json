@@ -1,0 +1,12 @@
+{
+  "sample_id": 11496,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of hyperlipidemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient has several strong comorbidities commonly associated with lipid disorders, such as \"Diabetes mellitus without mention of complication, type II or unspecified type,\" \"Morbid obesity,\" and \"Unspecified essential hypertension,\" which reinforces the clinical context of a lipid abnormality. While the instructions caution against predicting based solely on statin use or general risk factors, the explicit coding of \"hyperlipidemia\" in the current record serves as the necessary and sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3666,
+    "completion_tokens": 160
+  }
+}

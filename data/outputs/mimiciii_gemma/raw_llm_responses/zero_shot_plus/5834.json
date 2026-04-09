@@ -1,0 +1,12 @@
+{
+  "sample_id": 5834,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The current visit record provides the following diagnoses: Diabetes with ketoacidosis, type I [juvenile type], Chronic pancreatitis, and Unspecified essential hypertension.\n\nAnalysis of Current Visit Record:\n1. **Explicit Lipid Disorder Evidence:** There is no explicit mention of any lipid abnormality (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) in the current diagnoses.\n2. **Risk Factors Present:** The patient has several established risk factors for lipid disorders, including Diabetes Mellitus Type I and Unspecified essential hypertension. Diabetes is a known comorbidity associated with dyslipidemia.\n3. **Medication/Procedure Review:** No medications were prescribed, and no procedures were performed, so there is no direct evidence from these areas to support a future lipid diagnosis.\n\nConclusion:\nAlthough the patient possesses significant metabolic risk factors (Diabetes and Hypertension), the strict rule requires explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Yes.\" Since the current record lacks any",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 256
+  }
+}

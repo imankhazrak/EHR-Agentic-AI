@@ -1,0 +1,12 @@
+{
+  "sample_id": 1453,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53). The analysis must strictly focus on explicit evidence of an existing or actively managed lipid disorder, not general risk factors or the use of related medications.\n\n1. **Analysis of Current Diagnoses:**\nThe patient's current diagnoses include: Diabetes with ketoacidosis, Acute kidney failure, Congestive heart failure, Alcohol abuse, Esophageal reflux, Peptic ulcer, and Old myocardial infarction. While Diabetes Mellitus (Type II) is a known risk factor for dyslipidemia, and Cardiovascular Diseases (CHF, MI) are strongly associated with lipid abnormalities, the current record **does not explicitly state** a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n\n2. **Analysis of Medications Prescribed:**\nThe patient is prescribed various medications, including Humulin-R Insulin, Pantoprazole, and various electrolyte/GI agents. Crucially, the record **does not list** any medications specifically used for lipid management, such as statins (e.g., Atorvastatin) or fibr",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 256
+  }
+}

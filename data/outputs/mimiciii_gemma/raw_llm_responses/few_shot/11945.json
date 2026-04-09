@@ -1,0 +1,12 @@
+{
+  "sample_id": 11945,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the prediction that \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe key piece of evidence is the diagnosis: **\"Other and unspecified hyperlipidemia\"**.\n\nAccording to the strict rules provided, we must answer \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The diagnosis of \"hyperlipidemia\" directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53).\n\nWhile the patient has numerous other serious comorbidities (Unspecified septicemia, Acute kidney failure, Coronary atherosclerosis, Sepsis, etc.), the presence of this specific, explicit lipid diagnosis overrides the general risk factors and the mere use of lipid-lowering medications (like Simvastatin, which is present but insufficient on its own).\n\nTherefore, based on the explicit coding of a lipid disorder in the current record, the prediction for the next visit is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3717,
+    "completion_tokens": 220
+  }
+}

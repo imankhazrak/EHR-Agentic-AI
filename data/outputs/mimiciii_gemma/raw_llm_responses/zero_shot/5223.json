@@ -1,0 +1,12 @@
+{
+  "sample_id": 5223,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record is overwhelmingly focused on severe, life-threatening infections (septicemia, septic shock, UTI, pneumonia), acute organ failure (acute kidney failure, liver necrosis, toxic encephalopathy), and complex respiratory/cardiac issues (chronic respiratory failure, chronic diastolic heart failure, dependence on respirator). While the patient is prescribed Atorvastatin and Aspirin, which are used to manage cardiovascular risk and dyslipidemia, the record **lacks explicit evidence** of an existing or actively managed lipid disorder (such as documented hypercholesterolemia or hyperlipidemia) that would explicitly warrant a diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, according to the strict criteria provided. The presence of statins and aspirin alone is insufficient evidence to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 169
+  }
+}

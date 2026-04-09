@@ -1,0 +1,12 @@
+{
+  "sample_id": 2566,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\n\nReasoning: The current visit record explicitly details diagnoses related to acute myocardial infarction, coronary atherosclerosis, and atrial fibrillation. While the patient is prescribed Atorvastatin, which is a medication used to manage dyslipidemia, the record does not contain any explicit diagnostic evidence (such as documented hypercholesterolemia or hyperlipidemia) to confirm that a \"Disorders of Lipid Metabolism\" diagnosis is currently present or actively being managed as a primary condition, separate from the cardiovascular event. Therefore, based on the strict criteria, the evidence is insufficient to predict a future diagnosis of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 756,
+    "completion_tokens": 121
+  }
+}

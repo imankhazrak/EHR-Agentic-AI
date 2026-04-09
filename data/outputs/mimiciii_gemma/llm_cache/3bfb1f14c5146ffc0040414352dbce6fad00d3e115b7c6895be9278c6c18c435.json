@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which requires explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) to predict a future diagnosis of \"Yes.\" The current visit record must be analyzed strictly against the provided exclusion criteria.\n\n1. **Analysis of Current Diagnoses:** The patient's current diagnoses are:\n    * Cerebral aneurysm, nonruptured\n    * Congenital deficiency of other clotting factors\n    * Unspecified essential hypertension\n    These diagnoses relate to vascular health, coagulation, and blood pressure, but they do not explicitly state or imply the presence of a primary lipid abnormality (such as high cholesterol or hypertriglyceridemia).\n\n2. **Analysis of Medications and Procedures:**\n    * Medications prescribed: None recorded.\n    * Procedures performed: Other endovascular procedures on other vessels; Arteriography of cerebral arteries.\n    These interventions are focused on the cerebral vasculature and clotting factors, not on metabolic or lipid profiling.\n\n3. **Application of Exclusion Criteria:** The instructions explicitly state that a \"Yes\" prediction cannot be based solely on:\n    * Use of statins (None recorded).\n    * Cardiovascular diseases (Hy",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 854,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care events, including Cardiac arrest, Anoxic brain damage, Other convulsions, Alcohol abuse, unspecified, Acute and subacute necrosis of liver, Acquired coagulation factor deficiency, Other shock without mention of trauma, Acidosis, and History of fall. The medication and procedure lists reflect aggressive resuscitation and management of these life-threatening conditions (e.g., D5NS, D5W, Potassium Phosphate, Calcium Gluconate, NS, Insulin Human Regular, Vasopressin, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence** pointing toward a primary lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is clearly high-risk due to severe systemic illness and alcohol abuse, the strict instructions mandate that a prediction of \"Yes\" can **only** be made based on explicit evidence of an existing or actively managed lipid disorder.\n\nTherefore, based on the absence of such explicit evidence in the current visit record, the prediction for the next hospital visit is \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3637,
+    "completion_tokens": 240
+  }
+}

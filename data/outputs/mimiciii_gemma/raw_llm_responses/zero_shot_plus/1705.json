@@ -1,0 +1,12 @@
+{
+  "sample_id": 1705,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\n\nReasoning:\nThe prediction is based on the explicit diagnosis of \"Pure hypercholesterolemia\" present in the patient's current visit record. This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as hypercholesterolemia is a primary component of lipid abnormalities.\n\nFurthermore, the patient exhibits several strong comorbidities that are intrinsically linked to lipid disorders and cardiovascular disease, which often co-occur with dyslipidemia:\n1. **Diabetes Mellitus:** The patient has a diagnosis of Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled. Diabetes is a major risk factor for and comorbidity with hypercholesterolemia.\n2. **Hypertension:** The patient has Unspecified essential hypertension. Hypertension is a well-known comorbidity associated with dyslipidemia.\n3. **Cardiovascular Disease:** The patient has multiple severe cardiovascular diagnoses, including Coronary atherosclerosis, Old myocardial infarction, and Atrial fibrillation. These conditions are frequently associated with underlying dyslipidemia.\n\nWhile the patient is receiving medications such as Simvastatin (a statin), which is relevant to lipid management, the prediction is not based solely on this medication. The explicit diagnosis of \"Pure",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1145,
+    "completion_tokens": 256
+  }
+}

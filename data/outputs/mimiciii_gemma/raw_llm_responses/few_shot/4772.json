@@ -1,0 +1,12 @@
+{
+  "sample_id": 4772,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on complex oncological and respiratory pathology. The diagnoses include Chronic respiratory failure, Secondary malignant neoplasm of lung, Secondary malignant neoplasm of pleura, and Spinocerebellar disease. The medication profile is dominated by chemotherapy agents (Paclitaxel, CARBOplatin), immunosuppressants (Prednisone), and anticoagulants (Warfarin, Heparin Sodium).\n\nCrucially, there is **no explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) present in the current record. While the patient is receiving Amlodipine (a cardiovascular agent), and has general risk factors associated with malignancy and chronic illness, the instructions strictly forbid predicting a future diagnosis based solely on the use of cardiovascular drugs or general risk factors.\n\nThe demonstration cases show that a future diagnosis of \"Disorders of Lipid Metabolism\" is often linked to an explicit diagnosis in the current or preceding record (e.g., Case 2: Pure hypercholesterolemia). Since the current record lacks this explicit evidence, the prediction must be \"No,\" adhering strictly to the provided constraints.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3802,
+    "completion_tokens": 244
+  }
+}

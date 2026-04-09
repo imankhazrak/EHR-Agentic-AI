@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\n\nReasoning:\nThe prediction target is \"Disorders of Lipid Metabolism,\" which includes conditions like hypercholesterolemia, hyperlipidemia, and related lipid abnormalities (CCS category 53). The core instruction is to predict whether this specific diagnosis will be coded in the patient's NEXT hospital visit, based on explicit evidence in the CURRENT visit record, not general risk.\n\nAnalysis of Current Visit Record:\n1. **Diagnoses:** The current diagnoses are heavily focused on **renal and urological issues**: Acute kidney failure, Polycystic kidney, Urinary tract infection, Hypertensive chronic kidney disease, Chronic kidney disease, and Hyparathyroidism. There is also Anemia and Insomnia.\n2. **Medications:** The prescribed medications are primarily for **renal support, blood pressure control, and infection management**: Sodium Chloride, Calcium Acetate/Gluconate, Labetalol, Magnesium Sulfate, Metoprolol, Amlodipine, and various antibiotics/supportive agents.\n3. **Procedures:** No procedures were performed.\n\nEvaluation against Prediction Rules:\nThe strict rules for predicting \"Yes\" require **strong and explicit evidence** of an existing or actively managed lipid disorder (e.g., documented hyper",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 256
+  }
+}
