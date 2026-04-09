@@ -1,0 +1,12 @@
+{
+  "sample_id": 4985,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record primarily details complex cardiovascular and cardiac management, including Coronary atherosclerosis of autologous vein bypass graft, Congestive heart failure, Paroxysmal ventricular tachycardia, and the presence of an Automatic implantable cardiac defibrillator. The procedures performed are highly invasive and focused on revascularization and cardiac monitoring (e.g., stent insertion, cardiac catheterization, angiography).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's comorbidities (CHF, CAD) are known risk factors for dyslipidemia, but according to the strict instructions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nReviewing the demonstration cases:\n*   Case 1 and Case 2 explicitly included diagnoses of lipid disorders (e.g., Pure hypercholesterolemia in Case 2) and resulted in a \"Yes\" outcome.\n*   Case 3 explicitly included Diabetes Mellitus and resulted in a \"Yes\" outcome, though the primary driver for the \"Yes\" outcome in this context is often the presence of other",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3509,
+    "completion_tokens": 256
+  }
+}

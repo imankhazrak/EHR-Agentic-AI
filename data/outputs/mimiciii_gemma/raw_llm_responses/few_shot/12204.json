@@ -1,0 +1,12 @@
+{
+  "sample_id": 12204,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several significant comorbidities that are commonly associated with lipid disorders, such as hypertension (Hypertensive chronic kidney disease), chronic kidney disease, and atrial fibrillation, these conditions alone are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The patient's medication profile does not include any explicit lipid-lowering agents (like statins or fibrates) that would serve as strong, explicit evidence of an actively managed lipid disorder. Therefore, based strictly on the provided rules and the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3701,
+    "completion_tokens": 167
+  }
+}

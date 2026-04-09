@@ -4,6 +4,17 @@ This methodology note summarizes the implemented end-to-end pipeline for MIMIC-I
 
 Concise reference for advising meetings. Code lives under `src/`; configuration under `configs/`.
 
+> **LLM results attribution (current status):**
+> - All currently reported LLM metrics/artifacts in this methodology refer to **OpenAI `gpt-4o-mini`** runs.
+> - **Gemma4** experiments are in progress and are **not yet included** in reported results.
+> - Keep model-specific outputs separated and clearly labeled when Gemma4 results are added.
+
+> **Naming convention (best practice):**
+> - Use model-scoped output roots: `data/outputs/mimiciii_gpt4o_mini/` and `data/outputs/mimiciii_gemma4/`.
+> - Use model-tagged result filenames in shared folders, for example: `summary_table_gpt4o_mini.csv`, `summary_table_gemma4.csv`.
+> - In every table/header, include both **model family** and **version/snapshot** (for example `gpt-4o-mini-2024-07-18`, `gemma-4-<version>`).
+> - Never merge metrics from different models into one unlabeled table row; keep one row per model+mode.
+
 ## Table of Contents
 - [1. Objective](#1-objective)
 - [2. Data and cohort](#2-data-and-cohort)
@@ -17,6 +28,32 @@ Concise reference for advising meetings. Code lives under `src/`; configuration 
 ## 1. Objective
 
 Predict whether **Disorders of Lipid Metabolism** appear in a patient’s **next hospital admission**, given structured information from the **current** admission. Task is framed as **adjacent visit pairs** (current visit → next visit), binary label.
+
+### What Exactly Is Predicted (and What It Means)
+
+- The model predicts whether the **immediate next hospital admission** for the same patient will contain a lipid-disorder diagnosis code (`272.x`, stored without dot in MIMIC-III).
+- This is a prediction of **coded diagnosis occurrence on the next admission**, not a direct estimate of biological dyslipidemia burden or long-term cardiovascular risk.
+- Labels are built from `diagnoses_codes_next` in adjacent visit pairs.
+
+### Is the Horizon Next Day / Week / Month?
+
+- The current pipeline does **not** set a fixed time horizon (for example, 7-day, 30-day, or monthly prediction).
+- Horizon is **event-based**: the next recorded admission in chronological order.
+- The interval between current and next visit can vary widely across patients.
+- Patients with only one recorded admission cannot form a pair and are excluded from this next-visit labeling setup.
+
+### Observed Data Distribution and Class Balance
+
+From the generated outputs in `data/outputs/mimiciii_gpt4o_mini/`:
+
+- `label_distribution.csv`: negative = 9,040, positive = 3,416 (total = 12,456 visit pairs)
+- `target_label_report.json`: prevalence = 0.2742 (~27.4% positive)
+- `processed_dataset_summary.json`: train prevalence = 0.2743, test prevalence = 0.2741
+
+Interpretation:
+
+- The dataset is **imbalanced** (approximately **72.6% negative** vs **27.4% positive**).
+- The split is stratified and preserves class balance very closely between train and test.
 
 ## 2. Data and cohort
 
@@ -46,7 +83,7 @@ Outputs: `data/processed/mimiciii/train.csv`, `test.csv`, plus `processed_datase
 
 Metrics saved: `ml_results_fully_supervised.csv`, `ml_results_few_shot.csv`, `ml_results.csv`.
 
-## 5. LLM experiments
+## 5. LLM experiments (currently reported: `gpt-4o-mini`)
 
 - **Provider / model:** OpenAI Chat Completions; default model **`gpt-4o-mini`** (`temperature: 0`, `max_tokens: 1024`).
 - **Prompts:** Jinja2 templates in `prompts/` (zero-shot, zero-shot+, few-shot, coagent base; critic and consolidation prompts for EHR-CoAgent).

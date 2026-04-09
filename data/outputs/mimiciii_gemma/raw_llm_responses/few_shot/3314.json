@@ -1,0 +1,12 @@
+{
+  "sample_id": 3314,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and metabolic crises, including Mitral valve disorders, Coronary atherosclerosis, Intermediate coronary syndrome, Congestive heart failure, and Diabetes mellitus. These conditions are significant risk factors for lipid disorders, as diabetes and cardiovascular disease are strongly associated with dyslipidemia. However, the strict instructions explicitly state that the prediction cannot be based on general risk factors or the mere presence of cardiovascular disease. The current record does not contain an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the medication profile is empty, meaning there is no explicit ongoing management of a lipid disorder (e.g., statins or fibrates) that would strongly suggest a future diagnosis of this condition. Based on the strict evidence-based criteria provided, the absence of explicit lipid disorder evidence in the current record leads to the prediction of \"No\" for the next hospital visit, despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3539,
+    "completion_tokens": 207
+  }
+}

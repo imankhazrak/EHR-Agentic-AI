@@ -1,0 +1,12 @@
+{
+  "sample_id": 6184,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record shows several complex medical issues, including Mitral valve disorders, other chronic pulmonary heart diseases, and iatrogenic hypotension, which are the primary diagnoses. The patient is receiving various medications, including Phenylephrine, Potassium Chloride, Magnesium Sulfate, Insulin Human Regular, and various antibiotics and pain medications. Crucially, the medication list includes **Atorvastatin**, which is a lipid-lowering agent. However, according to the strict instructions provided, the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the explicit diagnoses made in the current visit record do not explicitly state hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder. The procedures performed are related to cardiac surgery (open and other replacement of mitral valve with tissue graft) and general critical care management. Since there is no explicit evidence of an existing or actively managed lipid disorder coded as a diagnosis in the current record, and the use of Atorvastatin alone does not meet the threshold for a \"Yes\" prediction, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3644,
+    "completion_tokens": 234
+  }
+}

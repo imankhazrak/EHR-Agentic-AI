@@ -1,0 +1,12 @@
+{
+  "sample_id": 6246,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily documents diagnoses related to gastrointestinal issues (Chronic or unspecified gastric ulcer with hemorrhage, without mention of obstruction; Esophageal reflux), cardiovascular conditions (Congestive heart failure, unspecified; Orthostatic hypotension; Unspecified essential hypertension), and endocrine issues (Unspecified acquired hypothyroidism). The prescribed medications (NS; Pantoprazole Sodium) are supportive care for these conditions and do not explicitly indicate the active management of a primary lipid disorder (hypercholesterolemia, hyperlipidemia, etc.).\n\nCrucially, the instructions state that a prediction of \"Yes\" must be based on *strong and explicit evidence* of an existing or actively managed lipid disorder. The current record lacks any explicit diagnosis of hyperlipidemia, hypercholesterolemia, or any other specific lipid abnormality. While the patient has several risk factors for dyslipidemia (hypertension, CHF), these factors alone, as per the strict guidelines, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded in the next visit. Therefore, based on the explicit evidence present in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3485,
+    "completion_tokens": 236
+  }
+}

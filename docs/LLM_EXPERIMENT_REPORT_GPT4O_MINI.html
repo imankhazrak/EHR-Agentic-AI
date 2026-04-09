@@ -1,0 +1,567 @@
+<h1 id="llm-experiment-report-mimic-iii-next-visit-lipid-disorder-prediction">LLM Experiment Report — MIMIC-III Next-Visit Lipid Disorder Prediction</h1>
+<p>This report provides a complete technical record of the repository’s LLM experiments for next-visit lipid-disorder prediction, including task framing, dataset and label setup, prompt modes, inference and parsing flow, evaluation rules, reproducibility commands, output artifacts, and archived full-run results.</p>
+<p>This document is a <strong>standalone technical report</strong> of the large language model (LLM) experiments implemented in this repository: task definition, data, prompts, pipelines, evaluation protocol, outputs, and <strong>numerical results</strong> as recorded in <code>data/outputs/mimiciii/</code>. It is intended for your own archive or for sharing with collaborators.</p>
+<blockquote>
+<p><strong>LLM results attribution (current status):</strong> - All numerical results currently reported in this document are from <strong>OpenAI <code>gpt-4o-mini</code></strong> runs. - <strong>Gemma4</strong> experiment runs are still in progress and their results are <strong>not included yet</strong>. - When Gemma4 results are available, report them in separately labeled sections/tables to avoid model-mixing.</p>
+</blockquote>
+<blockquote>
+<p><strong>Naming convention (best practice):</strong> - Use model-scoped output roots: <code>data/outputs/mimiciii_gpt4o_mini/</code> and <code>data/outputs/mimiciii_gemma4/</code>. - Use model-tagged result filenames in shared folders, for example: <code>summary_table_gpt4o_mini.csv</code>, <code>summary_table_gemma4.csv</code>. - In every table/header, include both <strong>model family</strong> and <strong>version/snapshot</strong> (for example <code>gpt-4o-mini-2024-07-18</code>, <code>gemma-4-&lt;version&gt;</code>). - Never merge metrics from different models into one unlabeled table row; keep one row per model+mode.</p>
+</blockquote>
+<p><strong>Companion notes:</strong> <code>docs/llm_prompt_modes_explained.md</code> (pedagogical walkthrough of zero-shot vs zero-shot+ vs few-shot), <code>METHODOLOGY.md</code> (whole-pipeline reference).</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#1-objective">1. Objective</a></li>
+<li><a href="#2-ground-truth-label-construction">2. Ground Truth (Label Construction)</a></li>
+<li><a href="#3-data-and-split">3. Data and Split</a>
+<ul>
+<li><a href="#31-evaluation-set-size-for-the-reported-llm-metrics">3.1 Evaluation set size for the reported LLM metrics</a></li>
+</ul></li>
+<li><a href="#4-narrative-construction-llm-input">4. Narrative Construction (LLM Input)</a></li>
+<li><a href="#5-model-and-api-settings">5. Model and API Settings</a></li>
+<li><a href="#6-prompt-modes-four-llm-experiments">6. Prompt Modes (Four LLM Experiments)</a>
+<ul>
+<li><a href="#61-ehr-coagent-pipeline-operational-detail">6.1 EHR-CoAgent pipeline (operational detail)</a></li>
+</ul></li>
+<li><a href="#7-inference-loop-and-artifacts">7. Inference Loop and Artifacts</a></li>
+<li><a href="#8-output-parsing">8. Output Parsing</a></li>
+<li><a href="#9-evaluation-protocol">9. Evaluation Protocol</a></li>
+<li><a href="#10-results-archived-full-run">10. Results (Archived Full Run)</a>
+<ul>
+<li><a href="#101-summary-table-llm-rows">10.1 Summary table (LLM rows)</a></li>
+<li><a href="#102-confusion-matrices-and-parse-health">10.2 Confusion matrices and parse health</a></li>
+</ul></li>
+<li><a href="#11-how-to-reproduce">11. How to Reproduce</a></li>
+<li><a href="#12-key-artifacts-checklist">12. Key Artifacts (Checklist)</a></li>
+<li><a href="#13-limitations-and-caveats">13. Limitations and Caveats</a></li>
+<li><a href="#14-related-documentation">14. Related Documentation</a></li>
+</ul>
+<h2 id="objective">1. Objective</h2>
+<p><strong>Binary prediction:</strong> Given structured information from a patient’s <strong>current</strong> hospital admission, predict whether <strong>Disorders of Lipid Metabolism</strong> (CCS-style phenotype) will appear among <strong>diagnoses coded on the patient’s next hospital admission</strong>.</p>
+<ul>
+<li><strong>Input to the LLM:</strong> A natural-language <strong>narrative</strong> built from the current visit (bulleted diagnoses, medications, procedures), <em>not</em> the raw next-visit record.</li>
+<li><strong>Positive class (label = 1):</strong> At least one qualifying ICD-9-CM code appears in the <strong>next</strong> visit’s diagnosis list.</li>
+<li><strong>Negative class (label = 0):</strong> Otherwise.</li>
+</ul>
+<p>The LLM <strong>does not</strong> see next-visit codes; those are used only to construct <code>label_lipid_disorder</code> and for evaluation.</p>
+<h3 id="what-exactly-is-predicted-and-what-it-means">What Exactly Is Predicted (and What It Means)</h3>
+<ul>
+<li>The model predicts whether the <strong>immediate next hospital admission</strong> for the same patient will include a lipid-disorder diagnosis code (<code>272.x</code>, stored without dot in MIMIC-III).</li>
+<li>This is a prediction of <strong>coded diagnosis occurrence on the next admission</strong>, not a direct estimate of true underlying dyslipidemia burden or long-term cardiovascular risk.</li>
+<li>The target is constructed from <code>diagnoses_codes_next</code> in adjacent visit pairs (current visit -&gt; next visit).</li>
+</ul>
+<h3 id="is-the-horizon-next-day-week-month">Is the Horizon Next Day / Week / Month?</h3>
+<ul>
+<li>The pipeline does <strong>not</strong> define a fixed temporal horizon (for example, 7-day, 30-day, or 90-day prediction).</li>
+<li>Horizon is <strong>event-based</strong>: the next recorded admission in chronological order for that patient.</li>
+<li>Therefore, the elapsed time between current and next visit varies by patient.</li>
+<li>Patients without a subsequent admission are not represented as labeled pairs for this task.</li>
+</ul>
+<h3 id="observed-data-distribution-and-class-balance">Observed Data Distribution and Class Balance</h3>
+<p>From <code>data/outputs/mimiciii_gpt4o_mini/</code>:</p>
+<ul>
+<li><code>label_distribution.csv</code>: negative = 9,040, positive = 3,416 (total = 12,456 pairs)</li>
+<li><code>target_label_report.json</code>: prevalence = 0.2742 (~27.4% positive)</li>
+<li><code>processed_dataset_summary.json</code>: train prevalence = 0.2743, test prevalence = 0.2741</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>The dataset is <strong>imbalanced</strong> (about <strong>72.6% negative</strong> and <strong>27.4% positive</strong>).</li>
+<li>This is a <strong>moderate imbalance</strong>; stratified splitting kept class proportions nearly identical across train and test.</li>
+</ul>
+<hr />
+<h2 id="ground-truth-label-construction">2. Ground Truth (Label Construction)</h2>
+<p>Implementation: <code>src/data/build_target_labels.py</code>.</p>
+<ul>
+<li>Phenotype aligned with <strong>HCUP CCS single-level category 53</strong> (Disorders of lipoid metabolism), implemented via ICD-9-CM codes <strong><code>272.x</code></strong>, stored in MIMIC-III <strong>without</strong> the decimal (e.g. <code>2724</code>).</li>
+<li>Code list and prefix logic are documented in the module docstring; exact matching and prefix rules are defined in <code>is_lipid_disorder()</code>.</li>
+</ul>
+<p><strong>Important cohort note (from <code>METHODOLOGY.md</code>):</strong> The pipeline uses <strong>hospital admissions</strong> from MIMIC-III v1.4 as visits; it is <strong>not</strong> restricted to an ICU-only cohort unless you add that filter separately.</p>
+<hr />
+<h2 id="data-and-split">3. Data and Split</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Setting (default <code>configs/default.yaml</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Visit pairs</td>
+<td>Consecutive admissions per patient with ≥ 2 visits</td>
+</tr>
+<tr class="even">
+<td>Train/test split</td>
+<td>Random, <strong>80% / 20%</strong>, <strong>stratified</strong> on <code>label_lipid_disorder</code> (<code>test_size: 0.2</code>, <code>stratify_test: true</code>)</td>
+</tr>
+<tr class="odd">
+<td>Split unit</td>
+<td><strong>Visit-pair rows</strong> (not patient-level blocking)</td>
+</tr>
+<tr class="even">
+<td>Reproducibility</td>
+<td><code>seed: 42</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Processed artifacts:</strong> <code>data/processed/mimiciii/train.csv</code>, <code>test.csv</code>, plus interim tables under <code>data/interim/mimiciii/</code>.</p>
+<h3 id="evaluation-set-size-for-the-reported-llm-metrics">3.1 Evaluation set size for the reported LLM metrics</h3>
+<p>The metrics JSON files in <code>data/outputs/mimiciii/</code> (<code>llm_*_metrics.json</code>) record:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Test pairs evaluated</strong> (<code>n_total</code>)</td>
+<td><strong>2,492</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Counts <strong>tp / fp / tn / fn</strong> in those files sum to 2,492 for modes with no unparseable exclusions on the merged set.</p>
+<blockquote>
+<p><strong>Note:</strong> If you rerun preprocessing with different <code>max_pairs</code>, <code>test_size</code>, or data extracts, row counts in <code>train.csv</code> / <code>test.csv</code> may change. Always use <code>n_total</code> and <code>llm_*_results.csv</code> for the run you are reporting.</p>
+</blockquote>
+<hr />
+<h2 id="narrative-construction-llm-input">4. Narrative Construction (LLM Input)</h2>
+<p>Configuration: <code>configs/default.yaml</code> → <code>narrative</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Style</td>
+<td>Bullet lists</td>
+</tr>
+<tr class="even">
+<td>Max diagnoses</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>Max medications</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Max procedures</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>Empty sections</td>
+<td><code>"None recorded"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Column used at inference time: <strong><code>narrative_current</code></strong>.</p>
+<hr />
+<h2 id="model-and-api-settings">5. Model and API Settings</h2>
+<table>
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Provider</td>
+<td>OpenAI Chat Completions (<code>configs/default.yaml</code> → <code>llm.provider</code>)</td>
+</tr>
+<tr class="even">
+<td>Configured model name</td>
+<td><code>gpt-4o-mini</code></td>
+</tr>
+<tr class="odd">
+<td>Resolved model ID (observed in metrics)</td>
+<td><code>gpt-4o-mini-2024-07-18</code></td>
+</tr>
+<tr class="even">
+<td><code>base_url</code></td>
+<td><code>null</code> (default <code>api.openai.com</code> unless overridden)</td>
+</tr>
+<tr class="odd">
+<td><code>temperature</code></td>
+<td><strong>0.0</strong></td>
+</tr>
+<tr class="even">
+<td><code>max_tokens</code></td>
+<td><strong>1024</strong></td>
+</tr>
+<tr class="odd">
+<td><code>seed</code></td>
+<td>42 (passed where supported)</td>
+</tr>
+<tr class="even">
+<td>Response cache</td>
+<td><strong>Enabled</strong> (<code>cache_responses: true</code>, <code>cache_dir: data/outputs/mimiciii/llm_cache</code>)</td>
+</tr>
+<tr class="odd">
+<td>Rate limit</td>
+<td><strong>30</strong> requests/minute (<code>rate_limit_rpm</code>)</td>
+</tr>
+<tr class="even">
+<td>Logprobs</td>
+<td><strong>Off</strong> (<code>request_logprobs: false</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Authentication: repository-root <strong><code>.env</code></strong> with <code>OPENAI_API_KEY</code> (loaded locally or via <code>scripts/slurm_llm_env.sh</code> on the cluster). Do not commit secrets.</p>
+<h3 id="training-objective-loss-function-fine-tuned-local-gemma">5.1 Training Objective / Loss Function (Fine-Tuned Local Gemma)</h3>
+<p>When running the local Gemma fine-tuning path (<code>src/llm/finetune_gemma.py</code>), the objective is <strong>causal language modeling</strong>, not a standalone binary-classification BCE objective.</p>
+<ul>
+<li>LoRA is configured with <code>task_type="CAUSAL_LM"</code>.</li>
+<li>Training uses <code>DataCollatorForLanguageModeling(..., mlm=False)</code>.</li>
+<li>Labels are set as <code>labels = input_ids</code>, so optimization is <strong>token-level next-token cross-entropy</strong>.</li>
+</ul>
+<p>Although the downstream task is binary (<code>Yes</code>/<code>No</code>), the model is trained to <strong>generate</strong> the target token/text in an instruction format. Therefore, the training loss is <strong>causal LM cross-entropy</strong>, not <code>BCEWithLogitsLoss</code>.</p>
+<hr />
+<h2 id="prompt-modes-four-llm-experiments">6. Prompt Modes (Four LLM Experiments)</h2>
+<p>All modes use Jinja2 templates under <code>prompts/</code> rendered by <code>src/llm/prompt_builder.py</code> into chat messages (<code>system</code> + <code>user</code>), then sent through <code>src/llm/predictor.py</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Mode (code)</th>
+<th>Summary table label</th>
+<th>Template file</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>zero_shot</code></td>
+<td>Zero-Shot</td>
+<td><code>prompts/predictor_zero_shot.txt</code></td>
+</tr>
+<tr class="even">
+<td><code>zero_shot_plus</code></td>
+<td>Zero-Shot+</td>
+<td><code>prompts/predictor_zero_shot_plus.txt</code></td>
+</tr>
+<tr class="odd">
+<td><code>few_shot</code></td>
+<td>Few-Shot (N=6)</td>
+<td><code>prompts/predictor_few_shot.txt</code></td>
+</tr>
+<tr class="even">
+<td><code>coagent</code></td>
+<td>EHR-CoAgent</td>
+<td><code>prompts/predictor_coagent_base.txt</code></td>
+</tr>
+</tbody>
+</table>
+<p>Shared content across templates (evolving with your edits) typically includes:</p>
+<ul>
+<li>Definition of the prediction target (lipid metabolism disorders / CCS 53).</li>
+<li><strong>Prediction clarification:</strong> predict whether the diagnosis will be <strong>coded on the next visit</strong>, not generic clinical “risk”; instructions to avoid treating <strong>statin-only</strong> or <strong>generic cardiovascular history</strong> as sufficient for <strong>Yes</strong> unless explicit lipid-related evidence appears (see current template text).</li>
+</ul>
+<p><strong>Zero-shot:</strong> Instructions + current narrative + compact output format.</p>
+<p><strong>Zero-shot+:</strong> Adds structured analysis instructions and an explicit <strong>population prevalence</strong> hint (~27.6% of subsequent visits with the target in MIMIC-III, as stated in the template).</p>
+<p><strong>Few-shot (in-context, not weight training):</strong></p>
+<ul>
+<li><strong>Exemplars:</strong> <code>n_positive: 3</code>, <code>n_negative: 3</code>, <strong><code>random_balanced</code></strong>, <code>seed: 42</code> (<code>configs/default.yaml</code> → <code>few_shot</code>).</li>
+<li>Sampled from <strong><code>train.csv</code> only</strong>; formatted as <code>Case k:</code> + narrative + <code>Outcome: Yes/No</code> (<code>src/data/exemplar_selector.py</code> → <code>format_exemplar_block</code>).</li>
+<li>Saved artifact: <code>data/outputs/mimiciii/llm_few_shot_exemplars.csv</code> (for traceability).</li>
+</ul>
+<p><strong>EHR-CoAgent:</strong> Few-shot-style prompt <strong>plus</strong> a block of <strong>consolidated critic feedback</strong> derived from errors on a <strong>calibration</strong> subset of the training data.</p>
+<h3 id="ehr-coagent-pipeline-operational-detail">6.1 EHR-CoAgent pipeline (operational detail)</h3>
+<p>Source: <code>src/llm/coagent.py</code>. Default hyperparameters from <code>configs/default.yaml</code> → <code>coagent</code>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>calibration_size</code></td>
+<td>200 (rows sampled from <code>train_df</code>)</td>
+</tr>
+<tr class="even">
+<td><code>n_wrong_samples</code></td>
+<td>30 (cap on mispredictions fed to critic)</td>
+</tr>
+<tr class="odd">
+<td><code>critic_batch_size</code></td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td><code>n_critic_rounds</code></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td><code>consolidation_method</code></td>
+<td><code>llm</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps:</strong></p>
+<ol type="1">
+<li>Sample up to <strong>200</strong> training pairs; run <strong><code>few_shot</code></strong> predictions on them.</li>
+<li>Select <strong>incorrect</strong> predictions; sample up to <strong>30</strong> for critique.</li>
+<li><strong>Critic</strong> (<code>prompts/critic_batch_reflection.txt</code>) processes batches; outputs saved under <code>data/outputs/mimiciii/critic_feedback/</code>.</li>
+<li><strong>Consolidation</strong> (<code>prompts/feedback_consolidation.txt</code>) merges rounds into one text block.</li>
+<li>Run <strong><code>coagent</code></strong> mode on the <strong>full test set</strong> with the same <code>demonstration_cases</code> as few-shot <strong>and</strong> <code>critic_feedback</code> set to the consolidated text.</li>
+</ol>
+<p>Edge case: if no errors on the calibration run, the pipeline falls back to plain <strong>few-shot</strong> on the test set (see <code>run_coagent_pipeline</code>).</p>
+<p>Reference dump of exemplars + feedback: <code>data/outputs/mimiciii/prompts_used/coagent_augmented_context.txt</code> (when the critic path runs).</p>
+<hr />
+<h2 id="inference-loop-and-artifacts">7. Inference Loop and Artifacts</h2>
+<p>For each test row:</p>
+<ol type="1">
+<li>Build messages from the template + <code>narrative</code> (+ <code>demonstration_cases</code>, + <code>critic_feedback</code> when applicable).</li>
+<li>Call the LLM; store <strong>raw</strong> payload under <code>data/outputs/mimiciii/raw_llm_responses/&lt;mode&gt;/&lt;pair_id&gt;.json</code>.</li>
+<li>Parse assistant text; append rows to a results table.</li>
+<li>Save <strong>rendered prompts</strong> per row: <code>data/outputs/mimiciii/prompts_used/&lt;mode&gt;/prompt_&lt;pair_id&gt;.txt</code> (as implemented in <code>src/llm/predictor.py</code>).</li>
+</ol>
+<p>Per-mode prediction tables: <code>data/outputs/mimiciii/llm_&lt;mode&gt;_results.csv</code>.</p>
+<hr />
+<h2 id="output-parsing">8. Output Parsing</h2>
+<p>Module: <code>src/llm/output_parser.py</code> → <code>parse_prediction</code>.</p>
+<p><strong>Order of rules:</strong></p>
+<ol type="1">
+<li><strong>First line:</strong> <code>Prediction: Yes</code> / <code>Prediction: No</code> (or leading <code>Yes</code> / <code>No</code> alone).</li>
+<li>Else search for <code>Prediction: Yes</code> / <code>Prediction: No</code> anywhere (<strong>fallback</strong>).</li>
+<li>Else use first dominant standalone <code>Yes</code> vs <code>No</code> by position.</li>
+<li>Else <strong><code>unparseable</code></strong>.</li>
+</ol>
+<p>Optional: if logprobs were enabled, <code>extract_logprob_confidence</code> could populate <code>prob_yes</code> / <code>prob_no</code>; default config keeps this off.</p>
+<hr />
+<h2 id="evaluation-protocol">9. Evaluation Protocol</h2>
+<p>Module: <code>src/evaluation/evaluate_llm_runs.py</code> after each mode.</p>
+<ol type="1">
+<li>Merge predictions with <code>test_df</code> on <strong><code>pair_id</code></strong>.</li>
+<li>Map <strong><code>Yes</code> → 1</strong>, <strong><code>No</code> → 0</strong>; <strong><code>unparseable</code></strong> → missing binary prediction.</li>
+<li><strong>Metrics</strong> computed on rows with valid predictions only (<code>src/evaluation/metrics.py</code> → <code>compute_metrics</code>):
+<ul>
+<li><strong>Accuracy</strong>, <strong>sensitivity (recall on positive)</strong>, <strong>specificity</strong>, <strong>F1</strong> (positive class = 1), all reported as <strong>percentages</strong> in JSON/CSV.</li>
+<li>Confusion counts: <strong>tp, fp, tn, fn</strong>.</li>
+</ul></li>
+<li><code>n_total</code> = all merged rows; <code>n_valid</code> = rows used for metrics; <code>n_unparseable</code> = remainder.</li>
+</ol>
+<p><strong>Bootstrap CIs:</strong> Disabled by default (<code>evaluation.bootstrap_ci: false</code>).</p>
+<hr />
+<h2 id="results-archived-full-run-gpt-4o-mini">10. Results (Archived Full Run — <code>gpt-4o-mini</code>)</h2>
+<p>The following values are taken from <strong><code>data/outputs/mimiciii/summary_table.csv</code></strong> and <strong><code>llm_*_metrics.json</code></strong> as they exist in the repository after a completed full pipeline run. These values correspond to <strong><code>gpt-4o-mini</code></strong> and summarize performance on <strong>n = 2,492</strong> test pairs unless noted.</p>
+<h3 id="summary-table-llm-rows">10.1 Summary table (LLM rows)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Approach</th>
+<th>ACC (%)</th>
+<th>Sensitivity (%)</th>
+<th>Specificity (%)</th>
+<th>F1 (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Zero-Shot</td>
+<td>80.82</td>
+<td>57.69</td>
+<td>89.55</td>
+<td>62.24</td>
+</tr>
+<tr class="even">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Zero-Shot+</td>
+<td>80.73</td>
+<td>56.22</td>
+<td>89.99</td>
+<td>61.54</td>
+</tr>
+<tr class="odd">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Few-Shot (N=6)</td>
+<td>80.65</td>
+<td>57.39</td>
+<td>89.44</td>
+<td>61.93</td>
+</tr>
+<tr class="even">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>EHR-CoAgent</td>
+<td><strong>80.93</strong></td>
+<td><strong>58.21</strong></td>
+<td>89.50</td>
+<td><strong>62.57</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> All four modes perform <strong>very similarly</strong> on aggregate metrics (differences on the order of <strong>tenths of a percent</strong> accuracy / F1). That is consistent with <strong>high pairwise agreement</strong> between modes on the same <code>pair_id</code> (most prompts yield the same Yes/No decision; only a small fraction of rows flip when adding instructions, exemplars, or critic text).</p>
+<h3 id="confusion-matrices-and-parse-health">10.2 Confusion matrices and parse health</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>tp</th>
+<th>fp</th>
+<th>tn</th>
+<th>fn</th>
+<th>n_total</th>
+<th>n_valid</th>
+<th>n_unparseable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>zero_shot</td>
+<td>394</td>
+<td>189</td>
+<td>1620</td>
+<td>289</td>
+<td>2492</td>
+<td>2492</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>zero_shot_plus</td>
+<td>384</td>
+<td>181</td>
+<td>1627</td>
+<td>299</td>
+<td>2492</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>few_shot</td>
+<td>392</td>
+<td>191</td>
+<td>1617</td>
+<td>291</td>
+<td>2492</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>coagent</td>
+<td>397</td>
+<td>190</td>
+<td>1619</td>
+<td>285</td>
+<td>2492</td>
+<td>2491</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unparseable rows</strong> are excluded from tp/fp/tn/fn but counted in <code>n_unparseable</code>; three modes show <strong>one</strong> such row in this run.</p>
+<hr />
+<h2 id="how-to-reproduce">11. How to Reproduce</h2>
+<p><strong>Full pipeline (preprocess + ML + all LLM modes + summary):</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYTHONPATH</span><span class="op">=</span>/path/to/EHR-Agentic-AI</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">STAGE</span><span class="op">=</span>full <span class="fu">bash</span> scripts/run_mimic_pipeline.sh</span></code></pre></div>
+<p><strong>LLM-only</strong> (requires existing <code>train.csv</code> / <code>test.csv</code>):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYTHONPATH</span><span class="op">=</span>/path/to/EHR-Agentic-AI</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> scripts/run_llm_only.sh</span></code></pre></div>
+<p><strong>Smoke / debug</strong> (small data and test cap via <code>configs/debug_small.yaml</code>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">STAGE</span><span class="op">=</span>smoke <span class="fu">bash</span> scripts/run_mimic_pipeline.sh</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">STAGE</span><span class="op">=</span>smoke <span class="fu">bash</span> scripts/run_llm_only.sh</span></code></pre></div>
+<p><strong>Cluster (example):</strong> <code>sbatch slurm/mimic_iii_full.slurm</code> — see <code>slurm/</code> and <code>scripts/slurm_llm_env.sh</code>.</p>
+<p><strong>Post-hoc audit markdown</strong> (narrative + model reply + verdict per row):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">PYTHONPATH</span><span class="op">=</span>. <span class="ex">python</span> scripts/export_llm_audit.py</span></code></pre></div>
+<hr />
+<h2 id="key-artifacts-checklist">12. Key Artifacts (Checklist)</h2>
+<table>
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/llm_*_results.csv</code></td>
+<td>Per–test-row predictions and raw text</td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/llm_*_metrics.json</code></td>
+<td>Metrics + confusion + parse counts</td>
+</tr>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/summary_table.csv</code></td>
+<td>Paper-style combined table</td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/raw_llm_responses/&lt;mode&gt;/</code></td>
+<td>Raw API-style JSON per <code>pair_id</code></td>
+</tr>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/prompts_used/&lt;mode&gt;/</code></td>
+<td>Rendered prompts per <code>pair_id</code></td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/llm_few_shot_exemplars.csv</code></td>
+<td>Few-shot / coagent exemplar IDs</td>
+</tr>
+<tr class="odd">
+<td><code>data/outputs/mimiciii/critic_feedback/</code></td>
+<td>Critic inputs/outputs, consolidated feedback</td>
+</tr>
+<tr class="even">
+<td><code>data/outputs/mimiciii/llm_cache/</code></td>
+<td>Hashed response cache (reuse across runs)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="limitations-and-caveats">13. Limitations and Caveats</h2>
+<ol type="1">
+<li><strong>Pair-level split:</strong> The same patient can contribute pairs to both train and test; metrics are <strong>not</strong> patient-clustered unless you change the split.</li>
+<li><strong>Label vs clinical intuition:</strong> The target is <strong>coded diagnoses on the next admission</strong>, not “true” dyslipidemia or cardiovascular risk; models may disagree with labels on clinically plausible grounds.</li>
+<li><strong>Template drift:</strong> Prompt text in <code>prompts/*.txt</code> may change after this report; always cite <strong>git revision</strong> or archive templates with results.</li>
+<li><strong>API and model versioning:</strong> OpenAI may route <code>gpt-4o-mini</code> to a <strong>dated snapshot</strong> (e.g. <code>gpt-4o-mini-2024-07-18</code>); replication should record the resolved model string from <code>llm_*_metrics.json</code>.</li>
+<li><strong>Cost and time:</strong> Full runs issue thousands of API calls; caching and <code>rate_limit_rpm</code> materially affect duration and repeatability when prompts change.</li>
+</ol>
+<hr />
+<h2 id="related-documentation">14. Related Documentation</h2>
+<table>
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Document</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>METHODOLOGY.md</code></td>
+<td>End-to-end pipeline and configuration index</td>
+</tr>
+<tr class="even">
+<td><code>docs/llm_prompt_modes_explained.md</code></td>
+<td>Conceptual comparison of the three base prompt styles</td>
+</tr>
+<tr class="odd">
+<td><code>ML_AND_LLM_INPUTS.md</code></td>
+<td>Inputs and artifact paths (if present in repo)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Report generated to describe the implemented LLM experiment and the results files currently under <code>data/outputs/mimiciii/</code>. Update this file when you change configs, prompts, or reporting conventions.</em></p>

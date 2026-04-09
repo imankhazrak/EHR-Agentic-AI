@@ -1,0 +1,12 @@
+{
+  "sample_id": 2146,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on managing severe, acute cardiovascular instability and associated metabolic derangements, primarily related to heart failure, ventricular arrhythmias, and acute kidney injury.\n\n1. **Focus of Current Care:** The primary diagnoses are Acute on chronic systolic heart failure, Ventricular fibrillation, Cardiogenic shock, and Acute kidney failure. The medication and procedure lists reflect intensive cardiac and renal support (e.g., Nitroglycerin, Furosemide, Norepinephrine, CRT-D implantation, Albumin infusions).\n\n2. **Absence of Explicit Lipid Disorder Evidence:** Crucially, the current diagnoses list does **not** explicitly state hypercholesterolemia, hyperlipidemia, or any other primary diagnosis falling under \"Disorders of Lipid Metabolism\" (CCS category 53). While the patient has Diabetes Mellitus (Type II, not controlled), which is a known risk factor for dyslipidemia, the *diagnosis* of the lipid disorder itself is absent.\n\n3. **Exclusion Criteria Application:** According to the strict instructions, the mere presence of risk factors (like Diabetes Mellitus) or the management of related conditions (like Cardiovascular Disease) is **not** sufficient evidence to predict a future diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3861,
+    "completion_tokens": 256
+  }
+}

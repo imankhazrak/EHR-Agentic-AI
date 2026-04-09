@@ -1,0 +1,12 @@
+{
+  "sample_id": 5458,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe metabolic and infectious complications, primarily related to uncontrolled Type I Diabetes Mellitus with ketoacidosis, complications of a transplanted kidney, and pneumonia. The prescribed medications include various antibiotics (Vancomycin, Levofloxacin), insulin regimens (Humulin-R, Insulin Human Regular), and supportive care drugs (Dextrose 50%, Acetaminophen, Lorazepam).\n\nCrucially, while the patient is prescribed **Simvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone does not qualify as strong and explicit evidence for a future diagnosis.\n\nThe other diagnoses listed (Diabetes with ketoacidosis, Pneumonia, Hyperpotassemia, etc.) are not explicit diagnoses of hypercholesterolemia or hyperlipidemia. Therefore, based on the strict criteria provided in the instructions, there is no strong and explicit evidence of an existing or actively managed lipid disorder that would necessitate coding a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit. The patient is high-risk due to diabetes and kidney issues, but the evidence for",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3613,
+    "completion_tokens": 256
+  }
+}

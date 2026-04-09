@@ -1,0 +1,12 @@
+{
+  "sample_id": 785,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic infectious, metabolic, and neurological complications related to advanced liver disease (Cirrhosis, Hepatic Encephalopathy, Viral Hepatitis C, Acute Kidney Failure, Sepsis, Bacteremia). The medication profile is focused on managing these acute crises (Piperacillin-Tazobactam, Vancomycin, Lactulose, Rifaximin, Epoetin Alfa, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis or active, explicit management of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While advanced liver disease (Cirrhosis) is a known risk factor for metabolic disturbances, and the patient is high-risk overall, the strict instructions mandate that a prediction can only be made based on **explicit evidence** of an existing or actively managed lipid disorder.\n\nThe current record does not contain:\n1. A diagnosis like \"Pure hypercholesterolemia\" (as seen in Demonstration Case 2).\n2. A clear indication that the patient is being treated for a lipid abnormality (e.g., prescription of a specific lipid-lowering agent like",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3738,
+    "completion_tokens": 256
+  }
+}

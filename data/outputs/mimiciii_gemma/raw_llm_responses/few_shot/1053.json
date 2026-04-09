@@ -1,0 +1,12 @@
+{
+  "sample_id": 1053,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and pulmonary events, including Mitral valve disorders, Acute myocardial infarction, Congestive heart failure, and Coronary atherosclerosis. The procedures performed are extensive open-heart surgeries (Mitral valve replacement, Coronary bypass, Extracorporeal circulation). While the patient has Raynaud's syndrome and Rheumatoid arthritis, these are general inflammatory/vascular conditions, not explicit diagnoses of hypercholesterolemia or hyperlipidemia. Crucially, the current record does not contain any explicit diagnosis of a lipid disorder (e.g., \"Pure hypercholesterolemia\" or \"Hyperlipidemia\"). Furthermore, the medications prescribed are none recorded, meaning there is no explicit ongoing lipid management (like statins) that would strongly suggest a future diagnosis based on the strict rules provided. Therefore, despite the high-risk nature of the patient's underlying cardiovascular disease, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3549,
+    "completion_tokens": 213
+  }
+}

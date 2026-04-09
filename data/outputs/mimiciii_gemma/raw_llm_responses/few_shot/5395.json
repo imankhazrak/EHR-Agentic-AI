@@ -1,0 +1,12 @@
+{
+  "sample_id": 5395,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses listed are related to pulmonary issues (Other pulmonary embolism and infarction; Other diseases of lung, not elsewhere classified), vascular issues (Phlebitis and thrombophlebitis of upper extremities, unspecified), musculoskeletal issues (Osteoarthrosis, unspecified; Osteoporosis, unspecified), and personal history of malignancy (Personal history of malignant neoplasm of breast). There are no diagnoses of hypercholesterolemia, hyperlipidemia, or any other form of lipid abnormality. Furthermore, the patient's medication profile is empty, meaning there is no ongoing management for a lipid disorder such as the use of statins or fibrates. Based on the strict instructions provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this evidence is absent in the current record, the prediction must be \"No\", despite the patient being in a critical care setting where lipid disorders are common.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3469,
+    "completion_tokens": 211
+  }
+}

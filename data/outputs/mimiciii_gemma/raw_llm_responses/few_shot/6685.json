@@ -1,0 +1,12 @@
+{
+  "sample_id": 6685,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Although the patient has numerous other severe comorbidities (Streptococcal septicemia, Severe sepsis, Acute on chronic systolic heart failure, etc.), the explicit coding of \"Pure hypercholesterolemia\" meets the threshold for a \"Yes\" prediction, overriding the general risk factors or the mere use of lipid-affecting medications. The demonstration cases further support that when explicit lipid diagnoses are present, the outcome is often \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3766,
+    "completion_tokens": 160
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 7102,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses listed are related to severe acute infections (Pneumonitis, UTI, Proteus infection, Acute Gastritis) and chronic conditions (Obstructive Chronic Bronchitis, Diverticulosis, Late effects of Cerebrovascular Disease). While the patient has several risk factors for cardiovascular disease (e.g., late effects of cerebrovascular disease), the strict instructions mandate that the prediction cannot be based on general risk factors or the use of cardiovascular disease diagnoses alone. Since there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other form of lipid abnormality recorded in the current visit, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. The absence of relevant lipid-managing medications (like statins or fibrates) further supports this conclusion, as these would often accompany an active lipid disorder diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3527,
+    "completion_tokens": 210
+  }
+}

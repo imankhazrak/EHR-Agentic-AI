@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are related to severe acute care issues: Pneumonitis due to inhalation of food or vomitus, Acute respiratory failure, Unspecified septicemia, Down's syndrome, Other convulsions, Alzheimer's disease, Dementia, and other related acute conditions. The medications prescribed are none recorded. The procedures performed are related to life support and acute intervention (Continuous invasive mechanical ventilation, Arterial catheterization). Crucially, the record lacks any mention of lipid abnormalities or the active management of such a condition (e.g., documented hyperlipidemia or prescription of lipid-lowering agents like statins). Therefore, based on the strict criteria provided\u2014that explicit lipid disorder evidence must be present to predict a future diagnosis\u2014the prediction must be \"No\", despite the patient being in a high-risk critical care setting.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3499,
+    "completion_tokens": 206
+  }
+}

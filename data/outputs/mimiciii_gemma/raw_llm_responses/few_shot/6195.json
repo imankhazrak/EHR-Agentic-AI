@@ -1,0 +1,12 @@
+{
+  "sample_id": 6195,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record indicates several significant comorbidities: Infection and inflammatory reaction due to other internal orthopedic device, implant, and graft; Unspecified essential hypertension; Morbid obesity; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Surgical operation with implant of artificial internal device causing abnormal patient reaction, or later complication,without mention of misadventure at time of operation; and Total hip replacement.\n\nThe medications prescribed are primarily for managing these acute and chronic conditions, including Enoxaparin Sodium, Fluoxetine HCl, Venlafaxine XR, Oxycodone, Clonazepam, Quinapril, NS, Docusate Sodium, Gabapentin, Buspirone, Morphine Sulfate SR, Cefazolin, and Ferrous Sulfate.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has significant risk factors (Morbid obesity, Diabetes mellitus, Unspecified essential hypertension), the instructions strictly prohibit predicting a future diagnosis based solely on these risk factors or the use of general medications.\n\nThe demonstration cases show that a diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3540,
+    "completion_tokens": 256
+  }
+}

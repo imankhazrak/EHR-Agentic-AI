@@ -1,0 +1,12 @@
+{
+  "sample_id": 9972,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of \"Other and unspecified hyperlipidemia\" constitutes strong and explicit evidence of a lipid disorder. Furthermore, the presence of this specific diagnosis strongly indicates that the condition is actively recognized and managed within the current clinical context, making it highly likely that this diagnosis will be carried over or explicitly coded in the patient's next hospital visit. While the patient has numerous other complex comorbidities (Acute pericarditis, Malignant neoplasm, Acute kidney failure, etc.), the explicit coding of hyperlipidemia overrides the need to rely on general risk factors or medication use alone, satisfying the strict criteria for a \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3645,
+    "completion_tokens": 155
+  }
+}

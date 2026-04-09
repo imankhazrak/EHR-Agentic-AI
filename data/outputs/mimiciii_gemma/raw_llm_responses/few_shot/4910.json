@@ -1,0 +1,12 @@
+{
+  "sample_id": 4910,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and complex systemic illnesses, including Acute pancreatitis, Pneumonitis, Acute respiratory failure, Bilateral paralysis of vocal cords or larynx, Systemic lupus erythematosus, Chronic glomerulonephritis, Alcoholic cirrhosis, Chronic hepatitis C, Acute kidney failure, and severe respiratory/cardiac support measures (Tracheostomy, Mechanical Ventilation, Hemodialysis).\n\nThe strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) or active, explicit management of such a condition (e.g., documented lipid panel abnormalities or ongoing lipid-lowering therapy).\n\nReviewing the current record:\n1. **Diagnoses:** The diagnoses listed are overwhelmingly related to infectious, autoimmune, and organ failure processes (Pancreatitis, SLE, Cirrhosis, AKI). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality.\n2. **Medications:** No medications were recorded as prescribed. Therefore, there is no evidence of ongoing lipid-lowering management (e.g., statins, fibrates).\n3",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3535,
+    "completion_tokens": 256
+  }
+}

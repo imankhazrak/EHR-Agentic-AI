@@ -1,176 +1,12 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>METHODOLOGY</title>
-  <style>
-    html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      word-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 1em;
-      }
-    }
-    @media print {
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
-      font-size: 85%;
-      margin: 0;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-<header id="title-block-header">
-<h1 class="title">METHODOLOGY</h1>
-</header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#mimic-iii-next-visit-prediction-methodology-and-project-steps">MIMIC-III Next-Visit Prediction — Methodology and Project Steps</a>
-<ul>
-<li><a href="#table-of-contents">Table of Contents</a></li>
-<li><a href="#objective">1. Objective</a></li>
-<li><a href="#data-and-cohort">2. Data and cohort</a></li>
-<li><a href="#train-test-split">3. Train / test split</a></li>
-<li><a href="#classical-ml-baselines">4. Classical ML baselines</a></li>
-<li><a href="#llm-experiments">5. LLM experiments</a></li>
-<li><a href="#evaluation-metrics">6. Evaluation metrics</a></li>
-<li><a href="#what-we-configured-and-ran">7. What we configured and ran</a></li>
-<li><a href="#primary-output-locations">8. Primary output locations</a></li>
-</ul></li>
-</ul>
-</nav>
 <h1 id="mimic-iii-next-visit-prediction-methodology-and-project-steps">MIMIC-III Next-Visit Prediction — Methodology and Project Steps</h1>
 <p>This methodology note summarizes the implemented end-to-end pipeline for MIMIC-III next-visit lipid-disorder prediction, including cohort construction, ML and LLM modeling tracks, evaluation setup, run configuration, and primary artifacts for reproducibility.</p>
 <p>Concise reference for advising meetings. Code lives under <code>src/</code>; configuration under <code>configs/</code>.</p>
+<blockquote>
+<p><strong>LLM results attribution (current status):</strong> - All currently reported LLM metrics/artifacts in this methodology refer to <strong>OpenAI <code>gpt-4o-mini</code></strong> runs. - <strong>Gemma4</strong> experiments are in progress and are <strong>not yet included</strong> in reported results. - Keep model-specific outputs separated and clearly labeled when Gemma4 results are added.</p>
+</blockquote>
+<blockquote>
+<p><strong>Naming convention (best practice):</strong> - Use model-scoped output roots: <code>data/outputs/mimiciii_gpt4o_mini/</code> and <code>data/outputs/mimiciii_gemma4/</code>. - Use model-tagged result filenames in shared folders, for example: <code>summary_table_gpt4o_mini.csv</code>, <code>summary_table_gemma4.csv</code>. - In every table/header, include both <strong>model family</strong> and <strong>version/snapshot</strong> (for example <code>gpt-4o-mini-2024-07-18</code>, <code>gemma-4-&lt;version&gt;</code>). - Never merge metrics from different models into one unlabeled table row; keep one row per model+mode.</p>
+</blockquote>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#1-objective">1. Objective</a></li>
@@ -184,6 +20,31 @@
 </ul>
 <h2 id="objective">1. Objective</h2>
 <p>Predict whether <strong>Disorders of Lipid Metabolism</strong> appear in a patient’s <strong>next hospital admission</strong>, given structured information from the <strong>current</strong> admission. Task is framed as <strong>adjacent visit pairs</strong> (current visit → next visit), binary label.</p>
+<h3 id="what-exactly-is-predicted-and-what-it-means">What Exactly Is Predicted (and What It Means)</h3>
+<ul>
+<li>The model predicts whether the <strong>immediate next hospital admission</strong> for the same patient will contain a lipid-disorder diagnosis code (<code>272.x</code>, stored without dot in MIMIC-III).</li>
+<li>This is a prediction of <strong>coded diagnosis occurrence on the next admission</strong>, not a direct estimate of biological dyslipidemia burden or long-term cardiovascular risk.</li>
+<li>Labels are built from <code>diagnoses_codes_next</code> in adjacent visit pairs.</li>
+</ul>
+<h3 id="is-the-horizon-next-day-week-month">Is the Horizon Next Day / Week / Month?</h3>
+<ul>
+<li>The current pipeline does <strong>not</strong> set a fixed time horizon (for example, 7-day, 30-day, or monthly prediction).</li>
+<li>Horizon is <strong>event-based</strong>: the next recorded admission in chronological order.</li>
+<li>The interval between current and next visit can vary widely across patients.</li>
+<li>Patients with only one recorded admission cannot form a pair and are excluded from this next-visit labeling setup.</li>
+</ul>
+<h3 id="observed-data-distribution-and-class-balance">Observed Data Distribution and Class Balance</h3>
+<p>From the generated outputs in <code>data/outputs/mimiciii_gpt4o_mini/</code>:</p>
+<ul>
+<li><code>label_distribution.csv</code>: negative = 9,040, positive = 3,416 (total = 12,456 visit pairs)</li>
+<li><code>target_label_report.json</code>: prevalence = 0.2742 (~27.4% positive)</li>
+<li><code>processed_dataset_summary.json</code>: train prevalence = 0.2743, test prevalence = 0.2741</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>The dataset is <strong>imbalanced</strong> (approximately <strong>72.6% negative</strong> vs <strong>27.4% positive</strong>).</li>
+<li>The split is stratified and preserves class balance very closely between train and test.</li>
+</ul>
 <h2 id="data-and-cohort">2. Data and cohort</h2>
 <table>
 <colgroup>
@@ -234,7 +95,7 @@
 <li><strong>Settings:</strong> (1) <strong>Fully supervised</strong> on full training set; (2) <strong>Few-shot ML</strong> trained on <strong>N = 6</strong> labeled exemplars (balanced positive/negative by default).</li>
 </ul>
 <p>Metrics saved: <code>ml_results_fully_supervised.csv</code>, <code>ml_results_few_shot.csv</code>, <code>ml_results.csv</code>.</p>
-<h2 id="llm-experiments">5. LLM experiments</h2>
+<h2 id="llm-experiments-currently-reported-gpt-4o-mini">5. LLM experiments (currently reported: <code>gpt-4o-mini</code>)</h2>
 <ul>
 <li><strong>Provider / model:</strong> OpenAI Chat Completions; default model <strong><code>gpt-4o-mini</code></strong> (<code>temperature: 0</code>, <code>max_tokens: 1024</code>).</li>
 <li><strong>Prompts:</strong> Jinja2 templates in <code>prompts/</code> (zero-shot, zero-shot+, few-shot, coagent base; critic and consolidation prompts for EHR-CoAgent).</li>
@@ -334,5 +195,3 @@
 </table>
 <hr />
 <p><em>This document describes the implemented pipeline and configuration; alignment with every detail of the published paper should be checked against the paper text (e.g. ICU definition, exact split policy, and model choice).</em></p>
-</body>
-</html>

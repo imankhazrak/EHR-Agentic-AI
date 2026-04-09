@@ -1,0 +1,12 @@
+{
+  "sample_id": 3709,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record primarily details a complex neonatal admission characterized by twin birth, preterm delivery (29-30 weeks), respiratory distress syndrome, and associated infectious and pulmonary complications. The medications prescribed are standard supportive care for a critically ill neonate, including caffeine citrate, gentamicin, ampicillin, and parenteral nutrition/fat emulsion. While the presence of preterm birth and respiratory distress syndrome are known risk factors for metabolic complications, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. Furthermore, the medication profile does not include any lipid-lowering agents such as statins or fibrates, nor does it explicitly document ongoing management for a diagnosed lipid abnormality. Based on the strict instructions provided\u2014that a prediction can only be made \"Yes\" if there is strong and explicit evidence of an existing or actively managed lipid disorder\u2014the absence of such evidence in the current record necessitates a prediction of \"No\" for the next hospital visit, despite the patient's high-risk status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3605,
+    "completion_tokens": 218
+  }
+}

@@ -42,7 +42,7 @@ The **label** is the same for both tracks: derived from **next-visit** diagnosis
 - **Few-Shot (N=6)** — Six **in-context** exemplars (3 positive / 3 negative) sampled from **train** only; **no weight updates**.
 - **EHR-CoAgent** — Few-shot-style prompt plus **critic** feedback from mispredictions on a **calibration** subset of train, then consolidated text injected into `predictor_coagent_base.txt`.
 
-Details: `docs/llm_prompt_modes_explained.md`, `docs/LLM_EXPERIMENT_REPORT.md`.
+Details: `docs/llm_prompt_modes_explained.md`, `docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md`.
 
 ---
 
@@ -63,7 +63,7 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
 | gpt-4o-mini-2024-07-18 | Few-Shot (N=6) | 80.65 | 57.39 | 89.44 | 61.93 |
 | gpt-4o-mini-2024-07-18 | EHR-CoAgent | 80.93 | 58.21 | 89.50 | 62.57 |
 
-**Intra- and inter-approach discussion** (rankings, confusion matrices, ML vs LLM): `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM.md`.
+**Intra- and inter-approach discussion** (rankings, confusion matrices, ML vs LLM): `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI.md`.
 
 ---
 
@@ -72,9 +72,9 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
 | Document | Purpose |
 |----------|---------|
 | `METHODOLOGY.md` | Data, split, configs, scripts, outputs |
-| `docs/LLM_EXPERIMENT_REPORT.md` | LLM experiment details, parsing, artifacts |
+| `docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md` | LLM experiment details, parsing, artifacts |
 | `docs/llm_prompt_modes_explained.md` | Zero-shot vs zero-shot+ vs few-shot (LLM) |
-| `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM.md` | Full ML + LLM tables and comparisons |
+| `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI.md` | Full ML + LLM tables and comparisons |
 
 ---
 

@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions unrelated to primary lipid metabolism disorders. The diagnoses include Acute kidney failure, Rhabdomyolysis, Hyperpotassemia, Chronic hepatitis C, Cocaine abuse, Opioid abuse, End stage renal disease, Hypocalcemia, and Benign prostate hypertrophy. The prescribed medications and procedures are overwhelmingly focused on managing these acute crises, such as Hemodialysis, Calcium Gluconate, Lorazepam, and various antibiotics/anticoagulants. Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record. Following the strict instructions, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this evidence is absent, despite the patient being high-risk due to comorbidities like End stage renal disease, the prediction must be \"No\". The demonstration cases confirm that general risk factors or the use of medications like statins (which are absent here) are insufficient to predict a future diagnosis of a lipid disorder.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3597,
+    "completion_tokens": 231
+  }
+}

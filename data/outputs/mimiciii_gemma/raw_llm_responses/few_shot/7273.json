@@ -1,0 +1,12 @@
+{
+  "sample_id": 7273,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include Diverticulosis of colon, Peritonitis, Congestive heart failure, Malignant neoplasm of renal pelvis, Bacteremia, Secondary malignant neoplasm, Pressure ulcer, and Chronic airway obstruction. The patient is receiving aggressive treatment for these life-threatening issues, including Furosemide, Levofloxacin, and Metoprolol.\n\nHowever, a critical review of the *diagnoses made* and *medications prescribed* reveals no explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The medications prescribed, while complex, do not include any lipid-lowering agents like statins (e.g., Atorvastatin) or fibrates. Furthermore, the diagnoses do not explicitly state a lipid abnormality.\n\nBased on the strict instructions provided, which mandate that a prediction of \"Yes\" must be supported by *explicit* evidence of an existing or actively managed lipid disorder, and not merely by the presence of high-risk comorbidities (like CHF or hypertension), the absence of such explicit evidence leads to the prediction of \"No\". The patient's current profile",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3918,
+    "completion_tokens": 256
+  }
+}

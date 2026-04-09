@@ -1,0 +1,12 @@
+{
+  "sample_id": 10704,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe infectious processes (Pneumonia, organism unspecified), severe cardiac dysfunction (Acute on chronic diastolic heart failure, Congestive heart failure, Atrial fibrillation), and severe hematological/oncological issues (Other malignant lymphomas, unspecified site, extranodal and solid organ sites).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient is on various medications, including some that are commonly used in the management of cardiovascular risk factors (e.g., Diltiazem, Metoprolol Tartrate, Furosemide), and the patient has a history of hypertension, which is a general risk factor for dyslipidemia.\n\nHowever, according to the strict instructions provided, the mere presence of general risk factors (like hypertension) or the use of cardiovascular medications (like Diltiazem or Metoprolol) is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder coded in the current record, the prediction must be \"No,\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3809,
+    "completion_tokens": 256
+  }
+}

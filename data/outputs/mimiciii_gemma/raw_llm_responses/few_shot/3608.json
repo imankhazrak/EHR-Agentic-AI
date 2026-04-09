@@ -1,0 +1,12 @@
+{
+  "sample_id": 3608,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious processes (Psoas muscle abscess, Other retroperitoneal abscess, Bacteremia, Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site) and acute respiratory/cardiac failure (Acute respiratory failure, Diastolic heart failure, unspecified, Congestive heart failure, unspecified, Aortic valve disorders, Atrial fibrillation). The patient is receiving extensive supportive care for these conditions, including antibiotics (CefTRIAXone, Vancomycin HCl, Oxacillin, etc.), fluid management (D5W, NS), and respiratory support (Non-invasive mechanical ventilation).\n\nWhile the patient has several comorbidities that are commonly associated with lipid disorders, such as Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Unspecified essential hypertension, and is receiving medication that *treats* dyslipidemia (Atorvastatin, GlipiZIDE XL, Pioglitazone HCl), these factors alone are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions strictly require \"strong and explicit evidence\" of an existing or actively managed lipid disorder (e.g., hyper",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3795,
+    "completion_tokens": 256
+  }
+}

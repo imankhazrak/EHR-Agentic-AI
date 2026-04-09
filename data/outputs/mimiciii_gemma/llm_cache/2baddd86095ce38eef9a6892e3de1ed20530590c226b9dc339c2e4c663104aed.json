@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record shows a complex array of diagnoses and treatments, primarily focused on acute abdominal and cardiovascular events. The key diagnoses include Abdominal aneurysm, ruptured; Hemoperitoneum (nontraumatic); Aneurysm of iliac artery; Atrial fibrillation; Unspecified essential hypertension; and Peripheral vascular disease, unspecified. The medication profile includes Atorvastatin, which is a lipid-lowering agent. However, according to the strict instructions, the mere prescription of a statin (Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current visit record. The other diagnoses are related to vascular integrity, cardiac rhythm, and general hypertension, which, while risk factors for lipid disorders, do not explicitly confirm the presence of the disorder itself for coding purposes in the next visit. Therefore, based on the strict criteria provided, the evidence is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3719,
+    "completion_tokens": 228
+  }
+}

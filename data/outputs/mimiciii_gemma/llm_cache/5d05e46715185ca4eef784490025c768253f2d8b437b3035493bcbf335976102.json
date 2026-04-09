@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic non-lipid-related conditions. The primary diagnoses include Diverticulosis of colon with hemorrhage, Acute posthemorrhagic anemia, Acute kidney failure, Atherosclerosis with gangrene, Multiple myeloma, Congestive heart failure, Atrial fibrillation, and Diabetes mellitus. While the patient is on Atorvastatin, which is a medication used for lipid management, the strict instructions explicitly state that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. The presence of cardiovascular diseases (CHF, AF) and Diabetes mellitus are risk factors for lipid disorders, but according to the guidelines, these factors alone are insufficient to predict a future diagnosis. Therefore, based on the strict evidence-based criteria provided, there is no strong and explicit evidence in the current record to warrant a \"Yes\" prediction for the next hospital visit.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3703,
+    "completion_tokens": 225
+  }
+}

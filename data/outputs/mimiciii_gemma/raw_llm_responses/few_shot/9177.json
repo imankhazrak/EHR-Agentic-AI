@@ -1,0 +1,12 @@
+{
+  "sample_id": 9177,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports the prediction that this diagnosis will be coded in the next hospital visit. Specifically, the diagnosis list includes \"Pure hypercholesterolemia.\" According to the target definition, \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, and related lipid abnormalities. The presence of this explicit diagnosis meets the strict criteria for answering \"Yes,\" as it is not based solely on the use of statins or general risk factors. Furthermore, the patient is receiving Atorvastatin, which is a treatment for hypercholesterolemia, reinforcing the active management of this specific lipid condition. The combination of the explicit diagnosis (\"Pure hypercholesterolemia\") and the active treatment (Atorvastatin) provides strong and explicit evidence that the diagnosis of \"Disorders of Lipid Metabolism\" will be present in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3625,
+    "completion_tokens": 198
+  }
+}

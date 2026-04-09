@@ -1,0 +1,12 @@
+{
+  "sample_id": 2728,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and respiratory issues. The diagnoses include Coronary atherosclerosis of autologous vein bypass graft, Coronary atherosclerosis of native coronary artery, Atrial fibrillation, Hyposmolality and/or hyponatremia, Congestive heart failure, unspecified, Asthma, unspecified type, unspecified, Iatrogenic pulmonary embolism and infarction, Hemorrhage, unspecified, and [ICD9-DX:4538]. The medications prescribed are none recorded. The procedures performed are complex, involving stent insertion, cardiac catheterization, and angiography.\n\nCrucially, the current record contains **no explicit evidence** of a primary lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has severe cardiovascular disease (Coronary atherosclerosis), which is a risk factor for dyslipidemia, the instructions explicitly state that the mere presence of cardiovascular disease or general risk factors is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict criteria provided, the absence of explicit lipid disorder evidence in the current record leads to the prediction of \"No\" for the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3541,
+    "completion_tokens": 251
+  }
+}

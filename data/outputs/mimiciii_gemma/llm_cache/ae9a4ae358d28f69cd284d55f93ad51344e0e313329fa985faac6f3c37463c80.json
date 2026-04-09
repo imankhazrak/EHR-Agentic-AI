@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record contains numerous diagnoses and medications related to severe, complex, multi-system diseases, including chronic heart failure (both diastolic and congestive), severe respiratory issues (unspecified chronic bronchitis, asthma, and congestive heart failure), neurological complications (herpes zoster, other disorders of neurohypophysis), and cardiovascular issues (aortic valve disorders, coronary atherosclerosis, essential hypertension). The medication profile includes Rosuvastatin Calcium, which is a statin used for lipid management.\n\nHowever, according to the strict instructions provided, the mere prescription of a statin (Rosuvastatin Calcium) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid abnormality (such as hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis. The other diagnoses are related to inflammation, cardiac failure, and infection.\n\nTherefore, because explicit evidence of an existing or actively managed lipid disorder (beyond the use of a general risk-reducing medication like a statin) is absent in the current record, the prediction must be \"No,\" adhering strictly to the provided constraints.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3663,
+    "completion_tokens": 248
+  }
+}

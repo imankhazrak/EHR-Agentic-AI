@@ -1,0 +1,12 @@
+{
+  "sample_id": 1192,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record indicates a single liveborn, born in the hospital, delivered without mention of cesarean section, and observation for a suspected infectious condition, along with the need for prophylactic vaccination and inoculation against viral hepatitis. There are no recorded medications or procedures that explicitly point to an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or the use of lipid-lowering agents like statins). Based on the strict criteria provided, which require explicit evidence of a lipid disorder to predict a future diagnosis, the absence of such evidence in the current record leads to the prediction of \"No\". The general risk factors associated with the current record (e.g., being a newborn) are insufficient to meet the threshold for a positive prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3448,
+    "completion_tokens": 160
+  }
+}

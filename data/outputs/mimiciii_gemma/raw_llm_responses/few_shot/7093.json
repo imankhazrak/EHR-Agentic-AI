@@ -1,0 +1,12 @@
+{
+  "sample_id": 7093,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a diagnosed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are related to gastrointestinal hemorrhage, iron deficiency anemia, acute kidney failure, chronic airway obstruction, atrial fibrillation, congestive heart failure, urinary tract infection, and essential hypertension. While the patient has several significant comorbidities, including cardiovascular diseases (CHF, AF) and hypertension, these conditions alone are explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the medication profile does not include any explicit lipid-lowering agents (like statins or fibrates) that would serve as strong, explicit evidence of an actively managed lipid disorder. Therefore, based strictly on the provided criteria, there is no strong and explicit evidence to support a future diagnosis of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3610,
+    "completion_tokens": 192
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis of \"Pure hypercholesterolemia\" in the patient's current hospital visit record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the patient's current diagnoses include several conditions commonly associated with lipid disorders, such as \"Diabetes with neurological manifestations, type II or unspecified type, uncontrolled\" and \"Coronary atherosclerosis of native coronary artery,\" which are high-risk comorbidities. While these comorbidities alone are insufficient to predict the future diagnosis, the explicit diagnosis of hypercholesterolemia overrides this limitation and provides the necessary explicit evidence.\n\nThe medication profile includes \"Pravastatin,\" a statin, which is a treatment for lipid disorders. This ongoing management of a lipid abnormality further supports the likelihood of this diagnosis being coded in the next visit, as the condition is actively being managed.\n\nIn summary, the explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor leading to the prediction of \"Yes.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3751,
+    "completion_tokens": 236
+  }
+}

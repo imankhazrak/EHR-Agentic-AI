@@ -1,0 +1,12 @@
+{
+  "sample_id": 10058,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on managing complex neurological and post-procedural issues. The primary diagnoses include intractable epilepsy, epileptic syndromes, and related complications from intracranial injury and falls. The medication profile is heavily weighted towards seizure control (Phenytoin, Lorazepam) and cardiovascular/pain management (Metoprolol, Labetalol, Oxycodone-Acetaminophen, HYDROmorphone).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is receiving general supportive care, there are no recorded lipid abnormalities in the diagnoses made, nor are there any lipid-specific medications (like statins or fibrates) explicitly noted as being prescribed for a diagnosed lipid condition.\n\nTherefore, based strictly on the provided evidence and adhering to the strict instruction to only predict a future diagnosis when explicit lipid disorder evidence is present, the prediction must be \"No\". The patient's current clinical picture does not support a future coding of \"Disorders of Lipid Metabolism.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3660,
+    "completion_tokens": 236
+  }
+}

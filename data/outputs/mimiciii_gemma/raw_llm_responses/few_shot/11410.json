@@ -1,0 +1,12 @@
+{
+  "sample_id": 11410,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current visit record contains several significant comorbidities, including Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Kidney replaced by transplant; Ulcer of other part of lower limb; Chronic viral hepatitis B without mention of hepatic coma without mention of hepatitis delta; Glycogenosis; Long-term (current) use of insulin; Coronary atherosclerosis of native coronary artery; Diabetes with renal manifestations, type I [juvenile type], uncontrolled; Diabetes with ophthalmic manifestations, type I [juvenile type], uncontrolled; Background diabetic retinopathy; Diabetes with neurological manifestations, type I [juvenile type], uncontrolled; Polyneuropathy in diabetes; Personal history of noncompliance with medical treatment, presenting hazards to health; Heart disease, unspecified; Other toe(s) amputation status; Obstructive sleep apnea (adult)(pediatric); Other and unspecified hyperlipidemia; Unspecified essential hypertension.\n\nDespite the presence of the diagnosis \"Other and unspecified hyperlipidemia\" in the current visit record, the strict instructions for this prediction task state that the prediction must be based on *explicit* evidence of a lipid disorder being present and *likely* to be diagnosed in the *next* visit, and that factors like general risk factors (hypertension",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3694,
+    "completion_tokens": 256
+  }
+}

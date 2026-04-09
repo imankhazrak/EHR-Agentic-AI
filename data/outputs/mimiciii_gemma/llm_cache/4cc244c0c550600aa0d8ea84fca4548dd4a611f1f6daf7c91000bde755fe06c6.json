@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and critical care diagnoses, including unspecified septicemia, sepsis, acute kidney failure, and multiple pressure ulcers. The medication profile is heavily focused on managing these infections (e.g., Vancomycin, Piperacillin-Tazobactam) and critical support (e.g., Heparin, Zinc Sulfate).\n\nCrucially, the current diagnoses and prescribed medications **do not contain any explicit evidence** of a primary or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's history, as reflected in this record, is one of severe systemic infection and organ failure, not a primary metabolic lipid abnormality.\n\nFollowing the strict instructions provided:\n1. The prediction must be based on **explicit evidence** of a lipid disorder.\n2. The use of general risk factors (like those implied by severe illness) or the use of supportive medications (like Heparin) is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince there is no explicit evidence of a lipid disorder in the current record, the prediction must be \"No,\" regardless of the general prevalence",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3651,
+    "completion_tokens": 256
+  }
+}

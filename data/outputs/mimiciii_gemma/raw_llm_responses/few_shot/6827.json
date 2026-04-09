@@ -1,0 +1,12 @@
+{
+  "sample_id": 6827,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction target is the explicit coding of a diagnosis of \"Disorders of Lipid Metabolism\" in the patient's NEXT hospital visit, not general clinical risk. This requires strong and explicit evidence of an existing or actively managed lipid disorder.\n\nAnalysis of the Current Visit Record:\n1. **Diagnoses:** The current diagnoses include severe infectious and metabolic issues (Chronic vascular insufficiency of intestine, Embolism and thrombosis, Candidiasis, Bacteremia, Cholangitis, Acidosis, Alkalosis, Hyposmolality/hyponatremia). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder listed in the current record.\n2. **Medications:** The medication list is extensive and primarily addresses severe infections (Vancomycin, Piperacillin-Tazobactam, Heparin), metabolic derangements (Albumin, Iso-Osmotic Dextrose, Acetazolamide), and cardiovascular/respiratory support (Metoprolol, Furosemide, Norepinephrine).\n    * **Cholestyramine and Ursodiol:** These are bile acid sequestrants, which are used to manage cholesterol and lipid levels. Their presence *suggests* that the patient'",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3829,
+    "completion_tokens": 256
+  }
+}

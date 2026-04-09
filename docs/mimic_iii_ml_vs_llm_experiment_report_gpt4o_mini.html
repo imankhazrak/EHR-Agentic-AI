@@ -1,0 +1,204 @@
+<h1 id="mimic-iii-next-visit-prediction-report">MIMIC-III Next-Visit Prediction Report</h1>
+<h2 id="overview">1. Overview</h2>
+<p>This report summarizes the work completed on the MIMIC-III next-visit prediction project, including methodology, experiments, and key results. The primary objective was to predict whether a patient will be diagnosed with Disorders of Lipid Metabolism in their next hospital admission using only information from the current visit.</p>
+<p>The project compares two main approaches: - Classical Machine Learning (ML) - Large Language Models (LLMs)</p>
+<blockquote>
+<p><strong>LLM results attribution (current status):</strong> - All LLM results in this document currently correspond to <strong>OpenAI <code>gpt-4o-mini</code></strong> runs. - <strong>Gemma4</strong> experiments are currently running and their results are <strong>not included yet</strong>. - When Gemma4 outputs are ready, they should be added as a separately labeled section/table.</p>
+</blockquote>
+<blockquote>
+<p><strong>Naming convention (best practice):</strong> - Use model-scoped output roots: <code>data/outputs/mimiciii_gpt4o_mini/</code> and <code>data/outputs/mimiciii_gemma4/</code>. - Use model-tagged result filenames in shared folders, for example: <code>summary_table_gpt4o_mini.csv</code>, <code>summary_table_gemma4.csv</code>. - In every table/header, include both <strong>model family</strong> and <strong>version/snapshot</strong> (for example <code>gpt-4o-mini-2024-07-18</code>, <code>gemma-4-&lt;version&gt;</code>). - Never merge metrics from different models into one unlabeled table row; keep one row per model+mode.</p>
+</blockquote>
+<p><img src="image/image.png" /></p>
+<hr />
+<h2 id="problem-definition">2. Problem Definition</h2>
+<ul>
+<li><strong>Task:</strong> Binary classification</li>
+<li><strong>Target:</strong> Presence of lipid metabolism disorder (ICD-9 272.x) in the next visit</li>
+<li><strong>Input:</strong> Current visit only (no leakage from future visit)</li>
+<li><strong>Dataset:</strong> MIMIC-III hospital admissions (visit pairs)</li>
+</ul>
+<h3 id="what-exactly-is-predicted-and-what-it-means">What Exactly Is Predicted (and What It Means)</h3>
+<ul>
+<li>The model predicts whether the <strong>immediate next hospital admission</strong> for the same patient will contain a lipid-disorder diagnosis code (<code>272.x</code>, stored without dot in MIMIC-III).</li>
+<li>This is a prediction of <strong>coded diagnosis occurrence on the next admission</strong>, not a direct estimate of true biological dyslipidemia burden or long-term cardiovascular risk.</li>
+<li>The label is built from <code>diagnoses_codes_next</code> in each adjacent visit pair (current visit -&gt; next visit).</li>
+</ul>
+<h3 id="is-the-horizon-next-day-week-month">Is the Horizon Next Day / Week / Month?</h3>
+<ul>
+<li>The current pipeline does <strong>not</strong> define a fixed temporal horizon (for example, 7-day, 30-day, or 90-day prediction).</li>
+<li>Instead, horizon is <strong>event-based</strong>: “next recorded admission” in chronological order for that patient.</li>
+<li>Therefore, the gap between current and next visit can vary substantially across patients (short for some, long for others).</li>
+<li>If a patient has only one recorded visit, no pair is created and that case is excluded from this next-visit task.</li>
+</ul>
+<p>In short: this is a <strong>next-admission prediction task</strong>, not a fixed-time-window prediction task.</p>
+<h3 id="observed-data-distribution-and-class-balance">Observed Data Distribution and Class Balance</h3>
+<p>Based on output artifacts in <code>data/outputs/mimiciii_gpt4o_mini/</code>:</p>
+<ul>
+<li><code>label_distribution.csv</code>: negative = 9,040, positive = 3,416 (total = 12,456 pairs)</li>
+<li><code>target_label_report.json</code>: prevalence = 0.2742 (~27.4% positive)</li>
+<li><code>processed_dataset_summary.json</code>: train prevalence = 0.2743, test prevalence = 0.2741</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>The dataset is <strong>imbalanced</strong> (roughly <strong>72.6% negative</strong> vs <strong>27.4% positive</strong>).</li>
+<li>This is a <strong>moderate class imbalance</strong> (not extreme), and stratified splitting preserved a nearly identical positive rate in train and test.</li>
+</ul>
+<hr />
+<h2 id="methodology">3. Methodology</h2>
+<h3 id="data-preparation">3.1 Data Preparation</h3>
+<ul>
+<li>Constructed <strong>visit pairs</strong> (current visit → next visit)</li>
+<li>Created binary labels based on next visit diagnosis codes</li>
+<li>Split dataset into:
+<ul>
+<li>80% training</li>
+<li>20% testing (stratified)</li>
+</ul></li>
+</ul>
+<h3 id="input-representations">3.2 Input Representations</h3>
+<h4 id="classical-ml">Classical ML</h4>
+<ul>
+<li>Bag-of-codes representation</li>
+<li>Features extracted from:
+<ul>
+<li>Diagnoses</li>
+<li>Procedures</li>
+<li>Medications</li>
+</ul></li>
+</ul>
+<h4 id="llm">LLM</h4>
+<ul>
+<li>Natural language narrative per visit</li>
+<li>Includes:
+<ul>
+<li>Diagnoses</li>
+<li>Medications</li>
+<li>Procedures</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="models-and-approaches">4. Models and Approaches</h2>
+<h3 id="classical-ml-models">4.1 Classical ML Models</h3>
+<ul>
+<li>Decision Tree</li>
+<li>Logistic Regression</li>
+<li>Random Forest</li>
+</ul>
+<p>Two training strategies: - Fully supervised (full dataset) - Few-shot ML (trained on only 6 samples)</p>
+<h3 id="llm-approaches">4.2 LLM Approaches</h3>
+<p>Using GPT-based model (<code>gpt-4o-mini</code> for current reported runs):</p>
+<ul>
+<li>Zero-shot</li>
+<li>Zero-shot+</li>
+<li>Few-shot (in-context examples)</li>
+<li>EHR-CoAgent (few-shot + critic feedback)</li>
+</ul>
+<hr />
+<h2 id="evaluation-metrics">5. Evaluation Metrics</h2>
+<ul>
+<li>Accuracy (ACC)</li>
+<li>Sensitivity (Recall)</li>
+<li>Specificity</li>
+<li>F1-score</li>
+</ul>
+<hr />
+<h2 id="results-summary">6. Results Summary</h2>
+<h3 id="classical-ml-fully-supervised">6.1 Classical ML (Fully Supervised)</h3>
+<ul>
+<li>Best model: Logistic Regression</li>
+<li>Accuracy: ~77%</li>
+<li>F1-score: ~53%</li>
+</ul>
+<p>Observations: - Balanced performance - Random Forest had high specificity but very low sensitivity</p>
+<h3 id="classical-ml-few-shot">6.2 Classical ML (Few-Shot)</h3>
+<ul>
+<li>Severe performance degradation</li>
+<li>Accuracy dropped to ~35–61%</li>
+</ul>
+<p>Observations: - Models overfit or became unstable - Extremely high sensitivity but very low specificity</p>
+<hr />
+<h3 id="llm-results-gpt-4o-mini">6.3 LLM Results (<code>gpt-4o-mini</code>)</h3>
+<p>All reported LLM approaches (for <code>gpt-4o-mini</code>) performed similarly:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th>Accuracy</th>
+<th>F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-shot</td>
+<td>~80.8%</td>
+<td>~62.2%</td>
+</tr>
+<tr class="even">
+<td>Zero-shot+</td>
+<td>~80.7%</td>
+<td>~61.5%</td>
+</tr>
+<tr class="odd">
+<td>Few-shot</td>
+<td>~80.6%</td>
+<td>~61.9%</td>
+</tr>
+<tr class="even">
+<td>CoAgent</td>
+<td>~80.9%</td>
+<td>~62.6%</td>
+</tr>
+</tbody>
+</table>
+<p>Observations: - Very stable across prompt variations - Minimal differences between modes - Near-zero parsing errors</p>
+<hr />
+<h2 id="key-findings">7. Key Findings</h2>
+<h3 id="ml-vs-llm">7.1 ML vs LLM</h3>
+<ul>
+<li>LLM outperformed classical ML in:
+<ul>
+<li>Accuracy (+3–4%)</li>
+<li>F1-score (+9%)</li>
+<li>Sensitivity (significantly higher)</li>
+</ul></li>
+<li>ML (Random Forest) achieved higher specificity but missed many positives</li>
+</ul>
+<h3 id="few-shot-behavior">7.2 Few-Shot Behavior</h3>
+<ul>
+<li><strong>ML few-shot:</strong> Failed due to insufficient data</li>
+<li><strong>LLM few-shot:</strong> Remained stable due to in-context learning</li>
+</ul>
+<h3 id="prompt-engineering-impact">7.3 Prompt Engineering Impact</h3>
+<ul>
+<li>Zero-shot, few-shot, and CoAgent produced very similar results</li>
+<li>CoAgent showed only marginal improvement</li>
+</ul>
+<hr />
+<h2 id="interpretation">8. Interpretation</h2>
+<ul>
+<li>LLMs effectively leverage structured clinical narratives</li>
+<li>Narrative representation may capture richer context than bag-of-codes</li>
+<li>Prompt engineering has limited impact compared to model capability</li>
+</ul>
+<hr />
+<h2 id="limitations">9. Limitations</h2>
+<ul>
+<li>Data split at visit level (possible patient leakage)</li>
+<li>No statistical significance testing</li>
+<li>LLM inputs differ from ML inputs (not strictly controlled comparison)</li>
+<li>Label reflects coding behavior, not true clinical diagnosis</li>
+</ul>
+<hr />
+<h2 id="conclusion">10. Conclusion</h2>
+<p>This project demonstrates that LLM-based approaches provide strong and stable performance for next-visit clinical prediction tasks. Compared to classical ML baselines, LLMs achieved better overall predictive performance, especially in detecting positive cases.</p>
+<p>However, improvements from advanced prompting strategies (few-shot, CoAgent) were marginal, suggesting that model capability and input representation are the dominant factors.</p>
+<hr />
+<h2 id="future-work">11. Future Work</h2>
+<ul>
+<li>Instead of relying only on prompt engineering and repeated LLM API calls, a stronger next step is to fine-tune a new open-source <strong>Gemma 4</strong> model.</li>
+<li>This direction can reduce inference latency and long-term cost compared with repeated prompt-based calls to proprietary APIs.</li>
+<li>Because <strong>Gemma 4</strong> is multimodal, it is a promising option for extending this work to <strong>MIMIC-IV</strong>, which contains richer and more multidimensional data sources.</li>
+<li>In a future version of the project, we can design a unified framework that leverages structured clinical variables, text, and other available modalities from MIMIC-IV within one fine-tuned open-source model.</li>
+<li>This would make the system more scalable, more customizable, and potentially better suited for real-world clinical prediction tasks.</li>
+</ul>
+<hr />
