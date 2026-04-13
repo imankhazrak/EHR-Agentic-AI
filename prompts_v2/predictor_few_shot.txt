@@ -1,0 +1,78 @@
+{# ===== Predictor: Few-Shot (MIMIC-III — Disorders of Lipid Metabolism) ===== #}
+
+{% block system %}
+You are a clinical prediction assistant for hospital records. Your task is to predict whether Disorders of Lipid Metabolism will be diagnosed in the patient's next hospital visit, using only evidence present in the current visit record and the provided demonstration cases.
+{% endblock %}
+
+{% block user %}
+Task: Based only on the patient's current hospital visit record below, predict whether "Disorders of Lipid Metabolism" will be present as a diagnosis in the patient's next hospital visit. Use the current record and the demonstration cases to guide your reasoning.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Demonstration Cases]
+5. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important: Your task is NOT to predict general future risk. Your task is to predict whether a diagnosis of Disorders of Lipid Metabolism is likely to be coded in the patient's NEXT hospital visit.
+
+Use only evidence stated in the current visit record and patterns shown in the demonstration cases.
+Do not assume facts that are not mentioned.
+Do not rely on outside medical assumptions beyond the documented record and provided examples.
+
+Follow these guidelines:
+
+- Answer "Yes" if the current visit record contains:
+  • Explicit evidence of a lipid disorder, such as a diagnosis, documented history, or direct mention, OR
+  • Evidence of active lipid-disorder management that is supported by other documented record evidence
+
+- Supporting evidence may include:
+  • Mention of hyperlipidemia, hypercholesterolemia, or other lipid abnormality
+  • Lipid-lowering treatment when supported by diagnoses, history, or other relevant record evidence
+  • Multiple documented signals in the record that consistently suggest an existing lipid disorder
+
+- DO NOT answer "Yes" based only on:
+  • A statin or other lipid-lowering medication alone
+  • Cardiovascular disease alone
+  • General risk factors alone, such as hypertension, diabetes, or obesity
+
+- If several pieces of documented evidence together support an existing lipid disorder, you may answer "Yes".
+
+- Do not be overly conservative, but keep your reasoning grounded in the documented record and the demonstration patterns only.
+
+[Current Visit Record]
+{{ narrative }}
+
+[Instructions]
+In the MIMIC-III critical care population, approximately 27.6% of subsequent hospital visits include a diagnosis of Disorders of Lipid Metabolism.
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Use the demonstration cases as examples of how documented evidence patterns relate to the final label.
+(3) Consider diagnoses, medications, and procedures together.
+(4) Weigh multiple documented signals together rather than requiring one explicit mention.
+(5) Use the prevalence only as background context, and do not use it by itself to make the prediction.
+(6) Base your conclusion on the strength of the documented evidence in the record.
+
+[Demonstration Cases]
+{{ demonstration_cases }}
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+Prediction: <Yes or No>
+Probability: <a number between 0 and 1 with exactly two decimal places>
+Reasoning: <brief explanation based only on the current visit record and the demonstration cases>
+
+Rules for Probability:
+- Probability must be a single numeric value between 0 and 1.
+- Use exactly two decimal places (for example: 0.27, 0.63, 0.81).
+- Use higher values when the documented evidence strongly supports that a lipid disorder will be coded in the next visit.
+- Use lower values when the documented evidence does not support it.
+- Do not use percentages.
+- Do not output any extra lines before or after the required format.
+{% endblock %}

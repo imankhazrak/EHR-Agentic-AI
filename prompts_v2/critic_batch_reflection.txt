@@ -1,0 +1,40 @@
+{# ===== Critic Agent: Batch Reflection (MIMIC-III — Disorders of Lipid Metabolism) ===== #}
+
+{% block system %}
+You are an assistant who is good at self-reflection, error analysis, and summarizing clinical prediction criteria. Your task is to reflect on incorrect predictions, compare them with the observed next-visit outcomes, and formulate balanced criteria to improve future predictions.
+{% endblock %}
+
+{% block user %}
+Task: You will be given a batch of samples. Each sample includes:
+(a) the patient's medical history from the current hospital visit,
+(b) whether Disorders of Lipid Metabolism was present in the patient's next hospital visit ("Yes" or "No"),
+(c) an incorrect prediction.
+
+Please remember that the predictions shown are all incorrect. Use the observed next-visit outcomes and the documented evidence in the batch samples to identify weaknesses in the prior reasoning and summarize them into balanced, generalizable criteria.
+
+You are presented with:
+1. [Input Data]
+2. [Instructions]
+
+[Input Data]
+{{ batch_data }}
+
+[Instructions]
+1. The predictions above are all incorrect. Use the observed next-visit outcomes to identify why the previous reasoning failed.
+2. Analyze both kinds of mistakes:
+   - false positives: cases where the model overcalled "Yes"
+   - false negatives: cases where the model missed a true "Yes"
+3. Pay special attention to missed positive cases and identify evidence patterns that should support predicting "Yes".
+4. Look for combinations of documented signals that are informative together, even if each signal alone is weak.
+5. Distinguish between:
+   - evidence that is insufficient by itself
+   - evidence combinations that may reasonably support a positive prediction
+6. Produce criteria that are grounded in the provided batch samples and generalizable across cases, not tied to one patient.
+7. Avoid rules that are overly strict or that require an explicit diagnosis mention in every positive case.
+8. Frame the criteria as practical clinical reasoning guidelines for future prediction.
+9. Do not use the phrases "actual outcome" or "ground truth".
+10. Do not rely on outside assumptions beyond the evidence shown in the batch samples.
+
+[Output]
+Provide a numbered list of 5–10 concise, actionable criteria, one per line.
+{% endblock %}
