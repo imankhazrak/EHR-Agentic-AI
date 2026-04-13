@@ -1,0 +1,12 @@
+{
+  "sample_id": 4300,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are predominantly related to severe cardiovascular events (Atrial fibrillation, Atrial flutter, Cardiac arrest, etc.), infectious complications (Other postoperative infection), and neurological/metabolic disturbances (Paralysis agitans, Unspecified essential hypertension). The medication profile includes various supportive and anti-infective agents (Magnesium Sulfate, Morphine Sulfate, Vancomycin HCl, Cefazolin, etc.), but crucially, it lacks the presence of lipid-lowering medications like statins (e.g., Atorvastatin) or fibrates, which would serve as a strong indicator of an actively managed lipid disorder. Based on the strict instructions provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis, the absence of such evidence leads to the prediction of \"No,\" despite the patient's high-risk profile associated with cardiovascular disease.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3628,
+    "completion_tokens": 216
+  }
+}

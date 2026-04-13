@@ -1,0 +1,12 @@
+{
+  "sample_id": 5373,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record primarily details acute cardiovascular events (Subendocardial infarction, Congestive heart failure, Coronary atherosclerosis) and associated infections/comorbidities (Urinary tract infection, Diabetes mellitus). While the patient has several risk factors commonly associated with lipid disorders, such as Diabetes mellitus and Coronary atherosclerosis, the record does not contain any explicit evidence of an existing or actively managed lipid disorder (e.g., documented hypercholesterolemia, hyperlipidemia, or specific lipid abnormality diagnosis). The medications prescribed are none, and the procedures performed are focused on acute cardiac intervention (stent insertion, cardiac catheterization). Based on the strict instructions, which mandate explicit evidence of a lipid disorder to predict a future diagnosis, the absence of such evidence leads to the prediction of \"No\", despite the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3540,
+    "completion_tokens": 175
+  }
+}

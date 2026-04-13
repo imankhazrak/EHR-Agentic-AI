@@ -1,0 +1,12 @@
+{
+  "sample_id": 4995,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on acute cardiovascular events and associated complications. The primary diagnoses include Subendocardial infarction, Coronary atherosclerosis, Atrial fibrillation, and Unspecified essential hypertension. The medication profile reflects intensive management of these cardiac and associated issues, including Heparin Sodium, Carvedilol, Warfarin, Aspirin EC, and various anti-hypertensive and anti-arrhythmic agents.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has multiple cardiovascular risk factors (hypertension, history of MI/CAD), the instructions strictly prohibit predicting a future diagnosis based solely on these risk factors or the use of related medications (like statins, which are not explicitly listed as a primary management focus in the current record, though Aspirin is used).\n\nThe demonstration cases show that a diagnosis of lipid disorder is coded when there is explicit evidence of the condition (e.g., Case 2: Pure hypercholesterolemia). Since the current record only details cardiac and hypertensive management, and does not explicitly code a lipid abnormality,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3772,
+    "completion_tokens": 256
+  }
+}

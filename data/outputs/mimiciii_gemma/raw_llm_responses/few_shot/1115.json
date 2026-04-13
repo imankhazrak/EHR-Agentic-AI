@@ -1,0 +1,12 @@
+{
+  "sample_id": 1115,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions unrelated to primary lipid metabolism disorders. The primary diagnoses include Poisoning by methadone, Acute respiratory failure, Pneumonitis, Chronic airway obstruction, Urinary tract infection, and multiple severe trauma/cardiac issues (Closed fracture, Congestive heart failure, Opioid dependence). While the patient is receiving numerous medications, including some that are commonly used in patients with cardiovascular risk factors (e.g., Aspirin, Warfarin, Heparin), and has a history of Congestive Heart Failure, these factors alone do not constitute explicit evidence of a coded diagnosis of \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia) in the current record. Crucially, the instructions strictly prohibit predicting a future diagnosis based solely on the use of statins, cardiovascular diseases, or general risk factors like hypertension or diabetes (which is not explicitly coded as a primary lipid disorder here). Since there is no explicit diagnosis of a lipid abnormality (e.g., hyperlipidemia, hypercholesterolemia) present in the current record, and the patient's clinical picture is overwhelmingly focused on infectious, respiratory, and trauma management, the evidence required",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 256
+  }
+}

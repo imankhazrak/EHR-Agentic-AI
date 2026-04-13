@@ -1,0 +1,12 @@
+{
+  "sample_id": 8272,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is heavily focused on complex cardiovascular and pulmonary issues. The diagnoses include Aortic valve disorders, Primary pulmonary hypertension, and personal histories of tobacco use and malignant neoplasm of the breast. The procedures performed are extensive, involving open-heart surgery, aortic valve replacement, and cardiac catheterization.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed are none recorded, meaning there is no current management of a lipid abnormality via statins or fibrates.\n\nAccording to the strict guidelines provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires explicit evidence of an existing or actively managed lipid disorder. The cardiovascular and pulmonary conditions, while sometimes comorbid with lipid disorders, are not sufficient on their own to meet this threshold for a future diagnosis prediction. Therefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3478,
+    "completion_tokens": 219
+  }
+}

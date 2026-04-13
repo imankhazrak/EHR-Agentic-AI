@@ -1,0 +1,12 @@
+{
+  "sample_id": 2205,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record primarily documents diagnoses related to a musculoskeletal injury and associated general health conditions.\n    - **Current Diagnoses:** Closed fracture of intertrochanteric section of neck of femur; Unspecified fall; Unspecified essential hypertension.\n    - **Current Procedures:** Open reduction of fracture with internal fixation, femur.\n    - **Current Medications:** None recorded.\n\nThe [Target Definition] specifies that \"Disorders of Lipid Metabolism\" includes conditions like hypercholesterolemia, hyperlipidemia, and hyperlipoproteinemia.\n\nApplying the [Refined Criteria] and [Prediction Clarification]:\n1. **Explicit Diagnostic Coding:** There is no explicit diagnosis of any lipid disorder (e.g., hypercholesterolemia, hyperlipidemia) present in the current visit record.\n2. **Lipid-Lowering Pharmacotherapy:** No lipid-lowering medications (e.g., statins) were prescribed or recorded in the current visit record.\n3. **Comorbidities:** While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the [Prediction Clarification], is not sufficient evidence on its own to predict a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3644,
+    "completion_tokens": 256
+  }
+}

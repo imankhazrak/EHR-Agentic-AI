@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is extensive, detailing numerous severe and interconnected comorbidities, including Generalized convulsive epilepsy, End stage renal disease, Hypertensive chronic kidney disease (Stage V/ESRD), Chronic systolic heart failure, and other severe systemic issues. The patient is on a complex medication regimen that includes Simvastatin, which is a lipid-lowering agent.\n\nHowever, according to the strict guidelines provided, the presence of a lipid-lowering agent (Simvastatin) or the presence of general risk factors (ESRD, CHF) alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe [Current Visit Record] does not contain any explicit diagnostic coding for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nFollowing the [Refined Criteria], specifically Criterion 1 and Criterion 4, which prioritize explicit diagnostic evidence over inferred risk factors (like medication use or comorbidities), the strong and explicit evidence required to predict a future diagnosis is absent. Therefore, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3910,
+    "completion_tokens": 231
+  }
+}

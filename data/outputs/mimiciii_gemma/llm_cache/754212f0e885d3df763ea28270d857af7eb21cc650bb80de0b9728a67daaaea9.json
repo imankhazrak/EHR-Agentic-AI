@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the current hospital visit record reveals a complex constellation of severe, interconnected comorbidities, including Nausea with vomiting, Nutritional marasmus, Acute diastolic heart failure, Malignant neoplasm of liver, secondary, and various secondary malignant neoplasms. The patient is also managed for Hyposmolality and/or hyponatremia, Fever, and Congestive heart failure.\n\nCrucially, the current record does **not** contain an explicit diagnosis of \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia).\n\nWhile the patient is prescribed **Atorvastatin** (a lipid-lowering agent), according to the [Refined Criteria] and [Prediction Clarification], the mere use of lipid-lowering pharmacotherapy is considered a **secondary, supportive factor** and is **not sufficient** on its own to predict a future diagnosis of the disorder, especially when explicit diagnostic coding is absent.\n\nThe current record lacks the explicit diagnostic evidence required by the [Refined Criteria] (Priority 1 and 4). Therefore, based strictly on the hierarchy of evidence provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3839,
+    "completion_tokens": 245
+  }
+}

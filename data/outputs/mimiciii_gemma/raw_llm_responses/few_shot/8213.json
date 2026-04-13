@@ -1,0 +1,12 @@
+{
+  "sample_id": 8213,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include Coronary atherosclerosis, Iron deficiency anemia, Unspecified essential hypertension, Unspecified acquired hypothyroidism, Below knee amputation status, Pneumonitis, Acute on chronic systolic heart failure, Acute kidney failure, Unspecified protein-calorie malnutrition, Congestive heart failure, Diabetes mellitus, Chronic hepatitis C, and various other persistent mental and physical disorders. The medication profile is complex, involving insulin, various antibiotics (Levofloxacin, Piperacillin-Tazobactam Na, Vancomycin), cardiac medications (Lisinopril, Furosemide, Atenolol), and steroids (PredniSONE).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) or active, explicit management of such a condition, beyond general risk factors.\n\nReviewing the current diagnoses:\n- The patient has Diabetes mellitus type II, which is a known risk factor for dyslipidemia.\n- The patient has Unspecified essential hypertension, also a risk factor.\n- The patient has Coronary atherosclerosis, which is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3635,
+    "completion_tokens": 256
+  }
+}

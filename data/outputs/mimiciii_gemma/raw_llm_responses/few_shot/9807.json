@@ -1,0 +1,12 @@
+{
+  "sample_id": 9807,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of hypercholesterolemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is prescribed \"Atorvastatin,\" which is a medication used for managing hypercholesterolemia. While the instructions caution against predicting a diagnosis based solely on statin use, the presence of the explicit diagnosis of hypercholesterolemia overrides this caution and provides the necessary strong evidence for a \"Yes\" prediction. The other diagnoses and medications relate to severe sepsis, respiratory failure, and trauma, but the explicit lipid disorder diagnosis is the determining factor for this specific prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4042,
+    "completion_tokens": 159
+  }
+}

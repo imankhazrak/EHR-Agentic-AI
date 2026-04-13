@@ -1,0 +1,12 @@
+{
+  "sample_id": 3875,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious comorbidities and complex medical interventions. The diagnoses include Aortic valve disorders, Congestive heart failure, Coronary atherosclerosis, and Unspecified essential hypertension, all of which are known risk factors for lipid disorders. Furthermore, the patient is prescribed Atorvastatin, a medication specifically used for managing hypercholesterolemia.\n\nHowever, according to the strict instructions provided, the mere presence of risk factors (like hypertension or CHF) or the use of lipid-lowering medications (like Atorvastatin) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit.\n\nThe current record does not contain an explicit diagnosis of a lipid abnormality (such as hypercholesterolemia or hyperlipidemia) that would serve as strong and explicit evidence for a future coding. Therefore, based on the strict criteria, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3670,
+    "completion_tokens": 206
+  }
+}

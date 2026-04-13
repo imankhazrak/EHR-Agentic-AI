@@ -1,0 +1,12 @@
+{
+  "sample_id": 12435,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record contains explicit diagnostic coding for a lipid abnormality, which is the highest priority criterion for predicting a future diagnosis. The record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This explicit diagnostic evidence strongly supports the conclusion that a diagnosis of \"Disorders of Lipid Metabolism\" will be present in the patient's next hospital visit, as per the refined criteria which prioritize explicit diagnostic coding. Furthermore, the patient is receiving lipid-lowering pharmacotherapy, including **\"Atorvastatin\"** and **\"Simvastatin\"**, which supports the ongoing management of a lipid disorder, reinforcing the likelihood of this diagnosis being coded in subsequent visits. While the patient has numerous severe comorbidities (Subendocardial infarction, Acute on chronic diastolic heart failure, etc.), the presence of the explicit hyperlipidemia diagnosis is the decisive factor, overriding the tertiary risk assessment. Therefore, based on the explicit diagnostic evidence, the prediction is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4247,
+    "completion_tokens": 206
+  }
+}

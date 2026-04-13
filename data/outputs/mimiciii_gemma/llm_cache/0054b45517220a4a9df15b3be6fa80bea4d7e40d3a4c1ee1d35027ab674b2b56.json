@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current visit record explicitly lists \"Other and unspecified hyperlipidemia\" as a diagnosis. This is direct evidence of a lipid disorder. However, the instructions strictly state that the prediction must be based on *strong and explicit evidence* that a lipid disorder is present and *likely to be diagnosed* in the *next* visit, and that factors like general risk factors or the use of statins alone are insufficient. While the current diagnosis is present, the instructions do not provide sufficient context or a clear trajectory in the current record to guarantee that the *next* visit will explicitly code this diagnosis again, especially when other severe, acute conditions dominate the record (e.g., Traumatic hemothorax, Systolic heart failure). Therefore, based on the strict constraints of the prompt regarding future coding certainty, the prediction leans towards \"No\" in the absence of a guaranteed trajectory for the next encounter.\n\nPrediction: No",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3939,
+    "completion_tokens": 192
+  }
+}

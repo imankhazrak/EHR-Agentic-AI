@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is also diagnosed with \"Pure hypercholesterolemia\" in the current record, which directly satisfies the criteria for a future diagnosis prediction. The presence of this explicit lipid disorder diagnosis overrides the exclusion criteria (statins, general risk factors, etc.) because the diagnosis itself is the required evidence.\n\nFinal Prediction: Yes",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3674,
+    "completion_tokens": 137
+  }
+}

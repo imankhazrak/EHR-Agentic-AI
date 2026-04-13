@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, interconnected comorbidities related to **Diabetes Mellitus (Type I, Juvenile)**, **Acute Kidney Failure**, **Gastroparesis**, and **Autonomic Neuropathy**. The diagnoses explicitly coded in the current record include:\n    * Diabetes with neurological manifestations, type I [juvenile type], uncontrolled\n    * Acute kidney failure, unspecified\n    * Gastroparesis\n    * Peripheral autonomic neuropathy in disorders classified elsewhere\n    * Unspecified essential hypertension\n    * Diabetes with renal manifestations, type I [juvenile type], uncontrolled\n    * Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere\n    * Diabetes with ophthalmic manifestations, type I [juvenile type], uncontrolled\n    * Background diabetic retinopathy\n\n**Analysis against Refined Criteria:**\n\n1. **Explicit Diagnostic Coding for Lipid Abnormalities (Primary Check):** There is **no explicit diagnosis** coded in the current record for hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder (CCS category 53).\n2. **Lipid-Lowering Pharmacotherapy (Secondary Check):** The patient is prescribed various",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3799,
+    "completion_tokens": 256
+  }
+}

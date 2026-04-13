@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis is conducted strictly according to the [Refined Criteria], which mandates prioritizing explicit diagnostic coding for lipid abnormalities.\n    *   **Explicit Diagnostic Evidence:** Reviewing the [Current Visit Record] reveals several diagnoses: Acute miliary tuberculosis, Acute respiratory failure, Congestive heart failure, Subendocardial infarction, Urinary tract infection, Pressure ulcer, Other coagulation defects, Rheumatoid arthritis, Aseptic necrosis, Cardiac dysrhythmias, Constipation, and Unspecified essential hypertension. **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder coded in the current visit record.**\n    *   **Pharmacotherapy as Secondary Factor:** The patient is prescribed **Atorvastatin** and **Aspirin**. While Atorvastatin is a lipid-lowering agent, the [Refined Criteria] and [Instructions] explicitly state that the *use of statins alone* is **NOT sufficient** to predict a future diagnosis of the disorder, even if the patient is high-risk.\n    *   **Comorbidities as Tertiary Factor:** The patient has numerous severe comorbidities (Tuberculosis, CHF, MI, etc.). However,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4026,
+    "completion_tokens": 256
+  }
+}

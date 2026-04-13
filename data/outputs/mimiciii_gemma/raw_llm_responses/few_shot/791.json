@@ -1,0 +1,12 @@
+{
+  "sample_id": 791,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of an existing lipid disorder, such as hypercholesterolemia, is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is receiving \"Rosuvastatin Calcium,\" which is a statin prescribed for lipid management, reinforcing the clinical context of a lipid disorder. While the patient has numerous other comorbidities (Diabetes, Hypertension, etc.), the presence of the specific lipid diagnosis overrides the need to rely on general risk factors or medication use alone, as per the strict guidelines provided. Therefore, the evidence strongly supports a future diagnosis of Disorders of Lipid Metabolism.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3675,
+    "completion_tokens": 158
+  }
+}

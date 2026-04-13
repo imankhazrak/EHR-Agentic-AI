@@ -1,0 +1,12 @@
+{
+  "sample_id": 6133,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains several significant risk factors for lipid disorders, including Morbid obesity and Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled. These conditions are strongly associated with dyslipidemia. Furthermore, the patient has Coronary atherosclerosis of native coronary artery, which is a major cardiovascular risk factor often co-occurring with lipid abnormalities. While the current record does not explicitly state a diagnosis of hypercholesterolemia or hyperlipidemia, the combination of these strong, explicit comorbidities (Morbid obesity, Diabetes, Coronary Atherosclerosis) provides strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, aligning with the spirit of the demonstration cases where strong comorbidities led to a \"Yes\" outcome. The presence of these high-risk factors is sufficient evidence to predict a future diagnosis, even without an explicit lipid diagnosis in the current record, as per the established pattern in the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3972,
+    "completion_tokens": 202
+  }
+}

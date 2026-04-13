@@ -1,0 +1,12 @@
+{
+  "sample_id": 1916,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record explicitly codes for \"Diabetes with ketoacidosis, type I [juvenile type], not stated as uncontrolled.\" The medications prescribed are primarily for managing this acute metabolic crisis: Insulin, Potassium Chloride, and various intravenous fluids (NS, D5 1/2 NS). There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific diagnosis related to lipid metabolism in the current record. Furthermore, the medication profile does not include any lipid-lowering pharmacotherapy (such as statins or fibrates) that would serve as a secondary supportive factor. Based on the strict [Refined Criteria] and the instruction to prioritize explicit diagnostic evidence over inferred risk factors, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit. The current clinical focus is entirely on the management of diabetic ketoacidosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3705,
+    "completion_tokens": 206
+  }
+}

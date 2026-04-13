@@ -1,0 +1,12 @@
+{
+  "sample_id": 1625,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infections (Bacteremia, Spontaneous bacterial peritonitis, Streptococcus infection) and complex organ failure (Congestive heart failure, Cirrhosis, Chronic kidney disease, Liver transplant). While the patient has several high-risk comorbidities commonly associated with lipid disorders\u2014namely Diabetes with renal manifestations, type II, and Hypertensive chronic kidney disease\u2014and the patient is on several medications that *could* be related to metabolic health (e.g., Warfarin, Insulin, which are used for general metabolic control, not specifically lipid management), there is **no explicit evidence** in the current record that a lipid disorder (such as hypercholesterolemia or hyperlipidemia) is currently diagnosed or actively being managed as a primary condition. The medications prescribed, such as Warfarin and Insulin, are for general metabolic and coagulation control related to the severe infections and organ failure, not specifically for lipid lowering. Following the strict instructions, which mandate that the prediction must be based on **explicit evidence** of an existing or actively managed lipid disorder, the absence of such a diagnosis in the current record leads to the conclusion that a diagnosis of \"Disorders of Lipid Metabolism\" is unlikely to be explicitly coded in the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3844,
+    "completion_tokens": 256
+  }
+}

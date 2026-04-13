@@ -1,0 +1,12 @@
+{
+  "sample_id": 6372,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to cardiovascular, renal, and metabolic instability, including Hypertensive encephalopathy, Acidosis, Bacteremia, and advanced Diabetes complications (Type I juvenile, with multiple manifestations, retinopathy, polyneuropathy, gastroparesis). The patient is receiving extensive supportive care, including Hemodialysis, various anti-hypertensive and anti-diabetic medications (Nifedipine CR, Clonidine HCl, Labetalol HCl, Insulin, Lisinopril), and treatments for acute infections (Bacteremia).\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nAccording to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], a prediction of \"Yes\" can **only** be made if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The use of medications like statins (which are not explicitly listed in the current record, though they are a general consideration) or the presence of cardiovascular disease (CHF, CAD",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3865,
+    "completion_tokens": 256
+  }
+}

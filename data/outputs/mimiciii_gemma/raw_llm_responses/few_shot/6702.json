@@ -1,0 +1,12 @@
+{
+  "sample_id": 6702,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe traumatic brain injury (Subdural hemorrhage following injury without mention of open intracranial wound, with prolonged [more than 24 hours] loss of consciousness and return to pre-existing conscious level; Assault by striking by blunt or thrown object). The procedures and medications recorded are entirely focused on managing this acute neurological and critical care state (Other incision of brain; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; None recorded).\n\nCrucially, the current record contains **no explicit evidence** of a pre-existing or actively managed lipid disorder. There are no recorded diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication list is empty, meaning there is no recorded use of lipid-lowering agents like statins or fibrates.\n\nAccording to the strict guidelines provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires strong and explicit evidence of an existing lipid disorder. Since the current record is entirely focused on trauma and critical care management without any mention of metabolic or lipid abnormalities, the evidence required to predict a future diagnosis is absent. Therefore, the prediction must",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3475,
+    "completion_tokens": 256
+  }
+}

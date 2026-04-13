@@ -1,0 +1,6 @@
+llm:
+  finetune_output_dir: "models/gemma_finetuned_answer_only_5epochs"
+  finetune:
+    answer_only_loss: true
+    max_length: 2048
+    num_train_epochs: 5

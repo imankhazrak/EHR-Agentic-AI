@@ -1,0 +1,12 @@
+{
+  "sample_id": 8470,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the current record already contains a specific diagnosis of hyperlipidemia, there is strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit, fulfilling the criteria for answering \"Yes.\" The presence of this explicit diagnosis overrides the need to rely solely on general risk factors or the use of lipid-lowering medications (like Pravastatin), as the diagnosis itself is the strongest evidence required by the instructions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3725,
+    "completion_tokens": 165
+  }
+}

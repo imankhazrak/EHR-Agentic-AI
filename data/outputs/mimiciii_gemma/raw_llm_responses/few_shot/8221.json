@@ -1,0 +1,12 @@
+{
+  "sample_id": 8221,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include Cervical spondylosis with myelopathy, Cardiac arrest, Atrial flutter, and Diabetes mellitus type II. While the patient has several risk factors commonly associated with lipid disorders (such as Diabetes mellitus type II and cardiovascular complications), the strict criteria for this prediction require explicit evidence of an existing or actively managed lipid disorder diagnosis (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis). The current diagnoses list does not explicitly code \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Disorders of Lipid Metabolism.\" Furthermore, the medications prescribed, while including some that manage metabolic conditions (like Insulin and Metoprolol), do not explicitly include a lipid-lowering agent like a statin or fibrate that would serve as strong, explicit evidence of an ongoing, actively managed lipid disorder in the context of this prediction's strict rules. Therefore, based on the absence of explicit lipid disorder coding in the current record, the prediction for the next visit is \"No,\" despite the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3843,
+    "completion_tokens": 241
+  }
+}

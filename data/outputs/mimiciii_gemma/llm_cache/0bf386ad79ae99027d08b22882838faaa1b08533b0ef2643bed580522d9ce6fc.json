@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on severe neurological and orthopedic trauma, including Intervertebral disc disorder with myelopathy, Quadriplegia, and multiple spinal fusion procedures. The diagnoses are centered on spinal cord injury, fall, and associated complications like Anemia and Pressure ulcers. The medication profile is dominated by pain management (Morphine Sulfate, HYDROmorphone), neurological support (Carbidopa-Levodopa, Lorazepam, Mirapex, Donepezil, Namenda, Zonisamide), and general support (Heparin, Docusate Sodium, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the prescribed medications **do not include any lipid-lowering pharmacotherapy** (e.g., statins like Atorvastatin or Simvastatin).\n\nAccording to the [Refined Criteria] and the strict rules provided, a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record is entirely devoid of this explicit evidence, and the factors that",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3917,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 940,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates a diagnosis of Diabetes with ketoacidosis, type I [juvenile type], uncontrolled. The medications prescribed are Humulin-R Insulin, NS, Insulin, Potassium Chloride, and Magnesium Sulfate. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific diagnosis related to lipid metabolism disorders in the current record. While the patient has uncontrolled diabetes, which is a known risk factor for developing lipid disorders, the strict instructions require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis. Since the current record lacks this explicit evidence, the prediction must be \"No\", despite the high-risk status associated with uncontrolled diabetes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3437,
+    "completion_tokens": 149
+  }
+}

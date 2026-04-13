@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis is conducted by strictly adhering to the hierarchy of evidence provided in the [Refined Criteria] and the [Prediction Clarification].\n\n**Step 1: Prioritize Explicit Diagnostic Coding for Lipid Abnormalities (Criterion 1 & 4)**\nThe [Current Visit Record] lists the following diagnoses: Diabetes with ketoacidosis, type I; Anemia, unspecified; Unspecified essential hypertension; Unspecified disorder of kidney and ureter.\nThere is **no explicit diagnostic coding** for hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder in the current record. Therefore, the primary condition for predicting a future diagnosis is absent.\n\n**Step 2: Evaluate Lipid-Lowering Pharmacotherapy as a Secondary Factor (Criterion 2)**\nThe patient is prescribed **Atorvastatin**. This is a lipid-lowering pharmacotherapy. According to the [Prediction Clarification], the use of statins alone is **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism,\" even if the patient is high-risk. This factor alone does not meet the threshold for a \"Yes\" prediction.\n\n**Step 3: Assess Constellation of Severe Com",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3740,
+    "completion_tokens": 256
+  }
+}

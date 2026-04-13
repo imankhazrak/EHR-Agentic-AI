@@ -1,0 +1,12 @@
+{
+  "sample_id": 10161,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include severe gastrointestinal issues (Other digestive system complications, Intestinal or peritoneal adhesions with obstruction, Other colostomy and enterostomy complication, Surgical operation with anastomosis, bypass, or graft), severe systemic infections (Toxic encephalopathy), and multiple cardiovascular and metabolic comorbidities (Cardiac complications, Coronary atherosclerosis, Diabetes mellitus, Unspecified essential hypertension).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit evidence* of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) or *active, explicit management* of such a condition, beyond general risk factors.\n\n1. **Review of Diagnoses:** While the patient has Diabetes Mellitus and Hypertension (major risk factors for dyslipidemia), these diagnoses alone do not constitute a coded diagnosis of \"Disorders of Lipid Metabolism.\"\n2. **Review of Medications:** The patient is prescribed **Simvastatin** (a statin). Statins are used to *treat* hyperlipidemia. However, according to the instructions, the mere *use* of statins is **NOT** sufficient evidence to predict a future diagnosis of the disorder itself.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3923,
+    "completion_tokens": 256
+  }
+}

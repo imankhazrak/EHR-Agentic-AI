@@ -1,0 +1,109 @@
+--- Sample 1 ---
+[Patient Medical History]
+- Diagnoses made: Cellulitis and abscess of leg, except foot; Hemorrhage complicating a procedure; Congestive heart failure, unspecified; Atrial fibrillation; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Long-term (current) use of anticoagulants; Heart valve replaced by other means; Aortocoronary bypass status; Contusion of ankle
+- Medications prescribed: Bumetanide; NS; D5W; Warfarin; Oxycodone; Magnesium Sulfate; Potassium Chloride; Valsartan; Metoprolol XL; Heparin Sodium; Hydrocodone-Acetaminophen; Pantoprazole; Aspirin; Bisacodyl; Senna; Docusate Sodium; Sertraline HCl; Oxazepam; Digoxin; Cefazolin; Iso-Osmotic Dextrose
+- Procedures performed: Transfusion of packed cells; Other incision with drainage of skin and subcutaneous tissue
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record primarily details acute infectious processes (Cellulitis and abscess of leg, except foot), cardiovascular instability (Congestive heart failure, unspecified; Atrial fibrillation), and associated complications (Hemorrhage complicating a procedure; Contusion of ankle). The medication profile includes agents for these conditions (e.g., Warfarin, Metoprolol XL, Cefazolin, Bumetanide).
+
+Crucially, the current record **lacks any explicit diagnosis
+
+--- Sample 2 ---
+[Patient Medical History]
+- Diagnoses made: Coronary atherosclerosis of native coronary artery; Intermediate coronary syndrome; Urinary complications, not elsewhere classified; Acute kidney failure, unspecified; [ICD9-DX:4582]; Other drugs and medicinal substances causing adverse effects in therapeutic use; Unspecified essential hypertension; Pure hypercholesterolemia
+- Medications prescribed: Acetaminophen; Atorvastatin; Aluminum-Magnesium Hydroxide; Simethicone; Aspirin; Magnesium Sulfate; Niacin SR; Oxycodone-Acetaminophen; Pantoprazole; Clopidogrel Bisulfate; Folic Acid; Prochlorperazine; Potassium Chloride; Oxazepam; NS; Pantoprazole Sodium; Niaspan; Probenecid; Atenolol; Quinapril; Gemfibrozil; Sertraline HCl; Tocopheryl; Atropine Sulfate; Cyanocobalamin; Pyridoxine HCl; Fish Oil (Omega 3); Verapamil SR; Nitroglycerin SL
+- Procedures performed: [ICD9-PX:3601]; Insertion of non-drug-eluting coronary artery stent(s); Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Injection or infusion of platelet inhibitor
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record provides explicit and strong evidence of a lipid disorder, which directly supports a future diagnosis of "Disorders of Lipid Metabolism."
+
+1. **Explicit Diagnosis of Lipid Disorder:** The current diagnoses explicitly include **"Pure hypercholesterolemia."** This meets the primary criterion for predicting a future diagnosis, as it is an explicit coding of a lipid abnormality (CCS category 53).
+
+2. **Active Lipid Management:** The medication p
+
+--- Sample 3 ---
+[Patient Medical History]
+- Diagnoses made: Unspecified disease of pericardium; Obstructive chronic bronchitis with (acute) exacerbation; Other bipolar disorders; Atherosclerosis of native arteries of the extremities, unspecified; Atrial fibrillation; Other diseases of vocal cords; Other and unspecified hyperlipidemia; Unspecified acquired hypothyroidism; Tobacco use disorder; Chronic gastric ulcer without mention of hemorrhage or perforation, without mention of obstruction; Heart disease, unspecified; Hypoxemia; Unspecified essential hypertension; Long-term (current) use of anticoagulants
+- Medications prescribed: Levothyroxine Sodium; Albuterol 0.083% Neb Soln; Lorazepam; Ranitidine; Quetiapine Fumarate; Omeprazole; Vitamin D; Senna; Docusate Sodium; Acetaminophen; Ezetimibe; Furosemide; Fluticasone-Salmeterol Diskus (250/50); Sodium Chloride 0.9%  Flush; Amlodipine; Aripiprazole; Simvastatin; Morphine Sulfate; 0.9% Sodium Chloride; Oxycodone-Acetaminophen; Ipratropium Bromide Neb; Metoprolol Tartrate; Warfarin; PredniSONE; Azithromycin; Nicotine Patch; Heparin; Potassium Chloride; Miconazole 2% Cream; Influenza Virus Vaccine
+- Procedures performed: Pericardiocentesis
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current visit record contains explicit evidence of a lipid disorder, which strongly supports a future diagnosis of "Disorders of Lipid Metabolism." Specifically, the diagnosis list includes "Other and unspecified hyperlipidemia." According to the target definition, hyperlipidemia is a core component of "Disorders of Lipid Metabolism." Furthermore, the patient is actively managed with Ezetimibe and Simvastatin, which are medications used for lipid management. While the in
+
+--- Sample 4 ---
+[Patient Medical History]
+- Diagnoses made: Unspecified septicemia; Septic shock; End stage renal disease; Intestinal infection due to Clostridium difficile; Toxic gastroenteritis and colitis; Unspecified vascular insufficiency of intestine; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Severe sepsis; Renal dialysis status; Atrial fibrillation; Thrombocytopenia, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Other and unspecified hyperlipidemia; Personal history of malignant neoplasm of kidney; Heart valve replaced by transplant
+- Medications prescribed: Fentanyl Citrate; Soln; Metoprolol Tartrate; Heparin Sodium; 5% Dextrose; Ondansetron; Albumin 5% (12.5g / 250mL); OxycoDONE Liquid; Albuterol Inhaler; Bag; Albuterol-Ipratropium; Ranitidine (Liquid); Albumin 25% (12.5g / 50mL); Warfarin; HYDROmorphone (Dilaudid); Albuterol 0.083% Neb Soln; Mannitol 20 %; Soln.; Nystatin Oral Suspension; Lidocaine Viscous 2%; Cepacol (Menthol); Sodium Chloride 0.9%  Flush; Acyclovir; TraMADOL (Ultram); Insulin; Dextrose 50%; Glucagon; Potassium Chloride; Calcium Gluconate; Midazolam; D10W; Sodium CITRATE 4%; Chlorhexidine Gluconate 0.12% Oral Rinse; 5% Dextrose (EXCEL BAG); 0.9% Sodium Chloride; Amiodarone; Daptomycin; Phenylephrine; Heparin; Potassium Phosphate; Insulin Human Regular; Quetiapine Fumarate; Propofol; Prismasate (B22 K4); NORepinephrine; Heparin (CRRT Machine Priming); Heparin Flush (10 units/ml); Heparin Flush (1000 units/mL); 0.9% Sodium Chloride (Mini Bag Plus); Meropenem
+- Procedures performed: Other and unspecified partial excision of large intestine; Temporary ileostomy; Venous catheterization for renal dialysis; Hemodialysis; Venous catheterization, not elsewhere classified; Enteral infusion of concentrated nutritional substances; Parenteral infusion of concentrated nutritional substances
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning:
+The prediction is based on the explicit presence of the diagnosis "Other and unspecified hyperlipidemia" in the Current Visit Record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most explicit evidence required to predict a future diagnosis of "Disorders of Lipid Metabolism."
+
+While the Current Visit Record contains numerous other diagnoses and risk factors (e.g., Diabetes mellitus, Hypertensive chronic kidney diseas
+
+--- Sample 5 ---
+[Patient Medical History]
+- Diagnoses made: Other postoperative infection; Cellulitis and abscess of trunk; Other convulsions; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Aortocoronary bypass status; Unspecified essential hypertension; Hypertrophy (benign) of prostate with urinary obstruction and other lower urinary tract symptoms (LUTS); Other and unspecified hyperlipidemia
+- Medications prescribed: Vancomycin HCl; Metronidazole; Atorvastatin; Iso-Osmotic Dextrose; Sodium Chloride 0.9%  Flush; Lidocaine Jelly 2% (Urojet); Potassium Chloride; Insulin; Lamotrigine; Metoprolol; NS; Enalapril Maleate; Oxycodone-Acetaminophen; Dextrose 5%; Ketorolac; Levofloxacin; Clopidogrel Bisulfate; Tamsulosin HCl; Docusate Sodium; Aspirin EC; Milk of Magnesia; Fluoxetine HCl; Ascorbic Acid; Zinc Sulfate; Polysaccharide Iron Complex; Acetaminophen; Heparin Flush PICC (100 units/ml)
+- Procedures performed: Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record explicitly includes the diagnosis of "Other and unspecified hyperlipidemia." According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. While the patient is also receiving Atorvastatin (a lipid-lowering medication), the primary and sufficient evidence for the prediction is the existing diag
+
+--- Sample 6 ---
+[Patient Medical History]
+- Diagnoses made: Unspecified septicemia; Septic shock; Acute kidney failure, unspecified; Cellulitis and abscess of leg, except foot; Acidosis; Diabetes with neurological manifestations, type II or unspecified type, uncontrolled; Ulcer of other part of foot; Severe sepsis; Polyneuropathy in diabetes; Morbid obesity; Other and unspecified hyperlipidemia; Esophageal reflux; Unspecified sleep apnea
+- Medications prescribed: Insulin; Neutra-Phos; Lisinopril; Sodium Chloride 0.9%  Flush; Furosemide; Aspirin; Vancomycin; 5% Dextrose; Heparin Flush (10 units/ml); Nitroglycerin SL; Hydrocortisone Cream 1%; MetRONIDAZOLE (FLagyl); Levofloxacin; Iso-Osmotic Sodium Chloride; Famotidine; 0.9% Sodium Chloride; Norepinephrine; 0.9% Sodium Chloride (Mini Bag Plus); Iso-Osmotic Dextrose; Magnesium Sulfate; Docusate Sodium; Meropenem; Bisacodyl; Lorazepam; Gabapentin; Pantoprazole; Simvastatin; Glucagon; Dextrose 50%; Ondansetron; Heparin; Acetaminophen
+- Procedures performed: Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder, which strongly supports a future diagnosis of "Disorders of Lipid Metabolism."
+
+1. **Explicit Lipid Disorder Evidence:** The patient's diagnoses explicitly include **"Other and unspecified hyperlipidemia."** This is a direct and explicit coding of a lipid abnormality, meeting the primary criterion for predicting a future diagnosis.
+
+2. **Comorbid Conditions Supporting Lipid Risk:** The patient 
+
+--- Sample 7 ---
+[Patient Medical History]
+- Diagnoses made: Paroxysmal ventricular tachycardia; Acute kidney failure, unspecified; Chronic systolic heart failure; Other primary cardiomyopathies; Hematoma complicating a procedure; Acidosis; Congestive heart failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Atrial fibrillation; Mitral valve disorders; Tricuspid valve disorders, specified as nonrheumatic; Chronic kidney disease, unspecified; Coronary atherosclerosis of unspecified type of vessel, native or graft; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Other and unspecified hyperlipidemia; Old myocardial infarction; Automatic implantable cardiac defibrillator in situ; Long-term (current) use of anticoagulants; Aortocoronary bypass status; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure
+- Medications prescribed: Fentanyl Citrate; DOPamine; D5W; NS; Sodium Chloride 0.9%  Flush; Lansoprazole Oral Disintegrating Tab; Phytonadione; quiniDINE Sulfate; Mexiletine; Furosemide; Captopril; Heparin; Senna; Heparin Sodium; Docusate Sodium; quiniDINE Gluconate E.R.; Acetylcysteine 20%; Iso-Osmotic Dextrose; Vancomycin; Warfarin; Cephalexin; Metoprolol Succinate XL; Pneumococcal Vac Polyvalent; GlyBURIDE; Lidocaine; Ezetimibe; Insulin; traZODONE; Pantoprazole; Lorazepam; Vial; Pantoprazole Sodium; Metoprolol Tartrate; Aspirin; Morphine Sulfate; SW; Magnesium Sulfate; Acetaminophen; Amiodarone; Nitroglycerin; Norepinephrine; Midazolam; Chlorhexidine Gluconate 0.12% Oral Rinse; D5W (EXCEL BAG)
+- Procedures performed: Implantation or replacement of automatic cardioverter/defibrillator, total system [AICD]; Excision or destruction of other lesion or tissue of heart, endovascular approach; Cardiac mapping; Other electric countershock of heart; Catheter based invasive electrophysiologic testing; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of temporary transvenous pacemaker system; Atrial cardioversion; Transfusion of packed cells
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of "Disorders of Lipid Metabolism." Specifically, the diagnosis list includes "Other and unspecified hyperlipidemia." According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most explicit evidence required to answer "Yes." While the patient has numerous other comorbidities (e.g., Paroxysmal ven
+
+--- Sample 8 ---
+[Patient Medical History]
+- Diagnoses made: Occlusion and stenosis of vertebral artery without mention of cerebral infarction; Accidental puncture or laceration during a procedure, not elsewhere classified; Hematoma complicating a procedure; Hemorrhage complicating a procedure; Atrial flutter; Atrial fibrillation; Acute posthemorrhagic anemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified acquired hypothyroidism; Unspecified essential hypertension
+- Medications prescribed: Metoprolol; Amlodipine; Acetylcysteine 20%; Insulin; Levothyroxine Sodium; Pantoprazole; Clopidogrel Bisulfate; Aspirin; Sodium Chloride 0.9%  Flush; Simvastatin; Senna; Acetaminophen; Bisacodyl; Atropine Sulfate; Dexamethasone; Ranitidine; Magnesium Sulfate; Valsartan; Furosemide; Influenza Virus Vaccine
+- Procedures performed: Percutaneous angioplasty of extracranial vessel(s); Percutaneous insertion of other extracranial artery stent(s); Arteriography of cerebral arteries; Other and unspecified coronary arteriography; Injection of anticoagulant; Atrial cardioversion; Transfusion of packed cells
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record shows several significant comorbidities and ongoing management for various acute and chronic conditions. These include:
+1. **Cardiovascular Issues:** Atrial flutter and Atrial fibrillation, managed with Metoprolol and Amlodipine.
+2. **Metabolic Issues:** Diabetes mellitus without mention of complication, type II or unspecified type, managed with Insulin.
+3. **Infectious/Inflammatory Issues:** Unspecified acquired hypothyroidism, managed with
+
+--- Sample 9 ---
+[Patient Medical History]
+- Diagnoses made: Unspecified septicemia; Pneumocystosis; Acute respiratory failure; Septic shock; Acute kidney failure, unspecified; Multiple myeloma, without mention of having achieved remission; [ICD9-DX:2841]; Hemorrhage of gastrointestinal tract, unspecified; Influenza with pneumonia; Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia]; Severe sepsis; Chronic kidney disease, unspecified; Anemia in neoplastic disease; Atrial fibrillation; Helicobacter pylori [H. pylori]
+- Medications prescribed: Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; Ipratropium Bromide Neb; Nitroglycerin; Magnesium Sulfate; Azithromycin; D5W; SW; Furosemide; Allopurinol; Propofol; Sulfameth/Trimethoprim; CeftriaXONE; Heparin; PredniSONE; Famotidine; Ipratropium Bromide MDI; Midazolam; Fentanyl Citrate; NS; Albuterol; Oseltamivir Phosphate; Vancomycin; Chlorhexidine Gluconate 0.12% Oral Rinse; Insulin; Docusate Sodium (Liquid); Aspirin; Clopidogrel Bisulfate; Bisacodyl; FoLIC Acid; Senna; Tricor; Lactulose; Metoprolol; Solution; Potassium Chloride; Pantoprazole Sodium; Vial; Epoetin Alfa; Sodium Chloride 0.9%  Flush; Potassium Chloride Replacement (Oncology); Calcium Acetate; Clarithromycin; Amoxicillin; Pantoprazole; traZODONE; Albuterol 0.083% Neb Soln; Acyclovir; Methadone; Lidocaine Jelly 2% (Urojet)
+- Procedures performed: Continuous invasive mechanical ventilation for 96 consecutive hours or more; Insertion of endotracheal tube; Venous catheterization for renal dialysis; Hemodialysis; Venous catheterization, not elsewhere classified; Arterial catheterization; Incision of lung
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] Reasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, including Unspecified septicemia, Pneumocystosis, Acute respiratory failure, Septic shock, Acute kidney failure, and Multiple myeloma. The medication profile is extensive and focused on managing these life-threatening conditions (e.g., Piperacillin-Tazobactam Na, PredniSONE, Vancomycin, Oseltamivir Phosphate).
+
+Crucially, the current record lacks explicit, primary evidence 
+
+--- Sample 10 ---
+[Patient Medical History]
+- Diagnoses made: Other and unspecified infection due to central venous catheter; Sepsis; Unspecified septicemia; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; End stage renal disease; Primary pulmonary hypertension; Hemorrhage complicating a procedure; Acute posthemorrhagic anemia; Diastolic heart failure, unspecified; Hyperpotassemia; Congestive heart failure, unspecified; Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled; Background diabetic retinopathy; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Personal history of venous thrombosis and embolism; Long-term (current) use of anticoagulants
+- Medications prescribed: D5W; Paroxetine; Vancomycin; Senna; Docusate Sodium; Iso-Osmotic Dextrose; Insulin; Nephrocaps; Cinacalcet; Sodium Chloride 0.9%  Flush; Aspirin; Gabapentin; Acetaminophen; 0.9% Sodium Chloride; Heparin; Heparin Flush (10 units/ml); Heparin Sodium; Zolpidem Tartrate; Warfarin; Furosemide; SW; Calcium Gluconate; Piperacillin-Tazobactam; Magnesium Sulfate; Sodium Polystyrene Sulfonate; Dextrose 50%; Ondansetron; Metoprolol Tartrate; Hydrocortisone Na Succ.; Lorazepam; PredniSONE; Potassium Chloride; Heparin Flush (5000 Units/mL); Atorvastatin; traZODONE; Lisinopril; Bisacodyl; NS (Mini Bag Plus); OxycoDONE (Immediate Release); Morphine Sulfate; Nitroglycerin Ointment  2%; OxycoDONE Liquid
+- Procedures performed: Venous catheterization for renal dialysis; Hemodialysis; Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] Reasoning: The patient's current visit record contains several strong indicators that support the likelihood of a future diagnosis of "Disorders of Lipid Metabolism," despite the absence of an explicit lipid disorder diagnosis in the current record. The reasoning is based on the interplay of severe comorbidities and the presence of lipid-modifying medications.
+
+1. **Comorbidities as Strong Risk Factors:** The patient suffers from multiple severe, interconnected comorbidities that are classic ris

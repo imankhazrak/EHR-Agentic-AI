@@ -1,0 +1,12 @@
+{
+  "sample_id": 1002,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute infectious and inflammatory processes, including septicemia, severe sepsis, acute pancreatitis, and multiple organ failure (acute respiratory failure, acute kidney failure). The primary diagnoses are related to these acute events and the subsequent complications (e.g., cerebral artery occlusion, cholecystitis). While the patient has several risk factors for dyslipidemia, such as Diabetes Mellitus Type II and Unspecified Essential Hypertension, and is being treated with Atorvastatin, the record does not contain an explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia) that is actively being managed as the primary or secondary condition. The presence of Atorvastatin is a treatment for *suspected* or *known* dyslipidemia, but according to the strict instructions, the mere prescription of a statin is insufficient evidence to predict a future diagnosis of the disorder itself. Therefore, based on the explicit evidence required by the guidelines, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3975,
+    "completion_tokens": 213
+  }
+}

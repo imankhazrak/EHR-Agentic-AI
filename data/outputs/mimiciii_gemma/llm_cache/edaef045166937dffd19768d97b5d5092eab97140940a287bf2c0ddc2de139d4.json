@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-lipid-related critical illnesses. The primary diagnoses include Unspecified septicemia, Pneumonia, Acidosis, Sepsis, and various organ system issues (e.g., Coronary atherosclerosis, Hypertension, Rheumatoid arthritis, Systemic sclerosis). While the patient has several cardiovascular risk factors (Coronary atherosclerosis, Unspecified essential hypertension), and is receiving medications that might be used in lipid management (though no explicit lipid disorder is diagnosed), the current record lacks the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" According to the strict guidelines, the mere presence of cardiovascular disease or hypertension is insufficient to warrant a \"Yes\" prediction. Since there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other defined lipid abnormality in the current record, the prediction must be \"No,\" even though the patient is high-risk.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3722,
+    "completion_tokens": 199
+  }
+}

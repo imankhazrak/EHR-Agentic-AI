@@ -1,0 +1,12 @@
+{
+  "sample_id": 4270,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several significant diagnoses and a complex medication regimen, including the prescription of Atorvastatin. However, the strict instructions for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" explicitly state that the mere use of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of a lipid disorder.\n\nFurthermore, while the patient has several risk factors commonly associated with lipid disorders, such as Diabetes mellitus type II, Atrial fibrillation, and Unspecified sleep apnea, these general risk factors alone are also explicitly stated as NOT sufficient evidence to predict a future diagnosis.\n\nThe current diagnoses focus heavily on acute and chronic respiratory issues (Acute respiratory failure, Obstructive chronic bronchitis with acute exacerbation, etc.), B-complex deficiencies, and electrolyte imbalances (Hypopotassemia). There is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia coded in the current record that would serve as strong and explicit evidence for a future diagnosis.\n\nTherefore, based on the strict criteria provided, the absence of an explicit lipid disorder diagnosis in the current record, despite the presence of high-risk factors and the use of a lipid-lowering medication,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3711,
+    "completion_tokens": 256
+  }
+}

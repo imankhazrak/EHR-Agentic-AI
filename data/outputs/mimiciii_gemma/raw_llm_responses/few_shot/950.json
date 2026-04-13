@@ -1,0 +1,12 @@
+{
+  "sample_id": 950,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record does not contain any explicit evidence of a diagnosed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are primarily related to Human immunodeficiency virus [HIV] disease, Toxoplasmosis of other specified sites, Candidiasis of mouth, and various other systemic and neurological issues (e.g., Anemia, unspecified; Other disorders of neurohypophysis; Hiccough). The medication profile includes Atazanavir and Emtricitabine-Tenofovir, which are antiretroviral drugs for HIV management, and Dexamethasone, which is a corticosteroid. While the patient is receiving treatment for HIV, which is a condition associated with various metabolic risks, and the medication profile includes Atazanavir, which can sometimes affect lipid levels, the strict instructions mandate that the prediction cannot be based solely on the use of antiretroviral drugs or general risk factors associated with HIV. Furthermore, there is no explicit mention of a lipid abnormality in the current diagnoses or procedures. Therefore, based on the strict criteria provided, the evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent, leading to a prediction of \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3640,
+    "completion_tokens": 256
+  }
+}

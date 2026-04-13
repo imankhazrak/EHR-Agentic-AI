@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are primarily related to:\n1. **Infectious/Inflammatory Conditions:** Pneumonia, unspecified; Congestive heart failure, unspecified; Cerebral aneurysm, nonruptured.\n2. **Oncological Conditions:** Malignant neoplasm of liver, secondary; Personal history of malignant neoplasm of breast.\n3. **Supportive/Acute Care:** Pneumonia, organism unspecified; Personal history of malignant neoplasm of breast.\n\nThe medication profile includes various supportive and acute care drugs (e.g., Docusate Sodium, Ondansetron, Furosemide, Azithromycin, Captopril, Metoprolol, Pantoprazole, etc.). While the patient has several comorbidities that are *risk factors* for dyslipidemia (e.g., Congestive heart failure, Malignant neoplasm of liver, which can be associated with metabolic issues), the strict instructions mandate that the prediction cannot be based solely on these risk factors or the use of supportive medications.\n\nCrucially, the record lacks the explicit evidence",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3660,
+    "completion_tokens": 256
+  }
+}

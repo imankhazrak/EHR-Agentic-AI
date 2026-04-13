@@ -1,0 +1,5 @@
+# Short finetuned test eval (merge after finetune_answer_only_eval.yaml).
+paths:
+  outputs: "data/outputs/mimiciii_gemma_finetuned_eval_smoke"
+llm:
+  max_test_samples: 12

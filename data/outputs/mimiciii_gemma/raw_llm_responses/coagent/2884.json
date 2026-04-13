@@ -1,0 +1,12 @@
+{
+  "sample_id": 2884,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnostic coding for \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses listed are related to chronic hepatitis C, cirrhosis, complications of a liver transplant, acute respiratory failure, and various infectious/inflammatory processes. While the patient is receiving numerous medications, including some that might be used in the management of metabolic or cardiovascular conditions (e.g., Metoprolol, Furosemide, Insulin), the record does not explicitly state a lipid disorder diagnosis or provide strong, explicit evidence of an actively managed lipid disorder that would warrant a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria. Therefore, based on the hierarchy of evidence, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4070,
+    "completion_tokens": 179
+  }
+}

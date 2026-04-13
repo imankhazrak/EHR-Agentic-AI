@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious comorbidities, including chronic systolic heart failure, congestive heart failure, chronic kidney disease, diabetes with neurological and ophthalmic manifestations, and various gastrointestinal and cardiovascular issues. The patient is receiving multiple medications, including Atorvastatin, which is a lipid-lowering agent.\n\nHowever, according to the strict instructions provided, the mere prescription of a statin (Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses listed do not explicitly state a primary lipid disorder such as hypercholesterolemia or hyperlipidemia. While the patient has multiple risk factors (diabetes, heart failure, CKD), these factors alone are insufficient to meet the strict criteria for predicting a future coded diagnosis of a lipid disorder.\n\nTherefore, based on the explicit evidence required by the instructions, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3767,
+    "completion_tokens": 197
+  }
+}

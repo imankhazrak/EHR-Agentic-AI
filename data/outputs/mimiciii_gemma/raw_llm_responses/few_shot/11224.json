@@ -1,0 +1,12 @@
+{
+  "sample_id": 11224,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several significant comorbidities, including Congestive Heart Failure (CHF) and Hypertension (managed with Lisinopril and Metoprolol XL), these conditions are general risk factors and do not, by themselves, constitute explicit evidence of a lipid disorder that would be coded in the next visit according to the strict instructions. The medication profile includes Furosemide and Lisinopril, which manage fluid and blood pressure, but there is no mention of lipid-lowering agents like statins or fibrates, nor is there an explicit diagnosis of a lipid abnormality. Therefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3603,
+    "completion_tokens": 171
+  }
+}

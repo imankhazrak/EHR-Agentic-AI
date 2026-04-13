@@ -1,0 +1,12 @@
+{
+  "sample_id": 2074,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are primarily related to severe acute respiratory and systemic failure, including Pneumonitis, Acute respiratory failure, Multiple sclerosis, Acute kidney failure, and Hypotension. The medications prescribed are focused on managing these critical conditions (e.g., Pantoprazole, Furosemide, Norepinephrine, Levofloxacin, Methylprednisolone). While the patient has several comorbidities (Multiple sclerosis, Acute kidney failure), these do not constitute explicit evidence of a lipid disorder. According to the strict instructions, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this evidence is absent in the current record, the prediction must be \"No\", regardless of the patient's general high-risk status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3655,
+    "completion_tokens": 192
+  }
+}

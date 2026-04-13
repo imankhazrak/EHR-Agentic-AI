@@ -1,0 +1,12 @@
+{
+  "sample_id": 6400,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record is overwhelmingly focused on managing severe, acute cardiovascular events and associated complications, such as Acute myocardial infarction of other anterior wall, Congestive heart failure, and Coronary atherosclerosis. The patient is receiving intensive care, including mechanical ventilation and surgical interventions (stent insertion, bypass).\n\nCrucially, the current record **lacks explicit evidence** of an existing or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.). While the patient has multiple risk factors (unspecified essential hypertension, history of MI/CHF), the instructions strictly forbid predicting a future diagnosis based solely on these general risk factors or the use of cardiovascular medications (Captopril, Lisinopril, Metoprolol, etc.).\n\nThe medication list includes Aspirin and Clopidogrel Bisulfate, which are standard for acute coronary syndromes, but there is no explicit mention of lipid-lowering agents like statins or fibrates being prescribed *as the primary management for a diagnosed lipid disorder* in this specific record.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present to predict a future diagnosis\u2014the prediction must be \"No\", despite the patient",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3732,
+    "completion_tokens": 256
+  }
+}

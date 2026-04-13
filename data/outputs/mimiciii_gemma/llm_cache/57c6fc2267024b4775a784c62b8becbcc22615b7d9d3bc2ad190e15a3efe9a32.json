@@ -1,0 +1,10 @@
+{
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record contains explicit diagnostic coding for lipid abnormalities, which is the highest priority criterion for predicting a future diagnosis. Specifically, the record lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This explicit diagnostic evidence strongly indicates that a lipid disorder is present and actively coded in the current visit. According to the [Refined Criteria] and the strict rules provided, the presence of explicit diagnostic coding for lipid abnormalities is the primary and most decisive factor in determining the likelihood of a future diagnosis. Furthermore, the patient is also prescribed **\"Atorvastatin\"**, which is a lipid-lowering pharmacotherapy. While the presence of statins alone is not sufficient to predict a future diagnosis, it serves as a supportive factor reinforcing the existing diagnosis of hyperlipidemia. The constellation of severe comorbidities, such as Unspecified septicemia, Acute kidney failure, Severe sepsis, and Diabetes with neurological manifestations, are significant risk factors, but the explicit diagnosis of hyperlipidemia overrides these tertiary considerations. Therefore, based on the explicit diagnostic evidence present in the current record, the prediction is \"Yes\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3962,
+    "completion_tokens": 234
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3708,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are primarily related to severe traumatic brain injury (Subdural hemorrhage, Subarachnoid hemorrhage), drug abuse, and accidental falls. The medications prescribed (Lorazepam, Folic Acid, Famotidine, Acetaminophen, Oxycodone-Acetaminophen, Ranitidine, Thiamine HCl, Guaifenesin, Vioxx, Hydromorphone, Iso-Osmotic Sodium Chloride, Ondansetron) are supportive care for the acute injuries and symptoms, not specific treatments for a diagnosed lipid abnormality. While the patient is high-risk due to the severity of the trauma and potential underlying health issues, the strict instruction is to predict based on *explicit* evidence of a lipid disorder being present or actively managed. Since no such evidence is present in the current record, the prediction must be \"No\", regardless of the general statistical likelihood or high-risk status.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3527,
+    "completion_tokens": 216
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to gastrointestinal, cardiovascular, renal, and infectious processes. The primary diagnoses include Gastroesophageal laceration-hemorrhage syndrome, Malignant essential hypertension, Congestive heart failure, Acute kidney failure, and various infectious/vascular complications.\n\nWhile the patient is prescribed **Atorvastatin**, which is a medication used for managing hypercholesterolemia (a form of lipid disorder), the strict instructions for this prediction state that the *use of statins alone* is **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded in the next visit.\n\nFurthermore, the current diagnoses **do not explicitly state** a lipid disorder (such as \"Pure hypercholesterolemia\" or \"Hyperlipidemia\") as a primary or secondary diagnosis. The presence of hypertension and CHF are risk factors for lipid disorders, but these factors alone, according to the guidelines, are insufficient to mandate a future diagnosis code.\n\nThe demonstration cases show that a diagnosis is coded when there is explicit evidence of the lipid disorder (e.g., Case 2 explicitly states \"Pure hypercholesterolemia\"). Since the current",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3697,
+    "completion_tokens": 256
+  }
+}

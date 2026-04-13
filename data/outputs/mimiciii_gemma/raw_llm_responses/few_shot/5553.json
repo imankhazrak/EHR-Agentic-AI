@@ -1,0 +1,12 @@
+{
+  "sample_id": 5553,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe infections (Methicillin susceptible pneumonia due to Staphylococcus aureus, Urinary tract infection), severe organ dysfunction (Pathologic fracture of vertebrae, Acute vascular insufficiency of intestine, Chronic diastolic heart failure, Congestive heart failure), and general critical care management (Non-invasive mechanical ventilation, Infusion of vasopressor agent).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Unspecified essential hypertension and Congestive heart failure\u2014conditions strongly associated with dyslipidemia\u2014the instructions explicitly state that the mere presence of these risk factors or the use of general cardiovascular/hypertension medications (like Amlodipine, Diltiazem, Metoprolol) is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication profile includes several cardiovascular and anti-hypertensive agents (Isosorbide Mononitrate, Diltiazem, Metoprolol, Amlodipine), but there is **no evidence of lipid-lowering therapy** (such as statins or fibrates",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3818,
+    "completion_tokens": 256
+  }
+}

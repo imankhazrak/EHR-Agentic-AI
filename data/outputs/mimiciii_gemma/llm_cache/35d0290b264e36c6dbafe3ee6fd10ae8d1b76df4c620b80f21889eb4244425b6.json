@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute, life-threatening conditions, primarily related to respiratory failure, severe infection (Pneumonia, Bacteremia), and malignancy. The primary diagnoses are: Acute respiratory failure, Pneumonia due to other gram-negative bacteria, Malignant neoplasm of other specified part of esophagus, Pulmonary collapse, Bacteremia, and Diabetes mellitus without mention of complication.\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nFurthermore, the medication list, while extensive, does not explicitly list any lipid-lowering pharmacotherapy (e.g., statins like Atorvastatin or Simvastatin) that would serve as a secondary, supportive factor for a future diagnosis, despite the presence of Diabetes Mellitus. The prescribed medications are primarily for managing infection (Levofloxacin, Vancomycin), respiratory support (Albuterol, Ipratropium), and acute complications (Potassium Phosphate, Magnesium Sulfate, Heparin).\n\nApplying the [Refined Criteria], especially Criterion 1 and Criterion 4, which prioritize explicit diagnostic",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4001,
+    "completion_tokens": 256
+  }
+}

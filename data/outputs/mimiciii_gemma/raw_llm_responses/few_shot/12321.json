@@ -1,0 +1,12 @@
+{
+  "sample_id": 12321,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to predict a future coding of this diagnosis, overriding the need to rely solely on risk factors or medication use. Furthermore, the prescription of Simvastatin, a lipid-lowering agent, while not sufficient on its own, corroborates the ongoing clinical management of a hyperlipidemia condition. Therefore, based on the explicit diagnosis of hyperlipidemia, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3845,
+    "completion_tokens": 146
+  }
+}

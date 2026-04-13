@@ -1,0 +1,12 @@
+{
+  "sample_id": 8749,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, lipoid metabolism disorders, and related lipid abnormalities (CCS category 53). Since the patient is explicitly diagnosed with hypercholesterolemia, there is strong and explicit evidence that a lipid disorder is present and likely to be coded in the patient's next hospital visit, satisfying the criteria for answering \"Yes.\" The other diagnoses and procedures (Subendocardial infarction, Coronary atherosclerosis, etc.) are related to cardiovascular events, not explicit lipid disorders, but the presence of \"Pure hypercholesterolemia\" alone is sufficient to meet the strict evidence requirement.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3543,
+    "completion_tokens": 174
+  }
+}

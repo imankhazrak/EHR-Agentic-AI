@@ -1,0 +1,12 @@
+{
+  "sample_id": 890,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe gastrointestinal, urinary, and infectious complications. The primary diagnoses include Fistula of intestine, Peritoneal abscess, Regional enteritis, and related postoperative complications. The medication profile includes broad-spectrum antibiotics (MetRONIDAZOLE, Gentamicin, Linezolid, Ciprofloxacin), anti-inflammatory agents (PredniSONE, Hydrocortisone), and anticoagulants (Warfarin, Heparin, Furosemide) for managing thrombosis and renal issues. While the patient has a history of venous thrombosis and embolism, and is on long-term anticoagulants, these factors alone do not constitute explicit evidence of an ongoing, actively managed lipid disorder (like hypercholesterolemia or hyperlipidemia) that would necessitate a future diagnosis of \"Disorders of Lipid Metabolism\" according to the strict criteria provided. The presence of anticoagulants and thrombosis history is insufficient to meet the threshold for a future lipid disorder diagnosis, as per the instructions and demonstrated cases. Therefore, based on the explicit evidence in the current record, the prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3931,
+    "completion_tokens": 226
+  }
+}

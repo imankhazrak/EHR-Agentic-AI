@@ -1,0 +1,12 @@
+{
+  "sample_id": 2766,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and metabolic crises, including Acute Myocardial Infarction (AMI), Congestive Heart Failure (CHF), Acute Kidney Failure (AKF), Atrial Fibrillation, Cardiogenic Shock, and Diabetes with Ketoacidosis (DKA). The medication profile includes Atorvastatin, which is a lipid-lowering agent, and the diagnosis of Coronary Atherosclerosis, which is a risk factor for dyslipidemia.\n\nHowever, according to the strict instructions provided, the mere use of statins (Atorvastatin) or the presence of cardiovascular diseases (AMI, CHF, Coronary Atherosclerosis) are NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded. The current record does not contain an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nTherefore, based on the strict evidence-based criteria outlined in the instructions, the prediction must be \"No\", even though the patient is clearly high-risk for lipid abnormalities. The absence of an explicit lipid disorder diagnosis in the current record prevents a \"Yes\" prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3736,
+    "completion_tokens": 246
+  }
+}

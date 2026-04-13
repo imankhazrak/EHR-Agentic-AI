@@ -1,0 +1,12 @@
+{
+  "sample_id": 7077,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions related to renal failure, cardiovascular instability, and metabolic derangements secondary to end-stage organ failure. The primary diagnoses are: Diabetes with renal manifestations, type I, uncontrolled; Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease; Diastolic heart failure, unspecified; Congestive heart failure, unspecified; Hypoxemia; Hyperpotassemia; End stage renal disease; Depressive disorder.\n\nThe medication profile is extensive and focuses heavily on managing these acute and chronic organ failures: Lisinopril, NIFEdipine CR, Metoprolol XL, Ondansetron, Calcium Acetate, and various antibiotics/supportive care drugs.\n\nCrucially, the current visit record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). While the patient has multiple high-risk comorbidities\u2014namely uncontrolled Diabetes and severe Hypertension\u2014these factors alone, as per the strict instructions, are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the use",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3625,
+    "completion_tokens": 256
+  }
+}

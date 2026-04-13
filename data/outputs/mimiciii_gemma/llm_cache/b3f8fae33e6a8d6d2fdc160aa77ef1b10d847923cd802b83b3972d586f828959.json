@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to infectious processes (Empyema with fistula, closure of fistula of diaphragm, transpleural thoracoscopy, injection into thoracic cavity), renal failure (Hypertensive chronic kidney disease, stage V/ESRD, hemodialysis, venous catheterization for renal dialysis), and cardiac instability (Atrial fibrillation, cardiac complications, Labetalol HCl, Diltiazem, Esmolol).\n\n**Analysis against Refined Criteria:**\n\n1. **Explicit Diagnostic Coding for Lipid Abnormalities (Primary Check):** The current diagnoses list **does not** explicitly code for hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder (CCS category 53).\n2. **Lipid-Lowering Pharmacotherapy (Secondary Check):** The medication list **does not** explicitly include standard lipid-lowering agents such as high-dose statins (e.g., Atorvastatin, Simvastatin) or Ezetimibe. While the patient is on various medications for cardiac and renal support, there is no explicit evidence of active lipid management in the prescribed regimen.\n3. **Const",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3804,
+    "completion_tokens": 256
+  }
+}

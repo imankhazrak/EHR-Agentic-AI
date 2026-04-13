@@ -1,0 +1,12 @@
+{
+  "sample_id": 8927,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are primarily related to acute and chronic respiratory and cardiovascular issues (Acute kidney failure, Pneumonia, Chronic diastolic heart failure, Congestive heart failure, etc.). While the patient has several risk factors for dyslipidemia, such as unspecified essential hypertension and chronic heart failure, the instructions strictly prohibit predicting a future diagnosis based solely on these general risk factors or the use of associated medications (like Metoprolol Tartrate or Lisinopril). Furthermore, the medication profile does not explicitly include lipid-lowering agents like statins or fibrates that would strongly suggest an actively managed lipid disorder requiring a future diagnosis code. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3621,
+    "completion_tokens": 203
+  }
+}

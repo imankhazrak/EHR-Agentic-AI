@@ -1,0 +1,12 @@
+{
+  "sample_id": 71,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic organ failure syndromes, including complications of liver transplantation, acute respiratory failure, acute kidney failure, and severe infectious processes (bacteremia, chronic hepatitis C with hepatic coma). The primary focus of the current care is managing these life-threatening metabolic and infectious crises.\n\nCrucially, the current record **lacks explicit evidence** of an existing or actively managed primary lipid disorder (such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several risk factors commonly associated with lipid disorders\u2014namely **Diabetes with other specified manifestations, type II or unspecified type** and **Hypertensive chronic kidney disease**\u2014and is receiving medications that *can* affect lipid levels (e.g., Tacrolimus, which is a known metabolic agent), these factors alone, as per the strict instructions, are **insufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the use of general risk factors (like diabetes or hypertension) or the use of certain medications (like statins, though none are explicitly listed in the current record) are **NOT** sufficient to predict a future diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3856,
+    "completion_tokens": 256
+  }
+}

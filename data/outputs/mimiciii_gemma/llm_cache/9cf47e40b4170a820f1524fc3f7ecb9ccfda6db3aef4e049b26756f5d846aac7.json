@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, life-threatening malignant conditions (Secondary malignant neoplasm of retroperitoneum and peritoneum, Malignant neoplasm of ovary, etc.), severe cardiovascular issues (Atrial fibrillation, Mitral valve disorders), and metabolic/respiratory issues (Morbid obesity, Obstructive sleep apnea). While the patient has several risk factors commonly associated with lipid disorders (Morbid obesity, Atrial fibrillation), and is on medications that *can* be used for lipid management (though none are explicitly listed as such, the general profile suggests high metabolic stress), **there is no explicit diagnostic coding for any lipid abnormality** (such as hypercholesterolemia or hyperlipidemia) in the current record. According to the [Refined Criteria] and the strict rules provided, the prediction must be based on the presence of explicit diagnostic evidence. Since this evidence is absent, the prediction must be \"No\", even though the patient is high-risk. The factors present (obesity, AF) are insufficient on their own to guarantee a future diagnosis of a lipid disorder.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3881,
+    "completion_tokens": 236
+  }
+}

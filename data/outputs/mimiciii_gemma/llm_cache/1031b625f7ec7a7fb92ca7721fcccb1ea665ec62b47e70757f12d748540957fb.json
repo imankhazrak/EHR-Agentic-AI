@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe critical care diagnoses, including Cardiac arrest, Anoxic brain damage, Chronic airway obstruction, and multiple infections (UTI, MRSA). The medication profile is extensive, focusing heavily on respiratory support (Fluticasone, Albuterol, Theophylline), infection control (Ciprofloxacin, Levofloxacin, Vancomycin, Metronidazole), and general critical care stabilization (Heparin, Propofol, Sedatives).\n\nCrucially, the current diagnoses list **does not explicitly include** any primary or secondary diagnosis of a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that a prediction of \"Yes\" must be based on **strong and explicit evidence** of an existing or actively managed lipid disorder. Since this explicit evidence is absent in the current record, the prediction must be \"No,\" despite the patient's high-risk status from other comorbidities. The presence of general risk factors like hypertension",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3807,
+    "completion_tokens": 256
+  }
+}

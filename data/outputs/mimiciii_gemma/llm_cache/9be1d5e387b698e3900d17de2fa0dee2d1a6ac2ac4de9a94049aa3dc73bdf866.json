@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions, including Acute respiratory failure, Acute on chronic diastolic heart failure, Cerebral edema, Malignant neoplasm of cerebrum, and Congestive heart failure. The medication profile includes several agents relevant to cardiovascular and oncological management (e.g., Labetalol, Furosemide, Temozolomide, Simvastatin). While Simvastatin is a lipid-lowering agent, the instructions explicitly state that the mere use of lipid-lowering pharmacotherapy is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly code for hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Since the refined criteria prioritize explicit diagnostic evidence over inferred risk factors (like medication use or general comorbidities), and explicit lipid disorder evidence is absent, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4016,
+    "completion_tokens": 201
+  }
+}

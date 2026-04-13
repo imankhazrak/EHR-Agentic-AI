@@ -1,0 +1,12 @@
+{
+  "sample_id": 5552,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is heavily focused on acute cardiovascular events and associated complications. The diagnoses include Subendocardial infarction, Coronary atherosclerosis, and Diabetes mellitus. The procedures performed are extensive, involving open-heart surgery, coronary bypass, and cardiac catheterization. While Diabetes mellitus is a known risk factor for lipid disorders, and cardiovascular disease is strongly associated with dyslipidemia, the current record **lacks an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the medication profile is empty, meaning there is no current management or explicit indication of a lipid disorder being treated. According to the strict guidelines provided, predicting a future diagnosis based solely on the presence of risk factors (like Diabetes or CAD) or the performance of related procedures is insufficient. Since explicit evidence of an existing or actively managed lipid disorder is absent in the current record, the prediction for the next hospital visit is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3504,
+    "completion_tokens": 199
+  }
+}

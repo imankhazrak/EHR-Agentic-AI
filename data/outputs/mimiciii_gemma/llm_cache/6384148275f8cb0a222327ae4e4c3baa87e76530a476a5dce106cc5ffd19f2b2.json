@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], hyperlipidemia is a form of lipid abnormality. Furthermore, the [Current Visit Record] shows this diagnosis alongside other conditions. The [Refined Criteria] strictly prohibits answering \"Yes\" based only on general risk factors or the use of statins, but the explicit diagnosis of \"Other and unspecified hyperlipidemia\" meets the threshold for strong and explicit evidence of an existing lipid disorder. Therefore, it is highly likely that this diagnosis, or a related one, will be coded in the patient's next hospital visit.\n\n1. Prediction: Yes\n2. Reasoning: The patient's current visit record explicitly includes the diagnosis \"Other and unspecified hyperlipidemia.\" According to the [Target Definition], hyperlipidemia is a form of lipid abnormality. Furthermore, the [Current Visit Record] shows this diagnosis alongside other conditions. The [Refined Criteria] strictly prohibits answering \"Yes\" based only on general risk factors or the use of statins, but the explicit diagnosis of \"Other and unspecified hyperlipidemia\" meets the threshold for strong and explicit evidence of an existing lipid disorder. Therefore, it is highly likely that this diagnosis, or a related",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3819,
+    "completion_tokens": 256
+  }
+}

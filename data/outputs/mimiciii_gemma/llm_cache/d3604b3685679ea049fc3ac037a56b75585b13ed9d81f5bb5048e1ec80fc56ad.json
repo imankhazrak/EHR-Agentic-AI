@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of the diagnosis \"Pure hypercholesterolemia\" in the Current Visit Record. According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit.\n\nFurthermore, the patient is receiving medication \"Cholestyramine,\" which is a lipid-lowering agent, indicating ongoing management of a lipid abnormality.\n\nWhile the patient has numerous other comorbidities (Closed fracture, CHF, HTN, CKD, AF, etc.), the presence of the specific diagnosis of \"Pure hypercholesterolemia\" overrides the general risk factors and the mere use of lipid-lowering medications (like statins, which are also present) as the sole basis for prediction. The explicit diagnosis is the key factor.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3697,
+    "completion_tokens": 188
+  }
+}

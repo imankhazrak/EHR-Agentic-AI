@@ -1,0 +1,12 @@
+{
+  "sample_id": 9079,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a diagnosis related to lipid abnormalities in the current visit record, which strongly suggests that this condition is actively being managed and is likely to be coded in the next hospital visit.\n\n1. **Evidence of Lipid Disorder in Current Record:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This is a direct and explicit piece of evidence matching the target definition (\"hyperlipidemia,\" \"lipoid metabolism disorders,\" etc.).\n\n2. **Evidence of Lipid Management:** The medication profile includes **\"Gemfibrozil\"**, which is a known fibrate used specifically for managing hyperlipidemia and lowering triglyceride levels. The prescription of **\"Simvastatin\"** is a statin, which is a primary treatment for hypercholesterolemia and dyslipidemia. The combination of these medications indicates active, targeted management of a lipid disorder.\n\n3. **Exclusion of Insufficient Evidence:** The reasoning strictly adheres to the rule that general risk factors (like hypertension or cardiovascular disease) are insufficient for a \"Yes\" prediction. Here, the evidence is not merely risk; it is an *explicit diagnosis* (\"Other and unspecified hyperlipidemia\") coupled with *specific lipid-lowering treatments",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3888,
+    "completion_tokens": 256
+  }
+}

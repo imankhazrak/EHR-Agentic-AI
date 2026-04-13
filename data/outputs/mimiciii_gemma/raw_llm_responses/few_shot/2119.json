@@ -1,0 +1,12 @@
+{
+  "sample_id": 2119,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record is overwhelmingly focused on acute and severe cardiovascular events, including Acute Myocardial Infarction (AMI), Congestive Heart Failure (CHF), Atrial Fibrillation, Cardiogenic Shock, and Coronary Atherosclerosis. The patient is receiving intensive care management, evidenced by procedures like PTCA and stent insertion, and is on multiple medications for cardiac stabilization (e.g., Lisinopril, Metoprolol, Aspirin, Clopidogrel).\n\nWhile the medication list includes **Ezetimibe** and **Atorvastatin**, these are lipid-lowering agents. However, the strict instructions explicitly state that the mere use of statins (like Atorvastatin) is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state \"Hypercholesterolemia\" or \"Hyperlipidemia\"; they focus on the consequences of coronary artery disease.\n\nThe presence of Ezetimibe and Atorvastatin indicates that the clinical team is *managing* potential lipid issues, but based on the strict criteria provided in the instructions, this management alone, without an explicit diagnosis of a lipid disorder in the current record, does not",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3703,
+    "completion_tokens": 256
+  }
+}

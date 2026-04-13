@@ -1,0 +1,12 @@
+{
+  "sample_id": 4464,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic infectious and renal complications, as well as severe systemic inflammatory responses. The primary diagnoses include Unspecified septicemia, Urinary tract infection, Acute kidney failure, Hypertensive chronic kidney disease (Stage V/ESRD), Hyperpotassemia, Dehydration, Acidosis, and Severe sepsis.\n\nCrucially, while the patient is managed for Diabetes Mellitus (Type II, unspecified), and is prescribed Atorvastatin (a lipid-lowering agent), the current record **lacks an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53).\n\nAccording to the strict instructions provided:\n1. The prediction must be based on **explicit evidence** of an existing or actively managed lipid disorder.\n2. The use of statins (Atorvastatin) alone is **not sufficient** to predict a future diagnosis of the disorder itself.\n3. General risk factors (like Diabetes Mellitus or Hypertension) are **not sufficient** to predict a future diagnosis.\n\nSince the current record only shows the *treatment* for potential dyslipidemia (via Atorvastatin) but not the *",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3776,
+    "completion_tokens": 256
+  }
+}

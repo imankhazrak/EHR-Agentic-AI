@@ -1,0 +1,12 @@
+{
+  "sample_id": 3336,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record indicates several significant diagnoses and a complex medication regimen, including:\n1. **Diagnoses:** Diabetes with ketoacidosis, type I; Goiter; Unspecified essential hypertension.\n2. **Medications:** Atorvastatin (a lipid-lowering agent), Lisinopril, Insulin, Aspirin, Heparin, etc.\n\nThe core issue in this prediction is the strict rule provided: **\"DO NOT answer 'Yes' based only on: Use of statins (e.g., Atorvastatin); Cardiovascular diseases (e.g., CHF, AF, CABG, CAD); General risk factors (e.g., hypertension, diabetes).\"**\n\nWhile the patient is on **Atorvastatin**, this medication alone, as per the instructions, is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the presence of **hypertension** and **diabetes** are listed as general risk factors, which, by the rules, are not sufficient evidence to predict a future diagnosis.\n\nThe current record lacks an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). Therefore, based on the strict",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3529,
+    "completion_tokens": 256
+  }
+}

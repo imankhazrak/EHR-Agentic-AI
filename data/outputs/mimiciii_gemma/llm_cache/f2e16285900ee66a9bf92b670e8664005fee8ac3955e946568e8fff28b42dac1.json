@@ -1,0 +1,10 @@
+{
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record explicitly includes the diagnosis of **Pure hypercholesterolemia**. According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Since the patient is explicitly diagnosed with a lipid abnormality in the current visit, there is strong and explicit evidence that this condition is present and likely to be coded in the next hospital visit, satisfying the primary criterion of the [Refined Criteria]. Furthermore, the presence of this explicit diagnosis overrides the need to rely on secondary factors like medication use (e.g., statins, which are not explicitly listed as prescribed in the current record, though they are common) or general risk factors (e.g., hypertension). The explicit diagnosis of hypercholesterolemia is sufficient evidence to predict a future diagnosis of Disorders of Lipid Metabolism.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3789,
+    "completion_tokens": 184
+  }
+}

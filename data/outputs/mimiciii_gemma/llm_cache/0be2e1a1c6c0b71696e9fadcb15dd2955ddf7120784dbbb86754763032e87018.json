@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are primarily related to acute respiratory issues (Pneumonitis), cardiac issues (Cardiomyopathies, Diastolic heart failure, Atrial fibrillation), and other systemic conditions (Chronic kidney disease, RLS, etc.).\n\nWhile the patient is on medications that are often associated with cardiovascular risk management (e.g., Captopril, Aspirin, Furosemide, Eplerenone), and has comorbidities that are risk factors for dyslipidemia (e.g., Chronic kidney disease, Atrial fibrillation), the strict instructions mandate that the mere use of these medications or the presence of these risk factors alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current record does not explicitly list a lipid disorder diagnosis. Therefore, based on the strict criteria provided, the prediction must be \"No,\" even though the patient is high-risk.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3618,
+    "completion_tokens": 229
+  }
+}

@@ -71,7 +71,18 @@ def finetune_gemma_lora(
     gradient_checkpointing: bool = False,
     force_fp32: bool = False,
     max_grad_norm: float = 1.0,
+    evaluation_strategy: str = "epoch",
+    eval_steps: int = 200,
+    logging_steps: int = 20,
+    save_strategy: str = "epoch",
+    save_steps: int = 1000,
+    answer_only_loss: bool = True,
     smoke: bool = False,
+    warmup_ratio: float = 0.0,
+    lr_scheduler_type: str = "linear",
+    gradient_accumulation_steps: int = 1,
+    weight_decay: float = 0.0,
+    load_best_model_at_end: bool = False,
 ) -> Path:
     """Fine-tune Gemma with LoRA and save adapter/tokenizer locally."""
     output_path = Path(output_dir)
@@ -185,7 +196,26 @@ def finetune_gemma_lora(
             truncation=True,
             padding="max_length",
         )
-        out["labels"] = out["input_ids"].copy()
+        labels = [ids.copy() for ids in out["input_ids"]]
+        if answer_only_loss:
+            prompts: List[str] = []
+            for txt in batch["text"]:
+                marker = "\nPrediction:\n"
+                idx = txt.find(marker)
+                if idx >= 0:
+                    prompts.append(txt[: idx + len(marker)])
+                else:
+                    prompts.append(txt)
+            prompt_tok = tokenizer(
+                prompts,
+                max_length=max_length,
+                truncation=True,
+                padding=False,
+            )
+            for i, prompt_ids in enumerate(prompt_tok["input_ids"]):
+                plen = min(len(prompt_ids), len(labels[i]))
+                labels[i][:plen] = [-100] * plen
+        out["labels"] = labels
         return out
 
     tokenized_train = train_ds.map(_tokenize, batched=True, remove_columns=["text"])
@@ -203,22 +233,46 @@ def finetune_gemma_lora(
         per_device_eval_batch_size=batch_size,
         num_train_epochs=num_train_epochs,
         max_steps=effective_max_steps,
-        eval_steps=1 if smoke else 20,
-        logging_steps=1 if smoke else 20,
-        save_steps=200,
+        eval_steps=1 if smoke else int(eval_steps),
+        logging_steps=1 if smoke else int(logging_steps),
+        save_steps=10 if smoke else int(save_steps),
         save_total_limit=2,
         gradient_checkpointing=gradient_checkpointing,
         max_grad_norm=max_grad_norm,
         bf16=False,
         fp16=use_cuda,
         report_to=[],
+        warmup_ratio=float(warmup_ratio),
+        lr_scheduler_type=str(lr_scheduler_type),
+        gradient_accumulation_steps=int(gradient_accumulation_steps),
+        weight_decay=float(weight_decay),
     )
-    eval_mode = "steps" if tokenized_val is not None else "no"
+    if load_best_model_at_end and not smoke and tokenized_val is not None:
+        args_kwargs["load_best_model_at_end"] = True
+        args_kwargs["metric_for_best_model"] = "eval_loss"
+        args_kwargs["greater_is_better"] = False
+    eval_mode = evaluation_strategy if tokenized_val is not None else "no"
+    if eval_mode not in {"no", "steps", "epoch"}:
+        raise ValueError(
+            f"Unsupported evaluation_strategy={eval_mode!r}; expected one of: no, steps, epoch."
+        )
+    if save_strategy not in {"steps", "epoch"}:
+        raise ValueError(
+            f"Unsupported save_strategy={save_strategy!r}; expected one of: steps, epoch."
+        )
     try:
-        args = TrainingArguments(evaluation_strategy=eval_mode, **args_kwargs)
+        args = TrainingArguments(
+            evaluation_strategy=eval_mode,
+            save_strategy=save_strategy,
+            **args_kwargs,
+        )
     except TypeError:
         # transformers>=5 renamed this argument.
-        args = TrainingArguments(eval_strategy=eval_mode, **args_kwargs)
+        args = TrainingArguments(
+            eval_strategy=eval_mode,
+            save_strategy=save_strategy,
+            **args_kwargs,
+        )
     trainer_kwargs = dict(
         model=model,
         args=args,

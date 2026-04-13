@@ -1,0 +1,12 @@
+{
+  "sample_id": 5776,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Since the patient is explicitly diagnosed with a lipid disorder in the current visit, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit, fulfilling the criteria for answering \"Yes.\" The other diagnoses (Intracerebral hemorrhage, Vertebrobasilar artery syndrome, Unspecified essential hypertension, Coronary atherosclerosis of native coronary artery, Old myocardial infarction) are risk factors or related conditions, but the explicit diagnosis of hypercholesterolemia is the decisive factor.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3460,
+    "completion_tokens": 151
+  }
+}

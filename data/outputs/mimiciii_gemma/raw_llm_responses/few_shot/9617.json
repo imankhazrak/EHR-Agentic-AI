@@ -1,0 +1,12 @@
+{
+  "sample_id": 9617,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on complex oncological and infectious processes. The diagnoses include: Secondary malignant neoplasm of brain and spinal cord; Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes; Secondary malignant neoplasm of bone and bone marrow; Personal history of malignant melanoma of skin; Personal history of irradiation, presenting hazards to health. The medications prescribed (Senna, Ondansetron, Pantoprazole, Heparin, Dexamethasone, etc.) and procedures performed are all related to managing these severe malignant and infectious conditions. Crucially, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder diagnosis in the current record. The patient's history does not provide sufficient explicit evidence of an existing or actively managed lipid disorder that would strongly and explicitly warrant a future diagnosis of \"Disorders of Lipid Metabolism,\" according to the strict guidelines provided. Therefore, based on the current evidence, the prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3554,
+    "completion_tokens": 208
+  }
+}

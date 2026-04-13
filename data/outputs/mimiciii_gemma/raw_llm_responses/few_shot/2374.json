@@ -1,0 +1,12 @@
+{
+  "sample_id": 2374,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe acute respiratory and cardiovascular events, specifically Pneumonia due to other gram-negative bacteria, Postmyocardial infarction syndrome, Atrial fibrillation, and Chronic respiratory failure. The primary focus of the current care is on managing these life-threatening pulmonary and cardiac complications, as evidenced by the use of continuous invasive mechanical ventilation and fiber-optic bronchoscopy.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The patient's comorbidities, such as Postmyocardial infarction syndrome and Atrial fibrillation, are known risk factors for dyslipidemia, but according to the strict instructions, the mere presence of these cardiovascular conditions or general risk factors is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication profile is not recorded, so we cannot identify any explicit lipid-lowering therapies (like statins or fibrates) that would strongly suggest an active, coded lipid disorder.\n\nTherefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction must be \"No,\" despite the patient'",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3524,
+    "completion_tokens": 256
+  }
+}

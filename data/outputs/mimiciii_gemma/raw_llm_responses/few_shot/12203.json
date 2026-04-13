@@ -1,0 +1,12 @@
+{
+  "sample_id": 12203,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to gastrointestinal issues (Acute duodenal ulcer with hemorrhage, Gastric ulcer, Diaphragmatic hernia), renal failure (Acute kidney failure), and cardiovascular conditions (Chronic diastolic heart failure, Congestive heart failure, Primary pulmonary hypertension). The medication profile includes agents for ulcer management (Pantoprazole), cardiac support (Metoprolol, Furosemide), and general supportive care.\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed, while including supportive care, do not explicitly include lipid-lowering agents like statins or fibrates that would serve as strong, explicit evidence of an actively managed lipid disorder in this specific visit.\n\nFollowing the strict instructions provided, a prediction of \"Yes\" is reserved only for cases where there is strong and explicit evidence of an existing or actively managed lipid disorder. Since this evidence is absent in the current record, the prediction must be \"No\", despite the patient being high-risk for general dyslipidemia due to multiple comorbidities. The demonstration cases confirm that general risk factors alone are insufficient to predict",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 256
+  }
+}

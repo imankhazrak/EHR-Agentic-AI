@@ -1,0 +1,12 @@
+{
+  "sample_id": 878,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current visit record shows several serious diagnoses and a complex medication regimen, including the prescription of Atorvastatin. While Atorvastatin is a medication used for managing lipid disorders, the presence of the drug alone, or the presence of general risk factors like hypertension (implied by Lisinopril) or cardiovascular diseases (implied by the cardiac catheterization), is explicitly stated in the instructions as NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The current diagnoses made ([ICD9-DX:5185], Secondary malignant neoplasm of lung, etc.) do not explicitly state a lipid disorder (like hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis. Therefore, based on the strict criteria provided, where explicit evidence of an existing or actively managed lipid disorder is required, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3679,
+    "completion_tokens": 186
+  }
+}

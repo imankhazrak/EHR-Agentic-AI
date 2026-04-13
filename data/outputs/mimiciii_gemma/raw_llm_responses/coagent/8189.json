@@ -1,0 +1,12 @@
+{
+  "sample_id": 8189,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record contains explicit diagnostic coding for a lipid abnormality: \"Other and unspecified hyperlipidemia.\" According to the [Refined Criteria] and the strict rules provided, the presence of explicit diagnostic coding for a lipid abnormality is the highest priority evidence. Furthermore, the patient is actively managed with lipid-lowering pharmacotherapy, including \"Atorvastatin\" and \"Rosuvastatin Calcium,\" which supports the ongoing nature and clinical relevance of the lipid disorder. While the patient has numerous severe comorbidities (e.g., Acute myocardial infarction, Cardiogenic shock, Coronary atherosclerosis), the explicit diagnosis of hyperlipidemia provides the strongest and most direct evidence required to predict a future coding of \"Disorders of Lipid Metabolism.\" Therefore, the prediction is Yes.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3860,
+    "completion_tokens": 167
+  }
+}

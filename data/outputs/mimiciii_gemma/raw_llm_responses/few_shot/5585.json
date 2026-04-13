@@ -1,0 +1,12 @@
+{
+  "sample_id": 5585,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions that are not explicitly related to a primary or actively managed lipid disorder. The key diagnoses are: Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; End stage renal disease; Pneumonia, organism unspecified; Complications of transplanted kidney; Chronic systolic heart failure; Other primary cardiomyopathies; Long-term (current) use of insulin; Diabetes with renal manifestations, type I [juvenile type], uncontrolled; Renal dialysis status; Diabetes with other specified manifestations, type I [juvenile type], uncontrolled; Congestive heart failure, unspecified; Anemia in chronic kidney disease; Chronic hepatitis C without mention of hepatic coma; Obstructive sleep apnea (adult)(pediatric); Lesion of ulnar nerve; Abnormal involuntary movements; Personal history of tobacco use.\n\nWhile the patient is on **Pravastatin** (a statin), this medication alone, as per the strict instructions, is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other explicit lipid abnormality that would warrant coding in the next",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3716,
+    "completion_tokens": 256
+  }
+}

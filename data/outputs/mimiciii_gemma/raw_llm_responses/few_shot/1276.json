@@ -1,0 +1,12 @@
+{
+  "sample_id": 1276,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including Pneumonia, Acute respiratory failure, Urinary tract infection, Bacteremia, and Atrial fibrillation/Congestive heart failure. The medication profile is extensive, covering broad-spectrum antibiotics (Vancomycin, Meropenem, Caspofungin, Clindamycin, etc.), anti-fungals (Prednisone, Voriconazole, Fluconazole), and supportive care.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia or hyperlipidemia. While the patient has Unspecified essential hypertension and Atrial fibrillation (conditions often comorbid with lipid disorders), the strict instructions dictate that these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe presence of hypertension and AFib are risk factors, but they do not constitute the explicit evidence required by the guidelines to predict a future coding of a lipid disorder diagnosis. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3781,
+    "completion_tokens": 237
+  }
+}

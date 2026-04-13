@@ -1,0 +1,12 @@
+{
+  "sample_id": 160,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record indicates several serious comorbidities, including Human immunodeficiency virus [HIV] disease, Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease, Congestive heart failure, unspecified, Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled, and Anemia, unspecified. The patient is also receiving various medications, including those for HIV treatment (Stavudine, Ritonavir, Atazanavir, LaMIVudine, Tenofovir Disoproxil Fum., Ritonavir) and for cardiovascular/renal support (Warfarin, Diltiazem, Nitroprusside Sodium, Lisinopril, Valsartan, Cinacalcet HCl, Atenolol).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) being present or actively managed in the current record.\n\nReviewing the diagnoses made in the current visit record:\n- The diagnoses are focused on infectious disease (HIV), renal failure (CKD Stage V), cardiovascular disease (CHF), and metabolic/neuropathic issues (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3663,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 4884,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and metabolic complications, including Subendocardial infarction, Acute on chronic systolic heart failure, Congestive heart failure, Peripheral vascular disease, and Diabetes mellitus. The medication profile includes several agents relevant to cardiovascular and metabolic management, such as Nitroglycerin, Furosemide, Carvedilol, Lisinopril, and Atorvastatin. However, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis), not merely the use of statins (Atorvastatin) or the presence of cardiovascular disease. While Atorvastatin is prescribed, its use alone, in the context of other severe comorbidities, does not meet the explicit evidence threshold required by the instructions to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the strict guidelines provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3766,
+    "completion_tokens": 219
+  }
+}

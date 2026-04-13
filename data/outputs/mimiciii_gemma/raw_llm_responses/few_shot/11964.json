@@ -1,0 +1,12 @@
+{
+  "sample_id": 11964,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on whether there is explicit evidence of an existing or actively managed lipid disorder in the current visit record, as per the strict guidelines.\n\n1. **Review of Current Visit Record for Lipid Disorder Evidence:**\nThe current diagnoses include: Empyema with fistula; Glucocorticoid deficiency; Aspergillosis; Unspecified protein-calorie malnutrition; Chronic diastolic heart failure; Personal history of malignant neoplasm of bronchus and lung; Other chronic pulmonary heart diseases; Iron deficiency anemia, unspecified; Asymptomatic human immunodeficiency virus [HIV] infection status; Rheumatoid arthritis; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Percutaneous transluminal coronary angioplasty status; Esophageal reflux; Congestive heart failure, unspecified.\n\nCrucially, **there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder** listed in the diagnoses made.\n\n2. **Review of Medications for Lipid Management:**\nThe patient is prescribed **Atorvastatin**. While the use of a statin is a strong indicator that the *clinician suspects* or *is managing* a lipid issue, the strict instructions explicitly state that the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3806,
+    "completion_tokens": 256
+  }
+}

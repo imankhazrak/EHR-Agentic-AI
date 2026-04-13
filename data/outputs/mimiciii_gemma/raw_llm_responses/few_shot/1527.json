@@ -1,0 +1,12 @@
+{
+  "sample_id": 1527,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates diagnoses of Subdural hemorrhage and Other persistent mental disorders due to conditions classified elsewhere. There is no explicit evidence in the current record\u2014such as a diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia\u2014that points to an existing or actively managed lipid disorder. The medications prescribed are none recorded, and the procedures performed are limited to other cranial puncture. While the MIMIC-III critical care population has a general incidence of lipid disorders, the strict rule requires explicit evidence of a lipid disorder in the current record to predict a future diagnosis. Since this explicit evidence is absent, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3425,
+    "completion_tokens": 142
+  }
+}

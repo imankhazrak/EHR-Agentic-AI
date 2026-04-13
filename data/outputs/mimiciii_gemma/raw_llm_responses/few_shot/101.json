@@ -1,0 +1,12 @@
+{
+  "sample_id": 101,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular events and associated complications, including Subendocardial infarction, Systolic heart failure, Congestive heart failure, Coronary atherosclerosis, and Diabetes mellitus. The medication profile includes Atorvastatin, which is a lipid-lowering agent, and the patient has a history of Coronary atherosclerosis, which is a risk factor for dyslipidemia. However, according to the strict instructions provided, the mere use of statins (Atorvastatin) or the presence of cardiovascular diseases (Coronary atherosclerosis) are NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid abnormality such as hypercholesterolemia or hyperlipidemia, nor is there clear ongoing management explicitly coded as a lipid disorder. Therefore, based on the strict evidence-based criteria, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3761,
+    "completion_tokens": 193
+  }
+}

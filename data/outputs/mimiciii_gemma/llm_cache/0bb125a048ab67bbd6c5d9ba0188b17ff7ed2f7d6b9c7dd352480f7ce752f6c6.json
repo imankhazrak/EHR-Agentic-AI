@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes **\"Other and unspecified hyperlipidemia.\"** According to the instructions, a diagnosis of an existing lipid disorder is strong and explicit evidence that a future diagnosis will be coded. Furthermore, the patient is being treated with **Simvastatin**, which is a lipid-lowering agent (statin), indicating ongoing management related to lipid abnormalities, although the presence of the explicit diagnosis is the primary driver for the \"Yes\" prediction. The other diagnoses, such as Atrial flutter, Acute kidney failure, and Chronic systolic heart failure, are high-risk comorbidities often associated with lipid disorders, but the explicit diagnosis of hyperlipidemia is the decisive factor that meets the criteria for a \"Yes\" prediction, overriding the general risk factors alone.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3963,
+    "completion_tokens": 186
+  }
+}

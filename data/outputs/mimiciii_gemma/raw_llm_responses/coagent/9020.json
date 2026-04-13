@@ -1,0 +1,12 @@
+{
+  "sample_id": 9020,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions related to infection, malignancy, and organ obstruction. The primary diagnoses include Unspecified septicemia, Septic shock, Cholangitis, Malignant neoplasm of head of pancreas, Malignant neoplasm of liver, secondary, Obstruction of bile duct, Acidosis, Severe sepsis, Dehydration, Esophageal reflux, and Urinary incontinence. The medication profile is extensive and focused on managing these acute critical care issues, including broad-spectrum antibiotics (Piperacillin-Tazobactam Na, Gentamicin Sulfate, Vancomycin, Ampicillin-Sulbactam), vasopressors (Norepinephrine, Vasopressin, Phenylephrine), and pain management.\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication list does not contain any explicit lipid-lowering pharmacotherapy (e.g., statins like Atorvastatin or Simvastatin) that would serve as a secondary supportive factor, as per the Refined Criteria.\n\nWhile the patient has multiple severe comorbidities",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5191,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record provides explicit and strong evidence of a lipid disorder, which directly supports a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n1. **Explicit Diagnosis of Lipid Disorder:** The current diagnoses explicitly include **\"Pure hypercholesterolemia.\"** This meets the primary criterion for predicting a future diagnosis, as it is an explicit coding of a lipid abnormality (CCS category 53).\n\n2. **Active Lipid Management:** The medication profile confirms active management of this condition, which reinforces the likelihood of the diagnosis being maintained or re-coded in the next visit. The patient is prescribed:\n    * **Atorvastatin:** A primary statin used to manage hypercholesterolemia.\n    * **Niacin SR (Niaspan):** Another lipid-lowering agent often used in conjunction with statins for comprehensive lipid management.\n    * **Gemfibrozil:** A fibrate, which is specifically indicated for managing hyperlipidemia and lowering triglycerides, further indicating a comprehensive and active management of lipid abnormalities.\n    * **Fish Oil (Omega 3):** Used for its lipid-modulating properties.\n\n3. **Conclusion based on Rules:** The prediction is based",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3646,
+    "completion_tokens": 256
+  }
+}

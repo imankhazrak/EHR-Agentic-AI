@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are primarily related to malignant lymphomas, hemorrhage, atrial fibrillation, congestive heart failure, asthma, and hypertension. While the patient has several cardiovascular risk factors (hypertension, CHF, AF), and is receiving various medications, the record does not explicitly code a lipid abnormality. According to the strict instructions, the use of statins (which are not explicitly listed in the current medications, though some related cardiovascular management is present) or general risk factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the absence of explicit lipid disorder evidence in the current record, the prediction for the next visit is \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3634,
+    "completion_tokens": 178
+  }
+}

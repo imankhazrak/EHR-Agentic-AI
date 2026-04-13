@@ -1,0 +1,12 @@
+{
+  "sample_id": 10311,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows a complex constellation of diagnoses, primarily revolving around severe cardiovascular and pulmonary issues: Unspecified disease of pericardium, Pneumonia, Acute on chronic diastolic heart failure, Unspecified pleural effusion, Cardiac tamponade, Congestive heart failure, and Gout. The patient is also managed for a personal history of malignant neoplasm of breast.\n\nWhile the patient is prescribed **Atorvastatin**, this medication is a strong indicator of *prior* or *ongoing* lipid management, which is a risk factor for lipid disorders. However, according to the strict instructions provided, the mere use of a statin is **NOT** sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the *next* hospital visit.\n\nFurthermore, the current diagnoses **do not explicitly state** hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. The other diagnoses are related to inflammation, infection, and heart failure.\n\nTherefore, based on the strict criteria that require *explicit* evidence of an existing or actively managed lipid disorder (beyond just the use of a statin), the evidence is insufficient to predict a future diagnosis of \"Disorders of Lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3645,
+    "completion_tokens": 256
+  }
+}

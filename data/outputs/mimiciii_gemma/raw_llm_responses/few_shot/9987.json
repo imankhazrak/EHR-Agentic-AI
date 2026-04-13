@@ -1,0 +1,12 @@
+{
+  "sample_id": 9987,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction hinges on the strict criteria provided: a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or actively managed in the current visit record, beyond general risk factors or the use of related medications (like statins or anticoagulants).\n\n1. **Analysis of Current Visit Record:** The diagnoses listed in the current visit record are overwhelmingly related to acute and chronic pulmonary, cardiac, and infectious processes:\n    * *Other pulmonary embolism and infarction; Hb-SS disease with crisis; Pulmonary collapse; Acute chest syndrome; Acidosis; Other chronic pulmonary heart diseases; Hypoxemia; Peritoneal adhesions (postoperative) (postinfection); Constipation, unspecified; Unspecified vitamin D deficiency; Lack of housing; Do not resuscitate status; Other specified cardiac dysrhythmias; Eosinophilia; Other fluid overload.*\n    * **Crucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder listed.**\n\n2. **Analysis of Medications Prescribed:** The medication profile is extensive and addresses numerous acute and chronic issues (pain management, infection control, pulmonary support, etc.). While the patient is receiving *Warfarin* (an anticoagulant) and *Vitamin D",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3737,
+    "completion_tokens": 256
+  }
+}

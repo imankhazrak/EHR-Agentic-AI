@@ -1,0 +1,12 @@
+{
+  "sample_id": 2142,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the instructions, a diagnosis of \"Pure hypercholesterolemia\" is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the presence of other high-risk comorbidities such as Diabetes with renal manifestations, type II or unspecified type, and Hypertensive heart and chronic kidney disease, unspecified, with heart failure and with chronic kidney disease stage I through stage IV, or unspecified, further supports the likelihood of this diagnosis being maintained or re-coded. The explicit diagnosis of hypercholesterolemia overrides the general risk factor exclusion criteria, as it constitutes direct evidence of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3631,
+    "completion_tokens": 159
+  }
+}

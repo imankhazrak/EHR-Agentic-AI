@@ -1,0 +1,12 @@
+{
+  "sample_id": 10759,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe cardiovascular events (Subendocardial infarction, Coronary atherosclerosis, Congestive heart failure, etc.), acute kidney failure, and associated metabolic/inflammatory issues (Diabetes, Hypertension, Tobacco use disorder). While the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone is not a sufficient predictor for coding the diagnosis. Furthermore, the current diagnoses do not explicitly state a lipid abnormality (e.g., hypercholesterolemia, hyperlipidemia) as a primary or secondary diagnosis, despite the presence of risk factors like Diabetes and Hypertension. Therefore, based on the strict criteria provided, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3730,
+    "completion_tokens": 193
+  }
+}

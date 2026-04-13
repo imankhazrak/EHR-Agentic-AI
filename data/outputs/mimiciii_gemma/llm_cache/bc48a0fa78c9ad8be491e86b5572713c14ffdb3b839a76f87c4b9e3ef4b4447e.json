@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to trauma (Closed fracture of upper end of tibia alone; Accidental fall on or from other stairs or steps), respiratory issues (Acute respiratory failure; Pneumonitis due to inhalation of food or vomitus; Obstructive sleep apnea (adult)(pediatric)), infection (Cellulitis and abscess of leg, except foot; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site), and systemic issues (Morbid obesity; Cirrhosis of liver without mention of alcohol; Esophageal varices without mention of bleeding). While the patient has a history of Morbid obesity, which is a risk factor for lipid disorders, and the patient is on Insulin, which can be related to dyslipidemia, there is NO explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record. Following the strict [Refined Criteria], which mandates that explicit lipid disorder evidence must be present to predict a future diagnosis, the absence of such evidence leads to the prediction of \"No\".\n\nPrediction: No",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4035,
+    "completion_tokens": 229
+  }
+}

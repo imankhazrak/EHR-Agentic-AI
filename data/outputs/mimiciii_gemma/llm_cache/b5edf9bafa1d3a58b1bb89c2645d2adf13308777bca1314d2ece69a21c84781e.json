@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, interconnected comorbidities related to End Stage Renal Disease (ESRD), uncontrolled Diabetes Type I, and severe cardiovascular issues (Hypertensive CKD, CHF, Heart Failure). The medication profile is extensive, covering renal replacement (Hemodialysis), blood pressure control (Lisinopril, NIFEdipine CR), diabetes management (Insulin), and various supportive care for organ failure and psychiatric conditions. However, a critical review of the *diagnoses made* section reveals **no explicit coding** for hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). Furthermore, the medication list, while containing general supportive drugs, does not explicitly list lipid-lowering pharmacotherapy (e.g., high-dose statins or PCSK9 inhibitors) as a primary or secondary management strategy for a diagnosed lipid abnormality. While the patient is undoubtedly at high risk for dyslipidemia given the presence of Diabetes and CKD, the strict [Refined Criteria] mandate that the prediction must be based on **explicit diagnostic coding** or **explicit management of a diagnosed lipid disorder**. Since this explicit evidence is absent in the current record",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3830,
+    "completion_tokens": 256
+  }
+}

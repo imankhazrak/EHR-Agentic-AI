@@ -1,0 +1,12 @@
+{
+  "sample_id": 11168,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and respiratory complications, including Methicillin resistant Staphylococcus aureus septicemia, severe sepsis, and acute respiratory failure. The diagnoses and medications are overwhelmingly focused on managing these life-threatening conditions (e.g., antibiotics, respiratory support, anti-septic measures).\n\nCrucially, there is no explicit evidence in the current record that a primary or actively managed lipid disorder is present. While the patient has \"Morbid obesity,\" which is a known risk factor for hyperlipidemia, the presence of a risk factor alone is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions strictly require evidence of an *existing* or *actively managed* lipid disorder (such as hypercholesterolemia or hyperlipidemia diagnosis) to predict a \"Yes.\" Since the current record lacks this explicit diagnostic evidence, the prediction must be \"No,\" despite the presence of other high-risk comorbidities like obesity. The focus of the current care pathway is infectious and pulmonary stabilization, not lipid management.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3840,
+    "completion_tokens": 225
+  }
+}

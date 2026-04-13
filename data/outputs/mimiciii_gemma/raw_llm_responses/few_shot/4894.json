@@ -1,0 +1,12 @@
+{
+  "sample_id": 4894,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record primarily details severe acute and chronic conditions unrelated to primary lipid metabolism disorders. The diagnoses include Acute kidney failure, Urinary tract infection, Congestive heart failure, Atrial fibrillation, Hyperpotassemia, Other specified cardiac dysrhythmias, and Hemiplegia. While Congestive Heart Failure and Atrial Fibrillation are conditions that can be associated with dyslipidemia, the record does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the patient is not prescribed any medications specifically for lipid management (e.g., statins or fibrates) in this record. Following the strict instructions, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since this explicit evidence is absent, despite the patient being high-risk due to cardiovascular comorbidities, the correct prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3480,
+    "completion_tokens": 190
+  }
+}

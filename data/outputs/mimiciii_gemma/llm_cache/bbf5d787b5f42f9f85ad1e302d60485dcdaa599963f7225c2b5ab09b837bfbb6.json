@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and life-threatening conditions unrelated to primary lipid metabolism disorders. The diagnoses include Acute respiratory failure, Malignant neoplasm of main bronchus, Traumatic subcutaneous emphysema, Hyperosmolality and/or hypernatremia, Chronic obstructive asthma, Acute kidney failure, and Pleurisy with effusion. The medication profile is heavily focused on managing these acute respiratory, infectious, and renal crises (e.g., Humulin-R Insulin, D5W, NS, Midazolam HCl, Fentanyl Citrate, Heparin, Ipratropium Bromide MDI, Levofloxacin, Captopril, Prednisone, etc.).\n\nCrucially, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record. While the patient has Unspecified essential hypertension, which is a risk factor for dyslipidemia, and is receiving medications like Captopril and Lisinopril (which can affect blood pressure and potentially metabolic status), these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe demonstration",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3767,
+    "completion_tokens": 256
+  }
+}

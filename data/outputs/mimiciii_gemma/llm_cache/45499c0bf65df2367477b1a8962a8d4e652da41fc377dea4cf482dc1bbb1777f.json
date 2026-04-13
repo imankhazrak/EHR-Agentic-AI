@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute, life-threatening infections and organ failures, including Acute respiratory failure, Pneumonitis, Unspecified septicemia, Septic shock, Acute kidney failure, and Acute and subacute bacterial endocarditis. While the patient has several significant comorbidities that are known risk factors for lipid disorders\u2014namely Morbid obesity, Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled, and Hypertensive chronic kidney disease\u2014and the patient is receiving Atorvastatin (a lipid-lowering agent), the strict instructions dictate that the mere use of statins or the presence of general risk factors is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, there is no explicit, coded diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality present in the current record that would strongly and explicitly warrant a future diagnosis. The current clinical picture is one of overwhelming acute infectious and renal crisis, not an actively managed or explicitly diagnosed primary lipid disorder. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4033,
+    "completion_tokens": 242
+  }
+}

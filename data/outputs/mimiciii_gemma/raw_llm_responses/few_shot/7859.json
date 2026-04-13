@@ -1,0 +1,12 @@
+{
+  "sample_id": 7859,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and metabolic comorbidities, including Paroxysmal ventricular tachycardia, Chronic systolic heart failure, Peripheral vascular complications, Atrioventricular block, complete, Congestive heart failure, unspecified, Atherosclerosis of native arteries of the extremities, unspecified, Atrial fibrillation, Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Hypertensive chronic kidney disease. These conditions represent significant risk factors for lipid disorders. Furthermore, the patient is prescribed Atorvastatin, a lipid-lowering agent, which is often used in the context of dyslipidemia.\n\nHowever, according to the strict instructions provided, the mere prescription of Atorvastatin or the presence of general risk factors (like diabetes or hypertension) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the prediction must be based on *explicit* evidence of an existing or actively managed lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis).\n\nIn the current visit record, while Atorvastatin is prescribed, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3702,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 10889,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the instructions, the presence of an explicit lipid disorder diagnosis is strong evidence for a future diagnosis, overriding the need to rely solely on risk factors or medication use. Furthermore, the patient is actively managed with \"Atorvastatin,\" a medication specifically used for lipid management, which reinforces the clinical context of a lipid disorder. While the patient has numerous other serious comorbidities (e.g., CHF, COPD, MI), the explicit diagnosis of hyperlipidemia is the decisive factor for predicting the coding of \"Disorders of Lipid Metabolism\" in the next visit, as per the strict rules provided.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3608,
+    "completion_tokens": 169
+  }
+}

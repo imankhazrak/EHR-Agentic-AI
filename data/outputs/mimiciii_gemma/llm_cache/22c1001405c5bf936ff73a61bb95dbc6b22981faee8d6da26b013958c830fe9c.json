@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic cardiovascular and respiratory conditions. The primary diagnoses include Acute on chronic systolic heart failure, Acute respiratory failure, Coronary atherosclerosis, Congestive heart failure, Hypotension, Hypertensive chronic kidney disease, and Atrial fibrillation. The medication list is extensive and focuses on managing these severe conditions (e.g., Digoxin, Amiodarone, Metoprolol, Furosemide, Warfarin, Heparin).\n\nCrucially, while the patient is prescribed **Rosuvastatin Calcium**, this medication is a lipid-lowering agent. According to the [Refined Criteria] and [Instructions], the mere use of lipid-lowering pharmacotherapy (like Rosuvastatin) is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism\" unless there is explicit diagnostic coding present in the current record.\n\nReviewing the diagnoses made in the current visit record:\n- Diagnoses made: Acute on chronic systolic heart failure; Acute respiratory failure; Coronary atherosclerosis of native coronary artery; Congestive heart failure, unspecified; Hypotension, unspecified; Hypertensive chronic kidney disease, unspecified, with",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3873,
+    "completion_tokens": 256
+  }
+}

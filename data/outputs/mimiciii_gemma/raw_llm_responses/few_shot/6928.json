@@ -1,0 +1,12 @@
+{
+  "sample_id": 6928,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses and treatments related to severe trauma (Closed fracture of second cervical vertebra; Closed fracture of acetabulum; Injury to peroneal nerve; Motor vehicle traffic accident due to loss of control, without collision on the highway, injuring driver of motor vehicle other than motorcycle; Street and highway accidents) and associated complications (Cardiac complications, not elsewhere classified; Atrial fibrillation; Alcohol abuse, unspecified). The medication and procedure lists reflect intensive care management for these acute, life-threatening events, including pain management (Morphine Sulfate; Hydromorphone; Oxycodone-Acetaminophen), cardiovascular support (Metoprolol; Enoxaparin Sodium), and orthopedic/neurological stabilization (Spinal traction using skull device; Open reduction of fracture with internal fixation).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has cardiac complications and Atrial fibrillation, these are general cardiovascular issues, and the presence of Metoprolol (a common cardiovascular agent) does not, by itself, constitute explicit evidence of a coded lipid disorder in the next visit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3649,
+    "completion_tokens": 256
+  }
+}

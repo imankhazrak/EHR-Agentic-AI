@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record explicitly lists the diagnosis of \"Diabetes with ketoacidosis, type I [juvenile type], uncontrolled.\" The medications prescribed are focused on managing this acute metabolic crisis: Humulin-R Insulin, NS, Insulin, Potassium Chloride, and Magnesium Sulfate. There is no explicit mention of any lipid abnormalities (such as hypercholesterolemia or hyperlipidemia) in the current diagnoses. Furthermore, the medication profile does not include any lipid-lowering pharmacotherapy (like statins). According to the [Refined Criteria] and the strict rules provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record is solely focused on an uncontrolled Type 1 Diabetes crisis, and lacks any explicit lipid disorder evidence, the prediction must be \"No\", despite the general population risk factors associated with diabetes.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3642,
+    "completion_tokens": 192
+  }
+}

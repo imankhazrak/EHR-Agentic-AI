@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, interconnected comorbidities related to cardiovascular disease (Coronary atherosclerosis, CHF, PPH), metabolic issues (Diabetes), and infectious/surgical complications (Non-healing wound, Anemia). The patient is on multiple medications, including Simvastatin and Atorvastatin, which are lipid-lowering agents. However, the current diagnoses *do not explicitly code* \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia). According to the strict guidelines provided, the mere use of lipid-lowering pharmacotherapy (Simvastatin, Atorvastatin) or the presence of general risk factors (Diabetes, Coronary Atherosclerosis) is insufficient evidence to predict a future diagnosis of a lipid disorder. Since explicit diagnostic evidence of a lipid abnormality is absent in the current record, the prediction must be \"No\", adhering strictly to the refined criteria that prioritize explicit diagnostic coding over inferred risk factors.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3825,
+    "completion_tokens": 207
+  }
+}

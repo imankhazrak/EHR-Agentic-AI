@@ -1,0 +1,12 @@
+{
+  "sample_id": 2713,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-metabolic illnesses. The primary diagnoses include Unspecified septicemia, Pneumonitis, Polymyositis, Acute kidney failure, Acute respiratory failure, and Severe sepsis. While the patient has Rheumatic heart failure and Mitral/Aortic valve insufficiency, these are cardiovascular diagnoses, not explicit lipid disorder diagnoses. The medication profile includes Levothyroxine Sodium and Vitamin D, which manage endocrine function, but there are no explicit lipid-lowering agents (like statins or fibrates) prescribed, nor is there an explicit diagnosis of hypercholesterolemia or hyperlipidemia in the current record. The patient's comorbidities (Rheumatic heart failure, etc.) are risk factors for lipid disorders, but according to the strict instructions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3673,
+    "completion_tokens": 213
+  }
+}

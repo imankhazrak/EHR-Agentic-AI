@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Furthermore, the [Prediction Clarification] states that the answer should be \"Yes\" if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed, and explicitly excludes answering \"Yes\" based only on statin use or general risk factors. Since a specific lipid disorder diagnosis (\"Pure hypercholesterolemia\") is already present in the current record, there is strong and explicit evidence supporting the future coding of \"Disorders of Lipid Metabolism.\"\n\n1. Prediction: Yes\n2. Reasoning: The patient's current visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia,\" which falls under the definition of \"Disorders of Lipid Metabolism.\" This constitutes strong and explicit evidence required by the prediction guidelines to predict a future diagnosis of this condition.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3941,
+    "completion_tokens": 208
+  }
+}

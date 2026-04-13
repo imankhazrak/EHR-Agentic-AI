@@ -1,0 +1,12 @@
+{
+  "sample_id": 11792,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record does not contain any explicit evidence of an existing or actively managed lipid disorder. The diagnoses made are primarily related to severe critical care complications such as Intracerebral hemorrhage, Acute respiratory failure, Methicillin resistant pneumonia, and Intestinal infection due to Clostridium difficile. The medications prescribed are standard treatments for these acute conditions, including antibiotics (Vancomycin, MetRONIDAZOLE), anti-hypertensives (Phenytoin, Labetalol, Metoprolol), and supportive care (Mannitol, Ibuprofen). While the patient has Unspecified essential hypertension, which is a general risk factor for dyslipidemia, and the patient is in a critical care setting where metabolic issues are common, the record lacks specific diagnoses like hypercholesterolemia or hyperlipidemia. Following the strict instructions, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism,\" the absence of such evidence leads to the prediction of \"No\". The demonstration cases show that a diagnosis is coded when there is explicit evidence (e.g., Case 2: Pure hypercholesterolemia), which is not present here.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3843,
+    "completion_tokens": 245
+  }
+}

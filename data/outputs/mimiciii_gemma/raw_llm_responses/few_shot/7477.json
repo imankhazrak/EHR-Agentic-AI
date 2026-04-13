@@ -1,0 +1,12 @@
+{
+  "sample_id": 7477,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute cardiovascular and renal failure, complicated by multiple comorbidities such as coronary atherosclerosis, end-stage renal disease, and acute on chronic heart failure. The medication profile includes several agents relevant to cardiovascular and renal management (e.g., Furosemide, Metoprolol, Heparin, Atorvastatin). While the prescription of Atorvastatin is a strong indicator of underlying dyslipidemia, the strict instructions provided for this prediction state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (e.g., \"Pure hypercholesterolemia\" or \"Hyperlipidemia\") as a primary or secondary diagnosis, nor is there an explicit ongoing management plan *beyond* the use of the statin that confirms an active, coded lipid disorder in the current episode of care that would guarantee a future coding. Given the explicit exclusion criteria in the instructions\u2014that statin use alone is insufficient\u2014and the absence of a primary lipid diagnosis in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3720,
+    "completion_tokens": 243
+  }
+}

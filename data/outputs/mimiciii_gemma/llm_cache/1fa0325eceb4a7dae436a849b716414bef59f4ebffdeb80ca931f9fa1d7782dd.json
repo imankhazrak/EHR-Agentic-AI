@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe acute events: Acute myocardial infarction of other anterior wall, initial episode of care; Diabetes with ketoacidosis, type I [juvenile type], not stated as uncontrolled; Coronary atherosclerosis of native coronary artery; and Unspecified essential hypertension. While the patient is receiving Atorvastatin, which is a medication used for lipid management, the instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid abnormality such as hypercholesterolemia or hyperlipidemia. The presence of diabetes and hypertension are risk factors, but according to the strict rules provided, these factors alone are insufficient to predict a future diagnosis. Therefore, based on the explicit evidence required by the instructions, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3663,
+    "completion_tokens": 185
+  }
+}

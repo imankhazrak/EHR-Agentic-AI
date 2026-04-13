@@ -1,0 +1,12 @@
+{
+  "sample_id": 10533,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe cardiovascular and pulmonary issues, including acute on chronic systolic heart failure, cardiogenic shock, and coronary atherosclerosis. The patient is also managing several other significant comorbidities such as an ulcer of the heel and midfoot, and various forms of chronic ischemic heart disease.\n\nCrucially, while the patient is prescribed **Atorvastatin**, which is a lipid-lowering medication, the instructions explicitly state that the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, a review of the diagnoses made in the current visit record does **NOT** explicitly code a primary or secondary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). The diagnoses are overwhelmingly focused on cardiac failure, shock, and peripheral issues.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014and the absence of such explicit coding in the current record, the prediction must be \"No\", despite the patient's high-risk profile and the use of Atorvastatin.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3734,
+    "completion_tokens": 245
+  }
+}

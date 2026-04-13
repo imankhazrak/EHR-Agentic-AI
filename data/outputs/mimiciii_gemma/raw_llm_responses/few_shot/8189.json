@@ -1,0 +1,12 @@
+{
+  "sample_id": 8189,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder, which strongly supports the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe key evidence is the presence of the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This diagnosis explicitly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53), as it refers to hyperlipidemia.\n\nFurthermore, the patient is actively managed with multiple lipid-lowering medications, including **\"Atorvastatin\"** and **\"Rosuvastatin Calcium\"**. While the use of statins alone is not sufficient to predict a future diagnosis, the combination of an *explicit diagnosis* of hyperlipidemia *and* the active prescription of multiple lipid-lowering agents provides strong, explicit evidence that the condition is recognized and actively managed as a lipid disorder.\n\nThe presence of other related diagnoses, such as **\"Coronary atherosclerosis of native coronary artery\"** and **\"Acute myocardial infarction of other anterior wall, initial episode of care\"**, are risk factors for lipid disorders, but the explicit diagnosis of hyperlipidemia is the decisive factor according to the instructions.\n\nTherefore, based on",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3655,
+    "completion_tokens": 256
+  }
+}

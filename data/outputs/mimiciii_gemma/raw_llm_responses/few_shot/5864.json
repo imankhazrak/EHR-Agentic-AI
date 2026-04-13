@@ -1,0 +1,12 @@
+{
+  "sample_id": 5864,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily documents diagnoses related to acute neurological events (Intracerebral hemorrhage), cardiovascular instability (Unspecified essential hypertension), and respiratory issues (Asthma). The medication profile is extensive, covering treatments for these acute conditions, including anti-hypertensives (Hydralazine HCl, Metoprolol, Amlodipine, Labetalol HCl), anticonvulsants (Phenytoin), and supportive care. Crucially, there is no explicit evidence within the current diagnoses or the prescribed medications that points to an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The presence of hypertension is a risk factor for lipid disorders, but as per the strict instructions, this risk factor alone is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the explicit evidence required, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3599,
+    "completion_tokens": 195
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 12188,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute, life-threatening conditions, primarily related to cardiovascular collapse, infection, and multi-organ failure. The diagnoses include Infection and inflammatory reaction due to other vascular device, implant, and graft; Acute respiratory failure; Cardiogenic shock; Cardiac arrest; Acute myocardial infarction of anterolateral wall, initial episode of care; Acute and subacute necrosis of liver; Acute kidney failure, unspecified; Cerebral artery occlusion, unspecified with cerebral infarction; Acute systolic heart failure; etc.\n\nCrucially, while the patient is on **Atorvastatin** (a lipid-lowering agent) and has **Diabetes mellitus** and **Unspecified essential hypertension** (both risk factors for dyslipidemia), the current record **lacks an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n\nAccording to the strict instructions provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires **explicit evidence** of an existing or actively managed lipid disorder, not merely the use of statins or the presence of general risk factors. Since the current record does not contain a specific lipid diagnosis, the evidence required to predict a future coding of this diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3994,
+    "completion_tokens": 256
+  }
+}

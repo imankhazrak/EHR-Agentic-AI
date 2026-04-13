@@ -1,0 +1,12 @@
+{
+  "sample_id": 11011,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details severe cardiovascular events and associated complications, including Coronary atherosclerosis, Congestive heart failure, and Old myocardial infarction. The procedures performed, such as Aorto-coronary bypass and Extracorporeal circulation, are related to acute cardiac management.\n\nCrucially, the current visit record **lacks any explicit evidence** of a primary lipid disorder. There are no recorded diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication profile is empty, meaning there is no ongoing management of a lipid condition (e.g., statins or fibrates) that would strongly suggest a future diagnosis.\n\nWhile the patient has several risk factors associated with lipid disorders (e.g., Coronary atherosclerosis, which is often comorbid with dyslipidemia), the instructions explicitly state that the mere presence of cardiovascular disease or general risk factors is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict criteria requiring explicit evidence of an existing or actively managed lipid disorder, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3479,
+    "completion_tokens": 236
+  }
+}

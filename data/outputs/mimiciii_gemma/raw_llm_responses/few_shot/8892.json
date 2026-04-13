@@ -1,0 +1,12 @@
+{
+  "sample_id": 8892,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe gastrointestinal and hepatic pathology, including Alcoholic cirrhosis of liver, Esophageal varices with bleeding, Chronic pancreatitis, and Acidosis. The medication profile is extensive, focusing on managing these severe conditions (e.g., Propranolol, Octreotide Acetate, Pantoprazole, Pancrelipase).\n\nCrucially, the current diagnoses **do not explicitly state** a lipid disorder such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has severe chronic disease, which is a general risk factor for dyslipidemia, the instructions strictly forbid predicting a future diagnosis based solely on general risk factors or the use of cardiovascular medications (like Propranolol, which is used for variceal bleeding).\n\nThe provided demonstration cases show that a diagnosis of lipid disorder is coded when there is explicit evidence of the disorder itself (e.g., Case 2: Pure hypercholesterolemia). Since the current record lacks this explicit evidence, and the patient's primary management is focused on cirrhosis and variceal bleeding, there is no strong and explicit evidence to predict that \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3715,
+    "completion_tokens": 256
+  }
+}

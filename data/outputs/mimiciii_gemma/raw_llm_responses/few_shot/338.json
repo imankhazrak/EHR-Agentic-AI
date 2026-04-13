@@ -1,0 +1,12 @@
+{
+  "sample_id": 338,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record indicates several significant comorbidities, including Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled, Unspecified essential hypertension, and Coronary atherosclerosis of native coronary artery. These conditions are well-known risk factors for the development of lipid disorders. However, the strict rule for this prediction is that we must only answer \"Yes\" if there is strong and explicit evidence that a lipid disorder is *already* present or actively managed. The current diagnoses list does not explicitly code hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the patient is not prescribed any lipid-lowering medications (e.g., statins, fibrates) in the current record. Therefore, based on the explicit evidence required by the instructions, the prediction must be \"No\", despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3487,
+    "completion_tokens": 180
+  }
+}

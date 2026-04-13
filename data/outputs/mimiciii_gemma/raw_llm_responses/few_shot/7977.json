@@ -1,0 +1,12 @@
+{
+  "sample_id": 7977,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe infections (Unspecified septicemia, Sepsis), malignancy (Malignant neoplasm of main bronchus, Secondary and unspecified malignant neoplasm of lymph nodes), and cardiovascular instability (Atrial flutter, Hypotension). The medication profile is extensive, covering treatments for these primary conditions (e.g., Levofloxacin, Diltiazem, Heparin, Fluticasone-Salmeterol Diskus).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has a personal history of venous thrombosis and embolism, this is a vascular complication, not an explicit diagnosis of a metabolic lipid disorder. The presence of general risk factors like tobacco use and the history of venous thrombosis does not meet the strict criteria set in the instructions for predicting a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict requirement to predict the *coding* of the diagnosis in the next visit, and the absence of explicit lipid disorder evidence in the current record, the prediction must be \"No",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3689,
+    "completion_tokens": 256
+  }
+}

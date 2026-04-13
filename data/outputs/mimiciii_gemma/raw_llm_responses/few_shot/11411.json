@@ -1,0 +1,12 @@
+{
+  "sample_id": 11411,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe traumatic brain injury (Cerebral artery occlusion, Subarachnoid hemorrhage, Subdural hemorrhage), acute kidney failure, and associated neurological/musculoskeletal complications (Postconcussion syndrome, Unspecified fall, Home accidents, etc.). The medication profile includes treatments for these acute conditions (NS, Vancomycin, Lorazepam, CeftriaXONE, Heparin, Diltiazem, etc.), as well as management for chronic conditions like hypothyroidism and hypertension (Levothyroxine Sodium, Metoprolol Tartrate, etc.).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has Hypertensive chronic kidney disease, which is a risk factor for dyslipidemia, the presence of this risk factor alone, as per the strict instructions, is insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe demonstration cases show that a diagnosis is coded when there is explicit evidence (e.g., Case 2: Pure hypercholesterolemia; Case 3: Diabetes mellitus without",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3705,
+    "completion_tokens": 256
+  }
+}

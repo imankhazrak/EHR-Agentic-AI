@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions unrelated to primary lipid metabolism disorders. The diagnoses include Thyrotoxicosis, Acute on chronic systolic heart failure, Pneumonia, End stage renal disease, Hypertensive chronic kidney disease, Atrial flutter, Diabetes with neurological manifestations, and Cocaine abuse. While the patient is on Atorvastatin, which is a medication used for lipid management, the instructions explicitly state that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of a lipid disorder. Furthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality coded in the current record. The presence of these high-risk comorbidities (Diabetes, CKD, CHF) is common in patients with lipid disorders, but the instructions strictly forbid predicting a diagnosis based solely on these risk factors. Since the explicit evidence of an existing or actively managed lipid disorder (beyond the use of a prophylactic statin) is absent, the prediction must be \"No\", adhering strictly to the provided constraints.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3737,
+    "completion_tokens": 224
+  }
+}

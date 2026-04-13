@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute, life-threatening conditions related to trauma, neurological injury, and critical organ failure. The primary diagnoses include:\n    *   **Trauma/Neurological:** Closed fracture of vault of skull with subarachnoid, subdural, and extradural hemorrhage, Cerebral edema, Encephalopathy, Obstructive hydrocephalus, Acute respiratory failure, Ventilator associated pneumonia.\n    *   **Cardiovascular/Metabolic:** Subendocardial infarction, initial episode of care, Other primary cardiomyopathies, Coronary atherosclerosis of native coronary artery, Unspecified protein-calorie malnutrition.\n\n3. **Analysis against Refined Criteria:**\n    *   **Explicit Diagnostic Coding (Criterion 1 & 4):** There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record.\n    *   **Lipid-Lowering Pharmacotherapy (Criterion 2):** The patient is prescribed **Atorvastatin**. While this is a lipid-lowering agent, the Refined Criteria explicitly state that the *use of statins alone* is **NOT sufficient**",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4060,
+    "completion_tokens": 256
+  }
+}

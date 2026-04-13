@@ -4,7 +4,7 @@
 
 This README summarizes the repository’s MIMIC-III next-visit prediction pipeline, including ML and LLM input pathways, implemented approaches, archived results, documentation map, and reproducible run commands.
 
-Predict whether **Disorders of Lipid Metabolism** (ICD-9 `272.x` / CCS-53) appear on a patient’s **next** hospital admission, using the **current** admission only — implemented on **MIMIC-III** visit pairs with classical ML baselines and **OpenAI** LLM prompts (zero-shot, zero-shot+, few-shot, EHR-CoAgent).
+Predict whether **Disorders of Lipid Metabolism** (ICD-9 `272.x` / CCS-53) appear on a patient’s **next** hospital admission, using the **current** admission only — implemented on **MIMIC-III** visit pairs with classical ML baselines and the same four **LLM** prompt modes on **OpenAI `gpt-4o-mini`** and **local `google/gemma-4-e4b-it`** (zero-shot, zero-shot+, few-shot, EHR-CoAgent).
 
 ---
 
@@ -35,7 +35,7 @@ The **label** is the same for both tracks: derived from **next-visit** diagnosis
 - **Fully supervised** — Decision tree, logistic regression, random forest trained on the **full** training split.
 - **Few-shot ML** — The same three models each trained on only **N = 6** labeled rows (`ml.few_shot_n`), same bag-of-features (not the same mechanism as LLM few-shot).
 
-**LLM (current default)** (`local_gemma`, `src/scripts/run_*.py`)
+**LLM** (`src/scripts/run_*.py`; API GPT-4o-mini vs local Gemma per config / `LLM_MODEL_NAME`)
 
 - **Zero-Shot** — Instructions + current narrative only.
 - **Zero-Shot+** — Adds prevalence context and longer analysis instructions (still no labeled examples).
@@ -48,22 +48,26 @@ Details: `docs/llm_prompt_modes_explained.md`, `docs/LLM_EXPERIMENT_REPORT_GPT4O
 
 ## 3. Results (full pipeline run)
 
-Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the held-out test set. Historical GPT-4o-mini results are preserved for comparison; new local Gemma runs default to `data/outputs/mimiciii_gemma/summary_table.csv`.
+Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the stratified **20%** test hold-out (seed **42**); positive prevalence on test ≈ **27.4%**. GPT-4o-mini metrics come from `data/outputs/mimiciii/`; Gemma 4 from `data/outputs/mimiciii_gemma/`. Rows are sorted by **F1** (same ordering as `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md`). **Caveat:** LLM inputs are **narratives** and ML uses **bag-of-codes** — interpret as an **end-to-end system** comparison, not a controlled model-family ablation.
 
 | Model | Approach | ACC | Sensitivity | Specificity | F1 |
 |--------|----------|-----|-------------|-------------|-----|
-| decision_tree | Fully Supervised | 73.48 | 50.66 | 82.09 | 51.15 |
+| google/gemma-4-e4b-it | Zero-Shot+ | 80.97 | 60.61 | 88.66 | **63.59** |
+| google/gemma-4-e4b-it | EHR-CoAgent | 79.78 | 62.96 | 86.12 | 63.05 |
+| gpt-4o-mini-2024-07-18 | EHR-CoAgent | 80.93 | 58.21 | 89.50 | 62.57 |
+| gpt-4o-mini-2024-07-18 | Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 |
+| gpt-4o-mini-2024-07-18 | Few-Shot (N=6) | 80.65 | 57.39 | 89.44 | 61.93 |
+| gpt-4o-mini-2024-07-18 | Zero-Shot+ | 80.73 | 56.22 | 89.99 | 61.54 |
+| google/gemma-4-e4b-it | Few-Shot (N=6) | 80.10 | 57.83 | 88.50 | 61.43 |
+| google/gemma-4-e4b-it | Zero-Shot | 80.26 | 55.93 | 89.44 | 60.83 |
 | logistic_regression | Fully Supervised | 77.05 | 47.73 | 88.11 | 53.27 |
 | random_forest | Fully Supervised | 76.44 | 24.01 | 96.24 | 35.85 |
+| decision_tree | Fully Supervised | 73.48 | 50.66 | 82.09 | 51.15 |
 | decision_tree | Few Shot | 61.40 | 56.52 | 63.24 | 44.52 |
 | logistic_regression | Few Shot | 35.27 | 90.34 | 14.48 | 43.34 |
 | random_forest | Few Shot | 34.95 | 92.53 | 13.21 | 43.81 |
-| gpt-4o-mini-2024-07-18 | Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 |
-| gpt-4o-mini-2024-07-18 | Zero-Shot+ | 80.73 | 56.22 | 89.99 | 61.54 |
-| gpt-4o-mini-2024-07-18 | Few-Shot (N=6) | 80.65 | 57.39 | 89.44 | 61.93 |
-| gpt-4o-mini-2024-07-18 | EHR-CoAgent | 80.93 | 58.21 | 89.50 | 62.57 |
 
-**Intra- and inter-approach discussion** (rankings, confusion matrices, ML vs LLM): `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI.md`.
+**Readout:** Fully supervised **logistic regression** is the strongest classical baseline (ACC/F1). Both LLM families sit near **~80%** accuracy; **Gemma Zero-Shot+** reaches the highest **F1** in this table, while **GPT EHR-CoAgent** is best within the GPT family on ACC/F1; **Gemma EHR-CoAgent** maximizes sensitivity at lower specificity. **N=6 ML training** is unstable for LR/RF on bag-of-codes, unlike **N=6 in-context** LLM few-shot. Full tables, confusion counts, and cross-model deltas: `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md` ([HTML](docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html)).
 
 ---
 
@@ -74,7 +78,8 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
 | `METHODOLOGY.md` | Data, split, configs, scripts, outputs |
 | `docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md` | LLM experiment details, parsing, artifacts |
 | `docs/llm_prompt_modes_explained.md` | Zero-shot vs zero-shot+ vs few-shot (LLM) |
-| `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI.md` | Full ML + LLM tables and comparisons |
+| `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md` | Full ML + GPT-4o-mini + Gemma 4 tables and comparisons ([HTML](docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html)) |
+| `docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md` | Slurm runs for Gemma prompt experiments and EHR-CoAgent (jobs **46510786** / **46615354**) |
 
 ---
 
@@ -88,7 +93,8 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
 | `src/` | Preprocessing, ML, LLM, evaluation |
 | `scripts/` | Shell drivers (`run_mimic_pipeline.sh`, `run_llm_only.sh`, smoke tests) |
 | `slurm/` | Cluster job scripts |
-| `data/outputs/mimiciii_gemma/` | Metrics, `summary_table.csv`, LLM raw responses for new Gemma runs |
+| `data/outputs/mimiciii/` | ML + GPT-4o-mini metrics (`summary_table.csv`, `ml_results_*.csv`, `llm_*_metrics.json`) |
+| `data/outputs/mimiciii_gemma/` | Gemma 4 metrics, `summary_table.csv`, LLM raw responses |
 | `gpt_4o_mini_results/` | Archived historical GPT-4o-mini outputs/logs (gitignored for privacy) |
 
 ---

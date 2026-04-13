@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the current hospital visit record reveals a complex constellation of diagnoses, including mechanical complications of tracheostomy, atrial flutter, paralysis agitans, systemic lupus erythematosus, atrial fibrillation, and various other respiratory and neurological issues. The patient is on a broad spectrum of medications, which includes Simvastatin, a lipid-lowering agent.\n\nHowever, according to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], the mere prescription of a lipid-lowering medication (Simvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses made in the record do not explicitly code for hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\nThe [Refined Criteria] explicitly prioritize explicit diagnostic coding for lipid abnormalities. Since this explicit evidence is absent, the prediction must be \"No,\" even though the patient is on lipid-lowering therapy and has other high-risk comorbidities (like systemic lupus erythematosus and atrial fibrillation). The presence of Simvastatin alone does not meet the threshold for strong and explicit evidence required to predict a future diagnosis of the disorder itself.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3806,
+    "completion_tokens": 247
+  }
+}

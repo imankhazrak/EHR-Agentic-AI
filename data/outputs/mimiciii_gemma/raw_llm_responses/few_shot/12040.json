@@ -1,0 +1,12 @@
+{
+  "sample_id": 12040,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The patient's diagnoses are overwhelmingly related to secondary malignant neoplasm of bone and bone marrow, myelopathy, atrial fibrillation, hypertension, prostate hypertrophy, and various chronic respiratory conditions (COPD, asthma). While the patient is on Metoprolol Tartrate and Metoprolol Succinate XL, these are used for cardiovascular management (Atrial Fibrillation) and do not explicitly indicate an underlying lipid disorder. Furthermore, the medication profile does not include any explicit lipid-lowering agents like statins or fibrates that would serve as strong, explicit evidence of an actively managed lipid disorder, as per the strict instructions. The procedures performed are related to spinal fusion and bone excision, which are not directly indicative of a metabolic or lipid abnormality. Therefore, based on the strict criteria requiring explicit evidence of a lipid disorder diagnosis or active management thereof, the prediction for the next hospital visit is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3874,
+    "completion_tokens": 217
+  }
+}

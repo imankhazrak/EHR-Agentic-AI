@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record primarily details severe acute cardiovascular events (Subendocardial infarction, Coronary atherosclerosis of autologous vein bypass graft, Coronary atherosclerosis of native coronary artery) and associated critical care complications (Pneumonia, Unspecified essential hypertension, Tobacco use disorder, Delirium due to conditions classified elsewhere, Esophageal reflux).\n\nThe definition of \"Disorders of Lipid Metabolism\" requires explicit evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) to predict a future diagnosis of \"Yes.\" The current record does not contain any explicit diagnosis of a lipid disorder.\n\nWhile the patient has several risk factors commonly associated with lipid disorders, such as:\n1. **Unspecified essential hypertension:** A known risk factor for atherosclerosis, which is already present.\n2. **Coronary atherosclerosis:** The presence of established vascular disease strongly suggests underlying metabolic issues, which often include dyslipidemia.\n3. **Tobacco use disorder:** A major risk factor for cardiovascular and metabolic disease.\n\nHowever, according to the strict instructions provided, the mere presence of risk factors (hypertension, established atherosclerosis, tobacco use) is **NOT** sufficient evidence to predict a future diagnosis of \"Yes.\" The instructions explicitly state that",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3497,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 612,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of hyperlipidemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the presence of other related diagnoses such as \"Atherosclerosis of native arteries of the extremities with ulceration\" and \"Congestive heart failure\" are common comorbidities associated with lipid disorders, reinforcing the clinical context. Although the instructions caution against predicting based solely on statin use or general risk factors, the explicit coding of \"hyperlipidemia\" in the current record serves as the necessary and sufficient evidence to predict a future coding of this diagnosis. Therefore, the prediction is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3635,
+    "completion_tokens": 158
+  }
+}

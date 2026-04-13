@@ -1,0 +1,12 @@
+{
+  "sample_id": 4267,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates several significant comorbidities, including Obstructive chronic bronchitis with (acute) exacerbation, Congestive heart failure, unspecified, Atrial fibrillation, Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, Anemia, unspecified, Hypotension, unspecified, and Old myocardial infarction. These conditions are known risk factors for lipid disorders. However, the strict rule for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or a specific lipid disorder diagnosis). The current record does not contain any explicit diagnosis of a lipid abnormality, nor does it list any medications specifically targeting lipid management (like statins or fibrates). Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit, despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3476,
+    "completion_tokens": 215
+  }
+}

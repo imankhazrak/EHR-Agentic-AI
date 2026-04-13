@@ -1,0 +1,5 @@
+llm:
+  finetune_output_dir: "models/gemma_finetuned_answer_only"
+  finetune:
+    answer_only_loss: true
+    max_length: 2048

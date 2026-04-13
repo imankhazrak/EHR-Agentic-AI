@@ -1,0 +1,12 @@
+{
+  "sample_id": 4442,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnostic coding for \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses listed are primarily related to severe acute conditions, including Diastolic heart failure, Congestive heart failure, Acute respiratory failure, Atrial fibrillation, and a Urinary tract infection. While the patient is receiving various medications, including some that might be used in the management of cardiovascular or metabolic issues (e.g., Furosemide, Metoprolol, Amiodarone HCl), and the record mentions \"Intralipid 20%\" (which is an emulsified lipid preparation used for managing severe shock or metabolic crises), this does not constitute an explicit diagnosis of a lipid *disorder* (like hypercholesterolemia). According to the [Refined Criteria] and the strict rules provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid *disorder* diagnosis. Since this explicit diagnostic evidence is absent, the prediction must be \"No\", even though the patient is critically ill and high-risk.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4020,
+    "completion_tokens": 249
+  }
+}

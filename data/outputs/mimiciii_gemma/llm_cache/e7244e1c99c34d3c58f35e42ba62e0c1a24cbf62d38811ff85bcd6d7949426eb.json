@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, life-threatening conditions, including Subendocardial infarction, Congestive heart failure, Cardiogenic shock, Pneumonia, Hemorrhage, Acute kidney failure, and Atrial fibrillation. The medication profile includes numerous agents for managing these acute crises (e.g., Furosemide, Metoprolol, Amiodarone, Piperacillin-Tazobactam, etc.).\n\nCrucially, while the patient is prescribed **Atorvastatin** (a lipid-lowering agent), the current visit record **does not contain an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder.\n\nAccording to the [Refined Criteria] and the strict rules provided:\n*   **Priority 1 & 4:** Explicit diagnostic evidence for lipid abnormalities must be present to strongly predict a future diagnosis.\n*   **Priority 2:** Lipid-lowering pharmacotherapy (Atorvastatin) is only a *secondary, supportive factor* when explicit diagnostic coding is absent.\n*   **Strict Rule:** The rules explicitly state that the use of statins alone is **NOT sufficient**",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3958,
+    "completion_tokens": 256
+  }
+}

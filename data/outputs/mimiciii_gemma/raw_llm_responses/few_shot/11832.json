@@ -1,0 +1,12 @@
+{
+  "sample_id": 11832,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is overwhelmingly dominated by diagnoses related to severe systemic infections (Cytomegaloviral disease, Chronic lymphoid leukemia, Enteritis), acute organ failure (Acute kidney failure, Chronic kidney disease), and severe cardiopulmonary instability (Paroxysmal ventricular tachycardia, Pulmonary collapse, Chronic obstructive asthma). While the patient has several comorbidities that are commonly associated with lipid disorders, such as Unspecified essential hypertension and Hypertensive chronic kidney disease, these diagnoses alone do not constitute explicit evidence of an existing or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.). The medication profile includes several agents that are used in critical care management (e.g., Furosemide, Amiodarone, Albumin 5%), but there is no explicit mention of lipid-lowering medications (like statins or fibrates) being prescribed, nor is there a specific diagnosis of a lipid abnormality coded in the current record. Therefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014the prediction must be \"No\", despite the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4035,
+    "completion_tokens": 232
+  }
+}

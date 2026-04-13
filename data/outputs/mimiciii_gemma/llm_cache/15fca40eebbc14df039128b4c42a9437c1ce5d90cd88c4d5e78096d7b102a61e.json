@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute, and chronic conditions related to trauma, infection, renal failure, and substance use. The primary diagnoses include: Closed fracture of fourth cervical vertebra; End stage renal disease; Complications of transplanted kidney; Chronic glomerulonephritis; Hypertensive chronic kidney disease; Cocaine dependence; Opioid type dependence; Sepsis; Pneumonia; and various acute respiratory and infectious complications.\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia).\n\nApplying the [Refined Criteria], especially Criterion 1 and Criterion 4, which prioritize explicit diagnostic evidence over inferred risk factors, we must look for direct evidence of a lipid disorder. While the patient is on several medications that *could* be related to cardiovascular health (e.g., Metoprolol, Captopril, Amlodipine, Lisinopril), these medications alone, as per the strict rules, are **not sufficient** to predict a future diagnosis of a lipid disorder.\n\nThe patient's profile includes several comorbidities that are *tertiary risk",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4300,
+    "completion_tokens": 256
+  }
+}

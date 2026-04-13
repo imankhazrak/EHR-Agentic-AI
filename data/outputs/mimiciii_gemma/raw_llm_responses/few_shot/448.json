@@ -1,0 +1,12 @@
+{
+  "sample_id": 448,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record is overwhelmingly focused on managing severe cardiovascular and renal complications, specifically Acute diastolic heart failure and Hypertensive chronic kidney disease stage V/End stage renal disease, along with associated pulmonary and diabetic complications.\n\n1. **Analysis of Current Diagnoses and Management Focus:** The primary diagnoses (Diastolic heart failure, ESRD, Hypertensive CKD) dictate the current intensive management plan, which includes medications like Metoprolol, Captopril, Diltiazem, and Lisinopril, and procedures like Hemodialysis and Arteriovenous shunt removal.\n\n2. **Evaluation Against Prediction Criteria:** The strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit evidence* of a lipid disorder (e.g., documented hypercholesterolemia or hyperlipidemia) or *active, explicit management* of such a condition beyond general risk factors.\n    * **Risk Factors Present:** The patient has multiple risk factors for dyslipidemia, including Diabetes (Type II), Hypertension, and ESRD.\n    * **Management Present:** The patient is prescribed Pioglitazone HCl (a thiazolidinedione, which can affect lipid profiles) and Aspirin, but these medications",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3910,
+    "completion_tokens": 256
+  }
+}

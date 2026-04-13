@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnostic coding for \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses listed are related to acute cholecystitis, gastrointestinal hemorrhage, atrial fibrillation, congestive heart failure, diabetes, hypertension, and coronary atherosclerosis. While the patient has several significant comorbidities (Diabetes, Hypertension, Coronary Atherosclerosis) which are known risk factors for lipid disorders, the [Refined Criteria] explicitly state that general risk factors and comorbidities alone are NOT sufficient to predict a future diagnosis of a coded lipid disorder. Furthermore, the current medication list does not explicitly show the use of lipid-lowering pharmacotherapy (like statins, which would be a secondary supportive factor). Therefore, based on the strict hierarchy of evidence provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3862,
+    "completion_tokens": 217
+  }
+}

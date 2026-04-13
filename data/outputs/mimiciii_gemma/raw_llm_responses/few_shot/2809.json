@@ -1,0 +1,12 @@
+{
+  "sample_id": 2809,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe acute cardiovascular events and associated complications, including Subendocardial infarction, Coronary atherosclerosis, Ventricular fibrillation, Atrial fibrillation, and Occlusion and stenosis of carotid artery. The patient has undergone extensive cardiac procedures, including (Aorto)coronary bypass and AICD implantation. While the patient has a history of Cirrhosis of liver and Chronic hepatitis C, these conditions are primarily related to liver function and viral infection, not explicitly to a diagnosed or actively managed lipid disorder. Crucially, the current record does not contain any explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Furthermore, the medication profile is empty, meaning there is no explicit ongoing lipid management (e.g., statins or fibrates) to suggest a current, coded lipid disorder. Based on the strict instructions, which require explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis, the absence of such evidence in the current record leads to the prediction of \"No\". The high-risk nature of the patient (due to severe cardiac disease) is noted, but this general risk factor alone is insufficient to meet the strict criteria for predicting a future coded",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3570,
+    "completion_tokens": 256
+  }
+}

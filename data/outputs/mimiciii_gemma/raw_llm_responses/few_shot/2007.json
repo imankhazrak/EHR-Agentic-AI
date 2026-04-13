@@ -1,0 +1,12 @@
+{
+  "sample_id": 2007,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex comorbidities. These include severe renal issues (Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Other complications due to renal dialysis device, implant, and graft), cardiac failure (Congestive heart failure, unspecified), and other critical conditions (Chronic hepatitis C without mention of hepatic coma; Acute posthemorrhagic anemia; Peripheral vascular disease, unspecified; Aneurysm of artery of upper extremity).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia) within the current record.\n\nA comprehensive review of the diagnoses made, medications prescribed, and procedures performed in the current visit record reveals:\n1. **Absence of Explicit Lipid Diagnosis:** There is no explicit diagnosis coded in the current record that states \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid disorder.\n2. **Insufficient Evidence from Comorbidities:** While the patient has multiple cardiovascular risk factors (Hypertensive CKD, CHF, PVD, Aneurysm), these",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3664,
+    "completion_tokens": 256
+  }
+}

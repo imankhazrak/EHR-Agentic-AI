@@ -1,0 +1,12 @@
+{
+  "sample_id": 9935,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the record lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is sufficient evidence to predict a future coding of this diagnosis, even if other high-risk factors (like Diabetes Mellitus or Hypertension) are also present. The presence of this specific diagnosis overrides the exclusion criteria that only mention statin use, cardiovascular diseases, or general risk factors as insufficient evidence. Therefore, based on the explicit diagnosis of hyperlipidemia, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4063,
+    "completion_tokens": 147
+  }
+}

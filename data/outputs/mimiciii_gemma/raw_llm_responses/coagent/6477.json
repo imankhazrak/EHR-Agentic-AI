@@ -1,0 +1,12 @@
+{
+  "sample_id": 6477,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute trauma and associated complications, including a closed fracture of the base of the skull with extensive intracranial hemorrhage (subarachnoid, subdural, and extradural), prolonged loss of consciousness, chronic hepatitis C, cocaine and opioid abuse, and suicide/self-inflicted injury. The entire clinical picture is one of critical, life-threatening neurological and toxicological instability.\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nFurthermore, the medication profile, while extensive, consists primarily of treatments for the acute trauma, infection (Metronidazole, Cefazolin), neurological support (Dopamine, Magnesium Sulfate, Iso-Osmotic Dextrose), and general stabilization (NS, D5W). There is **no explicit mention of lipid-lowering pharmacotherapy** (e.g., statins like Atorvastatin or Simvastatin) being prescribed, which would serve as a secondary supportive factor.\n\nThe patient's comorbidities, such as chronic hepatitis C, are not explicitly linked in the record to a diagnosed",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3866,
+    "completion_tokens": 256
+  }
+}

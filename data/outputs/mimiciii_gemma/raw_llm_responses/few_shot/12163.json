@@ -1,0 +1,12 @@
+{
+  "sample_id": 12163,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute, and chronic infectious, respiratory, and cardiac complications. The diagnoses include Accidental puncture or laceration during a procedure, Acute respiratory failure, Other pulmonary embolism and infarction, Mediastinitis, Chronic systolic heart failure, Unspecified pleural effusion, Foreign body in trachea, Intestinal infection due to Clostridium difficile, and Congestive heart failure. The medication profile is extensive, covering broad-spectrum antibiotics (Vancomycin, Meropenem), anti-fungals (AcetaZOLamide Sodium), cardiovascular support (Furosemide, DobUTamine, Norepinephrine, Milrinone), and respiratory management (Albuterol, Ipratropium Bromide).\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. While the patient has multiple cardiovascular risk factors (Chronic systolic heart failure, Coronary atherosclerosis, Peripheral vascular disease), and is receiving medications that *might* be used for lipid management (though no statins or fibrates are explicitly listed as ongoing treatment for dyslipidemia), the strict instruction is to predict the *coding* of the diagnosis.\n\nBased",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3927,
+    "completion_tokens": 256
+  }
+}

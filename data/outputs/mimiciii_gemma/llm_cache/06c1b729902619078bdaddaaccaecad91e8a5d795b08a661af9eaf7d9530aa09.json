@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The recorded diagnoses are: Pneumonitis due to inhalation of food or vomitus; Quadriplegia, unspecified; Urinary tract infection, site not specified; Bacteremia; Alkalosis; Iron deficiency anemia, unspecified; Hypotension, unspecified. Furthermore, the patient's medication profile is empty, meaning there is no recorded lipid-lowering pharmacotherapy (e.g., statins) to serve as a secondary supportive factor. Based on the [Refined Criteria] and the strict guidelines provided, a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. Since this explicit evidence is absent, the prediction must be \"No\", despite the patient being in a critical care setting where lipid disorders are common.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3688,
+    "completion_tokens": 205
+  }
+}

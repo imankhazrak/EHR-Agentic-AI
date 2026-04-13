@@ -1,0 +1,12 @@
+{
+  "sample_id": 7103,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on the care of a **single liveborn** infant who experienced significant **neonatal complications** related to **preterm delivery** (Respiratory Distress Syndrome, Neonatal Jaundice, etc.). The entire clinical picture revolves around **obstetric and neonatal pathology**, not metabolic or lipid disorders.\n\nA detailed review of the diagnoses, medications, and procedures confirms this focus:\n*   **Diagnoses:** The primary diagnoses are related to prematurity, respiratory distress, and congenital anomalies (e.g., Atrial Septal Defect, Retrolental Fibroplasia). There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other form of lipid abnormality coded in the current record.\n*   **Medications:** The prescribed medications are standard for managing neonatal infections (e.g., Ampicillin, Gentamicin, Vancomycin), respiratory support (e.g., Prednisolone), and general care (e.g., Vitamin E, MCT Oil, D10W). While some medications like MCT Oil are used for general nutritional support, they do not constitute evidence of an underlying lipid *disorder*.\n*   **Procedures:** The procedures",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4012,
+    "completion_tokens": 256
+  }
+}

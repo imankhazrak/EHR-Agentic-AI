@@ -1,0 +1,12 @@
+{
+  "sample_id": 9075,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, non-lipid-related comorbidities, including Coronary Atherosclerosis, End Stage Renal Disease (ESRD), Chronic Glomerulonephritis, and Bipolar Disorder. The medication profile includes several agents relevant to cardiovascular and renal management (e.g., Lisinopril, Doxazosin, Cinacalcet, Simvastatin, Metoprolol Tartrate), and the patient has undergone significant cardiac and renal procedures (e.g., CABG, Hemodialysis).\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit* evidence of a lipid disorder (hypercholesterolemia, hyperlipidemia, etc.) or *active, explicit management* of such a condition that goes beyond the general use of statins or cardiovascular risk factors.\n\n1. **Analysis of Lipid-Related Evidence:** The patient is prescribed **Simvastatin** and **Cinacalcet**. While Simvastatin is a statin used for lipid management, and Cinacalcet is used for calcimimetic therapy often related to renal/cardiac health, the *current visit record itself does not explicitly state a diagnosis* of hyperchol",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3791,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3108,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute critical care diagnoses, primarily related to infection, cardiovascular failure, and respiratory compromise. The diagnoses include: Other septicemia due to gram-negative organisms; Acute myocardial infarction of anterolateral wall, initial episode of care; Acute respiratory failure; Ulcer of heel and midfoot; Congestive heart failure, unspecified; Heart valve replaced by transplant; Candidiasis of other urogenital sites; Aortocoronary bypass status; Peripheral vascular disease, unspecified.\n\nCrucially, the current record **lacks any explicit diagnosis** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The presence of cardiovascular disease (Acute myocardial infarction, Congestive heart failure) and peripheral vascular disease are known risk factors for lipid disorders, but according to the strict instructions, these factors alone are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe medication profile is recorded as \"None recorded,\" meaning there is no explicit management of lipid levels via statins or fibrates, which would constitute strong evidence.\n\nTherefore, based on the strict requirement to only predict a future diagnosis when explicit lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3498,
+    "completion_tokens": 256
+  }
+}

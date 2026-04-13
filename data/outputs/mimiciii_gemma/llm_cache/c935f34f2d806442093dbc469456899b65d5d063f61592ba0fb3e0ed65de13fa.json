@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The current visit record is extensive, detailing numerous severe comorbidities such as Pneumonia, Acute respiratory failure, Acute kidney failure, Schizophrenic disorders, Diabetes mellitus, Coronary atherosclerosis, and Congestive heart failure. The medication list includes Simvastatin, which is a lipid-lowering agent. However, the current visit record *does not* explicitly list a diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). According to the strict rules provided, the mere prescription of a lipid-lowering agent (Simvastatin) or the presence of general risk factors (like Diabetes or CHF) is insufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based on the explicit evidence requirement, the prediction must be \"No\".\n\n1. Prediction: No\n2. Reasoning: The current visit record lacks an explicit diagnosis of a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia), despite the presence of risk factors and the prescription of Simvastatin. The prediction adheres strictly to the rule that general risk factors or medication use alone are insufficient evidence for a future diagnosis.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3985,
+    "completion_tokens": 241
+  }
+}

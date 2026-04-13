@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute, and chronic conditions related to the cardiovascular system, pulmonary system, and infectious processes. The primary diagnoses include Cerebral aneurysm, Mitral valve disorders, Congestive heart failure, Atrial fibrillation, and Postinflammatory pulmonary fibrosis.\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities (such as hypercholesterolemia or hyperlipidemia) in the 'Diagnoses made' section.\n\nWhile the patient is prescribed **Simvastatin** (a lipid-lowering agent), the Refined Criteria and Prediction Clarification explicitly state that the mere use of lipid-lowering pharmacotherapy is **NOT sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the patient's profile is dominated by severe comorbidities (CHF, AF, etc.) which, according to the Refined Criteria, are only considered a tertiary risk factor when explicit coding and pharmacotherapy are both absent. Since the explicit coding is absent, and the pharmacotherapy alone is insufficient, the hierarchy of evidence dictates that the prediction must be \"No.\"\n\nTherefore, based on the strict guidelines provided, there is",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4034,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5919,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates diagnoses of Cerebral aneurysm, nonruptured; Unspecified essential hypertension. The medications prescribed are none recorded, and the procedures performed include Clipping of aneurysm. There is no explicit evidence in the current record that the patient has a diagnosed lipid disorder (such as hypercholesterolemia or hyperlipidemia). While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is not sufficient evidence to predict a future diagnosis of Disorders of Lipid Metabolism. Therefore, based on the explicit evidence required, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3422,
+    "completion_tokens": 128
+  }
+}

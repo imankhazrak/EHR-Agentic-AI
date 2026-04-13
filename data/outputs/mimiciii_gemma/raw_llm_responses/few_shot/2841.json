@@ -1,0 +1,12 @@
+{
+  "sample_id": 2841,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe prediction target, \"Disorders of Lipid Metabolism,\" requires explicit evidence of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to be coded in the next hospital visit, even if the patient is high-risk. General risk factors, the use of statins, or the presence of cardiovascular diseases alone are insufficient to predict a future diagnosis.\n\nAnalysis of the Current Visit Record:\nThe patient's current diagnoses are extensive and primarily relate to severe acute medical conditions:\n- **Acute/Severe Conditions:** Other encephalopathy, Acute respiratory failure, Grand mal status, Closed fracture of mandible, Acute kidney failure, Acidosis, Pneumonia, Iatrogenic pneumothorax, Unspecified fall, Cerebral atherosclerosis, Vascular dementia, Contusions, etc.\n- **Comorbidities:** Unspecified essential hypertension, History of fall, Incontinence.\n\nMedication and Procedure Review:\nThe medication and procedure lists are dominated by supportive care, infection management, and stabilization protocols:\n- **Infection/Support:** CefTRIAXone, Vancomycin, Acetaminophen, Insulin, etc.\n- **Stabilization:** Mechanical ventilation, Tracheostomy, Kidney failure management.\n- **Lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3869,
+    "completion_tokens": 256
+  }
+}

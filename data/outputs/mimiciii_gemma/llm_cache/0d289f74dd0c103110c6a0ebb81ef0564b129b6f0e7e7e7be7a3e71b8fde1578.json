@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic non-lipid-related conditions. The primary diagnoses include Unspecified gastritis and gastroduodenitis with hemorrhage, Congestive heart failure, Acute kidney failure, Systemic lupus erythematosus, and Chronic kidney disease.\n\nWhile the patient is prescribed **Atorvastatin** and **Gemfibrozil** (both lipid-lowering medications), the instructions explicitly state that the *use* of statins and fibrates alone is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the explicit diagnoses listed in the current visit record do not include any primary or secondary diagnosis of hypercholesterolemia, hyperlipidemia, or any other explicit lipid disorder (CCS category 53). The diagnoses are focused on gastrointestinal, renal, cardiac, and autoimmune pathology.\n\nTherefore, based on the strict criteria provided\u2014requiring explicit evidence of an existing or actively managed lipid disorder beyond just medication use\u2014the prediction must be **No**. The presence of lipid-lowering drugs does not equate to a coded diagnosis of a lipid disorder in the next visit, given the absence of corresponding primary diagnoses.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3735,
+    "completion_tokens": 253
+  }
+}

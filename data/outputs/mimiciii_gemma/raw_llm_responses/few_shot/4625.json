@@ -1,0 +1,12 @@
+{
+  "sample_id": 4625,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, acute, life-threatening trauma and subsequent critical care complications. The primary diagnoses include:\n1. **Severe Trauma/Injury:** Motor vehicle traffic accident involving collision with pedestrian injuring pedestrian; Injury to spleen without mention of open wound into cavity, massive parenchymal disruption; Hemorrhage complicating a procedure; Total splenectomy.\n2. **Acute Critical Care Complications:** Acute posthemorrhagic anemia; Acute respiratory failure; Cardiac arrest; Acute myocardial infarction of unspecified site; Pneumonitis due to inhalation of food or vomitus; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease.\n\n**Analysis against Prediction Criteria:**\nThe prediction criteria strictly forbid basing a \"Yes\" prediction solely on:\n*   Use of statins (e.g., Atorvastatin).\n*   Cardiovascular diseases (e.g., CHF, AF, CABG, CAD).\n*   General risk factors (e.g., hypertension, diabetes).\n\nWhile the patient has several comorbidities that are *associated* with lipid disorders, these are not explicit lipid disorders themselves:\n*   **Hypertension/CKD:** The diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3807,
+    "completion_tokens": 256
+  }
+}

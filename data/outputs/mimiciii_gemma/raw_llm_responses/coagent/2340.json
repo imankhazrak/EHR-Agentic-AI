@@ -1,0 +1,12 @@
+{
+  "sample_id": 2340,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The recorded diagnoses are related to infectious processes (Cellulitis and abscess of leg), respiratory issues (Unspecified sleep apnea, Asthma), metabolic/systemic issues (Anemia, Morbid obesity), and critical care status (Attention to tracheostomy, Continuous invasive mechanical ventilation).\nThe patient is high-risk due to Morbid obesity, which is a known risk factor for lipid disorders. Furthermore, the patient is on Furosemide, which is a diuretic, and is receiving general supportive care.\nHowever, according to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], a prediction of \"Yes\" can only be made if there is **strong and explicit evidence** that a lipid disorder is present and likely to be diagnosed. The use of general risk factors (Morbid obesity) or general supportive medications (Furosemide) alone is explicitly stated as **NOT sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\nSince there is no explicit diagnostic coding for a",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3745,
+    "completion_tokens": 256
+  }
+}

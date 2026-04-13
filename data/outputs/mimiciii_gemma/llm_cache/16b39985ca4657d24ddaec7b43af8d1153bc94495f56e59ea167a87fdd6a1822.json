@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions such as Atherosclerosis with gangrene, End Stage Renal Disease (ESRD), Diabetes with renal manifestations, and multiple severe infections (MRSA, Viral Hepatitis C). The medication profile includes Atorvastatin, which is a lipid-lowering agent, and the patient has multiple cardiovascular comorbidities (Hypertensive CKD, Atherosclerosis). However, according to the strict instructions, the mere prescription of a statin (Atorvastatin) or the presence of general cardiovascular risk factors (Atherosclerosis, Diabetes, Hypertension) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the NEXT hospital visit. The current diagnoses do not explicitly state a primary lipid disorder (e.g., \"Pure hypercholesterolemia\" or \"Hyperlipidemia\") as a coded diagnosis, despite the high-risk profile. Therefore, based on the strict evidence-based criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3868,
+    "completion_tokens": 218
+  }
+}

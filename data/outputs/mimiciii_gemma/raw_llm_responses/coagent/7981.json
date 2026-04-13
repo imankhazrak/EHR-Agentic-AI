@@ -1,0 +1,12 @@
+{
+  "sample_id": 7981,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record contains explicit diagnostic coding for a lipid abnormality: \"Other and unspecified hyperlipidemia.\" This meets the highest priority criterion ([Refined Criteria] 1) and the strict rule for answering \"Yes\" in the [Prediction Clarification]. Furthermore, the patient is actively managed with lipid-lowering pharmacotherapy, including \"Rosuvastatin Calcium\" and \"Ezetimibe,\" which supports the explicit diagnosis and the secondary supportive factor ([Refined Criteria] 2). The presence of these explicit and active indicators strongly suggests that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3994,
+    "completion_tokens": 149
+  }
+}

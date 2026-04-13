@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute, life-threatening cardiovascular and surgical emergencies. The primary diagnoses include:\n    *   Dissection of aorta, thoracic\n    *   Aortic valve disorders\n    *   Hemorrhage complicating a procedure\n    *   Atrial fibrillation\n    *   Unspecified essential hypertension\n    *   Urinary tract infection, site not specified\n\n    The patient's medication and procedure profiles reflect intensive care management for these acute events (e.g., use of Nitroprusside Sodium, Furosemide, Warfarin, Metoprolol, Ciprofloxacin HCl, etc.).\n\n    Crucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities (such as hypercholesterolemia or hyperlipidemia). Furthermore, while the patient is on several medications that *can* be used for lipid management (e.g., Docusate Sodium, which is sometimes used adjunctively), there is **no explicit evidence of ongoing, active management of a diagnosed lipid disorder** that would strongly and explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\n    According to the [Refined Criteria]",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3887,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2335,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has several significant comorbidities, including Alcoholic cirrhosis of liver and Congestive heart failure, these conditions are general risk factors and do not, by themselves, constitute explicit evidence of a lipid disorder that would be coded in the next visit according to the strict guidelines provided. The guidelines explicitly state that the use of statins, cardiovascular diseases, or general risk factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3564,
+    "completion_tokens": 157
+  }
+}

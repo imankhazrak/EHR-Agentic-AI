@@ -1,0 +1,12 @@
+{
+  "sample_id": 10040,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, life-threatening infections and inflammatory conditions, including Cellulitis and abscess of leg, Necrotizing fasciitis, Unspecified septicemia, Severe sepsis, Toxic epidermal necrolysis, and Paraplegia. The patient is in critical care, evidenced by the use of Vancomycin, Norepinephrine, and continuous invasive mechanical ventilation.\n\nCrucially, the current diagnoses made in the record **do not include** any explicit coding for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nApplying the [Refined Criteria], the primary directive is to prioritize the presence of explicit diagnostic coding for lipid abnormalities. Since this evidence is entirely absent, the prediction must be \"No,\" even though the patient has several underlying risk factors (e.g., Diverticulosis of colon, which can be associated with metabolic issues).\n\nThe secondary and tertiary criteria (evaluating pharmacotherapy or comorbidities) are insufficient to override the absence of explicit diagnostic evidence, as per the strict rules provided in the [Prediction Clarification]. Therefore, based on the hierarchy of evidence, the likelihood of a future diagnosis of \"Dis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3924,
+    "completion_tokens": 256
+  }
+}

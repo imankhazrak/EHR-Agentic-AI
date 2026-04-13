@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on a severe toxicological and respiratory crisis. The primary diagnoses include: Toxic effect of organophosphate and carbamate; Acute respiratory failure; Toxic encephalopathy; Other convulsions; Pneumonitis due to inhalation of food or vomitus; Suicide and self-inflicted poisoning by agricultural and horticultural chemical and pharmaceutical preparations other than plant foods and fertilizers; Tachycardia, unspecified; Unspecified essential hypertension; Depressive disorder, not elsewhere classified.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\nApplying the [Refined Criteria], specifically Criterion 1 and Criterion 4, we must prioritize explicit diagnostic coding. Since no such diagnosis is present in the current record, we cannot explicitly predict that the diagnosis will be coded in the next visit, even though the patient has Unspecified essential hypertension (a general risk factor).\n\nFurthermore, the patient's medication profile, while extensive, does not include any explicit lipid-lowering pharmacotherapy (like statins, which would serve as a secondary supportive factor per Criterion 2). The medications prescribed",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3792,
+    "completion_tokens": 256
+  }
+}

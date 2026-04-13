@@ -1,0 +1,12 @@
+{
+  "sample_id": 7867,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia\" in the Diagnoses made section. According to the instructions, a diagnosis of hyperlipidemia is considered strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Therefore, the prediction is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4144,
+    "completion_tokens": 73
+  }
+}

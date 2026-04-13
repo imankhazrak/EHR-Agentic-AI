@@ -1,0 +1,12 @@
+{
+  "sample_id": 294,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The current hospital visit record is focused on a single liveborn, involving prophylactic vaccination and inoculation against viral hepatitis, with no recorded diagnoses related to metabolic or lipid disorders. The patient's current diagnoses are limited to birth-related events and necessary preventative care ([ICD9-DX:V721]). There is no explicit evidence of hypercholesterolemia, hyperlipidemia, or any other form of lipid abnormality coded in this visit. Furthermore, no lipid-lowering pharmacotherapy (such as statins) is recorded in the medication profile. According to the [Refined Criteria], the prediction must prioritize explicit diagnostic evidence. Since the current record lacks this explicit evidence, and the patient's current presentation is purely related to neonatal care and preventative health, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. The general statistical likelihood (27.6%) is noted, but the strict rule requires evidence of an existing or actively managed lipid disorder, which is absent here.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3660,
+    "completion_tokens": 228
+  }
+}

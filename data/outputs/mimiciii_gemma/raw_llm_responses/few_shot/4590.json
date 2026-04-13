@@ -1,0 +1,12 @@
+{
+  "sample_id": 4590,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which is sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Pure hypercholesterolemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hypercholesterolemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit, overriding the need to rely solely on risk factors or medication use. Furthermore, the patient is also prescribed \"Atorvastatin,\" which is a medication used for lipid management, reinforcing the active management of a lipid condition. While the patient has numerous other serious comorbidities (Acute kidney failure, Congestive heart failure, Diabetes, etc.), the explicit diagnosis of \"Pure hypercholesterolemia\" is the decisive factor for this prediction, as per the instructions that prioritize evidence of an existing or actively managed lipid disorder over general clinical risk.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3661,
+    "completion_tokens": 207
+  }
+}

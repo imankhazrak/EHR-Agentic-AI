@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The recorded diagnoses are focused on acute medical issues, including Acute kidney failure, Human immunodeficiency virus (HIV) disease, Urinary tract infection, Hyperpotassemia, Acidosis, Polyneuropathy, Diarrhea, and Unspecified essential hypertension. While the patient is on several medications, including Aspirin EC, which is often used in high-risk cardiovascular patients, and the patient has hypertension, these factors alone, according to the [Refined Criteria] and [Prediction Clarification], are insufficient to explicitly predict a future diagnosis of a lipid disorder. The [Refined Criteria] explicitly prioritize explicit diagnostic coding for lipid abnormalities. Since this evidence is absent in the current record, the prediction must be \"No\", regardless of the patient's general high-risk status.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3767,
+    "completion_tokens": 204
+  }
+}

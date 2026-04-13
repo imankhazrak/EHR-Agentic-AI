@@ -1,0 +1,12 @@
+{
+  "sample_id": 7776,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record primarily details severe acute and chronic respiratory illnesses, complications of mechanical ventilation and tracheostomy, acute kidney failure, and psychiatric/intellectual comorbidities. The medications prescribed are overwhelmingly directed towards managing these pulmonary, renal, and infectious processes (e.g., Albuterol, Vancomycin, Cefpodoxime, etc.).\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder. While the patient has multiple severe comorbidities (which are often associated with dyslipidemia), the strict instruction is to predict the *coding* of the diagnosis, not the underlying risk.\n\nThe medication profile includes general supportive care and antibiotics, but **does not contain any explicit lipid-lowering agents** (like statins or fibrates) that would serve as strong, explicit evidence of an actively managed lipid disorder in this specific visit.\n\nTherefore, based on the strict criteria provided\u2014requiring explicit evidence of an existing or actively managed lipid disorder\u2014the prediction must be \"No\", despite the patient's high-risk profile from other comorbidities.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3679,
+    "completion_tokens": 237
+  }
+}

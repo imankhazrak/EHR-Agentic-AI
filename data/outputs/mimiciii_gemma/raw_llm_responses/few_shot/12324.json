@@ -1,0 +1,12 @@
+{
+  "sample_id": 12324,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute neurological and respiratory crises. The primary diagnoses include Cerebral embolism with cerebral infarction, Compression of brain, Cerebral edema, Dissection of carotid artery, Acute respiratory failure, and Pneumonia. The medication profile includes agents for managing these acute conditions (e.g., Metoprolol Tartrate, Furosemide, LeVETiracetam, Piperacillin-Tazobactam, Dexamethasone).\n\nCrucially, while the patient is prescribed **Simvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone is not enough evidence.\n\nFurthermore, there is no explicit, primary diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder coded in the current record. The presence of \"Unspecified essential hypertension\" is a general risk factor, not evidence of a lipid disorder.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014the prediction must be \"No,\" despite the patient's high-risk profile",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 256
+  }
+}

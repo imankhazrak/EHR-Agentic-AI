@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including Septicemia due to anaerobes, Sepsis, Regional enteritis, and other complications related to vascular devices and implants. The medication profile is heavily focused on managing these acute infections (e.g., CeftAZIDime, Vancomycin HCl, Levofloxacin, Heparin).\n\nCrucially, the current diagnoses made in the record **do not explicitly include** any diagnosis related to lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nAccording to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], we must prioritize explicit diagnostic evidence. Since there is no explicit coding for a lipid disorder in the current record, and the primary focus of the current management is infectious/inflammatory, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nWhile the patient has several risk factors (e.g., history of venous thrombosis and embolism, which can be related to hypercoagulable states), these factors alone are insufficient to meet the strict",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3827,
+    "completion_tokens": 256
+  }
+}

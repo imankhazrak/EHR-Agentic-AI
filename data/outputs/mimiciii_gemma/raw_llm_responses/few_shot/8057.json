@@ -1,0 +1,12 @@
+{
+  "sample_id": 8057,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia or hyperlipidemia. While the patient has several significant comorbidities that are commonly associated with lipid disorders, including Diabetes with other specified manifestations, type I [juvenile type], not stated as uncontrolled, and Unspecified essential hypertension, these conditions alone are explicitly excluded by the instructions from being sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions strictly require explicit evidence of an existing or actively managed lipid disorder to answer \"Yes.\" Since the current record lacks this explicit evidence, the prediction must be \"No,\" regardless of the patient's high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3534,
+    "completion_tokens": 148
+  }
+}

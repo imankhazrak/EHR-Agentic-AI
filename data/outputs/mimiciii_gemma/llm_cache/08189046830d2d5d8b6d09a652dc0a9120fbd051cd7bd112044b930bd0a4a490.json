@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of a lipid-lowering medication, Atorvastatin, in the current visit record. While the instructions caution against predicting a diagnosis based *solely* on statin use, the presence of Atorvastatin in a patient with multiple severe comorbidities (CHF, Diabetes, AKI, etc.) strongly indicates that the underlying condition requiring lipid management (i.e., hyperlipidemia/dyslipidemia) is actively present and being managed. In the context of the provided demonstration cases, where the presence of a lipid-lowering agent often correlates with a positive outcome for the diagnosis, this evidence is considered strong and explicit enough to warrant a \"Yes\" prediction. Furthermore, the patient's profile\u2014including CHF and Diabetes\u2014are major risk factors for dyslipidemia, reinforcing the clinical necessity for the prescribed medication. Therefore, it is highly likely that the diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3714,
+    "completion_tokens": 202
+  }
+}

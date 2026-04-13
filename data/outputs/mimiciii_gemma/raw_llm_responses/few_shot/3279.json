@@ -1,0 +1,12 @@
+{
+  "sample_id": 3279,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current visit record shows several significant comorbidities, including Atherosclerosis of autologous vein bypass graft of the extremities, Acute posthemorrhagic anemia, Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Unspecified essential hypertension. Furthermore, the patient is prescribed Simvastatin, which is a lipid-lowering agent.\n\nHowever, according to the strict instructions provided, the mere use of Simvastatin (a statin) and the presence of general risk factors like Diabetes and Hypertension are NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded in the next visit.\n\nThe current diagnoses do not explicitly state a lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis, nor is there explicit evidence of an actively managed, uncompensated lipid abnormality that would strongly mandate a future coding of this diagnosis, despite the high-risk profile. Therefore, based on the strict evidence-based criteria, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3628,
+    "completion_tokens": 219
+  }
+}

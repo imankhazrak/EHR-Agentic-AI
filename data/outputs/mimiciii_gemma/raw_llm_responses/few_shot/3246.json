@@ -1,0 +1,12 @@
+{
+  "sample_id": 3246,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute cardiovascular instability and related complications. The primary diagnoses include Congestive Heart Failure (CHF), Atrial Fibrillation, and various structural heart defects (Tricuspid valve diseases, Acquired cardiac septal defect, Mitral valve disorders). The medication profile is heavily weighted towards managing these cardiac conditions (e.g., Furosemide, Carvedilol, Digoxin, Amiodarone HCl, Warfarin, Lisinopril).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient is prescribed Simvastatin, which is a lipid-lowering agent, the instructions explicitly state that the mere use of statins is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's other comorbidities (like CHF and AF) are general cardiovascular risk factors, not explicit evidence of a primary lipid disorder.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014the absence of such a diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3675,
+    "completion_tokens": 256
+  }
+}

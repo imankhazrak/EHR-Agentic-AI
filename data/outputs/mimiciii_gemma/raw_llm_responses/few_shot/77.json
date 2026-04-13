@@ -1,0 +1,12 @@
+{
+  "sample_id": 77,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record is overwhelmingly focused on acute and chronic cardiovascular events, including Subendocardial infarction, Congestive heart failure, Mitral valve disorders, and Coronary atherosclerosis. The patient is receiving extensive treatment for these conditions, including anticoagulants (Heparin, Clopidogrel Bisulfate, Aspirin) and cardiac medications (Nitroglycerin, Lisinopril, Metoprolol, Furosemide).\n\nWhile the patient is prescribed **Atorvastatin**, this medication is a treatment for hypercholesterolemia/hyperlipidemia. However, according to the strict instructions, the mere use of a statin is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current diagnoses do not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other explicit lipid disorder diagnosis. The patient's diabetes mellitus is listed, which is a risk factor for lipid disorders, but this risk factor alone is **NOT** sufficient evidence to predict a future diagnosis.\n\nThe instructions explicitly state that if explicit lipid disorder evidence is absent, the answer must be \"No\", even if the patient is high-risk. Since the current record lacks an explicit diagnosis of a lipid",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3793,
+    "completion_tokens": 256
+  }
+}

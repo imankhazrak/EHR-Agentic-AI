@@ -10,10 +10,10 @@ from typing import Dict
 import numpy as np
 from sklearn.metrics import (
     accuracy_score,
+    average_precision_score,
     confusion_matrix,
     f1_score,
-    precision_score,
-    recall_score,
+    roc_auc_score,
 )
 
 from src.utils.logging_utils import get_logger
@@ -21,7 +21,12 @@ from src.utils.logging_utils import get_logger
 logger = get_logger(__name__)
 
 
-def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray, positive_label: int = 1) -> Dict[str, float]:
+def compute_metrics(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    positive_label: int = 1,
+    y_score: np.ndarray | None = None,
+) -> Dict[str, float]:
     """Compute accuracy, sensitivity, specificity, and F1.
 
     Parameters
@@ -33,6 +38,7 @@ def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray, positive_label: int 
     Returns
     -------
     dict with keys: accuracy, sensitivity, specificity, f1, tp, fp, tn, fn
+    and optionally auc, auprc when y_score is provided.
     """
     y_true = np.asarray(y_true)
     y_pred = np.asarray(y_pred)
@@ -47,7 +53,7 @@ def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray, positive_label: int 
     specificity = (tn / (tn + fp) * 100) if (tn + fp) > 0 else 0.0
     f1 = f1_score(y_true, y_pred, pos_label=positive_label, zero_division=0) * 100
 
-    return {
+    metrics = {
         "accuracy": round(accuracy, 2),
         "sensitivity": round(sensitivity, 2),
         "specificity": round(specificity, 2),
@@ -57,6 +63,19 @@ def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray, positive_label: int 
         "tn": int(tn),
         "fn": int(fn),
     }
+    if y_score is not None:
+        y_score = np.asarray(y_score, dtype=float)
+        try:
+            auc = roc_auc_score(y_true, y_score) * 100
+            metrics["auc"] = round(float(auc), 2)
+        except Exception:
+            metrics["auc"] = None
+        try:
+            auprc = average_precision_score(y_true, y_score) * 100
+            metrics["auprc"] = round(float(auprc), 2)
+        except Exception:
+            metrics["auprc"] = None
+    return metrics
 
 
 def compute_metrics_with_bootstrap(

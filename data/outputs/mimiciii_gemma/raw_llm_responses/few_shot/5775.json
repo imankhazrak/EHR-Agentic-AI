@@ -1,0 +1,12 @@
+{
+  "sample_id": 5775,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details diagnoses related to congenital and mechanical complications of the nervous system, as well as respiratory issues and anemia of prematurity. Specifically, the diagnoses include: Congenital hydrocephalus; Mechanical complication of nervous system device, implant, and graft; Other respiratory problems after birth; Anemia of prematurity; and Carrier or suspected carrier of other specified bacterial diseases.\n\nCrucially, the current visit record **lacks any explicit evidence** of a primary lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The medications prescribed are none recorded, and the procedures performed are related to cranial puncture, nutritional support, and suture removal, none of which directly indicate an ongoing or newly identified lipid metabolic issue.\n\nAccording to the strict guidelines provided, a prediction of \"Yes\" can only be made if there is strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record is devoid of this specific evidence, even though the patient is in a critical care setting where such diagnoses are common (27.6% of subsequent visits), the explicit requirement for evidence dictates a prediction of \"No\". The presence of general risk factors or the commonality of the diagnosis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3478,
+    "completion_tokens": 256
+  }
+}

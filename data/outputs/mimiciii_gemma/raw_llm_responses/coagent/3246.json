@@ -1,0 +1,12 @@
+{
+  "sample_id": 3246,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is overwhelmingly focused on severe, complex cardiovascular and pulmonary issues. The primary diagnoses include Congestive Heart Failure, Diseases of the Tricuspid Valve, Acquired Cardiac Septal Defect, Atrial Fibrillation, and Old Myocardial Infarction. The medication profile is heavily weighted towards managing these cardiac and pulmonary conditions (e.g., Furosemide, Carvedilol, Digoxin, Amiodarone HCl, Lisinopril, Warfarin, Simvastatin).\n\nHowever, according to the strict guidelines provided, a prediction of \"Yes\" requires **strong and explicit evidence** that a lipid disorder is present and likely to be diagnosed in the *next* visit. The current record **does not contain an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\nWhile the patient is prescribed **Simvastatin**, this medication is a lipid-lowering agent, which falls under the secondary supportive factor category. However, the guidelines explicitly state that the use of statins **alone is NOT sufficient** to predict a future diagnosis of the disorder itself. Furthermore, the patient's current diagnoses do not explicitly code for a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3880,
+    "completion_tokens": 256
+  }
+}

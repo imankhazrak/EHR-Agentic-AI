@@ -1,0 +1,12 @@
+{
+  "sample_id": 2558,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include severe respiratory issues (Chronic respiratory failure, Dependence on respirator, status, Tracheostomy status), severe gastrointestinal issues (Paralytic ileus, Constipation, unspecified, Gastrostomy status), severe metabolic issues (Hypoglycemia, unspecified, Osteoporosis, unspecified), and severe infectious/inflammatory issues (Urinary tract infection, site not specified, Infection with microorganisms without mention of resistance to multiple quinolones and fluroquinolones).\n\nCrucially, when analyzing the current diagnoses and prescribed medications, there is **no explicit evidence** of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\nThe patient is receiving medications that manage various conditions:\n*   **Respiratory/Cardiovascular Support:** Furosemide, Albuterol, Ipratropium Bromide, etc.\n*   **Gastrointestinal/Metabolic Support:** Lansoprazole, Docusate Sodium, Insulin, Lactulose, etc.\n*   **Pain/Neurological Management:** Morphine Sulfate, Pamidronate, Anti-parkinsonism drugs,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3904,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2155,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, life-threatening comorbidities that are primarily cardiovascular, renal, and infectious/neurological. The diagnoses include Hypertensive chronic kidney disease (Stage V/ESRD), Acidosis, Congestive heart failure, Opioid/Cocaine dependence, Cerebral artery occlusion, and Anaphylactic reaction. The medication profile is heavily focused on managing these acute crises: Nitroprusside, Labetalol, Sevelamer, Pantoprazole, and various anti-convulsants/antipsychotics.\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality (CCS category 53). While hypertension and CHF are known risk factors for dyslipidemia, the instructions strictly forbid predicting a future diagnosis based solely on these general risk factors or the use of related medications (like Labetalol or Amlodipine, which are not lipid-lowering agents).\n\nThe demonstration cases show that a future diagnosis of lipid disorder is often present when there is an explicit lipid diagnosis (Case 2) or when the clinical picture strongly suggests it (Case 1, though this case is complex). In",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3611,
+    "completion_tokens": 256
+  }
+}

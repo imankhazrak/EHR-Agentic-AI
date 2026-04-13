@@ -1,0 +1,12 @@
+{
+  "sample_id": 1030,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia.\"** According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most direct evidence required to answer \"Yes.\" While the patient also receives Atorvastatin (a lipid-lowering medication), the prediction hinges on the *coded diagnosis* of hyperlipidemia, not merely the use of the medication or the presence of general risk factors like hypertension or cardiovascular disease. The presence of this specific diagnosis meets the threshold for strong and explicit evidence as defined in the instructions.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3711,
+    "completion_tokens": 152
+  }
+}

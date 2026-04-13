@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on acute and severe cardiovascular events, including Subendocardial infarction (initial and subsequent episodes), Ventricular fibrillation, Congestive heart failure, and Coronary atherosclerosis requiring bypass graft and stenting procedures. The medication profile includes several agents for managing these cardiac conditions (e.g., Metoprolol XL, Furosemide, Lisinopril, Aspirin EC, Clopidogrel Bisulfate, Heparin, Simvastatin).\n\nHowever, according to the strict guidelines provided, the mere prescription of statins (Simvastatin) or the presence of cardiovascular diseases (CHF, MI) are NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The guidelines explicitly state that these factors alone are insufficient to predict a future diagnosis.\n\nFurthermore, a review of the diagnoses made in the current visit record does not explicitly code \"hypercholesterolemia,\" \"hyperlipidemia,\" or any other specific lipid disorder diagnosis. The patient is receiving Simvastatin, which is a lipid-lowering agent, but the guidelines prioritize explicit diagnostic coding over the use of pharmacotherapy alone.\n\nSince there is no explicit diagnostic evidence of a lipid disorder",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3866,
+    "completion_tokens": 256
+  }
+}

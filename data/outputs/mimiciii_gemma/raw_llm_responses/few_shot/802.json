@@ -1,0 +1,12 @@
+{
+  "sample_id": 802,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to respiratory, renal, cardiovascular, and endocrine systems. The diagnoses include Acute and chronic respiratory failure, Acute kidney failure, Urinary tract infection, Panhypopituitarism, Chronic diastolic heart failure, Hyperosmolality and/or hypernatremia, Hypotension, Obstructive sleep apnea, Congestive heart failure, Morbid obesity, and Thrombocytopenia. The medication profile includes Ciprofloxacin, Azithromycin, PredniSONE, Albuterol, CeftriaXONE, Heparin, Metoprolol, and Levothyroxine, which are primarily used to manage these acute and chronic infectious, inflammatory, and organ failure states.\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is morbidly obese and has hypertension (implied by CHF/Hypotension), these are general risk factors, and according to the strict instructions, the mere presence of obesity or hypertension is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3716,
+    "completion_tokens": 256
+  }
+}

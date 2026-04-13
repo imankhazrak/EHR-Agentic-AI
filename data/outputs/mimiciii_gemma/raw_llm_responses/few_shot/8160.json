@@ -1,0 +1,12 @@
+{
+  "sample_id": 8160,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record contains explicit evidence of a lipid disorder, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" This evidence is found in the diagnoses made: **\"Other and unspecified hyperlipidemia.\"** According to the strict rules provided, the presence of an explicit diagnosis of a lipid disorder (such as hyperlipidemia) is sufficient evidence to predict a future coding of \"Disorders of Lipid Metabolism,\" even if other risk factors (like hypertension or cardiovascular disease) are also present. The other diagnoses and medications, such as the prescription of **\"Simvastatin,\"** while related to lipid management, are not the sole determining factor; the explicit diagnosis of **\"Other and unspecified hyperlipidemia\"** is the key piece of evidence that meets the criteria for a \"Yes\" prediction. Therefore, based on the explicit diagnostic coding in the current record, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3843,
+    "completion_tokens": 188
+  }
+}

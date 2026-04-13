@@ -1,0 +1,12 @@
+{
+  "sample_id": 7353,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record is dominated by severe, life-threatening conditions related to respiratory failure, cardiac dysfunction, and infectious processes. The diagnoses include Congestive heart failure, unspecified; Chronic and other pulmonary manifestations due to radiation; Hyperpotassemia; Chronic respiratory failure; Infection of gastrostomy; Cellulitis and abscess of trunk; Other chronic pulmonary heart diseases; Other primary cardiomyopathies; Tracheostomy status.\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nThe instructions explicitly state that predicting a future diagnosis based solely on the use of cardiovascular diseases (like Congestive heart failure) or general risk factors (like chronic pulmonary issues) is insufficient. The patient's medication profile is also recorded as \"None recorded,\" meaning there is no explicit management of lipid levels via drugs like statins or fibrates in this visit.\n\nTherefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present\u2014the prediction must be \"No\", even though the patient is clearly high-risk for such a condition. The current data does not support",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3520,
+    "completion_tokens": 256
+  }
+}

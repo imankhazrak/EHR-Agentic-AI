@@ -1,0 +1,12 @@
+{
+  "sample_id": 2001,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe trauma, orthopedic surgery, and associated vascular/nerve injuries. The diagnoses include Traumatic amputation, Peripheral vascular complications, Arterial embolism and thrombosis, and multiple Open fractures. The medications prescribed are primarily for pain management (Meperidine, Hydromorphone, Oxycodone-Acetaminophen), infection control (Cefazolin, Gentamicin, Heparin), and supportive care (D5W, Potassium Chloride, Magnesium Sulfate). The procedures performed are complex orthopedic reductions and vessel repairs.\n\nCrucially, the current record contains **no explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Furthermore, the medication profile does not include any lipid-lowering agents (like statins or fibrates) that would serve as explicit evidence of an ongoing, managed lipid disorder. The presence of cardiovascular issues (like arterial embolism) is related to the acute trauma and vascular injury, not necessarily an underlying, coded lipid metabolism disorder.\n\nBased on the strict instructions provided\u2014that a prediction can only be made \"Yes\" if there is strong and explicit evidence of an existing or actively managed lipid disorder\u2014and the absence of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3644,
+    "completion_tokens": 256
+  }
+}

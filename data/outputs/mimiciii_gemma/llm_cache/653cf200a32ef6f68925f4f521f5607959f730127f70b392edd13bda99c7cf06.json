@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning:\nThe prediction hinges on the strict criteria provided: we must predict the *coding* of a diagnosis of \"Disorders of Lipid Metabolism\" in the *next* visit, and we must *not* rely on general risk factors like diabetes or the use of other medications.\n\n1. **Analysis of Current Visit Record:**\nThe current diagnoses are: Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Paralytic ileus; Nausea with vomiting; Diarrhea; Other specified cardiac dysrhythmias; Other specified disease of white blood cells; Personal history of noncompliance with medical treatment, presenting hazards to health.\nThe medications prescribed are: None recorded.\nThe procedures performed are: Venous catheterization, not elsewhere classified; Injection of insulin; Injection or infusion of other therapeutic or prophylactic substance; Insertion of other (naso-)gastric tube.\n\n2. **Evaluation Against Strict Criteria:**\nThe current record explicitly details severe metabolic and gastrointestinal issues (DKA, ileus) and cardiac instability. While Diabetes Mellitus is a known risk factor for hyperlipidemia, the current record **does not contain any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3511,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe comorbidities, including End Stage Renal Disease (ESRD), Hypertensive Chronic Kidney Disease, Diastolic Heart Failure, Diabetes Mellitus with neurological manifestations, and Congestive Heart Failure. The medication profile includes Atorvastatin, which is a lipid-lowering agent, and Cinacalcet HCl, which is used for calcimimetic therapy, often related to kidney function.\n\nHowever, according to the strict instructions, the presence of a lipid disorder diagnosis in the *next* visit cannot be predicted solely based on the use of statins (Atorvastatin) or the presence of cardiovascular diseases (CHF, ESRD).\n\nThe current diagnoses list severe metabolic and cardiovascular issues, but it does not explicitly state a primary diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is clearly high-risk due to ESRD and Diabetes, the explicit evidence required to predict a *future coded diagnosis* of \"Disorders of Lipid Metabolism\" is absent in the current record.\n\nTherefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3736,
+    "completion_tokens": 244
+  }
+}

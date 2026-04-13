@@ -1,0 +1,12 @@
+{
+  "sample_id": 10852,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly focused on acute, severe, non-lipid-related medical emergencies. The primary diagnoses include Subarachnoid hemorrhage, Hematoma complicating a procedure, and various vascular complications. The medication profile is dominated by pain management (OxycoDONE, HYDROmorphone), antiemetics (Ondansetron), and cardiovascular/neurological support (Valsartan, Heparin, Pregabalin).\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia or hyperlipidemia. Furthermore, the medication list does not contain any explicit lipid-lowering pharmacotherapy (e.g., statins like Atorvastatin or Simvastatin) that would serve as a secondary, supportive factor for a future diagnosis.\n\nWhile the patient has Unspecified essential hypertension, this is a general risk factor and, according to the [Refined Criteria], is insufficient on its own to predict a future diagnosis of a lipid disorder. The other comorbidities (Myalgia, Dysthymic disorder, Tobacco use disorder) are general health issues and do not provide the explicit evidence required by the strict rules.\n\nTherefore,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3876,
+    "completion_tokens": 256
+  }
+}

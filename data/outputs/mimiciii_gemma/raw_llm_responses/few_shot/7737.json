@@ -1,0 +1,12 @@
+{
+  "sample_id": 7737,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe malignant neoplasms (Secondary malignant neoplasm of brain and spinal cord; Secondary malignant neoplasm of lung; Obstructive hydrocephalus; Personal history of malignant neoplasm of large intestine) and associated critical care complications (Obstructive hydrocephalus). The medication profile is extensive, covering critical care needs, infection management (CefazoLIN, Heparin Flush CVL), and pain/supportive care (Metoprolol, Dexamethasone, Morphine Sulfate).\n\nCrucially, the current visit record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is critically ill, and many critical care patients carry underlying metabolic risks, the strict instruction requires evidence of an *existing or actively managed* lipid disorder to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince the current record does not contain this explicit evidence, following the demonstration cases and the strict prediction clarification, the prediction must be \"No,\" even though the patient is high-risk due to critical illness.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3604,
+    "completion_tokens": 244
+  }
+}

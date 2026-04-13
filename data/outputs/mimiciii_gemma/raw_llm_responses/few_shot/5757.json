@@ -1,0 +1,12 @@
+{
+  "sample_id": 5757,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record contains numerous diagnoses and a complex medication profile, indicating severe, multi-system critical illness. Key diagnoses include Rotator cuff sprain, Chronic airway obstruction, Diastolic and Congestive heart failure, Acidosis, Diabetes mellitus, Coronary atherosclerosis, and Obesity. The medication list is extensive, covering respiratory support (Fluticasone-Salmeterol, Ipratropium Bromide, Albuterol), cardiac management (Metoprolol, Lisinopril, Furosemide, Isosorbide Mononitrate), infection control (Antibiotics, Steroids), and pain management.\n\nHowever, the strict criteria for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" require *explicit evidence* of a lipid disorder (e.g., documented hypercholesterolemia, hyperlipidemia, or active management of such a condition) beyond general risk factors.\n\n1. **Absence of Explicit Lipid Diagnosis:** The current diagnoses list includes \"Coronary atherosclerosis\" and \"Obesity,\" which are strong *risk factors* for lipid disorders. However, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or lipoproteinemia coded in the current record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3836,
+    "completion_tokens": 256
+  }
+}

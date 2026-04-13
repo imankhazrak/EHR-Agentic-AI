@@ -1,0 +1,12 @@
+{
+  "sample_id": 10527,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is dominated by severe, acute critical care diagnoses, including mechanical complications of gastrostomy, pneumonitis, peritonitis, anoxic brain damage, paralytic ileus, acute kidney failure, and various late effects of intracranial injury. The medication profile is extensive, focusing heavily on broad-spectrum antibiotics (Vancomycin, Meropenem, CefTazidime, Piperacillin-Tazobactam), supportive care (0.9% Sodium Chloride, Dextrose 50%, Glucagon, Insulin), and management of neurological and gastrointestinal complications (Haloperidol, Clonazepam, Divalproex, Methadone).\n\nCrucially, the current diagnoses and prescribed medications **do not contain any explicit evidence** of an existing or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient is receiving Lisinopril (an ACE inhibitor, sometimes used in cardiovascular risk management) and Warfarin (an anticoagulant), these are general supportive or complication-related treatments and **do not constitute explicit evidence** of a lipid disorder requiring a future diagnosis.\n\nFollowing the strict instructions provided, which mandate that a diagnosis of \"Dis",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3802,
+    "completion_tokens": 256
+  }
+}

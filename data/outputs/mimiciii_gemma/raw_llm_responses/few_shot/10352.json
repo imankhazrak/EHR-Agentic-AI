@@ -1,0 +1,12 @@
+{
+  "sample_id": 10352,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit evidence of a lipid disorder. The diagnoses made are related to Malignant neoplasm of occipital lobe, Unspecified essential hypertension, Epilepsy, unspecified, without mention of intractable epilepsy, and Esophageal reflux. While the patient has Unspecified essential hypertension, which is a known risk factor for dyslipidemia, the instructions explicitly state that the use of general risk factors alone is NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the medication profile does not include any explicit lipid-lowering agents (like statins or fibrates) that would strongly suggest an ongoing, managed lipid disorder. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to code a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 175
+  }
+}

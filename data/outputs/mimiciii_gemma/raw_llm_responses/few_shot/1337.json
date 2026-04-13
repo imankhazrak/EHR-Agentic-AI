@@ -1,0 +1,12 @@
+{
+  "sample_id": 1337,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record shows a complex constellation of diagnoses, including Acute pericarditis, Atrial fibrillation, Congestive heart failure, Hyposmolality, and various other critical care issues. The patient is receiving multiple medications, including Atorvastatin, which is a lipid-lowering agent. However, the strict instructions for this prediction task explicitly state that the mere prescription of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses listed do not explicitly state a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a coded diagnosis. While the patient is high-risk due to CHF and AF, the instructions mandate that we must rely on explicit evidence of an existing or actively managed lipid disorder, not just general risk factors or the use of lipid-lowering medication. Therefore, based on the strict criteria provided, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3635,
+    "completion_tokens": 202
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3924,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record indicates several serious cardiac and metabolic issues, including Subendocardial infarction, Coronary atherosclerosis, and Diabetes mellitus type II. The patient is receiving Atorvastatin, which is a medication used for lipid management. However, the strict instructions explicitly state that the mere use of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. While the patient is high-risk due to their cardiac history and diabetes, the instructions mandate that explicit evidence of an existing or actively managed lipid disorder must be present to predict a \"Yes.\" Since this explicit evidence is absent in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3620,
+    "completion_tokens": 171
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the current hospital visit record reveals a complex constellation of severe, interconnected comorbidities, including Septicemia due to pseudomonas, Subendocardial infarction, Septic shock, Mantle cell lymphoma, Severe sepsis, and multiple organ system involvement. The patient is receiving extensive, life-saving pharmacotherapy, including Rituximab, Caspofungin, and Atorvastatin.\n\nHowever, according to the strict guidelines provided, a prediction of \"Yes\" requires **strong and explicit evidence** that a diagnosis of \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia) is present or actively managed as a primary diagnosis, **not** merely based on the use of lipid-lowering pharmacotherapy (like Atorvastatin) or the presence of general risk factors (like cardiovascular disease).\n\nIn the current visit record:\n*   **Explicit Diagnosis:** There is **no** explicit diagnosis coded for \"Disorders of Lipid Metabolism\" (e.g., hypercholesterolemia, hyperlipidemia) in the Diagnoses made section.\n*   **Pharmacotherapy:** While the patient is prescribed **Atorvastatin**, this falls under the secondary supportive factor and is explicitly excluded",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3963,
+    "completion_tokens": 256
+  }
+}

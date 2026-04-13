@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is overwhelmingly dominated by severe, life-threatening conditions related to infection, sepsis, cardiac failure, and multi-organ failure (e.g., Infection and inflammatory reaction due to cardiac device, implant, and graft; Unspecified septicemia; Acute respiratory failure; Severe sepsis; Acute kidney failure with lesion of tubular necrosis; Candidal endocarditis; Acute on chronic combined systolic and diastolic heart failure).\n\nCrucially, the current record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia or hyperlipidemia).\n\nAccording to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], a prediction of \"Yes\" can **only** be made if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed. The presence of general risk factors (like hypertension, which is implied by heart failure, or the use of medications like Metoprolol Tartrate) is explicitly stated as **insufficient** to predict a future diagnosis of a lipid disorder.\n\nWhile the patient is high-risk due to severe cardiac and infectious comorbidities, the absence of explicit diagnostic evidence of a lipid abnormality in",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4159,
+    "completion_tokens": 256
+  }
+}

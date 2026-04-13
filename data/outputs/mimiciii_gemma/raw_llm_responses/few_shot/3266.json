@@ -1,0 +1,12 @@
+{
+  "sample_id": 3266,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record does not contain any explicit evidence of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses listed are related to infectious processes (Pneumonitis, Methicillin susceptible Staphylococcus aureus), cardiac issues (Other specified cardiac dysrhythmias, Atrial fibrillation, Mitral valve disorders, Coronary atherosclerosis), metabolic imbalances (Hypopotassemia), and psychiatric conditions (Bipolar I disorder). While the patient has several cardiovascular risk factors (Coronary atherosclerosis, Atrial fibrillation), the instructions explicitly state that the mere presence of these risk factors, or the use of general cardiovascular treatments, is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's medication profile is recorded as \"None recorded,\" meaning there is no explicit ongoing management of a lipid disorder through pharmacotherapy (e.g., statins or fibrates). Therefore, based strictly on the evidence required by the prediction clarification, there is no strong and explicit evidence to code a diagnosis of \"Disorders of Lipid Metabolism\" in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3512,
+    "completion_tokens": 234
+  }
+}

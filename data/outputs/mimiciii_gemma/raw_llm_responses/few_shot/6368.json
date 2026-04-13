@@ -1,0 +1,12 @@
+{
+  "sample_id": 6368,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous serious diagnoses and a complex medication regimen. However, a thorough review of the diagnoses made and the medications prescribed does not contain any explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia).\n\nWhile the patient is on Atorvastatin, which is a medication used for lipid management, the presence of this medication alone is explicitly excluded by the instructions as sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the patient's other diagnoses\u2014including Coronary atherosclerosis, Diabetes mellitus, and Congestive heart failure\u2014are general risk factors for dyslipidemia, but the instructions strictly forbid basing a prediction on these factors alone.\n\nTherefore, because the explicit evidence of a lipid disorder is absent in the current record, the prediction must be \"No,\" adhering strictly to the provided guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3781,
+    "completion_tokens": 198
+  }
+}

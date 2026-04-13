@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute cardiovascular and thoracic emergencies. The primary diagnoses include Thoracic aneurysm without mention of rupture, Aortic valve disorders, Unspecified essential hypertension, and the patient has undergone extensive open-heart surgery, including aortic valve replacement and extracorporeal circulation. The patient is also managed for Unspecified pleural effusion and has a Cardiac pacemaker in situ.\n\nCrucially, the current record **lacks any explicit diagnosis or active management related to a lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Unspecified essential hypertension, this is a general risk factor and, according to the strict instructions, is **not sufficient evidence** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the prediction must be based on **strong and explicit evidence** of an existing or actively managed lipid disorder. Since the current record only details severe surgical and acute respiratory/cardiac events without mentioning lipid abnormalities, the prediction must be \"No,\" regardless of the general high-risk status associated with hypertension or cardiovascular disease.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3514,
+    "completion_tokens": 237
+  }
+}

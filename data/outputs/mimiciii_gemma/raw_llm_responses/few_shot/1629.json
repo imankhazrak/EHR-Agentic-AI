@@ -1,0 +1,12 @@
+{
+  "sample_id": 1629,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record contains numerous diagnoses and medications related to severe trauma, infection, cardiovascular failure, and psychiatric conditions. Specifically, the diagnoses include: Closed fracture of T7-T12 level with unspecified spinal cord injury, Pulmonary collapse, Acute diastolic heart failure, Methicillin susceptible pneumonia, Chronic airway obstruction, Schizophrenic disorders, Unspecified essential hypertension, and Diabetes mellitus. The medications prescribed include Atorvastatin, which is a lipid-lowering agent. However, the strict instructions dictate that the mere use of statins (like Atorvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, while the patient has comorbidities such as Unspecified essential hypertension and Diabetes mellitus, these factors alone are explicitly excluded from being sufficient evidence for a future diagnosis. The current record does not contain an explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). Therefore, based on the strict criteria provided, the evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3994,
+    "completion_tokens": 229
+  }
+}

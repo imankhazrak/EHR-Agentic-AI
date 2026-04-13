@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is extensive, detailing numerous severe and interconnected comorbidities, including Diverticulosis of colon with hemorrhage, Acute and subacute bacterial endocarditis, Chronic systolic heart failure, Bacteremia, Acute kidney failure, Primary hypercoagulable state, and Diabetes mellitus type II. The patient is also receiving various medications, including Simvastatin and Heparin, which are relevant to cardiovascular and metabolic health. However, according to the [Refined Criteria] and the strict rules provided, a prediction of \"Yes\" requires **explicit diagnostic coding** for a lipid disorder (such as hypercholesterolemia or hyperlipidemia) in the current record, or clear ongoing management of such a condition that explicitly codes the diagnosis. The current diagnoses list does not explicitly code \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific diagnosis falling under \"Disorders of Lipid Metabolism\" (CCS category 53). While the patient is on Simvastatin, this medication alone, as per the strict guidelines, is **not sufficient** to predict a future diagnosis of a lipid disorder. Therefore, based on the hierarchy of evidence, the absence of explicit diagnostic evidence leads to the prediction of \"No",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4159,
+    "completion_tokens": 256
+  }
+}

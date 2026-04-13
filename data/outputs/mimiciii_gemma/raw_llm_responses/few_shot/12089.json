@@ -1,0 +1,12 @@
+{
+  "sample_id": 12089,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is extensive, detailing numerous severe and complex medical conditions. These include severe infections (Clostridium difficile, bacteremia, MRSA), organ dysfunction (encephalopathy, acute kidney injury, liver cirrhosis), and complex inflammatory/vascular issues (endocarditis, phlebitis). The patient is also suffering from severe malnutrition and is on extensive supportive care.\n\nHowever, when strictly applying the rules provided, the evidence for an *existing* or *actively managed* lipid disorder is absent. The diagnoses listed do not explicitly include hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality.\n\nThe medications prescribed include **Cholestyramine**, which is a bile acid sequestrant used to manage cholesterol. While the use of Cholestyramine strongly suggests that the patient *has* or *is being treated for* a lipid disorder, the instructions explicitly state that the use of certain medications alone (like statins, which are not the primary focus here, but the principle applies to treatment drugs) is NOT sufficient to predict a future diagnosis if the underlying diagnosis is not explicitly coded.\n\nCrucially, the instructions require strong and explicit evidence that a lipid disorder is present and likely to be diagnosed, *not* just the use",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3811,
+    "completion_tokens": 256
+  }
+}

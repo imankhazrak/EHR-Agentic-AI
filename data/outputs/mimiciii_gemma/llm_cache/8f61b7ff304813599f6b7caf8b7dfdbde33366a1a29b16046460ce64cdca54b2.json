@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-lipid-related critical illnesses. The primary diagnoses include Acute pancreatitis, Acute respiratory failure, Calculus of bile duct with obstruction, Cerebral artery occlusion, and Unspecified protein-calorie malnutrition. While the patient has comorbid conditions such as Diabetes mellitus and Atrial fibrillation, and is receiving various medications, the record lacks any explicit diagnosis or active, explicit management of a primary lipid disorder (hypercholesterolemia, hyperlipidemia, etc.). The medications prescribed, such as Warfarin, Metoprolol, and Furosemide, are for managing cardiovascular and renal complications, not for treating a diagnosed lipid abnormality. Although the patient is high-risk due to Diabetes and AF, the strict instruction is to predict a *coded diagnosis* based on *explicit evidence*. Since no explicit lipid disorder evidence is present in the current record, the prediction must be \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3800,
+    "completion_tokens": 193
+  }
+}

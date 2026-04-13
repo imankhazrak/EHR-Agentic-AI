@@ -1,0 +1,12 @@
+{
+  "sample_id": 3249,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the patient's current hospital visit record reveals a complex constellation of severe, interconnected comorbidities, including acute on chronic systolic heart failure, acute kidney failure, intestinal infection, and urinary tract infection. The patient is on multiple medications, including Furosemide, Warfarin, and Simvastatin. While Simvastatin is a lipid-lowering agent, and the patient has cardiovascular disease, the current record **lacks explicit diagnostic coding** for hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. According to the [Refined Criteria] and the strict rules provided, the presence of lipid-lowering pharmacotherapy (Simvastatin) or general cardiovascular disease is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since explicit diagnostic evidence is absent, the prediction must be \"No,\" even though the patient is high-risk.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4010,
+    "completion_tokens": 191
+  }
+}

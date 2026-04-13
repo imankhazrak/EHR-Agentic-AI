@@ -104,6 +104,19 @@ def main(
         force_rebuild=bool(force_rebuild_split or train_cfg.get("force_rebuild_split", False)),
     )
 
+    extra_pos = int(train_cfg.get("oversample_positive_copies", 0))
+    if extra_pos > 0 and "label_lipid_disorder" in train_ft_df.columns:
+        pos = train_ft_df[train_ft_df["label_lipid_disorder"] == 1]
+        if not pos.empty:
+            pieces = [train_ft_df] + [pos.copy() for _ in range(extra_pos)]
+            train_ft_df = pd.concat(pieces, ignore_index=True)
+            train_ft_df = train_ft_df.sample(frac=1.0, random_state=split_seed).reset_index(drop=True)
+            logger.info(
+                "Applied oversample_positive_copies=%d: train_ft rows -> %d (positives duplicated)",
+                extra_pos,
+                len(train_ft_df),
+            )
+
     if use_smoke:
         logger.info("Running fine-tune in smoke mode with reduced samples/steps.")
 
@@ -126,7 +139,20 @@ def main(
         gradient_checkpointing=bool(train_cfg.get("gradient_checkpointing", False)),
         force_fp32=bool(train_cfg.get("force_fp32", False)),
         max_grad_norm=float(train_cfg.get("max_grad_norm", 1.0)),
+        evaluation_strategy=str(train_cfg.get("evaluation_strategy", "epoch")),
+        eval_steps=int(train_cfg.get("eval_steps", 200)),
+        logging_steps=int(train_cfg.get("logging_steps", 20)),
+        save_strategy=str(train_cfg.get("save_strategy", "epoch")),
+        save_steps=int(train_cfg.get("save_steps", 1000)),
+        answer_only_loss=bool(train_cfg.get("answer_only_loss", True)),
         smoke=use_smoke,
+        warmup_ratio=float(train_cfg.get("warmup_ratio", 0.0)),
+        lr_scheduler_type=str(train_cfg.get("lr_scheduler_type", "linear")),
+        gradient_accumulation_steps=int(train_cfg.get("gradient_accumulation_steps", 1)),
+        weight_decay=float(train_cfg.get("weight_decay", 0.0)),
+        load_best_model_at_end=(
+            bool(train_cfg.get("load_best_model_at_end", False)) and not use_smoke
+        ),
     )
 
 

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1002,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and interconnected non-lipid-related critical care diagnoses. The primary diagnoses include: Cerebral artery occlusion, unspecified with cerebral infarction; Other postoperative infection; Unspecified septicemia; Severe sepsis; Acute respiratory failure; Acute pancreatitis; Other retroperitoneal abscess; Unspecified pleural effusion; Empyema without mention of fistula; Calculus of gallbladder with other cholecystitis, without mention of obstruction; Chronic airway obstruction, not elsewhere classified; Urinary tract infection, site not specified; Acute kidney failure, unspecified; Thrombocytopenia, unspecified; Other noninfectious disorders of lymphatic channels; Anemia, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension.\n\nAccording to the [Refined Criteria] and [Instructions], the prediction must prioritize explicit diagnostic coding for lipid abnormalities. A review of the diagnoses made in the current visit record reveals **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other form of lipid disorder (CCS category 53).\n\nWhile the patient is prescribed **Atorvastatin** (a lipid-lowering pharmacotherapy), the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4180,
+    "completion_tokens": 256
+  }
+}

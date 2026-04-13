@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and complex conditions, including Acute pancreatitis, Occlusion and stenosis of carotid artery with cerebral infarction, Acute cholecystitis, and various associated complications (e.g., Hemorrhage, Malnutrition, Cardiac complications). The medication list includes Simvastatin, which is a lipid-lowering agent. However, according to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], the mere presence of lipid-lowering pharmacotherapy (Simvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly code for hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Since explicit diagnostic evidence of a lipid disorder is absent, the prediction must be \"No,\" even though the patient is on lipid-lowering medication and has high cardiovascular risk factors. The hierarchy of evidence dictates that explicit diagnostic coding is prioritized over inferred risk factors or medication use alone.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4072,
+    "completion_tokens": 223
+  }
+}

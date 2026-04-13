@@ -1,0 +1,12 @@
+{
+  "sample_id": 44,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the patient's current hospital visit record reveals a complex constellation of severe comorbidities, including End Stage Renal Disease (ESRD), Hypertensive Chronic Kidney Disease, and various other critical conditions (e.g., Systemic Lupus Erythematosus, Cardiac issues, Anemia). The patient is on various medications, including Heparin, Warfarin, and NIFEdipine CR, which are relevant to managing these severe conditions.\n\nHowever, according to the strict guidelines provided, a prediction of \"Yes\" requires **strong and explicit evidence** that a diagnosis of \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia or hyperlipidemia) is present or actively managed in the current record.\n\nReviewing the diagnoses made in the current visit record:\n- Diagnoses made: [ICD9-DX:2766]; End stage renal disease; Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease; Other primary cardiomyopathies; Unspecified disease of pericardium; Anemia of other chronic disease; Hyperpotassemia; Systemic lupus erythematosus; Abdominal pain, other specified site; Other chronic pain; Hypotension, unspecified",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3912,
+    "completion_tokens": 256
+  }
+}

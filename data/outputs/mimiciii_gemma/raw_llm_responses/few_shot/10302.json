@@ -1,0 +1,12 @@
+{
+  "sample_id": 10302,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record contains numerous severe and complex diagnoses, primarily related to overwhelming infection, sepsis, and multi-organ failure (e.g., Pneumonia, Septic shock, Acute kidney failure, Intestinal or peritoneal adhesions with obstruction). While the record explicitly mentions \"Other and unspecified hyperlipidemia,\" this diagnosis is listed alongside a vast array of other critical, life-threatening conditions. The strict instruction is to predict the *coding* of the diagnosis in the *next* visit, not the general risk. The presence of \"Other and unspecified hyperlipidemia\" in the current record provides explicit evidence of a lipid abnormality being recognized. However, the overwhelming nature of the current critical care picture\u2014which is dominated by infectious and inflammatory processes\u2014suggests that the focus of the next coding cycle will remain on the acute infectious and organ failure management. Furthermore, the instruction explicitly cautions against predicting a diagnosis based solely on the use of medications like statins or general risk factors. Although \"hyperlipidemia\" is present, the context of the current record is so dominated by acute infectious/septic events that the explicit, primary coding focus for the *next* visit is unlikely to be the lipid disorder, even if it is technically present. Given the demonstration cases",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4012,
+    "completion_tokens": 256
+  }
+}

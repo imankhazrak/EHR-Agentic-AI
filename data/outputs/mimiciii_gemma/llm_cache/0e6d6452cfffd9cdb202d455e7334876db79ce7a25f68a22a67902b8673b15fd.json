@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is extensive, detailing numerous severe and chronic conditions. These include chronic heart failure, multiple chronic infections (osteomyelitis, gastric ulcer), kidney disease, and metabolic issues (diabetes, hyperpotassemia). The medication list is also comprehensive, including several drugs used for cardiovascular and psychiatric management (e.g., Atorvastatin, Metoprolol, Digoxin).\n\nHowever, the core requirement for predicting a future diagnosis of \"Disorders of Lipid Metabolism\" is the presence of *explicit* evidence of a lipid disorder or its active management, beyond the general use of lipid-lowering agents like Atorvastatin. While Atorvastatin is prescribed, this alone, as per the refined criteria, is insufficient to guarantee a future diagnosis of the underlying disorder.\n\nThe current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. Therefore, based strictly on the refined criteria that exclude prediction based solely on statin use or general risk factors, the evidence is insufficient to predict a future coding of \"Disorders of Lipid Metabolism.\"\n\nPrediction: No",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 232
+  }
+}

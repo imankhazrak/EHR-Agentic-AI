@@ -1,0 +1,12 @@
+{
+  "sample_id": 1424,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is overwhelmingly focused on the acute, severe complications of a premature, septic newborn. The diagnoses are centered around twin birth, neonatal jaundice, respiratory distress syndrome, septicemia, pulmonary hemorrhage, and various associated structural and metabolic issues (e.g., Patent ductus arteriosus, Atrial septal defect, Late metabolic acidosis). The prescribed medications and procedures are standard supportive care for these critical neonatal conditions (e.g., Ampicillin, Gentamicin, Indomethacin, mechanical ventilation, nutritional support).\n\nCrucially, the current record **lacks any explicit evidence** of a primary or actively managed lipid disorder. There are no diagnoses of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, the medication profile does not include any drugs explicitly used for lipid management (such as statins or fibrates). The presence of general risk factors like prematurity or the presence of cardiovascular issues (like PDA or ASD) are insufficient, according to the strict instructions, to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the strict criteria requiring explicit evidence of a lipid disorder, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3704,
+    "completion_tokens": 244
+  }
+}

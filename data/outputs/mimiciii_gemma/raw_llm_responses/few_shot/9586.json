@@ -1,0 +1,12 @@
+{
+  "sample_id": 9586,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates a diagnosis of \"Cerebral aneurysm, nonruptured\" and a procedure of \"Other repair of aneurysm.\" There is no explicit evidence in the current record\u2014such as a diagnosis of hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia\u2014that points to an existing or actively managed lipid disorder. The patient's current condition is related to vascular repair, not metabolic dysfunction. While the MIMIC-III critical care population has a general incidence of lipid disorders in subsequent visits, the strict instruction requires a strong and explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis. Since this explicit evidence is absent, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3418,
+    "completion_tokens": 152
+  }
+}

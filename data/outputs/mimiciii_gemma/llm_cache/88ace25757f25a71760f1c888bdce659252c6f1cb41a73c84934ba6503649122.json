@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder, such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are overwhelmingly related to severe, acute, and chronic conditions including Pneumonia, various forms of heart failure (acute on chronic diastolic heart failure, congestive heart failure), and malignant neoplasms (Other malignant lymphomas). While the patient is on various medications, including some that might be used in the management of cardiovascular risk factors (e.g., Diltiazem, Metoprolol Tartrate), and has a history of venous thrombosis, these factors alone, according to the Refined Criteria, are insufficient to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The Refined Criteria explicitly state that factors like the use of statins (which are not explicitly listed as a primary diagnosis or ongoing management focus here, though Aspirin is present) or general risk factors are NOT sufficient to predict a future diagnosis. Since explicit evidence of an existing or actively managed lipid disorder is absent, the prediction must be \"No.\"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4014,
+    "completion_tokens": 234
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9802,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis (such as hyperlipidemia) is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. While the patient also receives Atorvastatin, which is a medication for lipid management, the primary and sufficient evidence for the prediction is the existing diagnosis of hyperlipidemia. Therefore, the prediction is \"Yes\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3724,
+    "completion_tokens": 112
+  }
+}

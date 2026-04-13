@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, non-lipid-related critical care diagnoses and management. The primary diagnoses include Unspecified septicemia, Urinary tract infection, Congestive heart failure, Subendocardial infarction, and Sepsis. The medication profile includes several agents relevant to cardiovascular and infectious management (Heparin, Ticlopidine HCl, Levofloxacin, Furosemide, Lisinopril, Metoprolol).\n\nWhile the patient is prescribed **Atorvastatin** and **Cholestyramine**, these medications are used for lipid management. However, the strict instructions explicitly state that the *use* of statins alone is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (like hypercholesterolemia or hyperlipidemia) as a primary or secondary diagnosis, nor is there explicit evidence of an actively managed, existing lipid abnormality beyond the prescription of maintenance drugs.\n\nThe demonstration cases show that a diagnosis is coded when there is explicit evidence of the disorder (e.g., Case 2: Pure hypercholesterolemia). In this current record, the evidence is limited",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3642,
+    "completion_tokens": 256
+  }
+}

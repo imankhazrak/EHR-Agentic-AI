@@ -1,0 +1,12 @@
+{
+  "sample_id": 8846,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is dominated by severe, acute, life-threatening conditions related to neurological emergencies (Subarachnoid hemorrhage, Meningitis, Bacteremia, Hemiplegia, Aphasia) and severe cardiovascular instability (Congestive heart failure). The medication profile is extensive, focusing on managing these acute crises (e.g., Metoprolol, Phenytoin, Labetalol, Vancomycin, Albumin).\n\nCrucially, the current record **lacks any explicit diagnosis or strong, ongoing management evidence of a primary lipid disorder** (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has Congestive Heart Failure (CHF), which is a known risk factor for dyslipidemia, the instructions strictly forbid predicting a future diagnosis based solely on CHF or general risk factors.\n\nThe provided demonstration cases show that a diagnosis of lipid disorder was coded in the next visit when there was explicit evidence of a lipid issue (Case 1, Case 2, Case 3). In the current record, the focus is entirely on infectious and hemorrhagic/neurological pathology. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that \"Disorders",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3794,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1775,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several serious comorbidities, including Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Congestive heart failure, unspecified; Diseases of tricuspid valve; Mitral valve disorders; and Iron deficiency anemia, unspecified. The patient is also receiving Atorvastatin, which is a medication used for lipid management. However, the strict instructions explicitly state that the use of statins alone is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Hyperlipoproteinemia.\" While the patient has risk factors (Diabetes, CHF), these factors alone are insufficient to meet the strict criteria for predicting a future diagnosis based on the provided guidelines. Therefore, despite the presence of risk factors and lipid-lowering medication, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3627,
+    "completion_tokens": 209
+  }
+}

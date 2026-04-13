@@ -1,0 +1,12 @@
+{
+  "sample_id": 11566,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions unrelated to primary lipid metabolism disorders. The diagnoses include: Other disorders of neurohypophysis; Acute kidney failure, unspecified; Hyperpotassemia; Thrombocytopenia, unspecified; Unspecified deficiency anemia; Asymptomatic human immunodeficiency virus [HIV] infection status; Unspecified viral hepatitis C without hepatic coma; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, in remission; Other alteration of consciousness; Bipolar disorder, unspecified; Unspecified personality disorder; Nonspecific elevation of levels of transaminase or lactic acid dehydrogenase [LDH].\n\nCrucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality. While the patient has severe liver disease (Alcoholic cirrhosis of liver), which is a risk factor for metabolic issues, the diagnosis itself is not coded as a lipid disorder.\n\nThe medications prescribed, such as traZODONE, Heparin, Emtricitabine-Tenofovir (Truvada), RiTONAvir, Darunavir, Nadolol, Lactulose, HydrOXYzine, Omeprazole, Neutra-Ph",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3607,
+    "completion_tokens": 256
+  }
+}

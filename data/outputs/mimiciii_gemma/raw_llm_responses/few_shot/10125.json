@@ -1,0 +1,12 @@
+{
+  "sample_id": 10125,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning:\nThe patient's current hospital visit record does not contain any explicit diagnoses of lipid disorders such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. The diagnoses are overwhelmingly focused on acute and chronic cardiovascular, renal, and pulmonary issues (e.g., diastolic heart failure, acute kidney failure, hypertension, asthma).\n\nThe medications prescribed, while extensive, do not include any lipid-lowering agents like statins or fibrates. The patient is receiving medications for heart failure (Furosemide), respiratory support (Albuterol, Ipratropium Bromide, Fluticasone Propionate, Salmeterol Xinafoate Diskus), renal support (Potassium Chloride, Magnesium Sulfate, Sodium Chloride 0.9% Flush), and gastrointestinal issues (Pantoprazole, Docusate Sodium, Lactulose).\n\nThe presence of general risk factors, such as unspecified essential hypertension and congestive heart failure, is noted. However, according to the strict instructions, these factors alone are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\", regardless of the",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3609,
+    "completion_tokens": 256
+  }
+}

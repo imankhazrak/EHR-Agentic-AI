@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic cardiovascular, renal, and metabolic crises. The primary diagnoses include Acute on chronic systolic heart failure, Subendocardial infarction, Congestive heart failure, Pneumonia, Diabetes with ketoacidosis, and Hypertensive chronic kidney disease stage V. The medication profile includes numerous agents for managing these conditions, such as Insulin, Furosemide, Labetalol HCl, Nitroglycerin, and Atorvastatin.\n\nWhile the patient is prescribed Atorvastatin, which is a lipid-lowering agent, the strict instructions mandate that the mere use of statins is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (e.g., hypercholesterolemia or hyperlipidemia) as a primary or secondary condition. The other diagnoses are related to cardiac, renal, and infectious processes.\n\nTherefore, based on the explicit evidence required by the instructions\u2014that a lipid disorder must be present or actively managed as a coded diagnosis\u2014and the absence of such explicit evidence in the current record, the prediction must be \"No\", despite the patient's high-risk",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3675,
+    "completion_tokens": 256
+  }
+}

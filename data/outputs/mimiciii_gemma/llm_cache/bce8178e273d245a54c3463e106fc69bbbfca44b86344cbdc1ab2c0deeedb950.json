@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current hospital visit record indicates a severe acute cardiovascular event, specifically an Acute myocardial infarction of other inferior wall, initial episode of care, along with associated diagnoses like Cardiac complications, not elsewhere classified, Coronary atherosclerosis of native coronary artery, and Atrial fibrillation. The patient is receiving extensive supportive and acute care, including multiple medications for cardiac and general stabilization (Metoprolol, Lorazepam, Furosemide, Captopril, Aspirin EC, etc.).\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication is a treatment for hypercholesterolemia/dyslipidemia. However, according to the strict instructions provided, the mere use of statins is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism\" in the next visit.\n\nThe current diagnoses focus overwhelmingly on the acute ischemic and arrhythmic pathology (AMI, CAD, AFib, Hypertension). There is **no explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current visit record.\n\nTherefore, based on the strict criteria that require explicit evidence of a lipid disorder (not just the use of a lipid-lowering drug or general risk factors), the",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3728,
+    "completion_tokens": 256
+  }
+}

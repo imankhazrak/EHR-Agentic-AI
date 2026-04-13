@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, life-threatening conditions, including multiple malignant neoplasms (brain, bone, kidney), acute pulmonary embolism, acute kidney failure, and severe coagulopathy. The medication profile includes various supportive and anti-coagulant agents (Heparin, Enoxaparin, Warfarin, Diltiazem, Metoprolol), which are standard for managing these critical conditions. Crucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia or hyperlipidemia). Furthermore, the medication list does not explicitly list any lipid-lowering pharmacotherapy (like statins, which would be a secondary supportive factor). Based on the strict [Refined Criteria] and the instruction to prioritize explicit diagnostic evidence over inferred risk factors, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit. The patient's high-risk status due to malignancy and coagulopathy does not automatically translate into a coded lipid disorder diagnosis without specific evidence in the record.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3879,
+    "completion_tokens": 241
+  }
+}

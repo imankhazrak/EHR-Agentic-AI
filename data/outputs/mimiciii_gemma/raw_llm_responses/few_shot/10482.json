@@ -1,0 +1,12 @@
+{
+  "sample_id": 10482,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current visit record contains several diagnoses and procedures related to severe gastrointestinal, infectious, and cardiovascular issues. Specifically, the diagnoses include:\n- Acute vascular insufficiency of intestine; Perforation of intestine; Other severe protein-calorie malnutrition; Peritonitis (acute) generalized; Other postoperative infection; Malignant neoplasm of head of pancreas; Hemorrhage complicating a procedure; Cellulitis and abscess of trunk; Old myocardial infarction; Aortocoronary bypass status; Percutaneous transluminal coronary angioplasty status; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Pressure ulcer, lower back; Pressure ulcer, stage II; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Occlusion and stenosis of carotid artery without mention of cerebral infarction.\n\nWhile the diagnosis \"Other and unspecified hyperlipidemia\" is explicitly present in the current record, the strict instructions for this prediction state:\n- Answer \"Yes\" ONLY if there is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed (e.g., hypercholesterolemia, hyperlipidemia,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3955,
+    "completion_tokens": 256
+  }
+}

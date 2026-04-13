@@ -1,0 +1,12 @@
+{
+  "sample_id": 8640,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Other and unspecified hyperlipidemia.\" According to the instructions, a diagnosis of hyperlipidemia is strong and explicit evidence that a lipid disorder is present and likely to be diagnosed in the next hospital visit. Furthermore, the patient is being managed with \"Atorvastatin,\" a medication specifically used for lipid management, which supports the ongoing nature of this condition. While the instructions caution against predicting a diagnosis based solely on statin use, the presence of the explicit hyperlipidemia diagnosis in the current record provides the necessary strong and explicit evidence to predict a future coding of this diagnosis. The other diagnoses, such as \"Coronary atherosclerosis\" and \"Unspecified essential hypertension,\" are risk factors but do not, on their own, meet the strict criteria for predicting a future lipid disorder diagnosis. The explicit diagnosis of hyperlipidemia is the determining factor.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3684,
+    "completion_tokens": 186
+  }
+}

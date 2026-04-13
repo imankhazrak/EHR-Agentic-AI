@@ -1,0 +1,12 @@
+{
+  "sample_id": 5635,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute metabolic and infectious crises, including Diabetes with ketoacidosis, Acute pancreatitis, and Acute kidney failure. While the patient has several risk factors for lipid disorders, such as uncontrolled Diabetes and Unspecified essential hypertension, the current record lacks any explicit evidence of a diagnosed lipid abnormality (e.g., hypercholesterolemia or hyperlipidemia). Furthermore, the patient is not currently receiving any lipid-specific medications (like statins or fibrates), and no procedures related to lipid metabolism have been performed. According to the strict guidelines provided, predicting a future diagnosis requires explicit evidence of an existing or actively managed lipid disorder. Since the current record only reflects acute, non-lipid-specific pathology, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3491,
+    "completion_tokens": 164
+  }
+}

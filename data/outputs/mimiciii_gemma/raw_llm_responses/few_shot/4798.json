@@ -1,0 +1,12 @@
+{
+  "sample_id": 4798,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record primarily details severe acute respiratory and cardiovascular complications, including:\n1. **Respiratory Issues:** Other pulmonary insufficiency, not elsewhere classified; Pneumonitis due to inhalation of food or vomitus; Chronic airway obstruction, not elsewhere classified.\n2. **Cardiovascular Issues:** Congestive heart failure, unspecified; Coronary atherosclerosis of native coronary artery; Cardiac pacemaker in situ.\n3. **Other Comorbidities:** Other convulsions.\n\nThe record **does not contain any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). Furthermore, the patient's medication profile is recorded as \"None recorded,\" meaning there is no explicit ongoing management of a lipid disorder via medications like statins or fibrates.\n\nAccording to the strict guidelines provided, predicting a future diagnosis of \"Disorders of Lipid Metabolism\" requires **strong and explicit evidence** of an existing or actively managed lipid disorder. Since the current record is devoid of this specific evidence, even though the patient has significant cardiovascular risk factors (CHF, Coronary Atherosclerosis), these factors alone are insufficient to predict the coding of a lipid disorder in the next visit. Therefore, the prediction must",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3497,
+    "completion_tokens": 256
+  }
+}

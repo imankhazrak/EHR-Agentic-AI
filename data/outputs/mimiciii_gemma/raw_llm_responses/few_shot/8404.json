@@ -1,0 +1,12 @@
+{
+  "sample_id": 8404,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning:\nThe prediction hinges on the explicit presence of a diagnosis related to lipid abnormalities in the current visit record, which strongly suggests that this condition is actively being managed and is likely to be coded in the next visit.\n\n1. **Identification of Explicit Lipid Disorder Diagnosis:** The current visit record explicitly lists the diagnosis: **\"Other and unspecified hyperlipidemia\"**. This meets the primary criterion for predicting a future diagnosis, as it is an explicit coding of a lipid disorder.\n\n2. **Analysis of Comorbidities and Risk Factors:** The patient presents with numerous high-risk comorbidities commonly associated with lipid disorders, which reinforces the clinical relevance of the existing diagnosis:\n    * **Obesity:** Body Mass Index 33.0-33.9, adult.\n    * **Metabolic Syndrome Components:** Unspecified essential hypertension and Diabetes mellitus without mention of complication, type II or unspecified type.\n    * **Cardiovascular Risk:** While the primary focus of the current visit is infectious/surgical, the presence of hypertension and diabetes places the patient in a high-risk category for underlying cardiovascular and metabolic issues.\n\n3. **Analysis of Medication Profile:** The medication list includes **\"Simvastatin\"** and **\"Docusate Sodium\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3890,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3054,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes **\"Other and unspecified hyperlipidemia.\"** This diagnosis directly falls under the definition of \"Disorders of Lipid Metabolism\" (CCS category 53). Furthermore, the patient is actively managed with **\"Pravastatin,\"** a lipid-lowering medication, which indicates ongoing clinical management of a hyperlipidemic condition. While the patient has numerous other severe comorbidities (septicemia, acute respiratory failure, kidney failure, etc.), the explicit coding of a hyperlipidemia diagnosis provides the necessary strong and explicit evidence required by the instructions, overriding the general risk factors alone. Therefore, the prediction is \"Yes.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3954,
+    "completion_tokens": 165
+  }
+}

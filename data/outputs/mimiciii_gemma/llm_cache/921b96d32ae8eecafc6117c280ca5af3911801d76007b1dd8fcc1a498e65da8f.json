@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute critical care events, including multiple closed fractures (skull, radius, hand), severe neurological complications (subarachnoid, subdural, extradural hemorrhage, cerebral edema, encephalopathy), acute respiratory failure, and multi-organ support (ventilator, hydrocephalus).\n\nWhile the medication list includes **Atorvastatin**, which is a lipid-lowering agent, and the patient has **Coronary atherosclerosis of native coronary artery**, these factors alone, as per the strict instructions, are **insufficient** to explicitly predict a future diagnosis of \"Disorders of Lipid Metabolism\" being coded in the next visit.\n\nThe strict rule mandates that we must look for *explicit* evidence of a lipid disorder (e.g., documented hypercholesterolemia, hyperlipidemia, or active management of a primary lipid abnormality) beyond the mere presence of a statin or a history of CAD. Since the current record does not explicitly document a primary lipid abnormality diagnosis, the prediction must be \"No,\" despite the high-risk profile suggested by the CAD history and the use of Atorvastatin.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3855,
+    "completion_tokens": 242
+  }
+}

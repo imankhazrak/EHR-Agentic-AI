@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record shows several serious diagnoses, including Orchitis, epididymitis, and epididymo-orchitis with abscess, Bacteremia, and other primary cardiomyopathies. The patient is also being treated for Coronary atherosclerosis and Unspecified essential hypertension, which are known risk factors for lipid disorders. Furthermore, the patient is prescribed Atorvastatin, a statin used for lipid management.\n\nHowever, according to the strict instructions, the mere presence of risk factors (hypertension, coronary atherosclerosis) or the use of lipid-lowering medications (Atorvastatin) is NOT sufficient evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be explicitly coded in the patient's NEXT hospital visit. The instructions explicitly state that these factors alone are insufficient.\n\nThe current diagnoses focus heavily on infectious processes (orchitis, bacteremia) and acute/chronic cardiovascular issues (cardiomyopathies, coronary atherosclerosis). While the patient is on Atorvastatin, this medication is a treatment, not an explicit diagnosis of the disorder itself. Since there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other specific lipid abnormality coded in the current record, the prediction must be \"No\" based",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3591,
+    "completion_tokens": 256
+  }
+}

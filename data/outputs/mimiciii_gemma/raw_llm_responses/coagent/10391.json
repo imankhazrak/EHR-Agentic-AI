@@ -1,0 +1,12 @@
+{
+  "sample_id": 10391,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and life-threatening conditions, primarily related to neurological emergencies (Subarachnoid hemorrhage, Obstructive hydrocephalus, Acute venous embolism and thrombosis) and systemic failures (Acute respiratory failure, Unspecified protein-calorie malnutrition, Candidiasis of mouth). The medication and procedure lists reflect intensive care management for these acute crises (e.g., Amiodarone, Nimodipine, Endovascular embolization, Continuous invasive mechanical ventilation).\n\nCrucially, the current visit record **lacks any explicit diagnostic coding** for lipid abnormalities such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia.\n\nApplying the [Refined Criteria] and the strict rules provided:\n*   **Criterion 1 & 4 (Prioritize explicit diagnostic coding):** Since there is no explicit diagnosis of a lipid disorder in the current record, the primary evidence required to predict a future diagnosis is absent.\n*   **Criterion 2 (Evaluate lipid-lowering pharmacotherapy):** The medication list includes various agents (e.g., Insulin, Heparin, various antibiotics) but **does not explicitly list lipid-lowering pharmacotherapy",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4081,
+    "completion_tokens": 256
+  }
+}

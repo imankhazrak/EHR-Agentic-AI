@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current visit record shows several significant comorbidities, including Atherosclerosis of native arteries of the extremities with ulceration, Congestive heart failure, unspecified, Chronic obstructive asthma, unspecified, Ulcer of other part of foot, Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, and Unspecified essential hypertension. Furthermore, the patient is prescribed Atorvastatin, which is a medication used for lipid management.\n\nHowever, according to the strict instructions provided, the mere prescription of Atorvastatin or the presence of general risk factors (like diabetes or hypertension) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that we must look for *explicit* evidence of an existing or actively managed lipid disorder (like hypercholesterolemia or hyperlipidemia) coded in the current record, not just the use of a lipid-lowering drug.\n\nSince the current diagnoses list does not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid disorder diagnosis, and the presence of Atorvastatin alone is insufficient evidence for a future diagnosis according to the rules, the prediction must be \"No.\" The high-risk profile is noted,",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3644,
+    "completion_tokens": 256
+  }
+}

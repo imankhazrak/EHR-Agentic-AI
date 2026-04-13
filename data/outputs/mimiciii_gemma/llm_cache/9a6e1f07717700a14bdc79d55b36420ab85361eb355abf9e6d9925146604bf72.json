@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute critical care diagnoses, primarily involving respiratory and cardiovascular failure. The explicit diagnoses recorded are: Chronic obstructive asthma with status asthmaticus, Pneumonia, organism unspecified, Bronchiectasis with acute exacerbation, Congestive heart failure, unspecified, Acute respiratory failure, Atrial fibrillation, Unspecified essential hypertension, and Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled.\n\nCrucially, there is **no explicit diagnosis** of any lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) coded in the current visit record.\n\nFurthermore, the medication profile recorded is **None recorded**, meaning there is no evidence of lipid-lowering pharmacotherapy (like statins) being administered, which would serve as a secondary supportive factor.\n\nThe patient does have several risk factors commonly associated with lipid disorders, such as Unspecified essential hypertension and Diabetes mellitus, and they are currently managed for Congestive heart failure and Atrial fibrillation. However, according to the [Refined Criteria] and the strict rules provided, these factors alone\u2014comorbidities and general risk factors\u2014",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3711,
+    "completion_tokens": 256
+  }
+}

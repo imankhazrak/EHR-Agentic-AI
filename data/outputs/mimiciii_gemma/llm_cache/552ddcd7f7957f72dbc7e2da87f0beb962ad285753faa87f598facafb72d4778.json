@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe cardiovascular disease (diastolic and systolic heart failure, coronary atherosclerosis, atrial fibrillation, hypertensive kidney disease) and respiratory issues (influenza, chronic airway obstruction). The medication profile includes standard treatments for these conditions (Furosemide, Amiodarone, Metoprolol, etc.). Crucially, the current record **lacks any explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder. While the patient has multiple high-risk comorbidities (hypertension, CKD, CAD), the strict instruction is to predict a *coded diagnosis* of a lipid disorder, not general risk. Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\".\n\nPrediction: No",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3914,
+    "completion_tokens": 176
+  }
+}

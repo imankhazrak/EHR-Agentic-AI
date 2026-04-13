@@ -1,0 +1,12 @@
+{
+  "sample_id": 8236,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current visit record contains explicit evidence of a lipid disorder diagnosis, which strongly supports a future diagnosis of \"Disorders of Lipid Metabolism.\" Specifically, the diagnosis list includes \"Other and unspecified hyperlipidemia.\" According to the strict rules provided, the presence of an explicit lipid disorder diagnosis is the strongest and most explicit evidence required to answer \"Yes.\" While the patient has numerous other comorbidities (e.g., Paroxysmal ventricular tachycardia, Acute kidney failure, Chronic systolic heart failure, Diabetes mellitus), these factors alone are insufficient to meet the criteria for a \"Yes\" prediction. The explicit diagnosis of \"Other and unspecified hyperlipidemia\" directly satisfies the requirement for strong and explicit evidence of an existing or actively managed lipid disorder, making a future coding of \"Disorders of Lipid Metabolism\" highly probable.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3899,
+    "completion_tokens": 167
+  }
+}

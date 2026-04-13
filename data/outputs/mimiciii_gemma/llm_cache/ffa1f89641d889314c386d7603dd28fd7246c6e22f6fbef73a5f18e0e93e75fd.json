@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic cardiovascular and pulmonary issues, including Mitral valve insufficiency, aortic valve stenosis, Rheumatic heart failure, Paroxysmal ventricular tachycardia, and Pneumonia. The patient has undergone major cardiac and pulmonary interventions, such as aortic valve replacement and coronary bypass. While the patient has Diabetes mellitus, which is a known risk factor for lipid disorders, and the overall clinical picture is high-risk, there is **no explicit diagnostic coding** for any lipid abnormality (e.g., hypercholesterolemia, hyperlipidemia) present in the current diagnoses list. Furthermore, the patient's medication list is recorded as \"None recorded,\" meaning there is **no evidence of lipid-lowering pharmacotherapy** (like statins) being administered to manage a known lipid disorder. According to the [Refined Criteria] and the strict rules provided, explicit diagnostic evidence of an existing or actively managed lipid disorder is required to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Since this explicit evidence is absent, the prediction must be \"No,\" despite the patient's high-risk status due to other comorbidities.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3771,
+    "completion_tokens": 250
+  }
+}

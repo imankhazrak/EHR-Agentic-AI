@@ -1,0 +1,12 @@
+{
+  "sample_id": 5413,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current hospital visit record is dominated by severe acute cardiac events (Acute myocardial infarction, Cardiogenic shock, Acute systolic heart failure, Coronary atherosclerosis) and associated complications (Mitral valve disorders, Pneumonia, Acquired coagulation factor deficiency). While the patient is receiving **Atorvastatin** (a lipid-lowering agent), and has a history of **Unspecified essential hypertension** (a general risk factor for dyslipidemia), the record **lacks explicit evidence** of an existing or actively managed lipid disorder diagnosis (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia) that would warrant a future coding of \"Disorders of Lipid Metabolism.\" According to the strict guidelines, the use of statins alone, or the presence of general risk factors like hypertension, is **insufficient** to predict a future diagnosis of a lipid disorder. Therefore, based on the explicit evidence present in the current record, the prediction must be \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3928,
+    "completion_tokens": 199
+  }
+}

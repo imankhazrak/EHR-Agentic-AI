@@ -1,0 +1,12 @@
+{
+  "sample_id": 10176,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe trauma and neurological complications, specifically an open fracture of the base of the skull with associated subarachnoid, subdural, and extradural hemorrhage, dissection of an artery, and other dural tears. The medication and procedure lists reflect intensive care management for these acute life-threatening conditions (e.g., HYDROmorphone, Dexamethasone, continuous invasive mechanical ventilation, clipping of aneurysm, insertion of skull plate).\n\nCrucially, the current record contains **no explicit evidence** of a primary or actively managed lipid disorder. There are no diagnoses such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. Furthermore, while the patient is receiving various medications, none of the prescribed drugs are explicitly for lipid management (e.g., statins or fibrates). The medications listed are for pain control, infection management (Vancomycin, Cephalexin, Gentamicin), neurological support (Dexamethasone, Mannitol), and general stabilization (Insulin, Dextrose, etc.).\n\nBased on the strict instructions provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder. Since the current record lacks",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3667,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "Yes\nReasoning:\nThe prediction is based on the explicit presence of diagnoses related to lipid abnormalities in the current visit record, which strongly suggests that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\n1. **Explicit Lipid Disorder Evidence:** The current visit record explicitly lists the following diagnoses:\n    * **Pure hypercholesterolemia:** This is a direct and explicit diagnosis of a lipid abnormality.\n    * **Other and unspecified hyperlipidemia:** This is another direct and explicit diagnosis of a lipid abnormality.\n\n2. **Adherence to Prediction Rules:** The prediction rules strictly require answering \"Yes\" only if there is strong and explicit evidence of an existing or actively managed lipid disorder. The presence of \"Pure hypercholesterolemia\" and \"Other and unspecified hyperlipidemia\" meets this criterion perfectly, as they are not merely risk factors or the use of medications like statins.\n\n3. **Conclusion:** Since the patient is currently diagnosed with specific lipid disorders (hypercholesterolemia and hyperlipidemia), there is strong and explicit evidence that this diagnosis will be carried forward or explicitly coded as \"Disorders of Lipid Metabolism\" in the next hospital visit.\n\nThe other diagnoses (e.g., secondary malignant",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3877,
+    "completion_tokens": 256
+  }
+}

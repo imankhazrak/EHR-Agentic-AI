@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The current visit record indicates a complex array of diagnoses, including Coronary atherosclerosis, complications of transplanted kidney, and various infectious and metabolic issues. The patient is on multiple medications, including Atorvastatin (a statin) and Rosiglitazone Maleate (a thiazolidinedione), which are commonly used in the management of lipid and glucose disorders. However, the strict instruction is to predict the *coding* of the diagnosis \"Disorders of Lipid Metabolism\" in the *next* visit, and not to predict general clinical risk. The current diagnoses do not explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipoid Metabolism Disorder.\" While the presence of Atorvastatin and Rosiglitazone strongly suggests that lipid and glucose management is *ongoing* or *anticipated*, the explicit coding evidence required by the instructions is absent in the current record. Based on the demonstration cases, a future diagnosis is coded only when explicit lipid disorder evidence is present, not merely when lipid-lowering medications are prescribed for other reasons (like cardiovascular risk management). Therefore, without an explicit lipid disorder diagnosis in the current record, the prediction for the next visit is \"No\".",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3769,
+    "completion_tokens": 245
+  }
+}

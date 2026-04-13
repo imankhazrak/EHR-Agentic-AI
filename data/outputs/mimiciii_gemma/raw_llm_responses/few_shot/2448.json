@@ -1,0 +1,12 @@
+{
+  "sample_id": 2448,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe gastrointestinal and cardiovascular complications related to Volvulus, Aortic valve disorders, and acute intestinal insufficiency/obstruction. The diagnoses, medications, and procedures listed (e.g., Volvulus, Aortic valve disorders, Intestinal or peritoneal adhesions with obstruction, Intra-abdominal manipulation of small intestine) do not contain any explicit evidence of a primary or actively managed lipid disorder such as hypercholesterolemia or hyperlipidemia. While the patient is receiving general supportive care, including medications like Metoprolol (which can be used in cardiovascular disease), there are no statins, fibrates, or other explicit lipid-lowering agents prescribed, nor are there any diagnoses explicitly pointing to a metabolic lipid abnormality. Therefore, based strictly on the evidence required by the instructions\u2014that explicit lipid disorder evidence must be present\u2014the prediction for the next hospital visit is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3667,
+    "completion_tokens": 194
+  }
+}

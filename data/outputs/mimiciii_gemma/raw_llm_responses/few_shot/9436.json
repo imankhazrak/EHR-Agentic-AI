@@ -1,0 +1,12 @@
+{
+  "sample_id": 9436,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record shows several serious diagnoses, including Malignant neoplasm of other specified sites of bladder, Systolic heart failure, Acute posthemorrhagic anemia, Malignant neoplasm of prostate, Gross hematuria, Congestive heart failure, unspecified, and Diabetes mellitus without mention of complication, type II or unspecified type. The patient is also receiving various medications, including Simvastatin, which is a lipid-lowering agent.\n\nHowever, according to the strict instructions, the mere prescription of a statin (Simvastatin) is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state a lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary or active condition requiring coding. While the patient has risk factors (Diabetes, CHF), these alone are insufficient to meet the strict criteria for predicting a future diagnosis based on the provided demonstration cases and instructions. Therefore, the prediction is \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3647,
+    "completion_tokens": 211
+  }
+}

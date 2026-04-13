@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe infectious, inflammatory, and organ failure conditions. The primary diagnoses include Methicillin resistant Staphylococcus aureus septicemia, Acute kidney failure, Acute and chronic respiratory failure, Methicillin resistant pneumonia due to Staphylococcus aureus, Acute on chronic diastolic heart failure, Obstructive chronic bronchitis with (acute) exacerbation, Hyperosmolality and/or hypernatremia, Severe sepsis, Atrial fibrillation, Congestive heart failure, unspecified, Obstructive sleep apnea (adult)(pediatric), Unspecified essential hypertension, Unspecified hereditary and idiopathic peripheral neuropathy, and Cardiac pacemaker in situ.\n\nWhile the patient is receiving medications that are used for lipid management, specifically **Simvastatin** and **Atorvastatin**, these medications alone, as per the strict instructions, are **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current diagnoses do not explicitly state a lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a primary or secondary condition. The presence of hypertension and cardiovascular disease (CHF, AF) are risk factors, but the instructions explicitly state that these factors alone are **not sufficient** to predict a future diagnosis.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3852,
+    "completion_tokens": 256
+  }
+}

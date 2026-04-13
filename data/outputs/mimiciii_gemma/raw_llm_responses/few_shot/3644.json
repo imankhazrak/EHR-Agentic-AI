@@ -1,0 +1,12 @@
+{
+  "sample_id": 3644,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record does not contain any explicit diagnosis of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The diagnoses listed are Malignant essential hypertension, Diabetes with neurological manifestations, type I, peripheral autonomic neuropathy, gastroparesis, unspecified kidney disorder, and depressive disorder. While the patient has several significant comorbidities, including hypertension and diabetes, which are known risk factors for lipid disorders, the instructions explicitly state that the mere presence of these risk factors, or the use of associated medications (like Labetalol or Lisinopril), is NOT sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Therefore, based strictly on the evidence provided in the current visit record, there is no strong and explicit indication that this diagnosis will be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3556,
+    "completion_tokens": 179
+  }
+}

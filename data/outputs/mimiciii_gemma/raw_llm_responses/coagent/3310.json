@@ -1,0 +1,12 @@
+{
+  "sample_id": 3310,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis is conducted strictly according to the provided [Refined Criteria], which mandates prioritizing explicit diagnostic coding for lipid abnormalities.\n    *   **Explicit Diagnostic Evidence:** Reviewing the [Current Visit Record] (Diagnoses made), there is no explicit diagnosis coded for hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53). The diagnoses listed relate primarily to complications of liver transplantation, infectious processes, surgical complications, and other systemic issues (e.g., Aneurysm of other visceral artery, Fistula of intestine).\n    *   **Lipid-Lowering Pharmacotherapy (Secondary Factor):** Reviewing the [Current Visit Record] (Medications prescribed), there is no explicit mention of lipid-lowering agents such as statins (e.g., Atorvastatin, Simvastatin) or other agents specifically managing hyperlipidemia. The medication list is extensive and covers infectious, cardiac, and supportive care needs (e.g., Caspofungin, Tacrolimus, Heparin, Furosemide).\n    *   **Comorbidities (Tertiary Risk Factor):** While the patient has numerous severe comorbidities (e.g., Com",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4132,
+    "completion_tokens": 256
+  }
+}

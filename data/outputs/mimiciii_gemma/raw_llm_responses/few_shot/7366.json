@@ -1,0 +1,12 @@
+{
+  "sample_id": 7366,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record indicates several significant comorbidities, including Diabetes with ketoacidosis, type I, unspecified, Anemia, Unspecified essential hypertension, and Unspecified disorder of kidney and ureter. The patient is receiving multiple medications, including Atenolol, Humulin-R Insulin, NS, Insulin, Metoprolol, Atorvastatin, Losartan Potassium, Cyanocobalamin, Heparin, Bisacodyl, Docusate Sodium, Acetaminophen, Neutra-Phos, Potassium Chloride, Calcium Carbonate, Magnesium Sulfate, Aspirin EC, Nitroglycerin SL, and Zolpidem Tartrate. The medication profile includes Atorvastatin, which is a lipid-lowering agent, suggesting that the clinical team is managing or is aware of potential lipid abnormalities. However, the strict instruction for this prediction is to answer \"Yes\" *only* if there is strong and explicit evidence that a lipid disorder (like hypercholesterolemia or hyperlipidemia) is *already* coded as a diagnosis, or if there is clear ongoing management of such a condition that explicitly points to a diagnosed lipid disorder. The current diagnoses list does not explicitly include \"Hypercholesterolemia,\" \"Hyperlipidemia,\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3535,
+    "completion_tokens": 256
+  }
+}

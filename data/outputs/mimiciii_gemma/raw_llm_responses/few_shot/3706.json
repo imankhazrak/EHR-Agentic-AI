@@ -1,0 +1,12 @@
+{
+  "sample_id": 3706,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic cardiovascular and pulmonary diseases. The diagnoses include Aortic valve disorders, Chronic airway obstruction, Pneumonitis, Congestive heart failure, Peripheral vascular complications, Coronary atherosclerosis, Subendocardial infarction, and Unspecified essential hypertension. The medication profile includes several agents for managing these conditions, such as Carvedilol, Lisinopril, Furosemide, and Aspirin. Crucially, the patient is prescribed **Simvastatin**, which is a lipid-lowering agent (statin).\n\nHowever, according to the strict instructions provided, the mere prescription of a statin (Simvastatin) is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" Furthermore, the current diagnoses do not explicitly state hypercholesterolemia, hyperlipidemia, or any other primary lipid disorder. The patient's high-risk status due to cardiovascular disease and hypertension is noted, but this general risk factor alone is insufficient to meet the strict criteria for predicting a future coded diagnosis.\n\nTherefore, based on the explicit evidence required by the guidelines, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3839,
+    "completion_tokens": 246
+  }
+}

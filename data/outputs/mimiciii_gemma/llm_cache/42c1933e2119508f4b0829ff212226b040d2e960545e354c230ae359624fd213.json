@@ -1,0 +1,10 @@
+{
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by diagnoses related to severe chronic liver disease (Hepatic encephalopathy, Portal hypertension, Esophageal varices, Chronic liver disease sequelae) and severe chronic heart failure (Chronic combined systolic and diastolic heart failure, Congestive heart failure). The patient also has Sarcoidosis and other chronic conditions.\n\nCrucially, the current visit record **does not contain an explicit diagnosis** of hypercholesterolemia, hyperlipidemia, or any other specific lipid disorder (CCS category 53).\n\nThe patient is on several medications, including Diltiazem and Nadolol, which manage heart failure, and Lactulose/Rifaximin, which manage hepatic encephalopathy. While the patient has multiple cardiovascular risk factors (CHF, etc.), the instructions strictly forbid predicting a future diagnosis based solely on the use of statins (which are absent in this record) or general cardiovascular risk factors.\n\nSince there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the strict criteria require a prediction of \"No\" for the next hospital visit, despite the patient's high overall clinical risk profile. The demonstration cases show that even when high-risk, a future diagnosis",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3633,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including Intestinal infection due to Clostridium difficile, Unspecified septicemia, Acute respiratory failure, Acute kidney failure, Severe sepsis, and Hemorrhage complicating a procedure. The patient also has several significant comorbidities, such as Diabetes with neurological manifestations, Unspecified essential hypertension, and Polyneuropathy in diabetes. While these conditions are risk factors for lipid disorders, the current record does not contain any explicit diagnosis of a lipid abnormality (e.g., hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). The medications prescribed, such as Metoprolol Tartrate and Warfarin, are used for managing hypertension and coagulation, not for primary lipid management. Furthermore, the patient is not explicitly managed for a lipid disorder in this record. Based on the strict instructions provided, which mandate explicit evidence of an existing or actively managed lipid disorder to predict a future diagnosis, the absence of such evidence leads to the prediction of \"No\". The patient's high-risk status due to sepsis and kidney failure does not automatically translate into a coded diagnosis of \"Disorders of Lipid Metabolism\" in the next visit, as per the demonstration cases and strict guidelines.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3840,
+    "completion_tokens": 254
+  }
+}

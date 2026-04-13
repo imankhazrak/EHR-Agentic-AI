@@ -1,0 +1,12 @@
+{
+  "sample_id": 1505,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is overwhelmingly focused on severe, acute, and chronic gastrointestinal and cardiovascular complications, as well as severe systemic infections (Pneumonia, Hemorrhage, Sepsis/Vascular Insufficiency). The primary diagnoses are: Chronic vascular insufficiency of intestine, Hemoperitoneum, Pneumonia, Congestive heart failure, and Anemia.\n\nCrucially, while the patient is prescribed **Atorvastatin** (a lipid-lowering agent), the strict instructions dictate that the mere use of a statin is **NOT** sufficient evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nFurthermore, the current diagnoses do not explicitly state a primary lipid disorder (such as hypercholesterolemia or hyperlipidemia) as a coded diagnosis. The presence of Atorvastatin suggests *management* of a potential lipid issue, but without an explicit diagnosis of the underlying disorder in the current record, and adhering strictly to the rule that statin use alone is insufficient, the evidence for a future coded diagnosis is absent.\n\nThe other medications and procedures are related to managing acute organ failure (Furosemide, Norepinephrine, etc.) and surgical recovery, not explicitly confirming a primary",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3894,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5419,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current visit record shows numerous serious diagnoses and is managed for several critical conditions, including Pneumonia, Coronary Atherosclerosis, and Chronic Vascular Insufficiency. The medication profile includes several cardiovascular and anti-inflammatory agents (Simvastatin, Atorvastatin, Lisinopril, etc.).\n\nHowever, based on the strict instructions provided, the prediction must rely on *explicit* evidence of an existing or actively managed lipid disorder, not merely the use of lipid-lowering medications (statins) or the presence of cardiovascular risk factors.\n\n1. **Review of Explicit Lipid Disorder Evidence:** The current diagnoses list includes \"Abdominal pain, generalized,\" \"Pneumonia, organism unspecified,\" \"Chronic vascular insufficiency of intestine,\" and \"Coronary atherosclerosis of native coronary artery.\" None of these diagnoses explicitly state \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or \"Lipoid Metabolism Disorder.\"\n2. **Review of Medication Evidence:** The patient is prescribed \"Simvastatin\" and \"Atorvastatin.\" While these are lipid-management drugs, the instructions explicitly state that the *use* of statins alone is **NOT** sufficient evidence to predict a future diagnosis of the disorder itself.\n3. **",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3617,
+    "completion_tokens": 256
+  }
+}

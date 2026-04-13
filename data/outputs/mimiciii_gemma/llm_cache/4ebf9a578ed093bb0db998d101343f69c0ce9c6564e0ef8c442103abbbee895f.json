@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, and chronic conditions related to cardiovascular events (Acute myocardial infarction of other specified sites, Congestive heart failure, Atrial fibrillation), severe alcohol use disorder (Alcohol withdrawal delirium, Alcohol abuse, continuous), and respiratory/pulmonary complications (Acute respiratory failure, Pneumonitis, Chronic airway obstruction, Acute kidney failure).\n\nCrucially, the current record **lacks any explicit diagnostic coding** for a lipid disorder (e.g., hypercholesterolemia, hyperlipidemia, or lipoid metabolism disorder).\n\nWhile the patient is prescribed **Atorvastatin** (a lipid-lowering agent), according to the [Refined Criteria] and [Prediction Clarification], the mere use of statins is **not sufficient** evidence to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe other factors present\u2014such as cardiovascular disease and general risk factors\u2014are explicitly excluded by the guidelines as being insufficient on their own to predict the future coding of this specific diagnosis.\n\nTherefore, based on the strict hierarchy of evidence required, the absence of explicit diagnostic evidence for a lipid disorder in the current record leads to the prediction of \"",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4017,
+    "completion_tokens": 256
+  }
+}

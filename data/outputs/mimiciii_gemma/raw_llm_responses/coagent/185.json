@@ -1,0 +1,12 @@
+{
+  "sample_id": 185,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The patient's current hospital visit record is dominated by severe, acute, non-lipid-related critical care issues. The primary diagnoses include Portal hypertension, Acute gastric ulcer with hemorrhage, Other shock, Acute posthemorrhagic anemia, and various severe infections (Methicillin susceptible pneumonia, etc.). The medication and procedure lists reflect intensive management of these acute conditions (e.g., Vancomycin, Linezolid, Octreotide Acetate, Intra-abdominal venous shunt, Mechanical ventilation). Crucially, there is **no explicit diagnostic coding** for any lipid abnormality (such as hypercholesterolemia or hyperlipidemia) present in the current record. Furthermore, the medication list does not contain any explicit lipid-lowering pharmacotherapy (like statins) that would serve as a secondary supportive factor, nor is there a clear, actively managed lipid disorder evident in the constellation of comorbidities. Following the strict [Refined Criteria], which prioritizes explicit diagnostic evidence over inferred risk factors, the absence of any such evidence leads to the conclusion that a diagnosis of \"Disorders of Lipid Metabolism\" is unlikely to be coded in the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4034,
+    "completion_tokens": 243
+  }
+}

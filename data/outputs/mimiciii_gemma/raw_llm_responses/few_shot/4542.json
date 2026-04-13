@@ -1,0 +1,12 @@
+{
+  "sample_id": 4542,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The current visit record for the patient is focused entirely on neonatal care, including diagnoses such as \"Single liveborn, born in hospital, delivered without mention of cesarean section; Other preterm infants, 2,500 grams and over; 35-36 completed weeks of gestation; Need for prophylactic vaccination and inoculation against viral hepatitis.\" There are no recorded medications or procedures that suggest an existing or actively managed lipid disorder, such as hypercholesterolemia, hyperlipidemia, or the use of lipid-lowering agents like statins. The instructions explicitly state that predicting a future diagnosis based solely on general risk factors (which are absent here) or the use of general medical care is insufficient. Therefore, based on the explicit evidence in the current record, there is no strong and explicit basis to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3460,
+    "completion_tokens": 192
+  }
+}

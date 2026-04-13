@@ -1,0 +1,12 @@
+{
+  "sample_id": 1778,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\nReasoning: The patient's current hospital visit record explicitly includes the diagnosis of \"Pure hypercholesterolemia.\" According to the [Target Definition], \"Disorders of Lipid Metabolism\" encompasses conditions such as hypercholesterolemia. Since the patient is explicitly diagnosed with a lipid disorder in the current visit, there is strong and explicit evidence that this diagnosis will be coded in the patient's next hospital visit, fulfilling the criteria for answering \"Yes.\" The other diagnoses (Intracerebral hemorrhage, Atrial flutter, Other convulsions, Aortocoronary bypass status) are related to cardiovascular and neurological events, but the presence of \"Pure hypercholesterolemia\" provides the necessary explicit evidence of a lipid disorder for the prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3439,
+    "completion_tokens": 153
+  }
+}

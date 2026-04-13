@@ -1,0 +1,12 @@
+{
+  "sample_id": 11406,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Yes\n1. Prediction: Yes\n2. Reasoning: The patient's current hospital visit record contains explicit evidence of lipid abnormalities, which strongly supports the prediction that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the next hospital visit.\n\nThe explicit evidence is found in the diagnoses made:\n- **\"Other and unspecified hyperlipidemia\"**: This diagnosis directly codes a lipid disorder, meeting the primary criterion for prediction.\n\nFurthermore, the patient is on lipid-lowering pharmacotherapy, which serves as a strong secondary supportive factor:\n- **\"Ezetimibe\"** and **\"Atorvastatin\"**: These medications are prescribed specifically for managing hyperlipidemia, reinforcing the clinical context of a lipid disorder.\n\nWhile the patient has numerous severe comorbidities (Celiac disease, End stage renal disease, Congestive heart failure, Diabetes, etc.), the presence of the explicit diagnosis of \"Other and unspecified hyperlipidemia\" is the decisive factor, as per the Refined Criteria (1) and (4). The combination of explicit diagnosis and active lipid management makes a future coding of this diagnosis highly probable.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4111,
+    "completion_tokens": 229
+  }
+}

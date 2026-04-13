@@ -1,0 +1,10 @@
+{
+  "text": "No\n1. Prediction: No\n2. Reasoning: The prediction is \"No\" because the current hospital visit record does not contain any explicit diagnostic coding for \"Disorders of Lipid Metabolism\" (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). According to the [Refined Criteria] and the strict rules provided, explicit diagnostic evidence is the highest priority for predicting a future diagnosis. The patient's current diagnoses are dominated by severe renal and autoimmune conditions: Hypertensive chronic kidney disease, End stage renal disease, Systemic lupus erythematosus, and Anemia. While the patient is on several medications, including Warfarin and PredniSONE, and has undergone Hemodialysis, these factors alone\u2014such as the use of statins (which are not explicitly listed in the current medication profile, though some are in the demonstration cases) or general cardiovascular/renal risk factors\u2014are explicitly excluded by the strict rules from being sufficient evidence to predict a future diagnosis of a lipid disorder. Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the prediction must be \"No\", regardless of the patient's high-risk status based on other comorbidities.",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3812,
+    "completion_tokens": 245
+  }
+}

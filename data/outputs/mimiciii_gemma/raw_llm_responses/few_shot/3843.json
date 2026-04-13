@@ -1,0 +1,12 @@
+{
+  "sample_id": 3843,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current visit record does not contain any explicit evidence of an existing or actively managed lipid disorder. The diagnoses made include secondary malignant neoplasm of lung, cardiac complications, toxic myocarditis, and unspecified essential hypertension, which are general risk factors for dyslipidemia but do not constitute a diagnosis of a lipid disorder itself. The medications prescribed, while extensive, do not include any explicit lipid-lowering agents (such as statins or fibrates) that would strongly suggest an ongoing, managed lipid disorder. Therefore, based on the strict criteria provided, there is no strong and explicit evidence to predict that a diagnosis of \"Disorders of Lipid Metabolism\" will be coded in the patient's next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3658,
+    "completion_tokens": 148
+  }
+}

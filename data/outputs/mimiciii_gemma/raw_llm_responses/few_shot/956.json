@@ -1,0 +1,12 @@
+{
+  "sample_id": 956,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is dominated by severe, acute, life-threatening conditions, including Adult failure to thrive, Congestive heart failure, Acute respiratory failure, Unspecified septicemia, Severe sepsis, Acute kidney failure, Morbid obesity, and Obstructive sleep apnea. The medication profile includes numerous agents for managing these acute issues (e.g., Furosemide, Captopril, Levofloxacin, Vancomycin, Norepinephrine).\n\nCrucially, the current record **lacks explicit evidence** of an existing or actively managed primary lipid disorder, such as documented hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia. While the patient has several risk factors commonly associated with lipid disorders\u2014namely **Morbid obesity** and **Unspecified essential hypertension**\u2014the instructions strictly prohibit predicting a future diagnosis based solely on these general risk factors or the presence of cardiovascular comorbidities (like CHF).\n\nThe medication list does not contain any explicit lipid-lowering agents (such as statins or fibrates) that would serve as strong, explicit evidence of an ongoing, managed lipid disorder. Therefore, based on the strict criteria provided in the instructions, the evidence required to predict a future diagnosis of",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3776,
+    "completion_tokens": 256
+  }
+}

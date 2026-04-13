@@ -1,0 +1,12 @@
+{
+  "sample_id": 1083,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The patient's current hospital visit record is heavily focused on acute cardiovascular events and respiratory complications. The primary diagnoses include Acute myocardial infarction of other anterior wall, Coronary atherosclerosis, and Congestive heart failure. The procedures performed are extensive, involving stent insertion, cardiac catheterization, and mechanical ventilation, all related to managing severe coronary artery disease and heart failure.\n\nCrucially, the current visit record **lacks any explicit diagnosis** of a lipid disorder (such as hypercholesterolemia, hyperlipidemia, or hyperlipoproteinemia). While the patient has risk factors associated with cardiovascular disease (like tobacco use disorder), these factors alone, as per the strict instructions, are insufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nThe instructions explicitly state that the prediction should not be based solely on the use of statins (which are not recorded) or general risk factors (like tobacco use disorder or CHF). Since there is no explicit evidence of an existing or actively managed lipid disorder in the current record, the most logical and compliant prediction is \"No.\"",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3516,
+    "completion_tokens": 224
+  }
+}

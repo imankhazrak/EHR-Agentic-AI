@@ -1,0 +1,12 @@
+{
+  "sample_id": 4730,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record indicates diagnoses of Cerebral aneurysm, nonruptured; Congenital deficiency of other clotting factors; and Unspecified essential hypertension. The patient has undergone procedures related to vascular health (Other endovascular procedures on other vessels; Arteriography of cerebral arteries) and has no recorded medications for lipid management.\n\nAccording to the strict guidelines provided, a prediction of \"Yes\" requires strong and explicit evidence of an existing or actively managed lipid disorder (such as hypercholesterolemia or hyperlipidemia). The current record lacks any explicit diagnosis of a lipid disorder. While the patient has hypertension, which is a risk factor for dyslipidemia, the guidelines explicitly state that general risk factors alone are NOT sufficient to predict a future diagnosis of \"Disorders of Lipid Metabolism.\"\n\nTherefore, based on the absence of explicit lipid disorder evidence in the current visit record, the prediction must be \"No\".",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3442,
+    "completion_tokens": 189
+  }
+}

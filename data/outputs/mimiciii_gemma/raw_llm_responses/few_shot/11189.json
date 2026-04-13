@@ -1,0 +1,12 @@
+{
+  "sample_id": 11189,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\nReasoning: The patient's current hospital visit record is dominated by severe infectious and inflammatory processes, including Pneumonitis, Encephalopathy, Unspecified septicemia, Severe sepsis, Septic shock, and associated critical care measures (Septic shock, Other dependence on machines, supplemental oxygen, Septic shock). While the patient has several significant comorbidities that are known risk factors for lipid disorders, such as Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, Unspecified essential hypertension, and Coronary atherosclerosis of native coronary artery, these conditions alone do not constitute explicit evidence of an existing or actively managed lipid disorder (hypercholesterolemia, hyperlipidemia, etc.). The patient's medication profile includes Insulin, which is relevant to diabetes management, but there are no explicit lipid-lowering agents (like statins or fibrates) prescribed in the current record. Therefore, based on the strict criteria provided\u2014that explicit evidence of an existing or actively managed lipid disorder must be present to predict a future diagnosis\u2014the prediction must be \"No\", despite the high-risk profile.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3690,
+    "completion_tokens": 227
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 1254,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nReasoning: The current hospital visit record shows a complex set of diagnoses and treatments, primarily related to urinary tract issues (Calculus of kidney, Calculus of ureter, Ureteral catheterization, ESWL) and cardiovascular instability (Congestive heart failure, Heart valve replaced, Unspecified essential hypertension). The patient is also receiving various medications for pain management, anticoagulation (Warfarin, Heparin), and gastrointestinal support (Docusate Sodium, Lactulose).\n\nCrucially, while the patient is prescribed **Atorvastatin**, this medication alone, as per the strict instructions, is **not sufficient** to predict a future diagnosis of \"Disorders of Lipid Metabolism.\" The instructions explicitly state that the use of statins alone is not enough evidence to code a future diagnosis.\n\nFurthermore, there is no explicit diagnosis of hypercholesterolemia, hyperlipidemia, or any other primary lipid abnormality coded in the current visit record. The presence of hypertension and CHF are general risk factors, but they do not meet the strict criteria for predicting a future diagnosis of a *coded* lipid disorder.\n\nTherefore, based on the strict guidelines provided, the explicit evidence required to predict a future diagnosis of \"Disorders of Lipid Metabolism\" is absent.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3743,
+    "completion_tokens": 256
+  }
+}

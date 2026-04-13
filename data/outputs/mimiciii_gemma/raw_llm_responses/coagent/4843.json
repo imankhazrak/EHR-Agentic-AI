@@ -1,0 +1,12 @@
+{
+  "sample_id": 4843,
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "No\n1. Prediction: No\n2. Reasoning: The analysis of the patient's current hospital visit record reveals a complex constellation of severe, interconnected comorbidities, including Acute and subacute necrosis of liver, Subendocardial infarction, Congestive heart failure, Acute kidney failure, Atrial fibrillation, and Regional enteritis. The patient is receiving various medications, including Ezetimibe, which is a lipid-lowering agent.\n\nHowever, according to the [Refined Criteria] and the strict rules provided in the [Prediction Clarification], a diagnosis of \"Disorders of Lipid Metabolism\" must be explicitly present or strongly evidenced in the current record to predict a future diagnosis of the same.\n\nThe current diagnoses list does not explicitly code \"Hypercholesterolemia,\" \"Hyperlipidemia,\" or any other specific lipid disorder diagnosis. While the patient is receiving Ezetimibe (a lipid-lowering agent), the rules explicitly state that the mere use of lipid-lowering pharmacotherapy is NOT sufficient evidence to predict a future diagnosis of the disorder itself.\n\nTherefore, because explicit diagnostic evidence of a lipid disorder is absent in the current record, the prediction must be \"No\", adhering strictly to the hierarchy of evidence outlined in the [Refined Criteria] (",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3915,
+    "completion_tokens": 256
+  }
+}
