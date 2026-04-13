@@ -7,8 +7,9 @@ import math
 import shutil
 import tempfile
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
+import numpy as np
 import pandas as pd
 import torch
 from datasets import Dataset
@@ -21,9 +22,99 @@ from transformers import (
     TrainingArguments,
 )
 
+from src.evaluation.metrics import compute_metrics
 from src.utils.logging_utils import get_logger
 
 logger = get_logger(__name__)
+
+
+def _causal_lm_from_pretrained(model_name: str, *, smoke: bool) -> AutoModelForCausalLM:
+    """Load causal LM; smoke + CUDA uses a single device map to avoid meta/offload tensors that break PEFT save."""
+    if smoke and torch.cuda.is_available():
+        idx = int(torch.cuda.current_device())
+        kwargs: Dict[str, object] = {"device_map": {"": idx}}
+    else:
+        kwargs = {"device_map": "auto"}
+    return AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
+
+
+def _finetune_eval_prompt(narrative: str) -> str:
+    """Prompt through ``Prediction:\\n`` (matches finetuned test eval scoring)."""
+    return (
+        "Task: Predict whether Disorders of Lipid Metabolism will be present in the next visit.\n\n"
+        f"Patient record:\n{narrative}\n\n"
+        "Prediction:\n"
+    )
+
+
+def _collect_first_token_ids(tokenizer: AutoTokenizer, texts: List[str]) -> set[int]:
+    ids: set[int] = set()
+    for t in texts:
+        enc = tokenizer.encode(t, add_special_tokens=False)
+        if enc:
+            ids.add(enc[0])
+    return ids
+
+
+def _model_inference_device(module: torch.nn.Module) -> torch.device:
+    dev = getattr(module, "device", None)
+    if isinstance(dev, torch.device) and dev.type != "meta":
+        return dev
+    p = next(module.parameters(), None)
+    if p is not None and p.device.type != "meta":
+        return p.device
+    return torch.device("cpu")
+
+
+def _compute_val_rank_metrics(
+    model: torch.nn.Module,
+    tokenizer: AutoTokenizer,
+    val_df: pd.DataFrame,
+) -> Dict[str, Any]:
+    """Accuracy / recall / F1 plus AUC and AUPRC from Yes-vs-No logit softmax at the answer position."""
+    if val_df.empty:
+        raise ValueError("val_df is empty.")
+    for col in ("narrative_current", "label_lipid_disorder"):
+        if col not in val_df.columns:
+            raise KeyError(f"val_df missing required column {col!r}")
+    yes_ids = _collect_first_token_ids(tokenizer, ["Yes", " yes", "Yes ", " yes "])
+    no_ids = _collect_first_token_ids(tokenizer, ["No", " no", "No ", " no "])
+    if not yes_ids or not no_ids:
+        raise RuntimeError("Failed to resolve Yes/No token ids for validation rank metrics.")
+    dev = _model_inference_device(model)
+    was_training = model.training
+    model.eval()
+    ys: List[int] = []
+    preds: List[int] = []
+    scores: List[float] = []
+    try:
+        for _, row in val_df.iterrows():
+            true_label = int(row["label_lipid_disorder"])
+            ptxt = _finetune_eval_prompt(str(row["narrative_current"]))
+            toks = tokenizer(ptxt, return_tensors="pt")
+            toks = {k: v.to(dev) for k, v in toks.items()}
+            with torch.no_grad():
+                logits = model(**toks).logits[:, -1, :]
+            yes_logit = max(float(logits[0, idx].item()) for idx in yes_ids)
+            no_logit = max(float(logits[0, idx].item()) for idx in no_ids)
+            z = torch.tensor([yes_logit, no_logit], device=logits.device, dtype=logits.dtype)
+            p_pair = torch.softmax(z, dim=0)
+            prob_yes = float(p_pair[0].item())
+            prob_no = float(p_pair[1].item())
+            pred = 1 if prob_yes >= prob_no else 0
+            ys.append(true_label)
+            preds.append(pred)
+            scores.append(prob_yes)
+    finally:
+        if was_training:
+            model.train()
+    y_true = np.asarray(ys, dtype=int)
+    y_pred = np.asarray(preds, dtype=int)
+    y_score = np.asarray(scores, dtype=float)
+    out = compute_metrics(y_true=y_true, y_pred=y_pred, y_score=y_score)
+    out["n_val_scored"] = int(len(ys))
+    out["metric_family"] = "yes_no_logit_softmax"
+    return out
 
 
 def _label_to_text(label: int) -> str:
@@ -124,7 +215,7 @@ def finetune_gemma_lora(
         tokenizer.pad_token = tokenizer.eos_token
 
     try:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+        model = _causal_lm_from_pretrained(model_name, smoke=smoke)
     except ValueError as exc:
         if "model type `gemma4`" in str(exc):
             raise RuntimeError(
@@ -160,7 +251,7 @@ def finetune_gemma_lora(
                 "Reloading base model and retrying with target_modules=['linear']."
             )
             # Reload a clean base model before second PEFT attempt to avoid double-wrap side effects.
-            model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+            model = _causal_lm_from_pretrained(model_name, smoke=smoke)
             lora_cfg = LoraConfig(
                 r=lora_r,
                 lora_alpha=lora_alpha,
@@ -189,39 +280,121 @@ def finetune_gemma_lora(
     train_ds = build_instruction_dataset(train_df)
     val_ds = build_instruction_dataset(val_df) if val_df is not None else None
 
-    def _tokenize(batch: Dict[str, List[str]]) -> Dict[str, List[List[int]]]:
-        out = tokenizer(
-            batch["text"],
-            max_length=max_length,
-            truncation=True,
-            padding="max_length",
-        )
-        labels = [ids.copy() for ids in out["input_ids"]]
-        if answer_only_loss:
-            prompts: List[str] = []
-            for txt in batch["text"]:
-                marker = "\nPrediction:\n"
-                idx = txt.find(marker)
-                if idx >= 0:
-                    prompts.append(txt[: idx + len(marker)])
-                else:
-                    prompts.append(txt)
-            prompt_tok = tokenizer(
-                prompts,
+    def _tokenize_dataset(ds: Dataset, split_name: str) -> Dataset:
+        debug_samples_remaining = 10
+        stats = {
+            "total": 0,
+            "truncated_answer": 0,
+            "supervised_sum": 0,
+            "supervised_min": None,
+            "supervised_max": 0,
+        }
+
+        def _tokenize(batch: Dict[str, List[str]]) -> Dict[str, List[List[int]]]:
+            out = tokenizer(
+                batch["text"],
                 max_length=max_length,
                 truncation=True,
-                padding=False,
+                padding="max_length",
             )
-            for i, prompt_ids in enumerate(prompt_tok["input_ids"]):
-                plen = min(len(prompt_ids), len(labels[i]))
-                labels[i][:plen] = [-100] * plen
-        out["labels"] = labels
-        return out
+            labels = [ids.copy() for ids in out["input_ids"]]
+            if answer_only_loss:
+                prompts: List[str] = []
+                for txt in batch["text"]:
+                    marker = "\nPrediction:\n"
+                    idx = txt.find(marker)
+                    if idx >= 0:
+                        prompts.append(txt[: idx + len(marker)])
+                    else:
+                        prompts.append(txt)
+                prompt_tok = tokenizer(
+                    prompts,
+                    max_length=max_length,
+                    truncation=True,
+                    padding=False,
+                    add_special_tokens=False,
+                )
+                full_tok_no_special = tokenizer(
+                    batch["text"],
+                    max_length=max_length,
+                    truncation=True,
+                    padding=False,
+                    add_special_tokens=False,
+                )
+                for i, prompt_ids in enumerate(prompt_tok["input_ids"]):
+                    attention = out["attention_mask"][i]
+                    seq_len = int(sum(attention))
+                    if seq_len <= 0:
+                        labels[i] = [-100] * len(labels[i])
+                        continue
 
-    tokenized_train = train_ds.map(_tokenize, batched=True, remove_columns=["text"])
-    tokenized_val = (
-        val_ds.map(_tokenize, batched=True, remove_columns=["text"]) if val_ds is not None else None
-    )
+                    first_real = next((j for j, m in enumerate(attention) if m == 1), len(attention))
+                    answer_len = max(len(full_tok_no_special["input_ids"][i]) - len(prompt_ids), 0)
+                    answer_len = min(answer_len, seq_len)
+
+                    if answer_len <= 0:
+                        tail_preview = batch["text"][i][-220:].replace("\n", "\\n")
+                        msg = (
+                            f"Answer span truncated in split={split_name}, batch_index={i}, "
+                            f"seq_len={seq_len}, prompt_len={len(prompt_ids)}, answer_len={answer_len}. "
+                            f"text_tail={tail_preview!r}"
+                        )
+                        if smoke:
+                            logger.warning(msg)
+                            stats["truncated_answer"] += 1
+                        else:
+                            raise RuntimeError(msg)
+
+                    # Supervise only the answer tail (Yes/No), independent of padding side.
+                    supervise_start = first_real + (seq_len - answer_len)
+                    for j in range(first_real, min(supervise_start, len(labels[i]))):
+                        labels[i][j] = -100
+
+                    # Always ignore padding positions regardless of collator behavior.
+                    for j, m in enumerate(attention):
+                        if m == 0:
+                            labels[i][j] = -100
+
+                    non_ignored_ids = [tid for tid, lab in zip(out["input_ids"][i], labels[i]) if lab != -100]
+                    supervised_count = len(non_ignored_ids)
+                    stats["total"] += 1
+                    stats["supervised_sum"] += supervised_count
+                    if stats["supervised_min"] is None:
+                        stats["supervised_min"] = supervised_count
+                    else:
+                        stats["supervised_min"] = min(stats["supervised_min"], supervised_count)
+                    stats["supervised_max"] = max(stats["supervised_max"], supervised_count)
+                    nonlocal debug_samples_remaining
+                    if debug_samples_remaining > 0:
+                        debug_samples_remaining -= 1
+                        logger.info(
+                            "Mask debug sample: split=%s supervised_tokens=%d supervised_text=%r",
+                            split_name,
+                            supervised_count,
+                            tokenizer.decode(non_ignored_ids, skip_special_tokens=False)[:160],
+                        )
+            out["labels"] = labels
+            return out
+
+        tokenized = ds.map(_tokenize, batched=True, remove_columns=["text"])
+        if answer_only_loss:
+            avg_supervised = (
+                float(stats["supervised_sum"]) / float(stats["total"]) if stats["total"] > 0 else 0.0
+            )
+            logger.info(
+                "Mask summary split=%s total_samples=%d truncated_answer_samples=%d "
+                "avg_supervised_tokens=%.4f min_supervised_tokens=%s max_supervised_tokens=%d",
+                split_name,
+                stats["total"],
+                stats["truncated_answer"],
+                avg_supervised,
+                stats["supervised_min"] if stats["supervised_min"] is not None else "n/a",
+                stats["supervised_max"],
+            )
+        return tokenized
+
+    tokenized_train = _tokenize_dataset(train_ds, "train")
+    tokenized_val = _tokenize_dataset(val_ds, "val") if val_ds is not None else None
     data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
     effective_max_steps = max_steps if max_steps is not None else -1
@@ -256,21 +429,23 @@ def finetune_gemma_lora(
         raise ValueError(
             f"Unsupported evaluation_strategy={eval_mode!r}; expected one of: no, steps, epoch."
         )
-    if save_strategy not in {"steps", "epoch"}:
+    # Smoke: no mid-run checkpoints (avoids safetensors/meta-device errors under accelerate offload).
+    effective_save_strategy = "no" if smoke else save_strategy
+    if effective_save_strategy not in {"no", "steps", "epoch"}:
         raise ValueError(
-            f"Unsupported save_strategy={save_strategy!r}; expected one of: steps, epoch."
+            f"Unsupported save_strategy={effective_save_strategy!r}; expected one of: no, steps, epoch."
         )
     try:
         args = TrainingArguments(
             evaluation_strategy=eval_mode,
-            save_strategy=save_strategy,
+            save_strategy=effective_save_strategy,
             **args_kwargs,
         )
     except TypeError:
         # transformers>=5 renamed this argument.
         args = TrainingArguments(
             eval_strategy=eval_mode,
-            save_strategy=save_strategy,
+            save_strategy=effective_save_strategy,
             **args_kwargs,
         )
     trainer_kwargs = dict(
@@ -296,7 +471,36 @@ def finetune_gemma_lora(
                         "Reduce LR / disable fp16 / adjust LoRA settings before full run."
                     )
 
-    model.save_pretrained(output_path)
-    tokenizer.save_pretrained(output_path)
-    logger.info("Saved fine-tuned Gemma LoRA adapter to %s", output_path)
+    if val_df is not None:
+        try:
+            rank_metrics = _compute_val_rank_metrics(model, tokenizer, val_df)
+            logger.info(
+                "Validation rank metrics (AUC/AUPRC on held-out val_ft rows): %s",
+                {k: rank_metrics[k] for k in sorted(rank_metrics) if k not in {"tp", "fp", "tn", "fn"}},
+            )
+            logger.info(
+                "Validation confusion counts: tp=%s fp=%s tn=%s fn=%s",
+                rank_metrics.get("tp"),
+                rank_metrics.get("fp"),
+                rank_metrics.get("tn"),
+                rank_metrics.get("fn"),
+            )
+            (output_path / "finetune_val_rank_metrics.json").write_text(
+                json.dumps(rank_metrics, indent=2), encoding="utf-8"
+            )
+        except Exception as exc:
+            logger.warning("Could not compute validation AUC/AUPRC (rank metrics): %s", exc)
+
+    try:
+        model.save_pretrained(output_path)
+        tokenizer.save_pretrained(output_path)
+        logger.info("Saved fine-tuned Gemma LoRA adapter to %s", output_path)
+    except NotImplementedError as exc:
+        if smoke:
+            logger.warning(
+                "Smoke run: skipped final adapter save (%s). Training/eval metrics above are still valid.",
+                exc,
+            )
+        else:
+            raise
     return output_path
