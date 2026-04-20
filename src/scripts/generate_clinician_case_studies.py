@@ -24,6 +24,8 @@ from typing import Any, Dict, List, Optional, Sequence
 import numpy as np
 import pandas as pd
 
+from src.data.code_mappings import CodeMapper
+
 # ---------------------------------------------------------------------------
 # Defaults (repo-relative from project root)
 # ---------------------------------------------------------------------------
@@ -32,6 +34,7 @@ _DEFAULT_TEST_JSONL = _DEFAULT_ROOT / "data/mimic III/data_ready_for_finetuning_
 _DEFAULT_PRIMARY_CSV = _DEFAULT_ROOT / "data/outputs/mimiciii_llm_promptv2_gemma/llm_coagent_results.csv"
 _DEFAULT_COMPARE_CSV = _DEFAULT_ROOT / "data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_few_shot_results.csv"
 _DEFAULT_OUT_DIR = _DEFAULT_ROOT / "data/outputs/case_studies"
+_DEFAULT_INTERIM_DIR = _DEFAULT_ROOT / "data/interim/mimiciii"
 
 PRIMARY_MODEL_LABEL = "Gemma4_PromptV2_EHR-CoAgent"
 COMPARE_MODEL_LABEL = "GPT4o-mini_PromptV2_Few-Shot"
@@ -285,6 +288,18 @@ def _key_evidence(codes: Sequence[str], flags: Dict[str, bool], statin: bool) ->
     return f"Diagnosis codes (sample): {code_sample}. Rule flags: [{flag_line or 'none'}]. {meds_note}"
 
 
+def _format_diagnosis_codes_with_terms(codes: Sequence[str], code_mapper: CodeMapper, max_items: int = 12) -> str:
+    """Return a clinician-friendly list like: 4280 (Congestive heart failure, unspecified)."""
+    formatted: List[str] = []
+    for code in codes[:max_items]:
+        term = code_mapper.map_diagnosis(code)
+        formatted.append(f"{code} ({term})")
+    out = "; ".join(formatted)
+    if len(codes) > max_items:
+        out += " …"
+    return out
+
+
 CLINICIAN_QUESTIONS = [
     "Does this prediction seem clinically reasonable?",
     "What evidence supports or contradicts this prediction?",
@@ -328,6 +343,7 @@ def build_case_records(
     prob_col: str,
     compare_df: Optional[pd.DataFrame],
     narrative_max_chars: int,
+    code_mapper: CodeMapper,
 ) -> List[Dict[str, Any]]:
     records: List[Dict[str, Any]] = []
     compare_map: Dict[int, Dict[str, Any]] = {}
@@ -354,6 +370,7 @@ def build_case_records(
         age_dec = _age_decade(row.get("DOB"), row.get("admittime_current"))
         narr = _clean_narrative(row.get("narrative_current"), max_chars=narrative_max_chars)
         major_preview = "; ".join(codes[:8]) + (" …" if len(codes) > 8 else "")
+        diagnoses_with_terms = _format_diagnosis_codes_with_terms(codes, code_mapper, max_items=12)
 
         rec: Dict[str, Any] = {
             "case_id": str(pair_id),
@@ -363,7 +380,11 @@ def build_case_records(
             "case_type": ct,
             "primary_model": PRIMARY_MODEL_LABEL,
             "clinical_summary": _clinical_summary(row.get("GENDER"), age_dec, flags, major_preview, narr),
-            "key_evidence": _key_evidence(codes, flags, statin),
+            "key_evidence": (
+                f"Diagnosis codes with medical terms: {diagnoses_with_terms}. "
+                + _key_evidence(codes, flags, statin)
+            ),
+            "diagnosis_codes_with_terms": diagnoses_with_terms,
             "model_explanation": _model_explanation(ct, flags, statin),
             "clinician_questions": list(CLINICIAN_QUESTIONS),
             "selection_tags": _selection_tags(prob),
@@ -413,12 +434,14 @@ def main() -> None:
     ap.add_argument("--primary-csv", type=Path, default=_DEFAULT_PRIMARY_CSV)
     ap.add_argument("--compare-csv", type=Path, default=_DEFAULT_COMPARE_CSV, help="Optional; set empty to skip")
     ap.add_argument("--output-dir", type=Path, default=_DEFAULT_OUT_DIR)
+    ap.add_argument("--interim-dir", type=Path, default=_DEFAULT_INTERIM_DIR)
     ap.add_argument("--per-quadrant", type=int, default=2, choices=(2, 3))
     ap.add_argument("--narrative-chars", type=int, default=_DEFAULT_NARRATIVE_MAX_CHARS)
     ap.add_argument("--no-compare", action="store_true", help="Skip GPT-4o-mini few-shot comparison merge")
     args = ap.parse_args()
 
     narrative_max = max(200, args.narrative_chars)
+    code_mapper = CodeMapper(str(args.interim_dir))
 
     test_df = pd.read_json(args.test_jsonl, lines=True)
     pred_df = pd.read_csv(args.primary_csv)
@@ -451,7 +474,7 @@ def main() -> None:
             raise ValueError("Comparison CSV row count must match primary predictions for QC.")
 
     picked_df = select_case_rows(merged, "_probability", args.per_quadrant)
-    records = build_case_records(picked_df, "_probability", compare_df, narrative_max)
+    records = build_case_records(picked_df, "_probability", compare_df, narrative_max, code_mapper)
     run_qc(records, args.per_quadrant)
 
     out_dir = Path(args.output_dir)
@@ -473,6 +496,7 @@ def main() -> None:
             "case_type": r["case_type"],
             "clinical_summary": r["clinical_summary"],
             "key_evidence": r["key_evidence"],
+            "diagnosis_codes_with_terms": r.get("diagnosis_codes_with_terms", ""),
             "model_explanation": r["model_explanation"],
             "clinician_questions": " | ".join(r["clinician_questions"]),
             "primary_model": r.get("primary_model", ""),
@@ -502,6 +526,7 @@ def main() -> None:
             [
                 f"- **Clinical summary:** {r['clinical_summary']}",
                 f"- **Key evidence:** {r['key_evidence']}",
+                f"- **Diagnosis codes with medical terms:** {r.get('diagnosis_codes_with_terms', '')}",
                 f"- **Model explanation (rule-based):** {r['model_explanation']}",
                 "- **Clinician questions:**",
             ]
@@ -518,6 +543,8 @@ def main() -> None:
         if args.no_compare
         else (str(args.compare_csv.resolve()) if args.compare_csv else None),
         "comparison_enabled": compare_df is not None,
+        "icd_term_expansion_enabled": True,
+        "interim_dir": str(args.interim_dir.resolve()),
         "per_quadrant": args.per_quadrant,
         "n_cases": len(records),
         "pandas_version": pd.__version__,
