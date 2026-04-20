@@ -7,7 +7,10 @@ paths:
   mimic_raw: "data/mimic III/physionet.org/files/mimiciii/1.4"
   interim: "data/interim/mimiciii"
   processed: "data/processed/mimiciii"
-  outputs: "data/outputs/mimiciii_gemma"
+  # New runs go here so archived comparison trees are untouched:
+  #   mimiciii (GPT-4o-mini), mimiciii_gemma, mimiciii_gpt4o_mini, etc.
+  # Override per run: env EHR_OUTPUTS_DIR, or a small YAML --overrides file, or copy this config.
+  outputs: "data/outputs/mimiciii_llm_promptv2_gemma"
 
 data:
   min_visits: 2
@@ -23,6 +26,9 @@ narrative:
   max_procedures: 50
   empty_placeholder: "None recorded"
 
+# Optional second-stage fusion (structured + LLM logit probs): merge configs/fusion_default.yaml
+# and see README §8 and docs/fusion_experiment_report.md.
+
 ml:
   models:
     - decision_tree
@@ -32,6 +38,8 @@ ml:
   few_shot_n: 6
 
 llm:
+  # Jinja templates for predictor + critic (relative to repo root). Use prompts_v2 for current experiments.
+  prompt_template_dir: "prompts_v2"
   provider: local_gemma
   # Local snapshot from: python -m src.scripts.download_gemma_model --model-id google/gemma-4-e4b-it
   model_name: "models/hf_snapshots/google--gemma-4-e4b-it"
@@ -94,7 +102,8 @@ llm:
   max_tokens: 256
   seed: 42
   cache_responses: true
-  cache_dir: "data/outputs/mimiciii_gemma/llm_cache"
+  # Keep cache under the same outputs root (or set EHR_LLM_CACHE_DIR).
+  cache_dir: "data/outputs/mimiciii_llm_promptv2_gemma/llm_cache"
   rate_limit_rpm: 30
   request_logprobs: false
   # Optional: only first N test rows (debug smoke). null = full test set.

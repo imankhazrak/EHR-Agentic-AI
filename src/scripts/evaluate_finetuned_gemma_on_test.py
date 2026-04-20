@@ -14,53 +14,25 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import torch
 from peft import PeftModel
 from tqdm import tqdm
-from transformers import AutoModelForCausalLM, AutoTokenizer, LogitsProcessor, LogitsProcessorList
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from src.evaluation.metrics import compute_metrics
-from src.llm.output_parser import parse_prediction
+from src.llm.logit_pair_scorer import (
+    generate_one_restricted_token,
+    hard_label_from_generation,
+    forward_logit_score,
+    resolve_yes_no_token_ids,
+)
 from src.utils.config_utils import load_config
 from src.utils.io import save_dataframe, save_json
 from src.utils.logging_utils import get_logger
 from src.utils.random_utils import set_seed
 
 logger = get_logger(__name__, log_file="data/outputs/finetuned_test_eval.log")
-
-
-def _prompt(narrative: str) -> str:
-    return (
-        "Task: Predict whether Disorders of Lipid Metabolism will be present in the next visit.\n\n"
-        f"Patient record:\n{narrative}\n\n"
-        "Prediction:\n"
-    )
-
-
-def _collect_token_ids(tokenizer: AutoTokenizer, texts: list[str]) -> set[int]:
-    ids: set[int] = set()
-    for t in texts:
-        enc = tokenizer.encode(t, add_special_tokens=False)
-        if enc:
-            ids.add(enc[0])
-    return ids
-
-
-class _FirstStepRestrictTokensLogitsProcessor(LogitsProcessor):
-    """Allow only *allowed_token_ids* as the first generated token (then leave logits unchanged)."""
-
-    def __init__(self, prompt_length: int, allowed_token_ids: list[int]) -> None:
-        self.prompt_length = int(prompt_length)
-        self.allowed_token_ids = list(allowed_token_ids)
-
-    def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
-        if input_ids.shape[-1] != self.prompt_length:
-            return scores
-        mask = torch.full_like(scores, float("-inf"))
-        mask[:, self.allowed_token_ids] = scores[:, self.allowed_token_ids]
-        return mask
 
 
 def main(config_path: str = "configs/default.yaml", overrides: list | None = None) -> None:
@@ -96,74 +68,35 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
     model = PeftModel.from_pretrained(base_model, str(adapter_dir))
     model.eval()
 
-    yes_ids = _collect_token_ids(tokenizer, ["Yes", " yes", "Yes ", " yes "])
-    no_ids = _collect_token_ids(tokenizer, ["No", " no", "No ", " no "])
-    if not yes_ids or not no_ids:
-        raise RuntimeError("Failed to resolve Yes/No token ids for scoring.")
-    yes_no_ids = sorted(yes_ids | no_ids)
+    yes_ids, no_ids, yes_no_ids = resolve_yes_no_token_ids(tokenizer)
 
     rows = []
     for _, row in tqdm(test_df.iterrows(), total=len(test_df), desc="Finetuned test eval"):
         sample_id = int(row["pair_id"])
         true_label = int(row["label_lipid_disorder"])
-        ptxt = _prompt(str(row["narrative_current"]))
-        toks = tokenizer(ptxt, return_tensors="pt")
+        score, toks, prompt_len = forward_logit_score(
+            model, tokenizer, str(row["narrative_current"]), yes_ids, no_ids
+        )
         toks = {k: v.to(model.device) for k, v in toks.items()}
-        prompt_len = int(toks["input_ids"].shape[1])
-
-        with torch.no_grad():
-            logits = model(**toks).logits[:, -1, :]
-            yes_logit = max(float(logits[0, idx].item()) for idx in yes_ids)
-            no_logit = max(float(logits[0, idx].item()) for idx in no_ids)
-            z = torch.tensor([yes_logit, no_logit], device=logits.device, dtype=logits.dtype)
-            p_pair = torch.softmax(z, dim=0)
-            prob_yes = float(p_pair[0].item())
-            prob_no = float(p_pair[1].item())
-
-            proc = LogitsProcessorList(
-                [_FirstStepRestrictTokensLogitsProcessor(prompt_len, yes_no_ids)]
-            )
-            gen = model.generate(
-                **toks,
-                max_new_tokens=1,
-                do_sample=False,
-                pad_token_id=tokenizer.pad_token_id,
-                logits_processor=proc,
-            )
-
-        new_tokens = gen[0, prompt_len:]
+        new_tokens = generate_one_restricted_token(model, tokenizer, toks, prompt_len, yes_no_ids)
         generated = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
-        parsed = parse_prediction(generated)
-
-        first_id = int(new_tokens[0].item()) if new_tokens.numel() > 0 else None
-        if first_id is not None and first_id in yes_ids:
-            pred_binary = 1
-            parsed_prediction = "Yes"
-            parser_status = "first_token_yes"
-        elif first_id is not None and first_id in no_ids:
-            pred_binary = 0
-            parsed_prediction = "No"
-            parser_status = "first_token_no"
-        elif parsed["prediction"] == "Yes":
-            pred_binary = 1
-            parsed_prediction = "Yes"
-            parser_status = parsed["parser_status"]
-        elif parsed["prediction"] == "No":
-            pred_binary = 0
-            parsed_prediction = "No"
-            parser_status = parsed["parser_status"]
-        else:
-            pred_binary = 1 if prob_yes >= prob_no else 0
-            parsed_prediction = "Yes" if pred_binary == 1 else "No"
-            parser_status = "logits_fallback"
+        pred_binary, parsed_prediction, parser_status = hard_label_from_generation(
+            tokenizer,
+            yes_ids,
+            no_ids,
+            new_tokens,
+            generated,
+            score.prob_yes,
+            score.prob_no,
+        )
 
         rows.append(
             {
                 "pair_id": sample_id,
                 "true_label": true_label,
                 "pred_binary": pred_binary,
-                "prob_yes": prob_yes,
-                "prob_no": prob_no,
+                "prob_yes": score.prob_yes,
+                "prob_no": score.prob_no,
                 "generated_text": generated,
                 "parsed_prediction": parsed_prediction,
                 "parser_status": parser_status,

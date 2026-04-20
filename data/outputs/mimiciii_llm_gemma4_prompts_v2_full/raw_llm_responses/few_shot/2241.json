@@ -1,0 +1,12 @@
+{
+  "sample_id": 2241,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Alcoholic cirrhosis of liver and Complications of transplanted liver, but does not explicitly mention hypercholesterolemia, hyperlipidemia, or any other documented evidence of a lipid disorder or active lipid-disorder management, which is required for a 'Yes' prediction based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3516,
+    "completion_tokens": 81
+  }
+}

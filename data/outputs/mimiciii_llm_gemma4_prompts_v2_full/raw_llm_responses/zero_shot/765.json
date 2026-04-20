@@ -1,0 +1,12 @@
+{
+  "sample_id": 765,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents several serious conditions, including Coronary atherosclerosis and Percutaneous transluminal coronary angioplasty status, but it does not explicitly document a diagnosis of a lipid disorder such as hyperlipidemia or hypercholesterolemia, nor does it document active lipid-disorder management beyond the general treatment of other severe conditions.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record documents Coronary atherosclerosis and Percutaneous transluminal coronary angioplasty status, but lacks explicit documentation of a lipid disorder diagnosis (e.g., hyperlipidemia or hypercholesterolemia) or specific active lipid-disorder management.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The record mentions Coronary atherosclerosis and Percutaneous transluminal coronary angioplasty status, but there is no explicit diagnosis of a lipid disorder (like hyperlipidemia or hypercholesterolemia) or specific active lipid-disorder management documented.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 927,
+    "completion_tokens": 256
+  }
+}

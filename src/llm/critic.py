@@ -7,7 +7,7 @@ produces generalised criteria for improving the predictor.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Union
 
 import pandas as pd
 
@@ -62,6 +62,7 @@ def run_critic(
     batch_size: int = 10,
     n_rounds: int = 3,
     output_dir: str = "data/outputs/critic_feedback",
+    prompt_template_dir: Optional[Union[str, Path]] = None,
     **kwargs,
 ) -> List[str]:
     """Run the critic agent over batches of wrong predictions.
@@ -105,6 +106,7 @@ def run_critic(
         messages = build_messages(
             template_file="critic_batch_reflection.txt",
             extra_vars={"batch_data": batch_text},
+            prompt_template_dir=prompt_template_dir,
         )
 
         try:
@@ -126,6 +128,7 @@ def consolidate_feedback(
     feedbacks: List[str],
     method: str = "llm",
     output_dir: str = "data/outputs/critic_feedback",
+    prompt_template_dir: Optional[Union[str, Path]] = None,
 ) -> str:
     """Consolidate multiple critic outputs into a single instruction set.
 
@@ -149,6 +152,7 @@ def consolidate_feedback(
         messages = build_messages(
             template_file="feedback_consolidation.txt",
             extra_vars={"all_critic_outputs": all_text},
+            prompt_template_dir=prompt_template_dir,
         )
         try:
             resp = client.complete(messages, use_cache=False)

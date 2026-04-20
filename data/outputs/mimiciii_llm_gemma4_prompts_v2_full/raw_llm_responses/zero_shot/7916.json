@@ -1,0 +1,12 @@
+{
+  "sample_id": 7916,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents the diagnosis of \"Pure hypercholesterolemia,\" which directly indicates a lipid disorder. Additionally, the patient is prescribed \"Simvastatin\" and \"Rosiglitazone Maleate,\" which are lipid-lowering and glucose-regulating medications supporting the management of a lipid abnormality.\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents the diagnosis of \"Pure hypercholesterolemia,\" which directly indicates a lipid disorder. Furthermore, the patient is prescribed \"Simvastatin\" and \"Rosiglitazone Maleate,\" which are lipid-lowering and glucose-regulating medications supporting the management of a lipid abnormality.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 832,
+    "completion_tokens": 161
+  }
+}

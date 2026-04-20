@@ -1,0 +1,12 @@
+{
+  "sample_id": 8645,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. Additionally, the record shows active management with \"Simvastatin\" and \"Warfarin,\" supporting the likelihood of a coded diagnosis in the next visit, consistent with Case 2.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses explicitly list \"Other and unspecified hyperlipidemia.\" This is direct evidence of a lipid disorder, and the prescription of \"Simvastatin\" further supports the active management of this condition, aligning with the patterns seen in Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3632,
+    "completion_tokens": 133
+  }
+}

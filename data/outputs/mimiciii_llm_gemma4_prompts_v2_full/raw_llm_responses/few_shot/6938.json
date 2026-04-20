@@ -1,0 +1,12 @@
+{
+  "sample_id": 6938,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include Subendocardial infarction, which is a form of cardiac event often associated with lipid disorders, and the patient is prescribed Atorvastatin, a lipid-lowering medication. This combination strongly suggests an existing lipid disorder that is likely to be coded in the next visit, similar to Case 2.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The patient has a diagnosis of Subendocardial infarction and is prescribed Atorvastatin. This combination of cardiac event and lipid-lowering therapy strongly indicates an existing lipid disorder likely to be coded in the next visit, aligning with the pattern seen in Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3464,
+    "completion_tokens": 147
+  }
+}

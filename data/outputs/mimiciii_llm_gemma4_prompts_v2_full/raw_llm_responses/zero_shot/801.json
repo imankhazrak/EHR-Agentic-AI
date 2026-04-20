@@ -1,0 +1,12 @@
+{
+  "sample_id": 801,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record does not contain explicit diagnoses or documented history of lipid disorders such as hypercholesterolemia or hyperlipidemia, despite the presence of other cardiovascular and respiratory conditions.\n\nRules for Probability:\n- Probability must be a single numeric value between 0 and 1.\n- Use exactly two decimal places (for example: 0.27, 0.63, 0.81).\n- Use higher values when the documented evidence strongly supports that a lipid disorder will be coded on the next hospital visit.\n- Use lower values when the documented evidence does not support it.\n- Do not use percentages.\n- Do not output any extra lines before or after the required format.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record does not contain explicit diagnoses or documented history of lipid disorders such as hypercholesterolemia or hyperlipidemia, despite the presence of other cardiovascular and respiratory conditions.\n\nRules for Probability:\n- Probability must be a single numeric value between 0 and 1.\n- Use exactly two decimal places (for example: 0.27,",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1000,
+    "completion_tokens": 256
+  }
+}

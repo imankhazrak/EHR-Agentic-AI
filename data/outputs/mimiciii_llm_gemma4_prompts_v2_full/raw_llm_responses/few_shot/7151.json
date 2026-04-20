@@ -1,0 +1,12 @@
+{
+  "sample_id": 7151,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents diagnoses and medications related to closed fractures, hemorrhage, and general supportive care (Propofol, Morphine, Cefazolin, etc.). There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other lipid abnormality in the diagnoses or medications prescribed, which is required to predict a positive outcome based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3591,
+    "completion_tokens": 90
+  }
+}

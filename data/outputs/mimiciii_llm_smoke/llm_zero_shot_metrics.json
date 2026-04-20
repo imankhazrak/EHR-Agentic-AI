@@ -1,0 +1,40 @@
+{
+  "accuracy": 90.0,
+  "precision": 80.0,
+  "recall": 100.0,
+  "sensitivity": 100.0,
+  "specificity": 83.33,
+  "f1": 88.89,
+  "balanced_accuracy": 91.67,
+  "tp": 8,
+  "fp": 2,
+  "tn": 10,
+  "fn": 0,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "matrix": [
+      [
+        10,
+        2
+      ],
+      [
+        0,
+        8
+      ]
+    ]
+  },
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "n_total": 20,
+  "n_valid_prediction": 20,
+  "n_unparseable_prediction": 0,
+  "n_valid_probability": 20,
+  "n_missing_probability": 0,
+  "n_invalid_probability": 0,
+  "n_out_of_range_probability": 0,
+  "auc": 100.0,
+  "auprc": 100.0
+}

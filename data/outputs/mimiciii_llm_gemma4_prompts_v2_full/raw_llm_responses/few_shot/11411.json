@@ -1,0 +1,12 @@
+{
+  "sample_id": 11411,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents multiple severe neurological and renal issues (Cerebral artery occlusion, Subarachnoid hemorrhage, Acute kidney failure, Hypertensive chronic kidney disease). However, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any lipid-lowering treatment (like statins) in the prescribed medications or diagnoses, which is required for a 'Yes' prediction based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3579,
+    "completion_tokens": 101
+  }
+}

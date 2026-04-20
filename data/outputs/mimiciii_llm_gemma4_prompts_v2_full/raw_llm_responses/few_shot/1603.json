@@ -1,0 +1,12 @@
+{
+  "sample_id": 1603,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents multiple diagnoses, including Congestive heart failure and Mitral valve disorders, which are associated with lipid disorders. Although no explicit lipid diagnosis is present, the presence of these related cardiac conditions supports the likelihood of a lipid disorder being coded in the next visit, consistent with the patterns in Demonstration Case 1.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3584,
+    "completion_tokens": 82
+  }
+}

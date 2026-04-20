@@ -1,0 +1,12 @@
+{
+  "sample_id": 1202,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record does not explicitly list a diagnosis of lipid disorder, but the presence of severe sepsis, septic shock, and acute respiratory failure suggests a critical state where lipid abnormalities (CCS 53) are commonly coded in subsequent visits, as shown in Demonstration Case 1. The high prevalence context (27.4%) supports a strong probability of coding this diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3719,
+    "completion_tokens": 91
+  }
+}

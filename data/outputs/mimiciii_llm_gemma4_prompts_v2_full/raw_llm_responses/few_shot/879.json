@@ -1,0 +1,12 @@
+{
+  "sample_id": 879,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current visit record includes the medication Atorvastatin, which is a lipid-lowering agent, and the presence of other severe diagnoses like Secondary malignant neoplasm of lung and Malignant neoplasm of liver, which are consistent with the pattern in Demonstration Case 2 where Atorvastatin was prescribed alongside other severe conditions leading to a 'Yes' outcome.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: Current visit record includes the medication Atorvastatin, which is a lipid-lowering agent, and the presence of other severe diagnoses like Secondary malignant neoplasm of lung and Malignant neoplasm of liver, which are consistent with the pattern in Demonstration Case 2 where Atorvastatin was prescribed alongside other severe conditions leading to a 'Yes' outcome.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3499,
+    "completion_tokens": 177
+  }
+}

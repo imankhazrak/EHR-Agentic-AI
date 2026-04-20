@@ -34,6 +34,7 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
         test_df = test_df.head(int(lim)).copy()
 
     client = LLMClient(cfg["llm"])
+    prompt_td = cfg["llm"].get("prompt_template_dir", "prompts_v2")
 
     logger.info("=== Running Zero-Shot ===")
     pred_df = run_predictions(
@@ -41,6 +42,7 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
         df=test_df,
         mode="zero_shot",
         output_dir=output_dir,
+        prompt_template_dir=prompt_td,
     )
 
     metrics = evaluate_llm_results(

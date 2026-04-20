@@ -1,0 +1,9 @@
+paths:
+  outputs: "data/outputs/mimiciii_llm_gemma4_prompts_v2_full"
+
+llm:
+  provider: local_gemma
+  model_name: models/hf_snapshots/google--gemma-4-e4b-it
+  model: models/hf_snapshots/google--gemma-4-e4b-it
+  prompt_template_dir: "prompts_v2"
+  cache_dir: "data/outputs/mimiciii_llm_gemma4_prompts_v2_full/llm_cache"

@@ -1,0 +1,12 @@
+{
+  "sample_id": 8868,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents \"Other and unspecified hyperlipidemia\" as a diagnosis, which directly meets the criteria for predicting a lipid disorder in the next visit. This aligns with the pattern seen in Demonstration Case 2, where \"Pure hypercholesterolemia\" was a documented diagnosis leading to a 'Yes' outcome.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3879,
+    "completion_tokens": 81
+  }
+}

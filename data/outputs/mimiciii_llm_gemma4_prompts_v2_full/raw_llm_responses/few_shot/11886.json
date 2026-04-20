@@ -1,0 +1,12 @@
+{
+  "sample_id": 11886,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents diagnoses related to trauma (Subdural/Subarachnoid hemorrhage, Closed fractures) and general medical conditions (Unspecified essential hypertension, Delirium). There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other documented evidence of a lipid disorder or active lipid-disorder management.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Subdural hemorrhage, Subarachnoid hemorrhage, and Unspecified essential hypertension. However, there is no documented evidence of hypercholesterolemia, hyperlipidemia, or any other signal supporting a diagnosis of Disorders of Lipid Metabolism.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record contains diagnoses of trauma and general medical issues, including Unspecified essential hypertension. Despite this, there is no documented evidence of lipid abnormalities or active lipid-disorder management that would support a 'Yes' prediction based on the provided guidelines.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Subdural hemorrhage, Subarachnoid hemorrhage",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3594,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 9222,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes Atorvastatin, which is a lipid-lowering medication, and the demonstration cases show that the presence of such medication, when supported by other documented signals, leads to a 'Yes' outcome. Although other diagnoses are present, the documented use of Atorvastatin strongly suggests the need for a coded lipid disorder in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3565,
+    "completion_tokens": 88
+  }
+}

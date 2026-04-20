@@ -1,0 +1,12 @@
+{
+  "sample_id": 1705,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly diagnoses \"Pure hypercholesterolemia,\" which is a form of lipid disorder, and also prescribes \"Simvastatin,\" which is a lipid-lowering medication, supporting the likelihood of this diagnosis being coded on the next visit.\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly diagnoses \"Pure hypercholesterolemia,\" which is a form of lipid disorder, and also prescribes \"Simvastatin,\" which is a lipid-lowering medication, supporting the likelihood of this diagnosis being coded on the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 943,
+    "completion_tokens": 139
+  }
+}

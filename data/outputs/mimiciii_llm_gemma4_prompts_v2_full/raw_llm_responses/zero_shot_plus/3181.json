@@ -1,0 +1,12 @@
+{
+  "sample_id": 3181,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.8500\nReasoning: The current visit record does not explicitly state a diagnosis of hyperlipidemia or hypercholesterolemia, but the presence of Repaglinide and Metformin, which are used for glucose control and often co-managed with lipid abnormalities, along with the general cardiovascular risk factors, suggests a high likelihood of a lipid disorder being coded in the next visit.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.8500\nReasoning: The current visit record does not explicitly state a diagnosis of hyperlipidemia or hypercholesterolemia, but the presence of Repaglinide and Metformin, which are used for glucose control and often co-managed with lipid abnormalities, along with the general cardiovascular risk factors, suggests a high likelihood of a lipid disorder being coded in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 988,
+    "completion_tokens": 181
+  }
+}

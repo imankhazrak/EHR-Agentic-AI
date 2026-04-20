@@ -1,0 +1,12 @@
+{
+  "sample_id": 4161,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents diagnoses related to trauma (Closed fracture, Flail chest, Aortic valve disorders) and general health conditions (Unspecified essential hypertension, Diabetes mellitus). However, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any documented history or active management of a lipid disorder, which is required to predict a 'Yes' outcome based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3695,
+    "completion_tokens": 96
+  }
+}

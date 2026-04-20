@@ -1,0 +1,5 @@
+Model,Approach,ACC,Precision,Sensitivity,Specificity,F1,Balanced_ACC,AUC,AUPRC,n_valid_prob
+models/hf_snapshots/google--gemma-4-e4b-it,Zero-Shot,90.0,80.0,100.0,83.33,88.89,91.67,100.0,100.0,20
+models/hf_snapshots/google--gemma-4-e4b-it,Zero-Shot+,80.0,66.67,100.0,66.67,80.0,83.33,100.0,100.0,20
+models/hf_snapshots/google--gemma-4-e4b-it,Few-Shot (N=6),85.0,72.73,100.0,75.0,84.21,87.5,87.5,72.73,20
+models/hf_snapshots/google--gemma-4-e4b-it,EHR-CoAgent,80.0,66.67,100.0,66.67,80.0,83.33,85.42,69.58,20

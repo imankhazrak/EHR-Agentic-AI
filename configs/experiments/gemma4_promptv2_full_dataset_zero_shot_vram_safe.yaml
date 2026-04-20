@@ -1,0 +1,14 @@
+paths:
+  processed: "data/processed/mimiciii_full_dataset"
+  outputs: "data/outputs/mimiciii_llm_gemma4_promptv2_full_dataset_zeroshot_vram_safe"
+
+llm:
+  provider: local_gemma
+  model_name: models/hf_snapshots/google--gemma-4-e4b-it
+  model: models/hf_snapshots/google--gemma-4-e4b-it
+  prompt_template_dir: "prompts_v2"
+  cache_dir: "data/outputs/mimiciii_llm_gemma4_promptv2_full_dataset_zeroshot_vram_safe/llm_cache"
+  # Keep prompt context bounded so inference fits V100 16GB.
+  max_input_tokens: 1536
+  max_new_tokens: 128
+  device_map: single

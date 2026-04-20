@@ -7,7 +7,7 @@ You are an assistant who is good at self-reflection, error analysis, and summari
 {% block user %}
 Task: You will be given a batch of samples. Each sample includes:
 (a) the patient's medical history from the current hospital visit,
-(b) whether Disorders of Lipid Metabolism was present in the patient's next hospital visit ("Yes" or "No"),
+(b) whether Disorders of Lipid Metabolism was coded on the patient's next hospital visit ("Yes" or "No") — next-visit diagnosis prediction, not readmission,
 (c) an incorrect prediction.
 
 Please remember that the predictions shown are all incorrect. Use the observed next-visit outcomes and the documented evidence in the batch samples to identify weaknesses in the prior reasoning and summarize them into balanced, generalizable criteria.

@@ -476,7 +476,11 @@ def finetune_gemma_lora(
             rank_metrics = _compute_val_rank_metrics(model, tokenizer, val_df)
             logger.info(
                 "Validation rank metrics (AUC/AUPRC on held-out val_ft rows): %s",
-                {k: rank_metrics[k] for k in sorted(rank_metrics) if k not in {"tp", "fp", "tn", "fn"}},
+                {
+                    k: rank_metrics[k]
+                    for k in sorted(rank_metrics)
+                    if k not in {"tp", "fp", "tn", "fn", "confusion_matrix"}
+                },
             )
             logger.info(
                 "Validation confusion counts: tp=%s fp=%s tn=%s fn=%s",

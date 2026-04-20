@@ -1,0 +1,12 @@
+{
+  "sample_id": 7286,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the diagnosis [ICD9-DX:5185] and [ICD9-DX:7070], which are related to lipid abnormalities (endocarditis and cirrhosis), and the patient is receiving various supportive care.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the diagnosis [ICD9-DX:5185] and [ICD9-DX:7070], which are related to lipid abnormalities (endocarditis and cirrhosis), and the patient is receiving various supportive care.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1170,
+    "completion_tokens": 147
+  }
+}

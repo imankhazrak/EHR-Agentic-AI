@@ -1,0 +1,89 @@
+--- Sample 1 ---
+[Patient Medical History]
+- Diagnoses made: Cerebral aneurysm, nonruptured; Myalgia and myositis, unspecified
+- Medications prescribed: Heparin Sodium; D5W; Nitroprusside Sodium; Fluoxetine HCl; Ondansetron; Sodium Chloride 0.9%  Flush; Acetaminophen; Calcium Gluconate; Potassium Chloride; Clopidogrel Bisulfate; Oxycodone-Acetaminophen; Morphine Sulfate; Famotidine; Aspirin; Heparin; Bisacodyl; Magnesium Oxide
+- Procedures performed: Endovascular (total) embolization or occlusion of head and neck vessels; Arteriography of cerebral arteries; Systemic arterial pressure monitoring; Angioplasty of other non-coronary vessel(s); Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s)
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record does not contain any explicit evidence of a lipid disorder, such as a diagnosis of hyperlipidemia or hypercholesterolemia, nor does it indicate active management of a lipid disorder. The medications prescribed do not include any lipid-lowering treatments, and the diagnoses made are unrelated to lipid metabolism. Therefore, it is unlikely that "Disorders of Lipid Metabolism" will be diagnosed in the next visit.
+
+--- Sample 2 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of native arteries of the extremities with rest pain; Thrombocytopenia, unspecified; Other specified diseases of blood and blood-forming organs; Asthma, unspecified type, unspecified; Other and unspecified hyperlipidemia; Foot amputation status; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Family history of diabetes mellitus; Pain in limb
+- Medications prescribed: Heparin Sodium; D5W; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Magnesium Sulfate; Docusate Sodium; Morphine Sulfate; Sodium Chloride 0.9%  Flush; Warfarin; Clopidogrel Bisulfate; NS; Bisacodyl; Senna; Gabapentin; Hydromorphone; Sodium Polystyrene Sulfonate; Oxycodone-Acetaminophen; Albuterol; Acetaminophen; Morphine Sulfate SR
+- Procedures performed: Angioplasty of other non-coronary vessel(s); Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s); Arteriography of femoral and other lower extremity arteries; Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes a diagnosis of "Other and unspecified hyperlipidemia," which is a direct indication of a lipid disorder. This, combined with the patient's history of diabetes and atherosclerosis, suggests that there is an existing lipid metabolism issue that is likely to be coded in the next visit.
+
+--- Sample 3 ---
+[Patient Medical History]
+- Diagnoses made: Unspecified disease of pericardium; Obstructive chronic bronchitis with (acute) exacerbation; Other bipolar disorders; Atherosclerosis of native arteries of the extremities, unspecified; Atrial fibrillation; Other diseases of vocal cords; Other and unspecified hyperlipidemia; Unspecified acquired hypothyroidism; Tobacco use disorder; Chronic gastric ulcer without mention of hemorrhage or perforation, without mention of obstruction; Heart disease, unspecified; Hypoxemia; Unspecified essential hypertension; Long-term (current) use of anticoagulants
+- Medications prescribed: Levothyroxine Sodium; Albuterol 0.083% Neb Soln; Lorazepam; Ranitidine; Quetiapine Fumarate; Omeprazole; Vitamin D; Senna; Docusate Sodium; Acetaminophen; Ezetimibe; Furosemide; Fluticasone-Salmeterol Diskus (250/50); Sodium Chloride 0.9%  Flush; Amlodipine; Aripiprazole; Simvastatin; Morphine Sulfate; 0.9% Sodium Chloride; Oxycodone-Acetaminophen; Ipratropium Bromide Neb; Metoprolol Tartrate; Warfarin; PredniSONE; Azithromycin; Nicotine Patch; Heparin; Potassium Chloride; Miconazole 2% Cream; Influenza Virus Vaccine
+- Procedures performed: Pericardiocentesis
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes a diagnosis of "Other and unspecified hyperlipidemia," which directly indicates a lipid disorder. Additionally, the patient is prescribed Simvastatin, a lipid-lowering medication, which further supports the presence of a lipid metabolism disorder. These factors combined strongly suggest that a diagnosis of Disorders of Lipid Metabolism is likely to be coded in the next hospital visit.
+
+--- Sample 4 ---
+[Patient Medical History]
+- Diagnoses made: Dissection of aorta, thoracic; Pneumonia, organism unspecified; Rupture of artery; Unspecified essential hypertension; Coronary atherosclerosis of native coronary artery; Pure hypercholesterolemia; Unspecified hereditary and idiopathic peripheral neuropathy; Asthma, unspecified type, unspecified; Unspecified glaucoma; Barrett's esophagus; Abdominal pain, periumbilic; Backache, unspecified; Pain in joint, lower leg; Diverticulosis of colon (without mention of hemorrhage)
+- Medications prescribed: D5W; NS; Labetalol HCl; Captopril; Nitroprusside Sodium; Esmolol; Pantoprazole Sodium; Fentanyl Citrate; Pilocarpine 1%; Magnesium Sulfate; Potassium Chloride; Amlodipine; Betaxolol Hcl  0.25%; Alphagan P; Heparin; Atorvastatin; Docusate Sodium; Fluticasone Propionate 110mcg; Ipratropium Bromide Neb; Pantoprazole; Acetaminophen; Sodium Chloride 0.9%  Flush; Gabapentin; Dolasetron Mesylate; Levofloxacin; Senna; Lactulose; Pneumococcal Vac Polyvalent; Aspirin EC; Sodium Chloride Nasal; Simethicone; Lisinopril
+- Procedures performed: None recorded
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes a diagnosis of "Pure hypercholesterolemia," which is a specific lipid disorder. Additionally, the patient is prescribed "Atorvastatin," a lipid-lowering medication, which further supports the management of a lipid disorder. These factors combined provide strong evidence that "Disorders of Lipid Metabolism" will likely be diagnosed in the next hospital visit.
+
+--- Sample 5 ---
+[Patient Medical History]
+- Diagnoses made: Other postoperative infection; Peritoneal abscess; Unspecified pleural effusion; Chronic venous embolism and thrombosis of deep vessels of distal lower extremity; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Sarcoidosis; Chronic kidney disease, unspecified; Unspecified iridocyclitis; [ICD9-DX:0414]; Surgical operation with formation of external stoma causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Attention to colostomy; Other iatrogenic hypotension; Swelling, mass, or lump in head and neck; Cephalosporin group causing adverse effects in therapeutic use; Abnormal coagulation profile; Anticoagulants causing adverse effects in therapeutic use; Functional disorders of polymorphonuclear neutrophils; Long-term (current) use of steroids; Polycythemia vera; Attention to tracheostomy; Spasm of muscle; Other chronic pain; Other and unspecified hyperlipidemia; Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled; Long-term (current) use of insulin; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Brachial neuritis or radiculitis NOS
+- Medications prescribed: Magnesium Sulfate; Bag; 0.9% Sodium Chloride (Mini Bag Plus); Insulin; LR; Iso-Osmotic Sodium Chloride; 1/2 NS; Warfarin; Acetaminophen; NS; Lidocaine Jelly 2% (Urojet); MetRONIDAZOLE (FLagyl); Sodium Chloride 0.9%  Flush; Hydroxyurea; Linezolid; Glucagon; Dextrose 50%; Fentanyl Patch; Pantoprazole; Lorazepam; Oxycodone-Acetaminophen; Gabapentin; Ipratropium Bromide MDI; Albuterol Inhaler; Tizanidine; Ascorbic Acid; Multivitamins W/minerals; PredniSONE; Zolpidem Tartrate; Artificial Tears; Nystatin Oral Suspension; 0.9% Sodium Chloride; Meropenem; DiphenhydrAMINE; Famotidine; CefePIME
+- Procedures performed: Percutaneous abdominal drainage; Injection or infusion of oxazolidinone class of antibiotics; Central venous catheter placement with guidance
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes a diagnosis of "Other and unspecified hyperlipidemia," which is a direct indication of a lipid disorder. This, combined with the patient's complex medical history and the presence of diabetes, suggests that lipid metabolism disorders are actively being managed. The evidence strongly supports that a diagnosis of Disorders of Lipid Metabolism is likely to be coded in the next visit.
+
+--- Sample 6 ---
+[Patient Medical History]
+- Diagnoses made: Bronchiectasis with acute exacerbation; Acute on chronic systolic heart failure; Coronary atherosclerosis of native coronary artery; Atrial fibrillation; Congestive heart failure, unspecified; Primary hyperparathyroidism; Osteoporosis, unspecified; Depressive disorder, not elsewhere classified; Personal history of allergy to sulfonamides; Hypotension, unspecified; Other dependence on machines, supplemental oxygen; Cardiac pacemaker in situ; Personal history of tobacco use
+- Medications prescribed: Ciprofloxacin HCl; NS (Mini Bag Plus); Meropenem; Warfarin; Furosemide; Spironolactone; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Citalopram Hydrobromide; Fluticasone-Salmeterol (250/50); Lisinopril; Pantoprazole; Simvastatin; Sodium Chloride 0.9%  Flush; Lorazepam; Mucinex; Calcium Citrate + Vit D; Ondansetron; Acetaminophen; Tiotropium Bromide; Heparin Flush (10 units/ml); Neutra-Phos
+- Procedures performed: Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes the prescription of Simvastatin, which is a lipid-lowering medication. Although there is no explicit diagnosis of a lipid disorder, the presence of Simvastatin suggests active management of a lipid abnormality. This, combined with the patient's cardiovascular diagnoses, indicates a likelihood of a lipid disorder being coded in the next visit.
+
+--- Sample 7 ---
+[Patient Medical History]
+- Diagnoses made: Diabetes with ketoacidosis, type I [juvenile type], not stated as uncontrolled; Other convulsions; Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled; Background diabetic retinopathy; Unspecified diseases of blood and blood-forming organs; Personal history of malignant neoplasm of breast
+- Medications prescribed: Insulin; Potassium Chloride; Magnesium Sulfate; Metoprolol; Prochlorperazine; D5 1/2NS; Insulin Human Regular; Potassium Phosphate; Ondansetron; 1/2 NS; Phenytoin; Oxycodone-Acetaminophen; Acetaminophen; Lorazepam; Humulin-R Insulin; NS; D5W; Aluminum-Magnesium Hydroxide; Hydromorphone; Sucralfate; Neutra-Phos; Pantoprazole
+- Procedures performed: None recorded
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record does not contain any explicit evidence of a lipid disorder or active management of such a condition. The diagnoses primarily focus on diabetes and related complications, with no mention of hyperlipidemia or lipid-lowering treatments. Therefore, it is unlikely that "Disorders of Lipid Metabolism" will be diagnosed in the next visit.
+
+--- Sample 8 ---
+[Patient Medical History]
+- Diagnoses made: Secondary malignant neoplasm of other specified sites; Acute pericarditis, unspecified; Other malignant neoplasm without specification of site; Anemia, unspecified
+- Medications prescribed: Sodium Chloride 0.9%  Flush; Atorvastatin; Acetaminophen; Magnesium Sulfate; NS; Milk of Magnesia; Heparin Flush (10 units/ml); Ibuprofen
+- Procedures performed: Pericardiocentesis; Right heart cardiac catheterization; Coronary arteriography using a single catheter
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes the prescription of Atorvastatin, which is a lipid-lowering medication. Although there is no explicit diagnosis of a lipid disorder, the use of Atorvastatin suggests active management of a lipid abnormality. This, combined with the context of the patient's overall health and the presence of multiple serious conditions, indicates a likelihood of a lipid disorder being diagnosed in the next visit.
+
+--- Sample 9 ---
+[Patient Medical History]
+- Diagnoses made: Diabetes with ketoacidosis, type I [juvenile type], uncontrolled; Acute kidney failure, unspecified; Diabetes with neurological manifestations, type I [juvenile type], uncontrolled; Gastroparesis; Dehydration; Polyneuropathy in diabetes; Unspecified essential hypertension; Ulcer of other part of foot; Other specified arthropathy, site unspecified; Unspecified viral hepatitis C without hepatic coma; Toxic diffuse goiter without mention of thyrotoxic crisis or storm; Esophageal reflux; Disturbance of skin sensation; Other acquired deformities of ankle and foot; Asthma, unspecified type, unspecified; Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus; Depressive disorder, not elsewhere classified
+- Medications prescribed: Insulin; HydrALAzine; Aspirin; Heparin; Diazepam; Oxycodone-Acetaminophen; Sodium Chloride 0.9%  Flush; Sumatriptan Succinate; Gabapentin; Amitriptyline; Losartan Potassium; Metoprolol Succinate XL; Insulin Human Regular; 0.9% Sodium Chloride; Heparin Flush (10 units/ml); Potassium Chloride; Potassium Chl 40 mEq / 1000 mL NS; 1/2 NS; SW; Maalox/Diphenhydramine/Lidocaine; Morphine Sulfate; Docusate Sodium (Liquid); Senna; Methimazole; Dextrose 50%; Glucagon; Docusate Sodium; Albuterol Inhaler; Fluticasone-Salmeterol Diskus (250/50); Polyethylene Glycol; Lactulose; Simvastatin; Hyoscyamine SO4 (Time Release); SulfaSALAzine_; Pantoprazole; Montelukast Sodium; Metoclopramide; HydrOXYzine; Neutra-Phos; Magnesium Sulfate; Famotidine
+- Procedures performed: Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record includes the prescription of Simvastatin, which is a lipid-lowering medication. While there is no explicit diagnosis of a lipid disorder, the presence of a statin suggests active management of a lipid abnormality. This, combined with the potential for underlying lipid issues given the patient's complex medical history, supports a prediction of a diagnosis of Disorders of Lipid Metabolism in the next visit.
+
+--- Sample 10 ---
+[Patient Medical History]
+- Diagnoses made: Acute kidney failure, unspecified; Hyperpotassemia; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Urinary tract infection, site not specified; Pneumonitis due to inhalation of food or vomitus; Congestive heart failure, unspecified; Diastolic heart failure, unspecified; Primary pulmonary hypertension; Thrombocytopenia, unspecified; Cervical spondylosis without myelopathy; Chronic kidney disease, unspecified; Anemia in chronic kidney disease; Rash and other nonspecific skin eruption; Coronary atherosclerosis of native coronary artery; Ileostomy status; Personal history of other diseases of digestive system
+- Medications prescribed: Insulin; Dextrose 50%; Sodium Bicarbonate; Furosemide; Sodium Polystyrene Sulfonate; Magnesium Sulfate; Allopurinol; Levofloxacin; Clotrimazole 1% Vaginal Crm; Amlodipine; Metoprolol; Dolasetron Mesylate; Albuterol; Pantoprazole; Diltiazem; Aspirin; OxycodONE (Immediate Release); Acetaminophen; Sodium Chloride 0.9%  Flush; Calcitriol; Folic Acid; Multivitamins; Bicitra; Vial; Epoetin Alfa; Prochlorperazine; D5W; Promethazine HCl; NS; Iso-Osmotic Dextrose; Calcium Gluconate; Cyanocobalamin; 1/2 NS; Vancomycin HCl; Piperacillin-Tazobactam Na; Albuterol 0.083% Neb Soln; Sodium Chloride Nasal; traZODONE HCl; Warfarin; Zolpidem Tartrate; Metronidazole; Ipratropium Bromide Neb; Lansoprazole Oral Disintegrating Tab; Phytonadione
+- Procedures performed: Transfusion of packed cells
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record does not contain any explicit evidence of a lipid disorder or active management of such a disorder. While the patient has a history of coronary atherosclerosis, there is no mention of hyperlipidemia or related lipid abnormalities, nor any lipid-lowering treatments documented. Therefore, it is unlikely that "Disorders of Lipid Metabolism" will be diagnosed in the next visit.

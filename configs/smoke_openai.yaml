@@ -1,0 +1,9 @@
+# Merge after debug_small.yaml — run LLM smoke on OpenAI when no local GPU.
+# Usage:
+#   python -m src.scripts.smoke_llm_prompt_pipeline --config configs/default.yaml \
+#     --overrides configs/debug_small.yaml configs/smoke_openai.yaml
+
+llm:
+  provider: openai
+  model_name: gpt-4o-mini
+  model: gpt-4o-mini

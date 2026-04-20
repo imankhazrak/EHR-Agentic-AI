@@ -1,0 +1,243 @@
+pair_id,label_lipid_disorder,prompt_mode,model_name,raw_response,parsed_prediction,pred_binary,parsed_probability,probability_parse_status,parse_valid_probability,probability_format_warning,reasoning,parser_status,prob_yes,prob_no,raw_response_path,true_label,split
+5346,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record lists Atorvastatin as a prescribed medication, which suggests lipid management, but there are no explicit diagnoses or documented history of hyperlipidemia or hypercholesterolemia to support a definitive lipid disorder diagnosis for the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record lists Atorvastatin as a prescribed medication, which suggests lipid management, but there are no explicit diagnoses or documented history of hyperlipidemia or hypercholesterolemia to support a definitive lipid disorder diagnosis for the next visit.",No,0,0.1,ok,True,False,"The current visit record lists Atorvastatin as a prescribed medication, which suggests lipid management, but there are no explicit diagnoses or documented history of hyperlipidemia or hypercholesterolemia to support a definitive lipid disorder diagnosis for the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record lists Atorvastatin as a prescribed medication, which suggests lipid management, but there are no explicit diagnoses or documented history of hyperlipidemia or hypercholesterolemia to support a definitive lipid disorder diagnosis for the next visit.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/5346.json,0,test
+4305,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.",No,0,0.0,ok,True,False,"The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/4305.json,0,test
+8843,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication.
+
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication.
+
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/8843.json,1,test
+10771,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not explicitly mention any diagnosis, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality, nor does it document active lipid-disorder management.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not explicitly mention any diagnosis, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality, nor does it document active lipid-disorder management.",No,0,0.0,ok,True,False,"The current visit record does not explicitly mention any diagnosis, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality, nor does it document active lipid-disorder management.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not explicitly mention any diagnosis, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality, nor does it document active lipid-disorder management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/10771.json,0,test
+5618,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next",Yes,1,1.0,ok,True,False,"The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next hospital visit.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly diagnoses ""Pure hypercholesterolemia,"" which directly indicates a lipid disorder that is likely to be coded on the next",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/5618.json,1,test
+6816,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication, strongly indicating an existing lipid disorder that will be coded on the next hospital visit.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia"" and the prescription of ""Atorvastatin,"" which is a lipid-lowering medication, strongly indicating an existing lipid disorder that will be coded on the next hospital visit.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/6816.json,1,test
+25,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal, autoimmune, and infectious conditions, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or any other lipid disorder diagnosis or active management.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal, autoimmune, and infectious conditions, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or any other lipid disorder diagnosis or active management.",No,0,0.1,ok,True,False,"The current visit record documents several diagnoses and medications related to renal, autoimmune, and infectious conditions, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or any other lipid disorder diagnosis or active management.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal, autoimmune, and infectious conditions, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or any other lipid disorder diagnosis or active management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/25.json,0,test
+2081,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a direct evidence of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a direct evidence of a lipid disorder.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a direct evidence of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a direct evidence of a lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/2081.json,1,test
+648,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of a lipid disorder such as hypercholesterolemia or hyperlipidemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of a lipid disorder such as hypercholesterolemia or hyperlipidemia.",No,0,0.0,ok,True,False,"The current visit record does not contain any explicit diagnoses, documented history, or direct mention of a lipid disorder such as hypercholesterolemia or hyperlipidemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of a lipid disorder such as hypercholesterolemia or hyperlipidemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/648.json,0,test
+8330,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" in the diagnoses, which is direct evidence of a lipid disorder.
+
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" in the diagnoses, which is direct evidence of a lipid disorder.",Yes,1,0.95,ok,True,False,"The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" in the diagnoses, which is direct evidence of a lipid disorder.
+
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" in the diagnoses, which is direct evidence of a lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/8330.json,1,test
+9503,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is explicit evidence of a lipid disorder.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is explicit evidence of a lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/9503.json,1,test
+10330,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record lists various diagnoses and prescribed medications related to substance use, metabolic issues (Alkalosis), and mental health, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid disorder or related management.",No,0,0.0,ok,True,False,"The current visit record lists various diagnoses and prescribed medications related to substance use, metabolic issues (Alkalosis), and mental health, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid disorder or related management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/10330.json,0,test
+9976,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to alcoholic cirrhosis, atrial fibrillation, and gout, but contains no explicit evidence, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to alcoholic cirrhosis, atrial fibrillation, and gout, but contains no explicit evidence, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.",No,0,0.0,ok,True,False,"The current visit record documents diagnoses and medications related to alcoholic cirrhosis, atrial fibrillation, and gout, but contains no explicit evidence, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to alcoholic cirrhosis, atrial fibrillation, and gout, but contains no explicit evidence, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/9976.json,0,test
+8175,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several cardiovascular and metabolic conditions, but there is no explicit diagnosis, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several cardiovascular and metabolic conditions, but there is no explicit diagnosis, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.",No,0,0.1,ok,True,False,"The current visit record documents several cardiovascular and metabolic conditions, but there is no explicit diagnosis, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several cardiovascular and metabolic conditions, but there is no explicit diagnosis, documented history, or direct mention of a lipid disorder such as hyperlipidemia or hypercholesterolemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/8175.json,0,test
+3557,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, but there are no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality to support the need for this medication.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, but there are no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality to support the need for this medication.",No,0,0.1,ok,True,False,"The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, but there are no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality to support the need for this medication.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, but there are no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality to support the need for this medication.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/3557.json,0,test
+12424,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, which directly supports the likelihood of a diagnosis of Disorders of Lipid Metabolism in the next hospital visit.
+
+```
+```",Yes,1,0.95,ok,True,False,"The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, which directly supports the likelihood of a diagnosis of Disorders of Lipid Metabolism in the next hospital visit.
+
+```
+```",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/12424.json,1,test
+7201,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.",No,0,0.0,ok,True,False,"The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of lipid disorders such as hypercholesterolemia or hyperlipidemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/7201.json,0,test
+3697,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, alongside other diagnoses and procedures.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, alongside other diagnoses and procedures.",Yes,1,0.81,ok,True,False,"The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, alongside other diagnoses and procedures.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, alongside other diagnoses and procedures.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/3697.json,0,test
+6202,1,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of Coronary atherosclerosis, which is a lipid-related condition.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of Coronary atherosclerosis, which is a lipid-related condition.",Yes,1,0.95,ok,True,False,"The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of Coronary atherosclerosis, which is a lipid-related condition.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of Coronary atherosclerosis, which is a lipid-related condition.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/6202.json,1,test
+11620,0,zero_shot,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering agents, and the patient has a documented history of Diabetes with ketoacidosis, type I, which is a risk factor for dyslipidemia.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering agents, and the patient has a documented history of Diabetes with ketoacidosis, type I, which is a risk factor for dyslipidemia.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering agents, and the patient has a documented history of Diabetes with ketoacidosis, type I, which is a risk factor for dyslipidemia.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering agents, and the patient has a documented history of Diabetes with ketoacidosis, type I, which is a risk factor for dyslipidemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot/11620.json,0,test

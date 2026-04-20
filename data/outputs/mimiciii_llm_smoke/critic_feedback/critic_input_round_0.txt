@@ -1,0 +1,39 @@
+--- Sample 1 ---
+[Patient Medical History]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Other complications due to other cardiac device, implant, and graft; Ulcer of other part of foot; Coronary atherosclerosis of native coronary artery; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled
+- Medications prescribed: Eptifibatide; Valsartan; Atorvastatin; D5W; DopAmine; SW; Heparin Sodium; Haloperidol; Captopril; Insulin; 1/2 NS; Atropine Sulfate; Quetiapine Fumarate; Cefpodoxime Proxetil; Metoprolol; Clopidogrel Bisulfate; Acetaminophen; Docusate Sodium; Senna; Amiodarone HCl; Sodium Chloride 0.9%  Flush; D5 1/2NS; Aspirin; Heparin; NS; Digoxin; Magnesium Oxide
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Procedure on single vessel; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current record explicitly documents Coronary atherosclerosis and the prescription of Atorvastatin, which is a lipid-lowering agent, supporting an existing lipid disorder as per the demonstration cases.
+
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current record documents Coronary atherosclerosis and the prescription of Atorvastatin, which is a lipid-lowering agent, supporting an existing lipid disorder as per the demonstration cases.
+
+--- Sample 2 ---
+[Patient Medical History]
+- Diagnoses made: Subdural hemorrhage following injury without mention of open intracranial wound, with no loss of consciousness; Pneumonitis due to inhalation of food or vomitus; Atrial fibrillation; Hypoxemia; Congestive heart failure, unspecified; Other pulmonary insufficiency, not elsewhere classified; Diseases of tricuspid valve; Aortic valve disorders; Volume depletion, unspecified; Compression of brain; Altered mental status; Unspecified essential hypertension; [ICD9-DX:7845]; Other chronic pulmonary heart diseases; Late effect of complications of surgical and medical care; Mononeuritis of unspecified site; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Accidents occurring in unspecified place; Personal history of benign neoplasm of the brain; Long-term (current) use of anticoagulants; Personal history of other diseases of circulatory system; Unspecified fall; Nontoxic multinodular goiter
+- Medications prescribed: Phenytoin Sodium; NS; Dextrose 5%; Levofloxacin; Acetaminophen; Docusate Sodium; Senna; Atenolol; Sodium Chloride 0.9%  Flush; MetRONIDAZOLE (FLagyl); LR; Neutra-Phos; Phenytoin; Potassium Chloride; Ranitidine; Magnesium Sulfate; Guaifenesin; Cetylpyridinium Chl (Cepacol); Zolpidem Tartrate; Potassium Chl 20 mEq / 1000 mL NS; Gabapentin; Bisacodyl; Oxycodone-Acetaminophen; Morphine Sulfate; Milk of Magnesia; Furosemide; Heparin; NS (Glass Bottle); Phytonadione; Lorazepam; Albuterol 0.083% Neb Soln
+- Procedures performed: Transfusion of other serum
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record documents multiple cardiovascular and pulmonary issues, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or lipid-lowering treatment to support a diagnosis of Disorders of Lipid Metabolism.
+
+--- Sample 3 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of autologous vein bypass graft of the extremities; Acute posthemorrhagic anemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension
+- Medications prescribed: Potassium Chloride; Insulin; Oxycodone-Acetaminophen; Heparin Sodium; Furosemide; Warfarin; D5W; Senna; Docusate Sodium; Bisacodyl; Magnesium Sulfate; Enoxaparin Sodium; Pantoprazole Sodium; Nitroglycerin Ointment  2%; Morphine Sulfate; LR; Vial; Isotonic Sodium Chloride; Vancomycin HCl; Iso-Osmotic Dextrose; Gentamicin; Insulin Human Regular; NS; Heparin Flush CVL  (100 units/ml); Aspirin; Lisinopril; Metoprolol XL (Toprol XL); Simvastatin; Clopidogrel Bisulfate; Diltiazem Extended-Release; GlyBURIDE; MetFORMIN (Glucophage); Lyrica; Pantoprazole
+- Procedures performed: Other revision of vascular procedure; Repair of blood vessel with tissue patch graft
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current record documents the prescription of Simvastatin and the diagnosis of Atherosclerosis, which are explicit evidence of active lipid disorder management and a related condition.
+
+--- Sample 4 ---
+[Patient Medical History]
+- Diagnoses made: Acute respiratory failure; Subendocardial infarction, initial episode of care; Acute kidney failure, unspecified; Pneumonia, organism unspecified; Acidosis; Tobacco use disorder; Morbid obesity; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Other diseases of lung, not elsewhere classified; Enlargement of lymph nodes
+- Medications prescribed: Levofloxacin; Heparin Sodium; PredniSONE; MetFORMIN (Glucophage); GlyBURIDE; Loperamide; Quinapril; Insulin; Oseltamivir; 0.9% Sodium Chloride; Iso-Osmotic Dextrose; CeftriaXONE; 1/2 NS; Insulin Human Regular; Heparin; 5% Dextrose; Dextrose 5%; Albuterol 0.083% Neb Soln; Atorvastatin; Metoprolol Tartrate; Glucagon; Aspirin; Ipratropium Bromide Neb; Dextrose 50%; Syringe; Pantoprazole; Fluticasone-Salmeterol Diskus (250/50)
+- Procedures performed: None recorded
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly documents the prescription of Atorvastatin, a lipid-lowering medication, alongside diagnoses of Morbid obesity and Diabetes mellitus, which together suggest active management of a lipid disorder, consistent with the patterns in Demonstration Case 2.

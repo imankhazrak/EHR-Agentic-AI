@@ -67,7 +67,8 @@ def main() -> None:
     lines.append(
         "Evaluation: `parsed_prediction` is mapped Yes→1, No→0; compared to "
         "`label_lipid_disorder` (1 = next visit has lipid disorder). "
-        "`unparseable` predictions are excluded from metric counts. "
+        "`parsed_probability` (when `parse_valid_probability`) is used for ROC-AUC / AUPRC. "
+        "`unparseable` predictions are excluded from hard-metric counts. "
         "See `src/evaluation/evaluate_llm_runs.py` and `src/llm/output_parser.py`.\n\n"
     )
 
@@ -87,7 +88,9 @@ def main() -> None:
 
         lines.append(f"## Mode `{mode}`\n\n")
         lines.append(f"- Results: `{res_path}`\n")
-        lines.append(f"- Raw JSON per row: `{args.outputs}/raw_llm_responses/{mode}/`\n")
+        lines.append(
+            f"- Raw responses (JSONL): `{args.outputs}/raw_llm_responses/{mode}/responses.jsonl`\n"
+        )
         lines.append(
             f"- Rendered prompts (if present): `{args.outputs}/prompts_used/{mode}/prompt_<pair_id>.txt`\n\n"
         )
@@ -108,6 +111,8 @@ def main() -> None:
             lines.append(f"- **Parsed prediction**: {pred_raw}\n")
             lines.append(f"- **Verdict**: {verdict}\n")
             lines.append(f"- **Parser**: `{row.get('parser_status', '')}`\n")
+            if "parsed_probability" in row.index and pd.notna(row.get("parsed_probability")):
+                lines.append(f"- **Parsed probability**: {row.get('parsed_probability')} (valid={row.get('parse_valid_probability', '')})\n")
             lines.append(f"- **Model**: `{row.get('model_name', '')}`\n\n")
             lines.append("**Input narrative** (`narrative_current`):\n\n")
             lines.append(_fence(str(row.get("narrative_current", ""))))

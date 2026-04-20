@@ -1,0 +1,190 @@
+[
+  {
+    "case_id": "2494",
+    "true_label": 1,
+    "predicted_label": 1,
+    "probability": 0.27,
+    "case_type": "TP",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: M. Approximate age band (from shifted dates): 70-79 years. Structured signals (ICD-9 rules): cardiovascular diagnoses. Example codes: 4373; 4240; 4280; 42731; 515; 5119; 5185; 5070 …. Current-visit narrative (truncated): - Diagnoses made: Cerebral aneurysm, nonruptured; Mitral valve disorders; Congestive heart failure, unspecified; Atrial fibrillation; Postinflammatory pulmonary fibrosis; Unspecified pleural effusion; [ICD9-DX:5185]; Pneumonitis due to inhalation of food or vomitus; Infection and inflammatory reaction due to other vasc …",
+    "key_evidence": "Diagnosis codes (sample): 4373; 4240; 4280; 42731; 515; 5119; 5185; 5070; 99662. Rule flags: [cardiovascular_burden]. Statin or lipid-lowering therapy mentioned in medication list.",
+    "model_explanation": "Prediction aligns with lipid-related signals in the record, including statin therapy on the medication list.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Cerebral aneurysm, nonruptured; Mitral valve disorders; Congestive heart failure, unspecified; Atrial fibrillation; Postinflammatory pulmonary fibrosis; Unspecified pleural effusion; [ICD9-DX:5185]; Pneumonitis due to inhalation of food or vomitus; Infection and inflammatory reaction due to other vascular device, implant, and graft - Medications prescribed: Furosemide; D5W; Lorazepam; Hydralazine HCl; Soln.; Lansoprazole Oral Solution; Nitroglycerin; Propofol (Generic); Docusate Sodium (Liquid); Lactulose; Potassium Chloride; Isosorbide Dinitrate; Pantoprazole; Zolpidem Tartrate; Metoprolol; Aspirin; Acetylcysteine 20%; traZODONE HCl; Oxazepam; Atropine Sulfate; Docusate Sodium; Alteplase (Catheter Clearance); Glycopyrrolate; Neostigmine; Meperidine; Simvastatin; Captop …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 1,
+    "gpt4o_mini_v2_few_shot_prob": 0.75
+  },
+  {
+    "case_id": "4932",
+    "true_label": 1,
+    "predicted_label": 1,
+    "probability": 1.0,
+    "case_type": "TP",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 60-69 years. Structured signals (ICD-9 rules): dyslipidemia-related codes, cardiovascular diagnoses. Example codes: 486; 49121; 4280; 78057; 4168; 2720. Current-visit narrative (truncated): - Diagnoses made: Pneumonia, organism unspecified; Obstructive chronic bronchitis with (acute) exacerbation; Congestive heart failure, unspecified; Unspecified sleep apnea; Other chronic pulmonary heart diseases; Pure hypercholesterolemia - Medications prescribed: None recorded - Procedures performed: None recorded",
+    "key_evidence": "Diagnosis codes (sample): 486; 49121; 4280; 78057; 4168; 2720. Rule flags: [dyslipidemia_icd, cardiovascular_burden]. No statin keyword hit in medication list (keyword rule).",
+    "model_explanation": "Prediction aligns with lipid-related signals in the record, including dyslipidemia-related diagnosis codes.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Pneumonia, organism unspecified; Obstructive chronic bronchitis with (acute) exacerbation; Congestive heart failure, unspecified; Unspecified sleep apnea; Other chronic pulmonary heart diseases; Pure hypercholesterolemia - Medications prescribed: None recorded - Procedures performed: None recorded",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 1,
+    "gpt4o_mini_v2_few_shot_prob": 0.85
+  },
+  {
+    "case_id": "4305",
+    "true_label": 0,
+    "predicted_label": 0,
+    "probability": 0.0,
+    "case_type": "TN",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 50-59 years. Structured signals (ICD-9 rules): no major coded comorbidity hits under simple rules. Example codes: 03811; 3241; 51881; 73008; 78820; 07054; 5990; 30560 …. Current-visit narrative (truncated): - Diagnoses made: Methicillin susceptible Staphylococcus aureus septicemia; Intraspinal abscess; Acute respiratory failure; Acute osteomyelitis, other specified sites; Retention of urine, unspecified; Chronic hepatitis C without mention of hepatic coma; Urinary tract infection, site not specified; Cocaine abuse, unspec …",
+    "key_evidence": "Diagnosis codes (sample): 03811; 3241; 51881; 73008; 78820; 07054; 5990; 30560; 99592; 72271; 3004; 28529. Rule flags: [none]. No statin keyword hit in medication list (keyword rule).",
+    "model_explanation": "No strong indicators of lipid disorder in structured codes relative to the task label (negative next-visit lipid disorder).",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Methicillin susceptible Staphylococcus aureus septicemia; Intraspinal abscess; Acute respiratory failure; Acute osteomyelitis, other specified sites; Retention of urine, unspecified; Chronic hepatitis C without mention of hepatic coma; Urinary tract infection, site not specified; Cocaine abuse, unspecified; Severe sepsis; Intervertebral disc disorder with myelopathy, cervical region; Dysthymic disorder; Anemia of other chronic disease - Medications prescribed: Sodium Chloride 0.9% Flush; Pantoprazole Sodium; Vial; Heparin; Iso-Osmotic Dextrose; Ampicillin Sodium; Vancomycin HCl; NS (Mini Bag Plus); Morphine Sulfate; Acyclovir; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; D5W; Potassium Chloride; Midazolam HCl; CefTRIAXone; SW; NS; Nafcillin; Docusate Sodium (Liquid); Bisac …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 0,
+    "gpt4o_mini_v2_few_shot_prob": 0.1
+  },
+  {
+    "case_id": "11322",
+    "true_label": 0,
+    "predicted_label": 0,
+    "probability": 0.15,
+    "case_type": "TN",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 40-49 years. Structured signals (ICD-9 rules): diabetes-related codes, cardiovascular diagnoses. Example codes: 51881; 5845; 51919; 32723; 2809; 49390; 25000; V5867 …. Current-visit narrative (truncated): - Diagnoses made: Acute respiratory failure; Acute kidney failure with lesion of tubular necrosis; Other diseases of trachea and bronchus; Obstructive sleep apnea (adult)(pediatric); Iron deficiency anemia, unspecified; Asthma, unspecified type, unspecified; Diabetes mellitus without mention of complication, type II or …",
+    "key_evidence": "Diagnosis codes (sample): 51881; 5845; 51919; 32723; 2809; 49390; 25000; V5867; 2449; 3004; 340; 53081 …. Rule flags: [diabetes, cardiovascular_burden]. Statin or lipid-lowering therapy mentioned in medication list.",
+    "model_explanation": "No strong indicators of lipid disorder in structured codes relative to the task label (negative next-visit lipid disorder).",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Acute respiratory failure; Acute kidney failure with lesion of tubular necrosis; Other diseases of trachea and bronchus; Obstructive sleep apnea (adult)(pediatric); Iron deficiency anemia, unspecified; Asthma, unspecified type, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Long-term (current) use of insulin; Unspecified acquired hypothyroidism; Dysthymic disorder; Multiple sclerosis; Esophageal reflux; Conjunctival hemorrhage; Meralgia paresthetica; Pigmentary retinal dystrophy; Tracheostomy status - Medications prescribed: Lorazepam; 0.9% Sodium Chloride; Phenytoin Sodium; Iso-Osmotic Dextrose; Vancomycin; Vial; D5 1/2NS; Sarna Lotion; Lidocaine Jelly 2% (Urojet); Insulin; Pantoprazole; Senna; L …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 1,
+    "gpt4o_mini_v2_few_shot_prob": 0.75
+  },
+  {
+    "case_id": "3385",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability": 0.27,
+    "case_type": "FP",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 50-59 years. Structured signals (ICD-9 rules): diabetes-related codes. Example codes: 03842; 78552; 9974; 5761; 5849; V427; 4254; 3970 …. Current-visit narrative (truncated): - Diagnoses made: Septicemia due to escherichia coli [E. coli]; Septic shock; [ICD9-DX:9974]; Cholangitis; Acute kidney failure, unspecified; Liver replaced by transplant; Other primary cardiomyopathies; Diseases of tricuspid valve; Severe sepsis; Obstruction of bile duct; Surgical operation with anastomosis, bypass, o …",
+    "key_evidence": "Diagnosis codes (sample): 03842; 78552; 9974; 5761; 5849; V427; 4254; 3970; 99592; 5762; E8782; 42731 …. Rule flags: [diabetes]. Statin or lipid-lowering therapy mentioned in medication list.",
+    "model_explanation": "Model may rely on indirect signals such as statin therapy or cardiovascular medications without a documented dyslipidemia label at the next visit.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Septicemia due to escherichia coli [E. coli]; Septic shock; [ICD9-DX:9974]; Cholangitis; Acute kidney failure, unspecified; Liver replaced by transplant; Other primary cardiomyopathies; Diseases of tricuspid valve; Severe sepsis; Obstruction of bile duct; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Atrial fibrillation; Unspecified acquired hypothyroidism; Unspecified essential hypertension; Mitral valve disorders; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled - Medications prescribed: NS; Potassium Chl 40 mEq / 1000 mL NS; Vancomycin HCl; …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 1,
+    "gpt4o_mini_v2_few_shot_prob": 0.75
+  },
+  {
+    "case_id": "4462",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability": 0.85,
+    "case_type": "FP",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 70-79 years. Structured signals (ICD-9 rules): diabetes-related codes, dyslipidemia-related codes, a cardiometabolic risk pattern (rule-based). Example codes: 0389; 5849; 5990; 70714; 99592; 25060; 3572; 5641 …. Current-visit narrative (truncated): - Diagnoses made: Unspecified septicemia; Acute kidney failure, unspecified; Urinary tract infection, site not specified; Ulcer of heel and midfoot; Severe sepsis; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Irritable bowel syndrome; Os …",
+    "key_evidence": "Diagnosis codes (sample): 0389; 5849; 5990; 70714; 99592; 25060; 3572; 5641; 73300; 4019; 2724; 25080 …. Rule flags: [diabetes, dyslipidemia_icd, metabolic_syndrome_pattern]. Statin or lipid-lowering therapy mentioned in medication list.",
+    "model_explanation": "Model may rely on indirect signals such as statin therapy or cardiovascular medications without a documented dyslipidemia label at the next visit.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Unspecified septicemia; Acute kidney failure, unspecified; Urinary tract infection, site not specified; Ulcer of heel and midfoot; Severe sepsis; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Irritable bowel syndrome; Osteoporosis, unspecified; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Anemia, unspecified; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site - Medications prescribed: Olanzapine; Gabapentin; Iso-Osmotic Dextrose; CeftAZIDime; Oxycodone (Sustained Release); Sodium Chloride 0.9% Flush; Heparin; Pantoprazo …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 1,
+    "gpt4o_mini_v2_few_shot_prob": 0.75
+  },
+  {
+    "case_id": "7401",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability": 0.0,
+    "case_type": "FN",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: F. Approximate age band (from shifted dates): 70-79 years. Structured signals (ICD-9 rules): cardiovascular diagnoses. Example codes: 41071; 4280; 5770; 57451; 5761; 4160; 4471; V173. Current-visit narrative (truncated): - Diagnoses made: Subendocardial infarction, initial episode of care; Congestive heart failure, unspecified; Acute pancreatitis; Calculus of bile duct without mention of cholecystitis, with obstruction; Cholangitis; Primary pulmonary hypertension; Stricture of artery; Family history of ischemic heart disease - Medicati …",
+    "key_evidence": "Diagnosis codes (sample): 41071; 4280; 5770; 57451; 5761; 4160; 4471; V173. Rule flags: [cardiovascular_burden]. No statin keyword hit in medication list (keyword rule).",
+    "model_explanation": "Possible miss due to sparse explicit lipid-related codes or therapies in the current-admission snapshot.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Subendocardial infarction, initial episode of care; Congestive heart failure, unspecified; Acute pancreatitis; Calculus of bile duct without mention of cholecystitis, with obstruction; Cholangitis; Primary pulmonary hypertension; Stricture of artery; Family history of ischemic heart disease - Medications prescribed: None recorded - Procedures performed: [ICD9-PX:3601]; Combined right and left heart cardiac catheterization; Implant of pulsation balloon; Coronary arteriography using two catheters; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Removal of external heart assist system(s) or device(s)",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 0,
+    "gpt4o_mini_v2_few_shot_prob": 0.1
+  },
+  {
+    "case_id": "6157",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability": 0.1,
+    "case_type": "FN",
+    "primary_model": "Gemma4_PromptV2_EHR-CoAgent",
+    "clinical_summary": "De-identified cohort record (analysis id only). Sex: M. Approximate age band (from shifted dates): 120-129 years. Structured signals (ICD-9 rules): no major coded comorbidity hits under simple rules. Example codes: 5789; 42731; 3580; 79092; 2859; E9342; 04186; 4550 …. Current-visit narrative (truncated): - Diagnoses made: Hemorrhage of gastrointestinal tract, unspecified; Atrial fibrillation; [ICD9-DX:3580]; Abnormal coagulation profile; Anemia, unspecified; Anticoagulants causing adverse effects in therapeutic use; Helicobacter pylori [H. pylori]; Internal hemorrhoids without mention of complication; Benign neoplasm o …",
+    "key_evidence": "Diagnosis codes (sample): 5789; 42731; 3580; 79092; 2859; E9342; 04186; 4550; 2113. Rule flags: [none]. No statin keyword hit in medication list (keyword rule).",
+    "model_explanation": "Possible miss due to sparse explicit lipid-related codes or therapies in the current-admission snapshot.",
+    "clinician_questions": [
+      "Does this prediction seem clinically reasonable?",
+      "What evidence supports or contradicts this prediction?",
+      "Is this case ambiguous?",
+      "Would you expect a lipid disorder diagnosis at next visit?"
+    ],
+    "selection_tags": [
+      "high_confidence"
+    ],
+    "narrative_excerpt_phi_safe": "- Diagnoses made: Hemorrhage of gastrointestinal tract, unspecified; Atrial fibrillation; [ICD9-DX:3580]; Abnormal coagulation profile; Anemia, unspecified; Anticoagulants causing adverse effects in therapeutic use; Helicobacter pylori [H. pylori]; Internal hemorrhoids without mention of complication; Benign neoplasm of colon - Medications prescribed: Acetaminophen; Ondansetron; Influenza Virus Vaccine; Calcium Gluconate; Heparin Sodium; Heparin; D5W; Furosemide; Lisinopril; Labetalol HCl; Mexiletine HCl; Potassium Chloride; Fentanyl Citrate; Midazolam HCl; Pantoprazole; Golytely; Levofloxacin; Metoprolol; Amoxicillin; Clarithromycin; Zolpidem Tartrate; Pyridostigmine Bromide; Guaifenesin-Codeine Phosphate; traMADOL; Artificial Tears; Pantoprazole Sodium; NS - Procedures performed: Other …",
+    "comparison_model": "GPT4o-mini_PromptV2_Few-Shot",
+    "gpt4o_mini_v2_few_shot_pred": 0,
+    "gpt4o_mini_v2_few_shot_prob": 0.1
+  }
+]

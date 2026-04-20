@@ -1,0 +1,12 @@
+{
+  "sample_id": 5576,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.85\nReasoning: The current visit record explicitly lists Atorvastatin as a prescribed medication, which is a lipid-lowering agent, and the patient has multiple other cardiovascular and renal diagnoses that are often associated with lipid abnormalities.\n\nRules for Probability:\n- Probability must be a single numeric value between 0 and 1.\n- Use exactly two decimal places (for example: 0.27, 0.63, 0.81).\n- Use higher values when the documented evidence strongly supports that a lipid disorder will be coded on the next hospital visit.\n- Use lower values when the documented evidence does not support it.\n- Do not use percentages.\n- Do not output any extra lines before or after the required format.\nASSISTANT:\nPrediction: Yes\nProbability: 0.85\nReasoning: The current visit record explicitly lists Atorvastatin as a prescribed medication, which is a lipid-lowering agent, and the patient has multiple other cardiovascular and renal diagnoses that are often associated with lipid abnormalities.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 946,
+    "completion_tokens": 229
+  }
+}

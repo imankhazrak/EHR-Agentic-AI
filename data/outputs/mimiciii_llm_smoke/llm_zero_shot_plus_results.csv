@@ -1,0 +1,219 @@
+pair_id,label_lipid_disorder,prompt_mode,model_name,raw_response,parsed_prediction,pred_binary,parsed_probability,probability_parse_status,parse_valid_probability,probability_format_warning,reasoning,parser_status,prob_yes,prob_no,raw_response_path,true_label,split
+5346,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular diagnoses that suggest a need for lipid management.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular diagnoses that suggest a need for lipid management.",Yes,1,0.63,ok,True,False,"The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular diagnoses that suggest a need for lipid management.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular diagnoses that suggest a need for lipid management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/5346.json,0,test
+4305,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents numerous severe infections, abscesses, and respiratory issues, but contains no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",No,0,0.0,ok,True,False,"The current visit record documents numerous severe infections, abscesses, and respiratory issues, but contains no explicit diagnoses, documented history, or direct mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/4305.json,0,test
+8843,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.",Yes,1,0.81,ok,True,False,"The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/8843.json,1,test
+10771,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents multiple diagnoses and medications, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents multiple diagnoses and medications, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",No,0,0.0,ok,True,False,"The current visit record documents multiple diagnoses and medications, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents multiple diagnoses and medications, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/10771.json,0,test
+5618,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/5618.json,1,test
+6816,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.",Yes,1,0.95,ok,True,False,"The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia, which is a direct evidence of a lipid disorder. Additionally, the patient is prescribed Atorvastatin, a lipid-lowering medication, supporting the active management of this condition.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/6816.json,1,test
+25,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal and metabolic issues, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or other lipid abnormalities that would strongly suggest a diagnosis of Disorders of Lipid Metabolism in the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal and metabolic issues, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or other lipid abnormalities that would strongly suggest a diagnosis of Disorders of Lipid Metabolism in the next visit.",No,0,0.1,ok,True,False,"The current visit record documents several diagnoses and medications related to renal and metabolic issues, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or other lipid abnormalities that would strongly suggest a diagnosis of Disorders of Lipid Metabolism in the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications related to renal and metabolic issues, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or other lipid abnormalities that would strongly suggest a diagnosis of Disorders of Lipid Metabolism in the next visit.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/25.json,0,test
+2081,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia.",Yes,1,1.0,ok,True,False,"The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 1.00
+Reasoning: The current visit record explicitly documents the diagnosis of Pure hypercholesterolemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/2081.json,1,test
+648,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to Hypoxemia, Multiple myeloma, Pneumonia, and Hypothyroidism, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to Hypoxemia, Multiple myeloma, Pneumonia, and Hypothyroidism, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.",No,0,0.0,ok,True,False,"The current visit record documents diagnoses and medications related to Hypoxemia, Multiple myeloma, Pneumonia, and Hypothyroidism, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses and medications related to Hypoxemia, Multiple myeloma, Pneumonia, and Hypothyroidism, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/648.json,0,test
+8330,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed Atorvastatin, which supports active management of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed Atorvastatin, which supports active management of a lipid disorder.",Yes,1,0.81,ok,True,False,"The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed Atorvastatin, which supports active management of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed Atorvastatin, which supports active management of a lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/8330.json,1,test
+9503,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder, and the patient is prescribed ""Atorvastatin,"" a lipid-lowering medication.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder, and the patient is prescribed ""Atorvastatin,"" a lipid-lowering medication.",Yes,1,0.95,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder, and the patient is prescribed ""Atorvastatin,"" a lipid-lowering medication.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.95
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which is a form of lipid disorder, and the patient is prescribed ""Atorvastatin,"" a lipid-lowering medication.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/9503.json,1,test
+10330,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents various psychiatric and substance use diagnoses and medications, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",No,0,0.0,ok,True,False,"The current visit record documents various psychiatric and substance use diagnoses and medications, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/10330.json,0,test
+9976,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to alcoholic liver disease, atrial fibrillation, and gout, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to alcoholic liver disease, atrial fibrillation, and gout, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",No,0,0.0,ok,True,False,"The current visit record documents diagnoses related to alcoholic liver disease, atrial fibrillation, and gout, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to alcoholic liver disease, atrial fibrillation, and gout, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or lipid-lowering treatment.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/9976.json,0,test
+8175,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic issues, but lacks explicit diagnoses or documented history of hyperlipidemia, hypercholesterolemia, or active lipid-lowering management supporting a CCS 53 diagnosis.
+
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic issues, but lacks explicit diagnoses or documented history of hyperlipidemia, hypercholesterolemia, or active lipid-lowering management supporting a CCS 53 diagnosis.",No,0,0.15,ok,True,False,"The current visit record documents several cardiovascular and metabolic issues, but lacks explicit diagnoses or documented history of hyperlipidemia, hypercholesterolemia, or active lipid-lowering management supporting a CCS 53 diagnosis.
+
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic issues, but lacks explicit diagnoses or documented history of hyperlipidemia, hypercholesterolemia, or active lipid-lowering management supporting a CCS 53 diagnosis.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/8175.json,0,test
+3557,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.63
+Reasoning: Current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest a need for lipid management.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: Current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest a need for lipid management.",Yes,1,0.63,ok,True,False,"Current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest a need for lipid management.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: Current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest a need for lipid management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/3557.json,0,test
+12424,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Other and unspecified hyperlipidemia,"" which directly indicates the presence of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Other and unspecified hyperlipidemia,"" which directly indicates the presence of a lipid disorder.",Yes,1,0.81,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Other and unspecified hyperlipidemia,"" which directly indicates the presence of a lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Other and unspecified hyperlipidemia,"" which directly indicates the presence of a lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/12424.json,1,test
+7201,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents various diagnoses and medications related to gallbladder issues, kidney failure, asthma, and infections, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents various diagnoses and medications related to gallbladder issues, kidney failure, asthma, and infections, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.",No,0,0.0,ok,True,False,"The current visit record documents various diagnoses and medications related to gallbladder issues, kidney failure, asthma, and infections, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents various diagnoses and medications related to gallbladder issues, kidney failure, asthma, and infections, but contains no explicit mention or documented history of hyperlipidemia, hypercholesterolemia, or any other lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/7201.json,0,test
+3697,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular risk factors like Unspecified essential hypertension, suggesting active management of a potential lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular risk factors like Unspecified essential hypertension, suggesting active management of a potential lipid disorder.",Yes,1,0.63,ok,True,False,"The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular risk factors like Unspecified essential hypertension, suggesting active management of a potential lipid disorder.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.63
+Reasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the presence of other cardiovascular risk factors like Unspecified essential hypertension, suggesting active management of a potential lipid disorder.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/3697.json,0,test
+6202,1,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record documents the long-term use of Simvastatin, which is a lipid-lowering medication, and the presence of multiple cardiovascular diagnoses that suggest underlying lipid abnormalities, supporting a likely coding of a lipid disorder in the next visit.",Yes,1,0.81,ok,True,False,"The current visit record documents the long-term use of Simvastatin, which is a lipid-lowering medication, and the presence of multiple cardiovascular diagnoses that suggest underlying lipid abnormalities, supporting a likely coding of a lipid disorder in the next visit.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/6202.json,1,test
+11620,0,zero_shot_plus,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.27
+Reasoning: The current visit record documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering medications, and the background prevalence of lipid disorders in the MIMIC-III population is approximately 27.4%.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.27
+Reasoning: The current visit record documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering medications, and the background prevalence of lipid disorders in the MIMIC-III population is approximately 27.4%.",Yes,1,0.27,ok,True,False,"The current visit record documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering medications, and the background prevalence of lipid disorders in the MIMIC-III population is approximately 27.4%.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.27
+Reasoning: The current visit record documents the prescription of Atorvastatin and Aspirin, which are lipid-lowering medications, and the background prevalence of lipid disorders in the MIMIC-III population is approximately 27.4%.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/zero_shot_plus/11620.json,0,test

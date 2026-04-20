@@ -1,0 +1,12 @@
+{
+  "sample_id": 5056,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents numerous severe diagnoses (e.g., Congestive heart failure, Acute osteomyelitis, End stage renal disease, Atherosclerosis) and uses lipid-lowering medications (Atorvastatin, Warfarin, Clopidogrel Bisulfate), but lacks explicit documentation of hypercholesterolemia or hyperlipidemia as a diagnosis or active management signal, which is required for a 'Yes' prediction based on the guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4012,
+    "completion_tokens": 106
+  }
+}

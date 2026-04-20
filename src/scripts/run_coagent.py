@@ -50,6 +50,7 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
     demo_text = format_exemplar_block(exemplars)
 
     client = LLMClient(cfg["llm"])
+    prompt_td = cfg["llm"].get("prompt_template_dir", "prompts_v2")
 
     logger.info("=== Running EHR-CoAgent Pipeline ===")
     # Merge coagent-specific config with top-level seed
@@ -62,6 +63,7 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
         demonstration_cases=demo_text,
         cfg=co_cfg_full,
         output_dir=output_dir,
+        prompt_template_dir=prompt_td,
     )
 
     metrics = evaluate_llm_results(

@@ -1,0 +1,12 @@
+{
+  "sample_id": 2409,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. This aligns with the pattern in Demonstration Case 2, where \"Pure hypercholesterolemia\" led to a \"Yes\" outcome. The presence of \"Simvastatin\" in the prescribed medications further supports active lipid-disorder management.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3641,
+    "completion_tokens": 83
+  }
+}

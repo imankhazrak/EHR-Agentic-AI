@@ -1,0 +1,12 @@
+{
+  "sample_id": 3465,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents several severe liver and metabolic issues (Alcoholic cirrhosis, Hepatic encephalopathy, etc.), but it does not explicitly mention or document any hyperlipidemia, hypercholesterolemia, or active lipid-lowering treatment that would strongly suggest a diagnosis of Disorders of Lipid Metabolism in the next visit.\n\nPrediction: No\nProbability: 0.10\nReasoning: The record details severe liver disease and metabolic complications, but lacks explicit evidence of lipid abnormalities or lipid-lowering management to predict a diagnosis of Disorders of Lipid Metabolism in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1120,
+    "completion_tokens": 133
+  }
+}

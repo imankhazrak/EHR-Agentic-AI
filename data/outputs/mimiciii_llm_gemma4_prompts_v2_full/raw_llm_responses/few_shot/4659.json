@@ -1,0 +1,12 @@
+{
+  "sample_id": 4659,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents diagnoses of Coronary atherosclerosis, Intermediate coronary syndrome, and Old myocardial infarction, which are cardiovascular issues, but there is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other documented evidence of a lipid disorder or active lipid-disorder management.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record documents cardiovascular diagnoses (Coronary atherosclerosis, Intermediate coronary syndrome, Old myocardial infarction) but lacks any explicit mention of lipid abnormalities (hyperlipidemia, hypercholesterolemia) or documented history of lipid-disorder management, which is required for a 'Yes' prediction.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3392,
+    "completion_tokens": 149
+  }
+}

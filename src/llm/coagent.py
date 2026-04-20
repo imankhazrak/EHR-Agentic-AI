@@ -11,7 +11,7 @@ Steps:
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Optional, Union
 
 import pandas as pd
 
@@ -32,6 +32,7 @@ def run_coagent_pipeline(
     demonstration_cases: str,
     cfg: Dict,
     output_dir: str = "data/outputs",
+    prompt_template_dir: Optional[Union[str, Path]] = None,
 ) -> pd.DataFrame:
     """Run the full EHR-CoAgent pipeline.
 
@@ -65,9 +66,10 @@ def run_coagent_pipeline(
     cal_results = run_predictions(
         client=client,
         df=cal_df,
-        mode="few_shot",
+        mode="coagent_calibration",
         demonstration_cases=demonstration_cases,
         output_dir=output_dir,
+        prompt_template_dir=prompt_template_dir,
     )
 
     # Merge true labels
@@ -83,10 +85,14 @@ def run_coagent_pipeline(
     logger.info("Step 2: Found %d wrong predictions out of %d calibration samples", len(wrong_df), len(cal_merged))
 
     if len(wrong_df) == 0:
-        logger.warning("No wrong predictions found — skipping critic, using plain few-shot on test set")
+        logger.warning("No wrong predictions found — skipping critic, using coagent mode without feedback")
         return run_predictions(
-            client=client, df=test_df, mode="few_shot",
-            demonstration_cases=demonstration_cases, output_dir=output_dir,
+            client=client,
+            df=test_df,
+            mode="coagent",
+            demonstration_cases=demonstration_cases,
+            output_dir=output_dir,
+            prompt_template_dir=prompt_template_dir,
         )
 
     # Sample wrong predictions
@@ -101,6 +107,7 @@ def run_coagent_pipeline(
         batch_size=batch_size,
         n_rounds=n_rounds,
         output_dir=str(odir / "critic_feedback"),
+        prompt_template_dir=prompt_template_dir,
     )
 
     # ---- Step 4: Consolidate feedback ----
@@ -110,6 +117,7 @@ def run_coagent_pipeline(
         feedbacks=feedbacks,
         method=consolidation,
         output_dir=str(odir / "critic_feedback"),
+        prompt_template_dir=prompt_template_dir,
     )
 
     # ---- Step 5: Re-run predictor on test set with feedback ----
@@ -121,6 +129,7 @@ def run_coagent_pipeline(
         demonstration_cases=demonstration_cases,
         critic_feedback=consolidated,
         output_dir=output_dir,
+        prompt_template_dir=prompt_template_dir,
     )
 
     # Save the final augmented prompt for reference

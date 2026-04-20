@@ -1,286 +1,206 @@
-# Comparative Results Report — Classical ML vs LLM Approaches (GPT-4o-mini & Gemma 4)
+# Comparative Results Report — ML vs LLM (GPT-4o-mini + Gemma 4, Prompt V1/V2)
 
-This report summarizes the completed MIMIC-III lipid-disorder next-visit prediction experiments, covering classical ML and **two** local/API LLM tracks: **OpenAI `gpt-4o-mini`** and **local `google/gemma-4-e4b-it`**. It presents full metric tables, confusion-level outcomes, and structured intra-family and inter-family comparisons.
+This report compares classical ML baselines with LLM prompt strategies for MIMIC-III lipid-disorder next-visit prediction.
 
-**MIMIC-III next-visit prediction:** Disorders of Lipid Metabolism (binary), held-out test evaluation.
+It now includes:
 
-**Data sources:**
-
-- **ML and GPT-4o-mini LLM:** `data/outputs/mimiciii/` (`summary_table.csv`, `ml_results_*.csv`, `llm_*_metrics.json`).
-- **Gemma 4 LLM (prompt experiments):** `data/outputs/mimiciii_gemma/` (`llm_*_metrics.json`); Co-Agent completed in Slurm job **46615354** (see `docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md`).
-
-> **Naming convention:** Model-scoped output roots (`mimiciii` vs `mimiciii_gemma`); tables label **model + approach** explicitly—metrics from different models are not merged into unlabeled rows.
-
-**Related:** `docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md`, `docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md`, `METHODOLOGY.md`.
-
-*HTML export:* `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html` (regenerate with `pandoc COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md -o COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html --standalone --toc --toc-depth=3 -M title="Comparative Results — Classical ML vs LLM (GPT-4o-mini & Gemma 4)" --self-contained` from `docs/`).
+- GPT-4o-mini **Prompt V1**
+- GPT-4o-mini **Prompt V2**
+- Gemma 4 **Prompt V1**
+- Gemma 4 **Prompt V2** (added from `docs/LLM_EXPERIMENT_REPORT_Gemma4_PROMPT_V2.md`)
 
 ---
 
-## 1. Task and evaluation (shared)
+## 1) Scope and Evaluation Setup
 
 | Item | Detail |
 |------|--------|
-| **Target** | Presence of lipid-metabolism ICD-9 codes (`272.x` / CCS-53 family) on the **next** hospital admission |
-| **Test unit** | Visit-pair rows; **stratified** hold-out (**20%** test, seed **42**) |
-| **Metrics** | Accuracy (ACC), **Sensitivity** (recall on positives), **Specificity**, **F1** (positive class); all in **%** |
-| **Positive prevalence (test)** | Positives ≈ **tp + fn** on fully parsed rows → **683 / 2492 ≈ 27.4%** (consistent across modes after accounting for dropped unparseables) |
+| Task | Binary prediction of lipid-metabolism disorder (`272.x` / CCS-53) on next admission |
+| Test split | Stratified hold-out, seed 42 |
+| Core metrics | Accuracy, Sensitivity (Recall+), Specificity, F1 |
+| LLM eval size | `n_total = 2492` across all compared LLM prompt modes |
+| Input caveat | ML uses bag-of-codes; LLM uses narrative text |
 
-**Input modality differs by family:**
-
-| Family | Input representation |
-|--------|----------------------|
-| **Classical ML** | **Bag-of-codes** on diagnosis / procedure / medication strings from the **current** visit (`feature_type: bag_of_codes`) |
-| **LLM** | **Natural-language narrative** (`narrative_current`) from the same current visit |
-
-Metrics are **not** directly comparable as “fairness of model class” because features differ; they **are** comparable as **end-to-end systems** under the same labels and split.
+Because features differ (codes vs narrative), treat this as an **end-to-end system comparison**, not a strict model-only ablation.
 
 ---
 
-## 2. Complete classical ML results
+## 2) Classical ML Baselines
 
-### 2.1 Fully supervised (full training set)
+### 2.1 Fully Supervised
 
-Trained on all training pairs; evaluated on the same test split as the rest of the pipeline.
+| Model | ACC | Sens | Spec | F1 |
+|------|-----:|-----:|-----:|---:|
+| Decision Tree | 73.48 | 50.66 | 82.09 | 51.15 |
+| Logistic Regression | **77.05** | 47.73 | 88.11 | **53.27** |
+| Random Forest | 76.44 | 24.01 | **96.24** | 35.85 |
 
-| Model | ACC | Sensitivity | Specificity | F1 | tp | fp | tn | fn |
-|--------|-----|-------------|-------------|-----|----|----|----|-----|
-| Decision Tree | 73.48 | 50.66 | 82.09 | 51.15 | 346 | 324 | 1485 | 337 |
-| Logistic Regression | **77.05** | 47.73 | **88.11** | **53.27** | 326 | 215 | 1594 | 357 |
-| Random Forest | 76.44 | 24.01 | **96.24** | 35.85 | 164 | 68 | 1741 | 519 |
+### 2.2 ML Few-Shot (6 training examples)
 
-**Source:** `data/outputs/mimiciii/ml_results_fully_supervised.csv` / `summary_table.csv`.
+| Model | ACC | Sens | Spec | F1 |
+|------|-----:|-----:|-----:|---:|
+| Decision Tree | **61.40** | 56.52 | 63.24 | **44.52** |
+| Logistic Regression | 35.27 | 90.34 | 14.48 | 43.34 |
+| Random Forest | 34.95 | 92.53 | 13.21 | 43.81 |
 
-### 2.2 Few-shot ML (N = 6 labeled training examples)
-
-Same models and features, but each model is **fit** on only **6** labeled rows (`ml.few_shot_n: 6`, balanced), then evaluated on the full test set.
-
-| Model | ACC | Sensitivity | Specificity | F1 | tp | fp | tn | fn |
-|--------|-----|-------------|-------------|-----|----|----|----|-----|
-| Decision Tree | **61.40** | 56.52 | 63.24 | 44.52 | 386 | 665 | 1144 | 297 |
-| Logistic Regression | 35.27 | **90.34** | 14.48 | 43.34 | 617 | 1547 | 262 | 66 |
-| Random Forest | 34.95 | **92.53** | 13.21 | 43.81 | 632 | 1570 | 239 | 51 |
-
-**Source:** `data/outputs/mimiciii/ml_results_few_shot.csv` / `summary_table.csv`.
+**ML takeaway:** Fully supervised logistic regression is the strongest stable baseline; ML few-shot training is unstable at `N=6`.
 
 ---
 
-## 3. Complete LLM results — `gpt-4o-mini-2024-07-18`
+## 3) LLM Results by Model + Prompt Version
 
-Single underlying chat model; four **prompting** strategies. One completion per test row (Co-Agent adds extra calls on calibration/critic only).
+### 3.1 GPT-4o-mini — Prompt V1
 
-| Approach | ACC | Sensitivity | Specificity | F1 | tp | fp | tn | fn | n_valid | n_unparseable |
-|----------|-----|-------------|-------------|-----|----|----|----|-----|---------|---------------|
-| Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 | 394 | 189 | 1620 | 289 | 2492 | **0** |
-| Zero-Shot+ | 80.73 | 56.22 | **89.99** | 61.54 | 384 | 181 | 1627 | 299 | 2491 | 1 |
-| Few-Shot (N=6) | 80.65 | 57.39 | 89.44 | 61.93 | 392 | 191 | 1617 | 291 | 2491 | 1 |
-| **EHR-CoAgent** | **80.93** | **58.21** | 89.50 | **62.57** | **397** | 190 | 1619 | 285 | 2491 | 1 |
+| Approach | ACC | Sens | Spec | F1 |
+|----------|----:|-----:|-----:|---:|
+| Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 |
+| Zero-Shot+ | 80.73 | 56.22 | **89.99** | 61.54 |
+| Few-Shot | 80.65 | 57.39 | 89.44 | 61.93 |
+| EHR-CoAgent | **80.93** | **58.21** | 89.50 | **62.57** |
 
-**Source:** `data/outputs/mimiciii/llm_*_metrics.json` / `summary_table.csv`.
+### 3.2 GPT-4o-mini — Prompt V2
 
-**Note:** Rows with **unparseable** assistant text are **excluded** from tp/fp/tn/fn but counted in `n_unparseable`; three modes show **one** such test example in this run.
+| Approach | ACC | Sens | Spec | F1 |
+|----------|----:|-----:|-----:|---:|
+| Zero-Shot | 73.07 | **83.60** | 69.10 | 62.99 |
+| Zero-Shot+ | 73.27 | 83.31 | 69.49 | 63.08 |
+| Few-Shot | 75.56 | 77.75 | 74.74 | 63.55 |
+| EHR-CoAgent | **76.00** | 77.89 | **75.29** | **64.02** |
 
----
+### 3.3 Gemma 4 — Prompt V1
 
-## 4. Complete LLM results — `google/gemma-4-e4b-it` (local snapshot)
+| Approach | ACC | Sens | Spec | F1 |
+|----------|----:|-----:|-----:|---:|
+| Zero-Shot | 80.26 | 55.93 | 89.44 | 60.83 |
+| Zero-Shot+ | **80.97** | 60.61 | 88.66 | **63.59** |
+| Few-Shot | 80.10 | 57.83 | 88.50 | 61.43 |
+| EHR-CoAgent | 79.78 | **62.96** | 86.12 | 63.05 |
 
-Same four **prompt** modes and evaluation protocol as the GPT run; local inference via `models/hf_snapshots/google--gemma-4-e4b-it`. Baseline modes from Slurm **46510786**; **EHR-CoAgent** test pass completed in Slurm **46615354**.
+### 3.4 Gemma 4 — Prompt V2 (newly added)
 
-| Approach | ACC | Sensitivity | Specificity | F1 | tp | fp | tn | fn | n_valid | n_unparseable |
-|----------|-----|-------------|-------------|-----|----|----|----|-----|---------|---------------|
-| Zero-Shot | 80.26 | 55.93 | 89.44 | 60.83 | 382 | 191 | 1618 | 301 | 2492 | **0** |
-| **Zero-Shot+** | **80.97** | **60.61** | 88.66 | **63.59** | 414 | 205 | 1603 | 269 | 2491 | 1 |
-| Few-Shot (N=6) | 80.10 | 57.83 | 88.50 | 61.43 | 395 | 208 | 1601 | 288 | 2492 | 0 |
-| EHR-CoAgent | 79.78 | **62.96** | 86.12 | 63.05 | 430 | 251 | 1558 | 253 | 2492 | **0** |
+| Approach | ACC | Sens | Spec | F1 | AUC | AUPRC |
+|----------|----:|-----:|-----:|---:|----:|------:|
+| Zero-Shot | 74.92 | 79.36 | 73.24 | 63.43 | **80.78** | **57.41** |
+| Zero-Shot+ | 73.80 | 79.94 | 71.48 | 62.58 | 78.31 | 51.12 |
+| Few-Shot | 70.95 | **80.82** | 67.22 | 60.39 | 74.11 | 44.37 |
+| EHR-CoAgent | **75.08** | 80.67 | **72.97** | **63.96** | 79.54 | 53.25 |
 
-**Source:** `data/outputs/mimiciii_gemma/llm_*_metrics.json`; Co-Agent authoritative in `llm_coagent_metrics.json` if `summary_table.csv` omits that row.
-
-**Note:** Zero-Shot+ has **one** unparseable response (`n_valid = 2491`).
-
----
-
-## 5. Cross-LLM comparison (same prompts, different models)
-
-**Δ = Gemma 4 − GPT-4o-mini** (percentage points), matched by prompt approach.
-
-| Approach | Δ ACC | Δ Sens | Δ Spec | Δ F1 |
-|----------|-------|--------|--------|------|
-| Zero-Shot | −0.56 | −1.76 | −0.11 | −1.41 |
-| Zero-Shot+ | **+0.24** | **+4.39** | −1.33 | **+2.05** |
-| Few-Shot (N=6) | −0.55 | +0.44 | −0.94 | −0.50 |
-| EHR-CoAgent | −1.15 | **+4.75** | −3.38 | +0.48 |
-
-**Readout:**
-
-- **Aggregate accuracy** remains near **~80%** for both models across modes; differences are **small** for zero-shot and few-shot, with Gemma **Zero-Shot+** and **Co-Agent** trading **higher sensitivity** (and for Co-Agent, **lower specificity**) vs GPT.
-- **Best F1 (this split):** Gemma **Zero-Shot+ (63.59)** vs GPT **EHR-CoAgent (62.57)**—not directly comparable as the same *named* strategy (different prompt realizations still share templates).
-- **Best GPT accuracy:** EHR-CoAgent **80.93**; **best Gemma accuracy:** Zero-Shot+ **80.97**.
-- No **bootstrap CIs** by default; treat sub–percentage-point swings between models as **indicative**, not definitive.
+**Prompt V2 Gemma takeaway:** CoAgent is best on fixed-threshold metrics (ACC/F1/balanced tradeoff), while Zero-Shot is best on ranking quality (AUC/AUPRC).
 
 ---
 
-## 6. Intra-family comparisons
+## 4) Readable Cross-Track Summary
 
-### 6.1 Intra-ML — fully supervised
+### 4.1 Best configuration per track
 
-**Ranking by F1 (primary balance of precision/recall on minority positive class):**
+| Track | Best Setup | ACC | Sens | Spec | F1 |
+|------|------------|----:|-----:|-----:|---:|
+| ML (fully supervised) | Logistic Regression | 77.05 | 47.73 | 88.11 | 53.27 |
+| GPT-4o-mini Prompt V1 | EHR-CoAgent | **80.93** | 58.21 | 89.50 | 62.57 |
+| GPT-4o-mini Prompt V2 | EHR-CoAgent | 76.00 | **77.89** | 75.29 | **64.02** |
+| Gemma 4 Prompt V1 | Zero-Shot+ | **80.97** | 60.61 | 88.66 | 63.59 |
+| Gemma 4 Prompt V2 | EHR-CoAgent | 75.08 | 80.67 | 72.97 | 63.96 |
 
-1. Logistic Regression — **53.27**
-2. Decision Tree — 51.15
-3. Random Forest — 35.85
+### 4.2 Highest values across all LLM tracks
 
-**Ranking by accuracy:**
-
-1. **Logistic Regression — 77.05**
-2. Random Forest — 76.44
-3. Decision Tree — 73.48
-
-**Sensitivity vs specificity trade-off:**
-
-- **Random Forest** maximizes **specificity (96.24%)** at the cost of **very low sensitivity (24.01%)** and weak F1.
-- **Logistic regression** offers the **best overall** mix among the three under full supervision.
-
-**Takeaway:** Under full supervision, **logistic regression** on bag-of-codes is the strongest classical baseline in both ACC and F1.
+- **Highest ACC:** Gemma 4 Prompt V1 Zero-Shot+ (**80.97**)
+- **Highest Sensitivity:** GPT-4o-mini Prompt V2 Zero-Shot (**83.60**)
+- **Highest Specificity:** GPT-4o-mini Prompt V1 Zero-Shot+ (**89.99**)
+- **Highest F1:** GPT-4o-mini Prompt V2 EHR-CoAgent (**64.02**)
+- **Highest AUC/AUPRC (reported in Gemma V2 report):** Gemma 4 Prompt V2 Zero-Shot (**80.78 / 57.41**)
 
 ---
 
-### 6.2 Intra-ML — few-shot (N=6) vs fully supervised
+## 5) Key Interpretations
 
-**Δ = few_shot − fully_supervised** (same model):
-
-| Model | Δ ACC | Δ Sens | Δ Spec | Δ F1 |
-|--------|-------|--------|--------|------|
-| Decision Tree | −12.08 | +5.86 | −18.85 | −6.63 |
-| Logistic Regression | **−41.78** | +42.61 | −73.63 | −9.93 |
-| Random Forest | **−41.49** | +68.52 | −83.03 | +7.96 |
-
-**Takeaway:** Six labeled rows **destabilize** fitted sparse classifiers; this is **not** analogous to LLM in-context few-shot.
+1. **LLMs consistently outperform ML baseline on F1** in this setup.
+2. **GPT Prompt V2 shifts strongly toward recall**, increasing sensitivity while reducing specificity and ACC.
+3. **Gemma Prompt V1 is the strongest for high ACC/high SPEC operation** (notably Zero-Shot+).
+4. **Gemma Prompt V2 CoAgent gives balanced threshold behavior**, while **Gemma Prompt V2 Zero-Shot** gives strongest score-ranking quality (AUC/AUPRC).
+5. Choice of prompt family changes operating point significantly; select by clinical objective (miss fewer positives vs control false alarms).
 
 ---
 
-### 6.3 Intra-LLM — GPT-4o-mini: ranking and deltas vs zero-shot
+<!--
+## 6) Artifact Map
 
-**Ranking by F1:** EHR-CoAgent (62.57) → Zero-Shot (62.24) → Few-Shot (61.93) → Zero-Shot+ (61.54).
+| Artifact | Description |
+|----------|-------------|
+| `data/outputs/mimiciii/ml_results_fully_supervised.csv` | Classical ML full-training results |
+| `data/outputs/mimiciii/ml_results_few_shot.csv` | Classical ML few-shot training results |
+| `data/outputs/mimiciii/llm_*_metrics.json` | GPT-4o-mini Prompt V1 metrics |
+| `data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_*_metrics.json` | GPT-4o-mini Prompt V2 metrics |
+| `data/outputs/mimiciii_gemma/llm_*_metrics.json` | Gemma 4 Prompt V1 metrics |
+| `data/outputs/mimiciii_llm_promptv2_gemma/llm_*_metrics.json` | Gemma 4 Prompt V2 metrics |
+| `docs/LLM_EXPERIMENT_REPORT_Gemma4_PROMPT_V2.md` | Detailed Gemma 4 Prompt V2 report |
 
-**Ranking by ACC:** EHR-CoAgent (80.93) → Zero-Shot (80.82) → Zero-Shot+ (80.73) → Few-Shot (80.65).
+---
+-->
 
-**Δ vs zero-shot (percentage points):**
+## 7) Final Consolidated Table (All Models, All Experiments)
 
-| Approach | Δ ACC | Δ Sens | Δ Spec | Δ F1 |
-|----------|-------|--------|--------|------|
-| Zero-Shot+ | −0.09 | −1.47 | +0.44 | −0.70 |
-| Few-Shot (N=6) | −0.17 | −0.30 | −0.11 | −0.31 |
-| EHR-CoAgent | **+0.11** | **+0.52** | −0.05 | **+0.33** |
+`NA` means the metric was not available in the experiment artifact used for this report.
 
-**Takeaway:** GPT-4o-mini modes sit in a **tight band**; Co-Agent is **marginally** best on ACC/F1/sensitivity in this run.
+| Family | Model | Prompt Version | Approach | ACC | Sens | Spec | F1 | AUC | AUPRC |
+|--------|-------|----------------|----------|----:|-----:|-----:|---:|----:|------:|
+| ML | Decision Tree | NA | Fully Supervised | 73.48 | 50.66 | 82.09 | 51.15 | NA | NA |
+| ML | Logistic Regression | NA | Fully Supervised | 77.05 | 47.73 | 88.11 | 53.27 | NA | NA |
+| ML | Random Forest | NA | Fully Supervised | 76.44 | 24.01 | 96.24 | 35.85 | NA | NA |
+| ML | Decision Tree | NA | Few-Shot (N=6) | 61.40 | 56.52 | 63.24 | 44.52 | NA | NA |
+| ML | Logistic Regression | NA | Few-Shot (N=6) | 35.27 | 90.34 | 14.48 | 43.34 | NA | NA |
+| ML | Random Forest | NA | Few-Shot (N=6) | 34.95 | 92.53 | 13.21 | 43.81 | NA | NA |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V1 | Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 | NA | NA |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V1 | Zero-Shot+ | 80.73 | 56.22 | 89.99 | 61.54 | NA | NA |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V1 | Few-Shot | 80.65 | 57.39 | 89.44 | 61.93 | NA | NA |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V1 | EHR-CoAgent | 80.93 | 58.21 | 89.50 | 62.57 | NA | NA |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V2 | Zero-Shot | 73.07 | 83.60 | 69.10 | 62.99 | 81.07 | 55.67 |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V2 | Zero-Shot+ | 73.27 | 83.31 | 69.49 | 63.08 | 79.58 | 52.97 |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V2 | Few-Shot | 75.56 | 77.75 | 74.74 | 63.55 | 78.25 | 52.58 |
+| LLM | gpt-4o-mini-2024-07-18 | Prompt V2 | EHR-CoAgent | 76.00 | 77.89 | 75.29 | 64.02 | 78.38 | 52.46 |
+| LLM | google/gemma-4-e4b-it | Prompt V1 | Zero-Shot | 80.26 | 55.93 | 89.44 | 60.83 | NA | NA |
+| LLM | google/gemma-4-e4b-it | Prompt V1 | Zero-Shot+ | 80.97 | 60.61 | 88.66 | 63.59 | NA | NA |
+| LLM | google/gemma-4-e4b-it | Prompt V1 | Few-Shot | 80.10 | 57.83 | 88.50 | 61.43 | NA | NA |
+| LLM | google/gemma-4-e4b-it | Prompt V1 | EHR-CoAgent | 79.78 | 62.96 | 86.12 | 63.05 | NA | NA |
+| LLM | google/gemma-4-e4b-it | Prompt V2 | Zero-Shot | 74.92 | 79.36 | 73.24 | 63.43 | 80.78 | 57.41 |
+| LLM | google/gemma-4-e4b-it | Prompt V2 | Zero-Shot+ | 73.80 | 79.94 | 71.48 | 62.58 | 78.31 | 51.12 |
+| LLM | google/gemma-4-e4b-it | Prompt V2 | Few-Shot | 70.95 | 80.82 | 67.22 | 60.39 | 74.11 | 44.37 |
+| LLM | google/gemma-4-e4b-it | Prompt V2 | EHR-CoAgent | 75.08 | 80.67 | 72.97 | 63.96 | 79.54 | 53.25 |
 
 ---
 
-### 6.4 Intra-LLM — Gemma 4: ranking and deltas vs zero-shot
+# Final Model Selection Based on Balanced Sensitivity and Specificity
 
-**Ranking by F1:** Zero-Shot+ (**63.59**) → EHR-CoAgent (63.05) → Few-Shot (61.43) → Zero-Shot (60.83).
 
-**Ranking by ACC:** Zero-Shot+ (**80.97**) → Zero-Shot (80.26) → Few-Shot (80.10) → EHR-CoAgent (79.78).
+To determine the most appropriate model for clinical deployment, we prioritize a balanced trade-off between sensitivity (recall) and specificity, as these metrics represent complementary aspects of diagnostic performance. While several configurations achieved higher accuracy or extreme values in either sensitivity or specificity, such imbalanced behavior is not desirable in clinical settings where both false negatives and false positives carry significant consequences.
 
-**Δ vs zero-shot (percentage points):**
+Among all evaluated models, the **GPT-4o-mini (Prompt V2, EHR-CoAgent)** configuration demonstrates the most favorable balance between sensitivity and specificity, with values of 77.89% and 75.29%, respectively. This near-symmetric performance (difference ≈ 2.6 percentage points) indicates a well-calibrated decision boundary. In addition, this model achieves the **highest F1-score (64.02%)** among all experiments, reflecting strong overall predictive performance, and maintains competitive accuracy (76.00%).
 
-| Approach | Δ ACC | Δ Sens | Δ Spec | Δ F1 |
-|----------|-------|--------|--------|------|
-| Zero-Shot+ | **+0.71** | **+4.68** | −0.78 | **+2.76** |
-| Few-Shot (N=6) | −0.16 | +1.90 | −0.94 | +0.60 |
-| EHR-CoAgent | −0.48 | **+7.03** | −3.32 | +2.22 |
+Other Prompt V2 configurations, such as GPT-4o-mini Few-Shot and Gemma 4 EHR-CoAgent, also exhibit relatively balanced behavior; however, they either show slightly lower F1-scores or greater deviation between sensitivity and specificity. In contrast, Prompt V1 configurations—despite achieving higher accuracy and specificity—consistently underperform in sensitivity, making them less suitable for applications where missing positive cases is critical.
 
-**Takeaway:** For Gemma 4, **Zero-Shot+** clearly **lifts sensitivity and F1** vs plain zero-shot; **Co-Agent** maximizes **sensitivity** but **reduces specificity** vs the three baselines. Single calibration/critic realization (job **46615354**).
+Overall, these results indicate that **Prompt V2-based approaches shift the operating point toward a more clinically meaningful balance**, with the GPT-4o-mini EHR-CoAgent configuration emerging as the most suitable choice for deployment under a balanced sensitivity–specificity criterion.
 
 ---
 
-## 7. Inter-family comparisons (ML vs LLM)
+## Best Candidate Models (Balanced Performance)
 
-### 7.1 Best fully supervised ML vs best LLM per model
-
-Compared to **fully supervised logistic regression** (best stable ML on ACC/F1):
-
-| Metric | Logistic regression (full) | Best GPT-4o-mini | Best Gemma 4 |
-|--------|----------------------------|------------------|--------------|
-| **Configuration** | — | EHR-CoAgent | Zero-Shot+ (ACC/F1); Co-Agent for max Sens |
-| ACC | 77.05 | **80.93** | **80.97** |
-| Sensitivity | 47.73 | 58.21 | **60.61** (ZS+); **62.96** (Co-Agent) |
-| Specificity | 88.11 | 89.50 | 88.66 (ZS+); 86.12 (Co-Agent) |
-| F1 | 53.27 | 62.57 | **63.59** (ZS+) |
-
-**Δ (LLM − ML)** for the listed “best” cells above:
-
-| | GPT (CoAgent) − LR | Gemma (ZS+) − LR |
-|--|-------------------|------------------|
-| ACC | +3.88 | +3.92 |
-| F1 | +9.30 | +10.32 |
-
-**Note:** ML few-shot runs can show **very high sensitivity** at unusable specificity/ACC; **random forest (full)** wins specificity by rarely predicting positive.
-
-### 7.2 LLM vs strongest “reasonable” ML baseline
-
-Both LLM families **beat** fully supervised logistic regression on **ACC and F1** on this split, with **higher sensitivity** and **similar or slightly higher specificity** (Gemma Co-Agent excepted on specificity).
-
-### 7.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)
-
-| | ML few-shot (best ACC: DT) | GPT Few-Shot | Gemma Few-Shot |
-|--|---------------------------|--------------|----------------|
-| ACC | 61.40 | **80.65** | **80.10** |
-| F1 | 44.52 | **61.93** | **61.43** |
-
-**Takeaway:** Six **in-context** examples do not collapse the LLM track the way six **training** points collapse LR/RF on bag-of-codes.
-
-### 7.4 Modality caveat
-
-LLM inputs are **narratives**; ML uses **code tokens**. Interpret as **system** comparison, not a controlled ablation of model family alone.
+| Rank | Model | Prompt | Approach | Accuracy (%) | Sensitivity (%) | Specificity (%) | F1 (%) | AUC (%) | AUPRC (%) | \|Sens−Spec\| (%) |
+|------|-------|--------|----------|--------------|-----------------|-----------------|--------|---------|-----------|-------------------|
+| 🥇 1 | GPT-4o-mini | V2 | EHR-CoAgent | 76.00 | 77.89 | 75.29 | **64.02** | 78.38 | 52.46 | **2.60** |
+| 🥈 2 | GPT-4o-mini | V2 | Few-Shot | 75.56 | 77.75 | 74.74 | 63.55 | 78.25 | 52.58 | 3.01 |
+| 🥉 3 | Gemma 4 | V2 | EHR-CoAgent | 75.08 | 80.67 | 72.97 | 63.96 | 79.54 | 53.25 | 7.70 |
 
 ---
 
-## 8. Summary matrix (all fourteen configurations)
+## Interpretation
 
-Sorted by **F1** descending. **Model** identifies the LLM snapshot; ML rows unchanged from `mimiciii`.
-
-| Rank | Model | Approach | ACC | Sens | Spec | F1 |
-|------|--------|----------|-----|------|------|-----|
-| 1 | gemma-4-e4b-it | Zero-Shot+ | 80.97 | 60.61 | 88.66 | **63.59** |
-| 2 | gemma-4-e4b-it | EHR-CoAgent | 79.78 | 62.96 | 86.12 | 63.05 |
-| 3 | gpt-4o-mini | EHR-CoAgent | 80.93 | 58.21 | 89.50 | 62.57 |
-| 4 | gpt-4o-mini | Zero-Shot | 80.82 | 57.69 | 89.55 | 62.24 |
-| 5 | gpt-4o-mini | Few-Shot (N=6) | 80.65 | 57.39 | 89.44 | 61.93 |
-| 6 | gpt-4o-mini | Zero-Shot+ | 80.73 | 56.22 | 89.99 | 61.54 |
-| 7 | gemma-4-e4b-it | Few-Shot (N=6) | 80.10 | 57.83 | 88.50 | 61.43 |
-| 8 | gemma-4-e4b-it | Zero-Shot | 80.26 | 55.93 | 89.44 | 60.83 |
-| 9 | logistic_regression | Fully Supervised | 77.05 | 47.73 | 88.11 | 53.27 |
-| 10 | random_forest | Fully Supervised | 76.44 | 24.01 | 96.24 | 35.85 |
-| 11 | decision_tree | Fully Supervised | 73.48 | 50.66 | 82.09 | 51.15 |
-| 12 | decision_tree | Few Shot | 61.40 | 56.52 | 63.24 | 44.52 |
-| 13 | logistic_regression | Few Shot | 35.27 | 90.34 | 14.48 | 43.34 |
-| 14 | random_forest | Few Shot | 34.95 | 92.53 | 13.21 | 43.81 |
+- The **top-ranked model (GPT-4o-mini, Prompt V2, EHR-CoAgent)** provides the best compromise between identifying true positive cases and avoiding false positives.
+- The **small gap between sensitivity and specificity** is a key indicator of stability and reliability in decision-making.
+- Higher accuracy models (e.g., Prompt V1) are excluded due to **significant imbalance**, which can bias predictions toward one class.
+- Prompt V2 configurations consistently move models toward a **more balanced operating regime**, making them more appropriate for real-world clinical prediction tasks.
 
 ---
 
-## 9. Conclusions
+## Key Takeaway
 
-1. **Intra-ML:** Full-data **logistic regression** is the best overall classical method on ACC/F1; **N=6 ML training** is not viable for LR/RF on this feature setup.
-2. **Intra-LLM (GPT):** Four prompting strategies are **similar**; **EHR-CoAgent** is marginally best on ACC/F1/sensitivity.
-3. **Intra-LLM (Gemma):** **Zero-Shot+** and **Co-Agent** move **sensitivity/F1** more than GPT’s zero-shot baseline; **Co-Agent** trades **specificity** for recall.
-4. **Cross-LLM:** On this split, Gemma **Zero-Shot+** achieves the **highest F1** among all listed LLM configurations; GPT **Co-Agent** leads **GPT** family on ACC/F1. Differences are **modest** and **not significance-tested**.
-5. **Inter ML vs LLM:** Both LLM families **beat** the best fully supervised ML baseline on **ACC and F1** with **higher sensitivity**; modality differs from bag-of-codes ML.
-6. **Reporting:** Default **no bootstrap CIs** (`evaluation.bootstrap_ci: false`).
+The selection of the best model should not rely solely on accuracy or recall in isolation. Instead, a balanced evaluation reveals that **GPT-4o-mini (Prompt V2, EHR-CoAgent)** achieves the most clinically meaningful performance, making it the preferred configuration for downstream use.
 
----
-
-## 10. Artifact map
-
-| Artifact | Contents |
-|----------|----------|
-| `data/outputs/mimiciii/summary_table.csv` | Combined ML + GPT LLM table (Section 8 partial) |
-| `data/outputs/mimiciii/ml_results_fully_supervised.csv` | ML full-training metrics + confusion |
-| `data/outputs/mimiciii/ml_results_few_shot.csv` | ML N=6 metrics + confusion |
-| `data/outputs/mimiciii/llm_*_metrics.json` | GPT-4o-mini per-mode metrics |
-| `data/outputs/mimiciii_gemma/llm_*_metrics.json` | Gemma 4 per-mode metrics (incl. `llm_coagent_metrics.json`) |
-| `docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md` | Slurm jobs **46510786** / **46615354** notes |
-
----
-
-*Report reflects `data/outputs/mimiciii/` and `data/outputs/mimiciii_gemma/` at the time of writing. Rerun pipelines and refresh if configs, data, or prompts change.*

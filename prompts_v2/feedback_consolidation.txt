@@ -5,7 +5,7 @@ You are an expert at synthesizing and consolidating clinical reasoning guideline
 {% endblock %}
 
 {% block user %}
-Below are multiple sets of criteria and guidelines generated from analyzing incorrect predictions about whether Disorders of Lipid Metabolism will appear in a patient's next hospital visit.
+Below are multiple sets of criteria and guidelines generated from analyzing incorrect predictions about whether Disorders of Lipid Metabolism will be coded on a patient's next hospital visit (next-visit diagnosis prediction, not readmission).
 
 Your task:
 1. Read all criteria sets below.
@@ -25,5 +25,5 @@ Your task:
 {{ all_critic_outputs }}
 
 [Output]
-Provide a numbered list of consolidated criteria, one per line. Each criterion should be a concise, actionable guideline for predicting whether Disorders of Lipid Metabolism will appear in a patient's next hospital visit.
+Provide a numbered list of consolidated criteria, one per line. Each criterion should be a concise, actionable guideline for next-visit diagnosis prediction: whether Disorders of Lipid Metabolism will be coded on the patient's next hospital visit, using only documented evidence patterns.
 {% endblock %}

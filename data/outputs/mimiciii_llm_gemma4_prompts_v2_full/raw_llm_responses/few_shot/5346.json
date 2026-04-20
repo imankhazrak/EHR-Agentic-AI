@@ -1,0 +1,12 @@
+{
+  "sample_id": 5346,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include Congestive heart failure and Aortocoronary bypass status, and the patient is prescribed Atorvastatin, which is a lipid-lowering medication. This aligns with the pattern in Demonstration Case 2, where hypercholesterolemia was a diagnosis alongside Atorvastatin prescription.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The patient is prescribed Atorvastatin, a lipid-lowering medication, and has diagnoses of Congestive heart failure and Aortocoronary bypass status. This strongly suggests the coding of a lipid disorder in the next visit, similar to Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3578,
+    "completion_tokens": 147
+  }
+}

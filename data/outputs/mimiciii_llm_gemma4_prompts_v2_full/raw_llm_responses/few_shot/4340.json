@@ -1,0 +1,12 @@
+{
+  "sample_id": 4340,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include Diabetes mellitus and Unspecified essential hypertension, and the patient is prescribed Atorvastatin, which is a lipid-lowering medication. This aligns with the pattern in Demonstration Case 2, where hypercholesterolemia was a diagnosis alongside other conditions and Atorvastatin was prescribed.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The patient is prescribed Atorvastatin, a lipid-lowering medication, and has diagnoses of Diabetes mellitus and Unspecified essential hypertension. This supports the pattern seen in Demonstration Case 2, where hypercholesterolemia was a diagnosis alongside other conditions and Atorvastatin was prescribed.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3604,
+    "completion_tokens": 148
+  }
+}

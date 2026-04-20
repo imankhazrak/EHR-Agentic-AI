@@ -1,0 +1,12 @@
+{
+  "sample_id": 176,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Methicillin susceptible Staphylococcus aureus septicemia, Pneumonitis, Hyperosmolality and/or hypernatremia, Septic shock, Atrial fibrillation, Acute kidney failure, Severe sepsis, Alzheimer's disease, Dementia, and Depressive disorder. There is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other lipid abnormality in the documented diagnoses or medications.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any explicit diagnoses or documented history of hypercholesterolemia, hyperlipidemia, or any other lipid abnormality that would support a coded diagnosis of Disorders of Lipid Metabolism in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3543,
+    "completion_tokens": 161
+  }
+}

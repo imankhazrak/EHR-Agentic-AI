@@ -1,0 +1,12 @@
+{
+  "sample_id": 8443,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents several chronic conditions, including chronic heart failure and diabetes, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or a diagnosis of Disorders of Lipid Metabolism. While Atorvastatin is prescribed, this alone is not sufficient evidence to predict the coding of a lipid disorder on the next visit without supporting diagnoses.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record documents several chronic conditions, including chronic heart failure and diabetes, but it does not explicitly mention hyperlipidemia, hypercholesterolemia, or a diagnosis of Disorders of Lipid Metabolism. While Atorvastatin is prescribed, this alone is not sufficient evidence to predict the coding of a lipid disorder on the next visit without supporting diagnoses.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 977,
+    "completion_tokens": 175
+  }
+}

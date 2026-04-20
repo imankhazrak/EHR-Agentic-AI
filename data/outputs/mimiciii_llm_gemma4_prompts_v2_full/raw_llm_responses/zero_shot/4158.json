@@ -1,0 +1,12 @@
+{
+  "sample_id": 4158,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents numerous severe infections, sepsis, and organ failures (e.g., acute kidney failure, liver necrosis, septic shock), but it does not explicitly mention any diagnosis, history, or active management related to hyperlipidemia, hypercholesterolemia, or other lipid abnormalities.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record is dominated by severe infectious processes (sepsis, septic shock, various infections) and associated organ damage (liver necrosis, acute kidney failure). There is no explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid disorder diagnosis or management in the documented record.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record details severe systemic issues, including sepsis, septic shock, and multiple infections. However, it lacks any explicit documentation of a lipid disorder (such as hyperlipidemia or hypercholesterolemia) diagnosis or management that would support coding this diagnosis in the next visit.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The record is",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1080,
+    "completion_tokens": 256
+  }
+}

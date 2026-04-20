@@ -51,6 +51,21 @@ def load_config(
         for key, val in cfg["paths"].items():
             cfg["paths"][key] = str(Path(val))
 
+    # Optional: isolate a whole run without editing YAML (best practice for comparisons).
+    run_outputs = (os.getenv("EHR_OUTPUTS_DIR") or os.getenv("EXPERIMENT_OUTPUT_DIR") or "").strip()
+    if run_outputs:
+        out_root = str(Path(run_outputs))
+        cfg.setdefault("paths", {})["outputs"] = out_root
+        if "llm" in cfg:
+            cache_override = (os.getenv("EHR_LLM_CACHE_DIR") or "").strip()
+            if cache_override:
+                cfg["llm"]["cache_dir"] = str(Path(cache_override))
+            else:
+                cfg["llm"]["cache_dir"] = str(Path(out_root) / "llm_cache")
+    finetune_out = (os.getenv("EHR_FINETUNE_OUTPUT_DIR") or "").strip()
+    if finetune_out and "llm" in cfg:
+        cfg["llm"]["finetune_output_dir"] = str(Path(finetune_out))
+
     # Override llm.model from env without editing YAML.
     if "llm" in cfg:
         env_model = os.getenv("LLM_MODEL_NAME") or os.getenv("OPENAI_MODEL") or os.getenv("LLM_MODEL")

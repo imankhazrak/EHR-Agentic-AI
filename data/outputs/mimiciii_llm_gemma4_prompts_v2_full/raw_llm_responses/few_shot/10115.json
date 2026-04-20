@@ -1,0 +1,12 @@
+{
+  "sample_id": 10115,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. This aligns with the pattern in Demonstration Case 2, where \"Pure hypercholesterolemia\" led to a \"Yes\" outcome. The presence of this diagnosis strongly supports the coding of Disorders of Lipid Metabolism in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3649,
+    "completion_tokens": 82
+  }
+}

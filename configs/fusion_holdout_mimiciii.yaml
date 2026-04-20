@@ -1,0 +1,17 @@
+# Full held-out fusion experiment bundle (use with configs/default.yaml).
+# Writes under paths.outputs:
+#   llm_logit_scores_{train,test}.csv, llm_logit_scores_train_oof.csv
+#   fusion_infold/  — train LLM scores = full forward on all train rows (validation-based fusion)
+#   fusion_oof/     — train LLM scores = stratified K-fold OOF logits
+
+paths:
+  outputs: "data/outputs/mimiciii_fusion_holdout_run"
+
+fusion:
+  llm_scores_at_output_root: true
+  output_subdir: "legacy_unused"
+  llm_score_max_samples: null
+  run_llm_score_subprocess: false
+  llm_oof_n_splits: 5
+  compare_ml_results_csv: "data/outputs/mimiciii_gpt4o_mini/ml_results_fully_supervised.csv"
+  compare_llm_test_results_csv: "data/outputs/mimiciii_gemma/llm_finetuned_test_results.csv"

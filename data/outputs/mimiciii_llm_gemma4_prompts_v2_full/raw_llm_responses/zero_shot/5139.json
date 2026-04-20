@@ -1,0 +1,12 @@
+{
+  "sample_id": 5139,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents several cardiovascular risk factors (Coronary atherosclerosis, Congestive heart failure, Morbid obesity, Diabetes mellitus), but it does not explicitly diagnose a lipid disorder (like hypercholesterolemia or hyperlipidemia) or document active lipid-disorder management beyond general cardiovascular care. Simvastatin is prescribed, but this alone is not sufficient evidence according to the rules.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record documents several cardiovascular risk factors (Coronary atherosclerosis, Congestive heart failure, Morbid obesity, Diabetes mellitus), but it does not explicitly diagnose a lipid disorder (like hypercholesterolemia or hyperlipidemia) or document active lipid-disorder management beyond general cardiovascular care. Simvastatin is prescribed, but this alone is not sufficient evidence according to the rules.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 986,
+    "completion_tokens": 193
+  }
+}

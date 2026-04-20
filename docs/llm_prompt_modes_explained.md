@@ -4,7 +4,7 @@ This guide explains, in end-to-end practical terms, how the three base LLM promp
 
 This note explains **what actually happens** in this repository when you run the three LLM approaches on the MIMIC-III lipid-disorder **next-visit** task. Use it for your own review or to brief someone else.
 
-**Scope:** LLM modes only (not EHR-CoAgent, not classical ML). Implementation details live in `prompts/predictor_*.txt`, `src/llm/predictor.py`, `src/llm/prompt_builder.py`, and `src/data/exemplar_selector.py`.
+**Scope:** LLM modes only (not EHR-CoAgent, not classical ML). Implementation details live in **`prompts_v2/predictor_*.txt`** (default; set `llm.prompt_template_dir` to override), `src/llm/predictor.py`, `src/llm/prompt_builder.py`, and `src/data/exemplar_selector.py`. Parsed **`Probability:`** scores (when valid) feed ROC-AUC and AUPRC in `src/evaluation/evaluate_llm_runs.py`.
 
 ---
 
@@ -22,7 +22,7 @@ This note explains **what actually happens** in this repository when you run the
 
 - **Input:** A text **narrative** for the patient’s **current** hospital visit (`narrative_current` in `test.csv`): bullet lists of diagnoses, medications, procedures.
 - **Question:** Will **“Disorders of Lipid Metabolism”** appear as a diagnosis on the patient’s **next** hospital visit?
-- **Model output:** Natural language; the pipeline expects a first line like `Prediction: Yes` or `Prediction: No`, then optional reasoning (`src/llm/output_parser.py`).
+- **Model output:** Natural language; templates require `Prediction:`, `Probability:` (numeric 0–1), and `Reasoning:` (`src/llm/output_parser.py`). Hard metrics use `Prediction`; ROC-AUC / AUPRC use valid `Probability` values when present.
 - **Evaluation:** Parsed Yes/No is compared to the binary label `label_lipid_disorder` (derived from **next** visit ICD codes, not shown to the model).
 
 The **only** thing that differs across zero-shot, zero-shot+, and few-shot is **the text of the prompt** sent to the API. There is **no** fine-tuning or weight updates for these modes.
@@ -46,7 +46,7 @@ In a real run, this string comes from one row of `data/processed/mimiciii/test.c
 ## 3. Zero-shot — end-to-end
 
 1. Load the test row from `test.csv`.
-2. Render `prompts/predictor_zero_shot.txt` with Jinja: task rules, target definition, prediction clarification, then **`{{ narrative }}`** for this patient only.
+2. Render `prompts_v2/predictor_zero_shot.txt` with Jinja: task rules, target definition, prediction clarification, then **`{{ narrative }}`** for this patient only.
 3. Build chat messages (`system` + `user`) via `build_messages` in `src/llm/prompt_builder.py`.
 4. Call **`gpt-4o-mini`** once per row (`temperature: 0` in `configs/default.yaml`).
 5. Parse the reply for Yes/No; merge with labels in `src/evaluation/evaluate_llm_runs.py`.
@@ -68,7 +68,7 @@ Task: ... predict whether "Disorders of Lipid Metabolism" will be present ...
 - Procedures: None recorded
 
 [Output Format]
-Prediction: Yes / No on first line, then reasoning.
+Structured lines: `Prediction:`, `Probability:`, `Reasoning:` (see `prompts_v2/` templates).
 ```
 
 **Not included:** the ~27.6% prevalence paragraph, the long structured **[Instructions]** block used in zero-shot+, and **no** demonstration cases from the training set.
@@ -79,7 +79,7 @@ Prediction: Yes / No on first line, then reasoning.
 
 Same test row, same API, same “one call per row.”
 
-Template: `prompts/predictor_zero_shot_plus.txt`.
+Template: `prompts_v2/predictor_zero_shot_plus.txt`.
 
 **Additions vs zero-shot:**
 
@@ -94,7 +94,7 @@ Template: `prompts/predictor_zero_shot_plus.txt`.
 
 Same test row, still **one completion per test row**, still **no weight updates**.
 
-Template: `prompts/predictor_few_shot.txt`.
+Template: `prompts_v2/predictor_few_shot.txt`.
 
 **Before** rendering the prompt for each test patient, the pipeline selects exemplars from **`train.csv`** only (default: **6** cases — e.g. 3 positive and 3 negative — see `configs/default.yaml` under `few_shot`).
 
@@ -143,9 +143,9 @@ LLM **few-shot** does **not** do that; it only adds **demonstration text** to th
 
 | Role | Path |
 |------|------|
-| Zero-shot template | `prompts/predictor_zero_shot.txt` |
-| Zero-shot+ template | `prompts/predictor_zero_shot_plus.txt` |
-| Few-shot template | `prompts/predictor_few_shot.txt` |
+| Zero-shot template | `prompts_v2/predictor_zero_shot.txt` |
+| Zero-shot+ template | `prompts_v2/predictor_zero_shot_plus.txt` |
+| Few-shot template | `prompts_v2/predictor_few_shot.txt` |
 | Mode → template map | `src/llm/predictor.py` (`MODE_TEMPLATE_MAP`) |
 | Exemplar formatting | `src/data/exemplar_selector.py` (`format_exemplar_block`) |
 | High-level methodology | `METHODOLOGY.md` |

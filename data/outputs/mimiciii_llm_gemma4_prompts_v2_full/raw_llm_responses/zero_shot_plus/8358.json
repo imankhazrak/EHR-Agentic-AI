@@ -1,0 +1,12 @@
+{
+  "sample_id": 8358,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.27\nReasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has documented essential hypertension.\n\nASSISTANT:\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any explicit diagnosis or documented history of a lipid disorder, hyperlipidemia, or hypercholesterolemia, nor does it contain supporting evidence for active lipid-disorder management beyond the prescription of Simvastatin.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.27\nReasoning: The current visit record documents the prescription of Simvastatin, which is a lipid-lowering medication, and the patient has documented essential hypertension.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1050,
+    "completion_tokens": 162
+  }
+}

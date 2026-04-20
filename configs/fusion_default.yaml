@@ -1,0 +1,41 @@
+# Fusion: structured + LLM logit probabilities. Merge with:
+#   python -m src.scripts.run_fusion_experiments --config configs/default.yaml --overrides configs/fusion_default.yaml
+
+fusion:
+  output_subdir: "fusion"
+  val_ratio: 0.15
+  split_seed: 42
+  svd_dim: 256
+  feature_type: "bag_of_codes"
+  llm_score_max_samples: null
+  # Defaults: {paths.outputs}/fusion/llm_logit_scores_{train,test}.csv
+  llm_scores_train_csv: null
+  llm_scores_test_csv: null
+  use_oof_train_scores: false
+  llm_scores_train_oof_csv: null
+  run_llm_score_subprocess: true
+  threshold_objective: "f1" # or "recall"
+  refit_full_train_nn: true
+  logistic_regression:
+    C: 1.0
+    max_iter: 500
+    class_weight: "balanced"
+  mlp:
+    hidden: [128, 64]
+    dropout: 0.2
+    epochs: 40
+    lr: 0.001
+    weight_decay: 0.0001
+    batch_size: 256
+  hybrid:
+    n_tokens: 8
+    d_model: 128
+    num_layers: 2
+    dim_feedforward: 256
+    dropout: 0.1
+    epochs: 35
+    lr: 0.001
+    weight_decay: 0.0001
+    batch_size: 256
+  compare_ml_results_csv: null
+  compare_llm_test_results_csv: null

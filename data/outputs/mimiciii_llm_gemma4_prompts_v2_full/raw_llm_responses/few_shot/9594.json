@@ -1,0 +1,12 @@
+{
+  "sample_id": 9594,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents a diagnosis of \"Pure hypercholesterolemia,\" which meets the criteria for a lipid disorder. Additionally, the record includes diagnoses of \"Coronary atherosclerosis of native coronary artery\" and \"Congestive heart failure, unspecified,\" which are often managed alongside lipid disorders, supporting a high probability of coding this diagnosis in the next visit as shown in Demonstration Case 2.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents a diagnosis of \"Pure hypercholesterolemia,\" which meets the criteria for a lipid disorder. This diagnosis, combined with the presence of \"Coronary atherosclerosis of native coronary artery\" and \"Congestive heart failure, unspecified,\" strongly supports the likelihood of this diagnosis being coded in the next visit, similar to Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3830,
+    "completion_tokens": 188
+  }
+}

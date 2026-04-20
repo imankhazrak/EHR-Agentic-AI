@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LLM Experiment Report — GPT-4o-mini Prompt_v2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 80em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+      display: table;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 0.9em;
+      vertical-align: top;
+    }
+    th {
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 0.9em;
+      vertical-align: top;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LLM Experiment Report — GPT-4o-mini Prompt_v2</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#llm-experiment-report-gpt-4o-mini-prompt_v2-mimic-iii-next-visit-lipid-disorder-prediction">LLM Experiment Report — GPT-4o-mini Prompt_v2 (MIMIC-III Next-Visit Lipid Disorder Prediction)</a>
+<ul>
+<li><a href="#overview">1. Overview</a></li>
+<li><a href="#run-context-prompt_v2">2. Run Context (Prompt_v2)</a></li>
+<li><a href="#prompt_v2-results-summary">3. Prompt_v2 Results Summary</a>
+<ul>
+<li><a href="#notes">Notes</a></li>
+</ul></li>
+<li><a href="#confusion-matrices-prompt_v2">4. Confusion Matrices (Prompt_v2)</a></li>
+<li><a href="#artifacts-produced">5. Artifacts Produced</a></li>
+<li><a href="#comparison-prompt_v2-vs-previous-gpt-4o-mini-prompt_v1">6. Comparison: Prompt_v2 vs Previous GPT-4o-mini Prompt_v1</a>
+<ul>
+<li><a href="#comparison-takeaways">Comparison Takeaways</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="llm-experiment-report-gpt-4o-mini-prompt_v2-mimic-iii-next-visit-lipid-disorder-prediction">LLM Experiment Report — GPT-4o-mini Prompt_v2 (MIMIC-III Next-Visit Lipid Disorder Prediction)</h1>
+<h2 id="overview">1. Overview</h2>
+<p>This report documents the completed GPT-4o-mini run that uses the <strong><code>prompt_v2</code> template set</strong> (<code>prompts_v2/</code>) for next-visit lipid disorder prediction on MIMIC-III.<br />
+It follows the same experimental modes as earlier reports (Zero-Shot, Zero-Shot+, Few-Shot, EHR-CoAgent), and records the output artifacts and metrics generated by this run.</p>
+<hr />
+<h2 id="run-context-prompt_v2">2. Run Context (Prompt_v2)</h2>
+<ul>
+<li><strong>Slurm Job ID:</strong> <code>46754598</code></li>
+<li><strong>Job Name:</strong> <code>mimic3_llm_openai_p2</code></li>
+<li><strong>Status:</strong> <code>COMPLETED (0:0)</code></li>
+<li><strong>Run window:</strong> 2026-04-13 20:03:18 -&gt; 2026-04-14 08:05:50</li>
+<li><strong>Model (resolved):</strong> <code>gpt-4o-mini-2024-07-18</code></li>
+<li><strong>Override config:</strong> <code>configs/experiments/openai_gpt4o_mini_promptv2_full.yaml</code></li>
+<li><strong>Output root:</strong> <code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/</code></li>
+</ul>
+<p>Command flow executed in this job:</p>
+<ol type="1">
+<li><code>python -m src.scripts.run_zero_shot ...</code></li>
+<li><code>python -m src.scripts.run_zero_shot_plus ...</code></li>
+<li><code>python -m src.scripts.run_few_shot ...</code></li>
+<li><code>python -m src.scripts.run_coagent ...</code></li>
+</ol>
+<hr />
+<h2 id="prompt_v2-results-summary">3. Prompt_v2 Results Summary</h2>
+<p>Source: <code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/summary_table.csv</code> and <code>llm_*_metrics.json</code>.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Precision</th>
+<th style="text-align: right;">Sensitivity</th>
+<th style="text-align: right;">Specificity</th>
+<th style="text-align: right;">F1</th>
+<th style="text-align: right;">Balanced_ACC</th>
+<th style="text-align: right;">AUC</th>
+<th style="text-align: right;">AUPRC</th>
+<th style="text-align: right;">n_valid_prob</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Zero-Shot</td>
+<td style="text-align: right;">73.07</td>
+<td style="text-align: right;">50.53</td>
+<td style="text-align: right;">83.60</td>
+<td style="text-align: right;">69.10</td>
+<td style="text-align: right;">62.99</td>
+<td style="text-align: right;">76.35</td>
+<td style="text-align: right;">81.07</td>
+<td style="text-align: right;">55.67</td>
+<td style="text-align: right;">2492</td>
+</tr>
+<tr class="even">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Zero-Shot+</td>
+<td style="text-align: right;">73.27</td>
+<td style="text-align: right;">50.76</td>
+<td style="text-align: right;">83.31</td>
+<td style="text-align: right;">69.49</td>
+<td style="text-align: right;">63.08</td>
+<td style="text-align: right;">76.40</td>
+<td style="text-align: right;">79.58</td>
+<td style="text-align: right;">52.97</td>
+<td style="text-align: right;">2492</td>
+</tr>
+<tr class="odd">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Few-Shot (N=6)</td>
+<td style="text-align: right;">75.56</td>
+<td style="text-align: right;">53.74</td>
+<td style="text-align: right;">77.75</td>
+<td style="text-align: right;">74.74</td>
+<td style="text-align: right;">63.55</td>
+<td style="text-align: right;">76.24</td>
+<td style="text-align: right;">78.25</td>
+<td style="text-align: right;">52.58</td>
+<td style="text-align: right;">2492</td>
+</tr>
+<tr class="even">
+<td>gpt-4o-mini-2024-07-18</td>
+<td>EHR-CoAgent</td>
+<td style="text-align: right;"><strong>76.00</strong></td>
+<td style="text-align: right;"><strong>54.34</strong></td>
+<td style="text-align: right;">77.89</td>
+<td style="text-align: right;"><strong>75.29</strong></td>
+<td style="text-align: right;"><strong>64.02</strong></td>
+<td style="text-align: right;"><strong>76.59</strong></td>
+<td style="text-align: right;">78.38</td>
+<td style="text-align: right;">52.46</td>
+<td style="text-align: right;">2492</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Best ACC/F1 in prompt_v2 is <code>EHR-CoAgent</code> (ACC 76.00, F1 64.02).</li>
+<li>Best AUC/AUPRC in prompt_v2 is <code>Zero-Shot</code> (AUC 81.07, AUPRC 55.67).</li>
+<li>All modes have full parse/probability coverage in this run (<code>n_valid_prediction = 2492</code>, <code>n_unparseable_prediction = 0</code>, <code>n_valid_probability = 2492</code>).</li>
+</ul>
+<hr />
+<h2 id="confusion-matrices-prompt_v2">4. Confusion Matrices (Prompt_v2)</h2>
+<p>From <code>llm_*_metrics.json</code>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th style="text-align: right;">tp</th>
+<th style="text-align: right;">fp</th>
+<th style="text-align: right;">tn</th>
+<th style="text-align: right;">fn</th>
+<th style="text-align: right;">n_total</th>
+<th style="text-align: right;">n_valid_prediction</th>
+<th style="text-align: right;">n_unparseable_prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>zero_shot</td>
+<td style="text-align: right;">571</td>
+<td style="text-align: right;">559</td>
+<td style="text-align: right;">1250</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>zero_shot_plus</td>
+<td style="text-align: right;">569</td>
+<td style="text-align: right;">552</td>
+<td style="text-align: right;">1257</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td>few_shot</td>
+<td style="text-align: right;">531</td>
+<td style="text-align: right;">457</td>
+<td style="text-align: right;">1352</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>coagent</td>
+<td style="text-align: right;">532</td>
+<td style="text-align: right;">447</td>
+<td style="text-align: right;">1362</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">2492</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Interpretation for prompt_v2:</p>
+<ul>
+<li>Relative to prior behavior, prompt_v2 shifts operating point toward <strong>higher sensitivity</strong> and <strong>lower specificity</strong>.</li>
+<li>CoAgent/few-shot recover some specificity compared with zero-shot variants, while keeping F1 highest in CoAgent.</li>
+</ul>
+<hr />
+<h2 id="artifacts-produced">5. Artifacts Produced</h2>
+<ul>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/summary_table.csv</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_zero_shot_results.csv</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_zero_shot_plus_results.csv</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_few_shot_results.csv</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_coagent_results.csv</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_*_metrics.json</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/raw_llm_responses/</code></li>
+<li><code>data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_cache/</code></li>
+</ul>
+<hr />
+<h2 id="comparison-prompt_v2-vs-previous-gpt-4o-mini-prompt_v1">6. Comparison: Prompt_v2 vs Previous GPT-4o-mini Prompt_v1</h2>
+<p>The previous GPT-4o-mini results (prompt_v1) are taken from <code>docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md</code> (section 10.1/10.2).<br />
+Below, <strong>Delta = prompt_v2 - prompt_v1</strong> in percentage points.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th style="text-align: right;">ACC v1</th>
+<th style="text-align: right;">ACC v2</th>
+<th style="text-align: right;">Delta ACC</th>
+<th style="text-align: right;">Sens v1</th>
+<th style="text-align: right;">Sens v2</th>
+<th style="text-align: right;">Delta Sens</th>
+<th style="text-align: right;">Spec v1</th>
+<th style="text-align: right;">Spec v2</th>
+<th style="text-align: right;">Delta Spec</th>
+<th style="text-align: right;">F1 v1</th>
+<th style="text-align: right;">F1 v2</th>
+<th style="text-align: right;">Delta F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td style="text-align: right;">80.82</td>
+<td style="text-align: right;">73.07</td>
+<td style="text-align: right;">-7.75</td>
+<td style="text-align: right;">57.69</td>
+<td style="text-align: right;">83.60</td>
+<td style="text-align: right;">+25.91</td>
+<td style="text-align: right;">89.55</td>
+<td style="text-align: right;">69.10</td>
+<td style="text-align: right;">-20.45</td>
+<td style="text-align: right;">62.24</td>
+<td style="text-align: right;">62.99</td>
+<td style="text-align: right;">+0.75</td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td style="text-align: right;">80.73</td>
+<td style="text-align: right;">73.27</td>
+<td style="text-align: right;">-7.46</td>
+<td style="text-align: right;">56.22</td>
+<td style="text-align: right;">83.31</td>
+<td style="text-align: right;">+27.09</td>
+<td style="text-align: right;">89.99</td>
+<td style="text-align: right;">69.49</td>
+<td style="text-align: right;">-20.50</td>
+<td style="text-align: right;">61.54</td>
+<td style="text-align: right;">63.08</td>
+<td style="text-align: right;">+1.54</td>
+</tr>
+<tr class="odd">
+<td>Few-Shot (N=6)</td>
+<td style="text-align: right;">80.65</td>
+<td style="text-align: right;">75.56</td>
+<td style="text-align: right;">-5.09</td>
+<td style="text-align: right;">57.39</td>
+<td style="text-align: right;">77.75</td>
+<td style="text-align: right;">+20.36</td>
+<td style="text-align: right;">89.44</td>
+<td style="text-align: right;">74.74</td>
+<td style="text-align: right;">-14.70</td>
+<td style="text-align: right;">61.93</td>
+<td style="text-align: right;">63.55</td>
+<td style="text-align: right;">+1.62</td>
+</tr>
+<tr class="even">
+<td>EHR-CoAgent</td>
+<td style="text-align: right;">80.93</td>
+<td style="text-align: right;">76.00</td>
+<td style="text-align: right;">-4.93</td>
+<td style="text-align: right;">58.21</td>
+<td style="text-align: right;">77.89</td>
+<td style="text-align: right;">+19.68</td>
+<td style="text-align: right;">89.50</td>
+<td style="text-align: right;">75.29</td>
+<td style="text-align: right;">-14.21</td>
+<td style="text-align: right;">62.57</td>
+<td style="text-align: right;">64.02</td>
+<td style="text-align: right;">+1.45</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparison-takeaways">Comparison Takeaways</h3>
+<ul>
+<li>Prompt_v2 produces a clear <strong>sensitivity gain</strong> across all approaches, with the largest gain in <code>Zero-Shot+</code> (+27.09 points).</li>
+<li>This gain is accompanied by a substantial <strong>specificity drop</strong> across all approaches (about -14 to -21 points).</li>
+<li>Net result: <strong>ACC decreases</strong> in every mode (about -4.93 to -7.75 points), while <strong>F1 improves modestly</strong> (+0.75 to +1.62 points).</li>
+<li>Parse health improved in v2: prompt_v1 had 1 unparseable row in three modes, while prompt_v2 has <strong>0 unparseable rows in all four modes</strong>.</li>
+</ul>
+<p>In short, relative to prompt_v1, prompt_v2 behaves as a more positive-class-seeking configuration: better recall and slightly better F1, but lower specificity and lower accuracy.</p>
+</body>
+</html>

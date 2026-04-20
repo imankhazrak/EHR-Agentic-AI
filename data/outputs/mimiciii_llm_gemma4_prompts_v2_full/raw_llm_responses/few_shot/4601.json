@@ -1,0 +1,12 @@
+{
+  "sample_id": 4601,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes diagnoses of Mitral stenosis, Diseases of tricuspid valve, Atrial flutter, Rheumatic heart failure (congestive), Atrial fibrillation, and Primary hypercoagulable state, alongside medications like Aspirin EC and Levothyroxine Sodium. While there is no explicit diagnosis of hyperlipidemia, the complex cardiac history and the presence of Aspirin EC suggest active management related to cardiovascular risk, which aligns with the patterns seen in Demonstration Case 2.\n\nPrediction: No\nProbability: 0.27\nReasoning: The current visit record lists several cardiac diagnoses (Mitral stenosis, Atrial fibrillation, Rheumatic heart failure) and uses Aspirin EC, indicating cardiovascular risk management. However, there is no explicit mention of hyperlipidemia or related lipid abnormalities in the diagnoses or medications, and the complex nature of the record does not strongly support the coding of a lipid disorder in the next visit, unlike the explicit lipid diagnosis in Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3674,
+    "completion_tokens": 214
+  }
+}

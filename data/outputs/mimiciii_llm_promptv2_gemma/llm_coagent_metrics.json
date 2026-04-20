@@ -1,0 +1,40 @@
+{
+  "accuracy": 75.08,
+  "precision": 52.98,
+  "recall": 80.67,
+  "sensitivity": 80.67,
+  "specificity": 72.97,
+  "f1": 63.96,
+  "balanced_accuracy": 76.82,
+  "tp": 551,
+  "fp": 489,
+  "tn": 1320,
+  "fn": 132,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "matrix": [
+      [
+        1320,
+        489
+      ],
+      [
+        132,
+        551
+      ]
+    ]
+  },
+  "mode": "coagent",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "n_total": 2492,
+  "n_valid_prediction": 2492,
+  "n_unparseable_prediction": 0,
+  "n_valid_probability": 2492,
+  "n_missing_probability": 0,
+  "n_invalid_probability": 0,
+  "n_out_of_range_probability": 0,
+  "auc": 79.54,
+  "auprc": 53.25
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 5383,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the prescription of Atorvastatin, which is a lipid-lowering medication, alongside diagnoses of Congestive heart failure and Diabetes mellitus, which are common comorbidities associated with lipid disorders. This aligns with the pattern seen in Demonstration Case 2, where hypercholesterolemia was explicitly diagnosed alongside Atorvastatin use.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the prescription of Atorvastatin, a lipid-lowering medication, and diagnoses of Congestive heart failure and Diabetes mellitus. This strongly suggests an underlying lipid disorder, consistent with the pattern in Demonstration Case 2 where hypercholesterolemia was explicitly diagnosed alongside Atorvastatin use.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the prescription of Atorvastatin, a lipid-lowering medication, and diagnoses of Congestive heart failure and Diabetes mellitus. This strongly suggests an underlying lipid disorder, consistent with the pattern in Demonstration Case 2 where hypercholesterolemia was explicitly diagnosed alongside Atorvastatin use.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3597,
+    "completion_tokens": 256
+  }
+}

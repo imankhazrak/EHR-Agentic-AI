@@ -44,12 +44,13 @@ Follow these guidelines:
 Your response MUST follow exactly this format:
 
 Prediction: <Yes or No>
-Probability: <a number between 0 and 1>
+Probability: <a number between 0 and 1 with exactly two decimal places>
 Reasoning: <brief explanation based only on the current visit record>
 
 Rules for Probability:
 - Probability must be a single numeric value between 0 and 1.
-- Use higher values when the documented evidence strongly supports that a lipid disorder will be coded in the next visit.
+- Use exactly two decimal places (for example: 0.27, 0.63, 0.81).
+- Use higher values when the documented evidence strongly supports that a lipid disorder will be coded on the next hospital visit.
 - Use lower values when the documented evidence does not support it.
 - Do not use percentages.
 - Do not output any extra lines before or after the required format.

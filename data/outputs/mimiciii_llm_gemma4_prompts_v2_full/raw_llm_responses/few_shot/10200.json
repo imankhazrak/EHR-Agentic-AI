@@ -1,0 +1,12 @@
+{
+  "sample_id": 10200,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents the prescription of Atorvastatin, a lipid-lowering agent, alongside diagnoses of Occlusion and stenosis of carotid artery, which is consistent with the pattern shown in Demonstration Case 2 where hypercholesterolemia was a diagnosis.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents the prescription of Atorvastatin, a lipid-lowering agent, and diagnoses of Occlusion and stenosis of carotid artery, which aligns with the pattern in Demonstration Case 2 where hypercholesterolemia was a diagnosis.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3401,
+    "completion_tokens": 135
+  }
+}

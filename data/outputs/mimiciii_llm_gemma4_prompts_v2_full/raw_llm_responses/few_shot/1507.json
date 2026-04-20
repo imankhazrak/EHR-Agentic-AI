@@ -1,0 +1,12 @@
+{
+  "sample_id": 1507,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists multiple severe diagnoses (e.g., Unspecified pleural effusion, Other malignant lymphomas, Acute kidney failure, Acidosis) but contains no explicit mention of hypercholesterolemia, hyperlipidemia, or any lipid-lowering medications (like Allopurinol or Quinapril) being directly linked to a diagnosed lipid disorder, which is required for a 'Yes' prediction based on the guidelines.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3637,
+    "completion_tokens": 100
+  }
+}

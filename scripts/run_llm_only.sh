@@ -13,6 +13,19 @@
 #   START_FROM=zero_shot_plus bash scripts/run_llm_only.sh
 #
 # Valid START_FROM values: zero_shot (default), zero_shot_plus, few_shot, coagent
+#
+# Preserve prior result trees: do not reuse their paths.outputs. Default config uses a
+# dedicated folder; for ad-hoc runs you can also set:
+#   export EHR_OUTPUTS_DIR="data/outputs/mimiciii_llm_$(date +%Y%m%d_%H%M)"
+#   (optional) export EHR_LLM_CACHE_DIR="$EHR_OUTPUTS_DIR/llm_cache"
+#
+# Full run with extra YAML overrides (e.g. OpenAI + dedicated output folder):
+#   export LLM_OVERRIDES="configs/experiments/openai_gpt4o_mini_promptv2_full.yaml"
+#   STAGE=full bash scripts/run_llm_only.sh
+#
+# Smoke + optional extra merges (e.g. OpenAI on login node):
+#   export LLM_EXTRA_OVERRIDES="configs/smoke_openai.yaml"
+#   STAGE=smoke bash scripts/run_llm_only.sh
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -22,7 +35,17 @@ export PYTHONPATH="$ROOT:${PYTHONPATH:-}"
 CFG=(--config configs/default.yaml)
 STAGE="${STAGE:-full}"
 if [[ "$STAGE" == "smoke" ]]; then
-  CFG+=(--overrides configs/debug_small.yaml)
+  OVR_LIST=(configs/debug_small.yaml)
+  if [[ -n "${LLM_EXTRA_OVERRIDES:-}" ]]; then
+    # shellcheck disable=SC2206
+    EXTRA=(${LLM_EXTRA_OVERRIDES})
+    OVR_LIST+=("${EXTRA[@]}")
+  fi
+  CFG+=(--overrides "${OVR_LIST[@]}")
+elif [[ -n "${LLM_OVERRIDES:-}" ]]; then
+  # shellcheck disable=SC2206
+  OVR_LIST=(${LLM_OVERRIDES})
+  CFG+=(--overrides "${OVR_LIST[@]}")
 fi
 
 START_FROM="${START_FROM:-zero_shot}"
@@ -65,5 +88,6 @@ case "$START_FROM" in
     ;;
 esac
 
-python -c "from src.evaluation.summarize_results import collect_results; collect_results('data/outputs/mimiciii')"
-echo "Done. See data/outputs/mimiciii/summary_table.csv"
+OUTPUT_DIR="$(python -m src.scripts.print_output_dir "${CFG[@]}")"
+python -c "from src.evaluation.summarize_results import collect_results; import sys; collect_results(sys.argv[1])" "${OUTPUT_DIR}"
+echo "Done. See ${OUTPUT_DIR}/summary_table.csv"

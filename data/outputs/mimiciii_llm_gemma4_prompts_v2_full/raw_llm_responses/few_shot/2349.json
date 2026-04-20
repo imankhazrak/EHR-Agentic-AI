@@ -1,0 +1,12 @@
+{
+  "sample_id": 2349,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents several conditions related to lipid abnormalities, including obesity, congestive heart failure, and the prescription of Simvastatin, which is a lipid-lowering medication. This aligns with the pattern seen in Demonstration Case 2, where pure hypercholesterolemia was documented alongside medication use.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents obesity and congestive heart failure, and prescribes Simvastatin. This supports the likelihood of a lipid disorder diagnosis in the next visit, similar to Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3675,
+    "completion_tokens": 132
+  }
+}

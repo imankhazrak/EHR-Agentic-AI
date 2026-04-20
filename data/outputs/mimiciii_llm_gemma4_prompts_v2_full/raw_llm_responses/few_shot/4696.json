@@ -1,0 +1,12 @@
+{
+  "sample_id": 4696,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current visit record includes the prescription of Pravastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest active management of cardiovascular health, aligning with the pattern seen in Demonstration Case 2.\n\nPrediction: No\nProbability: 0.27\nReasoning: The current visit record does not contain explicit diagnoses or documented history of lipid disorders, and while Pravastatin is prescribed, the record lacks sufficient supporting evidence to meet the criteria for a 'Yes' prediction based on the demonstration cases.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: Current visit record includes the prescription of Pravastatin, which is a lipid-lowering medication, and the patient has multiple other documented conditions that suggest active management of cardiovascular health, aligning with the pattern seen in Demonstration Case 2.\n\nPrediction: No\nProbability: 0.27\nReasoning: The current visit record does not contain explicit diagnoses or documented history of lipid disorders, and while Pravastatin is prescribed, the record lacks sufficient supporting evidence to meet the criteria for a 'Yes' prediction based on the demonstration cases.\n\nASS",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3583,
+    "completion_tokens": 256
+  }
+}

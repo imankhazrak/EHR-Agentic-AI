@@ -1,0 +1,12 @@
+{
+  "sample_id": 8231,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes Simvastatin and Clopidogrel, which are lipid-lowering and antiplatelet medications, alongside diagnoses of Cerebral aneurysm and Cerebral thrombosis, indicating active management of cardiovascular risk factors. This aligns with the pattern in Demonstration Case 2, where hypercholesterolemia was explicitly coded alongside cardiovascular issues.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes Simvastatin and Clopidogrel, which are lipid-lowering and antiplatelet medications, alongside diagnoses of Cerebral aneurysm and Cerebral thrombosis, indicating active management of cardiovascular risk factors. This aligns with the pattern in Demonstration Case 2, where hypercholesterolemia was explicitly coded alongside cardiovascular issues.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3535,
+    "completion_tokens": 166
+  }
+}

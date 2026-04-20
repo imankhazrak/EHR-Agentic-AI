@@ -84,4 +84,5 @@ python -m src.scripts.warmup_local_gemma --config configs/default.yaml
 bash "$PROJECT_DIR/scripts/run_llm_only.sh"
 
 echo "End: $(date)"
-echo "Summary: ${PROJECT_DIR}/data/outputs/mimiciii_gemma/summary_table.csv"
+OUT="$(python -m src.scripts.print_output_dir --config configs/default.yaml)"
+echo "Summary: ${PROJECT_DIR}/${OUT}/summary_table.csv"

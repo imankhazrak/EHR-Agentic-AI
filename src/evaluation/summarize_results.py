@@ -47,14 +47,20 @@ def collect_results(output_dir: str) -> pd.DataFrame:
                 "few_shot": "Few-Shot (N=6)",
                 "coagent": "EHR-CoAgent",
             }
-            rows.append({
+            row = {
                 "Model": model_name,
                 "Approach": approach_map.get(mode, mode),
                 "ACC": m["accuracy"],
+                "Precision": m.get("precision"),
                 "Sensitivity": m["sensitivity"],
                 "Specificity": m["specificity"],
                 "F1": m["f1"],
-            })
+                "Balanced_ACC": m.get("balanced_accuracy"),
+                "AUC": m.get("auc"),
+                "AUPRC": m.get("auprc"),
+                "n_valid_prob": m.get("n_valid_probability"),
+            }
+            rows.append(row)
 
     summary = pd.DataFrame(rows)
     if len(summary) > 0:

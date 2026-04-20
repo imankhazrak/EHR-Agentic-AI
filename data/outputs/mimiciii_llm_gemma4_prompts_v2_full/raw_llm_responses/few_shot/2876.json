@@ -1,0 +1,12 @@
+{
+  "sample_id": 2876,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents multiple severe diagnoses including Congestive heart failure, Atrial fibrillation, and Diabetes mellitus, alongside the long-term use of Insulin and Aspirin, which collectively suggest active management of cardiovascular and metabolic risks, consistent with the patterns in Demonstration Cases 1, 2, and 3.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The record includes diagnoses of Congestive heart failure and Atrial fibrillation, along with the prescription of Insulin and Aspirin, indicating active management of metabolic and cardiovascular risks, which aligns with the documented evidence patterns in Demonstration Cases 1, 2, and 3.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3767,
+    "completion_tokens": 149
+  }
+}

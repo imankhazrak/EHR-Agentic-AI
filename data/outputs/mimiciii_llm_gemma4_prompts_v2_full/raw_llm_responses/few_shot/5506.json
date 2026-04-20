@@ -1,0 +1,12 @@
+{
+  "sample_id": 5506,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly documents multiple severe conditions, including Congestive heart failure and Hypertensive chronic kidney disease, alongside Diabetes with renal manifestations, which are associated with lipid disorders. Although no explicit lipid diagnosis is present, the presence of these severe, interconnected chronic conditions strongly suggests active lipid-disorder management or a related diagnosis will be coded in the next visit, similar to the patterns seen in Demonstration Cases 1 and 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3844,
+    "completion_tokens": 103
+  }
+}

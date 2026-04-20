@@ -1,0 +1,8 @@
+# Test-set eval for adapter from configs/finetune_answer_only_5epochs.yaml (SLURM 5-epoch train).
+paths:
+  outputs: "data/outputs/mimiciii_gemma_finetuned_5epochs"
+llm:
+  finetune_output_dir: "models/gemma_finetuned_answer_only_5epochs"
+  finetune:
+    answer_only_loss: true
+    max_length: 2048

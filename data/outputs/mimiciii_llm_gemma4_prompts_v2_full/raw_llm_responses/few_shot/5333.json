@@ -1,0 +1,12 @@
+{
+  "sample_id": 5333,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.8500\nReasoning: The current visit record explicitly documents multiple diagnoses related to lipid abnormalities, including Congestive heart failure and Diabetes with renal manifestations, alongside the prescription of Atorvastatin, which is a lipid-lowering agent. This aligns with the pattern seen in Demonstration Case 2.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.85\nReasoning: The current visit record documents multiple diagnoses, including Congestive heart failure and Diabetes with renal manifestations, and prescribes Atorvastatin, a lipid-lowering agent. This supports the pattern in Demonstration Case 2.\nPrediction: Yes\nProbability: 0.85\nReasoning: The current visit record documents multiple diagnoses, including Congestive heart failure and Diabetes with renal manifestations, and prescribes Atorvastatin, a lipid-lowering agent. This supports the pattern in Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3760,
+    "completion_tokens": 195
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": 3636,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents multiple diagnoses related to diabetes and kidney issues, but lacks explicit mention of hypercholesterolemia or hyperlipidemia. However, the presence of multiple complex diagnoses in the record suggests a high likelihood of related lipid abnormalities being coded in the next visit, consistent with the patterns in Demonstration Case 1 and 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3468,
+    "completion_tokens": 83
+  }
+}

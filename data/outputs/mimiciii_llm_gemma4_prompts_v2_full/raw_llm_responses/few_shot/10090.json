@@ -1,0 +1,12 @@
+{
+  "sample_id": 10090,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Infection and inflammatory reaction due to cardiac device, implant, and graft; Other primary cardiomyopathies; Chronic systolic heart failure; Primary pulmonary hypertension; Chronic kidney disease, Stage IV (severe); Ulcer of heel and midfoot; Congestive heart failure, unspecified; Chronic airway obstruction, not elsewhere classified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Morbid obesity. However, there is no explicit mention of hypercholesterolemia, hyperlipidemia, or any other documented evidence of active lipid disorder management in the current record to support a 'Yes' prediction based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3500,
+    "completion_tokens": 154
+  }
+}

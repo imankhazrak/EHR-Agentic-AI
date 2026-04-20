@@ -1,0 +1,12 @@
+{
+  "sample_id": 7039,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record explicitly lists the diagnosis [ICD9-DX:5128], which corresponds to a lipid disorder (CCS category 53), satisfying the condition for a 'Yes' prediction based on documented evidence.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3738,
+    "completion_tokens": 63
+  }
+}

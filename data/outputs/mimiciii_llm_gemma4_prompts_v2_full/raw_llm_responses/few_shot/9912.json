@@ -1,0 +1,12 @@
+{
+  "sample_id": 9912,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any explicit diagnoses or documented history of hyperlipidemia, hypercholesterolemia, or other lipid abnormalities, nor does it document active lipid-disorder management.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists multiple diagnoses related to malignancy, infection, and thrombosis, but none of these explicitly mention or document a lipid disorder (hyperlipidemia, hypercholesterolemia, etc.) or active management thereof.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any documented evidence of a lipid disorder or active lipid-disorder management, which is required to predict a 'Yes' outcome based on the demonstration cases.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists various diagnoses and medications, but there is no documented signal related to lipid metabolism disorders (hyperlipidemia, hypercholesterolemia, etc.) to support a 'Yes' prediction.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any documented evidence of a lipid disorder or",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3469,
+    "completion_tokens": 256
+  }
+}

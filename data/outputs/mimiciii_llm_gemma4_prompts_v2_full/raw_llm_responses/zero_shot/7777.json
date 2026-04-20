@@ -1,0 +1,12 @@
+{
+  "sample_id": 7777,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents a diagnosis of \"Other and unspecified hyperlipidemia,\" and the patient is prescribed \"Atorvastatin\" and \"Ezetimibe,\" which are lipid-lowering medications.\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents a diagnosis of \"Other and unspecified hyperlipidemia,\" and the patient is prescribed lipid-lowering medications \"Atorvastatin\" and \"Ezetimibe.\"\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents a diagnosis of \"Other and unspecified hyperlipidemia,\" and the patient is prescribed lipid-lowering medications \"Atorvastatin\" and \"Ezetimibe.\"\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly documents a diagnosis of \"Other and unspecified hyperlipidemia,\" and the patient is prescribed lipid-lowering medications \"Atorvastatin\" and \"Ezetimibe.\"\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 951,
+    "completion_tokens": 256
+  }
+}

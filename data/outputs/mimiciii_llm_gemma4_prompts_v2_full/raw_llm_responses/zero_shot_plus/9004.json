@@ -1,0 +1,12 @@
+{
+  "sample_id": 9004,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.95\nReasoning: The current visit record explicitly documents diagnoses of \"Other and unspecified hyperlipidemia\" and \"Pure hyperglyceridemia,\" which are explicit evidence of lipid disorders. Additionally, the record lists the prescription of \"Simvastatin\" and \"Atorvastatin,\" indicating active lipid-disorder management.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.95\nReasoning: The current visit record explicitly documents diagnoses of \"Other and unspecified hyperlipidemia\" and \"Pure hyperglyceridemia,\" which are explicit evidence of lipid disorders. Additionally, the record lists the prescription of \"Simvastatin\" and \"Atorvastatin,\" indicating active lipid-disorder management.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 151
+  }
+}

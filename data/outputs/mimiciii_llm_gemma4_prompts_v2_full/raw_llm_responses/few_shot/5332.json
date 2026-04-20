@@ -1,0 +1,12 @@
+{
+  "sample_id": 5332,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the medication Atorvastatin, which is a lipid-lowering agent, and the diagnosis of Diabetes with other coma, type I [juvenile type], uncontrolled, which is a documented risk factor. Case 2 demonstrates that the presence of hypercholesterolemia leads to a 'Yes' outcome.\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the medication Atorvastatin, which is a lipid-lowering agent, and the diagnosis of Diabetes with other coma, type I [juvenile type], uncontrolled, which is a documented risk factor. Case 2 demonstrates that the presence of hypercholesterolemia leads to a 'Yes' outcome.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3727,
+    "completion_tokens": 164
+  }
+}

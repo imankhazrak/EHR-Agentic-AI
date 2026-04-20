@@ -26,5 +26,6 @@ for m in run_zero_shot run_zero_shot_plus run_few_shot run_coagent; do
   python -m "src.scripts.$m" "${CFG[@]}"
 done
 
-python -c "from src.evaluation.summarize_results import collect_results; collect_results('data/outputs/mimiciii')"
-echo "Done. See data/outputs/mimiciii/summary_table.csv"
+OUTPUT_DIR="$(python -m src.scripts.print_output_dir "${CFG[@]}")"
+python -c "from src.evaluation.summarize_results import collect_results; import sys; collect_results(sys.argv[1])" "${OUTPUT_DIR}"
+echo "Done. See ${OUTPUT_DIR}/summary_table.csv"

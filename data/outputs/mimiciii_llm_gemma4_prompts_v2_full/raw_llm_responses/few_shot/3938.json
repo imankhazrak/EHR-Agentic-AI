@@ -1,0 +1,12 @@
+{
+  "sample_id": 3938,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin and Aspirin EC, which are lipid-lowering medications. Although the record does not explicitly state a diagnosis of hyperlipidemia or hypercholesterolemia, the presence of these medications strongly suggests active management of a lipid disorder, consistent with the pattern in Demonstration Case 2.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin, a lipid-lowering medication. This suggests active management of a lipid disorder, which is consistent with the pattern seen in Demonstration Case 2, even without an explicit diagnosis.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin, a lipid-lowering medication. This suggests active management of a lipid disorder, which is consistent with the pattern seen in Demonstration Case 2, even without an explicit diagnosis.\n\nASSISTANT:\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin, a lipid-lowering",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3369,
+    "completion_tokens": 256
+  }
+}

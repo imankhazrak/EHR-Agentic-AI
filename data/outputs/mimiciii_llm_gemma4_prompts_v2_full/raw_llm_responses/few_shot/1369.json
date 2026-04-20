@@ -1,0 +1,12 @@
+{
+  "sample_id": 1369,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. Additionally, the prescription of \"Pravastatin\" and \"Atorvastatin\" supports active lipid-disorder management, consistent with the patterns in Demonstration Cases 2 and 3.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. The prescription of \"Pravastatin\" and \"Atorvastatin\" further supports active lipid-disorder management, aligning with the documented evidence patterns in Demonstration Cases 2 and 3.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3611,
+    "completion_tokens": 147
+  }
+}

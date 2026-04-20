@@ -1,0 +1,12 @@
+{
+  "sample_id": 7461,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record documents several diagnoses and medications, including Simvastatin, but lacks explicit evidence of a diagnosed lipid disorder (hypercholesterolemia or hyperlipidemia) to support a prediction of its coding in the next visit.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record documents Simvastatin as a prescribed medication, but there is no explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to support a prediction that it will be coded in the next hospital visit.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record lists Simvastatin as a prescribed medication, but there is no explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to support a prediction that it will be coded in the next hospital visit.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record lists Simvastatin as a prescribed medication, but there is no explicit diagnosis of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 256
+  }
+}

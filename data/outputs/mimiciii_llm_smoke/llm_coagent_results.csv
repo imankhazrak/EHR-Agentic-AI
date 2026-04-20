@@ -1,0 +1,175 @@
+pair_id,label_lipid_disorder,prompt_mode,model_name,raw_response,parsed_prediction,pred_binary,parsed_probability,probability_parse_status,parse_valid_probability,probability_format_warning,reasoning,parser_status,prob_yes,prob_no,raw_response_path,true_label,split
+5346,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication. This, combined with documented cardiovascular conditions like Congestive heart failure and Atrial fibrillation, strongly suggests active management of a related metabolic condition, fulfilling the refined criteria for a positive prediction.",Yes,1,0.81,ok,True,False,"The current visit record documents the prescription of Atorvastatin, which is a lipid-lowering medication. This, combined with documented cardiovascular conditions like Congestive heart failure and Atrial fibrillation, strongly suggests active management of a related metabolic condition, fulfilling the refined criteria for a positive prediction.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/5346.json,0,test
+4305,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record lists numerous severe infections, sepsis, and respiratory failure diagnoses, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any lipid-lowering medications that would support a diagnosis of Disorders of Lipid Metabolism in the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record details severe infections and sepsis, but lacks any documented evidence, such as a diagnosis of hyperlipidemia or the prescription of lipid-lowering agents, to predict a positive coding of Disorders of Lipid Metabolism in the next visit.",No,0,0.0,ok,True,False,"The current visit record lists numerous severe infections, sepsis, and respiratory failure diagnoses, but contains no explicit mention of hyperlipidemia, hypercholesterolemia, or any lipid-lowering medications that would support a diagnosis of Disorders of Lipid Metabolism in the next visit.
+
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record details severe infections and sepsis, but lacks any documented evidence, such as a diagnosis of hyperlipidemia or the prescription of lipid-lowering agents, to predict a positive coding of Disorders of Lipid Metabolism in the next visit.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/4305.json,0,test
+8843,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents ""Pure hypercholesterolemia"" as a diagnosis, which directly meets the criteria for predicting a positive outcome for Disorders of Lipid Metabolism. Additionally, the prescription of ""Atorvastatin"" supports active management of this lipid abnormality, aligning with the refined criteria.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents ""Pure hypercholesterolemia"" as a diagnosis, which directly meets the criteria for predicting a positive outcome for Disorders of Lipid Metabolism. Additionally, the prescription of ""Atorvastatin"" supports active management of this lipid abnormality, aligning with the refined criteria.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/8843.json,1,test
+10771,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents multiple diagnoses related to kidney disease, hypertension, and endocrine issues, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or the prescription of specific lipid-lowering medications (like statins) to support a positive prediction based on the refined criteria.",No,0,0.15,ok,True,False,"The current visit record documents multiple diagnoses related to kidney disease, hypertension, and endocrine issues, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or the prescription of specific lipid-lowering medications (like statins) to support a positive prediction based on the refined criteria.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/10771.json,0,test
+5618,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. Additionally, the presence of ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system"" provides supporting evidence of related metabolic and cardiovascular conditions.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. This diagnosis, combined with other documented conditions like ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system,"" strongly supports a positive prediction based on the refined criteria.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. This diagnosis, combined with other documented conditions like ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system,"" strongly supports a positive prediction based on the refined criteria.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. Additionally, the presence of ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system"" provides supporting evidence of related metabolic and cardiovascular conditions.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. This diagnosis, combined with other documented conditions like ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system,"" strongly supports a positive prediction based on the refined criteria.
+
+ASSISTANT:
+Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. This diagnosis, combined with other documented conditions like ""Unspecified essential hypertension"" and ""Personal history of other diseases of circulatory system,"" strongly supports a positive prediction based on the refined criteria.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/5618.json,1,test
+6816,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the patient is prescribed ""Atorvastatin,"" which strongly indicates active management of a lipid disorder, satisfying the refined criteria for a positive prediction.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents a diagnosis of ""Pure hypercholesterolemia"" and the patient is prescribed ""Atorvastatin,"" which strongly indicates active management of a lipid disorder, satisfying the refined criteria for a positive prediction.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/6816.json,1,test
+25,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record documents multiple severe conditions, including Systemic Lupus Erythematosus and Hypertensive chronic kidney disease. Although explicit hyperlipidemia is not diagnosed, the presence of multiple severe, chronic metabolic conditions strongly suggests active management of related lipid abnormalities, aligning with the refined criteria that treatment signals for related metabolic syndromes are sufficient indicators for positive prediction.",Yes,1,0.85,ok,True,False,"The current visit record documents multiple severe conditions, including Systemic Lupus Erythematosus and Hypertensive chronic kidney disease. Although explicit hyperlipidemia is not diagnosed, the presence of multiple severe, chronic metabolic conditions strongly suggests active management of related lipid abnormalities, aligning with the refined criteria that treatment signals for related metabolic syndromes are sufficient indicators for positive prediction.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/25.json,0,test
+2081,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. Additionally, the presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" provides strong supporting evidence of related metabolic conditions.
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. The presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" further supports related metabolic conditions.
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. The presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" further supports related metabolic conditions.",Yes,1,0.81,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. Additionally, the presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" provides strong supporting evidence of related metabolic conditions.
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. The presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" further supports related metabolic conditions.
+ASSISTANT:
+Prediction: Yes
+Probability: 0.81
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the refined criteria for predicting a positive outcome. The presence of ""Coronary atherosclerosis"" and ""Unspecified essential hypertension"" further supports related metabolic conditions.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/2081.json,1,test
+648,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyper",No,0,0.0,ok,True,False,"The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management in the diagnoses or medications prescribed.
+ASSISTANT:
+Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents diagnoses related to Hypoxemia, Multiple Myeloma, and Pneumonia, but lacks any explicit mention of hyper",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/648.json,0,test
+8330,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed ""Atorvastatin,"" which strongly suggests active management of a related metabolic condition as per the refined criteria.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, and the patient is prescribed ""Atorvastatin,"" which strongly suggests active management of a related metabolic condition as per the refined criteria.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/8330.json,1,test
+9503,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. Furthermore, the prescription of ""Atorvastatin"" supports active management of this lipid abnormality, aligning with the refined criteria for a positive prediction.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents the diagnosis of ""Pure hypercholesterolemia,"" which directly meets the criteria for a lipid disorder. Furthermore, the prescription of ""Atorvastatin"" supports active management of this lipid abnormality, aligning with the refined criteria for a positive prediction.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/9503.json,1,test
+10330,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.00
+Reasoning: The current visit record documents numerous psychiatric and substance use diagnoses, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or lipid-lowering medications, which are required to predict a positive coding for Disorders of Lipid Metabolism.",No,0,0.0,ok,True,False,"The current visit record documents numerous psychiatric and substance use diagnoses, but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or lipid-lowering medications, which are required to predict a positive coding for Disorders of Lipid Metabolism.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/10330.json,0,test
+9976,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents diagnoses of alcoholic cirrhosis and atrial fibrillation, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management signals, despite the presence of various medications.
+ASSISTANT:
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents diagnoses of alcoholic cirrhosis and atrial fibrillation, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management signals, despite the presence of various medications.",No,0,0.15,ok,True,False,"The current visit record documents diagnoses of alcoholic cirrhosis and atrial fibrillation, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management signals, despite the presence of various medications.
+ASSISTANT:
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents diagnoses of alcoholic cirrhosis and atrial fibrillation, but lacks explicit evidence of hyperlipidemia, hypercholesterolemia, or active lipid-disorder management signals, despite the presence of various medications.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/9976.json,0,test
+8175,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic risk factors (Chronic diastolic heart failure, Coronary atherosclerosis, Diabetes mellitus, Congestive heart failure), but it lacks explicit evidence of a lipid disorder diagnosis or the prescription of specific lipid-lowering agents (like Atorvastatin or Simvastatin) to support active management of hyperlipidemia.
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic risk factors (Chronic diastolic heart failure, Coronary atherosclerosis, Diabetes mellitus, Congestive heart failure), but it lacks explicit evidence of a lipid disorder diagnosis or the prescription of specific lipid-lowering agents (like Atorvastatin or Simvastatin) to support active management of hyperlipidemia.",No,0,0.15,ok,True,False,"The current visit record documents several cardiovascular and metabolic risk factors (Chronic diastolic heart failure, Coronary atherosclerosis, Diabetes mellitus, Congestive heart failure), but it lacks explicit evidence of a lipid disorder diagnosis or the prescription of specific lipid-lowering agents (like Atorvastatin or Simvastatin) to support active management of hyperlipidemia.
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record documents several cardiovascular and metabolic risk factors (Chronic diastolic heart failure, Coronary atherosclerosis, Diabetes mellitus, Congestive heart failure), but it lacks explicit evidence of a lipid disorder diagnosis or the prescription of specific lipid-lowering agents (like Atorvastatin or Simvastatin) to support active management of hyperlipidemia.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/8175.json,0,test
+3557,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents several diagnoses and medications, including Simvastatin, which is a lipid-lowering agent. However, there is no explicit diagnosis of hyperlipidemia, hypercholesterolemia, or hyperlipidemia in the current record to support a positive prediction based on the refined criteria.
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents Simvastatin, a lipid-lowering medication. Despite this, there is no explicit diagnosis of a lipid disorder (hyperlipidemia, hypercholesterolemia) in the record to meet the criteria for a positive prediction.",No,0,0.1,ok,True,False,"The current visit record documents several diagnoses and medications, including Simvastatin, which is a lipid-lowering agent. However, there is no explicit diagnosis of hyperlipidemia, hypercholesterolemia, or hyperlipidemia in the current record to support a positive prediction based on the refined criteria.
+Prediction: No
+Probability: 0.10
+Reasoning: The current visit record documents Simvastatin, a lipid-lowering medication. Despite this, there is no explicit diagnosis of a lipid disorder (hyperlipidemia, hypercholesterolemia) in the record to meet the criteria for a positive prediction.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/3557.json,0,test
+12424,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, which directly supports a positive prediction according to the refined criteria. Additionally, the presence of other related conditions and the documented diagnosis of hyperlipidemia meet the criteria for predicting a positive outcome.",Yes,1,0.85,ok,True,False,"The current visit record explicitly documents ""Other and unspecified hyperlipidemia"" as a diagnosis, which directly supports a positive prediction according to the refined criteria. Additionally, the presence of other related conditions and the documented diagnosis of hyperlipidemia meet the criteria for predicting a positive outcome.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/12424.json,1,test
+7201,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: No
+Probability: 0.15
+Reasoning: The current visit record lists several severe acute conditions (e.g., Acute kidney failure, Acidosis, Urinary tract infection) but lacks any explicit diagnosis, documented history, or active management signal for lipid disorders (hypercholesterolemia or hyperlipidemia). The prescribed medications do not include standard lipid-lowering agents like Atorvastatin, which would otherwise suggest active management.
+ASSISTANT:
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record details severe acute conditions (e.g., Acute kidney failure, Acidosis, Urinary tract infection) but lacks any explicit diagnosis, documented history, or active management signal for lipid disorders (hypercholesterolemia or hyperlipidemia). The prescribed medications do not include standard lipid-lowering agents like Atorvastatin, which would otherwise suggest active management.",No,0,0.15,ok,True,False,"The current visit record lists several severe acute conditions (e.g., Acute kidney failure, Acidosis, Urinary tract infection) but lacks any explicit diagnosis, documented history, or active management signal for lipid disorders (hypercholesterolemia or hyperlipidemia). The prescribed medications do not include standard lipid-lowering agents like Atorvastatin, which would otherwise suggest active management.
+ASSISTANT:
+Prediction: No
+Probability: 0.15
+Reasoning: The current visit record details severe acute conditions (e.g., Acute kidney failure, Acidosis, Urinary tract infection) but lacks any explicit diagnosis, documented history, or active management signal for lipid disorders (hypercholesterolemia or hyperlipidemia). The prescribed medications do not include standard lipid-lowering agents like Atorvastatin, which would otherwise suggest active management.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/7201.json,0,test
+3697,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record includes the prescription of Simvastatin, which is a lipid-lowering medication. According to the refined criteria, the prescription of lipid-lowering medication strongly suggests active management of a related metabolic condition, even without an explicit hyperlipidemia diagnosis. This aligns with the pattern seen in Demonstration Case 2, where hypercholesterolemia was present alongside lipid-lowering treatment.",Yes,1,0.85,ok,True,False,"The current visit record includes the prescription of Simvastatin, which is a lipid-lowering medication. According to the refined criteria, the prescription of lipid-lowering medication strongly suggests active management of a related metabolic condition, even without an explicit hyperlipidemia diagnosis. This aligns with the pattern seen in Demonstration Case 2, where hypercholesterolemia was present alongside lipid-lowering treatment.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/3697.json,0,test
+6202,1,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record documents multiple cardiovascular conditions (Coronary atherosclerosis, Subendocardial infarction) and the prescription of Simvastatin, which is a lipid-lowering agent. According to the refined criteria, the combination of cardiovascular risk and metabolic treatment is highly informative for predicting a positive outcome, even without an explicit hyperlipidemia diagnosis.
+
+Prediction: Yes
+Probability: 0.85
+Reasoning: The record includes Simvastatin, a lipid-lowering medication, alongside documented cardiovascular diagnoses (Coronary atherosclerosis, Subendocardial infarction). The refined criteria state that treatment signals for related metabolic syndromes are sufficient indicators for positive prediction when combined with cardiovascular risk.
+
+Prediction: Yes
+Probability: 0.85
+Reasoning: The presence of Simvastatin, a lipid-lowering agent, combined with documented cardiovascular risk factors (Coronary atherosclerosis, Subendocardial infarction), strongly suggests active management of a related metabolic condition, supporting a positive prediction based on the refined criteria.",Yes,1,0.85,ok,True,False,"The current visit record documents multiple cardiovascular conditions (Coronary atherosclerosis, Subendocardial infarction) and the prescription of Simvastatin, which is a lipid-lowering agent. According to the refined criteria, the combination of cardiovascular risk and metabolic treatment is highly informative for predicting a positive outcome, even without an explicit hyperlipidemia diagnosis.
+
+Prediction: Yes
+Probability: 0.85
+Reasoning: The record includes Simvastatin, a lipid-lowering medication, alongside documented cardiovascular diagnoses (Coronary atherosclerosis, Subendocardial infarction). The refined criteria state that treatment signals for related metabolic syndromes are sufficient indicators for positive prediction when combined with cardiovascular risk.
+
+Prediction: Yes
+Probability: 0.85
+Reasoning: The presence of Simvastatin, a lipid-lowering agent, combined with documented cardiovascular risk factors (Coronary atherosclerosis, Subendocardial infarction), strongly suggests active management of a related metabolic condition, supporting a positive prediction based on the refined criteria.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/6202.json,1,test
+11620,0,coagent,models/hf_snapshots/google--gemma-4-e4b-it,"Prediction: Yes
+Probability: 0.85
+Reasoning: The current visit record includes the prescription of Atorvastatin, a lipid-lowering medication, alongside documented diagnoses of Diabetes with ketoacidosis, type I, uncontrolled, and severe sepsis. The refined criteria state that the prescription of lipid-lowering medication strongly suggests active management of a related metabolic condition, even without an explicit hyperlipidemia diagnosis, and this combination is highly informative for predicting a positive outcome.",Yes,1,0.85,ok,True,False,"The current visit record includes the prescription of Atorvastatin, a lipid-lowering medication, alongside documented diagnoses of Diabetes with ketoacidosis, type I, uncontrolled, and severe sepsis. The refined criteria state that the prescription of lipid-lowering medication strongly suggests active management of a related metabolic condition, even without an explicit hyperlipidemia diagnosis, and this combination is highly informative for predicting a positive outcome.",structured,,,data/outputs/mimiciii_llm_smoke/raw_llm_responses/coagent/11620.json,0,test

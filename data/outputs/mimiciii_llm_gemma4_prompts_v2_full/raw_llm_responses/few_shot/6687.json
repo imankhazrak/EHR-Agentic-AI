@@ -1,0 +1,12 @@
+{
+  "sample_id": 6687,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents multiple diagnoses including Congestive heart failure, Sepsis, and Diabetes mellitus. Although there is no explicit diagnosis of a lipid disorder, the presence of these severe systemic conditions, combined with the documented history of venous thrombosis and embolism, suggests active management or a high likelihood of a lipid abnormality being coded in the next visit, similar to Case 1 and Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3608,
+    "completion_tokens": 96
+  }
+}

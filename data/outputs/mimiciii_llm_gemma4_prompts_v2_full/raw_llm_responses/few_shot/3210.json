@@ -1,0 +1,12 @@
+{
+  "sample_id": 3210,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents severe cardiac events (Ventricular fibrillation, Cardiac arrest, Coronary atherosclerosis, Congestive heart failure) and Diabetes mellitus, but lacks explicit mention of hyperlipidemia, hypercholesterolemia, or lipid-lowering treatments necessary to predict a diagnosis of Disorders of Lipid Metabolism in the next visit, as shown in the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3423,
+    "completion_tokens": 88
+  }
+}

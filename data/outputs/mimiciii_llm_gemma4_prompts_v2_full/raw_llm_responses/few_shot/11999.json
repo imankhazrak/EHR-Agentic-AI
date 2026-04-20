@@ -1,0 +1,12 @@
+{
+  "sample_id": 11999,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents several diagnoses and medications, including Simvastatin, which is a lipid-lowering agent. However, there is no explicit diagnosis or documented history of hypercholesterolemia or hyperlipidemia in the current record to meet the criteria for a 'Yes' prediction.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists Simvastatin as a prescribed medication, but lacks an explicit diagnosis or documented history of a lipid disorder (like hypercholesterolemia) to satisfy the criteria for a 'Yes' prediction, despite the presence of other complex diagnoses.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3531,
+    "completion_tokens": 140
+  }
+}

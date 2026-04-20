@@ -1,0 +1,12 @@
+{
+  "sample_id": 6722,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists Simvastatin as a prescribed medication, but this alone does not meet the criteria for a 'Yes' prediction, as per the instructions. No explicit diagnosis or documented history of a lipid disorder is present in the current record.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3500,
+    "completion_tokens": 65
+  }
+}

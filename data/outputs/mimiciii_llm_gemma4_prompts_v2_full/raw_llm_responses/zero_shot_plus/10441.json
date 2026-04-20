@@ -1,0 +1,12 @@
+{
+  "sample_id": 10441,
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record explicitly documents a diagnosis code [ICD9-DX:6118], which is not explicitly defined as a lipid disorder in the provided context, and no other explicit evidence of hyperlipidemia or lipid abnormality is present in the diagnoses, medications, or procedures.\n\nASSISTANT:\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record explicitly documents a diagnosis code [ICD9-DX:6118], which is not explicitly defined as a lipid disorder in the provided context, and no other explicit evidence of hyperlipidemia or lipid abnormality is present in the diagnoses, medications, or procedures.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 907,
+    "completion_tokens": 151
+  }
+}

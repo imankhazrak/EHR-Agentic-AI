@@ -1,0 +1,16 @@
+# Full MIMIC-III LLM pipeline: OpenAI gpt-4o-mini + prompts_v2 (probability format).
+# Merge with: --overrides configs/experiments/openai_gpt4o_mini_promptv2_full.yaml
+#
+# Shell / Slurm:
+#   export LLM_OVERRIDES="configs/experiments/openai_gpt4o_mini_promptv2_full.yaml"
+#   STAGE=full bash scripts/run_llm_only.sh
+
+paths:
+  outputs: "data/outputs/mimiciii_llm_gpt4o_mini_promptv2"
+
+llm:
+  provider: openai
+  model_name: gpt-4o-mini
+  model: gpt-4o-mini
+  prompt_template_dir: "prompts_v2"
+  cache_dir: "data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_cache"

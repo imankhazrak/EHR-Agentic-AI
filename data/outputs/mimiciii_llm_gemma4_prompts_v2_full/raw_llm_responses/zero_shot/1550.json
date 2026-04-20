@@ -1,0 +1,12 @@
+{
+  "sample_id": 1550,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record lists multiple diagnoses and prescribed medications, including Atorvastatin, which is a lipid-lowering agent. However, there is no explicit diagnosis of a lipid disorder (such as hyperlipidemia or hypercholesterolemia) documented in the record to support the coding of Disorders of Lipid Metabolism in the next visit.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record lists multiple diagnoses and prescribed medications, including Atorvastatin, which is a lipid-lowering agent. However, there is no explicit diagnosis of a lipid disorder (such as hyperlipidemia or hypercholesterolemia) documented in the record to support the coding of Disorders of Lipid Metabolism in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 169
+  }
+}

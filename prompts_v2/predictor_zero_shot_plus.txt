@@ -47,13 +47,13 @@ Follow these guidelines:
 {{ narrative }}
 
 [Instructions]
-In the MIMIC-III population, approximately 27.6% of next visits include a lipid disorder diagnosis.
+In the MIMIC-III population, approximately 27.4% of next hospital visits include a coded lipid disorder diagnosis (CCS 53).
 
 Please:
 (1) Analyze only the evidence documented in the current visit record.
 (2) Consider diagnoses, medications, and procedures together.
 (3) Weigh multiple documented signals together rather than requiring a single explicit mention.
-(4) Use the prevalence (27.6%) only as background context, and do not use it by itself to make the prediction.
+(4) Use the prevalence (~27.4%) only as background context, and do not use it by itself to make the prediction.
 (5) Base your conclusion on the strength of the documented evidence in the record.
 
 [Output Format]

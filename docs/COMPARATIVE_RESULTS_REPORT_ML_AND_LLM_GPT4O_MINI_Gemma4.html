@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="EHR-Agentic-AI" />
-  <title>Comparative Results — Classical ML vs LLM (GPT-4o-mini &amp; Gemma 4)</title>
+  <title>Comparative Results — ML vs LLM (GPT-4o-mini &amp; Gemma 4)</title>
   <style>
     html {
       line-height: 1.5;
@@ -16,9 +15,9 @@
     }
     body {
       margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
+      max-width: 98vw;
+      padding-left: 24px;
+      padding-right: 24px;
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
@@ -151,57 +150,52 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Comparative Results — Classical ML vs LLM (GPT-4o-mini &amp; Gemma 4)</h1>
-<p class="author">EHR-Agentic-AI</p>
+<h1 class="title">Comparative Results — ML vs LLM (GPT-4o-mini &amp; Gemma 4)</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#comparative-results-report-classical-ml-vs-llm-approaches-gpt-4o-mini-gemma-4">Comparative Results Report — Classical ML vs LLM Approaches (GPT-4o-mini &amp; Gemma 4)</a>
+<li><a href="#comparative-results-report-ml-vs-llm-gpt-4o-mini-gemma-4-prompt-v1v2">Comparative Results Report — ML vs LLM (GPT-4o-mini + Gemma 4, Prompt V1/V2)</a>
 <ul>
-<li><a href="#task-and-evaluation-shared">1. Task and evaluation (shared)</a></li>
-<li><a href="#complete-classical-ml-results">2. Complete classical ML results</a>
+<li><a href="#scope-and-evaluation-setup">1) Scope and Evaluation Setup</a></li>
+<li><a href="#classical-ml-baselines">2) Classical ML Baselines</a>
 <ul>
-<li><a href="#fully-supervised-full-training-set">2.1 Fully supervised (full training set)</a></li>
-<li><a href="#few-shot-ml-n-6-labeled-training-examples">2.2 Few-shot ML (N = 6 labeled training examples)</a></li>
+<li><a href="#fully-supervised">2.1 Fully Supervised</a></li>
+<li><a href="#ml-few-shot-6-training-examples">2.2 ML Few-Shot (6 training examples)</a></li>
 </ul></li>
-<li><a href="#complete-llm-results-gpt-4o-mini-2024-07-18">3. Complete LLM results — <code>gpt-4o-mini-2024-07-18</code></a></li>
-<li><a href="#complete-llm-results-googlegemma-4-e4b-it-local-snapshot">4. Complete LLM results — <code>google/gemma-4-e4b-it</code> (local snapshot)</a></li>
-<li><a href="#cross-llm-comparison-same-prompts-different-models">5. Cross-LLM comparison (same prompts, different models)</a></li>
-<li><a href="#intra-family-comparisons">6. Intra-family comparisons</a>
+<li><a href="#llm-results-by-model-prompt-version">3) LLM Results by Model + Prompt Version</a>
 <ul>
-<li><a href="#intra-ml-fully-supervised">6.1 Intra-ML — fully supervised</a></li>
-<li><a href="#intra-ml-few-shot-n6-vs-fully-supervised">6.2 Intra-ML — few-shot (N=6) vs fully supervised</a></li>
-<li><a href="#intra-llm-gpt-4o-mini-ranking-and-deltas-vs-zero-shot">6.3 Intra-LLM — GPT-4o-mini: ranking and deltas vs zero-shot</a></li>
-<li><a href="#intra-llm-gemma-4-ranking-and-deltas-vs-zero-shot">6.4 Intra-LLM — Gemma 4: ranking and deltas vs zero-shot</a></li>
+<li><a href="#gpt-4o-mini-prompt-v1">3.1 GPT-4o-mini — Prompt V1</a></li>
+<li><a href="#gpt-4o-mini-prompt-v2">3.2 GPT-4o-mini — Prompt V2</a></li>
+<li><a href="#gemma-4-prompt-v1">3.3 Gemma 4 — Prompt V1</a></li>
+<li><a href="#gemma-4-prompt-v2-newly-added">3.4 Gemma 4 — Prompt V2 (newly added)</a></li>
 </ul></li>
-<li><a href="#inter-family-comparisons-ml-vs-llm">7. Inter-family comparisons (ML vs LLM)</a>
+<li><a href="#readable-cross-track-summary">4) Readable Cross-Track Summary</a>
 <ul>
-<li><a href="#best-fully-supervised-ml-vs-best-llm-per-model">7.1 Best fully supervised ML vs best LLM per model</a></li>
-<li><a href="#llm-vs-strongest-reasonable-ml-baseline">7.2 LLM vs strongest “reasonable” ML baseline</a></li>
-<li><a href="#llm-few-shot-in-context-vs-ml-few-shot-parameter-learning">7.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)</a></li>
-<li><a href="#modality-caveat">7.4 Modality caveat</a></li>
+<li><a href="#best-configuration-per-track">4.1 Best configuration per track</a></li>
+<li><a href="#highest-values-across-all-llm-tracks">4.2 Highest values across all LLM tracks</a></li>
 </ul></li>
-<li><a href="#summary-matrix-all-fourteen-configurations">8. Summary matrix (all fourteen configurations)</a></li>
-<li><a href="#conclusions">9. Conclusions</a></li>
-<li><a href="#artifact-map">10. Artifact map</a></li>
+<li><a href="#key-interpretations">5) Key Interpretations</a></li>
+<li><a href="#final-consolidated-table-all-models-all-experiments">7) Final Consolidated Table (All Models, All Experiments)</a></li>
+</ul></li>
+<li><a href="#final-model-selection-based-on-balanced-sensitivity-and-specificity">Final Model Selection Based on Balanced Sensitivity and Specificity</a>
+<ul>
+<li><a href="#best-candidate-models-balanced-performance">Best Candidate Models (Balanced Performance)</a></li>
+<li><a href="#interpretation">Interpretation</a></li>
+<li><a href="#key-takeaway">Key Takeaway</a></li>
 </ul></li>
 </ul>
 </nav>
-<h1 id="comparative-results-report-classical-ml-vs-llm-approaches-gpt-4o-mini-gemma-4">Comparative Results Report — Classical ML vs LLM Approaches (GPT-4o-mini &amp; Gemma 4)</h1>
-<p>This report summarizes the completed MIMIC-III lipid-disorder next-visit prediction experiments, covering classical ML and <strong>two</strong> local/API LLM tracks: <strong>OpenAI <code>gpt-4o-mini</code></strong> and <strong>local <code>google/gemma-4-e4b-it</code></strong>. It presents full metric tables, confusion-level outcomes, and structured intra-family and inter-family comparisons.</p>
-<p><strong>MIMIC-III next-visit prediction:</strong> Disorders of Lipid Metabolism (binary), held-out test evaluation.</p>
-<p><strong>Data sources:</strong></p>
+<h1 id="comparative-results-report-ml-vs-llm-gpt-4o-mini-gemma-4-prompt-v1v2">Comparative Results Report — ML vs LLM (GPT-4o-mini + Gemma 4, Prompt V1/V2)</h1>
+<p>This report compares classical ML baselines with LLM prompt strategies for MIMIC-III lipid-disorder next-visit prediction.</p>
+<p>It now includes:</p>
 <ul>
-<li><strong>ML and GPT-4o-mini LLM:</strong> <code>data/outputs/mimiciii/</code> (<code>summary_table.csv</code>, <code>ml_results_*.csv</code>, <code>llm_*_metrics.json</code>).</li>
-<li><strong>Gemma 4 LLM (prompt experiments):</strong> <code>data/outputs/mimiciii_gemma/</code> (<code>llm_*_metrics.json</code>); Co-Agent completed in Slurm job <strong>46615354</strong> (see <code>docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md</code>).</li>
+<li>GPT-4o-mini <strong>Prompt V1</strong></li>
+<li>GPT-4o-mini <strong>Prompt V2</strong></li>
+<li>Gemma 4 <strong>Prompt V1</strong></li>
+<li>Gemma 4 <strong>Prompt V2</strong> (added from <code>docs/LLM_EXPERIMENT_REPORT_Gemma4_PROMPT_V2.md</code>)</li>
 </ul>
-<blockquote>
-<p><strong>Naming convention:</strong> Model-scoped output roots (<code>mimiciii</code> vs <code>mimiciii_gemma</code>); tables label <strong>model + approach</strong> explicitly—metrics from different models are not merged into unlabeled rows.</p>
-</blockquote>
-<p><strong>Related:</strong> <code>docs/LLM_EXPERIMENT_REPORT_GPT4O_MINI.md</code>, <code>docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md</code>, <code>METHODOLOGY.md</code>.</p>
-<p><em>HTML export:</em> <code>docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html</code> (regenerate with <code>pandoc COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md -o COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.html --standalone --toc --toc-depth=3 -M title=&quot;Comparative Results — Classical ML vs LLM (GPT-4o-mini &amp; Gemma 4)&quot; --self-contained</code> from <code>docs/</code>).</p>
 <hr />
-<h2 id="task-and-evaluation-shared">1. Task and evaluation (shared)</h2>
+<h2 id="scope-and-evaluation-setup">1) Scope and Evaluation Setup</h2>
 <table>
 <colgroup>
 <col style="width: 42%" />
@@ -215,791 +209,757 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Target</strong></td>
-<td>Presence of lipid-metabolism ICD-9 codes (<code>272.x</code> / CCS-53 family) on the <strong>next</strong> hospital admission</td>
+<td>Task</td>
+<td>Binary prediction of lipid-metabolism disorder (<code>272.x</code> / CCS-53) on next admission</td>
 </tr>
 <tr class="even">
-<td><strong>Test unit</strong></td>
-<td>Visit-pair rows; <strong>stratified</strong> hold-out (<strong>20%</strong> test, seed <strong>42</strong>)</td>
+<td>Test split</td>
+<td>Stratified hold-out, seed 42</td>
 </tr>
 <tr class="odd">
-<td><strong>Metrics</strong></td>
-<td>Accuracy (ACC), <strong>Sensitivity</strong> (recall on positives), <strong>Specificity</strong>, <strong>F1</strong> (positive class); all in <strong>%</strong></td>
+<td>Core metrics</td>
+<td>Accuracy, Sensitivity (Recall+), Specificity, F1</td>
 </tr>
 <tr class="even">
-<td><strong>Positive prevalence (test)</strong></td>
-<td>Positives ≈ <strong>tp + fn</strong> on fully parsed rows → <strong>683 / 2492 ≈ 27.4%</strong> (consistent across modes after accounting for dropped unparseables)</td>
+<td>LLM eval size</td>
+<td><code>n_total = 2492</code> across all compared LLM prompt modes</td>
+</tr>
+<tr class="odd">
+<td>Input caveat</td>
+<td>ML uses bag-of-codes; LLM uses narrative text</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Input modality differs by family:</strong></p>
+<p>Because features differ (codes vs narrative), treat this as an <strong>end-to-end system comparison</strong>, not a strict model-only ablation.</p>
+<hr />
+<h2 id="classical-ml-baselines">2) Classical ML Baselines</h2>
+<h3 id="fully-supervised">2.1 Fully Supervised</h3>
 <table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision Tree</td>
+<td style="text-align: right;">73.48</td>
+<td style="text-align: right;">50.66</td>
+<td style="text-align: right;">82.09</td>
+<td style="text-align: right;">51.15</td>
+</tr>
+<tr class="even">
+<td>Logistic Regression</td>
+<td style="text-align: right;"><strong>77.05</strong></td>
+<td style="text-align: right;">47.73</td>
+<td style="text-align: right;">88.11</td>
+<td style="text-align: right;"><strong>53.27</strong></td>
+</tr>
+<tr class="odd">
+<td>Random Forest</td>
+<td style="text-align: right;">76.44</td>
+<td style="text-align: right;">24.01</td>
+<td style="text-align: right;"><strong>96.24</strong></td>
+<td style="text-align: right;">35.85</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ml-few-shot-6-training-examples">2.2 ML Few-Shot (6 training examples)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decision Tree</td>
+<td style="text-align: right;"><strong>61.40</strong></td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">63.24</td>
+<td style="text-align: right;"><strong>44.52</strong></td>
+</tr>
+<tr class="even">
+<td>Logistic Regression</td>
+<td style="text-align: right;">35.27</td>
+<td style="text-align: right;">90.34</td>
+<td style="text-align: right;">14.48</td>
+<td style="text-align: right;">43.34</td>
+</tr>
+<tr class="odd">
+<td>Random Forest</td>
+<td style="text-align: right;">34.95</td>
+<td style="text-align: right;">92.53</td>
+<td style="text-align: right;">13.21</td>
+<td style="text-align: right;">43.81</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ML takeaway:</strong> Fully supervised logistic regression is the strongest stable baseline; ML few-shot training is unstable at <code>N=6</code>.</p>
+<hr />
+<h2 id="llm-results-by-model-prompt-version">3) LLM Results by Model + Prompt Version</h2>
+<h3 id="gpt-4o-mini-prompt-v1">3.1 GPT-4o-mini — Prompt V1</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td style="text-align: right;">80.82</td>
+<td style="text-align: right;">57.69</td>
+<td style="text-align: right;">89.55</td>
+<td style="text-align: right;">62.24</td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td style="text-align: right;">80.73</td>
+<td style="text-align: right;">56.22</td>
+<td style="text-align: right;"><strong>89.99</strong></td>
+<td style="text-align: right;">61.54</td>
+</tr>
+<tr class="odd">
+<td>Few-Shot</td>
+<td style="text-align: right;">80.65</td>
+<td style="text-align: right;">57.39</td>
+<td style="text-align: right;">89.44</td>
+<td style="text-align: right;">61.93</td>
+</tr>
+<tr class="even">
+<td>EHR-CoAgent</td>
+<td style="text-align: right;"><strong>80.93</strong></td>
+<td style="text-align: right;"><strong>58.21</strong></td>
+<td style="text-align: right;">89.50</td>
+<td style="text-align: right;"><strong>62.57</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpt-4o-mini-prompt-v2">3.2 GPT-4o-mini — Prompt V2</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td style="text-align: right;">73.07</td>
+<td style="text-align: right;"><strong>83.60</strong></td>
+<td style="text-align: right;">69.10</td>
+<td style="text-align: right;">62.99</td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td style="text-align: right;">73.27</td>
+<td style="text-align: right;">83.31</td>
+<td style="text-align: right;">69.49</td>
+<td style="text-align: right;">63.08</td>
+</tr>
+<tr class="odd">
+<td>Few-Shot</td>
+<td style="text-align: right;">75.56</td>
+<td style="text-align: right;">77.75</td>
+<td style="text-align: right;">74.74</td>
+<td style="text-align: right;">63.55</td>
+</tr>
+<tr class="even">
+<td>EHR-CoAgent</td>
+<td style="text-align: right;"><strong>76.00</strong></td>
+<td style="text-align: right;">77.89</td>
+<td style="text-align: right;"><strong>75.29</strong></td>
+<td style="text-align: right;"><strong>64.02</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gemma-4-prompt-v1">3.3 Gemma 4 — Prompt V1</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td style="text-align: right;">80.26</td>
+<td style="text-align: right;">55.93</td>
+<td style="text-align: right;">89.44</td>
+<td style="text-align: right;">60.83</td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td style="text-align: right;"><strong>80.97</strong></td>
+<td style="text-align: right;">60.61</td>
+<td style="text-align: right;">88.66</td>
+<td style="text-align: right;"><strong>63.59</strong></td>
+</tr>
+<tr class="odd">
+<td>Few-Shot</td>
+<td style="text-align: right;">80.10</td>
+<td style="text-align: right;">57.83</td>
+<td style="text-align: right;">88.50</td>
+<td style="text-align: right;">61.43</td>
+</tr>
+<tr class="even">
+<td>EHR-CoAgent</td>
+<td style="text-align: right;">79.78</td>
+<td style="text-align: right;"><strong>62.96</strong></td>
+<td style="text-align: right;">86.12</td>
+<td style="text-align: right;">63.05</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gemma-4-prompt-v2-newly-added">3.4 Gemma 4 — Prompt V2 (newly added)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+<th style="text-align: right;">AUC</th>
+<th style="text-align: right;">AUPRC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zero-Shot</td>
+<td style="text-align: right;">74.92</td>
+<td style="text-align: right;">79.36</td>
+<td style="text-align: right;">73.24</td>
+<td style="text-align: right;">63.43</td>
+<td style="text-align: right;"><strong>80.78</strong></td>
+<td style="text-align: right;"><strong>57.41</strong></td>
+</tr>
+<tr class="even">
+<td>Zero-Shot+</td>
+<td style="text-align: right;">73.80</td>
+<td style="text-align: right;">79.94</td>
+<td style="text-align: right;">71.48</td>
+<td style="text-align: right;">62.58</td>
+<td style="text-align: right;">78.31</td>
+<td style="text-align: right;">51.12</td>
+</tr>
+<tr class="odd">
+<td>Few-Shot</td>
+<td style="text-align: right;">70.95</td>
+<td style="text-align: right;"><strong>80.82</strong></td>
+<td style="text-align: right;">67.22</td>
+<td style="text-align: right;">60.39</td>
+<td style="text-align: right;">74.11</td>
+<td style="text-align: right;">44.37</td>
+</tr>
+<tr class="even">
+<td>EHR-CoAgent</td>
+<td style="text-align: right;"><strong>75.08</strong></td>
+<td style="text-align: right;">80.67</td>
+<td style="text-align: right;"><strong>72.97</strong></td>
+<td style="text-align: right;"><strong>63.96</strong></td>
+<td style="text-align: right;">79.54</td>
+<td style="text-align: right;">53.25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt V2 Gemma takeaway:</strong> CoAgent is best on fixed-threshold metrics (ACC/F1/balanced tradeoff), while Zero-Shot is best on ranking quality (AUC/AUPRC).</p>
+<hr />
+<h2 id="readable-cross-track-summary">4) Readable Cross-Track Summary</h2>
+<h3 id="best-configuration-per-track">4.1 Best configuration per track</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Track</th>
+<th>Best Setup</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ML (fully supervised)</td>
+<td>Logistic Regression</td>
+<td style="text-align: right;">77.05</td>
+<td style="text-align: right;">47.73</td>
+<td style="text-align: right;">88.11</td>
+<td style="text-align: right;">53.27</td>
+</tr>
+<tr class="even">
+<td>GPT-4o-mini Prompt V1</td>
+<td>EHR-CoAgent</td>
+<td style="text-align: right;"><strong>80.93</strong></td>
+<td style="text-align: right;">58.21</td>
+<td style="text-align: right;">89.50</td>
+<td style="text-align: right;">62.57</td>
+</tr>
+<tr class="odd">
+<td>GPT-4o-mini Prompt V2</td>
+<td>EHR-CoAgent</td>
+<td style="text-align: right;">76.00</td>
+<td style="text-align: right;"><strong>77.89</strong></td>
+<td style="text-align: right;">75.29</td>
+<td style="text-align: right;"><strong>64.02</strong></td>
+</tr>
+<tr class="even">
+<td>Gemma 4 Prompt V1</td>
+<td>Zero-Shot+</td>
+<td style="text-align: right;"><strong>80.97</strong></td>
+<td style="text-align: right;">60.61</td>
+<td style="text-align: right;">88.66</td>
+<td style="text-align: right;">63.59</td>
+</tr>
+<tr class="odd">
+<td>Gemma 4 Prompt V2</td>
+<td>EHR-CoAgent</td>
+<td style="text-align: right;">75.08</td>
+<td style="text-align: right;">80.67</td>
+<td style="text-align: right;">72.97</td>
+<td style="text-align: right;">63.96</td>
+</tr>
+</tbody>
+</table>
+<h3 id="highest-values-across-all-llm-tracks">4.2 Highest values across all LLM tracks</h3>
+<ul>
+<li><strong>Highest ACC:</strong> Gemma 4 Prompt V1 Zero-Shot+ (<strong>80.97</strong>)</li>
+<li><strong>Highest Sensitivity:</strong> GPT-4o-mini Prompt V2 Zero-Shot (<strong>83.60</strong>)</li>
+<li><strong>Highest Specificity:</strong> GPT-4o-mini Prompt V1 Zero-Shot+ (<strong>89.99</strong>)</li>
+<li><strong>Highest F1:</strong> GPT-4o-mini Prompt V2 EHR-CoAgent (<strong>64.02</strong>)</li>
+<li><strong>Highest AUC/AUPRC (reported in Gemma V2 report):</strong> Gemma 4 Prompt V2 Zero-Shot (<strong>80.78 / 57.41</strong>)</li>
+</ul>
+<hr />
+<h2 id="key-interpretations">5) Key Interpretations</h2>
+<ol type="1">
+<li><strong>LLMs consistently outperform ML baseline on F1</strong> in this setup.</li>
+<li><strong>GPT Prompt V2 shifts strongly toward recall</strong>, increasing sensitivity while reducing specificity and ACC.</li>
+<li><strong>Gemma Prompt V1 is the strongest for high ACC/high SPEC operation</strong> (notably Zero-Shot+).</li>
+<li><strong>Gemma Prompt V2 CoAgent gives balanced threshold behavior</strong>, while <strong>Gemma Prompt V2 Zero-Shot</strong> gives strongest score-ranking quality (AUC/AUPRC).</li>
+<li>Choice of prompt family changes operating point significantly; select by clinical objective (miss fewer positives vs control false alarms).</li>
+</ol>
+<hr />
+<!--
+## 6) Artifact Map
+
+| Artifact | Description |
+|----------|-------------|
+| `data/outputs/mimiciii/ml_results_fully_supervised.csv` | Classical ML full-training results |
+| `data/outputs/mimiciii/ml_results_few_shot.csv` | Classical ML few-shot training results |
+| `data/outputs/mimiciii/llm_*_metrics.json` | GPT-4o-mini Prompt V1 metrics |
+| `data/outputs/mimiciii_llm_gpt4o_mini_promptv2/llm_*_metrics.json` | GPT-4o-mini Prompt V2 metrics |
+| `data/outputs/mimiciii_gemma/llm_*_metrics.json` | Gemma 4 Prompt V1 metrics |
+| `data/outputs/mimiciii_llm_promptv2_gemma/llm_*_metrics.json` | Gemma 4 Prompt V2 metrics |
+| `docs/LLM_EXPERIMENT_REPORT_Gemma4_PROMPT_V2.md` | Detailed Gemma 4 Prompt V2 report |
+
+---
+-->
+<h2 id="final-consolidated-table-all-models-all-experiments">7) Final Consolidated Table (All Models, All Experiments)</h2>
+<p><code>NA</code> means the metric was not available in the experiment artifact used for this report.</p>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 26%" />
-<col style="width: 73%" />
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 21%" />
+<col style="width: 13%" />
+<col style="width: 6%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 9%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Family</th>
-<th>Input representation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Classical ML</strong></td>
-<td><strong>Bag-of-codes</strong> on diagnosis / procedure / medication strings from the <strong>current</strong> visit (<code>feature_type: bag_of_codes</code>)</td>
-</tr>
-<tr class="even">
-<td><strong>LLM</strong></td>
-<td><strong>Natural-language narrative</strong> (<code>narrative_current</code>) from the same current visit</td>
-</tr>
-</tbody>
-</table>
-<p>Metrics are <strong>not</strong> directly comparable as “fairness of model class” because features differ; they <strong>are</strong> comparable as <strong>end-to-end systems</strong> under the same labels and split.</p>
-<hr />
-<h2 id="complete-classical-ml-results">2. Complete classical ML results</h2>
-<h3 id="fully-supervised-full-training-set">2.1 Fully supervised (full training set)</h3>
-<p>Trained on all training pairs; evaluated on the same test split as the rest of the pipeline.</p>
-<table>
-<thead>
-<tr class="header">
 <th>Model</th>
-<th>ACC</th>
-<th>Sensitivity</th>
-<th>Specificity</th>
-<th>F1</th>
-<th>tp</th>
-<th>fp</th>
-<th>tn</th>
-<th>fn</th>
+<th>Prompt Version</th>
+<th>Approach</th>
+<th style="text-align: right;">ACC</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+<th style="text-align: right;">AUC</th>
+<th style="text-align: right;">AUPRC</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>ML</td>
 <td>Decision Tree</td>
-<td>73.48</td>
-<td>50.66</td>
-<td>82.09</td>
-<td>51.15</td>
-<td>346</td>
-<td>324</td>
-<td>1485</td>
-<td>337</td>
+<td>NA</td>
+<td>Fully Supervised</td>
+<td style="text-align: right;">73.48</td>
+<td style="text-align: right;">50.66</td>
+<td style="text-align: right;">82.09</td>
+<td style="text-align: right;">51.15</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
+<td>ML</td>
 <td>Logistic Regression</td>
-<td><strong>77.05</strong></td>
-<td>47.73</td>
-<td><strong>88.11</strong></td>
-<td><strong>53.27</strong></td>
-<td>326</td>
-<td>215</td>
-<td>1594</td>
-<td>357</td>
+<td>NA</td>
+<td>Fully Supervised</td>
+<td style="text-align: right;">77.05</td>
+<td style="text-align: right;">47.73</td>
+<td style="text-align: right;">88.11</td>
+<td style="text-align: right;">53.27</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
+<td>ML</td>
 <td>Random Forest</td>
-<td>76.44</td>
-<td>24.01</td>
-<td><strong>96.24</strong></td>
-<td>35.85</td>
-<td>164</td>
-<td>68</td>
-<td>1741</td>
-<td>519</td>
+<td>NA</td>
+<td>Fully Supervised</td>
+<td style="text-align: right;">76.44</td>
+<td style="text-align: right;">24.01</td>
+<td style="text-align: right;">96.24</td>
+<td style="text-align: right;">35.85</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Source:</strong> <code>data/outputs/mimiciii/ml_results_fully_supervised.csv</code> / <code>summary_table.csv</code>.</p>
-<h3 id="few-shot-ml-n-6-labeled-training-examples">2.2 Few-shot ML (N = 6 labeled training examples)</h3>
-<p>Same models and features, but each model is <strong>fit</strong> on only <strong>6</strong> labeled rows (<code>ml.few_shot_n: 6</code>, balanced), then evaluated on the full test set.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Model</th>
-<th>ACC</th>
-<th>Sensitivity</th>
-<th>Specificity</th>
-<th>F1</th>
-<th>tp</th>
-<th>fp</th>
-<th>tn</th>
-<th>fn</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+<tr class="even">
+<td>ML</td>
 <td>Decision Tree</td>
-<td><strong>61.40</strong></td>
-<td>56.52</td>
-<td>63.24</td>
-<td>44.52</td>
-<td>386</td>
-<td>665</td>
-<td>1144</td>
-<td>297</td>
+<td>NA</td>
+<td>Few-Shot (N=6)</td>
+<td style="text-align: right;">61.40</td>
+<td style="text-align: right;">56.52</td>
+<td style="text-align: right;">63.24</td>
+<td style="text-align: right;">44.52</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
+<td>ML</td>
 <td>Logistic Regression</td>
-<td>35.27</td>
-<td><strong>90.34</strong></td>
-<td>14.48</td>
-<td>43.34</td>
-<td>617</td>
-<td>1547</td>
-<td>262</td>
-<td>66</td>
+<td>NA</td>
+<td>Few-Shot (N=6)</td>
+<td style="text-align: right;">35.27</td>
+<td style="text-align: right;">90.34</td>
+<td style="text-align: right;">14.48</td>
+<td style="text-align: right;">43.34</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
+<td>ML</td>
 <td>Random Forest</td>
-<td>34.95</td>
-<td><strong>92.53</strong></td>
-<td>13.21</td>
-<td>43.81</td>
-<td>632</td>
-<td>1570</td>
-<td>239</td>
-<td>51</td>
+<td>NA</td>
+<td>Few-Shot (N=6)</td>
+<td style="text-align: right;">34.95</td>
+<td style="text-align: right;">92.53</td>
+<td style="text-align: right;">13.21</td>
+<td style="text-align: right;">43.81</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Source:</strong> <code>data/outputs/mimiciii/ml_results_few_shot.csv</code> / <code>summary_table.csv</code>.</p>
-<hr />
-<h2 id="complete-llm-results-gpt-4o-mini-2024-07-18">3. Complete LLM results — <code>gpt-4o-mini-2024-07-18</code></h2>
-<p>Single underlying chat model; four <strong>prompting</strong> strategies. One completion per test row (Co-Agent adds extra calls on calibration/critic only).</p>
-<table>
-<thead>
-<tr class="header">
-<th>Approach</th>
-<th>ACC</th>
-<th>Sensitivity</th>
-<th>Specificity</th>
-<th>F1</th>
-<th>tp</th>
-<th>fp</th>
-<th>tn</th>
-<th>fn</th>
-<th>n_valid</th>
-<th>n_unparseable</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V1</td>
 <td>Zero-Shot</td>
-<td>80.82</td>
-<td>57.69</td>
-<td>89.55</td>
-<td>62.24</td>
-<td>394</td>
-<td>189</td>
-<td>1620</td>
-<td>289</td>
-<td>2492</td>
-<td><strong>0</strong></td>
+<td style="text-align: right;">80.82</td>
+<td style="text-align: right;">57.69</td>
+<td style="text-align: right;">89.55</td>
+<td style="text-align: right;">62.24</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V1</td>
 <td>Zero-Shot+</td>
-<td>80.73</td>
-<td>56.22</td>
-<td><strong>89.99</strong></td>
-<td>61.54</td>
-<td>384</td>
-<td>181</td>
-<td>1627</td>
-<td>299</td>
-<td>2491</td>
-<td>1</td>
+<td style="text-align: right;">80.73</td>
+<td style="text-align: right;">56.22</td>
+<td style="text-align: right;">89.99</td>
+<td style="text-align: right;">61.54</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
-<td>Few-Shot (N=6)</td>
-<td>80.65</td>
-<td>57.39</td>
-<td>89.44</td>
-<td>61.93</td>
-<td>392</td>
-<td>191</td>
-<td>1617</td>
-<td>291</td>
-<td>2491</td>
-<td>1</td>
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V1</td>
+<td>Few-Shot</td>
+<td style="text-align: right;">80.65</td>
+<td style="text-align: right;">57.39</td>
+<td style="text-align: right;">89.44</td>
+<td style="text-align: right;">61.93</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
-<td><strong>EHR-CoAgent</strong></td>
-<td><strong>80.93</strong></td>
-<td><strong>58.21</strong></td>
-<td>89.50</td>
-<td><strong>62.57</strong></td>
-<td><strong>397</strong></td>
-<td>190</td>
-<td>1619</td>
-<td>285</td>
-<td>2491</td>
-<td>1</td>
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V1</td>
+<td>EHR-CoAgent</td>
+<td style="text-align: right;">80.93</td>
+<td style="text-align: right;">58.21</td>
+<td style="text-align: right;">89.50</td>
+<td style="text-align: right;">62.57</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Source:</strong> <code>data/outputs/mimiciii/llm_*_metrics.json</code> / <code>summary_table.csv</code>.</p>
-<p><strong>Note:</strong> Rows with <strong>unparseable</strong> assistant text are <strong>excluded</strong> from tp/fp/tn/fn but counted in <code>n_unparseable</code>; three modes show <strong>one</strong> such test example in this run.</p>
-<hr />
-<h2 id="complete-llm-results-googlegemma-4-e4b-it-local-snapshot">4. Complete LLM results — <code>google/gemma-4-e4b-it</code> (local snapshot)</h2>
-<p>Same four <strong>prompt</strong> modes and evaluation protocol as the GPT run; local inference via <code>models/hf_snapshots/google--gemma-4-e4b-it</code>. Baseline modes from Slurm <strong>46510786</strong>; <strong>EHR-CoAgent</strong> test pass completed in Slurm <strong>46615354</strong>.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Approach</th>
-<th>ACC</th>
-<th>Sensitivity</th>
-<th>Specificity</th>
-<th>F1</th>
-<th>tp</th>
-<th>fp</th>
-<th>tn</th>
-<th>fn</th>
-<th>n_valid</th>
-<th>n_unparseable</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V2</td>
 <td>Zero-Shot</td>
-<td>80.26</td>
-<td>55.93</td>
-<td>89.44</td>
-<td>60.83</td>
-<td>382</td>
-<td>191</td>
-<td>1618</td>
-<td>301</td>
-<td>2492</td>
-<td><strong>0</strong></td>
+<td style="text-align: right;">73.07</td>
+<td style="text-align: right;">83.60</td>
+<td style="text-align: right;">69.10</td>
+<td style="text-align: right;">62.99</td>
+<td style="text-align: right;">81.07</td>
+<td style="text-align: right;">55.67</td>
 </tr>
 <tr class="even">
-<td><strong>Zero-Shot+</strong></td>
-<td><strong>80.97</strong></td>
-<td><strong>60.61</strong></td>
-<td>88.66</td>
-<td><strong>63.59</strong></td>
-<td>414</td>
-<td>205</td>
-<td>1603</td>
-<td>269</td>
-<td>2491</td>
-<td>1</td>
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V2</td>
+<td>Zero-Shot+</td>
+<td style="text-align: right;">73.27</td>
+<td style="text-align: right;">83.31</td>
+<td style="text-align: right;">69.49</td>
+<td style="text-align: right;">63.08</td>
+<td style="text-align: right;">79.58</td>
+<td style="text-align: right;">52.97</td>
 </tr>
 <tr class="odd">
-<td>Few-Shot (N=6)</td>
-<td>80.10</td>
-<td>57.83</td>
-<td>88.50</td>
-<td>61.43</td>
-<td>395</td>
-<td>208</td>
-<td>1601</td>
-<td>288</td>
-<td>2492</td>
-<td>0</td>
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V2</td>
+<td>Few-Shot</td>
+<td style="text-align: right;">75.56</td>
+<td style="text-align: right;">77.75</td>
+<td style="text-align: right;">74.74</td>
+<td style="text-align: right;">63.55</td>
+<td style="text-align: right;">78.25</td>
+<td style="text-align: right;">52.58</td>
 </tr>
 <tr class="even">
+<td>LLM</td>
+<td>gpt-4o-mini-2024-07-18</td>
+<td>Prompt V2</td>
 <td>EHR-CoAgent</td>
-<td>79.78</td>
-<td><strong>62.96</strong></td>
-<td>86.12</td>
-<td>63.05</td>
-<td>430</td>
-<td>251</td>
-<td>1558</td>
-<td>253</td>
-<td>2492</td>
-<td><strong>0</strong></td>
+<td style="text-align: right;">76.00</td>
+<td style="text-align: right;">77.89</td>
+<td style="text-align: right;">75.29</td>
+<td style="text-align: right;">64.02</td>
+<td style="text-align: right;">78.38</td>
+<td style="text-align: right;">52.46</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Source:</strong> <code>data/outputs/mimiciii_gemma/llm_*_metrics.json</code>; Co-Agent authoritative in <code>llm_coagent_metrics.json</code> if <code>summary_table.csv</code> omits that row.</p>
-<p><strong>Note:</strong> Zero-Shot+ has <strong>one</strong> unparseable response (<code>n_valid = 2491</code>).</p>
-<hr />
-<h2 id="cross-llm-comparison-same-prompts-different-models">5. Cross-LLM comparison (same prompts, different models)</h2>
-<p><strong>Δ = Gemma 4 − GPT-4o-mini</strong> (percentage points), matched by prompt approach.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Approach</th>
-<th>Δ ACC</th>
-<th>Δ Sens</th>
-<th>Δ Spec</th>
-<th>Δ F1</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V1</td>
 <td>Zero-Shot</td>
-<td>−0.56</td>
-<td>−1.76</td>
-<td>−0.11</td>
-<td>−1.41</td>
+<td style="text-align: right;">80.26</td>
+<td style="text-align: right;">55.93</td>
+<td style="text-align: right;">89.44</td>
+<td style="text-align: right;">60.83</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V1</td>
 <td>Zero-Shot+</td>
-<td><strong>+0.24</strong></td>
-<td><strong>+4.39</strong></td>
-<td>−1.33</td>
-<td><strong>+2.05</strong></td>
+<td style="text-align: right;">80.97</td>
+<td style="text-align: right;">60.61</td>
+<td style="text-align: right;">88.66</td>
+<td style="text-align: right;">63.59</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
-<td>Few-Shot (N=6)</td>
-<td>−0.55</td>
-<td>+0.44</td>
-<td>−0.94</td>
-<td>−0.50</td>
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V1</td>
+<td>Few-Shot</td>
+<td style="text-align: right;">80.10</td>
+<td style="text-align: right;">57.83</td>
+<td style="text-align: right;">88.50</td>
+<td style="text-align: right;">61.43</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V1</td>
 <td>EHR-CoAgent</td>
-<td>−1.15</td>
-<td><strong>+4.75</strong></td>
-<td>−3.38</td>
-<td>+0.48</td>
+<td style="text-align: right;">79.78</td>
+<td style="text-align: right;">62.96</td>
+<td style="text-align: right;">86.12</td>
+<td style="text-align: right;">63.05</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Readout:</strong></p>
-<ul>
-<li><strong>Aggregate accuracy</strong> remains near <strong>~80%</strong> for both models across modes; differences are <strong>small</strong> for zero-shot and few-shot, with Gemma <strong>Zero-Shot+</strong> and <strong>Co-Agent</strong> trading <strong>higher sensitivity</strong> (and for Co-Agent, <strong>lower specificity</strong>) vs GPT.</li>
-<li><strong>Best F1 (this split):</strong> Gemma <strong>Zero-Shot+ (63.59)</strong> vs GPT <strong>EHR-CoAgent (62.57)</strong>—not directly comparable as the same <em>named</em> strategy (different prompt realizations still share templates).</li>
-<li><strong>Best GPT accuracy:</strong> EHR-CoAgent <strong>80.93</strong>; <strong>best Gemma accuracy:</strong> Zero-Shot+ <strong>80.97</strong>.</li>
-<li>No <strong>bootstrap CIs</strong> by default; treat sub–percentage-point swings between models as <strong>indicative</strong>, not definitive.</li>
-</ul>
-<hr />
-<h2 id="intra-family-comparisons">6. Intra-family comparisons</h2>
-<h3 id="intra-ml-fully-supervised">6.1 Intra-ML — fully supervised</h3>
-<p><strong>Ranking by F1 (primary balance of precision/recall on minority positive class):</strong></p>
-<ol type="1">
-<li>Logistic Regression — <strong>53.27</strong></li>
-<li>Decision Tree — 51.15</li>
-<li>Random Forest — 35.85</li>
-</ol>
-<p><strong>Ranking by accuracy:</strong></p>
-<ol type="1">
-<li><strong>Logistic Regression — 77.05</strong></li>
-<li>Random Forest — 76.44</li>
-<li>Decision Tree — 73.48</li>
-</ol>
-<p><strong>Sensitivity vs specificity trade-off:</strong></p>
-<ul>
-<li><strong>Random Forest</strong> maximizes <strong>specificity (96.24%)</strong> at the cost of <strong>very low sensitivity (24.01%)</strong> and weak F1.</li>
-<li><strong>Logistic regression</strong> offers the <strong>best overall</strong> mix among the three under full supervision.</li>
-</ul>
-<p><strong>Takeaway:</strong> Under full supervision, <strong>logistic regression</strong> on bag-of-codes is the strongest classical baseline in both ACC and F1.</p>
-<hr />
-<h3 id="intra-ml-few-shot-n6-vs-fully-supervised">6.2 Intra-ML — few-shot (N=6) vs fully supervised</h3>
-<p><strong>Δ = few_shot − fully_supervised</strong> (same model):</p>
-<table>
-<thead>
-<tr class="header">
-<th>Model</th>
-<th>Δ ACC</th>
-<th>Δ Sens</th>
-<th>Δ Spec</th>
-<th>Δ F1</th>
-</tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td>Decision Tree</td>
-<td>−12.08</td>
-<td>+5.86</td>
-<td>−18.85</td>
-<td>−6.63</td>
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V2</td>
+<td>Zero-Shot</td>
+<td style="text-align: right;">74.92</td>
+<td style="text-align: right;">79.36</td>
+<td style="text-align: right;">73.24</td>
+<td style="text-align: right;">63.43</td>
+<td style="text-align: right;">80.78</td>
+<td style="text-align: right;">57.41</td>
 </tr>
 <tr class="even">
-<td>Logistic Regression</td>
-<td><strong>−41.78</strong></td>
-<td>+42.61</td>
-<td>−73.63</td>
-<td>−9.93</td>
-</tr>
-<tr class="odd">
-<td>Random Forest</td>
-<td><strong>−41.49</strong></td>
-<td>+68.52</td>
-<td>−83.03</td>
-<td>+7.96</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Takeaway:</strong> Six labeled rows <strong>destabilize</strong> fitted sparse classifiers; this is <strong>not</strong> analogous to LLM in-context few-shot.</p>
-<hr />
-<h3 id="intra-llm-gpt-4o-mini-ranking-and-deltas-vs-zero-shot">6.3 Intra-LLM — GPT-4o-mini: ranking and deltas vs zero-shot</h3>
-<p><strong>Ranking by F1:</strong> EHR-CoAgent (62.57) → Zero-Shot (62.24) → Few-Shot (61.93) → Zero-Shot+ (61.54).</p>
-<p><strong>Ranking by ACC:</strong> EHR-CoAgent (80.93) → Zero-Shot (80.82) → Zero-Shot+ (80.73) → Few-Shot (80.65).</p>
-<p><strong>Δ vs zero-shot (percentage points):</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th>Approach</th>
-<th>Δ ACC</th>
-<th>Δ Sens</th>
-<th>Δ Spec</th>
-<th>Δ F1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V2</td>
 <td>Zero-Shot+</td>
-<td>−0.09</td>
-<td>−1.47</td>
-<td>+0.44</td>
-<td>−0.70</td>
-</tr>
-<tr class="even">
-<td>Few-Shot (N=6)</td>
-<td>−0.17</td>
-<td>−0.30</td>
-<td>−0.11</td>
-<td>−0.31</td>
+<td style="text-align: right;">73.80</td>
+<td style="text-align: right;">79.94</td>
+<td style="text-align: right;">71.48</td>
+<td style="text-align: right;">62.58</td>
+<td style="text-align: right;">78.31</td>
+<td style="text-align: right;">51.12</td>
 </tr>
 <tr class="odd">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V2</td>
+<td>Few-Shot</td>
+<td style="text-align: right;">70.95</td>
+<td style="text-align: right;">80.82</td>
+<td style="text-align: right;">67.22</td>
+<td style="text-align: right;">60.39</td>
+<td style="text-align: right;">74.11</td>
+<td style="text-align: right;">44.37</td>
+</tr>
+<tr class="even">
+<td>LLM</td>
+<td>google/gemma-4-e4b-it</td>
+<td>Prompt V2</td>
 <td>EHR-CoAgent</td>
-<td><strong>+0.11</strong></td>
-<td><strong>+0.52</strong></td>
-<td>−0.05</td>
-<td><strong>+0.33</strong></td>
+<td style="text-align: right;">75.08</td>
+<td style="text-align: right;">80.67</td>
+<td style="text-align: right;">72.97</td>
+<td style="text-align: right;">63.96</td>
+<td style="text-align: right;">79.54</td>
+<td style="text-align: right;">53.25</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Takeaway:</strong> GPT-4o-mini modes sit in a <strong>tight band</strong>; Co-Agent is <strong>marginally</strong> best on ACC/F1/sensitivity in this run.</p>
 <hr />
-<h3 id="intra-llm-gemma-4-ranking-and-deltas-vs-zero-shot">6.4 Intra-LLM — Gemma 4: ranking and deltas vs zero-shot</h3>
-<p><strong>Ranking by F1:</strong> Zero-Shot+ (<strong>63.59</strong>) → EHR-CoAgent (63.05) → Few-Shot (61.43) → Zero-Shot (60.83).</p>
-<p><strong>Ranking by ACC:</strong> Zero-Shot+ (<strong>80.97</strong>) → Zero-Shot (80.26) → Few-Shot (80.10) → EHR-CoAgent (79.78).</p>
-<p><strong>Δ vs zero-shot (percentage points):</strong></p>
-<table>
-<thead>
-<tr class="header">
-<th>Approach</th>
-<th>Δ ACC</th>
-<th>Δ Sens</th>
-<th>Δ Spec</th>
-<th>Δ F1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Zero-Shot+</td>
-<td><strong>+0.71</strong></td>
-<td><strong>+4.68</strong></td>
-<td>−0.78</td>
-<td><strong>+2.76</strong></td>
-</tr>
-<tr class="even">
-<td>Few-Shot (N=6)</td>
-<td>−0.16</td>
-<td>+1.90</td>
-<td>−0.94</td>
-<td>+0.60</td>
-</tr>
-<tr class="odd">
-<td>EHR-CoAgent</td>
-<td>−0.48</td>
-<td><strong>+7.03</strong></td>
-<td>−3.32</td>
-<td>+2.22</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Takeaway:</strong> For Gemma 4, <strong>Zero-Shot+</strong> clearly <strong>lifts sensitivity and F1</strong> vs plain zero-shot; <strong>Co-Agent</strong> maximizes <strong>sensitivity</strong> but <strong>reduces specificity</strong> vs the three baselines. Single calibration/critic realization (job <strong>46615354</strong>).</p>
+<h1 id="final-model-selection-based-on-balanced-sensitivity-and-specificity">Final Model Selection Based on Balanced Sensitivity and Specificity</h1>
+<p>To determine the most appropriate model for clinical deployment, we prioritize a balanced trade-off between sensitivity (recall) and specificity, as these metrics represent complementary aspects of diagnostic performance. While several configurations achieved higher accuracy or extreme values in either sensitivity or specificity, such imbalanced behavior is not desirable in clinical settings where both false negatives and false positives carry significant consequences.</p>
+<p>Among all evaluated models, the <strong>GPT-4o-mini (Prompt V2, EHR-CoAgent)</strong> configuration demonstrates the most favorable balance between sensitivity and specificity, with values of 77.89% and 75.29%, respectively. This near-symmetric performance (difference ≈ 2.6 percentage points) indicates a well-calibrated decision boundary. In addition, this model achieves the <strong>highest F1-score (64.02%)</strong> among all experiments, reflecting strong overall predictive performance, and maintains competitive accuracy (76.00%).</p>
+<p>Other Prompt V2 configurations, such as GPT-4o-mini Few-Shot and Gemma 4 EHR-CoAgent, also exhibit relatively balanced behavior; however, they either show slightly lower F1-scores or greater deviation between sensitivity and specificity. In contrast, Prompt V1 configurations—despite achieving higher accuracy and specificity—consistently underperform in sensitivity, making them less suitable for applications where missing positive cases is critical.</p>
+<p>Overall, these results indicate that <strong>Prompt V2-based approaches shift the operating point toward a more clinically meaningful balance</strong>, with the GPT-4o-mini EHR-CoAgent configuration emerging as the most suitable choice for deployment under a balanced sensitivity–specificity criterion.</p>
 <hr />
-<h2 id="inter-family-comparisons-ml-vs-llm">7. Inter-family comparisons (ML vs LLM)</h2>
-<h3 id="best-fully-supervised-ml-vs-best-llm-per-model">7.1 Best fully supervised ML vs best LLM per model</h3>
-<p>Compared to <strong>fully supervised logistic regression</strong> (best stable ML on ACC/F1):</p>
-<table>
-<thead>
-<tr class="header">
-<th>Metric</th>
-<th>Logistic regression (full)</th>
-<th>Best GPT-4o-mini</th>
-<th>Best Gemma 4</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Configuration</strong></td>
-<td>—</td>
-<td>EHR-CoAgent</td>
-<td>Zero-Shot+ (ACC/F1); Co-Agent for max Sens</td>
-</tr>
-<tr class="even">
-<td>ACC</td>
-<td>77.05</td>
-<td><strong>80.93</strong></td>
-<td><strong>80.97</strong></td>
-</tr>
-<tr class="odd">
-<td>Sensitivity</td>
-<td>47.73</td>
-<td>58.21</td>
-<td><strong>60.61</strong> (ZS+); <strong>62.96</strong> (Co-Agent)</td>
-</tr>
-<tr class="even">
-<td>Specificity</td>
-<td>88.11</td>
-<td>89.50</td>
-<td>88.66 (ZS+); 86.12 (Co-Agent)</td>
-</tr>
-<tr class="odd">
-<td>F1</td>
-<td>53.27</td>
-<td>62.57</td>
-<td><strong>63.59</strong> (ZS+)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Δ (LLM − ML)</strong> for the listed “best” cells above:</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>GPT (CoAgent) − LR</th>
-<th>Gemma (ZS+) − LR</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ACC</td>
-<td>+3.88</td>
-<td>+3.92</td>
-</tr>
-<tr class="even">
-<td>F1</td>
-<td>+9.30</td>
-<td>+10.32</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note:</strong> ML few-shot runs can show <strong>very high sensitivity</strong> at unusable specificity/ACC; <strong>random forest (full)</strong> wins specificity by rarely predicting positive.</p>
-<h3 id="llm-vs-strongest-reasonable-ml-baseline">7.2 LLM vs strongest “reasonable” ML baseline</h3>
-<p>Both LLM families <strong>beat</strong> fully supervised logistic regression on <strong>ACC and F1</strong> on this split, with <strong>higher sensitivity</strong> and <strong>similar or slightly higher specificity</strong> (Gemma Co-Agent excepted on specificity).</p>
-<h3 id="llm-few-shot-in-context-vs-ml-few-shot-parameter-learning">7.3 LLM few-shot (in-context) vs ML few-shot (parameter learning)</h3>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>ML few-shot (best ACC: DT)</th>
-<th>GPT Few-Shot</th>
-<th>Gemma Few-Shot</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ACC</td>
-<td>61.40</td>
-<td><strong>80.65</strong></td>
-<td><strong>80.10</strong></td>
-</tr>
-<tr class="even">
-<td>F1</td>
-<td>44.52</td>
-<td><strong>61.93</strong></td>
-<td><strong>61.43</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Takeaway:</strong> Six <strong>in-context</strong> examples do not collapse the LLM track the way six <strong>training</strong> points collapse LR/RF on bag-of-codes.</p>
-<h3 id="modality-caveat">7.4 Modality caveat</h3>
-<p>LLM inputs are <strong>narratives</strong>; ML uses <strong>code tokens</strong>. Interpret as <strong>system</strong> comparison, not a controlled ablation of model family alone.</p>
-<hr />
-<h2 id="summary-matrix-all-fourteen-configurations">8. Summary matrix (all fourteen configurations)</h2>
-<p>Sorted by <strong>F1</strong> descending. <strong>Model</strong> identifies the LLM snapshot; ML rows unchanged from <code>mimiciii</code>.</p>
-<table>
+<h2 id="best-candidate-models-balanced-performance">Best Candidate Models (Balanced Performance)</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 8%" />
+<col style="width: 15%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Rank</th>
 <th>Model</th>
+<th>Prompt</th>
 <th>Approach</th>
-<th>ACC</th>
-<th>Sens</th>
-<th>Spec</th>
-<th>F1</th>
+<th>Accuracy (%)</th>
+<th>Sensitivity (%)</th>
+<th>Specificity (%)</th>
+<th>F1 (%)</th>
+<th>AUC (%)</th>
+<th>AUPRC (%)</th>
+<th>|Sens−Spec| (%)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>gemma-4-e4b-it</td>
-<td>Zero-Shot+</td>
-<td>80.97</td>
-<td>60.61</td>
-<td>88.66</td>
-<td><strong>63.59</strong></td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>gemma-4-e4b-it</td>
+<td>🥇 1</td>
+<td>GPT-4o-mini</td>
+<td>V2</td>
 <td>EHR-CoAgent</td>
-<td>79.78</td>
-<td>62.96</td>
-<td>86.12</td>
-<td>63.05</td>
+<td>76.00</td>
+<td>77.89</td>
+<td>75.29</td>
+<td><strong>64.02</strong></td>
+<td>78.38</td>
+<td>52.46</td>
+<td><strong>2.60</strong></td>
+</tr>
+<tr class="even">
+<td>🥈 2</td>
+<td>GPT-4o-mini</td>
+<td>V2</td>
+<td>Few-Shot</td>
+<td>75.56</td>
+<td>77.75</td>
+<td>74.74</td>
+<td>63.55</td>
+<td>78.25</td>
+<td>52.58</td>
+<td>3.01</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>gpt-4o-mini</td>
+<td>🥉 3</td>
+<td>Gemma 4</td>
+<td>V2</td>
 <td>EHR-CoAgent</td>
-<td>80.93</td>
-<td>58.21</td>
-<td>89.50</td>
-<td>62.57</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>gpt-4o-mini</td>
-<td>Zero-Shot</td>
-<td>80.82</td>
-<td>57.69</td>
-<td>89.55</td>
-<td>62.24</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>gpt-4o-mini</td>
-<td>Few-Shot (N=6)</td>
-<td>80.65</td>
-<td>57.39</td>
-<td>89.44</td>
-<td>61.93</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>gpt-4o-mini</td>
-<td>Zero-Shot+</td>
-<td>80.73</td>
-<td>56.22</td>
-<td>89.99</td>
-<td>61.54</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>gemma-4-e4b-it</td>
-<td>Few-Shot (N=6)</td>
-<td>80.10</td>
-<td>57.83</td>
-<td>88.50</td>
-<td>61.43</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>gemma-4-e4b-it</td>
-<td>Zero-Shot</td>
-<td>80.26</td>
-<td>55.93</td>
-<td>89.44</td>
-<td>60.83</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>logistic_regression</td>
-<td>Fully Supervised</td>
-<td>77.05</td>
-<td>47.73</td>
-<td>88.11</td>
-<td>53.27</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>random_forest</td>
-<td>Fully Supervised</td>
-<td>76.44</td>
-<td>24.01</td>
-<td>96.24</td>
-<td>35.85</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>decision_tree</td>
-<td>Fully Supervised</td>
-<td>73.48</td>
-<td>50.66</td>
-<td>82.09</td>
-<td>51.15</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>decision_tree</td>
-<td>Few Shot</td>
-<td>61.40</td>
-<td>56.52</td>
-<td>63.24</td>
-<td>44.52</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>logistic_regression</td>
-<td>Few Shot</td>
-<td>35.27</td>
-<td>90.34</td>
-<td>14.48</td>
-<td>43.34</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>random_forest</td>
-<td>Few Shot</td>
-<td>34.95</td>
-<td>92.53</td>
-<td>13.21</td>
-<td>43.81</td>
+<td>75.08</td>
+<td>80.67</td>
+<td>72.97</td>
+<td>63.96</td>
+<td>79.54</td>
+<td>53.25</td>
+<td>7.70</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="conclusions">9. Conclusions</h2>
-<ol type="1">
-<li><strong>Intra-ML:</strong> Full-data <strong>logistic regression</strong> is the best overall classical method on ACC/F1; <strong>N=6 ML training</strong> is not viable for LR/RF on this feature setup.</li>
-<li><strong>Intra-LLM (GPT):</strong> Four prompting strategies are <strong>similar</strong>; <strong>EHR-CoAgent</strong> is marginally best on ACC/F1/sensitivity.</li>
-<li><strong>Intra-LLM (Gemma):</strong> <strong>Zero-Shot+</strong> and <strong>Co-Agent</strong> move <strong>sensitivity/F1</strong> more than GPT’s zero-shot baseline; <strong>Co-Agent</strong> trades <strong>specificity</strong> for recall.</li>
-<li><strong>Cross-LLM:</strong> On this split, Gemma <strong>Zero-Shot+</strong> achieves the <strong>highest F1</strong> among all listed LLM configurations; GPT <strong>Co-Agent</strong> leads <strong>GPT</strong> family on ACC/F1. Differences are <strong>modest</strong> and <strong>not significance-tested</strong>.</li>
-<li><strong>Inter ML vs LLM:</strong> Both LLM families <strong>beat</strong> the best fully supervised ML baseline on <strong>ACC and F1</strong> with <strong>higher sensitivity</strong>; modality differs from bag-of-codes ML.</li>
-<li><strong>Reporting:</strong> Default <strong>no bootstrap CIs</strong> (<code>evaluation.bootstrap_ci: false</code>).</li>
-</ol>
+<h2 id="interpretation">Interpretation</h2>
+<ul>
+<li>The <strong>top-ranked model (GPT-4o-mini, Prompt V2, EHR-CoAgent)</strong> provides the best compromise between identifying true positive cases and avoiding false positives.</li>
+<li>The <strong>small gap between sensitivity and specificity</strong> is a key indicator of stability and reliability in decision-making.</li>
+<li>Higher accuracy models (e.g., Prompt V1) are excluded due to <strong>significant imbalance</strong>, which can bias predictions toward one class.</li>
+<li>Prompt V2 configurations consistently move models toward a <strong>more balanced operating regime</strong>, making them more appropriate for real-world clinical prediction tasks.</li>
+</ul>
 <hr />
-<h2 id="artifact-map">10. Artifact map</h2>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Artifact</th>
-<th>Contents</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>data/outputs/mimiciii/summary_table.csv</code></td>
-<td>Combined ML + GPT LLM table (Section 8 partial)</td>
-</tr>
-<tr class="even">
-<td><code>data/outputs/mimiciii/ml_results_fully_supervised.csv</code></td>
-<td>ML full-training metrics + confusion</td>
-</tr>
-<tr class="odd">
-<td><code>data/outputs/mimiciii/ml_results_few_shot.csv</code></td>
-<td>ML N=6 metrics + confusion</td>
-</tr>
-<tr class="even">
-<td><code>data/outputs/mimiciii/llm_*_metrics.json</code></td>
-<td>GPT-4o-mini per-mode metrics</td>
-</tr>
-<tr class="odd">
-<td><code>data/outputs/mimiciii_gemma/llm_*_metrics.json</code></td>
-<td>Gemma 4 per-mode metrics (incl. <code>llm_coagent_metrics.json</code>)</td>
-</tr>
-<tr class="even">
-<td><code>docs/MIMICIII_GEMMA_JOB_46510786_RESULTS_REPORT.md</code></td>
-<td>Slurm jobs <strong>46510786</strong> / <strong>46615354</strong> notes</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><em>Report reflects <code>data/outputs/mimiciii/</code> and <code>data/outputs/mimiciii_gemma/</code> at the time of writing. Rerun pipelines and refresh if configs, data, or prompts change.</em></p>
+<h2 id="key-takeaway">Key Takeaway</h2>
+<p>The selection of the best model should not rely solely on accuracy or recall in isolation. Instead, a balanced evaluation reveals that <strong>GPT-4o-mini (Prompt V2, EHR-CoAgent)</strong> achieves the most clinically meaningful performance, making it the preferred configuration for downstream use.</p>
 </body>
 </html>

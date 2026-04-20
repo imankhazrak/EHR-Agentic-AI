@@ -210,8 +210,8 @@ So the LLM input is **English clinical text**, not raw ICD strings (unless mappi
 
 ### 3.2. B.2 How prompts are assembled
 
-**Templates:** files under `prompts/` (Jinja2 blocks `system` / `user`).  
-**Rendering:** `src/llm/prompt_builder.py` → `build_messages(template_file, narrative, demonstration_cases, critic_feedback)`.
+**Templates:** files under **`prompts_v2/`** by default (`llm.prompt_template_dir` in `configs/default.yaml`; Jinja2 blocks `system` / `user`). Legacy copies remain under `prompts/`.  
+**Rendering:** `src/llm/prompt_builder.py` → `build_messages(..., prompt_template_dir=...)` (defaults to `prompts_v2/`).
 
 | Mode | Template file | Variables injected into user message |
 |------|----------------|--------------------------------------|
@@ -252,16 +252,15 @@ After calibration few-shot predictions and critic batches, **consolidated text**
 
 **Implementation:** `src/llm/output_parser.py` → `parse_prediction`.
 
-The model’s **assistant message text** is parsed as follows:
+The model’s **assistant message text** is parsed as follows (`parse_prediction`):
 
-1. **First line:** Prefer `Prediction: Yes` or `Prediction: No` (or `Yes` / `No` alone on line 1).
-2. **Else:** Search for `Prediction: Yes` / `Prediction: No` anywhere in the text.
-3. **Else:** Use the **first** standalone `Yes` vs `No` by position in the string.
-4. If still ambiguous → **`unparseable`**.
+1. **Structured (preferred):** Lines `Prediction: Yes|No`, `Probability: <float in [0,1]>`, `Reasoning: ...`. Invalid or missing probabilities are flagged (`probability_parse_status`); they are **not** imputed.
+2. **Legacy:** Plain `Yes` / `No` on line 1, or `Prediction:` elsewhere, or dominant `Yes`/`No` tokens — still supported for older runs and finetuned eval.
+3. If still ambiguous → **`unparseable`**.
 
-**Downstream:** `src/evaluation/evaluate_llm_runs.py` maps `Yes`→1, `No`→0, drops `unparseable` for metric computation and records counts in `llm_*_metrics.json`.
+**Downstream:** `src/evaluation/evaluate_llm_runs.py` maps `Yes`→1, `No`→0 for hard metrics; **ROC-AUC / AUPRC** use `parsed_probability` only when `parse_valid_probability` is true. Counts are recorded in `llm_*_metrics.json`.
 
-Optional: if the API returns **logprobs** and `request_logprobs` is enabled, `extract_logprob_confidence` can derive `prob_yes` / `prob_no` (off by default in `configs/default.yaml`).
+Optional: if the API returns **logprobs** and `request_logprobs` is enabled, `extract_logprob_confidence` can derive `prob_yes` / `prob_no` in addition to model-reported probability (off by default in `configs/default.yaml`).
 
 ---
 
@@ -277,11 +276,12 @@ Optional: if the API returns **logprobs** and `request_logprobs` is enabled, `ex
 - Procedures performed: None recorded
 ```
 
-**Expected model reply shape (first line must be parseable):**
+**Expected model reply shape (three-line contract):**
 
 ```text
 Prediction: No
-The current visit does not show strong lipid-related diagnoses or lipid-focused therapy; ...
+Probability: 0.35
+Reasoning: The current visit does not show strong lipid-related diagnoses or lipid-focused therapy; ...
 ```
 
 ### 5.2. D.2 Few-shot (excerpt)
@@ -303,7 +303,7 @@ Outcome: No
 ```
 
 **`narrative`:** new patient bullet text as in D.1.  
-The user template wraps definition + instructions + demonstration cases + output format (`prompts/predictor_few_shot.txt`).
+The user template wraps definition + instructions + demonstration cases + output format (`prompts_v2/predictor_few_shot.txt`).
 
 ### 5.3. D.3 Co-agent
 
@@ -326,4 +326,4 @@ Prior errors often missed 272.x codes when statins were present without explicit
 
 ---
 
-*Code references: `src/ml/feature_builder.py`, `src/data/narrative_builder.py`, `src/llm/prompt_builder.py`, `src/llm/predictor.py`, `src/llm/output_parser.py`, `prompts/predictor_*.txt`.*
+*Code references: `src/ml/feature_builder.py`, `src/data/narrative_builder.py`, `src/llm/prompt_builder.py`, `src/llm/predictor.py`, `src/llm/output_parser.py`, `prompts_v2/predictor_*.txt`.*

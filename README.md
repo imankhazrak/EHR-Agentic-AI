@@ -22,7 +22,7 @@ Predict whether **Disorders of Lipid Metabolism** (ICD-9 `272.x` / CCS-53) appea
 | Track | What the model sees | Where it comes from |
 |--------|---------------------|---------------------|
 | **Classical ML** | **Bag-of-codes** features: diagnosis, procedure, and medication strings from the **current** visit are tokenized into a sparse binary representation (`feature_type: bag_of_codes` in `configs/default.yaml`). | Built in `src/ml/` from `train.csv` / `test.csv`. |
-| **LLM** | A single **natural-language narrative** per visit pair: bulleted **diagnoses**, **medications**, and **procedures** for the **current** visit (`narrative_current`). | Built during preprocessing; templates in `prompts/` fill `{{ narrative }}` (and optional few-shot `{{ demonstration_cases }}`, co-agent `{{ critic_feedback }}`). |
+| **LLM** | A single **natural-language narrative** per visit pair: bulleted **diagnoses**, **medications**, and **procedures** for the **current** visit (`narrative_current`). | Built during preprocessing; Jinja templates in **`prompts_v2/`** (config: `llm.prompt_template_dir`) fill `{{ narrative }}` (and optional few-shot `{{ demonstration_cases }}`, co-agent `{{ critic_feedback }}`). The model returns `Prediction`, `Probability`, and `Reasoning`; ROC-AUC / AUPRC use parsed probabilities when valid. |
 
 The **label** is the same for both tracks: derived from **next-visit** diagnosis codes only (the model never sees the next visit text). See `METHODOLOGY.md` and `src/data/build_target_labels.py`.
 
@@ -48,7 +48,7 @@ Details: `docs/llm_prompt_modes_explained.md`, `docs/LLM_EXPERIMENT_REPORT_GPT4O
 
 ## 3. Results (full pipeline run)
 
-Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the stratified **20%** test hold-out (seed **42**); positive prevalence on test ≈ **27.4%**. GPT-4o-mini metrics come from `data/outputs/mimiciii/`; Gemma 4 from `data/outputs/mimiciii_gemma/`. Rows are sorted by **F1** (same ordering as `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md`). **Caveat:** LLM inputs are **narratives** and ML uses **bag-of-codes** — interpret as an **end-to-end system** comparison, not a controlled model-family ablation.
+Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the stratified **20%** test hold-out (seed **42**); positive prevalence on test ≈ **27.4%**. GPT-4o-mini metrics come from `data/outputs/mimiciii/`; Gemma 4 from `data/outputs/mimiciii_gemma/` (archived comparison runs — **do not reuse those paths for new runs**). New Gemma prompt experiments default to `data/outputs/mimiciii_llm_promptv2_gemma/` (see `configs/default.yaml` and env `EHR_OUTPUTS_DIR`). Rows are sorted by **F1** (same ordering as `docs/COMPARATIVE_RESULTS_REPORT_ML_AND_LLM_GPT4O_MINI_Gemma4.md`). **Caveat:** LLM inputs are **narratives** and ML uses **bag-of-codes** — interpret as an **end-to-end system** comparison, not a controlled model-family ablation.
 
 | Model | Approach | ACC | Sensitivity | Specificity | F1 |
 |--------|----------|-----|-------------|-------------|-----|
@@ -89,12 +89,13 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
 |------|------|
 | `configs/default.yaml` | Main experiment configuration |
 | `configs/debug_small.yaml` | Smoke-test overrides |
-| `prompts/` | Jinja2 LLM templates |
+| `prompts_v2/` | Jinja2 LLM templates (active); `prompts/` kept for legacy reference |
 | `src/` | Preprocessing, ML, LLM, evaluation |
 | `scripts/` | Shell drivers (`run_mimic_pipeline.sh`, `run_llm_only.sh`, smoke tests) |
 | `slurm/` | Cluster job scripts |
 | `data/outputs/mimiciii/` | ML + GPT-4o-mini metrics (`summary_table.csv`, `ml_results_*.csv`, `llm_*_metrics.json`) |
-| `data/outputs/mimiciii_gemma/` | Gemma 4 metrics, `summary_table.csv`, LLM raw responses |
+| `data/outputs/mimiciii_gemma/` | Archived Gemma 4 metrics, `summary_table.csv`, LLM raw responses (keep read-only for comparison) |
+| `data/outputs/mimiciii_llm_promptv2_gemma/` | **Default** output root for new prompt-v2 / probability runs (Gemma); avoids overwriting the folders above |
 | `gpt_4o_mini_results/` | Archived historical GPT-4o-mini outputs/logs (gitignored for privacy) |
 
 ---
@@ -119,6 +120,16 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
      export LLM_MODEL_NAME="google/gemma-4-e4b-it"  # switch later to e2b/26b/31b ids
      export HF_HOME="$HOME/.cache/huggingface"
      ```
+   - **Separate outputs per run** (recommended so archived `data/outputs/mimiciii*` trees stay untouched):
+     - Defaults are in `configs/default.yaml` (`paths.outputs` + `llm.cache_dir` under that folder).
+     - One-off directory without editing YAML:
+       ```bash
+       export EHR_OUTPUTS_DIR="data/outputs/mimiciii_llm_$(date +%Y%m%d_%H%M)"
+       # Implies llm.cache_dir = $EHR_OUTPUTS_DIR/llm_cache unless you set EHR_LLM_CACHE_DIR
+       # Optional: dedicated LoRA save path so finetune does not overwrite adapters
+       export EHR_FINETUNE_OUTPUT_DIR="models/gemma_finetuned_runs/$(date +%Y%m%d_%H%M)"
+       ```
+     - Equivalent env name: `EXPERIMENT_OUTPUT_DIR` (same behavior as `EHR_OUTPUTS_DIR`).
    - For optional vLLM endpoint routing, set:
      ```bash
      export VLLM_BASE_URL="http://127.0.0.1:8000/v1"
@@ -147,6 +158,35 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
    bash scripts/run_llm_only.sh
    ```
 
+   LLM prompt pipeline smoke (uses `configs/debug_small.yaml` → `data/outputs/mimiciii_llm_smoke`, `prompts_v2/`):
+
+   ```bash
+   export PYTHONPATH="$(pwd)"
+   python -m src.scripts.smoke_llm_prompt_pipeline --config configs/default.yaml --overrides configs/debug_small.yaml
+   ```
+
+   Equivalent shell shortcut (local Gemma smoke on GPU):
+
+   ```bash
+   STAGE=smoke bash scripts/run_llm_only.sh
+   ```
+
+   OpenAI smoke on a **CPU** node (merge `configs/smoke_openai.yaml`):
+
+   ```bash
+   export LLM_EXTRA_OVERRIDES="configs/smoke_openai.yaml"
+   STAGE=smoke bash scripts/run_llm_only.sh
+   ```
+
+   **Full OpenAI + `prompts_v2`** (writes to `data/outputs/mimiciii_llm_gpt4o_mini_promptv2/`; needs `OPENAI_API_KEY`):
+
+   ```bash
+   export LLM_OVERRIDES="configs/experiments/openai_gpt4o_mini_promptv2_full.yaml"
+   STAGE=full bash scripts/run_llm_only.sh
+   ```
+
+   Cluster: `sbatch slurm/mimic_iii_llm_openai_promptv2_full.slurm`
+
    Fine-tuning (LoRA) with Gemma (`gemma-4-e4b-it`):
 
    ```bash
@@ -167,7 +207,19 @@ Aggregated metrics (**ACC**, **Sensitivity**, **Specificity**, **F1**, %) on the
    STAGE=smoke bash scripts/run_mimic_pipeline.sh
    ```
 
-7. **Cluster** — Example: `sbatch slurm/mimic_iii_full.slurm` (see script headers and `scripts/slurm_llm_env.sh`).
+7. **Cluster** — Examples: `sbatch slurm/mimic_iii_full.slurm`; **Gemma 4 LLM smoke (GPU):** `sbatch slurm/mimic_iii_llm_gemma_smoke.slurm`; **OpenAI full LLM + prompt_v2:** `sbatch slurm/mimic_iii_llm_openai_promptv2_full.slurm` (see script headers and `scripts/slurm_llm_env.sh` where applicable).
+
+8. **Fusion (structured + LLM logit probabilities)** — Second-stage models (logistic regression, MLP, Conv1d+Transformer with 4 heads) on bag-of-codes + `prob_yes` / `margin_logit` from the finetuned Gemma scorer. Train scores must never come from the held-out test split. Run order:
+
+   ```bash
+   export PYTHONPATH="$(pwd)"
+   python -m src.scripts.score_llm_logits_split --config configs/default.yaml --overrides configs/fusion_default.yaml --split train
+   python -m src.scripts.score_llm_logits_split --config configs/default.yaml --overrides configs/fusion_default.yaml --split test
+   python -m src.scripts.build_fusion_dataset --config configs/default.yaml --overrides configs/fusion_default.yaml
+   python -m src.scripts.run_fusion_experiments --config configs/default.yaml --overrides configs/fusion_default.yaml --skip-llm-score --skip-build
+   ```
+
+   Or one-shot (scores train+test via subprocess if CSVs missing): `python -m src.scripts.run_fusion_experiments --config configs/default.yaml --overrides configs/fusion_default.yaml`. Artifacts: `{paths.outputs}/fusion/` (`fusion_summary.csv`, `metrics_*.json`, `preds_*.csv`). Design and leakage rules: `docs/fusion_experiment_report.md`.
 
 ---
 

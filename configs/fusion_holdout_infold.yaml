@@ -1,0 +1,6 @@
+# Merge after fusion_holdout_mimiciii.yaml — infold train LLM scores + fusion artifacts.
+
+fusion:
+  use_oof_train_scores: false
+  llm_scores_train_oof_csv: null
+  artifact_root: "fusion_infold"

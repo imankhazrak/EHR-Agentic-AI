@@ -37,6 +37,16 @@ def extract_all(raw_dir: str, interim_dir: str) -> Dict[str, pd.DataFrame]:
     tables["admissions"] = adm
     save_dataframe(adm, out / "admissions.csv")
 
+    # ---- Patients ----
+    patients = read_mimic_table(
+        raw_dir, "PATIENTS",
+        usecols=["SUBJECT_ID", "GENDER", "DOB", "DOD", "EXPIRE_FLAG"],
+    )
+    patients["DOB"] = pd.to_datetime(patients["DOB"], errors="coerce")
+    patients["DOD"] = pd.to_datetime(patients["DOD"], errors="coerce")
+    tables["patients"] = patients
+    save_dataframe(patients, out / "patients.csv")
+
     # ---- Diagnoses ----
     dx = read_mimic_table(
         raw_dir, "DIAGNOSES_ICD",

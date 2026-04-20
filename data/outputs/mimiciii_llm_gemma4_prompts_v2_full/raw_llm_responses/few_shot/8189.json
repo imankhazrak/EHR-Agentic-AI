@@ -1,0 +1,12 @@
+{
+  "sample_id": 8189,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. Additionally, the prescription of \"Atorvastatin\" and \"Rosuvastatin Calcium\" supports active lipid-disorder management, consistent with the patterns in Demonstration Cases 2 and 3.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder. The prescription of lipid-lowering agents like \"Atorvastatin\" and \"Rosuvastatin Calcium\" further supports active lipid-disorder management, aligning with the documented evidence in Demonstration Cases 2 and 3.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3529,
+    "completion_tokens": 154
+  }
+}

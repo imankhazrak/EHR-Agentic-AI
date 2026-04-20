@@ -1,0 +1,12 @@
+{
+  "sample_id": 5943,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: The current visit record explicitly lists diagnoses such as Diabetes with renal manifestations, Atrial fibrillation, and Hyperpotassemia, but it does not contain any explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid abnormality or active lipid disorder management.\n\nASSISTANT:\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record lists several diagnoses, including Diabetes with renal manifestations and Atrial fibrillation, but it lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or any other lipid disorder or active management of a lipid disorder.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 137
+  }
+}

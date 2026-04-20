@@ -1,0 +1,12 @@
+{
+  "sample_id": 4301,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any explicit diagnoses, documented history, or direct mention of hypercholesterolemia, hyperlipidemia, or any other lipid abnormality, nor does it document active lipid-disorder management.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record lists diagnoses such as Hematoma complicating a procedure, Other pulmonary insufficiency, not elsewhere classified, Congestive heart failure, unspecified, Other pulmonary embolism and infarction, Other specified conduction disorders, Bacteremia, Pneumonitis due to inhalation of food or vomitus, Acute kidney failure, unspecified, and Polycythemia vera. None of these diagnoses explicitly indicate a lipid disorder.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not mention any lipid abnormalities or lipid-lowering treatments, which are required to predict a 'Yes' outcome based on the demonstration cases.\n\nPrediction: No\nProbability: 0.00\nReasoning: The current visit record does not contain any evidence of a lipid disorder or active lipid-disorder management, as required by the prediction guidelines.\n\nPrediction: No\nProbability: 0",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3389,
+    "completion_tokens": 256
+  }
+}

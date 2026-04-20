@@ -1,14 +1,13 @@
 """Build prompts from Jinja2 templates for each prompt mode.
 
-Templates are stored in the ``prompts/`` directory and use Jinja2 syntax.
-This module loads them and renders with the appropriate variables.
+Templates live under ``prompts_v2`` by default (see ``DEFAULT_PROMPT_TEMPLATE_DIR``).
 """
 
 from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 
 from jinja2 import Environment, BaseLoader, ChainableUndefined
 
@@ -16,13 +15,13 @@ from src.utils.logging_utils import get_logger
 
 logger = get_logger(__name__)
 
-# Directory containing prompt template files
-PROMPT_DIR = Path("prompts")
+# Default directory for predictor + critic Jinja templates (repo-relative).
+DEFAULT_PROMPT_TEMPLATE_DIR = Path("prompts_v2")
 
 
-def _load_template(filename: str) -> str:
-    """Load raw template text from the prompts directory."""
-    fp = PROMPT_DIR / filename
+def _load_template(filename: str, prompt_template_dir: Path) -> str:
+    """Load raw template text from *prompt_template_dir*."""
+    fp = prompt_template_dir / filename
     if not fp.exists():
         raise FileNotFoundError(f"Prompt template not found: {fp}")
     text = fp.read_text(encoding="utf-8")
@@ -61,13 +60,14 @@ def build_messages(
     demonstration_cases: str = "",
     critic_feedback: str = "",
     extra_vars: Optional[Dict] = None,
+    prompt_template_dir: Optional[Union[str, Path]] = None,
 ) -> List[Dict[str, str]]:
     """Build a list of chat messages [{role, content}, ...] from a prompt template.
 
     Parameters
     ----------
     template_file : str
-        Filename inside ``prompts/``, e.g. ``"predictor_few_shot.txt"``.
+        Filename inside the template directory, e.g. ``"predictor_few_shot.txt"``.
     narrative : str
         The current-visit narrative to insert.
     demonstration_cases : str
@@ -82,7 +82,8 @@ def build_messages(
     list of dict
         Messages suitable for chat-completion API calls.
     """
-    raw = _load_template(template_file)
+    root = Path(prompt_template_dir) if prompt_template_dir else DEFAULT_PROMPT_TEMPLATE_DIR
+    raw = _load_template(template_file, root)
     blocks = _extract_blocks(raw)
 
     variables = {

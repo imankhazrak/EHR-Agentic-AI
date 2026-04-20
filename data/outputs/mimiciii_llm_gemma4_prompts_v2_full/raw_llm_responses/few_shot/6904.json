@@ -1,0 +1,12 @@
+{
+  "sample_id": 6904,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record documents multiple diagnoses related to kidney and metabolic issues, including Chronic kidney disease and Diabetes with ketoacidosis, which are associated with lipid abnormalities. Although no explicit lipid diagnosis is present, the complexity of the metabolic state suggests a high likelihood of a lipid disorder being coded in the next visit, consistent with the patterns in Demonstration Cases 1 and 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3793,
+    "completion_tokens": 90
+  }
+}

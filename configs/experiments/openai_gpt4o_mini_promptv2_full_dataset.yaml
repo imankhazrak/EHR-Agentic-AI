@@ -1,0 +1,13 @@
+# Full-dataset LLM pipeline: OpenAI gpt-4o-mini + prompts_v2 on full_dataset rows.
+# This run uses data/processed/mimiciii_full_dataset/test.csv (copied from full_dataset.csv).
+
+paths:
+  processed: "data/processed/mimiciii_full_dataset"
+  outputs: "data/outputs/mimiciii_llm_gpt4o_mini_promptv2_full_dataset"
+
+llm:
+  provider: openai
+  model_name: gpt-4o-mini
+  model: gpt-4o-mini
+  prompt_template_dir: "prompts_v2"
+  cache_dir: "data/outputs/mimiciii_llm_gpt4o_mini_promptv2_full_dataset/llm_cache"

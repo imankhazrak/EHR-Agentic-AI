@@ -1,0 +1,12 @@
+{
+  "sample_id": 4843,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record documents multiple severe diagnoses (e.g., acute necrosis of liver, subendocardial infarction, CHF, AKI) but lacks any explicit mention of hyperlipidemia, hypercholesterolemia, or lipid-lowering medications (like Ezetimibe or Aspirin, which are present but not explicitly linked to a lipid diagnosis in the record) to support a coded diagnosis of Disorders of Lipid Metabolism in the next visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3584,
+    "completion_tokens": 105
+  }
+}

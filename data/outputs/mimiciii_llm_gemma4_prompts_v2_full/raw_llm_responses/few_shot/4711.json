@@ -1,0 +1,12 @@
+{
+  "sample_id": 4711,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.00\nReasoning: The current visit record lists multiple diagnoses including Coronary atherosclerosis, Diabetes mellitus, and Obesity, but it does not explicitly document a diagnosis of hypercholesterolemia or hyperlipidemia, nor does it document active lipid-disorder management supported by other record evidence, which is required to predict a 'Yes' outcome based on the demonstration cases.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3633,
+    "completion_tokens": 84
+  }
+}

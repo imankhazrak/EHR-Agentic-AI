@@ -1,0 +1,12 @@
+{
+  "sample_id": 3353,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses include \"Other and unspecified hyperlipidemia,\" which is explicit evidence of a lipid disorder, and the patient is on long-term insulin, suggesting active management of a metabolic condition. This aligns with the pattern in Demonstration Case 2.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: Current diagnoses explicitly list \"Other and unspecified hyperlipidemia,\" which is direct evidence of a lipid disorder, and the patient is receiving long-term insulin, indicating active metabolic management. This supports the pattern seen in Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3594,
+    "completion_tokens": 126
+  }
+}

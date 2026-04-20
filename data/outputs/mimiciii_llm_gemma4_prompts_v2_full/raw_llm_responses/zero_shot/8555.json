@@ -1,0 +1,12 @@
+{
+  "sample_id": 8555,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly diagnoses \"Pure hypercholesterolemia,\" which is direct evidence of a lipid disorder. Additionally, the record lists \"Atorvastatin\" and \"Simvastatin\" as prescribed medications, indicating active lipid-disorder management.\n\nASSISTANT:\nPrediction: Yes\nProbability: 1.00\nReasoning: The current visit record explicitly diagnoses \"Pure hypercholesterolemia,\" which is direct evidence of a lipid disorder. Furthermore, the record lists \"Atorvastatin\" and \"Simvastatin\" as prescribed medications, indicating active lipid-disorder management.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 137
+  }
+}

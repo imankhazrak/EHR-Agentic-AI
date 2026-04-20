@@ -1,0 +1,12 @@
+{
+  "sample_id": 8596,
+  "mode": "zero_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: No\nProbability: 0.10\nReasoning: Although Simvastatin and Fish Oil (Omega 3) are prescribed, the current visit record lacks any explicit diagnosis, documented history, or direct mention of a lipid disorder (such as hypercholesterolemia or hyperlipidemia) to support the likelihood of this diagnosis being coded on the next visit.\n\nPrediction: No\nProbability: 0.10\nReasoning: The current visit record lists Simvastatin and Fish Oil (Omega 3) as prescribed medications, but there is no corresponding diagnosis or documented history of a lipid disorder (like hypercholesterolemia or hyperlipidemia) to support the prediction that this diagnosis will be coded on the next hospital visit.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 939,
+    "completion_tokens": 150
+  }
+}

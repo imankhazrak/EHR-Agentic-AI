@@ -9,17 +9,17 @@ import torch
 from transformers import AutoTokenizer
 
 from src.llm.output_parser import parse_prediction
-from src.scripts.evaluate_finetuned_gemma_on_test import (
-    _FirstStepRestrictTokensLogitsProcessor,
-    _collect_token_ids,
-    _prompt,
+from src.llm.logit_pair_scorer import (
+    FirstStepRestrictTokensLogitsProcessor,
+    build_eval_prompt,
+    collect_first_token_ids,
 )
 
 _REPO = Path(__file__).resolve().parents[1]
 
 
 class _StubTokenizer:
-    """Minimal tokenizer.encode(first_token_only) for _collect_token_ids."""
+    """Minimal tokenizer.encode(first_token_only) for collect_first_token_ids."""
 
     def encode(self, text: str, add_special_tokens: bool = False) -> list[int]:
         key = text.strip().lower()
@@ -28,7 +28,7 @@ class _StubTokenizer:
 
 
 def test_first_step_processor_masks_non_allowed_vocab() -> None:
-    proc = _FirstStepRestrictTokensLogitsProcessor(prompt_length=4, allowed_token_ids=[2, 7])
+    proc = FirstStepRestrictTokensLogitsProcessor(prompt_length=4, allowed_token_ids=[2, 7])
     input_ids = torch.zeros((1, 4), dtype=torch.long)
     scores = torch.arange(10, dtype=torch.float32).unsqueeze(0).expand(1, -1).clone()
 
@@ -42,7 +42,7 @@ def test_first_step_processor_masks_non_allowed_vocab() -> None:
 
 
 def test_first_step_processor_leaves_scores_unchanged_after_first_token() -> None:
-    proc = _FirstStepRestrictTokensLogitsProcessor(prompt_length=3, allowed_token_ids=[1])
+    proc = FirstStepRestrictTokensLogitsProcessor(prompt_length=3, allowed_token_ids=[1])
     input_ids = torch.zeros((1, 4), dtype=torch.long)
     scores = torch.randn(1, 50)
     out = proc(input_ids, scores)
@@ -50,7 +50,7 @@ def test_first_step_processor_leaves_scores_unchanged_after_first_token() -> Non
 
 
 def test_prompt_ends_with_prediction_newline() -> None:
-    p = _prompt("short narrative")
+    p = build_eval_prompt("short narrative")
     assert p.endswith("Prediction:\n")
     assert "Patient record:" in p
 
@@ -63,8 +63,8 @@ def test_parse_prediction_accepts_plain_yes_no() -> None:
 
 def test_collect_token_ids_stub_disjoint_yes_no() -> None:
     st = _StubTokenizer()
-    yes_ids = _collect_token_ids(st, ["Yes", " yes"])
-    no_ids = _collect_token_ids(st, ["No", " no"])
+    yes_ids = collect_first_token_ids(st, ["Yes", " yes"])
+    no_ids = collect_first_token_ids(st, ["No", " no"])
     assert yes_ids == {101}
     assert no_ids == {102}
     assert yes_ids.isdisjoint(no_ids)
@@ -84,6 +84,6 @@ def test_gemma_tokenizer_yes_no_ids_when_snapshot_loads() -> None:
         pytest.skip(f"Gemma tokenizer unavailable in this environment: {exc}")
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
-    yes_ids = _collect_token_ids(tok, ["Yes", " yes", "Yes ", " yes "])
-    no_ids = _collect_token_ids(tok, ["No", " no", "No ", " no "])
+    yes_ids = collect_first_token_ids(tok, ["Yes", " yes", "Yes ", " yes "])
+    no_ids = collect_first_token_ids(tok, ["No", " no", "No ", " no "])
     assert yes_ids and no_ids and yes_ids.isdisjoint(no_ids)

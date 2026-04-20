@@ -1,0 +1,12 @@
+{
+  "sample_id": 5949,
+  "mode": "few_shot",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "text": "Prediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin, which is a lipid-lowering medication, and the patient has a history of Congestive Heart Failure, which is a documented risk factor for lipid disorders, supporting the likelihood of a coded diagnosis in the next visit as shown in Demonstration Case 2.\n\nPrediction: Yes\nProbability: 0.81\nReasoning: The current visit record includes the prescription of Atorvastatin, a lipid-lowering medication, and the patient has a history of Congestive Heart Failure, which is a documented risk factor for lipid disorders, supporting the likelihood of a coded diagnosis in the next visit as shown in Demonstration Case 2.",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3607,
+    "completion_tokens": 156
+  }
+}
