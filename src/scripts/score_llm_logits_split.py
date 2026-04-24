@@ -1,5 +1,9 @@
 """Score train or test split with logits-based Yes/No probabilities (no free-text probs).
 
+This script does **not** parse free-text ``Prediction:`` / ``Probability:`` model replies;
+that lives in ``src.llm.output_parser`` (``parse_prediction``, ``parse_multitask_output``)
+and is applied in ``src.llm.predictor.run_predictions`` when calling API-based LLMs.
+
 Writes CSV under ``{paths.outputs}/fusion/llm_logit_scores_{split}.csv`` with:
 pair_id, label_lipid_disorder, prob_yes, prob_no, margin_logit, pred_hard, split.
 

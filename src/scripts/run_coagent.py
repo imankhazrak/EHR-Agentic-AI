@@ -64,6 +64,7 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
         cfg=co_cfg_full,
         output_dir=output_dir,
         prompt_template_dir=prompt_td,
+        multitask=bool(cfg.get("llm", {}).get("multitask", False)),
     )
 
     metrics = evaluate_llm_results(

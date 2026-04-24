@@ -18,7 +18,12 @@ from tqdm import tqdm
 
 from src.llm.api_clients import LLMClient, LLMResponse
 from src.llm.prompt_builder import build_messages
-from src.llm.output_parser import parse_prediction, extract_logprob_confidence
+from src.llm.output_parser import (
+    extract_logprob_confidence,
+    multitask_flat_column_names,
+    parse_multitask_output,
+    parse_prediction,
+)
 from src.utils.io import save_text
 from src.utils.logging_utils import get_logger
 
@@ -44,6 +49,7 @@ def run_predictions(
     narrative_col: str = "narrative_current",
     id_col: str = "pair_id",
     prompt_template_dir: Optional[Union[str, Path]] = None,
+    multitask: bool = False,
 ) -> pd.DataFrame:
     """Run LLM predictions on all rows in *df*.
 
@@ -70,6 +76,12 @@ def run_predictions(
         raw_response, parsed_prediction, parsed_probability, probability_parse_status,
         parse_valid_probability, reasoning, parser_status, prob_yes, prob_no,
         raw_response_path (``responses.jsonl`` for this mode)
+
+    When ``multitask=True`` (prompt_v3 JSON), columns from ``multitask_flat_column_names()``
+    are appended (``lipid_prob``, ``lipid_pred``, …). Legacy lipid columns
+    (``parsed_prediction``, ``parsed_probability``, ``pred_binary``) are filled from
+    ``lipid_next`` when JSON parses; on parse failure they are left unparseable/NaN
+    without falling back to ``parse_prediction`` (avoids mis-reading JSON fragments).
     """
     template_file = MODE_TEMPLATE_MAP.get(mode)
     if not template_file:
@@ -113,28 +125,74 @@ def run_predictions(
             jsonl_f.write(json.dumps(record, default=str, ensure_ascii=False) + "\n")
             jsonl_f.flush()
 
-            # Parse
-            parsed = parse_prediction(raw_text)
+            # Parse (single-task text vs multitask JSON — inference above is unchanged)
             conf = extract_logprob_confidence(resp.logprobs)
-
             pred_map = {"Yes": 1, "No": 0}
-            results.append({
-                id_col: sample_id,
-                "prompt_mode": mode,
-                "model_name": resp.model or client.model_name,
-                "raw_response": raw_text,
-                "parsed_prediction": parsed["prediction"],
-                "pred_binary": pred_map.get(parsed["prediction"]),
-                "parsed_probability": parsed.get("probability"),
-                "probability_parse_status": parsed.get("probability_status", "missing"),
-                "parse_valid_probability": bool(parsed.get("parse_valid_probability")),
-                "probability_format_warning": bool(parsed.get("probability_format_warning")),
-                "reasoning": parsed["reasoning"],
-                "parser_status": parsed["parser_status"],
-                "prob_yes": conf["prob_yes"] if conf else None,
-                "prob_no": conf["prob_no"] if conf else None,
-                "raw_response_path": str(resp_path),
-            })
+            mt_cols = multitask_flat_column_names()
+            nan = float("nan")
+
+            if multitask:
+                mt = parse_multitask_output(raw_text)
+                mt_fragment = {c: nan for c in mt_cols}
+                if mt is not None:
+                    reasoning = str(mt.pop("reasoning", ""))
+                    for k in mt_cols:
+                        if k in mt:
+                            mt_fragment[k] = mt[k]
+                    parsed_prediction = "Yes" if mt_fragment["lipid_pred"] == 1 else "No"
+                    pred_binary = int(mt_fragment["lipid_pred"])
+                    parsed_probability = float(mt_fragment["lipid_prob"])
+                    probability_parse_status = "ok"
+                    parse_valid_probability = True
+                    probability_format_warning = False
+                    parser_status = "multitask_json"
+                else:
+                    reasoning = ""
+                    parsed_prediction = "unparseable"
+                    pred_binary = None
+                    parsed_probability = nan
+                    probability_parse_status = "missing"
+                    parse_valid_probability = False
+                    probability_format_warning = False
+                    parser_status = "multitask_parse_failed"
+                row = {
+                    id_col: sample_id,
+                    "prompt_mode": mode,
+                    "model_name": resp.model or client.model_name,
+                    "raw_response": raw_text,
+                    "parsed_prediction": parsed_prediction,
+                    "pred_binary": pred_binary,
+                    "parsed_probability": parsed_probability,
+                    "probability_parse_status": probability_parse_status,
+                    "parse_valid_probability": parse_valid_probability,
+                    "probability_format_warning": probability_format_warning,
+                    "reasoning": reasoning,
+                    "parser_status": parser_status,
+                    "prob_yes": conf["prob_yes"] if conf else None,
+                    "prob_no": conf["prob_no"] if conf else None,
+                    "raw_response_path": str(resp_path),
+                    **mt_fragment,
+                }
+            else:
+                parsed = parse_prediction(raw_text)
+                row = {
+                    id_col: sample_id,
+                    "prompt_mode": mode,
+                    "model_name": resp.model or client.model_name,
+                    "raw_response": raw_text,
+                    "parsed_prediction": parsed["prediction"],
+                    "pred_binary": pred_map.get(parsed["prediction"]),
+                    "parsed_probability": parsed.get("probability"),
+                    "probability_parse_status": parsed.get("probability_status", "missing"),
+                    "parse_valid_probability": bool(parsed.get("parse_valid_probability")),
+                    "probability_format_warning": bool(parsed.get("probability_format_warning")),
+                    "reasoning": parsed["reasoning"],
+                    "parser_status": parsed["parser_status"],
+                    "prob_yes": conf["prob_yes"] if conf else None,
+                    "prob_no": conf["prob_no"] if conf else None,
+                    "raw_response_path": str(resp_path),
+                }
+            results.append(row)
 
     result_df = pd.DataFrame(results)
     return result_df

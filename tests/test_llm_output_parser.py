@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import pytest
 
-from src.llm.output_parser import parse_prediction
+from src.llm.output_parser import (
+    multitask_flat_column_names,
+    parse_multitask_output,
+    parse_prediction,
+    test_parse_multitask_output_example,
+)
 
 
 def test_structured_triple() -> None:
@@ -58,3 +63,46 @@ def test_two_decimal_probability_no_warning() -> None:
     out = parse_prediction(text)
     assert out["parse_valid_probability"] is True
     assert out["probability_format_warning"] is False
+
+
+def test_parse_multitask_output_example_runs() -> None:
+    test_parse_multitask_output_example()
+
+
+def _valid_multitask_json() -> str:
+    return (
+        '{"lipid_next": {"prediction": "Yes", "probability": 0.72}, '
+        '"diabetes_current": {"prediction": "No", "probability": 0.10}, '
+        '"hypertension_current": {"prediction": "Yes", "probability": 0.80}, '
+        '"obesity_current": {"prediction": "No", "probability": 0.20}, '
+        '"cardio_next": {"prediction": "No", "probability": 0.30}, '
+        '"kidney_next": {"prediction": "No", "probability": 0.15}, '
+        '"stroke_next": {"prediction": "No", "probability": 0.10}, '
+        '"reasoning": "ok"}'
+    )
+
+
+def test_parse_multitask_output_accepts_fenced_json() -> None:
+    inner = _valid_multitask_json()
+    text = "```json\n" + inner + "\n```"
+    p = parse_multitask_output(text)
+    assert p is not None
+    assert p["lipid_prob"] == pytest.approx(0.72)
+    assert set(multitask_flat_column_names()).issubset(p.keys())
+
+
+def test_parse_multitask_output_rejects_trailing_text() -> None:
+    assert parse_multitask_output(_valid_multitask_json() + "\nThanks") is None
+
+
+def test_parse_multitask_output_rejects_missing_task() -> None:
+    bad = (
+        '{"lipid_next": {"prediction": "Yes", "probability": 0.5}, '
+        '"reasoning": "x"}'
+    )
+    assert parse_multitask_output(bad) is None
+
+
+def test_parse_multitask_output_rejects_bad_prediction_token() -> None:
+    bad = _valid_multitask_json().replace('"Yes"', '"Maybe"', 1)
+    assert parse_multitask_output(bad) is None

@@ -33,6 +33,7 @@ def run_coagent_pipeline(
     cfg: Dict,
     output_dir: str = "data/outputs",
     prompt_template_dir: Optional[Union[str, Path]] = None,
+    multitask: bool = False,
 ) -> pd.DataFrame:
     """Run the full EHR-CoAgent pipeline.
 
@@ -70,6 +71,7 @@ def run_coagent_pipeline(
         demonstration_cases=demonstration_cases,
         output_dir=output_dir,
         prompt_template_dir=prompt_template_dir,
+        multitask=multitask,
     )
 
     # Merge true labels
@@ -93,6 +95,7 @@ def run_coagent_pipeline(
             demonstration_cases=demonstration_cases,
             output_dir=output_dir,
             prompt_template_dir=prompt_template_dir,
+            multitask=multitask,
         )
 
     # Sample wrong predictions
@@ -130,6 +133,7 @@ def run_coagent_pipeline(
         critic_feedback=consolidated,
         output_dir=output_dir,
         prompt_template_dir=prompt_template_dir,
+        multitask=multitask,
     )
 
     # Save the final augmented prompt for reference
