@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mismatch Consistency Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #1f2937; }
+    h1, h2, h3 { color: #111827; }
+    code { background: #f3f4f6; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    pre { background: #111827; color: #f9fafb; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<h1>Mismatch Consistency Report</h1>
+
+<h2>Scope</h2>
+
+<p>This report documents the consistency check between probability values and predicted labels for:</p>
+
+<ul>
+<li>**GPT-4o-mini** (Few-Shot)</li>
+<li>**Gemma4** (CoAgent)</li>
+</ul>
+
+<p>using the merged dataset:</p>
+
+<ul>
+<li>`data/outputs/case_studies/model_comparison_gemma_coagent_vs_gpt4omini_fewshot.csv`</li>
+</ul>
+
+<h2>Rule Used</h2>
+
+<p>For each model, define a derived prediction from probability:</p>
+
+<ul>
+<li>`pred_from_prob = 1` if `prob &gt;= 0.5`, else `0`</li>
+</ul>
+
+<p>Then compute mismatch:</p>
+
+<ul>
+<li>`mismatch = 0` if `pred_from_prob == label` (no mismatch)</li>
+<li>`mismatch = 1` if `pred_from_prob != label` (mismatch)</li>
+</ul>
+
+<p>Columns added to the CSV:</p>
+
+<ul>
+<li>`gpt_mismatch`</li>
+<li>`gemma_mismatch`</li>
+</ul>
+
+<h2>Output Schema</h2>
+
+<p>Final CSV columns:</p>
+
+<p>1. `case_id`</p>
+<p>2. `true_label`</p>
+<p>3. `gpt_prob`</p>
+<p>4. `gemma_prob`</p>
+<p>5. `gpt_label`</p>
+<p>6. `gemma_label`</p>
+<p>7. `gpt_mismatch`</p>
+<p>8. `gemma_mismatch`</p>
+
+<h2>Validation Summary</h2>
+
+<ul>
+<li>Total rows: **2492**</li>
+<li>GPT mismatches (`gpt_mismatch = 1`): **0**</li>
+<li>Gemma mismatches (`gemma_mismatch = 1`): **10**</li>
+</ul>
+
+<h2>Gemma Mismatch Case IDs</h2>
+
+<p>The following `case_id` values have `gemma_mismatch = 1`:</p>
+
+<ul>
+<li>`2494`</li>
+<li>`2579`</li>
+<li>`3056`</li>
+<li>`3237`</li>
+<li>`3385`</li>
+<li>`4364`</li>
+<li>`4697`</li>
+<li>`6305`</li>
+<li>`10492`</li>
+<li>`11290`</li>
+</ul>
+
+<h2>Spot Check Example</h2>
+
+<p>For `case_id = 2494`:</p>
+
+<ul>
+<li>`gpt_prob = 0.75`, `gpt_label = 1` -&gt; `gpt_mismatch = 0`</li>
+<li>`gemma_prob = 0.27`, `gemma_label = 1` -&gt; `gemma_mismatch = 1`</li>
+</ul>
+
+<p>This matches the defined rule and confirms the expected inconsistency in Gemma for this case.</p>
+</body>
+</html>

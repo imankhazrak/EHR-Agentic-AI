@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GPT vs Gemma inconsistency correctness report</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">GPT vs Gemma inconsistency correctness report</h1>
+</header>
+<h1 id="gpt-gemma-inconsistency-and-correctness-report">GPT-Gemma Inconsistency and Correctness Report</h1>
+<h2 id="objective">Objective</h2>
+<p>This report evaluates label consistency between GPT-4o-mini (Few-Shot) and Gemma4 (CoAgent), and checks correctness against <code>true_label</code>.</p>
+<p>Input file:</p>
+<ul>
+<li><code>data/outputs/case_studies/model_comparison_gemma_coagent_vs_gpt4omini_fewshot.csv</code></li>
+</ul>
+<p>Analysis output file:</p>
+<ul>
+<li><code>data/outputs/case_studies/gpt_gemma_inconsistency_analysis.csv</code></li>
+</ul>
+<h2 id="metric-definitions">Metric Definitions</h2>
+<ul>
+<li><strong>Inconsistent to each other</strong>: <code>gpt_label != gemma_label</code></li>
+<li><strong>Consistent</strong>: <code>gpt_label == gemma_label</code></li>
+<li><strong>Corrected and same as true label</strong>: both models are correct<br />
+(<code>gpt_label == true_label</code> and <code>gemma_label == true_label</code>)</li>
+<li><strong>Consistent and equal to true label</strong>: models are consistent and shared label equals <code>true_label</code></li>
+</ul>
+<h2 id="summary-counts">Summary Counts</h2>
+<p>Total cases analyzed: <strong>2492</strong></p>
+<ul>
+<li>Inconsistent to each other: <strong>186</strong> (7.46%)</li>
+<li>Consistent: <strong>2306</strong> (92.54%)</li>
+<li>Corrected and same as true label (both correct): <strong>1784</strong> (71.59%)</li>
+<li>Consistent and equal to true label: <strong>1784</strong> (71.59%)</li>
+</ul>
+<h2 id="additional-context">Additional Context</h2>
+<ul>
+<li>GPT correct vs true label: <strong>1883</strong> (75.56%)</li>
+<li>Gemma correct vs true label: <strong>1871</strong> (75.08%)</li>
+</ul>
+<p>Because “both correct” requires both models to match truth, that count equals the “consistent and equal to true label” count in this dataset.</p>
+<h2 id="interpretation">Interpretation</h2>
+<ul>
+<li>The two models agree on most cases (over 92%).</li>
+<li>About 7.5% of cases are direct model disagreements.</li>
+<li>Roughly 71.6% of all cases are jointly correct (both models match ground truth).</li>
+<li>GPT and Gemma have very similar individual correctness, with GPT slightly higher by 12 cases.</li>
+</ul>
+<h2 id="per-case-csv-schema">Per-Case CSV Schema</h2>
+<p><code>data/outputs/case_studies/gpt_gemma_inconsistency_analysis.csv</code> includes:</p>
+<ul>
+<li><code>case_id</code></li>
+<li><code>true_label</code></li>
+<li><code>gpt_label</code></li>
+<li><code>gemma_label</code></li>
+<li><code>models_inconsistent</code> (0/1)</li>
+<li><code>models_consistent</code> (0/1)</li>
+<li><code>gpt_correct</code> (0/1)</li>
+<li><code>gemma_correct</code> (0/1)</li>
+<li><code>both_correct</code> (0/1)</li>
+<li><code>consistent_and_true</code> (0/1)</li>
+</ul>
+</body>
+</html>

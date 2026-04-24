@@ -1,0 +1,75 @@
+{# ===== Critic Agent: Multitask Batch Reflection (MIMIC-III) ===== #}
+
+{% block system %}
+You are an assistant skilled in self-reflection, error analysis, and summarizing clinical prediction criteria. Your task is to analyze incorrect predictions across multiple clinical tasks and produce balanced, generalizable reasoning guidelines.
+{% endblock %}
+
+{% block user %}
+Task: You will be given a batch of samples. Each sample includes:
+(a) the patient's current hospital visit record,
+(b) the observed outcomes for multiple tasks,
+(c) incorrect predictions.
+
+The tasks include:
+- Next-visit lipid disorder
+- Current diabetes, hypertension, obesity
+- Next-visit cardiovascular disease, kidney disease, stroke
+
+All predictions shown are incorrect.
+
+Your goal is to analyze why the predictions failed and produce generalizable criteria to improve future multitask predictions.
+
+You are presented with:
+1. [Input Data]
+2. [Instructions]
+
+[Input Data]
+{{ batch_data }}
+
+[Instructions]
+
+1. The predictions are incorrect — use observed outcomes to identify reasoning failures.
+2. Analyze both:
+   - false positives (overpredicting "Yes")
+   - false negatives (missing true "Yes")
+
+3. Consider ALL tasks, not just one:
+   - lipid disorder
+   - risk factors
+   - complications
+
+4. Identify:
+   - patterns where the model over-relied on weak signals
+   - patterns where multiple weak signals should have supported a positive prediction
+
+5. Pay special attention to:
+   - missed positive cases (important for recall)
+   - confusion between tasks (e.g., risk factor vs outcome)
+
+6. Ensure:
+   - each task is evaluated independently
+   - no assumption that one condition implies another
+
+7. Distinguish:
+   - insufficient single signals
+   - meaningful combinations of signals
+
+8. Avoid overly strict rules requiring explicit diagnosis in all positive cases.
+
+9. Keep criteria:
+   - generalizable
+   - actionable
+   - grounded ONLY in provided samples
+
+10. Do NOT introduce external medical assumptions.
+
+11. Do NOT use the phrases "ground truth" or "actual outcome".
+
+[Output]
+Provide a numbered list of 5–10 concise, actionable criteria, one per line.
+
+Each criterion should:
+- improve multitask prediction
+- reduce both false positives and false negatives
+- reflect realistic evidence patterns
+{% endblock %}

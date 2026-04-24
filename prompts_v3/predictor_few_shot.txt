@@ -1,0 +1,86 @@
+{# ===== Predictor: Multitask Few-Shot (MIMIC-III) ===== #}
+
+{% block system %}
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record and the provided demonstration cases.
+{% endblock %}
+
+{% block user %}
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+Use both:
+- The current visit record
+- The demonstration cases
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Demonstration Cases]
+5. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record and demonstration cases.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the record and examples.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Explicit diagnosis/history/evidence → Yes  
+  • Medication ONLY if supported by other evidence  
+  • DO NOT rely only on risk factors  
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence
+- Otherwise answer "No"
+
+[Current Visit Record]
+{{ narrative }}
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the documented evidence in the current visit record.
+(2) Use the demonstration cases as examples of how evidence maps to predictions.
+(3) Consider diagnoses, medications, and procedures together.
+(4) Weigh multiple signals together.
+(5) Use prevalence only as background context.
+(6) Base conclusions strictly on evidence and patterns from examples.
+
+[Demonstration Cases]
+{{ demonstration_cases }}
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the record and examples>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence
+- Do NOT use percentages
+- Do NOT output anything outside JSON
+{% endblock %}

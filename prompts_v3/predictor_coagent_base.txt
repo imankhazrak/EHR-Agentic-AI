@@ -1,0 +1,94 @@
+{# ===== Predictor: Multitask EHR-CoAgent (MIMIC-III) ===== #}
+{# Few-shot + refined criteria + multitask outputs #}
+
+{% block system %}
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only the current visit record, the provided demonstration cases, and the refined criteria.
+{% endblock %}
+
+{% block user %}
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+Use:
+- Current visit record
+- Demonstration cases
+- Refined criteria
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Demonstration Cases]
+5. [Refined Criteria]
+6. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the record, examples, and refined criteria.
+- Do NOT assume missing information.
+- Do NOT rely on external medical knowledge.
+
+For lipid disorder:
+- Same strict rules:
+  • Explicit diagnosis/history/evidence → Yes  
+  • Medication ONLY if supported  
+  • DO NOT rely only on risk factors  
+
+For other tasks:
+- Answer "Yes" ONLY if clear evidence exists
+- Otherwise answer "No"
+
+[Current Visit Record]
+{{ narrative }}
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only documented evidence  
+(2) Use demonstration cases as pattern guidance  
+(3) Apply refined criteria to reduce common errors  
+(4) Consider diagnoses, medications, procedures jointly  
+(5) Weigh multiple signals together  
+(6) Use prevalence only as background context  
+(7) Base conclusions strictly on evidence  
+
+[Demonstration Cases]
+{{ demonstration_cases }}
+
+[Refined Criteria]
+{{ critic_feedback }}
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the record, examples, and refined criteria>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1  
+- Use exactly two decimal places  
+- Higher = stronger evidence  
+- Do NOT use percentages  
+- Do NOT output anything outside JSON  
+
+{% endblock %}

@@ -17,6 +17,28 @@ Questions in CSV use ` | ` between items.
   - Is this case ambiguous?
   - Would you expect a lipid disorder diagnosis at next visit?
 
+- **Raw data example (exact source row):**
+
+```json
+{
+  "pair_id": "2494",
+  "SUBJECT_ID": "9016",
+  "hadm_id_current": "106607",
+  "admittime_current": "2179-04-15 18:04:00",
+  "diagnoses_codes_current": "4373;4240;4280;42731;515;5119;5185;5070;99662",
+  "procedures_codes_current": "3523;3723;8856;3961;3964;8841;8857;8872;9604;9672;3893;8842;966",
+  "medications_current": "Furosemide;D5W;Lorazepam;Hydralazine HCl;Soln.;Lansoprazole Oral Solution;Nitroglycerin;Propofol (Generic);Docusate Sodium (Liquid);Lactulose;Potassium Chloride;Isosorbide Dinitrate;Pantoprazole;Zolpidem Tartrate;Metoprolol;Aspirin;Acetylcysteine 20%;traZODONE HCl;Oxazepam;Atropine Sulfate;Docusate Sodium;Alteplase (Catheter Clearance);Glycopyrrolate;Neostigmine;Meperidine;Simvastatin;Captopril;Levothyroxine Sodium;Amitriptyline HCl;Amiodarone HCl;Acetaminophen;Allopurinol;Oxycodone-Acetaminophen;Bisacodyl;Albuterol;Insulin;Ipratropium Bromide;Clopidogrel Bisulfate;Ranitidine;Metronidazole;Milk of Magnesia;Diphenhydramine HCl;Vancomycin HCl;Iso-Osmotic Dextrose;Procainamide SR;Senna;Magnesium Sulfate;Acetazolamide Sodium;Piperacillin-Tazobactam Na;Procainamide HCl;Metoclopramide;Fentanyl Citrate;Midazolam HCl;Albuterol Neb Soln;Ipratropium Bromide Neb;Sucralfate;Nitroprusside Sodium;Milrinone;Norepinephrine;Phenylephrine HCl;Humulin-R Insulin;Morphine Sulfate;Calcium Gluconate;NS;SW;Levofloxacin",
+  "hadm_id_next": "119034",
+  "admittime_next": "2180-10-14 23:03:00",
+  "diagnoses_codes_next": "43311;5070;4280;4271;4538;V422;7843;34291;4373;2740;V0259;V090;41401;44020;4019;5939;2449;2720;V4581;V4582;V443;V1006;V1582",
+  "procedures_codes_next": "9672;9604;8891;8841;966;3893;8191;9920",
+  "medications_next": "Docusate Sodium;Calcium Carbonate;Pantoprazole;Metoprolol;Insulin;Sodium Chloride 0.9%  Flush;Sarna Lotion;Pravastatin;Ipratropium Bromide Neb;Levothyroxine Sodium;Furosemide;Lorazepam;Aspirin;Clopidogrel Bisulfate;Acetylcysteine 20%;Phenylephrine HCl;D5W;Potassium Chloride;Propofol;SW;Magnesium Sulfate;Acetaminophen;Lansoprazole Oral Suspension;NS;Dextrose 5%;Levofloxacin;Vancomycin HCl;Iso-Osmotic Dextrose;Heparin;Hydralazine HCl;Metronidazole;Brimonidine Tartrate 0.15% Ophth.;traZODONE HCl;Lactulose;Oxycodone-Acetaminophen Elixir;Syringe (IV Room);Methylprednisolone Na Succ.;Morphine Sulfate;Albuterol Neb Soln;Captopril;Dipyridamole-Aspirin;Methylprednisolone Na Succ;Vial;Nitroglycerin SL;Lisinopril;Citalopram Hydrobromide",
+  "label_lipid_disorder": "1",
+  "narrative_current": "- Diagnoses made: Cerebral aneurysm, nonruptured; Mitral valve disorders; Congestive heart failure, unspecified; Atrial fibrillation; Postinflammatory pulmonary fibrosis; Unspecified pleural effusion; [ICD9-DX:5185]; Pneumonitis due to inhalation of food or vomitus; Infection and inflammatory reaction due to other vascular device, implant, and graft\n- Medications prescribed: Furosemide; D5W; Lorazepam; Hydralazine HCl; Soln.; Lansoprazole Oral Solution; Nitroglycerin; Propofol (Generic); Docusate Sodium (Liquid); Lactulose; Potassium Chloride; Isosorbide Dinitrate; Pantoprazole; Zolpidem Tartrate; Metoprolol; Aspirin; Acetylcysteine 20%; traZODONE HCl; Oxazepam; Atropine Sulfate; Docusate Sodium; Alteplase (Catheter Clearance); Glycopyrrolate; Neostigmine; Meperidine; Simvastatin; Captopril; Levothyroxine Sodium; Amitriptyline HCl; Amiodarone HCl; Acetaminophen; Allopurinol; Oxycodone-Acetaminophen; Bisacodyl; Albuterol; Insulin; Ipratropium Bromide; Clopidogrel Bisulfate; Ranitidine; Metronidazole; Milk of Magnesia; Diphenhydramine HCl; Vancomycin HCl; Iso-Osmotic Dextrose; Procainamide SR; Senna; Magnesium Sulfate; Acetazolamide Sodium; Piperacillin-Tazobactam Na; Procainamide HCl\n- Procedures performed: Open and other replacement of mitral valve with tissue graft; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Extracorporeal circulation auxiliary to open heart surgery; Intraoperative cardiac pacemaker; Arteriography of cerebral arteries; Other and unspecified coronary arteriography; Diagnostic ultrasound of heart; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Venous catheterization, not elsewhere classified; Aortography; Enteral infusion of concentrated nutritional substances",
+  "split": "test"
+}
+```
+
 ## Case 4932 (TP)
 
 - **True label:** 1 | **Predicted:** 1 | **P(yes):** 1.0
