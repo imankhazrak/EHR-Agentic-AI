@@ -2,6 +2,13 @@
 
 Usage:
     python -m src.scripts.run_preprocessing --config configs/default.yaml
+
+After ``train.csv`` / ``test.csv`` exist under ``paths.processed``, you can build
+the separate multitask copy (extra ICD-9–derived labels, new output folder only) with:
+
+    python -m src.scripts.build_mimiciii_multitask_dataset \\
+        --source-processed <paths.processed> \\
+        --output-processed data/processed/mimiciii_multitask
 """
 
 from __future__ import annotations

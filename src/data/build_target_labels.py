@@ -26,7 +26,7 @@ This is isolated here so you can refine the exact code list if needed.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import List, Set
+from typing import List, Sequence
 
 import pandas as pd
 
@@ -72,6 +72,103 @@ def codes_contain_lipid_disorder(codes_str: str) -> bool:
         if is_lipid_disorder(code.strip()):
             return True
     return False
+
+
+# ---------------------------------------------------------------------------
+# Multitask labels (prompt_v3) — all derived from MIMIC-III ICD-9-CM in
+# ``diagnoses_codes_current`` / ``diagnoses_codes_next`` (aggregated from
+# DIAGNOSES_ICD; see ``build_patient_visits`` / ``extract_mimic_tables``).
+# ---------------------------------------------------------------------------
+
+
+def normalize_icd9_code(code: str) -> str:
+    """Strip spaces, remove dots, uppercase. Empty string if missing/invalid.
+
+    MIMIC-III stores codes without periods (e.g. ``2780``). This also accepts
+    dotted forms (``278.0`` → ``2780``) for prefix matching.
+    """
+    if code is None or (isinstance(code, float) and pd.isna(code)):
+        return ""
+    s = str(code).strip()
+    if not s or s.lower() in ("nan", "none"):
+        return ""
+    s = s.replace(".", "").upper()
+    return s
+
+
+def codes_contain_prefix(codes: str, prefixes: Sequence[str]) -> bool:
+    """True if any semicolon-separated ICD-9 token starts with one of *prefixes*.
+
+    Tokens and prefix strings are normalized with :func:`normalize_icd9_code`.
+    Match rule: ``normalized_token.startswith(prefix)`` for at least one prefix.
+    Empty *codes* → False.
+    """
+    if codes is None or (isinstance(codes, float) and pd.isna(codes)):
+        return False
+    s = str(codes).strip()
+    if not s or s.lower() in ("nan", "none"):
+        return False
+    pnorm = [normalize_icd9_code(str(p)) for p in prefixes]
+    pnorm = [p for p in pnorm if p]
+    if not pnorm:
+        return False
+    for raw in s.split(";"):
+        n = normalize_icd9_code(raw)
+        if not n:
+            continue
+        for p in pnorm:
+            if n.startswith(p):
+                return True
+    return False
+
+
+def add_multitask_labels(df: pd.DataFrame) -> pd.DataFrame:
+    """Append prompt_v3 multitask label columns; keeps all existing columns.
+
+    All new labels are binary 0/1, derived from aggregated ICD-9 strings already
+    on the frame (from real MIMIC-III ``DIAGNOSES_ICD`` / visit aggregation).
+
+    Requires: ``label_lipid_disorder``, ``diagnoses_codes_current``,
+    ``diagnoses_codes_next``.
+
+    - ``label_lipid_next``: copy of ``label_lipid_disorder`` (same as existing
+      next-visit lipid target).
+    - ``*_current``: from ``diagnoses_codes_current``.
+    - ``*_next`` (other tasks): from ``diagnoses_codes_next``.
+    """
+    out = df.copy()
+    need = ("label_lipid_disorder", "diagnoses_codes_current", "diagnoses_codes_next")
+    for c in need:
+        if c not in out.columns:
+            raise KeyError(f"add_multitask_labels: missing required column {c!r}")
+    out["label_lipid_next"] = out["label_lipid_disorder"].astype(int)
+    out["label_diabetes_current"] = out["diagnoses_codes_current"].apply(
+        lambda x: int(codes_contain_prefix(x, ["250"]))
+    )
+    out["label_hypertension_current"] = out["diagnoses_codes_current"].apply(
+        lambda x: int(codes_contain_prefix(x, ["401", "402", "403", "404", "405"]))
+    )
+    out["label_obesity_current"] = out["diagnoses_codes_current"].apply(
+        lambda x: int(codes_contain_prefix(x, ["2780"]))
+    )
+    out["label_cardio_next"] = out["diagnoses_codes_next"].apply(
+        lambda x: int(
+            codes_contain_prefix(
+                x, ["410", "411", "412", "413", "414", "428"]
+            )
+        )
+    )
+    out["label_kidney_next"] = out["diagnoses_codes_next"].apply(
+        lambda x: int(codes_contain_prefix(x, ["584", "585", "586"]))
+    )
+    out["label_stroke_next"] = out["diagnoses_codes_next"].apply(
+        lambda x: int(
+            codes_contain_prefix(
+                x, ["430", "431", "432", "433", "434", "435", "436"]
+            )
+        )
+    )
+    return out
 
 
 def add_target_labels(pairs: pd.DataFrame) -> pd.DataFrame:
