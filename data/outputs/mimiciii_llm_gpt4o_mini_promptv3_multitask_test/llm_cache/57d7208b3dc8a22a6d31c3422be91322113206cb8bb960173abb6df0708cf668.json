@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, indicating current hypertension. The presence of insulin in medications suggests diabetes, likely type II. There is no evidence of obesity in the current visit record. The lipid disorder prediction is based on the prevalence in the population and the use of atorvastatin, which is commonly prescribed for lipid management. There is no direct evidence of cardiovascular disease or kidney disease, but the patient's hypertension and diabetes increase the risk for cardiovascular issues. No evidence suggests a risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3691,
+    "completion_tokens": 254
+  }
+}

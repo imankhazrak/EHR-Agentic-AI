@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The current visit record indicates diagnoses of pneumonia, HIV disease, cardiomyopathy, and other conditions, but does not explicitly mention lipid disorders, diabetes, obesity, or kidney disease. Hypertension is likely due to the cardiomyopathy and the use of Metoprolol, which is often prescribed for hypertension. Cardiovascular disease is a concern given the cardiomyopathy diagnosis. There is no evidence to support a prediction for stroke or kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3501,
+    "completion_tokens": 243
+  }
+}

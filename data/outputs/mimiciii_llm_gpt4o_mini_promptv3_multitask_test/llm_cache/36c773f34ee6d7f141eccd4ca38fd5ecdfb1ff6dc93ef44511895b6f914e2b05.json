@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which is confirmed by the presence of diabetes with neurological manifestations. There is also unspecified essential hypertension noted in the record. The patient is prescribed Rosuvastatin, which is commonly used for lipid disorders, and given the patient's cardiovascular issues, there is a reasonable prediction for lipid metabolism disorders. However, there is no explicit evidence of obesity in the current record. The patient has significant cardiac conditions, which increases the likelihood of future cardiovascular issues, but there is no indication of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1080,
+    "completion_tokens": 256
+  }
+}

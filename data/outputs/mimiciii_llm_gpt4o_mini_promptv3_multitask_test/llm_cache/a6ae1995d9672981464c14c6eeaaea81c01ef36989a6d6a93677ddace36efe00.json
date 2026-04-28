@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple documented conditions including diabetes with renal and ophthalmic manifestations, which indicates current diabetes. There is also unspecified essential hypertension noted. The presence of hyperlipidemia suggests a likelihood of lipid metabolism disorders. Given the chronic systolic heart failure and coronary atherosclerosis, cardiovascular disease is likely. The patient has acute glomerulonephritis and chronic kidney disease, indicating a high probability of kidney disease. The risk factors and existing conditions suggest a potential for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1173,
+    "completion_tokens": 250
+  }
+}

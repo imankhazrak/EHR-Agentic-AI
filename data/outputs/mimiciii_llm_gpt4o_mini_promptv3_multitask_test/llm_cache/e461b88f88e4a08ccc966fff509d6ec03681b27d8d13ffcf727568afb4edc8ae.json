@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a diagnosis of coronary atherosclerosis and is prescribed atorvastatin, indicating a lipid disorder. There is no evidence of diabetes or obesity in the record. The presence of hypertension is suggested by the prescription of lisinopril and captopril. Given the current diagnoses of subendocardial infarction and congestive heart failure, there is a high likelihood of cardiovascular disease. Acute kidney failure is documented, indicating a high probability of kidney disease. The risk of stroke is elevated due to the cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 959,
+    "completion_tokens": 256
+  }
+}

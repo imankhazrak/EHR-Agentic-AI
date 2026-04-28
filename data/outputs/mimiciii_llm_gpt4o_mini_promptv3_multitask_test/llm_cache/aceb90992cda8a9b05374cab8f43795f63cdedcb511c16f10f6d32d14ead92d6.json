@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which indicates a lipid metabolism disorder, leading to a high probability of a diagnosis in the next visit. There is a diagnosis of unspecified essential hypertension, confirming current hypertension. There is no evidence of diabetes or obesity in the current record. Given the acute myocardial infarction and coronary atherosclerosis, there is a strong likelihood of cardiovascular disease in the next visit. The history of paroxysmal ventricular tachycardia and acute myocardial infarction suggests a",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3497,
+    "completion_tokens": 256
+  }
+}

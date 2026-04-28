@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple cardiovascular issues (e.g., atrial fibrillation, coronary atherosclerosis) indicating a high likelihood of future cardiovascular disease. The presence of acute kidney failure suggests ongoing kidney issues, increasing the risk of kidney disease in the next visit. There is no evidence of diabetes or obesity in the current record, but hypertension is indicated by the medications prescribed (e.g., Metoprolol). The lipid disorder prediction is based on the prevalence in the MIMIC-III population, as there is no",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3985,
+    "completion_tokens": 256
+  }
+}

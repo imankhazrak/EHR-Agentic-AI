@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological and renal manifestations, indicating current diabetes. Hypertension is also present as indicated by the diagnosis of hypertensive chronic kidney disease. There is no explicit evidence of obesity in the record. Given the patient's multiple cardiovascular issues (e.g., coronary atherosclerosis, atrial fibrillation, congestive heart failure), there is a high likelihood of cardiovascular disease in the next visit. The presence of end-stage renal disease strongly indicates that kidney disease will continue. The combination of diabetes",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4220,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a personal history of cerebrovascular disease and is currently prescribed insulin, indicating diabetes. There is no evidence of hypertension or obesity in the current visit record. The presence of late effects of cerebrovascular disease suggests a higher likelihood of stroke in the next visit, while there is no indication of cardiovascular or kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3483,
+    "completion_tokens": 218
+  }
+}

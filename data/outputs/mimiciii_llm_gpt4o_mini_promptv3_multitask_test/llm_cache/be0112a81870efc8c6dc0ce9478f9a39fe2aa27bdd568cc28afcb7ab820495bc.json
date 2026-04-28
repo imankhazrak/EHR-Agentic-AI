@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of coronary atherosclerosis and acute myocardial infarction, indicating a high likelihood of cardiovascular disease. The presence of insulin suggests diabetes management, and hypertension is likely given the use of Metoprolol. There is no direct evidence of obesity in the current visit record. The lipid disorder prediction is based on the prevalence in the population and the use of Simvastatin, which supports the likelihood of lipid metabolism disorders. There is no evidence of kidney disease, but the risk of stroke is elevated due",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3809,
+    "completion_tokens": 256
+  }
+}

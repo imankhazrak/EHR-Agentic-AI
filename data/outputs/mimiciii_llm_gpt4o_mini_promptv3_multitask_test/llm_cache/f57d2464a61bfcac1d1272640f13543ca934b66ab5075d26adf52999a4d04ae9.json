@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a lipid disorder. The presence of 'Chronic systolic heart failure' and 'Coronary atherosclerosis' suggests cardiovascular issues, and the patient is on medications like Lisinopril and Metoprolol, which are commonly used for hypertension and heart conditions. The record indicates 'Hypertensive chronic kidney disease', supporting the presence of kidney disease. There is no explicit mention of obesity, and while diabetes is not",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1210,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has diagnoses of coronary atherosclerosis, intermediate coronary syndrome, and congestive heart failure, indicating significant cardiovascular issues, thus predicting cardiovascular disease in the next visit. Obesity is explicitly mentioned as a current condition. There is a diagnosis of retention of urine, which may suggest kidney issues, leading to a prediction of kidney disease. The presence of multiple cardiovascular conditions increases the risk of stroke, hence a prediction of stroke in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 685,
+    "completion_tokens": 243
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid metabolism disorder, which supports a prediction of a future diagnosis. There is no evidence of diabetes in the current visit record. The patient has 'Unspecified essential hypertension' and morbid obesity, which are strong indicators of current hypertension and obesity. Given the acute kidney failure diagnosis, there is a high likelihood of kidney disease in the next visit. The presence of multiple severe conditions, including septic shock and severe sepsis, increases",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3916,
+    "completion_tokens": 256
+  }
+}

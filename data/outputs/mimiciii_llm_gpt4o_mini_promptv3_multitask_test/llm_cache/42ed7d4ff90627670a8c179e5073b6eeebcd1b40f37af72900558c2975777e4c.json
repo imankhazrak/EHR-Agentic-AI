@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is on long-term insulin, indicating current diabetes. The record also shows unspecified essential hypertension, suggesting the patient has hypertension. The Body Mass Index (BMI) of 36.0-36.9 confirms obesity. Given the presence of diabetes and coronary atherosclerosis, there is a significant risk for cardiovascular disease. The history of transient ischemic attack (TIA) raises the risk for stroke, but there is no evidence of kidney disease in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4063,
+    "completion_tokens": 256
+  }
+}

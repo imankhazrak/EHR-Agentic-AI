@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of obesity, which supports the prediction of obesity. The presence of atrial fibrillation and long-term anticoagulant use suggests a higher risk for cardiovascular disease, leading to a prediction of 'Yes' for cardio_next. The patient is currently on insulin, indicating diabetes, thus 'Yes' for diabetes_current. Hypertension is likely due to the prescription of Lisinopril, a common antihypertensive, supporting 'Yes' for hypertension_current. There is no evidence of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3773,
+    "completion_tokens": 256
+  }
+}

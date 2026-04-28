@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses, including coronary atherosclerosis and heart failure, which suggest a high risk for lipid metabolism disorders and cardiovascular disease. The presence of medications like atorvastatin supports the likelihood of lipid disorders. Hypertension is indicated by the prescription of captopril and metoprolol. There is no evidence of diabetes or obesity in the current visit record. The risk of stroke is elevated due to the existing cardiovascular conditions.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3900,
+    "completion_tokens": 242
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"There is no evidence of lipid disorders in the current visit record. There is no mention of diabetes or obesity. Hypertension is likely due to the presence of acute on chronic diastolic heart failure and the medication Lisinopril. Cardiovascular disease is indicated by heart failure and mitral valve disorders. Acute kidney failure suggests a high likelihood of kidney disease. There is no evidence to suggest a risk of stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 237
+  }
+}

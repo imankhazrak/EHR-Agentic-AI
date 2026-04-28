@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has diagnoses of chronic diastolic heart failure and congestive heart failure, which indicate cardiovascular issues, supporting a prediction of cardiovascular disease in the next visit. The presence of morbid obesity is explicitly stated, confirming current obesity. Hypertension is likely due to the prescribed medications like Lisinopril and Amlodipine, which are commonly used for hypertension management. There is no evidence of diabetes or kidney disease in the current visit record. The risk of stroke is supported by the presence of atrial",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3661,
+    "completion_tokens": 256
+  }
+}

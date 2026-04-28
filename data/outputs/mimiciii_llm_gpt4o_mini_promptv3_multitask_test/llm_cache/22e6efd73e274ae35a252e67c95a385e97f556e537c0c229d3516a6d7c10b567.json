@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient is currently prescribed insulin, indicating diabetes management. There is no evidence of hypertension or obesity in the record. The presence of severe sepsis and acute respiratory failure suggests a high risk for cardiovascular complications, hence the prediction for cardiovascular disease. Kidney disease is also a possibility due to the severity of the current conditions. There is no evidence to suggest a stroke risk at this time.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1053,
+    "completion_tokens": 230
+  }
+}

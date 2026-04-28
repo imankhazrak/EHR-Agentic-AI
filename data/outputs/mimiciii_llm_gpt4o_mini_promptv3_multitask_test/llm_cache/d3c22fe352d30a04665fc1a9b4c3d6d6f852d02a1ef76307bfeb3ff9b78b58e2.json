@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of coronary atherosclerosis and is prescribed Rosuvastatin, indicating a potential lipid metabolism disorder. There is no evidence of diabetes in the current visit. The patient has unspecified essential hypertension, indicating current hypertension. There is no indication of obesity. Given the history of heart failure and coronary artery disease, there is a significant risk for cardiovascular disease. No evidence suggests kidney disease or stroke risk based on the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3890,
+    "completion_tokens": 243
+  }
+}

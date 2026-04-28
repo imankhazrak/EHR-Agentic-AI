@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Paroxysmal ventricular tachycardia; Acute respiratory failure; Acute kidney failure, unspecified; Acute and subacute necrosis of liver; Acute pancreatitis; Cardiac complications, not elsewhere classified; Central nervous system complication; Anoxic brain damage; Urinary tract infection, site not specified; Chronic systolic heart failure; Hyperosmolality and/or hypernatremia; Dependence on respirator, status; Cardiac arrest; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Congestive heart failure, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Other and unspecified alcohol dependence, unspecified; Anemia, unspecified; Coronary atherosclerosis of native coronary artery; Percutaneous transluminal coronary angioplasty status; Automatic implantable cardiac defibrillator in situ
+- Medications prescribed: Heparin Sodium; Heparin; D5W; Chlorhexidine Gluconate 0.12% Oral Rinse; Albuterol Inhaler; 0.9% Sodium Chloride; Magnesium Sulfate; SW; Furosemide; CefazoLIN; Magnesium Oxide; Iso-Osmotic Dextrose; Propofol; 5% Dextrose; Potassium Chloride; Calcium Carbonate; Ciprofloxacin IV; Heparin Flush (10 units/ml); Heparin Flush (5000 Units/mL); Pantoprazole Sodium; Vial; Metoprolol Tartrate; 0.9% Sodium Chloride (Mini Bag Plus); Ampicillin Sodium; D5 1/2NS; Metoclopramide; Dronedarone; Artificial Tears; Acetaminophen (Liquid); 1/2 NS; Phytonadione; Piperacillin-Tazobactam; Lidocaine; CefePIME; Multivitamin IV; Amiodarone; Thiamine; Lorazepam; Warfarin; 5% Dextrose (EXCEL BAG); FoLIC Acid; Multivitamins; Dextrose 50%; MetRONIDAZOLE (FLagyl); Calcium Gluconate; Sodium Polystyrene Sulfonate; Insulin; Famotidine; Captopril; Sodium Bicarbonate
+- Procedures performed: Excision or destruction of other lesion or tissue of heart, endovascular approach; Temporary tracheostomy; Implant of pulsation balloon; Cardiac mapping; Other electric countershock of heart; Cardiopulmonary resuscitation, not otherwise specified; Percutaneous [endoscopic] gastrostomy [PEG]; Enteral infusion of concentrated nutritional substances; Venous catheterization for renal dialysis; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

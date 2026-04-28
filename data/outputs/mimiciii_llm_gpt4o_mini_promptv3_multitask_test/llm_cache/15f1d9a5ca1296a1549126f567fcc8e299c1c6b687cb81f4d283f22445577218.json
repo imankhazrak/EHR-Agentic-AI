@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record indicates diagnoses of coronary atherosclerosis and congestive heart failure, which are strong indicators of cardiovascular disease, leading to a prediction of 'Yes' for cardio_next. There is no evidence of diabetes, hypertension, obesity, or kidney disease in the current visit record. The patient has acute pancreatitis and gallbladder issues, but these do not directly indicate lipid disorders or stroke risk.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3432,
+    "completion_tokens": 235
+  }
+}

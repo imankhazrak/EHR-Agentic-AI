@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Malignant neoplasm of liver, primary; Hepatic encephalopathy; Spontaneous bacterial peritonitis; Calculus of gallbladder with other cholecystitis, without mention of obstruction; Hemorrhage complicating a procedure; Acute posthemorrhagic anemia; Other specified forms of effusion, except tuberculous; Pulmonary collapse; Paranoid type schizophrenia, unspecified; Other ascites; Portal hypertension; Esophageal varices without mention of bleeding; Acute kidney failure, unspecified; Paralytic ileus; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, in remission; Other iatrogenic hypotension; Removal of other organ (partial) (total) causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Other secondary thrombocytopenia; Aspiration of fluid as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Enlargement of lymph nodes; Bipolar disorder, unspecified; Posttraumatic stress disorder; Opioid type dependence, in remission; Dementia, unspecified, without behavioral disturbance; Other alteration of consciousness; Personality change due to conditions classified elsewhere; Unspecified episodic mood disorder; Personal history of tuberculosis; Tobacco use disorder
+- Medications prescribed: 0.9% Sodium Chloride; FoLIC Acid; 5% Dextrose; Bag; Magnesium Sulfate; PHENYLEPHrine; Thiamine; Albumin 5% (25g / 500mL); Morphine Sulfate; Insulin; Glucagon; Dextrose 50%; Albumin 25% (12.5g / 50mL); HYDROmorphone (Dilaudid); 0.45% Sodium Chloride; D5 1/2NS; Phytonadione; Quetiapine Fumarate; Heparin; Lorazepam; Lactulose; Rifaximin; OxycoDONE (Immediate Release); Sterile Water; Propofol; MetRONIDAZOLE (FLagyl); NS; Levofloxacin; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Chlorhexidine Gluconate 0.12% Oral Rinse; Famotidine; Iso-Osmotic Sodium Chloride; Sodium Chloride 0.9%  Flush; Fentanyl Citrate; Multivitamin IV; Doxycycline Hyclate; Lidocaine 1%; NS Syringe (Intrapleural); Lidocaine Jelly 2% (Urojet); Lactulose Enema; Quetiapine Oral Suspension; Spironolactone; Furosemide; Chloraseptic Throat Spray; Acetaminophen; Milk of Magnesia; Potassium Chloride; Albumin 5% (12.5g / 250mL); Polyethylene Glycol; Heparin Flush (10 units/ml)
+- Procedures performed: Partial hepatectomy; Cholecystectomy; Intra-abdominal venous shunt; Diagnostic ultrasound of digestive system; Thoracentesis; Central venous catheter placement with guidance; Phlebography of the portal venous system using contrast material; Injection into thoracic cavity; Insertion of intercostal catheter for drainage; Injection of antibiotic
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

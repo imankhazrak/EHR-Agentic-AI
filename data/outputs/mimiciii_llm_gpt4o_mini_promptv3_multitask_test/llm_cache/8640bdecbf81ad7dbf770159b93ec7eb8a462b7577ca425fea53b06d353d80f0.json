@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient is prescribed Atorvastatin, which indicates a history of lipid issues, suggesting a likelihood of 'Disorders of Lipid Metabolism' in the next visit. Humulin-R Insulin indicates current diabetes management. Captopril and Metoprolol suggest hypertension treatment. There is no explicit evidence of obesity. The presence of atrial fibrillation and other circulatory issues raises the risk for cardiovascular disease. The urinary tract infection and other infections may indicate a risk for kidney disease. Atrial fibrillation",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 817,
+    "completion_tokens": 256
+  }
+}

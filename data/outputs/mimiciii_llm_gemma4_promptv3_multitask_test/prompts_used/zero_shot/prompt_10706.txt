@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Diverticulosis of colon with hemorrhage; Peritoneal abscess; Acute kidney failure with lesion of tubular necrosis; Other encephalopathy; Ventilator associated pneumonia; Unspecified protein-calorie malnutrition; Other pulmonary insufficiency, not elsewhere classified, following trauma and surgery; Thrombocytopenia, unspecified; Other chronic pulmonary heart diseases; Cardiac arrest; Cardiac complications, not elsewhere classified; Atrial flutter; Other postoperative infection; Other pneumothorax; Percutaneous transluminal coronary angioplasty status; Unspecified essential hypertension; Atrial fibrillation; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Other and unspecified Escherichia coli [E. coli]; Examination of participant in clinical trial; Congestive heart failure, unspecified; Effusion of joint, forearm
+- Medications prescribed: Ipratropium Bromide Neb; Furosemide; Amiodarone; Diltiazem Extended-Release; 5% Dextrose; Diltiazem; Famotidine; Sodium Chloride 0.9%  Flush; Acetaminophen; 0.9% Sodium Chloride; Sterile Water; 0.9% Sodium Chloride (Mini Bag Plus); Calcium Gluconate; Ciprofloxacin IV; CefePIME; HydrALAzine; Potassium Chloride; Labetalol; Vancomycin; Midazolam; Propofol; Albumin 5%; Lactated Ringers; Iso-Osmotic Sodium Chloride; Enalaprilat; Fentanyl Citrate; Soln; PHENYLEPHrine; Cisatracurium Besylate; Lisinopril; Vecuronium Bromide; Albumin 5% (25g / 500mL); Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Insulin; Dextrose 50%; Glucagon; Sodium Phosphate; 5% Dextrose (EXCEL BAG); Acetaminophen IV; HYDROmorphone (Dilaudid); Heparin Flush (10 units/ml); Iso-Osmotic Dextrose; Piperacillin-Tazobactam; Amlodipine; Lidocaine Jelly 2% (Urojet); Sodium Bicarbonate; HYDROmorphone; Heparin; Magnesium Sulfate; Bag
+- Procedures performed: Open and other right hemicolectomy; Temporary tracheostomy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Arteriography of other intra-abdominal arteries; Closed [endoscopic] biopsy of bronchus; Fiber-optic bronchoscopy; Enteral infusion of concentrated nutritional substances; Percutaneous abdominal drainage; Hemodialysis; Bronchoscopy through artificial stoma; Percutaneous [endoscopic] gastrostomy [PEG]; Arthrocentesis; Insertion of intercostal catheter for drainage
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple cardiovascular issues including a subendocardial infarction and atrial fibrillation, which increases the likelihood of future cardiovascular disease and stroke. The presence of diabetes is indicated by the use of insulin, and hypertension is likely given the medications prescribed (e.g., Metoprolol). There is no explicit evidence of obesity in the current visit record. The lipid disorder prediction is based on the general prevalence in the population, as there is no direct evidence of a lipid disorder diagnosis but the patient is on",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3790,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and unspecified essential hypertension, indicating current diabetes and hypertension. There is no mention of obesity in the record. The patient is on atorvastatin, which suggests a potential lipid disorder, and given the prevalence, it is likely they may be diagnosed with a lipid disorder in the next visit. The presence of congestive heart failure and atrial fibrillation indicates a high risk for cardiovascular disease. The history of cerebrovascular disease raises concern for future stroke, but",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 928,
+    "completion_tokens": 256
+  }
+}

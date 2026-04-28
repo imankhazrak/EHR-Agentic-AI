@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The current visit record indicates a diagnosis of 'Other and unspecified hyperlipidemia', which supports a prediction of lipid metabolism disorders in the next visit. The patient is prescribed insulin, indicating current diabetes. The record includes 'Unspecified essential hypertension', confirming current hypertension. 'Obesity, unspecified' is also documented, confirming current obesity. While there are no direct indicators of cardiovascular disease, the presence of hypertension and obesity raises the likelihood. There is no evidence of kidney disease or stroke in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3542,
+    "completion_tokens": 255
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a current lipid disorder. Diabetes mellitus is also diagnosed, confirming the presence of diabetes. There is no mention of hypertension in the record. The patient has obstructive sleep apnea, which is often associated with obesity, and the presence of end-stage renal disease suggests significant kidney issues. While cardiovascular disease is likely due to the combination of diabetes and hypercholesterolemia, there is no direct evidence of stroke risk factors in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1119,
+    "completion_tokens": 256
+  }
+}

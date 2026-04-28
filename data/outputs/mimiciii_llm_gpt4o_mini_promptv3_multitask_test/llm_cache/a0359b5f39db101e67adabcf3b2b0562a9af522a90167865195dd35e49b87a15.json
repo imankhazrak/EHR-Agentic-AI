@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses (e.g., heart failure, atrial flutter, atrial fibrillation) and is prescribed medications like atorvastatin, which indicates a potential lipid disorder. There is no evidence of diabetes in the current record. Hypertension is likely due to the use of lisinopril, an antihypertensive. The presence of heart failure and atrial fibrillation suggests a high risk for cardiovascular disease. The patient's acute kidney issues and heart conditions increase the likelihood of kidney disease. Given",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3881,
+    "completion_tokens": 256
+  }
+}

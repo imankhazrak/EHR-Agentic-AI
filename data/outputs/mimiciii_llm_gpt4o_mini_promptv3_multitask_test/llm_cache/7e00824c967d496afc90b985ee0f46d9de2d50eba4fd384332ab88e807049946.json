@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple cardiovascular issues, including a subendocardial infarction and coronary atherosclerosis, which suggest a high likelihood of lipid metabolism disorders. The presence of insulin indicates diabetes management. Medications like Metoprolol and Captopril suggest hypertension treatment. There is no explicit evidence of obesity in the record. Given the patient's heart conditions, the likelihood of future cardiovascular events is high, and the presence of congestive heart failure and other cardiac issues increases the risk of kidney disease. The overall cardiovascular risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1129,
+    "completion_tokens": 256
+  }
+}

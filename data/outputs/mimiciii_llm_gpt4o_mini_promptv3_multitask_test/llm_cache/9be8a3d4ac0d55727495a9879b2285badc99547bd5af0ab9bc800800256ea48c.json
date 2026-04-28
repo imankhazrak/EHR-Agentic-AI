@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"There is no evidence of lipid disorders in the current visit record. There is no mention of diabetes or obesity. Hypertension is likely due to the presence of medications like Hydralazine and Captopril, which are used to manage high blood pressure. Atrial fibrillation suggests a risk for cardiovascular disease, hence the prediction of 'Yes' for cardio next. Acute kidney failure indicates a current kidney issue, leading to a prediction of 'Yes' for kidney next. There is no evidence of stroke risk in the current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 959,
+    "completion_tokens": 256
+  }
+}

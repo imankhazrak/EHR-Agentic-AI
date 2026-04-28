@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid disorder. There is no evidence of diabetes in the record. The patient has 'Unspecified essential hypertension', confirming current hypertension. There is no mention of obesity. The patient has chronic systolic heart failure and atrial fibrillation, which are strong indicators for potential cardiovascular disease. Additionally, the patient has 'Acute kidney failure' and 'Chronic kidney disease, Stage III', suggesting ongoing kidney issues. The presence",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1228,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The current visit record indicates diagnoses of atrial flutter and secondary malignant neoplasm, which suggest a higher risk for cardiovascular issues. However, there is no evidence of lipid disorders, diabetes, hypertension, or obesity in the current record. Therefore, predictions for those conditions are negative. The probability for cardiovascular disease is higher due to the atrial flutter diagnosis.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3468,
+    "completion_tokens": 224
+  }
+}

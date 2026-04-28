@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of obesity, which is confirmed. There is no explicit evidence of diabetes or hypertension in the current visit record. However, the presence of multiple cardiovascular conditions (coronary atherosclerosis, intermediate coronary syndrome, atrial fibrillation, congestive heart failure) suggests a high likelihood of cardiovascular disease in the next visit. The patient's retention of urine and congestive heart failure indicate potential kidney issues, leading to a prediction of kidney disease. The combination of these cardiovascular and renal issues increases the risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 256
+  }
+}

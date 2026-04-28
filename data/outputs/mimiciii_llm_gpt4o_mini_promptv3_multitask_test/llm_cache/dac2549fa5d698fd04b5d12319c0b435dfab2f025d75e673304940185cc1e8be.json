@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of subendocardial infarction, which indicates a current cardiovascular issue, suggesting a high likelihood of future cardiovascular disease. The presence of hypertension is supported by the medication Metoprolol, which is commonly used to treat high blood pressure. The patient has multiple diagnoses indicating severe systemic issues, including hepatorenal syndrome, which suggests a risk for kidney disease. The combination of cardiovascular issues and systemic health problems increases the risk for stroke. There is no evidence of diabetes or obesity in the current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3832,
+    "completion_tokens": 256
+  }
+}

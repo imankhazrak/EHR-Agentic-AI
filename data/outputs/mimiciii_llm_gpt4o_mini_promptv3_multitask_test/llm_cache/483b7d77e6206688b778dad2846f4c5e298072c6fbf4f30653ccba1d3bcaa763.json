@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), which indicates current diabetes. There is also a diagnosis of unspecified essential hypertension, indicating current hypertension. The patient's BMI is between 35.0-35.9, confirming obesity. The presence of hyperlipidemia suggests a high likelihood of lipid metabolism disorders, especially given the patient's cardiovascular issues. The patient has multiple cardiovascular conditions, increasing the risk for future cardiovascular disease. However, there is no evidence of current kidney disease or recent events indicating a high",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4110,
+    "completion_tokens": 256
+  }
+}

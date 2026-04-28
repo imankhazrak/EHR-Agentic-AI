@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Acute on chronic combined systolic and diastolic heart failure; Pneumonia, organism unspecified; Coronary atherosclerosis of autologous vein bypass graft; Urinary tract infection, site not specified; Blood in stool; Acute kidney failure, unspecified; Body Mass Index 40.0-44.9, adult; Coronary atherosclerosis of native coronary artery; Chronic total occlusion of coronary artery; Congestive heart failure, unspecified; Chronic obstructive asthma, unspecified; Atrial fibrillation; Acute bronchitis; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Other diseases of trachea and bronchus; Chronic kidney disease, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Enlargement of lymph nodes; Osteoarthrosis, unspecified whether generalized or localized, site unspecified; Ulcer of other part of foot; Other chronic pulmonary heart diseases; Hypoxemia; Leukocytosis, unspecified; Incisional hernia without mention of obstruction or gangrene; Other constipation; Old myocardial infarction; Personal history of Methicillin resistant Staphylococcus aureus; Other postprocedural status; Other dependence on machines, supplemental oxygen; Family history of diabetes mellitus
+- Medications prescribed: Aluminum-Magnesium Hydrox.-Simethicone; Potassium Chloride; Bisacodyl; Metoprolol Succinate XL; Torsemide; HydrALAzine; Lisinopril; Vancomycin; Metoprolol Tartrate; Insulin; Sodium Chloride 0.9%  Flush; Nitroglycerin SL; PredniSONE; Heparin Sodium; Vial; 5% Dextrose; Pantoprazole; 0.9% Sodium Chloride; Iso-Osmotic Dextrose; Sodium Bicarbonate; Furosemide; Atropine Sulfate; Acetylcysteine 20%; Clopidogrel; D5 1/2NS; Meropenem; 0.9% Sodium Chloride (Mini Bag Plus); Azithromycin; Guaifenesin; Benzonatate; Acetaminophen; Xopenex Neb; Magnesium Sulfate; Heparin; Ondansetron; Sucralfate; Lidocaine; Morphine Sulfate; Valsartan; Aspirin; Albuterol 0.083% Neb Soln; Pneumococcal Vac Polyvalent; Influenza Virus Vaccine; Doxycycline Hyclate; Docusate Sodium; Vitamin D; Sodium Chloride Nasal; Tiotropium Bromide; Senna; Glucagon
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Insertion of non-drug-eluting coronary artery stent(s); Right heart cardiac catheterization; Coronary arteriography using two catheters; Other and unspecified coronary arteriography; Procedure on single vessel; Insertion of one vascular stent; Central venous catheter placement with guidance
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

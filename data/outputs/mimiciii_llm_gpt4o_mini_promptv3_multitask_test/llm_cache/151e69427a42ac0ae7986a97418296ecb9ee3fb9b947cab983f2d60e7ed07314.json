@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', which supports a prediction of lipid metabolism disorders in the next visit. The presence of 'Diabetes mellitus without mention of complication' indicates current diabetes. The patient is diagnosed with 'Obesity, unspecified', confirming current obesity. There is no explicit diagnosis or medication indicating hypertension. Given the patient's atrial fibrillation and hyperlipidemia, there is a significant risk for cardiovascular disease in the next visit. However, there are no indicators of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3941,
+    "completion_tokens": 256
+  }
+}

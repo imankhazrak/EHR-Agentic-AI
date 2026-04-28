@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"There is no evidence of lipid metabolism disorders in the current visit record. The patient does not have a documented history of diabetes or obesity. Hypertension is suggested by the prescription of Labetalol, which is used to treat high blood pressure. The patient has a significant head injury with hemorrhage, which increases the risk of stroke, thus predicting a potential stroke in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3732,
+    "completion_tokens": 231
+  }
+}

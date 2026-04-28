@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient is prescribed Atorvastatin, which indicates a current concern for lipid levels, suggesting a likely diagnosis of lipid metabolism disorder in the next visit. There is no evidence of diabetes in the record. The patient has a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. There is no mention of obesity. The patient has multiple cardiovascular issues (atrial fibrillation and congestive heart failure), suggesting a high likelihood of ongoing cardiovascular disease. The patient is diagnosed with chronic kidney disease stage V, indicating a",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 829,
+    "completion_tokens": 256
+  }
+}

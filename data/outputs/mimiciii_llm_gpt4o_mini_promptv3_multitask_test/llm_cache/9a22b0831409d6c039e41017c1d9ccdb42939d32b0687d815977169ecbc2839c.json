@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a lipid disorder. The use of insulin suggests diabetes management, and 'Unspecified essential hypertension' confirms current hypertension. 'Obesity, unspecified' indicates the patient is currently obese. The presence of congestive heart failure and atrial fibrillation suggests a high likelihood of cardiovascular disease. Oliguria and anuria may indicate kidney issues, but there is no explicit diagnosis of kidney disease. There is no evidence of a stroke diagnosis or",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 982,
+    "completion_tokens": 256
+  }
+}

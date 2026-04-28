@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin indicates current diabetes management. Unspecified essential hypertension is documented, confirming current hypertension. Morbid obesity is explicitly stated, confirming current obesity. The combination of diabetes, hypertension, and obesity increases the risk for cardiovascular disease, leading to a prediction of cardiovascular issues in the next visit. The patient's history of subarachnoid and intracerebral hemorrhage suggests a risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4063,
+    "completion_tokens": 256
+  }
+}

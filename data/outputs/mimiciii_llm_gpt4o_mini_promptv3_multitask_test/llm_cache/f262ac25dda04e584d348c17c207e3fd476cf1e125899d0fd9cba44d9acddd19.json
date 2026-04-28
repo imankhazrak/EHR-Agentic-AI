@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant comorbidities, including diabetes with neurological and renal manifestations, end-stage renal disease, and hypertension. The presence of hyperlipidemia and the use of atorvastatin suggest a likelihood of lipid metabolism disorders. Given the patient's cardiovascular issues (subendocardial infarction, coronary atherosclerosis) and the interplay of diabetes and hypertension, there is a high probability of future cardiovascular events and stroke. The patient's obesity is also documented, supporting the prediction of related complications.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4065,
+    "completion_tokens": 256
+  }
+}

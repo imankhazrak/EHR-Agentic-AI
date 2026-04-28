@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating serious health issues, including congestive heart failure and atrial fibrillation, which suggest a high likelihood of cardiovascular disease. The presence of insulin in medications indicates current diabetes management. Hypertension is likely given the use of medications like Metoprolol and Lisinopril, which are commonly prescribed for blood pressure control. There is no explicit evidence of obesity in the current visit record. The patient has acute kidney failure, which increases the likelihood of kidney disease in the next visit. The",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 256
+  }
+}

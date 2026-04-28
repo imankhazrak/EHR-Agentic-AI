@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological manifestations, indicating current diabetes. The presence of medications like Atorvastatin suggests a history of lipid issues, leading to a prediction of potential lipid disorder diagnosis in the next visit. The use of Metoprolol and Doxazosin indicates management of hypertension. There is no explicit mention of obesity in the record. The patient has a history of coronary procedures, suggesting a risk for cardiovascular disease. There is no evidence of kidney disease or stroke in the current visit",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1121,
+    "completion_tokens": 256
+  }
+}

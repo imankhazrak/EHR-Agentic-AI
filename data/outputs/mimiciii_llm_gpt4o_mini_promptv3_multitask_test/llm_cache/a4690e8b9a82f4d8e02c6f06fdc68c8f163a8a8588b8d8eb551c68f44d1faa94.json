@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented history of diabetes with multiple manifestations, which indicates current diabetes. There is also a diagnosis of hypertensive chronic kidney disease, suggesting current hypertension. The presence of obesity is implied by the bariatric surgery status. The patient has significant cardiovascular issues, including coronary atherosclerosis and heart failure, indicating a high likelihood of future cardiovascular disease. The end-stage renal disease diagnosis strongly suggests kidney disease will continue. The risk of stroke is elevated due to the patient's cardiovascular conditions and diabetes.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1383,
+    "completion_tokens": 253
+  }
+}

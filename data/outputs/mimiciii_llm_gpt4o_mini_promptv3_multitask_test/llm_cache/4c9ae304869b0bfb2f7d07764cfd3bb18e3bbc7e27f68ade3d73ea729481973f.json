@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Diabetes mellitus without mention of complication, type II or unspecified type', indicating current diabetes. There is also a diagnosis of 'Unspecified essential hypertension', confirming current hypertension. The presence of 'Pure hypercholesterolemia' suggests a high likelihood of a lipid metabolism disorder in the next visit. The patient has a history of cardiovascular issues, including 'Subendocardial infarction' and 'Old myocardial infarction', which increases the risk of cardiovascular disease and stroke. There",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4206,
+    "completion_tokens": 256
+  }
+}

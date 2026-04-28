@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid disorder, which supports a prediction of a future diagnosis of lipid metabolism disorders. The patient is diagnosed with 'Diabetes with renal manifestations', confirming current diabetes. 'Hypertensive chronic kidney disease' indicates current hypertension. There is no explicit evidence of obesity in the record. The presence of diabetes, chronic kidney disease, and heart failure suggests a high risk for cardiovascular disease. The patient has end-stage renal disease, which",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4039,
+    "completion_tokens": 256
+  }
+}

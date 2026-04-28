@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Infection and inflammatory reaction due to indwelling urinary catheter; Streptococcal septicemia; Sepsis; Acute on chronic diastolic heart failure; Delirium due to conditions classified elsewhere; Late effects of cerebrovascular disease, hemiplegia affecting unspecified side; Hyperosmolality and/or hypernatremia; Urinary tract infection, site not specified; Urinary catheterization as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Congestive heart failure, unspecified; Late effects of cerebrovascular disease, aphasia; Other late effects of cerebrovascular disease, facial weakness; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Anemia, unspecified; Diverticulum of bladder; Unspecified sleep apnea; Long-term (current) use of anticoagulants; Personal history of venous thrombosis and embolism; Atrial fibrillation; Other chronic pulmonary heart diseases; Other and unspecified hyperlipidemia; Benign essential hypertension; Dehydration; Malnutrition of moderate degree; Pressure ulcer, lower back; Pressure ulcer, stage II
+- Medications prescribed: Influenza Virus Vaccine; 0.9% Sodium Chloride; 1/2 NS; 5% Dextrose; Potassium Chloride; Haloperidol; Furosemide; Pantoprazole; Warfarin; Heparin; Aspirin; Vancomycin; Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; Sodium Chloride 0.9%  Flush; Vial; Pantoprazole Sodium; Allopurinol; Paroxetine; Simvastatin; Insulin; CefePIME; NS (Mini Bag Plus); Amino Acids 4.25% W/ Dextrose 5%; SW; Phytonadione; Multivitamin IV; Magnesium Sulfate; Ampicillin-Sulbactam; MetFORMIN (Glucophage); Ampicillin Sodium; Heparin Flush (10 units/ml); Iso-Osmotic Sodium Chloride; CeftriaXONE; Famotidine; Lisinopril; Multivitamins
+- Procedures performed: Venous catheterization, not elsewhere classified
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

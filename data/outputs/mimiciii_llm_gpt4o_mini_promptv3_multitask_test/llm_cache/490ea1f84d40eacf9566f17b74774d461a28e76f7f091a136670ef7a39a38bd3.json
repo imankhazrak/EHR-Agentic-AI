@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, indicating a disorder of lipid metabolism, and is prescribed atorvastatin, which supports this diagnosis. The patient has a documented diagnosis of diabetes mellitus type II. Morbid obesity is also noted, confirming the presence of obesity. There is no evidence of hypertension in the current visit record. Atrial fibrillation may increase cardiovascular risk, but there is no direct evidence of cardiovascular disease at this visit. There is no indication of kidney disease or stroke risk based on",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 256
+  }
+}

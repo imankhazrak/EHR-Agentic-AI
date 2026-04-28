@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient is prescribed Atorvastatin, which indicates a current management of lipid levels, suggesting a likelihood of a lipid metabolism disorder. There is no evidence of diabetes or obesity in the record. The presence of hypertension is supported by the prescription of Lisinopril and Atenolol. Given the patient's history of heart failure and aortocoronary bypass, there is a high likelihood of cardiovascular disease. No evidence suggests current kidney disease or a risk of stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 866,
+    "completion_tokens": 248
+  }
+}

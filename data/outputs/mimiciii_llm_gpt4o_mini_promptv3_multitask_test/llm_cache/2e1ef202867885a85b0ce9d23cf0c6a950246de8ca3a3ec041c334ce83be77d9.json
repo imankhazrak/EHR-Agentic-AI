@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple cardiovascular issues (atrial fibrillation, congestive heart failure) and is prescribed medications like insulin, which indicates diabetes. The presence of hypertension is likely given the cardiac conditions. There is no explicit evidence of obesity in the current record. The patient's history suggests a high likelihood of cardiovascular disease and kidney issues due to the current diagnoses and medications. Stroke risk is also elevated due to the atrial fibrillation.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3703,
+    "completion_tokens": 239
+  }
+}

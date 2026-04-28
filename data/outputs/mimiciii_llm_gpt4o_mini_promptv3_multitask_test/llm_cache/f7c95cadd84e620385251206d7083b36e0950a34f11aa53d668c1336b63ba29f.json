@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of atrial fibrillation and is currently prescribed medications like insulin, which indicates diabetes. There is also evidence of acute kidney failure, suggesting a risk for kidney disease. Hypertension is likely given the use of medications like Metoprolol and Lisinopril. However, there is no explicit evidence of lipid disorders or obesity. The risk for cardiovascular disease is present due to the combination of atrial fibrillation and diabetes, but no direct evidence of stroke risk is noted.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3919,
+    "completion_tokens": 254
+  }
+}

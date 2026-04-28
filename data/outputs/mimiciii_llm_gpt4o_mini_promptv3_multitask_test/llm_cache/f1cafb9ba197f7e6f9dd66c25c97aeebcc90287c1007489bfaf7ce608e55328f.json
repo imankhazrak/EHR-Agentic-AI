@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"There is no evidence of lipid disorders in the current visit record. There is no mention of diabetes or obesity. Hypertension is likely due to the prescription of Hydralazine, which is used to treat high blood pressure. Atrial fibrillation suggests a risk for cardiovascular disease. Acute kidney failure indicates a current kidney issue, and the patient is likely to have ongoing kidney problems. There is no evidence to suggest a risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 240
+  }
+}

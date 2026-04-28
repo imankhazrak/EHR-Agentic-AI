@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of obesity hypoventilation syndrome and chronic diastolic heart failure, indicating obesity and cardiovascular issues. The presence of secondary diabetes mellitus suggests current diabetes. The patient also has acute kidney failure, which raises the likelihood of kidney disease in the next visit. Given the chronic conditions and the prevalence of lipid disorders in similar cases, there is a reasonable prediction for lipid metabolism disorders in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3673,
+    "completion_tokens": 238
+  }
+}

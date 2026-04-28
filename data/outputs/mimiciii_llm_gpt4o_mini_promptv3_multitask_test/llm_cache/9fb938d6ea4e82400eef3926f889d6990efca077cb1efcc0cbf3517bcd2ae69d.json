@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, indicating current hypertension. The presence of insulin in medications suggests diabetes, likely type II, as seen in the demonstration cases. There is no evidence of obesity in the current visit record. The patient has acute kidney failure and unspecified disorder of kidney and ureter, suggesting a likelihood of kidney disease in the next visit. Cardiovascular disease is possible due to hypertension and the presence of multiple serious conditions, but no direct evidence of existing cardiovascular disease is noted. There is no evidence",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3759,
+    "completion_tokens": 256
+  }
+}

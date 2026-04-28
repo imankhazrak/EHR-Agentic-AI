@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of fourth cervical vertebra; End stage renal disease; Complications of transplanted kidney; Chronic glomerulonephritis with unspecified pathological lesion in kidney; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Cocaine dependence, continuous; Opioid type dependence, continuous; Encephalopathy, unspecified; Pneumonia due to escherichia coli [E. coli]; Septicemia due to escherichia coli [E. coli]; Sepsis; Intervertebral disc disorder with myelopathy, cervical region; Chronic osteomyelitis, other specified sites; Disruption of internal operation (surgical) wound; Hematoma complicating a procedure; Other postoperative infection; Pulmonary collapse; Acute respiratory failure; Blood in stool; Other convulsions; Surgical operation with transplant of whole organ causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Accidents occurring in unspecified place; Closed fracture of fifth cervical vertebra; Closed fracture of sixth cervical vertebra; Unspecified fall; Accidents occurring in other specified places; Atrial fibrillation; Other and unspecified complications of medical care, not elsewhere classified; Unspecified acquired hypothyroidism; Kyphosis (acquired) (postural); Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Accidents occurring in residential institution; Unspecified gastritis and gastroduodenitis, without mention of hemorrhage; Personal history of noncompliance with medical treatment, presenting hazards to health
+- Medications prescribed: Phenytoin; Lorazepam; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; SW; Potassium Chloride; Vial; Midazolam; Pantoprazole Sodium; Fentanyl Citrate; Fentanyl Patch; PredniSONE; Acetaminophen; Metoprolol; Morphine Sulfate; Captopril; Haloperidol; Pantoprazole; Docusate Sodium (Liquid); Ciprofloxacin HCl; HydrALAzine; Insulin; Sodium Chloride 0.9%  Flush; Cepacol (Menthol); Lisinopril; Heparin Flush CVL  (100 units/ml); OxycoDONE (Immediate Release); Diltiazem; Amlodipine; Phenytoin (Suspension); Guaifenesin; Amiodarone; Heparin Flush PICC (100 units/ml); Vancomycin; Iso-Osmotic Dextrose; Heparin; NS (Glass Bottle); Phenytoin Sodium; Ibuprofen Suspension; MethylPREDNISolone Sodium Succ; Aluminum Hydroxide Suspension; Ibuprofen; D5W; Ciprofloxacin IV; Sodium Polystyrene Sulfonate; Tuberculin Protein; CeftriaXONE; Norepinephrine; D5W (EXCEL BAG); NS
+- Procedures performed: Other cervical fusion of the anterior column, anterior technique; Other cervical fusion of the posterior column, posterior technique; Biopsy of bone, other bones; Other excision of joint, other specified sites; Excision of intervertebral disc; Excision of bone for graft, other bones; Open biopsy of soft tissue; Excisional debridement of wound, infection, or burn; Myotomy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Fusion or refusion of 2-3 vertebrae; Hemodialysis; Diagnostic ultrasound of heart; Venous catheterization, not elsewhere classified; Other endoscopy of small intestine
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

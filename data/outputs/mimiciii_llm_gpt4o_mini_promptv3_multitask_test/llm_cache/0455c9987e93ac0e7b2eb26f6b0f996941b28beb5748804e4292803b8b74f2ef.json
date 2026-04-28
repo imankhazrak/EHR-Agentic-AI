@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), which indicates current diabetes. There is also a history of coronary atherosclerosis, suggesting a high risk for cardiovascular disease. The presence of multiple kidney-related diagnoses (hydronephrosis, acute kidney failure) indicates a likelihood of kidney disease in the next visit. The patient is prescribed medications like Amlodipine and Metoprolol, which are used for hypertension, supporting the prediction of current hypertension. However, there is no evidence of obesity",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4134,
+    "completion_tokens": 256
+  }
+}

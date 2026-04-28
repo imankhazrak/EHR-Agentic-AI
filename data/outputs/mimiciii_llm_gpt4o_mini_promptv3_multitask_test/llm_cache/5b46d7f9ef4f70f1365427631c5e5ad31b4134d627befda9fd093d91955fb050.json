@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.40},\n  \"reasoning\": \"The patient has a history of diabetes (indicated by the prescription of insulin) and hypertension (suggested by the use of bisoprolol, a common antihypertensive). The presence of multiple cardiovascular risk factors, including atrial fibrillation and peripheral vascular disease, supports the prediction of cardiovascular disease in the next visit. The patient's current medications include simvastatin, which is used for lipid management, indicating a potential lipid disorder. The patient has a history of transient ischemic attack (TIA), which increases",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3939,
+    "completion_tokens": 256
+  }
+}

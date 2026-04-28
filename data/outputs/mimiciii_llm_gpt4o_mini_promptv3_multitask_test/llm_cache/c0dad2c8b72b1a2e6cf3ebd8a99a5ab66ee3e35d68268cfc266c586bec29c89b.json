@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of hypertension and is currently prescribed medications like Lisinopril and Metoprolol, indicating hypertension. The presence of diabetes is supported by the prescription of Insulin. The diagnoses include coronary atherosclerosis, which suggests a high risk for cardiovascular disease. The occlusion and stenosis of the carotid artery and the history of cerebrovascular events indicate a significant risk for stroke. There is no evidence of obesity in the current visit record. The lipid disorder prediction is based on the general prevalence",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3714,
+    "completion_tokens": 256
+  }
+}

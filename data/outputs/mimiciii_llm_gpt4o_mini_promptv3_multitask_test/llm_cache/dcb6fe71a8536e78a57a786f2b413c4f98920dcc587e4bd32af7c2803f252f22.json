@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has been diagnosed with 'Other and unspecified hyperlipidemia', indicating a current lipid disorder. There is no evidence of diabetes in the record. The patient has 'Unspecified essential hypertension', confirming current hypertension. There is no mention of obesity. The patient has multiple cardiovascular issues including atrial flutter and cerebral embolism, suggesting a high likelihood of cardiovascular disease. The record indicates 'Acute kidney failure' and 'Hypertensive chronic kidney disease', suggesting ongoing kidney issues. The presence of cerebral thrombosis",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1214,
+    "completion_tokens": 256
+  }
+}

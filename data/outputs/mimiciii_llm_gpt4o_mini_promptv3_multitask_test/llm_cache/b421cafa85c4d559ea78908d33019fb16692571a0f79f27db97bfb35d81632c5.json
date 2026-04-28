@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of cardiovascular issues (subendocardial infarction, congestive heart failure) and is prescribed atorvastatin, which suggests a lipid disorder. The presence of insulin indicates diabetes. Unspecified essential hypertension is documented, confirming hypertension. There is no evidence of obesity in the current visit. Given the cardiovascular conditions, the likelihood of future cardiovascular disease is high. The presence of chronic conditions and medications suggests a risk for kidney disease. The patient's history of cardiovascular issues also raises the risk for stroke.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3548,
+    "completion_tokens": 256
+  }
+}

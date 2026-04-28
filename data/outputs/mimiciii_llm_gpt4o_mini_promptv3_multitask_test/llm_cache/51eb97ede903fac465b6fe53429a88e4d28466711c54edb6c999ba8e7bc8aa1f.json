@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', which indicates a current lipid metabolism disorder, leading to a prediction of a diagnosis in the next visit. There is no explicit evidence of diabetes in the current record. The presence of congestive heart failure and atrial fibrillation suggests hypertension. The patient has a history of transient ischemic attack (TIA), which, combined with other cardiovascular issues, indicates a risk for stroke. The presence of obesity is suggested by the diagnosis of obstructive sleep apnea",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3958,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), which indicates current diabetes. Hypertension is also present as the patient has hypertensive chronic kidney disease. There is evidence of hyperlipidemia, which supports a prediction of lipid disorder in the next visit. The presence of multiple cardiovascular risk factors (hypertension, diabetes, and hyperlipidemia) increases the likelihood of cardiovascular disease. The patient also has chronic kidney disease, which raises the risk of kidney disease in the next visit. The diagnosis of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4100,
+    "completion_tokens": 256
+  }
+}

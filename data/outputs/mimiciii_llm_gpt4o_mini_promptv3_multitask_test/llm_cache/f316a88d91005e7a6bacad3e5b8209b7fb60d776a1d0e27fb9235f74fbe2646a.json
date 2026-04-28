@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented history of hyperlipidemia, which supports a prediction of lipid disorders in the next visit. Diabetes is explicitly mentioned in the current record. Hypertension is indicated by the presence of hypertensive chronic kidney disease. There is no evidence of obesity in the record. Given the acute myocardial infarction and other cardiac issues, there is a high likelihood of ongoing cardiovascular disease. The patient also has acute kidney failure and chronic kidney disease, suggesting a risk for kidney disease in the next visit. The presence",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 967,
+    "completion_tokens": 256
+  }
+}

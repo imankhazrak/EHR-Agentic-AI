@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has multiple diagnoses related to diabetes, including renal manifestations, which suggests significant metabolic issues. The presence of medications like Rosuvastatin and Tricor indicates management of lipid levels, supporting a prediction of lipid disorders. The patient's diabetes and hypertension are explicitly documented, and obesity is suggested by the presence of obstructive sleep apnea. The risk of cardiovascular disease is high given the patient's diabetes and hypertension, and kidney disease is likely due to the renal manifestations of diabetes. The risk of stroke is also elevated due to",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1112,
+    "completion_tokens": 256
+  }
+}

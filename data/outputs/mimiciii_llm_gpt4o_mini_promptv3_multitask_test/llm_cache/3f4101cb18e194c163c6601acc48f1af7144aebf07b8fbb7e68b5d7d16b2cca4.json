@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant health issues, including chronic kidney disease, chronic diastolic heart failure, and obesity. The presence of medications such as insulin suggests diabetes, while the use of medications like Lisinopril and Metoprolol indicates hypertension. The patient's obesity and existing cardiovascular conditions increase the likelihood of future cardiovascular disease and stroke. Additionally, the patient's chronic kidney disease suggests a high probability of kidney-related complications in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4014,
+    "completion_tokens": 244
+  }
+}

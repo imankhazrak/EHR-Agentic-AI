@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with ketoacidosis, indicating current diabetes. There is also unspecified essential hypertension noted, confirming current hypertension. There is no evidence of obesity in the record. The patient has severe sepsis and acute kidney failure, suggesting a high likelihood of kidney issues in the next visit. Cardiovascular concerns are indicated by the presence of septic shock and other severe conditions, which may lead to cardiovascular disease. However, there is no direct evidence of lipid disorders or stroke risk in the current visit.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1201,
+    "completion_tokens": 256
+  }
+}

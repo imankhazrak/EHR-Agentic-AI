@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a history of cardiovascular issues (e.g., atherosclerosis, atrial fibrillation) and is prescribed Atorvastatin, which indicates a lipid disorder. The presence of diabetes is supported by the prescription of insulin. Hypertension is indicated by the diagnosis of unspecified essential hypertension. There is no evidence of obesity in the current record. Given the patient's cardiovascular conditions, there is a high likelihood of future cardiovascular disease, and the unspecified disorder of kidney and ureter suggests potential kidney disease. The combination of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3854,
+    "completion_tokens": 256
+  }
+}

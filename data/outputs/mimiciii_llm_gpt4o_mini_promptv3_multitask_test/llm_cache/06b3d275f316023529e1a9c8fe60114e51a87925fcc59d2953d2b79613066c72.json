@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', which supports the prediction of a lipid disorder in the next visit. The presence of 'Insulin' indicates current diabetes management. 'Hypertensive chronic kidney disease' confirms hypertension. There is no explicit evidence of obesity in the record. Given the patient's cardiovascular conditions (e.g., atrial fibrillation, valve disorders), there is a strong likelihood of cardiovascular disease in the next visit. The chronic kidney disease diagnosis suggests a high probability of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3813,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Pneumonitis due to inhalation of food or vomitus; Chronic systolic heart failure; Hyposmolality and/or hyponatremia; Acidosis; Unspecified pleural effusion; Pulmonary collapse; Obstructive chronic bronchitis with (acute) exacerbation; Adult failure to thrive; Other specified cardiac dysrhythmias; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Gastrostomy status; Congestive heart failure, unspecified; Personal history of malignant neoplasm of larynx; Personal history of malignant neoplasm of bronchus and lung; Hypovolemia; Dysphagia, unspecified; Obstructive sleep apnea (adult)(pediatric); Esophageal reflux; Other psoriasis; Obesity, unspecified; Percutaneous transluminal coronary angioplasty status; Atrial fibrillation; Hypoxemia
+- Medications prescribed: Diltiazem; Levofloxacin; Xopenex Neb; Ipratropium Bromide Neb; Sodium Chloride 0.9%  Flush; PredniSONE; Diltiazem Extended-Release; 0.9% Sodium Chloride; Insulin; Miconazole Powder 2%; Mineral Oil; Potassium Chloride Replacement (Oncology); Potassium Phosphate; Magnesium Sulfate Replacement (Oncology); Potassium Chloride; SW; traZODONE; Simvastatin; Prochlorperazine; Heparin; Ondansetron; MethylPREDNISolone Sodium Succ; CefePIME; Iso-Osmotic Dextrose; 0.9% Sodium Chloride (Mini Bag Plus); Vancomycin; Guaifenesin; Magnesium Sulfate; Calcium Gluconate; Neutra-Phos; Lorazepam; 5% Dextrose; LR; NS; Fluticasone-Salmeterol Diskus (250/50); MetRONIDAZOLE (FLagyl); Acetaminophen; Lansoprazole Oral Disintegrating Tab; Sucralfate; Maalox/Diphenhydramine/Lidocaine; Glucagon; Dextrose 50%; Aspirin; Metoprolol Tartrate; Fluoxetine
+- Procedures performed: Thoracentesis; Enteral infusion of concentrated nutritional substances; Non-invasive mechanical ventilation
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

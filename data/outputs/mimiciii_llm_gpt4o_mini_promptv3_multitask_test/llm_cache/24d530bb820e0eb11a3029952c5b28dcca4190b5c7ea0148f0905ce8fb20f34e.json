@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The current visit record indicates the patient has 'Other and unspecified hyperlipidemia', which supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin in the medication list and the diagnosis of 'Hypertensive chronic kidney disease' suggests the patient has diabetes and hypertension. There is no explicit evidence of obesity in the record. Given the severe kidney conditions (end stage renal disease), the likelihood of kidney disease persisting is high. The risk of cardiovascular disease is also elevated due to the combination of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3825,
+    "completion_tokens": 256
+  }
+}

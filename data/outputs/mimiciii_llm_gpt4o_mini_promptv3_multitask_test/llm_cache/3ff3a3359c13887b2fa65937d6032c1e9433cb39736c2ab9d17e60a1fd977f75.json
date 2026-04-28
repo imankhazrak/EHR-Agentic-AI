@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of chronic kidney disease and is currently diagnosed with acute kidney failure, indicating ongoing kidney issues. There is also a diagnosis of hypertensive chronic kidney disease, which supports the presence of hypertension. The presence of diabetes is suggested by the prescription of insulin. There is no evidence of lipid disorders or obesity in the current visit record. Cardiovascular issues are indicated by diagnoses of heart failure and atrial fibrillation, suggesting a high likelihood of future cardiovascular disease. There is no evidence of stroke risk in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 256
+  }
+}

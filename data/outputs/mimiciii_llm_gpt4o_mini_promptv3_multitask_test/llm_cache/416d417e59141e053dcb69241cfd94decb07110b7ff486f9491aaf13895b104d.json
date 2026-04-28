@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, which supports the prediction of current hypertension. The presence of atorvastatin suggests a history of lipid issues, leading to a prediction of lipid disorder in the next visit. The patient is prescribed insulin, indicating current diabetes. The history of old myocardial infarction and other cardiovascular conditions suggests a likelihood of cardiovascular disease in the next visit. There is no evidence of obesity in the current record. The patient has had a subarachnoid hemorrhage, which increases the risk of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3628,
+    "completion_tokens": 256
+  }
+}

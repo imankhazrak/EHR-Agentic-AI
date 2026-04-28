@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a history of hypertension (unspecified essential hypertension) and is prescribed Atorvastatin, which is used for lipid management, indicating a potential lipid disorder. The presence of diabetes is supported by the use of insulin, suggesting current diabetes. The patient's diagnoses include congestive heart failure, which increases the risk for cardiovascular disease. The malignant neoplasm of the kidney indicates a high likelihood of kidney disease. There is no evidence of obesity in the current record. The risk for stroke is lower given the current diagnoses",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3960,
+    "completion_tokens": 256
+  }
+}

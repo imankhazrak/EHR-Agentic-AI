@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple cardiovascular issues (atrial fibrillation, congestive heart failure) and is prescribed medications like Carvedilol and Warfarin, indicating a high risk for cardiovascular disease. The presence of diabetes (insulin prescribed) and hypertension (Enalapril prescribed) is evident, while obesity is not explicitly indicated. The lipid disorder prediction is based on the general prevalence in the population, as no explicit diagnosis is present but Atorvastatin is prescribed, which supports the likelihood of lipid metabolism disorders",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3956,
+    "completion_tokens": 256
+  }
+}

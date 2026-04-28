@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a current lipid disorder. The record shows a diagnosis of diabetes with neurological manifestations, confirming the presence of diabetes. Hypertension is suggested by the use of Lisinopril and Amlodipine, which are antihypertensive medications. Obesity is also documented as unspecified. Given the patient's cardiovascular conditions, including heart failure and coronary atherosclerosis, it is likely they will have cardiovascular disease in the next visit. There is no",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1015,
+    "completion_tokens": 256
+  }
+}

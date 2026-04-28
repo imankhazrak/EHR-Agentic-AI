@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes insipidus and is on long-term insulin, indicating current diabetes. There is an elevated blood pressure reading but no formal diagnosis of hypertension. No evidence of obesity is present in the record. The patient has a history of cerebral artery occlusion, which increases the likelihood of future cardiovascular events and stroke. There is no evidence of kidney disease in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3989,
+    "completion_tokens": 234
+  }
+}

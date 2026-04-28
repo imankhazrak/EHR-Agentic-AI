@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of acute pancreatitis and multiple cardiac complications, including subendocardial infarction, which suggests a high likelihood of cardiovascular issues. The presence of insulin indicates current diabetes management. Medications like Metoprolol and Labetalol suggest hypertension treatment. There is no evidence of obesity or kidney disease in the current visit record. The occlusion and stenosis of the carotid artery with cerebral infarction indicates a risk for stroke, supporting the prediction for future stroke diagnosis.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3867,
+    "completion_tokens": 254
+  }
+}

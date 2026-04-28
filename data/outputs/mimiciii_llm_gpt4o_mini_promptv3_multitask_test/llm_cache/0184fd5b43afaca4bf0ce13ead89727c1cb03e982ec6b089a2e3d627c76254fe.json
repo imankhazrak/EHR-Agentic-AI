@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant comorbidities, including diabetes with renal manifestations, hypertensive chronic kidney disease, and coronary atherosclerosis. The presence of hyperlipidemia and the use of statins (Pravastatin, Simvastatin) suggest a high likelihood of lipid metabolism disorders. The patient's diabetes and hypertension are well-documented, indicating current conditions. The combination of these factors, along with the patient's history of cardiovascular issues, supports predictions for future cardiovascular disease and stroke. However, there",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 256
+  }
+}

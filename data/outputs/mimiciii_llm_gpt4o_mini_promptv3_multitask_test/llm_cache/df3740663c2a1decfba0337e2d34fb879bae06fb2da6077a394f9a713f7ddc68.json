@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, indicating they currently have diabetes. Hypertension is likely given the medications prescribed (Captopril and Amlodipine), which are commonly used for hypertension management. The patient has experienced an acute myocardial infarction and has coronary atherosclerosis, indicating a high risk for cardiovascular disease. The presence of coronary atherosclerosis and the recent myocardial infarction also suggest a potential for kidney disease due to possible complications. The risk for stroke is moderate due to the cardiovascular issues",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1125,
+    "completion_tokens": 256
+  }
+}

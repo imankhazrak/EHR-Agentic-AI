@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a documented diagnosis of hyperlipidemia (as indicated by the medication Ezetimibe), which supports a prediction of 'Disorders of Lipid Metabolism' for the next visit. The patient is currently diagnosed with type II diabetes. There is no evidence of hypertension or obesity in the record. Given the patient's heart conditions and history of coronary atherosclerosis, cardiovascular disease is likely to persist. The patient has acute kidney failure and chronic kidney disease, indicating a high probability of kidney disease in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 995,
+    "completion_tokens": 256
+  }
+}

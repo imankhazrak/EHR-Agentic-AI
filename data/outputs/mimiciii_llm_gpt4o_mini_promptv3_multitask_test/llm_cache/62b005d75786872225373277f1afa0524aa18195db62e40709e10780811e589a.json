@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and unspecified essential hypertension, indicating current conditions. There is no explicit mention of obesity in the record. The patient is on atorvastatin, which suggests a lipid disorder, and given the prevalence in the MIMIC-III population, a diagnosis of lipid metabolism disorder is likely in the next visit. The presence of coronary atherosclerosis and recent subendocardial infarction increases the risk for cardiovascular disease, while acute kidney failure indicates a risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3868,
+    "completion_tokens": 256
+  }
+}

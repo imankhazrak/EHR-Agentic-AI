@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which is currently managed with insulin and GlyBURIDE, indicating a high likelihood of current diabetes. Hypertension is suggested by the prescription of Lisinopril, a common antihypertensive. There is no explicit evidence of obesity in the record. The presence of chronic heart failure and other cardiovascular conditions suggests a high risk for future cardiovascular disease. There is no indication of kidney disease in the current visit, and the absence of relevant diagnoses or medications suggests a lower risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3891,
+    "completion_tokens": 256
+  }
+}

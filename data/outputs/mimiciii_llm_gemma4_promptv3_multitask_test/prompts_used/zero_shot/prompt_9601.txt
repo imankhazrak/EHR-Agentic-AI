@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Other pancytopenia; Acute kidney failure with lesion of tubular necrosis; Acute and subacute necrosis of liver; Hepatic infarction; Hepatic encephalopathy; Defibrination syndrome; Immune thrombocytopenic purpura; Urinary tract infection, site not specified; Other ascites; Acute venous embolism and thrombosis of internal jugular veins; Acidosis; Unspecified protein-calorie malnutrition; Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled; Cirrhosis of liver without mention of alcohol; Portal hypertension; Hypogammaglobulinemia, unspecified; Jaundice, unspecified, not of newborn; Esophageal varices without mention of bleeding; Splenomegaly; Personal history of malignant neoplasm of large intestine; Pure hypercholesterolemia; Unspecified essential hypertension; Background diabetic retinopathy; Long-term (current) use of insulin; Acquired absence of intestine (large) (small); Neutropenia, unspecified; Fever presenting with conditions classified elsewhere; Unspecified chronic bronchitis; Bronchiectasis without acute exacerbation; Varices of other sites
+- Medications prescribed: Lactulose; TraMADOL (Ultram); Insulin; Albumin 25% (12.5g / 50mL); Readi-Cat 2 (Barium Sulfate 2% Suspension); 0.9% Sodium Chloride; Rifaximin; OxycoDONE Liquid; OxycoDONE (Immediate Release); Furosemide; Morphine Sulfate IR; HYDROmorphone (Dilaudid); Ondansetron; Haemophilus B Conj. Vaccine; MENINGOcoccal Conj Vaccine (Menactra); PNEUMOcoccal Vac Polyvalent; Prochlorperazine; CefePIME; Iso-Osmotic Sodium Chloride; Famotidine; Sodium Chloride 0.9%  Flush; Dextrose 50%; Glucagon; Lactated Ringers; Morphine Sulfate; Heparin Flush (100 units/ml); Heparin Flush (10 units/ml); Iso-Osmotic Dextrose; Vancomycin; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Nadolol; Magnesium Sulfate; Sodium Phosphate; Calcium Gluconate; Bag; Albumin 5% (25g / 500mL); Ciprofloxacin HCl; D5 1/2NS; Heparin; Lorazepam; Lidocaine 1%; Neutra-Phos; 0.9% Sodium Chloride (Mini Bag Plus); Acetaminophen; Chlorhexidine Gluconate 0.12% Oral Rinse; Propofol; PHENYLEPHrine; 5% Dextrose; Fentanyl Citrate; SW
+- Procedures performed: Total splenectomy; Open biopsy of liver; Other endoscopy of small intestine; Biopsy of bone marrow; Transjugular liver biopsy
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

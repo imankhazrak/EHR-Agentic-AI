@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented history of hyperlipidemia, which supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin indicates current diabetes. The medications prescribed, including antihypertensives (Valsartan, Metoprolol), suggest current hypertension. There is no explicit evidence of obesity in the record. Given the patient's heart failure and atrial fibrillation, there is a significant risk for cardiovascular disease. The acute and chronic kidney conditions indicate a high likelihood of kidney disease in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented history of morbid obesity, which confirms current obesity. Hypertension is likely due to the presence of atrial fibrillation and the use of medications like Metoprolol and Diltiazem, which are often prescribed for hypertension. There is no evidence of diabetes or kidney disease in the current visit record. The patient has a history of transient ischemic attack (TIA), which increases the likelihood of stroke. Cardiovascular disease is indicated by the presence of atrial fibrillation and mitral",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 996,
+    "completion_tokens": 256
+  }
+}

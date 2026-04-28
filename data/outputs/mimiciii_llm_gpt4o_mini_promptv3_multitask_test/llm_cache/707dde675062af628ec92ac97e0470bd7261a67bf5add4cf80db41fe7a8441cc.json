@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, which supports the prediction of current hypertension. Insulin is prescribed, indicating a high likelihood of diabetes. There is no evidence of obesity in the record. The patient has multiple cardiovascular issues, including congestive heart failure and mitral valve disorders, suggesting a high risk for future cardiovascular disease. The diagnosis of intracerebral hemorrhage indicates a high risk for stroke. There is no evidence of lipid disorders or kidney disease in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1034,
+    "completion_tokens": 251
+  }
+}

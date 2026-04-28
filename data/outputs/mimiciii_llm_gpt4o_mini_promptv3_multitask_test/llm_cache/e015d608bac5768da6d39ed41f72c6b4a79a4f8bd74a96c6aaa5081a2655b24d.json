@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of morbid obesity, which supports the obesity_current prediction. The presence of diabetes is indicated by the prescription of insulin, leading to a high probability for diabetes_current. Hypertension is likely due to the diagnosis of acute on chronic diastolic heart failure, which often correlates with hypertension. Cardiovascular issues are indicated by the presence of atrial fibrillation and heart failure, suggesting a high probability for cardio_next. The acute kidney failure diagnosis supports a high probability for kidney_next. There is",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1129,
+    "completion_tokens": 256
+  }
+}

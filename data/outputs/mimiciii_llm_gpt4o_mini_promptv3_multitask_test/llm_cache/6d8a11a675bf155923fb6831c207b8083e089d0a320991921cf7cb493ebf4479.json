@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented history of diabetes with neurological and ophthalmic manifestations, indicating current diabetes. There is also a mention of hyperlipidemia, which supports the prediction of a lipid disorder in the next visit. The presence of coronary atherosclerosis and a recent subendocardial infarction suggests a high risk for cardiovascular disease. The patient has acute kidney failure and a history of kidney transplant, indicating ongoing kidney issues. The presence of atrial fibrillation and other cardiovascular risk factors increases the likelihood of a stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1288,
+    "completion_tokens": 256
+  }
+}

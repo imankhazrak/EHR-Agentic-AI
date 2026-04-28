@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The record indicates 'Other and unspecified hyperlipidemia', which supports a diagnosis of lipid metabolism disorder. There is no evidence of diabetes. 'Unspecified essential hypertension' confirms current hypertension. There is no mention of obesity. The presence of multiple cardiovascular issues (atrial flutter, cerebral embolism) suggests a likelihood of future cardiovascular disease. The patient has acute kidney failure and chronic kidney disease, indicating a high probability of kidney disease in the next visit. The history of cerebral thrombosis and embolism suggests a risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1085,
+    "completion_tokens": 256
+  }
+}

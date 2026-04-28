@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has pure hyperglyceridemia, which is a lipid disorder, indicating a likelihood of being diagnosed with a disorder of lipid metabolism in the next visit. The presence of insulin suggests current diabetes management. Hypertension is likely given the medications like Atenolol and Propranolol, which are used for blood pressure control. There is no explicit evidence of obesity in the current record. The patient has coronary atherosclerosis and a history of TIA, indicating a high risk for cardiovascular disease and stroke.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 256
+  }
+}

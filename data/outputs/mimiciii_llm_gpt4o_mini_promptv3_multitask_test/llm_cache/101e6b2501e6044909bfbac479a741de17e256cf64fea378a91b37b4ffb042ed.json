@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid metabolism disorder, which supports a prediction of a future diagnosis. The presence of insulin in the medication list and the diagnosis of diabetes mellitus suggest the patient currently has diabetes. The patient has multiple cardiovascular conditions (coronary atherosclerosis, atrial fibrillation) and is on medications like Metoprolol and Warfarin, indicating hypertension and a high risk for cardiovascular disease. There is an unspecified disorder of the kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3995,
+    "completion_tokens": 256
+  }
+}

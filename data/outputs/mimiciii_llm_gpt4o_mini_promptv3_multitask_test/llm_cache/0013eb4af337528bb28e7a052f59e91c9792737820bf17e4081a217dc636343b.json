@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions (acute myocardial infarction, congestive heart failure, atrial fibrillation) which indicate a high risk for future cardiovascular disease and stroke. The presence of atorvastatin suggests a focus on lipid management, supporting a prediction for lipid disorders in the next visit. Hypertension is likely given the medications (Lisinopril, Metoprolol) prescribed, indicating treatment for high blood pressure. There is no evidence of diabetes or obesity in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3948,
+    "completion_tokens": 252
+  }
+}

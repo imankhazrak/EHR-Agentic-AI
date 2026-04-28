@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of hypertension and is currently prescribed medications like Captopril and Lisinopril, indicating active management of hypertension. The presence of diabetes is supported by the prescription of Insulin. The patient's diagnoses include acute kidney failure, which suggests a high likelihood of kidney disease in the next visit. The presence of congestive heart failure and other cardiovascular issues indicates a strong possibility of cardiovascular disease. While there is no explicit mention of obesity, the current visit does not provide evidence to support its presence.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3678,
+    "completion_tokens": 256
+  }
+}

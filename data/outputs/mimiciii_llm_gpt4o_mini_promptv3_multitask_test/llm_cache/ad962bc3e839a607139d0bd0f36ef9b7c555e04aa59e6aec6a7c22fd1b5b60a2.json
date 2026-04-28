@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and unspecified hypertensive heart disease, indicating current diabetes and hypertension. There is no evidence of obesity in the record. The presence of coronary atherosclerosis and a history of myocardial infarction suggests a high likelihood of cardiovascular disease in the next visit. The patient has a history of transient ischemic attack (TIA), which increases the risk of stroke, thus predicting a potential stroke in the next visit. The lipid disorder prediction is based on the current diagnosis of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3809,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which strongly supports a future diagnosis of lipid metabolism disorders. The presence of diabetes is indicated by the prescription of Humulin-R Insulin, confirming current diabetes. Hypertension is likely given the prescription of Metoprolol and Captopril, both of which are used to manage high blood pressure. There is no evidence of obesity in the current record. The patient has significant cardiovascular issues (subendocardial infarction and coronary atherosclerosis), indicating",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3977,
+    "completion_tokens": 256
+  }
+}

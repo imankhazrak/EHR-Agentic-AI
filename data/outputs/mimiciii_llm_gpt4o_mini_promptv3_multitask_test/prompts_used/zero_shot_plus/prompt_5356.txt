@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Dissection of aorta, thoracoabdominal; Empyema without mention of fistula; [ICD9-DX:5185]; Atrial fibrillation; Pneumonia due to Pseudomonas; Other nervous system complications; Pressure ulcer, lower back; Disruption of external operation (surgical) wound; Hyperosmolality and/or hypernatremia; Bacteremia; Unspecified pleural effusion; Methicillin susceptible pneumonia due to Staphylococcus aureus; Accidental puncture or laceration during a procedure, not elsewhere classified; Vascular myelopathies; Paraplegia; Other noninfectious disorders of lymphatic channels; Metabolic encephalopathy; Unspecified essential hypertension; Dermatitis due to drugs and medicines taken internally; Penicillins causing adverse effects in therapeutic use; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]
+- Medications prescribed: Docusate Sodium; Lorazepam; Propofol; Sucralfate; D5W; Ranitidine; Syringe; Nitroglycerin; Phenylephrine HCl; LR; Neostigmine; Glycopyrrolate; Oxycodone-Acetaminophen; Iso-Osmotic Dextrose; Vancomycin HCl; Metoclopramide; Morphine Sulfate; Aspirin EC; Calcium Gluconate; Potassium Chloride; SW; Acetaminophen; Magnesium Sulfate; Aspirin; Labetalol HCl; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Metoprolol; Sodium Chloride 0.9%  Flush; Acetylcysteine; Acetylcysteine 20%; Dolasetron Mesylate; Nitroprusside Sodium; NS; Multivitamin IV; Amino Acids 4.25% W/ Dextrose 5%; Fluticasone Propionate 110mcg; Meropenem; NS (Mini Bag Plus); Amlodipine; HydrALAZINE HCl; Bisacodyl; Lisinopril; Heparin Flush CVL  (100 units/ml); Amiodarone HCl; OxycoDONE-Acetaminophen Elixir; Furosemide; Alteplase (Catheter Clearance); Midazolam HCl; Methyldopa; Insulin
+- Procedures performed: Resection of vessel with replacement, aorta, abdominal; Temporary tracheostomy; Resection of vessel with replacement, thoracic vessels; Other repair of vessel; Excisional debridement of wound, infection, or burn; Closure of laceration of lung; Venous catheterization, not elsewhere classified; Parenteral infusion of concentrated nutritional substances; Enteral infusion of concentrated nutritional substances; Extracorporeal circulation auxiliary to open heart surgery; Closed [endoscopic] biopsy of bronchus; Percutaneous [endoscopic] gastrostomy [PEG]; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Insertion of endotracheal tube; Diagnostic ultrasound of heart; Incision of lung; Other incision of pleura; Other intubation of respiratory tract
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

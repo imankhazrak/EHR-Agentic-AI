@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has atherosclerosis of the aorta, which suggests a lipid disorder may be present, leading to a prediction of 'Yes' for the next visit. There is no evidence of diabetes or obesity in the record. The presence of portal hypertension indicates hypertension. The atherosclerosis and other complications suggest a risk for cardiovascular disease. The patient is on allopurinol, which may indicate a history of gout that could relate to kidney issues, hence a prediction of 'Yes' for kidney disease. There is",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 787,
+    "completion_tokens": 256
+  }
+}

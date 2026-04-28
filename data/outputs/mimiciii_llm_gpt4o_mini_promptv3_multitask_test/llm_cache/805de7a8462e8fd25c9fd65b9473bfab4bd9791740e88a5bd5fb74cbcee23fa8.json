@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of coronary atherosclerosis, which suggests a cardiovascular condition, leading to a prediction of cardiovascular disease in the next visit. The medication Metoprolol, which is often used for hypertension, supports the prediction of current hypertension. There is no evidence of diabetes or obesity in the current visit record, and no indications of lipid disorders or kidney disease. The absence of any stroke-related diagnoses or risk factors leads to a prediction of no stroke in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3780,
+    "completion_tokens": 250
+  }
+}

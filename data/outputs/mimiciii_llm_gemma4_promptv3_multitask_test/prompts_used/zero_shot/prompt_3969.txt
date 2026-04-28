@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Other mechanical complication of other internal orthopedic device, implant, and graft; Cervical spondylosis with myelopathy; Localization-related (focal) (partial) epilepsy and epileptic syndromes with simple partial seizures, without mention of intractable epilepsy; Hyposmolality and/or hyponatremia; Unspecified protein-calorie malnutrition; Anorexia nervosa; Neurogenic bladder NOS; Depressive disorder, not elsewhere classified; Chronic airway obstruction, not elsewhere classified; Other and unspecified anticonvulsants causing adverse effects in therapeutic use; Unspecified essential hypertension; Obsessive-compulsive disorders
+- Medications prescribed: Ondansetron; Multivitamins; Bisacodyl; HYDROmorphone (Dilaudid); Insulin; Docusate Sodium; Artificial Tears; 0.9% Sodium Chloride; Heparin Flush (10 units/ml); Magnesium Citrate; PHENObarbital; Chlorhexidine Gluconate 0.12% Oral Rinse; Oxycodone SR (OxyconTIN); Morphine Sulfate; Sodium Chloride 0.9%  Flush; Influenza Virus Vaccine; Carbamazepine; D5 1/2NS; Demeclocycline; Hydrocodone-Acetaminophen; Venlafaxine XR; Oxybutynin; Risperidone; Vitamin D; Calcium Carbonate; Acetaminophen
+- Procedures performed: Refusion of other cervical spine, posterior column, posterior technique; Other exploration and decompression of spinal canal; Removal of implanted devices from bone, other bones; Excision of bone for graft, other bones; Insertion of interbody spinal fusion device; Fusion or refusion of 9 or more vertebrae; Venous catheterization, not elsewhere classified; Parenteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

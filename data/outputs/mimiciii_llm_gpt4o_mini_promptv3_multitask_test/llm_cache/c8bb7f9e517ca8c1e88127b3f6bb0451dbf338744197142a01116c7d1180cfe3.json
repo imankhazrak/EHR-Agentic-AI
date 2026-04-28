@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia' and is prescribed Simvastatin, indicating a current lipid disorder. The presence of Metformin and the diagnosis of diabetes support a current diabetes diagnosis. The record includes 'Unspecified essential hypertension', confirming current hypertension. There is no explicit evidence of obesity in the record. The patient has coronary atherosclerosis, which increases the likelihood of cardiovascular disease. There is no indication of kidney disease in the current visit, and no evidence suggests a risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4034,
+    "completion_tokens": 256
+  }
+}

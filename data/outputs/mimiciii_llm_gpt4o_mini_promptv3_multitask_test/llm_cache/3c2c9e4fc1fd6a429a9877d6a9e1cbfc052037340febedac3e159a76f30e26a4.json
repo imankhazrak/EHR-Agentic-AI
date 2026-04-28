@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of morbid obesity, which supports the obesity_current prediction. There is also a diagnosis of unspecified essential hypertension, indicating current hypertension. The presence of diabetes is supported by the use of insulin, suggesting the patient has diabetes. The patient has acute kidney failure, which indicates a likelihood of kidney disease in the next visit. However, there is no explicit evidence of a lipid disorder diagnosis or history, leading to a prediction of 'No' for lipid_next. The cardiovascular disease prediction is based on the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3750,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record indicates a diagnosis of 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', confirming the presence of hypertension and kidney disease. There is no evidence of diabetes or obesity in the record. The patient has multiple complications that could lead to cardiovascular disease, hence a prediction of 'Yes' with a high probability. There is no direct evidence to suggest a stroke will occur in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3499,
+    "completion_tokens": 245
+  }
+}

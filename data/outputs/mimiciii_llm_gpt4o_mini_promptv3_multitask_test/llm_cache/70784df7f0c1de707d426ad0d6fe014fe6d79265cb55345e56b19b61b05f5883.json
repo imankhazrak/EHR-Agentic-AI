@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has multiple chronic conditions including liver disease and respiratory failure, which are associated with diabetes and hypertension. The presence of obstructive sleep apnea and the medications prescribed (including insulin) suggest diabetes. Hypertension is likely given the patient's overall health status. Obesity is also probable due to the presence of sleep apnea. However, there is no direct evidence of lipid disorders or stroke in the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1031,
+    "completion_tokens": 235
+  }
+}

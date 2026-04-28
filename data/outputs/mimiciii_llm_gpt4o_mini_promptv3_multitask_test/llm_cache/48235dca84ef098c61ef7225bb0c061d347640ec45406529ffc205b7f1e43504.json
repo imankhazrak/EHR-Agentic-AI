@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has documented hyperlipidemia, which supports a prediction of lipid disorder in the next visit. Diabetes is confirmed as the patient has diabetes mellitus without mention of complications. Hypertension is also confirmed as unspecified essential hypertension is documented. Morbid obesity is indicated by a BMI of 45.0-49.9. The presence of acute kidney failure suggests a likelihood of kidney disease in the next visit. Cardiovascular disease is a possibility given the patient's diabetes and hypertension, but not as strong as other conditions.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1214,
+    "completion_tokens": 256
+  }
+}

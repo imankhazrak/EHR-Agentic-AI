@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid metabolism disorder, which supports a prediction of a future diagnosis. The presence of insulin indicates current diabetes management, confirming diabetes. The diagnosis of 'Benign essential hypertension' confirms current hypertension. There is no explicit evidence of obesity in the record. The patient has coronary atherosclerosis and has undergone significant cardiac procedures, indicating a high risk for future cardiovascular disease. The acute kidney failure diagnosis suggests ongoing kidney issues, supporting a",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4222,
+    "completion_tokens": 256
+  }
+}

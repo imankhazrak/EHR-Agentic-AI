@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), indicating current diabetes. There is also a diagnosis of hypertensive chronic kidney disease, suggesting current hypertension. The presence of 'other and unspecified hyperlipidemia' indicates a likelihood of lipid metabolism disorders, supporting a prediction for the next visit. The patient has multiple cardiovascular issues (e.g., heart failure, atrial fibrillation), which increases the risk for cardiovascular disease and stroke. The absence of explicit obesity diagnoses or related medications suggests low probability for current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3923,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, specifically type I with multiple complications, indicating current diabetes. Hypertension is also noted as part of the chronic kidney disease diagnosis. There is no evidence of obesity in the record. The patient has chronic kidney disease stage IV and acute kidney failure, suggesting a high likelihood of ongoing kidney issues. There is no evidence of stroke or lipid disorders in the current visit. Cardiovascular disease is a concern given the patient's hypertension and diabetes, leading to a moderate probability of diagnosis in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 256
+  }
+}

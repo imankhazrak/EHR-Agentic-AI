@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Mechanical complication of tracheostomy; Acute respiratory failure; Congestive heart failure, unspecified; Accidental puncture or laceration during a procedure, not elsewhere classified; Intestinal infection due to Clostridium difficile; Pulmonary collapse; [ICD9-DX:5191]; Unspecified essential hypertension; [ICD9-DX:7872]
+- Medications prescribed: Cephalexin; Furosemide; Metoprolol; Potassium Chloride; Prednisone; Docusate Sodium (Liquid); Insulin; Senna; Lansoprazole Oral Suspension; Quinapril; Magnesium Sulfate; Miconazole Powder 2%; Zolpidem Tartrate; Acetaminophen; Pantoprazole; Albuterol Neb Soln; Ipratropium Bromide Neb; Sertraline HCl; Lorazepam; Neutra-Phos; Magnesium Oxide; Morphine Sulfate; Vitamin D; Ibuprofen; Calcium Carbonate; Guaifenesin-Dextromethorphan; Metronidazole; Lidocaine 1%; Fluticasone Propionate 110mcg; Hydralazine HCl; Pantoprazole Sodium; NS; Iso-Osmotic Dextrose; Piperacillin-Tazobactam Na; Lidocaine 0.5%; Nitroglycerin Oint. 2%; Methylprednisolone Na Succ.; Syringe (IV Room); Albuterol-Ipratropium; Potassium Phosphate; Lidocaine Viscous 2%; Heparin; Aspirin; Simvastatin; Albuterol; Azithromycin; Ipratropium Bromide MDI; Bisacodyl; Docusate Sodium; Codeine Phosphate
+- Procedures performed: Revision of tracheostomy; Other bronchoscopy; Other intubation of respiratory tract; Removal of intraluminal foreign body from trachea and bronchus without incision; Bronchial dilation; Replacement of tracheostomy tube; Other operations on trachea; Closed [endoscopic] biopsy of bronchus; Non-invasive mechanical ventilation; Continuous invasive mechanical ventilation for 96 consecutive hours or more
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

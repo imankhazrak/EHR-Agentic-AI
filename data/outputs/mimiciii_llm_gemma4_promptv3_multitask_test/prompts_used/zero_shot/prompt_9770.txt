@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Metabolic encephalopathy; Pneumonia, organism unspecified; Acute kidney failure, unspecified; Acute venous embolism and thrombosis of deep veins of upper extremity; Blood in stool; Other ureteric obstruction; Hydronephrosis; Hyperpotassemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Epilepsy, unspecified, without mention of intractable epilepsy; Unspecified intellectual disabilities; Other persistent mental disorders due to conditions classified elsewhere; Osteoporosis, unspecified; Hypothermia not associated with low environmental temperature; Thrombocytopenia, unspecified; Long-term (current) use of insulin; Anemia in chronic kidney disease; Iron deficiency anemia secondary to blood loss (chronic); Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Chronic kidney disease, Stage III (moderate)
+- Medications prescribed: Potassium Chloride (Powder); Bisacodyl; Risperidone; Warfarin; Ipratropium Bromide Neb; Insulin; Olanzapine (Disintegrating Tablet); D5 1/2NS; Fosphenytoin; Levothyroxine Sodium; 5% Dextrose; Acetaminophen; Lorazepam; Fat Emulsion 20%; Vitamin D; Calcium Carbonate; Phenytoin Infatab; Artificial Tears; Multivitamins; HumaLOG; 0.9% Sodium Chloride; Iso-Osmotic Dextrose; D10W; Readi-Cat 2 (Barium Sulfate 2% Suspension); Sodium Polystyrene Sulfonate; Dextrose 50%; Magnesium Sulfate; Pantoprazole; Bag; Vial; Ipratropium Bromide MDI; Ascorbic Acid; Senna; Ferrous Sulfate; Albuterol 0.083% Neb Soln; Heparin; Lansoprazole Oral Disintegrating Tab; Heparin Sodium; Glucagon; Sodium Chloride 0.9%  Flush; Potassium Chloride; 1/2 NS; Influenza Virus Vaccine; Pneumococcal Vac Polyvalent; Levofloxacin; Vancomycin; Calcium Gluconate
+- Procedures performed: Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

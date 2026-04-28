@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Complications of transplanted bone marrow; Unspecified causes of encephalitis, myelitis, and encephalomyelitis; Herpes simplex with other specified complications; Duodenitis, with hemorrhage; Nodular lymphoma, unspecified site, extranodal and solid organ sites; Gastroesophageal laceration-hemorrhage syndrome; Acute duodenal ulcer with hemorrhage, without mention of obstruction; Infection and inflammatory reaction due to other vascular device, implant, and graft; Other staphylococcal septicemia; Sepsis; Candidiasis of mouth; Toxoplasmosis of other specified sites; Septicemia due to pseudomonas; Hemorrhage, unspecified; Hyposmolality and/or hyponatremia; [ICD9-DX:2387]; Unspecified sinusitis (chronic); Surgical operation with transplant of whole organ causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Unspecified disorder of liver; Acute laryngitis without mention of obstruction; Conjunctivitis, unspecified; Other esophagitis; Ulcer of esophagus with bleeding; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Accidents occurring in residential institution; Other malaise and fatigue; Late effects of other and unspecified infectious and parasitic diseases; Other specified disorders of biliary tract; Acute bronchitis; Other diseases of vocal cords
+- Medications prescribed: Methylprednisolone Na Succ.; Aminocaproic Acid; Calcium Gluconate; Syringe (IV Room); Acetaminophen (Liquid); Heparin Flush PICC (100 units/ml); Calcium Replacement (Oncology); NS; Tacrolimus; Insulin; Methylprednisolone Na Succ; Vial; Docusate Sodium (Liquid); Nystatin Oral Suspension; Phytonadione; Ambisome; D5W; Sucralfate; Oxycodone; Loperamide HCl; Beclomethasone Dipro. AQ (Nasal); Pseudoephedrine HCl; Potassium Phosphate; Vancomycin HCl; Simethicone; Ganciclovir; Sodium Chloride 0.9%  Flush; Magnesium Sulfate Replacement (Oncology); Magnesium Sulfate; SW; Potassium Chloride; Soln.; Foscarnet Sodium; Neutra-Phos; Morphine Sulfate; Fentanyl Citrate; Midazolam HCl; Propofol; Succinylcholine; Phenylephrine HCl; Pantoprazole Sodium; Pantoprazole; D5 1/2NS; Multivitamin IV; Amino Acids 4.25% W/ Dextrose 5%; Magnesium Oxide; Maalox/Diphenhydramine/Lidocaine; Docusate Sodium; Prednisone; Fluconazole
+- Procedures performed: Closed [percutaneous] [needle] biopsy of brain; Therapeutic photopheresis; Closed (percutaneous) [needle] biopsy of liver; Endoscopic control of gastric or duodenal bleeding; Closed [endoscopic] biopsy of large intestine; Closed [endoscopic] biopsy of rectum; Esophagogastroduodenoscopy [EGD] with closed biopsy; Venous catheterization, not elsewhere classified; Arteriography of other intra-abdominal arteries; Transcatheter embolization for gastric or duodenal bleeding; Incision of lung; Insertion of endotracheal tube; Transfusion of platelets; Transfusion of other serum; Transfusion of packed cells; Parenteral infusion of concentrated nutritional substances; Continuous invasive mechanical ventilation for less than 96 consecutive hours
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

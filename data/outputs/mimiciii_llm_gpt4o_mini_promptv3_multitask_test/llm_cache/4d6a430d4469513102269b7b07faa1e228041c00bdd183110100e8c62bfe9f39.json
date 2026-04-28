@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses, including coronary atherosclerosis and ventricular fibrillation, which suggest a high risk for future cardiovascular issues, hence the prediction for cardiovascular disease. The presence of medications like Lisinopril indicates hypertension management, supporting the hypertension prediction. There is no evidence of diabetes or obesity in the current record. The lipid disorder prediction is based on the prevalence in the MIMIC-III population, as there is no explicit diagnosis but the patient is on Atorvastatin, which is used for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3840,
+    "completion_tokens": 256
+  }
+}

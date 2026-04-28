@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a diagnosis of obesity, which is explicitly mentioned. There is also a prescription for insulin, suggesting possible diabetes, but no explicit diabetes diagnosis is provided. Lisinopril is prescribed, which is commonly used for hypertension, indicating the patient may have hypertension. The presence of atrial fibrillation increases the likelihood of cardiovascular disease. There is no evidence of kidney disease in the current visit. The patient's condition may predispose them to stroke, especially with atrial fibrillation present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 982,
+    "completion_tokens": 252
+  }
+}

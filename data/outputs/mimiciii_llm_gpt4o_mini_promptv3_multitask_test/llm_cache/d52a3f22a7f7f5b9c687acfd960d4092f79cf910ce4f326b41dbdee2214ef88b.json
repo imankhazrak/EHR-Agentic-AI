@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia' which supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin in the medication list indicates current diabetes management. The patient has multiple cardiovascular conditions, including coronary atherosclerosis, which suggests a high likelihood of cardiovascular disease in the next visit. Hypertension is likely given the medications prescribed (e.g., Metoprolol). There is no direct evidence of obesity in the current record. The risk of stroke is elevated due",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3967,
+    "completion_tokens": 256
+  }
+}

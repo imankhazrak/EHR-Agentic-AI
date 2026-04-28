@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which supports the prediction of current diabetes. Hypertension is likely given the presence of atherosclerosis and atrial fibrillation, both of which are associated with hypertension. The patient does not have explicit evidence of obesity in the current record. The presence of atherosclerosis and atrial fibrillation suggests a high risk for cardiovascular disease. The unspecified disorder of kidney and ureter indicates potential kidney disease. The combination of these factors, including diabetes and cardiovascular issues, raises the likelihood",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3808,
+    "completion_tokens": 256
+  }
+}

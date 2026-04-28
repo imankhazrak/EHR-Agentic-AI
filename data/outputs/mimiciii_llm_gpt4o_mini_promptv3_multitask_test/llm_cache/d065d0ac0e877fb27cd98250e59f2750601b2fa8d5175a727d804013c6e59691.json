@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus type I, indicating current diabetes. Hypertension is likely given the prescription of Metoprolol, which is commonly used for hypertension management. There is no evidence of obesity in the current visit record. The patient has coronary atherosclerosis and has undergone procedures related to cardiovascular issues, suggesting a high likelihood of future cardiovascular disease. The presence of acute kidney failure and other kidney-related diagnoses indicates a high probability of kidney disease in the next visit. The risk of stroke is elevated",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3790,
+    "completion_tokens": 256
+  }
+}

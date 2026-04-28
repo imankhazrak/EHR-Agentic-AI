@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with other specified manifestations, indicating current diabetes. There is no explicit diagnosis of hypertension or obesity in the record. The presence of diabetes and other comorbidities (e.g., portal hypertension, cirrhosis) increases the risk for cardiovascular disease, leading to a prediction of 'Yes' for cardio next visit. The patient's complex medical history, including portal vein thrombosis and ascites, suggests a risk for kidney disease, hence a prediction of 'Yes' for kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3898,
+    "completion_tokens": 256
+  }
+}

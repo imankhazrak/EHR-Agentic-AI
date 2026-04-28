@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions including acute myocardial infarction and congestive heart failure, which strongly suggests a likelihood of cardiovascular disease in the next visit. The presence of atorvastatin indicates a history of lipid management, supporting the prediction of lipid disorder diagnosis in the next visit. Hypertension is likely given the prescription of Lisinopril, a common antihypertensive. There is no evidence of diabetes or obesity in the current record. The risk of stroke is elevated due to atrial fibrillation and other cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3695,
+    "completion_tokens": 256
+  }
+}

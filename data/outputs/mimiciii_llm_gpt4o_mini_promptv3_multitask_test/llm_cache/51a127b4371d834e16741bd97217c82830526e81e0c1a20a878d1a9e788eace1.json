@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"There is no evidence of lipid disorders, diabetes, or obesity in the current visit record. Hypertension is likely due to the prescription of Metoprolol, which is commonly used for hypertension management. The patient has atrial fibrillation and severe sepsis, which increases the risk of cardiovascular issues, hence a prediction of cardiovascular disease. The presence of acute respiratory failure and severe sepsis may increase the risk of stroke, but there is no direct evidence of kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1101,
+    "completion_tokens": 248
+  }
+}

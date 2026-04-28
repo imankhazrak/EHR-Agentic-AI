@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, which supports a prediction of lipid metabolism disorders in the next visit. There is no evidence of diabetes in the current record. The patient has a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. There is no indication of obesity. The presence of multiple cardiovascular risk factors, including atrial fibrillation and chronic kidney disease, suggests a high likelihood of cardiovascular disease in the next visit. The chronic kidney disease stage V diagnosis indicates a very high risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3915,
+    "completion_tokens": 256
+  }
+}

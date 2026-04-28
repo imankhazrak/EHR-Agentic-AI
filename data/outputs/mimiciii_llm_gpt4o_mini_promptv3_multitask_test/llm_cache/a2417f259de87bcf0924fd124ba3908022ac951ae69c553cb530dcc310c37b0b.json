@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has multiple serious diagnoses including congestive heart failure and acute kidney failure, which indicate a high risk for cardiovascular complications. However, there is no evidence of diabetes, hypertension, or obesity in the current visit record. The absence of lipid disorder diagnosis or related medications also supports a 'No' prediction for lipid metabolism disorders. The patient's acute kidney failure suggests a likelihood of ongoing kidney issues. There is no indication of stroke risk factors or history in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3734,
+    "completion_tokens": 247
+  }
+}

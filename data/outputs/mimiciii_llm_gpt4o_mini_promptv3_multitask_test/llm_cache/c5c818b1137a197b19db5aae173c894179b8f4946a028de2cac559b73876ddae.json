@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.30},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient is prescribed insulin, indicating current diabetes management. The presence of mitral valve disorders and medications like metoprolol and furosemide suggest hypertension. Atorvastatin, a lipid-lowering medication, implies a history of lipid issues, supporting a prediction of lipid disorder in the next visit. There is no evidence of obesity in the current record. The cardiovascular condition is likely to persist, but there is no indication of kidney disease or stroke risk based on the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 962,
+    "completion_tokens": 253
+  }
+}

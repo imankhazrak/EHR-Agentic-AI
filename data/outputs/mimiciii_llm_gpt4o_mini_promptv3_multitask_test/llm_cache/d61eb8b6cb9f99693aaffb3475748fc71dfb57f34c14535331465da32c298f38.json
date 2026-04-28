@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is currently prescribed insulin, indicating active management of diabetes. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease. The presence of pure hypercholesterolemia suggests a high likelihood of lipid metabolism disorders, especially given the patient's cardiovascular issues (e.g., coronary atherosclerosis). The chronic kidney disease diagnosis supports the prediction of kidney disease in the next visit. The combination of diabetes, hypertension, and atherosclerosis increases the risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4057,
+    "completion_tokens": 256
+  }
+}

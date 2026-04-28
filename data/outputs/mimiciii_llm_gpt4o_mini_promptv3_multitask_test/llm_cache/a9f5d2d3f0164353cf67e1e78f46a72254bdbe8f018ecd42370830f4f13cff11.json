@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (uncontrolled), which confirms current diabetes. There is also a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. The record states morbid obesity, confirming current obesity. Given the patient's multiple cardiac diagnoses, including acute bacterial endocarditis and other cardiac dysrhythmias, there is a strong likelihood of cardiovascular disease in the next visit. The presence of acute kidney failure and chronic kidney disease suggests a high probability of kidney disease in the next visit. The patient's",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4041,
+    "completion_tokens": 256
+  }
+}

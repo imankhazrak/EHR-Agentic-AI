@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of diabetes with renal manifestations, indicating current diabetes. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease. The presence of chronic kidney disease stage V suggests significant kidney issues, leading to a high likelihood of kidney disease in the next visit. The patient has multiple cardiovascular issues, including a subendocardial infarction and heart failure, which increases the likelihood of cardiovascular disease. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3659,
+    "completion_tokens": 256
+  }
+}

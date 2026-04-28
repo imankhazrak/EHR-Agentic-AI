@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', indicating a current lipid metabolism disorder. The presence of 'Secondary diabetes mellitus' confirms current diabetes. 'Unspecified essential hypertension' indicates current hypertension. There is no explicit evidence of obesity in the record. Given the patient's acute cardiovascular events (e.g., myocardial infarction, coronary atherosclerosis), there is a high likelihood of future cardiovascular disease. The risk of stroke is also elevated due to the cardiovascular complications. There is no indication of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4315,
+    "completion_tokens": 256
+  }
+}

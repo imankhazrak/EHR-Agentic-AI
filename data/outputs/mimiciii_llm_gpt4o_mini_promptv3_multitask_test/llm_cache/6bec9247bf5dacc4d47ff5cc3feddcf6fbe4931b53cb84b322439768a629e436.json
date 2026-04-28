@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of cardiac arrest and atrioventricular block, indicating significant cardiovascular issues, which supports the prediction of cardiovascular disease in the next visit. The presence of insulin suggests current diabetes management. Hypertension is likely given the medications like Metoprolol and Labetalol, which are used to treat high blood pressure. There is no evidence of obesity in the current visit record. The patient's acute conditions and history of anoxic brain damage raise concerns for stroke risk. There is no evidence of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3790,
+    "completion_tokens": 256
+  }
+}

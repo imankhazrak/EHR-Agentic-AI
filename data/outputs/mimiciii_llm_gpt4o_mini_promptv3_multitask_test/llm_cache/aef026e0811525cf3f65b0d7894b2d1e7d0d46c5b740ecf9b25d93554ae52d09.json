@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses related to diabetes, including diabetic complications, indicating a current diabetes status. Hypertension is confirmed by the diagnosis of hypertensive encephalopathy and chronic kidney disease. There is no evidence of obesity in the current visit record. Given the severe kidney disease (stage V), the likelihood of cardiovascular disease is high, as well as the risk of stroke due to the combination of diabetes and hypertension.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3649,
+    "completion_tokens": 236
+  }
+}

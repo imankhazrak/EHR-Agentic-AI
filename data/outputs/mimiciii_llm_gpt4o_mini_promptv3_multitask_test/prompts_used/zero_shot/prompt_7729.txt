@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Other and unspecified complications of medical care, not elsewhere classified; Methicillin susceptible pneumonia due to Staphylococcus aureus; Pneumonia due to Pseudomonas; Aortic valve disorders; Urinary tract infection, site not specified; Diverticulosis of colon with hemorrhage; Other tracheostomy complications; Atrial fibrillation; Dependence on respirator, status; Chronic respiratory failure; Alkalosis; Congestive heart failure, unspecified; Acute kidney failure, unspecified; Iron deficiency anemia secondary to blood loss (chronic); Primary pulmonary hypertension; Thrombocytopenia, unspecified; Coronary atherosclerosis of native coronary artery; Infection with microorganisms resistant to penicillins; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Unspecified gastritis and gastroduodenitis, without mention of hemorrhage; Duodenitis, without mention of hemorrhage; Other iatrogenic hypotension; Foreign body in larynx; Critical illness myopathy; Personal history of venous thrombosis and embolism; Late effects of motor vehicle accident; Depressive disorder, not elsewhere classified
+- Medications prescribed: Warfarin; Albuterol; Ipratropium Bromide MDI; Diltiazem; Imipenem-Cilastatin; NS (Mini Bag Plus); Multivitamins; Ferrous Sulfate; Sulfameth/Trimethoprim DS; Acetaminophen; Insulin; Famotidine; Bisacodyl; Senna; Docusate Sodium (Liquid); Cyanocobalamin; FoLIC Acid; Thiamine HCl; Furosemide; Potassium Chloride; Meropenem; NS; Alteplase (Catheter Clearance); Gentamicin Sulfate; D5W; Citalopram Hydrobromide; Aspirin; SW; Zolpidem Tartrate; Phytonadione; Argatroban; AcetaZOLamide Sodium; Lansoprazole Oral Disintegrating Tab; Albumin 25% (12.5g / 50mL); Digoxin; Bag; Albumin, Human; Golytely; Midazolam; Fentanyl Citrate; Heparin Flush PICC (100 units/ml); Heparin Flush CVL  (100 units/ml); Clonazepam; Cosyntropin; Phenylephrine; Vancomycin; Iso-Osmotic Dextrose; CefePIME; AcetaZOLamide; Ferrous Sulfate (Liquid)
+- Procedures performed: Open and other replacement of aortic valve with tissue graft; Extracorporeal circulation auxiliary to open heart surgery; Continuous intra-arterial blood gas monitoring; Other endoscopy of small intestine; Colonoscopy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Transfusion of packed cells; Transfusion of platelets; Transfusion of other serum; Bronchoscopy through artificial stoma; Other lavage of bronchus and trachea; Replacement of tracheostomy tube; Venous catheterization, not elsewhere classified; Pulmonary artery wedge monitoring
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

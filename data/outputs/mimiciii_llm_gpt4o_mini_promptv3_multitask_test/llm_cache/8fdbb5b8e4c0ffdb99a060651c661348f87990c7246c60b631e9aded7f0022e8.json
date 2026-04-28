@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The current visit record indicates multiple cardiovascular issues, including aortic dissection and atrial fibrillation, which suggest a high likelihood of future cardiovascular disease. The presence of acute kidney failure and atherosclerosis of the renal artery supports the prediction of kidney disease. Hypertension is likely due to the cardiovascular complications and medications like Metoprolol and Hydralazine, which are commonly used to manage high blood pressure. There is no evidence of diabetes or obesity in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4001,
+    "completion_tokens": 249
+  }
+}

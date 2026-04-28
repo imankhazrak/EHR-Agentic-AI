@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has multiple diagnoses indicating chronic conditions, including diabetes and hypertension, which are confirmed by the current visit record. The presence of acute on chronic heart failure and a recent myocardial infarction suggests a high risk for cardiovascular disease. The diagnosis of hypertensive chronic kidney disease indicates significant kidney involvement. The patient's diabetes with renal manifestations further supports the likelihood of kidney disease. The overall clinical picture suggests a high risk for stroke due to the combination of diabetes, hypertension, and cardiovascular issues. The lipid disorder prediction is based on the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3668,
+    "completion_tokens": 256
+  }
+}

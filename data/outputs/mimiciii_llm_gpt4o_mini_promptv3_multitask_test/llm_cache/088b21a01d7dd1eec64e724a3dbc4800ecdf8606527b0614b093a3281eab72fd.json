@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a history of coronary atherosclerosis and acute myocardial infarction, which are strong indicators for cardiovascular disease and suggest a likelihood of lipid metabolism disorders, especially given the prescription of atorvastatin. There is no evidence of diabetes or obesity in the current visit record. Hypertension is likely due to the presence of coronary artery disease and the use of antihypertensive medications like metoprolol. The risk of stroke is elevated due to atrial fibrillation and recent cardiovascular events.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3856,
+    "completion_tokens": 253
+  }
+}

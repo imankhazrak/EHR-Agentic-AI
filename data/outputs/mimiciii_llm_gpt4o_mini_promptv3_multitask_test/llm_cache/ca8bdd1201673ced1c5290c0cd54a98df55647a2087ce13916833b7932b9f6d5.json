@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with renal manifestations, indicating current diabetes. Hypertensive chronic kidney disease is also noted, confirming hypertension. There is no evidence of obesity in the current visit record. The presence of coronary atherosclerosis and old myocardial infarction suggests a high likelihood of cardiovascular disease in the next visit. Additionally, acute kidney failure and chronic kidney disease indicate a strong possibility of kidney disease in the next visit. The combination of chronic conditions and risk factors suggests a significant risk for stroke as well.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3716,
+    "completion_tokens": 256
+  }
+}

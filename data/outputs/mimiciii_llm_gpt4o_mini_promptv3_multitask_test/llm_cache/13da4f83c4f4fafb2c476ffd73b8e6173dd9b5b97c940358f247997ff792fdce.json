@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient is prescribed insulin, indicating current diabetes management. The presence of hypertension is suggested by the prescription of Metoprolol, which is often used for hypertension. There is no evidence of obesity in the current visit record. Given the acute kidney failure diagnosis, it is likely that kidney disease will be noted in the next visit. Cardiovascular disease is a possibility due to the patient's complex medical history, but not definitively indicated. There is no evidence to suggest a stroke will occur in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3830,
+    "completion_tokens": 255
+  }
+}

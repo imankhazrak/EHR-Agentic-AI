@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and pure hypercholesterolemia, indicating a high likelihood of lipid metabolism disorders. The presence of atrial fibrillation and other cardiovascular conditions suggests a significant risk for cardiovascular disease. The patient's medication profile includes insulin, which supports the diabetes diagnosis, and medications like Lisinopril and Metoprolol, which are often used for hypertension management. However, there is no explicit evidence of obesity in the current record. The history of cerebral thrombosis",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3932,
+    "completion_tokens": 256
+  }
+}

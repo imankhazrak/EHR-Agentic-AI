@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has multiple severe conditions including unspecified septicemia, pneumonia, and acute kidney failure, which suggest significant health issues. Hypertension is documented as 'hypotension, unspecified', indicating possible blood pressure issues. There is no evidence of diabetes or obesity in the current record. Given the acute kidney failure, it is likely the patient will have kidney disease in the next visit. Cardiovascular complications are possible due to the severity of the patient's condition, but there is no direct evidence of stroke risk in the current visit.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1229,
+    "completion_tokens": 256
+  }
+}

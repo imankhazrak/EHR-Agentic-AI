@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented history of 'Other and unspecified hyperlipidemia', indicating a likelihood of lipid metabolism disorders. Diabetes is explicitly mentioned as 'Diabetes mellitus without mention of complication, type II or unspecified type'. Hypertension is indicated by 'Hypertensive chronic kidney disease'. There is no explicit evidence of obesity in the record. Given the patient's heart conditions and kidney issues, there is a significant risk for cardiovascular disease and kidney disease in the next visit. The presence of carotid artery occlusion raises the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1189,
+    "completion_tokens": 256
+  }
+}

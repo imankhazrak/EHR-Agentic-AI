@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has multiple cardiovascular issues (congestive heart failure, atrial fibrillation) and is on medications like Metoprolol and Amiodarone, indicating a high likelihood of ongoing cardiovascular problems. The presence of insulin suggests diabetes management, while hypertension is likely given the cardiac conditions. There is evidence of acute kidney failure, suggesting a high probability of kidney issues. No evidence of obesity or lipid disorders is present in the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1092,
+    "completion_tokens": 244
+  }
+}

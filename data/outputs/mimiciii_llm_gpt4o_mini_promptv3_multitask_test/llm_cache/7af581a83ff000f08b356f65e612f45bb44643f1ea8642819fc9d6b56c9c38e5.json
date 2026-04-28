@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has multiple cardiovascular complications and a history of cerebral artery occlusion with cerebral infarction, indicating a high likelihood of ongoing cardiovascular issues. The presence of chronic conditions such as iron deficiency anemia and the need for interventions like arterial catheterization suggest potential kidney involvement. There is no evidence of diabetes, hypertension, obesity, or lipid disorders in the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1142,
+    "completion_tokens": 226
+  }
+}

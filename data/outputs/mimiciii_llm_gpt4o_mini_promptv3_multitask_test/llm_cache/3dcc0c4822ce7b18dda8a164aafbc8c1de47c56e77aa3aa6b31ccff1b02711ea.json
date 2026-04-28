@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with ketoacidosis, indicating current diabetes. The presence of hypertension is supported by the prescription of Captopril and Lisinopril, which are antihypertensive medications. There is no evidence of obesity in the current visit record. The patient has multiple cardiovascular issues, including acute myocardial infarction and congestive heart failure, suggesting a high likelihood of ongoing cardiovascular disease. The diagnosis of acute kidney failure indicates a current kidney issue, and the overall clinical picture suggests a risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1074,
+    "completion_tokens": 256
+  }
+}

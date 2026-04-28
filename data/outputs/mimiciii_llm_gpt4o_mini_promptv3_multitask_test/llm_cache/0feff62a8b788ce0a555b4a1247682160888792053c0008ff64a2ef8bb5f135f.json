@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of coronary atherosclerosis, which suggests a risk for lipid metabolism disorders, hence a prediction of 'Yes' for lipid disorder in the next visit. There is no evidence of diabetes in the current record. The presence of hypertension is supported by the medication Enalapril, which is commonly used to treat high blood pressure. The patient has multiple cardiovascular issues, indicating a high likelihood of cardiovascular disease in the next visit. The presence of acute kidney failure and other related conditions suggests a risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3736,
+    "completion_tokens": 256
+  }
+}

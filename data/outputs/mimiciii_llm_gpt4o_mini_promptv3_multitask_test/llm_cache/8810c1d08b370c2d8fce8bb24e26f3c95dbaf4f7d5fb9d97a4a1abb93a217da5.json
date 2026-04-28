@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has multiple cardiovascular-related diagnoses (occlusion and stenosis of carotid and precerebral arteries) which suggest a likelihood of lipid metabolism disorders. There is no evidence of diabetes in the current visit. Hypertension is likely given the cardiovascular issues. Obesity is not indicated. The risk of cardiovascular disease and stroke is supported by the current vascular conditions. No evidence of kidney disease is present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3698,
+    "completion_tokens": 234
+  }
+}

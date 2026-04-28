@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of hypertension (Unspecified essential hypertension) and is prescribed Lisinopril, indicating current hypertension. The presence of diabetes is supported by the prescription of Insulin, suggesting the patient has diabetes. The lipid disorder prediction is based on the prescription of Simvastatin, which is used for managing lipid levels, aligning with the prevalence of lipid disorders. There is no evidence of obesity in the current record. The patient's multiple comorbidities, including giant cell arteritis and malignancy, increase",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3783,
+    "completion_tokens": 256
+  }
+}

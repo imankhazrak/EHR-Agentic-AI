@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of diabetes mellitus (type II) and pure hypercholesterolemia, indicating a high likelihood of lipid metabolism disorders. The presence of hypertension is supported by the prescription of Lisinopril, an antihypertensive medication. There is no explicit evidence of obesity in the current record. Given the combination of diabetes and hypercholesterolemia, the patient is at increased risk for cardiovascular disease. The unspecified disorder of kidney and ureter suggests potential kidney issues, and the history of sub",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3736,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological manifestations and is on long-term insulin, indicating current diabetes. Unspecified essential hypertension is also noted, confirming current hypertension. There is no explicit evidence of obesity in the record. The presence of multiple cardiovascular conditions, including heart failure and coronary atherosclerosis, suggests a high likelihood of future cardiovascular disease. The patient has acute kidney failure, which raises the risk for future kidney disease. Given the patient's cardiovascular issues and diabetes, there is a significant risk for stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4030,
+    "completion_tokens": 256
+  }
+}

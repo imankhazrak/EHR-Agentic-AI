@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple serious diagnoses including subendocardial infarction, which indicates a high risk for cardiovascular disease. The presence of hypertension is suggested by the medication Metoprolol, which is commonly used to treat high blood pressure. There is no evidence of diabetes or obesity in the current visit record. The patient has a calculus of ureter and hepatorenal syndrome, indicating a risk for kidney disease. The combination of these conditions, particularly the cardiovascular issues, suggests a significant risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4085,
+    "completion_tokens": 254
+  }
+}

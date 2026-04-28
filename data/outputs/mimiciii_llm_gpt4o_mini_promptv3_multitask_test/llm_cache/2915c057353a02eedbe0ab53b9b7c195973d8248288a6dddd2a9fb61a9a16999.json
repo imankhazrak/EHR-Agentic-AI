@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of diabetes as indicated by the prescription of insulin, which suggests current diabetes. Hypertension is explicitly diagnosed as 'unspecified essential hypertension.' There is no evidence of obesity in the current visit record. Given the patient's serious cardiac conditions (e.g., true posterior wall infarction, cardiogenic shock), there is a high likelihood of cardiovascular disease in the next visit. The presence of multiple risk factors, including diabetes and hypertension, increases the risk of stroke, leading to a prediction of stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3999,
+    "completion_tokens": 256
+  }
+}

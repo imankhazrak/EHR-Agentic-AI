@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"There is no explicit diagnosis or evidence of 'Disorders of Lipid Metabolism' in the current visit. The patient is prescribed insulin, which suggests possible diabetes, but no clear diagnosis is provided. The record indicates unspecified essential hypertension. There is no evidence of obesity. Given the patient's atrial fibrillation and history of subarachnoid hemorrhage, there is a likelihood of cardiovascular issues. The patient has not shown signs of kidney disease in this visit. The history of subarachnoid hemorrhage increases the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 256
+  }
+}

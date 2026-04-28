@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, which supports a prediction of lipid metabolism disorders in the next visit. The presence of diabetes mellitus (type II) indicates current diabetes. The patient has coronary atherosclerosis and primary pulmonary hypertension, suggesting a high likelihood of cardiovascular disease. The malignant neoplasm of the kidney and hemodialysis indicate significant kidney disease, predicting its continuation. The combination of diabetes and atherosclerosis increases the risk of stroke, leading to a prediction of stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3695,
+    "completion_tokens": 256
+  }
+}

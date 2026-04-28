@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of current diabetes. There is also a diagnosis of chronic systolic heart failure and coronary atherosclerosis, indicating a high likelihood of cardiovascular disease. The patient has end-stage renal disease, which strongly suggests kidney disease. The presence of atrial fibrillation and other cardiovascular issues increases the risk of stroke. There is no explicit evidence of obesity in the current visit record, and while the patient is on atorvastatin, which is used for lipid disorders",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 962,
+    "completion_tokens": 256
+  }
+}

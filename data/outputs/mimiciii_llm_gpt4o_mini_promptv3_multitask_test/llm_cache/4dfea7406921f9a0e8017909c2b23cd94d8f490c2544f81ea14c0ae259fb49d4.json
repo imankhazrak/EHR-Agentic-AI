@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses related to diabetes, including uncontrolled diabetes with ketoacidosis and renal manifestations, indicating a current diabetes diagnosis. Hypertensive chronic kidney disease is also documented, confirming hypertension. There is no evidence of obesity in the current visit record. The presence of congestive heart failure and diabetes with peripheral circulatory disorders suggests a high likelihood of cardiovascular disease. The patient is undergoing hemodialysis and has acute kidney failure, indicating a high probability of kidney disease. The combination of diabetes and cardiovascular issues increases",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3691,
+    "completion_tokens": 256
+  }
+}

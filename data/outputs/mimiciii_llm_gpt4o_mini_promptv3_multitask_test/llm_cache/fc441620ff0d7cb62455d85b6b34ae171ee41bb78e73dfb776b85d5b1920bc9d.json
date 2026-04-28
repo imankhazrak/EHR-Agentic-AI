@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of current diabetes. The presence of medications like Valsartan and Metoprolol indicates hypertension. The patient has significant cardiovascular issues, including congestive heart failure and carotid artery occlusion, suggesting a high likelihood of future cardiovascular disease. There is no evidence of obesity in the record, and while there are no direct indicators of kidney disease or stroke, the patient's current conditions do not strongly suggest these outcomes.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1005,
+    "completion_tokens": 250
+  }
+}

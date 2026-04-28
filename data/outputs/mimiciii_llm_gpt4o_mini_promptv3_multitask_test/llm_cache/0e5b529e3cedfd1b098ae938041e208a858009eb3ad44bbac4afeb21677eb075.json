@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with renal manifestations, indicating current diabetes. There is also evidence of hypertension as the patient is prescribed Metoprolol and Amlodipine, which are commonly used for hypertension management. The presence of atherosclerosis suggests a high risk for cardiovascular disease, leading to a prediction of 'Yes' for cardio in the next visit. The patient has nephritis and a history of kidney transplant, indicating current kidney disease, thus predicting 'Yes' for kidney disease in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 256
+  }
+}

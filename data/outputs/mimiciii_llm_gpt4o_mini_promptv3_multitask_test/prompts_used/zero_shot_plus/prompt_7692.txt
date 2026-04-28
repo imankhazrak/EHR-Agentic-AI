@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Acute vascular insufficiency of intestine; Peritoneal abscess; [ICD9-DX:9974]; Other and unspecified postsurgical nonabsorption; Chronic airway obstruction, not elsewhere classified; Other convulsions; Thrombocytopenia, unspecified; Other ascites; [ICD9-DX:4538]; Other postoperative infection; Other chronic postoperative pain; Unspecified essential hypertension; Pure hypercholesterolemia; Anemia, unspecified; Surgical operation with formation of external stoma causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation
+- Medications prescribed: D5W; MetRONIDAZOLE (FLagyl); Pantoprazole Sodium; Cisatracurium Besylate; Heparin; Vial; Heparin Sodium; Propofol; Protamine Sulfate; LR; NS; SW; Fentanyl Citrate; Magnesium Sulfate; Iso-Osmotic Sodium Chloride; Famotidine; Lorazepam; Artificial Tear Ointment; Artificial Tears; Iso-Osmotic Dextrose; Vancomycin; Piperacillin-Tazobactam Na; Potassium Chloride; Heparin Flush CVL  (100 units/ml); Insulin; Calcium Gluconate; Albumin 5% (12.5g / 250mL); Acetaminophen; OxycoDONE-Acetaminophen Elixir; Fentanyl Patch; Fluconazole; Ciprofloxacin; Prochlorperazine; Influenza Virus Vaccine; Sodium Chloride 0.9%  Flush; D5NS; Morphine Sulfate; Zolpidem Tartrate; HYDROmorphone (Dilaudid); Lansoprazole Oral Disintegrating Tab; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Enoxaparin Sodium; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Cyclobenzaprine HCl; Ondansetron; Heparin Flush Hickman (100 units/ml); Morphine Sulfate (Oral Soln.); Metoclopramide; Metoprolol
+- Procedures performed: Multiple segmental resection of small intestine; Angioplasty of other non-coronary vessel(s); Other suture of abdominal wall; Other partial resection of small intestine; Open and other cecectomy; Open and other right hemicolectomy; Small-to-small intestinal anastomosis; Other small-to-large intestinal anastomosis; Percutaneous abdominal drainage; Venous catheterization, not elsewhere classified; Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s); Procedure on single vessel; Insertion of two vascular stents; Arteriography of other intra-abdominal arteries; Other gastrostomy; Other enterostomy; Parenteral infusion of concentrated nutritional substances; Transfusion of packed cells; Diagnostic ultrasound of heart
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

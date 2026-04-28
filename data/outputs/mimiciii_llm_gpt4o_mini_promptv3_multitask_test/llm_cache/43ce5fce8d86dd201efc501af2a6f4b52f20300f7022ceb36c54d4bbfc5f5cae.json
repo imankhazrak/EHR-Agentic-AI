@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant comorbidities, including uncontrolled diabetes and hypertension, which are strong indicators for future complications. The presence of hyperlipidemia suggests a likelihood of lipid metabolism disorders. The patient's history of cardiovascular issues and current medications (e.g., anticoagulants) further support the prediction of cardiovascular disease and stroke risk. Although obesity is a common risk factor, there is no explicit evidence of obesity in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4124,
+    "completion_tokens": 243
+  }
+}

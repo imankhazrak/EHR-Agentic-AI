@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"reasoning\": \"The patient has a history of cerebrovascular issues (iatrogenic cerebrovascular infarction or hemorrhage, intracerebral hemorrhage) which suggests a high likelihood of stroke in the next visit. The presence of insulin indicates diabetes management, and medications like Labetalol and Metoprolol suggest hypertension treatment. There is no evidence of obesity in the current record, and while there are no direct indicators of lipid disorders, the patient's complex medical history and current medications do not support a diagnosis of lipid metabolism disorders.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1176,
+    "completion_tokens": 256
+  }
+}

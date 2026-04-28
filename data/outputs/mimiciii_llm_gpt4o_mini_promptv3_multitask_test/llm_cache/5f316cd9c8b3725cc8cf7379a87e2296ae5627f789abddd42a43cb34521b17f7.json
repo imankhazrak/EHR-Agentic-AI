@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient is prescribed Atorvastatin, which indicates a history of lipid issues, suggesting a likely diagnosis of 'Disorders of Lipid Metabolism' in the next visit. There is no evidence of diabetes or obesity in the current record. The presence of hypertension is supported by the use of Captopril and Lisinopril. Given the diagnoses of acute kidney failure and congestive heart failure, the patient is at high risk for cardiovascular disease and kidney disease in the next visit. The presence of atrial",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 748,
+    "completion_tokens": 256
+  }
+}

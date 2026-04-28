@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of hypertensive encephalopathy and is on medications such as Lisinopril and Metoprolol, indicating current hypertension. There is no evidence of diabetes or obesity in the record. The patient has end stage renal disease and chronic kidney disease, which suggests kidney disease will continue. The presence of combined heart failure indicates a high likelihood of cardiovascular disease. There is no evidence of a stroke or risk factors for stroke documented in this visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 247
+  }
+}

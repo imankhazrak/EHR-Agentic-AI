@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has been prescribed insulin, indicating a current diagnosis of diabetes. Amlodipine and Metoprolol are commonly used for hypertension, suggesting the patient likely has this condition. There is no evidence of obesity in the current visit record. Given the patient's history of atrial fibrillation and other cardiovascular issues, there is a strong likelihood of cardiovascular disease in the next visit. The presence of iatrogenic cerebrovascular infarction suggests a risk for stroke, supporting the prediction for a stroke diagnosis in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3849,
+    "completion_tokens": 256
+  }
+}

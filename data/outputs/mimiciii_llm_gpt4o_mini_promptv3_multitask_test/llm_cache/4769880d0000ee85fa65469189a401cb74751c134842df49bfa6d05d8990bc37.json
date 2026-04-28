@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, which supports the hypertension_current prediction. Insulin is prescribed, indicating a high likelihood of diabetes, thus diabetes_current is predicted as Yes. There is no evidence of obesity in the record. The patient has multiple kidney-related diagnoses (hydronephrosis, calculus of kidney) and procedures (percutaneous nephrostomy), supporting kidney_next. Cardiovascular issues are indicated by atrial fibrillation, suggesting a likelihood of future cardiovascular disease. There is no evidence of stroke risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1050,
+    "completion_tokens": 256
+  }
+}

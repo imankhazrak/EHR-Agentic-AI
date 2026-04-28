@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', which supports a prediction of lipid metabolism disorder in the next visit. The presence of insulin indicates current diabetes management. The use of Metoprolol suggests hypertension treatment. There is no explicit evidence of obesity in the current record. The patient has multiple cardiac diagnoses, indicating a likelihood of cardiovascular disease. Oliguria and anuria suggest potential kidney issues, supporting the prediction of kidney disease. There is no evidence of stroke risk factors or history in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 256
+  }
+}

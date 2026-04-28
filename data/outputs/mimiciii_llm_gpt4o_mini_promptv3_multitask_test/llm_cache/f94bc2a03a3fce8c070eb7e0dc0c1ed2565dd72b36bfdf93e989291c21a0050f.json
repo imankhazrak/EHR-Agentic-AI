@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), indicating current diabetes. Hypertension is likely due to the prescription of Metoprolol and Captopril, which are commonly used for hypertension management. The presence of coronary atherosclerosis and atrial fibrillation suggests a high risk for cardiovascular disease, supporting the prediction for cardio issues in the next visit. There is no evidence of obesity in the current record. The patient has a history of cerebrovascular disease, which supports the prediction for stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3653,
+    "completion_tokens": 256
+  }
+}

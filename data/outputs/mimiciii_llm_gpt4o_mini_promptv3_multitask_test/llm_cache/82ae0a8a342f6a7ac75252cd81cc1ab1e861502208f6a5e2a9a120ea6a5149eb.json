@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"There is no explicit evidence of 'Disorders of Lipid Metabolism' in the current visit record. The presence of 'Other abnormal glucose' suggests diabetes, and insulin is prescribed, supporting this diagnosis. There is no mention of hypertension or obesity. The patient has chronic liver disease, which can lead to kidney issues, hence the prediction for kidney disease. There is no evidence to suggest cardiovascular disease or stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 904,
+    "completion_tokens": 236
+  }
+}

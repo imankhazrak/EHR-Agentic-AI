@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Chronic kidney disease, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Congestive heart failure, unspecified; Atrial fibrillation; Other and unspecified hyperlipidemia; Anemia, unspecified; Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS); Other chronic pulmonary heart diseases; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Infection with microorganisms without mention of resistance to multiple drugs; [ICD9-DX:7876]; Retention of urine, unspecified; Heart valve replaced by transplant; Thoracoscopic surgical procedure converted to open procedure; Hemorrhage complicating a procedure; [ICD9-DX:5185]; Acute on chronic combined systolic and diastolic heart failure; Unspecified protein-calorie malnutrition; Urinary tract infection, site not specified; Delirium due to conditions classified elsewhere; Hyperosmolality and/or hypernatremia; Surgical operation with implant of artificial internal device causing abnormal patient reaction, or later complication,without mention of misadventure at time of operation
+- Medications prescribed: Calcium Gluconate; Magnesium Sulfate; Chlorhexidine Gluconate 0.12% Oral Rinse; Docusate Sodium (Liquid); Acetaminophen; Miconazole Powder 2%; CefePIME; 0.9% Sodium Chloride (Mini Bag Plus); Potassium Chloride (Powder); Furosemide; Quetiapine Fumarate; Metoprolol Tartrate; Multivitamins; Sarna Lotion; Simvastatin; Bisacodyl; Albuterol-Ipratropium; Neutra-Phos; Lidocaine Jelly 2% (Urojet); AcetaZOLamide Sodium; 5% Dextrose; Lidocaine 1%; Lisinopril; Albuterol 0.083% Neb Soln; Acetylcysteine 20%; Ipratropium Bromide Neb; Etomidate; Succinylcholine; Midazolam; Soln; Fentanyl Citrate; Linezolid; Phenylephrine; Cosyntropin; Pneumococcal Vac Polyvalent; Heparin; Dextrose 50%; Glucagon; Insulin; SW; 0.9% Sodium Chloride; Aspirin; Ranitidine (Liquid); Heparin Flush (10 units/ml); Olanzapine (Disintegrating Tablet); Acetaminophen (Liquid); Haloperidol; Famotidine; Potassium Chloride; Potassium Phosphate
+- Procedures performed: Thoracoscopic drainage of pleural cavity; Temporary tracheostomy; Reopening of recent thoracotomy site; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Percutaneous [endoscopic] gastrostomy [PEG]; Closed [endoscopic] biopsy of bronchus; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Insertion of endotracheal tube
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

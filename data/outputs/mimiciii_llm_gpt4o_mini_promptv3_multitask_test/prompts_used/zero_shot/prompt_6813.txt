@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Other specified cardiac dysrhythmias; Congestive heart failure, unspecified; Hyperpotassemia; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Chronic airway obstruction, not elsewhere classified; Primary pulmonary hypertension; Coronary atherosclerosis of native coronary artery; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Anemia in chronic kidney disease; [ICD9-DX:7806]; Personal history of tobacco use; Aortocoronary bypass status; Hypotension, unspecified
+- Medications prescribed: Sodium Polystyrene Sulfonate; Calcium Gluconate; Captopril; Furosemide; Calcitriol; Clopidogrel Bisulfate; Atropine Sulfate; Atorvastatin; Aspirin; Acetaminophen; Sodium Chloride 0.9%  Flush; Prochlorperazine; Albuterol; Ipratropium Bromide Neb; Insulin; Pantoprazole; Sevelamer; Nephrocaps; Docusate Sodium; Metoprolol; Lorazepam; Nitroglycerin SL; Morphine Sulfate; Dextrose 50%; Sodium Bicarbonate; Isosorbide Dinitrate; Gabapentin; Isosorbide Mononitrate (Extended Release); Lisinopril; Metoprolol XL
+- Procedures performed: Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Hemodialysis; Transfusion of packed cells
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

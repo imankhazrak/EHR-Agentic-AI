@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has chronic systolic heart failure and congestive heart failure, indicating a high risk for cardiovascular disease. Hypertension is likely given the heart failure diagnoses, but no explicit diabetes or obesity is documented. There is a history of kidney issues suggested by the presence of chronic kidney disease in the context of heart failure, which supports the prediction for kidney disease in the next visit. No evidence of stroke risk factors is present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4018,
+    "completion_tokens": 238
+  }
+}

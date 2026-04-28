@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses, including coronary atherosclerosis and ventricular fibrillation, which strongly suggest ongoing cardiovascular issues, leading to a high likelihood of future cardiovascular disease and stroke. Hypertension is likely given the medications prescribed (Lisinopril) and the patient's cardiovascular status. There is no evidence of diabetes or obesity in the current visit record. The presence of Atorvastatin suggests a potential lipid disorder, but it is not explicitly diagnosed, hence a prediction of 'Yes' for lipid disorder is based on",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 256
+  }
+}

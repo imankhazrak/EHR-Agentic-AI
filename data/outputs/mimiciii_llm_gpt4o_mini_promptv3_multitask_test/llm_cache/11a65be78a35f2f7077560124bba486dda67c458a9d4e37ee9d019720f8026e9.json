@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has multiple diagnoses indicating diabetes and hypertension, along with a history of coronary artery disease and renal issues, which strongly suggest ongoing cardiovascular and kidney problems. The presence of 'Other and unspecified hyperlipidemia' supports the prediction of lipid metabolism disorders. The patient's obesity is implied by the mention of 'Bariatric surgery status'. Given these factors, the predictions for future visits reflect a high likelihood of continued health issues.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4045,
+    "completion_tokens": 239
+  }
+}

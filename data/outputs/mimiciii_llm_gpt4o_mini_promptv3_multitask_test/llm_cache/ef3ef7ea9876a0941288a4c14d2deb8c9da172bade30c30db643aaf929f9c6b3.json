@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is prescribed insulin, indicating current diabetes. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease and the prescription of antihypertensive medications (Labetalol, Lisinopril, Metoprolol). There is evidence of hyperlipidemia (other and unspecified hyperlipidemia), which supports a prediction of lipid disorder in the next visit. The presence of multiple cardiovascular conditions (chronic diastolic heart failure",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4089,
+    "completion_tokens": 256
+  }
+}

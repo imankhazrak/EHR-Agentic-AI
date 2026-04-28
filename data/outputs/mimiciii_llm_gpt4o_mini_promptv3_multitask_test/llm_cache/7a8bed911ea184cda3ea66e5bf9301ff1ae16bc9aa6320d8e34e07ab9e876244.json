@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of cardiovascular issues (coronary atherosclerosis, myocardial infarction) and is prescribed atorvastatin, indicating a potential lipid disorder. There is no evidence of diabetes in the current visit. Hypertension is likely due to the prescription of Quinapril, an antihypertensive. There is no indication of obesity. Given the cardiovascular history, the likelihood of future cardiovascular disease is high. There are no indicators of kidney disease or stroke risk in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3720,
+    "completion_tokens": 253
+  }
+}

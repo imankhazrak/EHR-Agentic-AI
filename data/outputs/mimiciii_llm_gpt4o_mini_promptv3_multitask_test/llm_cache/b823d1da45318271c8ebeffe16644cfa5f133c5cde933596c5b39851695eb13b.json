@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has morbid obesity, which is a strong indicator of potential metabolic disorders. The presence of diabetes is supported by the use of insulin, indicating current management of diabetes. Hypertension is likely given the patient's history of heart failure and atrial fibrillation, which often co-occur with hypertension. The acute kidney failure suggests a risk for kidney disease in the next visit. Cardiovascular disease is also likely due to the combination of heart failure, atrial fibrillation, and obesity. There is no explicit evidence of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4044,
+    "completion_tokens": 256
+  }
+}

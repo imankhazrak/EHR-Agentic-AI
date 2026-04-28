@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of base of skull with cerebral laceration and contusion, with loss of consciousness of unspecified duration; [ICD9-DX:5185]; Traumatic shock; Contusion of lung without mention of open wound into thorax; Acidosis; Cerebral artery occlusion, unspecified with cerebral infarction; Cerebral edema; Compression of brain; Accidental fall on or from other stairs or steps; Alcohol abuse, unspecified; [ICD9-DX:7806]; Open wound of scalp, without mention of complication
+- Medications prescribed: Ibuprofen Suspension; Iso-Osmotic Sodium Chloride; NS; Potassium Chl 20 mEq / 1000 mL NS; LeVETiracetam; Famotidine; Morphine Sulfate; OxycoDONE Liquid; Acetaminophen; Potassium Chloride; Senna; Furosemide; Vecuronium Bromide; Phenytoin; Propofol; Heparin; Bisacodyl; Loperamide; Ondansetron; LR; Insulin; Docusate Sodium (Liquid); Artificial Tear Ointment; Sodium Chloride 0.9%  Flush; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Nystatin Oral Suspension; D5W; SW; Phenytoin Sodium; Soln.; Mannitol 20%; Iso-Osmotic Dextrose; CefazoLIN; Calcium Gluconate; Chlorhexidine Gluconate 0.12% Oral Rinse; Magnesium Sulfate; Neutra-Phos; Metoprolol Tartrate; Fentanyl Citrate; Labetalol; NiCARdipine IV
+- Procedures performed: Incision of cerebral meninges; Other craniotomy; Interruption of the vena cava; Magnetic removal of embedded foreign body from cornea; Percutaneous [endoscopic] gastrostomy [PEG]; Enteral infusion of concentrated nutritional substances; Arterial catheterization; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Closure of skin and subcutaneous tissue of other sites
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

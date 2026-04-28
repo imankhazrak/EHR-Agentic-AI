@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological manifestations and is on insulin, indicating current diabetes. There is also unspecified essential hypertension noted in the diagnoses. The presence of hyperlipidemia suggests a likelihood of lipid metabolism disorders. Given the patient's history of heart failure and subendocardial infarction, there is a strong indication of potential cardiovascular disease. However, there is no evidence of obesity in the current record, and while there are risk factors for stroke, the evidence is not definitive for kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1234,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, which supports a prediction of lipid disorder for the next visit. The presence of diabetes mellitus is explicitly stated, confirming current diabetes. Hypertension is indicated by the diagnosis of primary pulmonary hypertension. There is no evidence of obesity in the record. The patient has coronary atherosclerosis, which increases the likelihood of cardiovascular disease. Given the diagnosis of malignant neoplasm of the kidney and the procedure of nephroureterectomy, kidney disease is likely to persist.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3442,
+    "completion_tokens": 256
+  }
+}

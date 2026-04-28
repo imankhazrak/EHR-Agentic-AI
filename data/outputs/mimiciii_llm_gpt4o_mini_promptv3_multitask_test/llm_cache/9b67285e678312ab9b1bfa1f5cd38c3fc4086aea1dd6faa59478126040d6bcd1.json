@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of diabetes mellitus (type II) and unspecified essential hypertension, indicating current diabetes and hypertension. There is no explicit evidence of obesity in the record. The presence of atherosclerosis and congestive heart failure suggests a high risk for cardiovascular disease in the next visit. The lipid disorder prediction is based on the medication Atorvastatin, which is commonly prescribed for lipid abnormalities, aligning with the prevalence noted. There is no indication of kidney disease or stroke risk based on the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3882,
+    "completion_tokens": 256
+  }
+}

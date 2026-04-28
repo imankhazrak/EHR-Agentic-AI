@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record indicates a diagnosis of 'Coronary atherosclerosis of native coronary artery', which suggests a significant risk for cardiovascular disease, leading to a prediction of 'Yes' for cardiovascular disease in the next visit. There is no evidence of diabetes, hypertension, or obesity in the current record. The patient has acute kidney failure, but there is no indication of chronic kidney disease or a high likelihood of kidney disease in the next visit. There is no evidence to suggest a risk for stroke based on the current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3909,
+    "completion_tokens": 256
+  }
+}

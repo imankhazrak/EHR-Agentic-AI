@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, which supports a high likelihood of a lipid disorder diagnosis in the next visit. The presence of diabetes mellitus (type II) indicates current diabetes. The patient also has obesity and has been prescribed medications like Valsartan and Metoprolol, which are commonly used for hypertension, suggesting the presence of hypertension. Given the patient's cardiovascular conditions (subendocardial infarction and coronary atherosclerosis), there is a significant risk for future cardiovascular events.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3831,
+    "completion_tokens": 256
+  }
+}

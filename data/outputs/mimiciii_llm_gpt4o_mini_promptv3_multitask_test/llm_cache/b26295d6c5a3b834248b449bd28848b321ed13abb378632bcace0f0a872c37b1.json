@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, uncontrolled, and has other related complications. There is also evidence of hyperlipidemia, which supports the prediction of lipid disorders. Hypertension is mentioned as unspecified essential hypertension. There is no evidence of obesity in the record. The patient has a history of cardiovascular issues, including coronary atherosclerosis and old myocardial infarction, suggesting a likelihood of future cardiovascular disease. Kidney disease is indicated by renal manifestations of diabetes and nephritis/nephropathy. There is no evidence",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 256
+  }
+}

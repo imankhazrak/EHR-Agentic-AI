@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented history of hyperlipidemia, which supports a prediction of lipid disorder in the next visit. The presence of diabetes mellitus type II indicates current diabetes. Unspecified essential hypertension confirms current hypertension. The record states obesity, indicating the patient currently has obesity. The patient's history of other diseases of the circulatory system and current medications suggest a risk for cardiovascular disease. Acute kidney failure and the current use of medications like Lisinopril indicate a likelihood of kidney disease in the next visit. There is",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1114,
+    "completion_tokens": 256
+  }
+}

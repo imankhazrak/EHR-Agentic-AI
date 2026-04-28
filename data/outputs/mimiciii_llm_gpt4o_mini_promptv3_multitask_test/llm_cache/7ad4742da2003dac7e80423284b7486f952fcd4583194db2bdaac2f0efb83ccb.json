@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient is prescribed atorvastatin, which is commonly used for lipid disorders, indicating a potential diagnosis of lipid metabolism issues. The presence of diabetes is supported by the prescription of insulin. Hypertension is likely given the prescription of hydralazine and metoprolol, which are used to manage high blood pressure. There is no evidence of obesity in the current record. The patient has multiple cardiovascular issues, including coronary atherosclerosis and heart failure, suggesting a high likelihood of cardiovascular disease. There is no indication of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1024,
+    "completion_tokens": 256
+  }
+}

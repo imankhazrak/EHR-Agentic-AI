@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Atrial fibrillation; Other primary cardiomyopathies; Other shock without mention of trauma; Acute kidney failure with lesion of tubular necrosis; Pneumonia, organism unspecified; Hemorrhage complicating a procedure; Viral hepatitis B without mention of hepatic coma, acute or unspecified, without mention of hepatitis delta; Acute hepatitis C without mention of hepatic coma
+- Medications prescribed: Phytonadione; Morphine Sulfate; Dextrose 5%; Levofloxacin; Lorazepam; Calcium Gluconate; Zolpidem Tartrate; Magnesium Sulfate; Iso-Osmotic Dextrose; Vancomycin HCl; Oxycodone-Acetaminophen; Lisinopril; Metronidazole; Pantoprazole; Bisacodyl; Senna; Ipratropium Bromide; Docusate Sodium; Oxycodone (Sustained Release); Oxycodone; Magnesium Oxide; Warfarin; Neutra-Phos; Heparin; Furosemide; Fleet Phospho-Soda; Docusate Sodium-Casanthranol; Alprazolam; Cephalexin; D5W; DopAmine; NS; Vasopressin; Pantoprazole Sodium; Diphenhydramine HCl; Aspirin EC; Metoprolol; Acetaminophen; Aluminum-Magnesium Hydroxide; Heparin Sodium
+- Procedures performed: Pulmonary artery wedge monitoring; Other electric countershock of heart; Diagnostic ultrasound of heart
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented history of 'Other and unspecified hyperlipidemia', which supports a prediction of lipid disorder in the next visit. There is no evidence of diabetes in the current record. The patient has 'Hypertensive chronic kidney disease', indicating current hypertension. There is no mention of obesity. Given the patient's recent subendocardial infarction and coronary atherosclerosis, cardiovascular disease is likely to be present in the next visit. The patient has 'Acute kidney failure' and 'Chronic kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1310,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Hyposmolality and/or hyponatremia; Pneumonia, organism unspecified; Unspecified septicemia; Septic shock; Severe sepsis; Acute respiratory failure; Acute kidney failure, unspecified; Hepatorenal syndrome; Other specified forms of effusion, except tuberculous; Other ascites; Ostium secundum type atrial septal defect; Portal hypertension; Urinary tract infection, site not specified; Cirrhosis of liver without mention of alcohol; [ICD9-DX:2750]; Hypopotassemia; Unspecified essential hypertension; Awaiting organ transplant status; Other chronic nonalcoholic liver disease; Other and unspecified hyperlipidemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Gout, unspecified; Friedl?nder's bacillus infection in conditions classified elsewhere and of unspecified site; Other specified cardiac dysrhythmias; Atrial fibrillation; [ICD9-DX:2766]
+- Medications prescribed: Midodrine; Furosemide; Spironolactone; Acetylcysteine 20%; D5 1/2NS; Lactulose; Simethicone; Sodium Chloride 0.9%  Flush; 5% Dextrose; Chlorhexidine Gluconate 0.12% Oral Rinse; Insulin; Metoprolol Tartrate; Ciprofloxacin HCl; Fluconazole; MetRONIDAZOLE (FLagyl); Papain 2.5 % Solution; NS; Iso-Osmotic Sodium Chloride; Vancomycin; Ipratropium Bromide MDI; Prismasate (B22 K4); Bag; 1/2 NS; Artificial Tears; Multivitamins W/minerals; Heparin Flush (10 units/ml); Docusate Sodium; Albuterol 0.083% Neb Soln; Ondansetron; Vasopressin; 0.9% Sodium Chloride; Norepinephrine; Calcium Gluconate; Famotidine; Neutra-Phos; Citrate Dextrose 3% (ACD-A) CRRT; Insulin Human Regular; Sodium Phosphate; Iso-Osmotic Dextrose; Phenylephrine; Albumin 5% (25g / 500mL); Midazolam; Soln; Fentanyl Citrate; Lorazepam; Heparin (CRRT Machine Priming); Potassium Chloride; Sterile Water; Heparin Flush (1000 units/mL); Sodium CITRATE 4%
+- Procedures performed: Percutaneous abdominal drainage; Thoracentesis; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Insertion of endotracheal tube; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Arterial catheterization; Hemodialysis; Closed [endoscopic] biopsy of bronchus
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

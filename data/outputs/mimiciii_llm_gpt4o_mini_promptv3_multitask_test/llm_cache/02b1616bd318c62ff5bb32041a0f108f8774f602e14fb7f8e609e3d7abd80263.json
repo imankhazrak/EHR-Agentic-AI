@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes (indicated by the prescription of insulin and glipizide), which supports a high probability of current diabetes. Hypertension is indicated by the diagnosis of unspecified essential hypertension, leading to a strong probability of current hypertension. Morbid obesity is explicitly diagnosed, confirming current obesity. The presence of congestive heart failure and diabetes suggests a higher risk for cardiovascular disease, hence a positive prediction for cardio next. There is no evidence of kidney disease or stroke in the current visit record.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3789,
+    "completion_tokens": 256
+  }
+}

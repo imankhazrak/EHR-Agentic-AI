@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a diagnosis of benign essential hypertension, which supports the prediction of hypertension. There is no evidence of diabetes or obesity in the current visit record. The presence of multiple cerebrovascular events (e.g., occlusion and stenosis of arteries with cerebral infarction) indicates a high likelihood of cardiovascular disease and stroke in the next visit. The patient is prescribed simvastatin, which suggests a potential lipid disorder, leading to a prediction of 'Yes' for lipid metabolism disorders in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3768,
+    "completion_tokens": 254
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions, including coronary atherosclerosis and atrial fibrillation, which suggest a high risk for lipid metabolism disorders and cardiovascular disease. The presence of insulin in the medication list indicates diabetes management, supporting the prediction of current diabetes. Unspecified essential hypertension is documented, confirming current hypertension. There is no evidence of obesity in the record. Chronic kidney disease is noted, indicating a likelihood of kidney disease in the next visit. The combination of cardiovascular issues and diabetes increases the risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4095,
+    "completion_tokens": 255
+  }
+}

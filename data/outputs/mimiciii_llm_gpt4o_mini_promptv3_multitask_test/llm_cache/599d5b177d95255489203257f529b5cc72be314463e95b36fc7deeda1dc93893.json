@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has multiple diagnoses indicating diabetes (with renal and ophthalmic manifestations), hypertension (hypertensive chronic kidney disease), and end-stage renal disease. The presence of cardiovascular issues (subendocardial infarction and old myocardial infarction) suggests a high likelihood of future cardiovascular disease. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis of lipid metabolism disorder in the current visit. There is also a history of cerebrovascular disease (late effects of cerebrovascular disease),",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3703,
+    "completion_tokens": 256
+  }
+}

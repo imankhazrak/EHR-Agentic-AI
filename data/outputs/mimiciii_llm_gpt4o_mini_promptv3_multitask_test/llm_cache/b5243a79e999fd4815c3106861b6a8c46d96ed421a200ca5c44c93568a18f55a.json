@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions (coronary atherosclerosis, congestive heart failure) indicating a high risk for future cardiovascular disease. The presence of acute kidney failure suggests ongoing kidney issues, which may persist into the next visit. There is no evidence of diabetes or obesity in the current record, but hypertension is likely due to the patient's cardiac conditions and medications (e.g., Metoprolol). No lipid disorder is explicitly diagnosed or indicated by medication use.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4202,
+    "completion_tokens": 247
+  }
+}

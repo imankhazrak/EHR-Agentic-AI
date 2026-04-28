@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Hypotension, unspecified; Pressure ulcer, buttock; Irradiation cystitis; Alkalosis; Atrial flutter; Rupture of bladder, nontraumatic; Precipitous drop in hematocrit; Unspecified pleural effusion; Cardiac arrest; Atrial fibrillation; Unspecified essential hypertension; Esophageal reflux; Heart valve replaced by transplant; [ICD9-DX:5997]; Radiological procedure and radiotherapy as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Accidents occurring in residential institution; Tracheostomy status; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Infection with microorganisms without mention of resistance to multiple drugs; Unspecified acquired hypothyroidism; Gastrostomy status; Other specified retention of urine; Sinoatrial node dysfunction
+- Medications prescribed: Qvar; Fluticasone Propionate 110mcg; Docusate Sodium; Fentanyl Citrate; Midazolam; Phenylephrine; D5W; Artificial Tears; Lansoprazole Oral Disintegrating Tab; Furosemide; OxycoDONE-Acetaminophen Elixir; Meropenem; NS (Mini Bag Plus); NS; Vancomycin; SW; Potassium Chloride; Haloperidol; Metoprolol; Oxybutynin; Sterile Water; Alum Potassium; Miconazole Powder 2%; DiphenhydrAMINE; Bisacodyl; Oxycodone-Acetaminophen; AcetaZOLamide Sodium; Digoxin; Chlorhexidine Gluconate 0.12% Oral Rinse; Aspirin EC; CefazoLIN; Iso-Osmotic Dextrose; CeftriaXONE; Sodium Bicarbonate; Acetylcysteine 20%; MetRONIDAZOLE (FLagyl); Heparin Flush CVL  (100 units/ml); Lorazepam; Piperacillin-Tazobactam Na; Morphine Sulfate; Ipratropium Bromide MDI; Albuterol; Heparin; Aspirin; Heparin Flush PICC (100 units/ml); Insulin; Zinc Sulfate; Calcium Gluconate; Acetaminophen; Atorvastatin
+- Procedures performed: Initial insertion of transvenous lead [electrode] into ventricle; Initial insertion of single-chamber device, not specified as rate responsive; Other transurethral excision or destruction of lesion or tissue of bladder; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Injection or infusion of oxazolidinone class of antibiotics; Transurethral clearance of bladder; Thoracentesis; Venous catheterization, not elsewhere classified; Transfusion of packed cells
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

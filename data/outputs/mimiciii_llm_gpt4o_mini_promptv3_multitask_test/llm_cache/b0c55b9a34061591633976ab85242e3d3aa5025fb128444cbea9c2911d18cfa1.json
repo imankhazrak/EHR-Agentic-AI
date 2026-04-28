@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of hypertension and is currently prescribed medications like Metoprolol and Valsartan, indicating hypertension. The presence of diabetes is supported by the prescription of Insulin. The patient has multiple cardiovascular issues, including acute myocardial infarction and coronary atherosclerosis, which increases the likelihood of future cardiovascular disease and stroke. The acute kidney failure diagnosis suggests a risk for kidney disease. There is no evidence of obesity in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3858,
+    "completion_tokens": 244
+  }
+}

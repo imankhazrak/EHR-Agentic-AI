@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a current lipid disorder, and given the prevalence in the MIMIC-III population, there is a strong likelihood of a diagnosis in the next visit. The patient has diabetes mellitus (type II), which is explicitly stated, confirming current diabetes. There is no mention of hypertension in the record, leading to a prediction of 'No' for current hypertension. The presence of obstructive sleep apnea and diabetes suggests obesity, which is supported by the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4034,
+    "completion_tokens": 256
+  }
+}

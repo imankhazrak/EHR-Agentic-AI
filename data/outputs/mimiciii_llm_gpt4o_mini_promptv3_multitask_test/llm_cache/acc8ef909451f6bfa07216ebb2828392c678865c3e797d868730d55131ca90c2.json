@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a history of hypertension as indicated by the diagnosis of 'Unspecified essential hypertension' and is prescribed medications like Losartan, which is used for hypertension. The presence of diabetes is supported by the prescription of Amaryl and Insulin, indicating current management of diabetes. The patient has multiple cardiovascular conditions, including heart failure and atrial fibrillation, suggesting a high likelihood of cardiovascular disease in the next visit. There is no evidence of obesity in the current record, and while kidney disease is a concern in patients",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1053,
+    "completion_tokens": 256
+  }
+}

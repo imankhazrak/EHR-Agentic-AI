@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which indicates a lipid metabolism disorder, leading to a high likelihood of a diagnosis in the next visit. The presence of diabetes mellitus type II and unspecified essential hypertension in the current diagnoses supports the predictions for diabetes and hypertension. There is no evidence of obesity in the current record. Given the patient's cardiovascular conditions, including coronary atherosclerosis and congestive heart failure, there is a strong likelihood of cardiovascular disease in the next visit. However, there is no indication",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3635,
+    "completion_tokens": 256
+  }
+}

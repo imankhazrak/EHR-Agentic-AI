@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"There is no explicit evidence of lipid disorders, diabetes, or obesity in the current visit record. Hypertension is suggested by the prescription of Metoprolol and Verapamil, which are commonly used for blood pressure management. The presence of unspecified cardiac dysrhythmias and the patient's complex medical history suggest a likelihood of cardiovascular issues. Kidney disease is possible given the patient's overall condition and treatments, but not explicitly stated. There is no evidence to suggest a stroke risk based on the current visit record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 254
+  }
+}

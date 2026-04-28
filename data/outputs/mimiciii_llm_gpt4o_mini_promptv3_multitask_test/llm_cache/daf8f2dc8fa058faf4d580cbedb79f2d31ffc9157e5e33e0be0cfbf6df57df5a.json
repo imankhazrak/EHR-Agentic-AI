@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of obesity, which supports the prediction of current obesity. Hypertension is likely given the prescription of hydralazine, a medication used to treat high blood pressure. There is no evidence of diabetes in the current visit record. The patient has acute kidney failure, which suggests a high risk for kidney disease in the next visit. The presence of congestive heart failure and other comorbidities indicates a significant risk for cardiovascular disease. There is no indication of stroke risk factors or history in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3999,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of morbid obesity, which indicates current obesity. There is also a diagnosis of unspecified essential hypertension, indicating current hypertension. The patient is prescribed insulin, indicating a diagnosis of diabetes. There is no explicit evidence of lipid disorders or kidney disease in the current visit record. The presence of multiple cardiovascular risk factors (obesity, hypertension, diabetes) suggests a higher likelihood of cardiovascular disease in the next visit, but no evidence supports a prediction of stroke or kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4160,
+    "completion_tokens": 251
+  }
+}

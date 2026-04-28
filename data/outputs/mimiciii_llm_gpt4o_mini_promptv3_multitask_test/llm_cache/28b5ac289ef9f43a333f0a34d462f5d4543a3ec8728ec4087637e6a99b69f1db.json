@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has been prescribed Atorvastatin, which is commonly used for lipid disorders, indicating a likelihood of lipid metabolism issues. Insulin use suggests current diabetes. The presence of coronary atherosclerosis and a subendocardial infarction indicates cardiovascular disease, and the patient's medical history suggests a risk for stroke. There is no explicit evidence of obesity, and while there are signs of potential kidney issues, no direct evidence is present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1068,
+    "completion_tokens": 241
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which supports a prediction of lipid disorder in the next visit. The use of insulin suggests the presence of diabetes. The presence of hypertension is inferred from the medication Hydralazine, which is often used to treat high blood pressure. There is no evidence of obesity in the current record. Given the patient's subdural hemorrhage and other conditions, there is a strong likelihood of cardiovascular disease and stroke in the next visit. There is no evidence of kidney disease",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 256
+  }
+}

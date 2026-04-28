@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating diabetes and hypertension, including 'Diabetes with peripheral circulatory disorders' and 'Hypertensive chronic kidney disease'. The presence of 'Other and unspecified hyperlipidemia' suggests a likelihood of lipid metabolism disorders. Given the patient's cardiovascular issues, including 'Acute systolic heart failure' and 'Coronary atherosclerosis', there is a strong chance of cardiovascular disease in the next visit. The patient's chronic kidney disease and other vascular complications also indicate a high risk for kidney disease",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4071,
+    "completion_tokens": 256
+  }
+}

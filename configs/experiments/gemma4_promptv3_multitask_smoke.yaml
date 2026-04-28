@@ -1,0 +1,17 @@
+# Prompt_v3 multitask smoke run (5 samples): local Gemma-4.
+
+paths:
+  processed: "data/processed/mimiciii_multitask"
+  outputs: "data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke"
+
+llm:
+  provider: local_gemma
+  model_name: models/hf_snapshots/google--gemma-4-e4b-it
+  model: models/hf_snapshots/google--gemma-4-e4b-it
+  prompt_template_dir: "prompts_v3"
+  multitask: true
+  max_test_samples: 5
+  cache_dir: "data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke/llm_cache"
+  max_input_tokens: 3072
+  max_new_tokens: 128
+  device_map: single

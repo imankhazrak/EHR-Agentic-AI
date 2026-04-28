@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which indicates a lipid metabolism disorder, and given the prevalence in the MIMIC-III population, it is likely to be diagnosed again. The presence of insulin indicates current diabetes management. Unspecified essential hypertension is documented, confirming current hypertension. There is no evidence of obesity in the record. The patient has multiple cardiovascular issues, suggesting a high likelihood of cardiovascular disease in the next visit. There is no indication of kidney disease or stroke risk based on the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3943,
+    "completion_tokens": 256
+  }
+}

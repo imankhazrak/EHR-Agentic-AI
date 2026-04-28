@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions, including chronic ischemic heart disease and coronary atherosclerosis, which suggest a high likelihood of lipid metabolism disorders. The presence of diabetes is supported by the use of insulin, indicating current diabetes management. Hypertension is explicitly diagnosed as 'unspecified essential hypertension.' There is no evidence of obesity in the current visit record. Given the patient's heart conditions, there is a significant risk of future cardiovascular events. There is no evidence of kidney disease in the current visit, and while the patient has",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3935,
+    "completion_tokens": 256
+  }
+}

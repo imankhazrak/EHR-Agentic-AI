@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a disorder of lipid metabolism. The patient is currently diagnosed with uncontrolled type II diabetes, which is explicitly mentioned. Unspecified essential hypertension is also noted, confirming the presence of hypertension. Morbid obesity is documented, indicating the patient currently has obesity. Given the history of coronary atherosclerosis and myocardial infarction, it is likely the patient will continue to have cardiovascular disease. There is no evidence of current kidney disease, and while there is a",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1158,
+    "completion_tokens": 256
+  }
+}

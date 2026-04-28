@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating chronic conditions, including chronic systolic heart failure and coronary atherosclerosis, which suggest a high risk for cardiovascular disease. The presence of hypertensive chronic kidney disease and chronic kidney disease stage III indicates significant kidney issues. There is no evidence of diabetes or obesity in the current visit record, and while there is no explicit diagnosis of lipid disorders, the patient is on Pravastatin, which suggests management of lipid levels but does not confirm a diagnosis. Therefore, predictions for cardiovascular disease, kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4041,
+    "completion_tokens": 256
+  }
+}

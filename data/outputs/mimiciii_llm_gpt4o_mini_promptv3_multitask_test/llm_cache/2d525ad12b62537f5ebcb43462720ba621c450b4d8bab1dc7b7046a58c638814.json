@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has pure hyperglyceridemia, which indicates a lipid metabolism disorder, and is prescribed atorvastatin, supporting the prediction for lipid disorder in the next visit. The presence of diabetes is indicated by the use of insulin, confirming current diabetes. Hypertension is likely given the prescription of atenolol and propranolol, which are antihypertensives. There is no explicit evidence of obesity in the current record. The patient has coronary atherosclerosis and atrial fibrillation, which are strong",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4049,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and hypertension (hypertensive chronic kidney disease). There is also evidence of hyperlipidemia, which supports a prediction of lipid disorder in the next visit. The presence of end-stage renal disease and multiple cardiovascular risk factors (heart failure, atrial fibrillation) indicates a high likelihood of cardiovascular disease and kidney disease in the next visit. The patient's current visit does not provide evidence of obesity. The combination of diabetes and hypertension increases the risk of stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3914,
+    "completion_tokens": 256
+  }
+}

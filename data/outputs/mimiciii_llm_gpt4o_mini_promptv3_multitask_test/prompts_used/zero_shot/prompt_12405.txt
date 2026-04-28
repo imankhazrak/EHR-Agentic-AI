@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Acute sinusitis, unspecified; Unspecified septicemia; Sepsis; Chronic lymphoid leukemia, without mention of having achieved remission; Hypogammaglobulinemia, unspecified; Hyposmolality and/or hyponatremia; Chronic maxillary sinusitis; Methicillin resistant Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Atrial fibrillation; Paralysis agitans; Bronchiectasis without acute exacerbation; Neutropenia, unspecified; Thrombocytopenia, unspecified; Anemia, unspecified; Insomnia, unspecified; Splenomegaly; Personal history of irradiation, presenting hazards to health; Personal history of Methicillin resistant Staphylococcus aureus; Personal history of malignant neoplasm of rectum, rectosigmoid junction, and anus; Personal history of antineoplastic chemotherapy
+- Medications prescribed: 5% Dextrose (EXCEL BAG); Metoprolol Tartrate; Amiodarone; 5% Dextrose; Sodium Chloride 0.9%  Flush; Sodium Bicarbonate; Cepacol (Menthol); 0.9% Sodium Chloride; Furosemide; Potassium Chloride; FoLIC Acid; Enoxaparin Sodium; Sarna Lotion; Guaifenesin; Vancomycin; Iso-Osmotic Dextrose; Nystatin Cream; Mupirocin Nasal Ointment 2%; Polyethylene Glycol; Acetaminophen; Vial; Gammagard Liquid; Famotidine; DiphenhydrAMINE; Bag; Iso-Osmotic Sodium Chloride; Aspirin; Heparin; Betamethasone; Alprazolam; Psyllium; Carbidopa-Levodopa (25-100); 0.9% Sodium Chloride (Mini Bag Plus); Amitriptyline; rasagiline; Ropinirole; CefePIME; Esmolol; Digoxin; NS; Influenza Virus Vaccine; vancoMYCIN for nasal inhalation; vancoMYCIN for inhalation; Filgrastim
+- Procedures performed: Sinusectomy, not otherwise specified
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

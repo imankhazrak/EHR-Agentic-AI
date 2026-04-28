@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple diagnoses related to diabetes, including renal manifestations, which suggests ongoing kidney issues. The presence of severe sepsis and other complications indicates a high risk for cardiovascular disease. The use of medications like Rosuvastatin and Tricor suggests management of lipid levels, indicating a likelihood of lipid metabolism disorders. Hypertension is likely given the context of diabetes and related complications, but obesity is not explicitly mentioned. The risk of stroke is elevated due to the patient's complex medical history.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 983,
+    "completion_tokens": 251
+  }
+}

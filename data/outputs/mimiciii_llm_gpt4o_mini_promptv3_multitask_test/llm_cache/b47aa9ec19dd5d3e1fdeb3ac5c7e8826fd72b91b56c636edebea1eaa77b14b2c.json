@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The current visit record indicates multiple serious conditions including acute kidney failure and atrial fibrillation, which suggest a high likelihood of cardiovascular issues. There is no evidence of diabetes, hypertension, or obesity in the record. The presence of late effects of cerebrovascular disease and acute kidney failure supports predictions for future stroke and kidney disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3634,
+    "completion_tokens": 218
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses, including congestive heart failure and coronary atherosclerosis, which suggest a high likelihood of future cardiovascular disease. The presence of insulin indicates current diabetes management. Hypertension is supported by the prescription of Losartan, a common antihypertensive. There is no evidence of obesity in the current visit record. The patient's complex cardiac conditions and atrial fibrillation increase the risk of stroke. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3789,
+    "completion_tokens": 256
+  }
+}

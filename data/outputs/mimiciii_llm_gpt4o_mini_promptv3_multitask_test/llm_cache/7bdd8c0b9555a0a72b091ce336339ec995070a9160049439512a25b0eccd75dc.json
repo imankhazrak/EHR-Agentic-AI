@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of diabetes. The presence of medications such as Atorvastatin indicates a history of lipid issues, suggesting a likelihood of lipid metabolism disorders. The patient has a history of cardiovascular issues (aortocoronary bypass and old myocardial infarction), indicating a high probability of future cardiovascular disease. There is no evidence of current obesity, and while hypertension is likely given the medications (e.g., Quinapril), it is not explicitly stated. There",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 809,
+    "completion_tokens": 256
+  }
+}

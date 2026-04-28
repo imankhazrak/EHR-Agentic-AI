@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Regional enteritis of unspecified site; Streptococcal septicemia; Unspecified pleural effusion; [ICD9-DX:2554]; Pressure ulcer, lower back; Acute and subacute bacterial endocarditis; Urinary tract infection, site not specified; Nutritional marasmus; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Sepsis; Methicillin susceptible Staphylococcus aureus septicemia; Digestive-genital tract fistula, female; Bipolar disorder, unspecified; Unspecified essential hypertension; Calculus of gallbladder without mention of cholecystitis, without mention of obstruction; Depressive disorder, not elsewhere classified; Other chronic pulmonary heart diseases; Other and unspecified noninfectious gastroenteritis and colitis; Dermatitis due to drugs and medicines taken internally; Other specified antibiotics causing adverse effects in therapeutic use; Accidents occurring in residential institution; Infection with microorganisms resistant to penicillins; Coronary atherosclerosis of native coronary artery; Anemia, unspecified; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Infection with microorganisms without mention of resistance to multiple drugs; Acute myocardial infarction of other anterior wall, subsequent episode of care
+- Medications prescribed: Potassium Chloride; Prednisone; Enoxaparin Sodium; Morphine Sulfate SR; Metoprolol; Insulin; Calcium Carbonate; Vitamin D; HydrOXYzine HCl; Epoetin Alfa; Vial; Linezolid; NS; Daptomycin; Fexofenadine; Sarna Lotion; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Sodium Chloride 0.9%  Flush; Hydrocortisone Na Succ.; Fludrocortisone Acetate; Morphine Sulfate; Levofloxacin; Magnesium Sulfate; Heparin Sodium; D5W; Metronidazole; Warfarin; SW; Furosemide; Heparin; Heparin Flush (10 units/ml); Dexamethasone; Norepinephrine; Cosyntropin; Multivitamin IV; Amino Acids 4.25% W/ Dextrose 5%; Iso-Osmotic Dextrose; Vancomycin HCl; NS (Mini Bag Plus); DiphenhydrAMINE HCl; Ranitidine; Fluconazole; Cefepime; Calcium Gluconate; Dextrose 5%; Ampicillin Sodium; Lidocaine Jelly 2%; Phenylephrine HCl; Cholestyramine; Nystatin Cream
+- Procedures performed: Temporary colostomy; Laparoscopy; Temporary ileostomy; Closed [endoscopic] biopsy of large intestine; Rigid proctosigmoidoscopy; Venous catheterization, not elsewhere classified; Diagnostic ultrasound of heart; Parenteral infusion of concentrated nutritional substances
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of atrial flutter and atrial fibrillation, which are associated with cardiovascular disease, thus predicting a likelihood of cardiovascular issues in the next visit. The presence of Metoprolol, a medication for hypertension, suggests current hypertension. There is no evidence of diabetes or obesity in the current visit record. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis of lipid metabolism disorders in the current visit. There is no evidence of kidney disease or stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 256
+  }
+}

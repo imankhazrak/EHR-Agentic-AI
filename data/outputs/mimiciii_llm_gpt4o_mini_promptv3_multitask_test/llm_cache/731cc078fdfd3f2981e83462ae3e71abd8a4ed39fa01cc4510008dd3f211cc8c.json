@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of atrial fibrillation and is prescribed medications such as Diltiazem and Metoprolol, which indicate cardiovascular issues. The presence of unspecified essential hypertension supports the prediction of current hypertension. The use of insulin suggests the patient has diabetes. There is no evidence of obesity or kidney disease in the current visit record. The risk of cardiovascular disease is elevated due to the combination of hypertension and atrial fibrillation, but there is no indication of lipid disorders or stroke risk based on the current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3971,
+    "completion_tokens": 256
+  }
+}

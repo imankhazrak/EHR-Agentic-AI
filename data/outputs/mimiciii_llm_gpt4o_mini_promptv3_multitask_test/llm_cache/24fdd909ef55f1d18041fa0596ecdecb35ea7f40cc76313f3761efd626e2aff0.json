@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple cardiovascular diagnoses, including coronary atherosclerosis and congestive heart failure, which suggest a high likelihood of lipid metabolism disorders. The presence of Humulin-R Insulin indicates current diabetes management. Medications like Amlodipine and Captopril suggest hypertension treatment. There is no evidence of obesity in the current record. Given the patient's cardiac history, the likelihood of cardiovascular disease is high. The presence of hyperpotassemia and other cardiac complications raises the risk for kidney disease. Lastly, the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3739,
+    "completion_tokens": 256
+  }
+}

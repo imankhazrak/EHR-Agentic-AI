@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a history of congestive heart failure and has been prescribed medications such as Warfarin and Metoprolol, indicating cardiovascular issues. The presence of diabetes is supported by the prescription of Insulin. Hypertension is likely given the use of Captopril and Hydrochlorothiazide. There is no evidence of obesity in the current visit record. The patient has had a cerebral embolism with cerebral infarction, indicating a high risk for stroke and kidney disease due to the overall clinical picture.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4009,
+    "completion_tokens": 256
+  }
+}

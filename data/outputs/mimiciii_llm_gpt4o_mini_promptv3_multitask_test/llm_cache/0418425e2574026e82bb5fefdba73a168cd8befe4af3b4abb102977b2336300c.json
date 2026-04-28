@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of hypertensive chronic kidney disease and is currently on medications like Metoprolol and Captopril, indicating hypertension. The presence of diabetes is supported by the use of insulin. There is no evidence of obesity in the current visit record. Given the severe kidney disease (stage V or end stage renal disease), it is likely the patient will have kidney disease in the next visit. The risk of cardiovascular disease is high due to hypertension and kidney issues. There is no evidence of stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3889,
+    "completion_tokens": 256
+  }
+}

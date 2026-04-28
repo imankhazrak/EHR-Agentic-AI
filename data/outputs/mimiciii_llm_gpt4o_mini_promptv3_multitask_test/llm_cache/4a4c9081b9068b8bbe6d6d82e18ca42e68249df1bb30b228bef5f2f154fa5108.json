@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented history of diabetes with renal manifestations and other complications, indicating current diabetes. There is also evidence of chronic systolic heart failure and old myocardial infarction, suggesting a high likelihood of cardiovascular disease. The presence of chronic kidney disease and acute kidney failure indicates ongoing kidney issues. The lipid disorder is supported by the diagnosis of 'other and unspecified hyperlipidemia' and 'pure hyperglyceridemia', leading to a prediction of lipid metabolism disorder in the next visit. Hypertension is likely due",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3909,
+    "completion_tokens": 256
+  }
+}

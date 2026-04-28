@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of heart valve replacement and current diagnoses indicating heart failure, which suggests a high risk for cardiovascular disease. The presence of insulin in the medication list indicates diabetes management, supporting the prediction of current diabetes. Hypertension is likely given the use of Captopril, an antihypertensive. There is no evidence of obesity in the current visit record. The patient has acute kidney failure, indicating a high probability of kidney disease in the next visit. There are no indicators of stroke risk in the current",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3806,
+    "completion_tokens": 256
+  }
+}

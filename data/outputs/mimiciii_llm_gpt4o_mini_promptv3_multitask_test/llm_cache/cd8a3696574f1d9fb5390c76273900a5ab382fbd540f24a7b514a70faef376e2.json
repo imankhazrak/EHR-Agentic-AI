@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological and renal manifestations, indicating current diabetes. Hypertensive chronic kidney disease is also noted, confirming current hypertension. There is no explicit evidence of obesity in the record. The presence of coronary atherosclerosis and acute on chronic diastolic heart failure suggests a high likelihood of cardiovascular disease. Chronic kidney disease is documented, supporting the prediction of kidney disease in the next visit. The patient's history of subdural hemorrhage and other complications increases the risk of stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3995,
+    "completion_tokens": 256
+  }
+}

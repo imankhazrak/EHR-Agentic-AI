@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of acute kidney failure, which suggests a current kidney issue. Hypertension is likely given the prescription of medications like Hydralazine and Labetalol, which are used to manage high blood pressure. There is no evidence of diabetes or obesity in the current visit record. The presence of chronic airway obstruction and the use of cardiovascular medications like Isosorbide Dinitrate and Nitroglycerin suggest a potential for cardiovascular issues, but no definitive diagnosis is made. There is no evidence to",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 942,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple chronic conditions including congestive heart failure and acute respiratory failure, which suggest a high likelihood of cardiovascular issues. The presence of chronic liver disease and ascites may indicate kidney involvement, supporting the prediction of kidney disease. There is no evidence of diabetes or obesity in the current visit record, and while hypertension is not explicitly stated, the presence of heart failure suggests it is likely. There is no evidence of lipid disorders in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3681,
+    "completion_tokens": 244
+  }
+}

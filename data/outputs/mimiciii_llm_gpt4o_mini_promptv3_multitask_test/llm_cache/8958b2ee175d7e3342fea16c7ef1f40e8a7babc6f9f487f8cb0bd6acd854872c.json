@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The current visit record indicates a diagnosis of diabetes with renal manifestations, confirming the presence of diabetes. Hypertension is also indicated by the diagnosis of hypertensive chronic kidney disease. There is no evidence of obesity in the record. The patient has multiple cardiovascular issues, including atrial fibrillation and cardiac arrest, suggesting a high likelihood of future cardiovascular disease. The diagnosis of acute kidney failure and chronic kidney disease stage V indicates a strong likelihood of kidney disease in the next visit. The presence of subdural hemorrhage and cardiac",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3524,
+    "completion_tokens": 256
+  }
+}

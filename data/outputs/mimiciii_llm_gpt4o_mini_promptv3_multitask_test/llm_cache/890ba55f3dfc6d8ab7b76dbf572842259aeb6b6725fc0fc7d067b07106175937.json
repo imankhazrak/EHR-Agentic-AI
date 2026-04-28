@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of diabetes. Hypertension is likely given the medications prescribed (Captopril and Metoprolol), indicating management of high blood pressure. There is no explicit mention of obesity in the record. The presence of congestive heart failure, atrial fibrillation, and old myocardial infarction suggests a high likelihood of cardiovascular disease. The use of medications like Isosorbide Dinitrate and Furosemide also supports this. The patient's hyper",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 836,
+    "completion_tokens": 256
+  }
+}

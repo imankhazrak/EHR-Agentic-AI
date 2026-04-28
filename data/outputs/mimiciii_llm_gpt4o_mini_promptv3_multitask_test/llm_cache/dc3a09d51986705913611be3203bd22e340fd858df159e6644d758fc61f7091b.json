@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is prescribed insulin, indicating current diabetes. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease and the prescription of Lisinopril. The presence of hyperlipidemia is noted in the record, and the patient is prescribed Atorvastatin, suggesting a likelihood of lipid metabolism disorders. Given the acute myocardial infarction and other cardiovascular issues, there is a high probability of future cardiovascular disease. The patient also has acute kidney failure",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4011,
+    "completion_tokens": 256
+  }
+}

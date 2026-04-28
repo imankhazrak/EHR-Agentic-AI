@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Secondary malignant neoplasm of brain and spinal cord; Cerebral edema; Compression of brain; Obstructive hydrocephalus; Malignant neoplasm of main bronchus; Other nervous system complications; Chronic systolic heart failure; Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes; Pulmonary collapse; Congestive heart failure, unspecified; Other and unspecified hyperlipidemia; Coronary atherosclerosis of native coronary artery; Hypertensive chronic kidney disease, benign, with chronic kidney disease stage I through stage IV, or unspecified; Personal history of malignant neoplasm of bladder; Hyperpotassemia; Other and unspecified angina pectoris; Other emphysema; Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS); Chronic kidney disease, unspecified; Atherosclerosis of native arteries of the extremities with intermittent claudication
+- Medications prescribed: Metoprolol Tartrate; Acetylcysteine 20%; Nitroglycerin SL; NIFEdipine CR; Codeine Sulfate; Senna; Hydrocodone-Acetaminophen; Pantoprazole; Sodium Chloride 0.9%  Flush; NS; Ipratropium Bromide MDI; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Lorazepam; Morphine Sulfate; Guaifenesin-Dextromethorphan; CefazoLIN; Iso-Osmotic Dextrose; Benzonatate; Potassium Chl 20 mEq / 1000 mL NS; Influenza Virus Vaccine; traZODONE; Isosorbide Mononitrate (Extended Release); Nicotine Patch; FoLIC Acid; Mannitol 20%; Soln.; Insulin; Famotidine; Atorvastatin; Docusate Sodium; Sodium Bicarbonate; 1/2 NS; Ondansetron; Heparin; HydrALAzine; Bisacodyl; Multivitamins; Dexamethasone; Lidocaine 1%; D5 1/2NS; Lisinopril; Furosemide; Metoprolol Succinate XL
+- Procedures performed: Intravascular imaging of intrathoracic vessels; Biopsy of lymphatic structure; Other repair of cerebral meninges; Closed [endoscopic] biopsy of bronchus; Other intubation of respiratory tract; Fiber-optic bronchoscopy
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

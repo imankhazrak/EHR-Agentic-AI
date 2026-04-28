@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.30},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient is on Simvastatin, which suggests a history of lipid issues, leading to a prediction of lipid disorder in the next visit. There is no evidence of diabetes or obesity in the current record. The presence of atrial fibrillation and hypertension (indicated by the use of Losartan) suggests a higher likelihood of cardiovascular disease. The patient has no current evidence of kidney disease, but the risk of stroke is increased due to atrial fibrillation.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 901,
+    "completion_tokens": 246
+  }
+}

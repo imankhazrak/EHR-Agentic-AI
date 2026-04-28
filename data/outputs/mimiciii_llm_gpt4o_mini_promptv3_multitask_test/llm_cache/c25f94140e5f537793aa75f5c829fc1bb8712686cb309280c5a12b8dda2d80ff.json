@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Pure hypercholesterolemia', indicating a current lipid disorder. They also have a diagnosis of 'Diabetes mellitus without mention of complication, type II or unspecified type', confirming current diabetes. 'Unspecified essential hypertension' indicates current hypertension. There is no evidence of obesity in the record. Given the acute myocardial infarction and other cardiovascular issues, there is a high likelihood of ongoing cardiovascular disease. The patient has 'Acute kidney failure, unspecified', suggesting a risk for kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1301,
+    "completion_tokens": 256
+  }
+}

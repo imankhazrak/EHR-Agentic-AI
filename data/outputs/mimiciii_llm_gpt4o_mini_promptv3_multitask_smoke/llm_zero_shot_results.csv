@@ -1,0 +1,51 @@
+pair_id,label_lipid_disorder,prompt_mode,model_name,raw_response,parsed_prediction,pred_binary,parsed_probability,probability_parse_status,parse_valid_probability,probability_format_warning,reasoning,parser_status,prob_yes,prob_no,raw_response_path,lipid_prob,lipid_pred,diabetes_prob,diabetes_pred,hypertension_prob,hypertension_pred,obesity_prob,obesity_pred,cardio_prob,cardio_pred,kidney_prob,kidney_pred,stroke_prob,stroke_pred,true_label,split
+5346,0,zero_shot,gpt-4o-mini-2024-07-18,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""diabetes_current"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.85},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.10},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.75},
+  ""kidney_next"": {""prediction"": ""Yes"", ""probability"": 0.70},
+  ""stroke_next"": {""prediction"": ""Yes"", ""probability"": 0.65},
+  ""reasoning"": ""The patient is prescribed Atorvastatin, which indicates a history of lipid disorder. Insulin use suggests current diabetes. The presence of congestive heart failure and atrial fibrillation indicates hypertension. There is no evidence of obesity in the record. Given the patient's cardiac history, there is a high likelihood of cardiovascular disease. The presence of septicemia and other complications increases the risk of kidney disease. The patient's overall condition and history suggest a risk for stroke.""
+}",Yes,1,0.8,ok,True,False,"The patient is prescribed Atorvastatin, which indicates a history of lipid disorder. Insulin use suggests current diabetes. The presence of congestive heart failure and atrial fibrillation indicates hypertension. There is no evidence of obesity in the record. Given the patient's cardiac history, there is a high likelihood of cardiovascular disease. The presence of septicemia and other complications increases the risk of kidney disease. The patient's overall condition and history suggest a risk for stroke.",multitask_json,,,data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_smoke/raw_llm_responses/zero_shot/responses.jsonl,0.8,1,0.9,1,0.85,1,0.1,0,0.75,1,0.7,1,0.65,1,0,test
+4305,0,zero_shot,gpt-4o-mini-2024-07-18,"{
+  ""lipid_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""diabetes_current"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""hypertension_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.70},
+  ""kidney_next"": {""prediction"": ""Yes"", ""probability"": 0.60},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""There is no evidence of lipid disorders in the current visit. The patient is prescribed insulin, indicating diabetes. There is no mention of hypertension or obesity. The patient's severe sepsis and other conditions suggest a higher risk for cardiovascular disease and potential kidney issues. No evidence suggests a risk for stroke.""
+}",No,0,0.0,ok,True,False,"There is no evidence of lipid disorders in the current visit. The patient is prescribed insulin, indicating diabetes. There is no mention of hypertension or obesity. The patient's severe sepsis and other conditions suggest a higher risk for cardiovascular disease and potential kidney issues. No evidence suggests a risk for stroke.",multitask_json,,,data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_smoke/raw_llm_responses/zero_shot/responses.jsonl,0.0,0,0.8,1,0.0,0,0.0,0,0.7,1,0.6,1,0.0,0,0,test
+8843,1,zero_shot,gpt-4o-mini-2024-07-18,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""diabetes_current"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.85},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.10},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.75},
+  ""kidney_next"": {""prediction"": ""No"", ""probability"": 0.20},
+  ""stroke_next"": {""prediction"": ""Yes"", ""probability"": 0.65},
+  ""reasoning"": ""The patient has pure hypercholesterolemia, indicating a disorder of lipid metabolism. Insulin is prescribed, suggesting current diabetes management. Unspecified essential hypertension is documented, confirming current hypertension. There is no evidence of obesity in the record. The patient has coronary atherosclerosis and atrial fibrillation, which increases the likelihood of cardiovascular disease. There is no indication of kidney disease in the record. The presence of coronary atherosclerosis and atrial fibrillation also raises the risk of stroke.""
+}",Yes,1,0.9,ok,True,False,"The patient has pure hypercholesterolemia, indicating a disorder of lipid metabolism. Insulin is prescribed, suggesting current diabetes management. Unspecified essential hypertension is documented, confirming current hypertension. There is no evidence of obesity in the record. The patient has coronary atherosclerosis and atrial fibrillation, which increases the likelihood of cardiovascular disease. There is no indication of kidney disease in the record. The presence of coronary atherosclerosis and atrial fibrillation also raises the risk of stroke.",multitask_json,,,data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_smoke/raw_llm_responses/zero_shot/responses.jsonl,0.9,1,0.8,1,0.85,1,0.1,0,0.75,1,0.2,0,0.65,1,1,test
+10771,0,zero_shot,gpt-4o-mini-2024-07-18,"{
+  ""lipid_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""diabetes_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 1.00},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.75},
+  ""kidney_next"": {""prediction"": ""Yes"", ""probability"": 1.00},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""The patient has a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. There is no evidence of diabetes or obesity in the record. The patient has end stage renal disease, which suggests a high likelihood of cardiovascular issues, but no explicit evidence of lipid disorders or stroke risk is documented.""
+}",No,0,0.0,ok,True,False,"The patient has a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. There is no evidence of diabetes or obesity in the record. The patient has end stage renal disease, which suggests a high likelihood of cardiovascular issues, but no explicit evidence of lipid disorders or stroke risk is documented.",multitask_json,,,data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_smoke/raw_llm_responses/zero_shot/responses.jsonl,0.0,0,0.0,0,1.0,1,0.0,0,0.75,1,1.0,1,0.0,0,0,test
+5618,1,zero_shot,gpt-4o-mini-2024-07-18,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""diabetes_current"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.85},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.10},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.75},
+  ""kidney_next"": {""prediction"": ""No"", ""probability"": 0.20},
+  ""stroke_next"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""reasoning"": ""The patient has a diagnosis of pure hypercholesterolemia indicating a lipid disorder. Insulin is prescribed, suggesting diabetes management. Unspecified essential hypertension is documented, confirming hypertension. There is no evidence of obesity in the record. The patient has a history of other diseases of the circulatory system and has experienced an intracerebral hemorrhage, indicating a high risk for cardiovascular disease and stroke. There is no indication of kidney disease in the current visit.""
+}",Yes,1,0.9,ok,True,False,"The patient has a diagnosis of pure hypercholesterolemia indicating a lipid disorder. Insulin is prescribed, suggesting diabetes management. Unspecified essential hypertension is documented, confirming hypertension. There is no evidence of obesity in the record. The patient has a history of other diseases of the circulatory system and has experienced an intracerebral hemorrhage, indicating a high risk for cardiovascular disease and stroke. There is no indication of kidney disease in the current visit.",multitask_json,,,data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_smoke/raw_llm_responses/zero_shot/responses.jsonl,0.9,1,0.8,1,0.85,1,0.1,0,0.75,1,0.2,0,0.9,1,1,test

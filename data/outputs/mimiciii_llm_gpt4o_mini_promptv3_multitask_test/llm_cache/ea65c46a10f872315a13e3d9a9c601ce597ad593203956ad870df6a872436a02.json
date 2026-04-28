@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', indicating a lipid disorder. The record shows a diagnosis of 'Diabetes mellitus without mention of complication', confirming current diabetes. The presence of medications like Lisinopril and Metoprolol suggests hypertension. There is no explicit mention of obesity. Given the cardiovascular diagnoses and procedures performed, there is a high likelihood of future cardiovascular disease. The unspecified kidney disorder suggests potential kidney issues in the future. The patient's history of cardiovascular problems increases the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1012,
+    "completion_tokens": 256
+  }
+}

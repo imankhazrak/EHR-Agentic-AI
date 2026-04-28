@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, indicating a current lipid disorder, which supports a prediction of 'Yes' for the next visit. There is no evidence of diabetes or obesity in the record. The patient is prescribed Lisinopril, which is commonly used for hypertension, indicating a likely diagnosis of hypertension. The history of aortocoronary bypass suggests cardiovascular issues, supporting a prediction of 'Yes' for cardiovascular disease in the next visit. There is no evidence of kidney disease or",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 256
+  }
+}

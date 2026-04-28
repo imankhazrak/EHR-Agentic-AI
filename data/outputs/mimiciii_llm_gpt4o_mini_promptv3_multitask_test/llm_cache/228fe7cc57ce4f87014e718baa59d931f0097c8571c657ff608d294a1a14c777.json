@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', which indicates a current lipid metabolism disorder, leading to a prediction of a diagnosis in the next visit. There is no evidence of diabetes in the current record. The presence of multiple cardiovascular conditions (e.g., heart failure, coronary atherosclerosis) suggests hypertension is likely, supported by medications like Carvedilol and Eplerenone. Obesity is not indicated in the record. Given the cardiovascular issues, there is a high likelihood of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4106,
+    "completion_tokens": 256
+  }
+}

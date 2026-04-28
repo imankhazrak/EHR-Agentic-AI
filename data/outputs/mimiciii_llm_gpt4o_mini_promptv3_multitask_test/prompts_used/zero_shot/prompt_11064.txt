@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Atrial flutter; Acute kidney failure, unspecified; Chronic systolic heart failure; Hematoma complicating a procedure; Acute posthemorrhagic anemia; Chronic obstructive asthma with (acute) exacerbation; Congestive heart failure, unspecified; Other primary cardiomyopathies; Other specified cardiac dysrhythmias; Atrioventricular block, complete; Hypovolemia; Dehydration; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Chronic kidney disease, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Surgical operation with implant of artificial internal device causing abnormal patient reaction, or later complication,without mention of misadventure at time of operation; Nausea alone; Constipation, unspecified; Other and unspecified hyperlipidemia; Heart valve replaced by other means; Esophageal reflux; Occlusion and stenosis of carotid artery without mention of cerebral infarction; Cyst of kidney, acquired; Other specified disorders of eye and adnexa; Other postprocedural status; Long-term (current) use of anticoagulants
+- Medications prescribed: Insulin; Dofetilide; Furosemide; Metoprolol Tartrate; Ipratropium Bromide MDI; Phos; Zolpidem Tartrate; D5W; phosp; Heparin Sodium; Heparin; Spironolactone; Iso-Osmotic Dextrose; Vancomycin; Losartan Potassium; Senna; Sodium Chloride 0.9%  Flush; Vitamin E; Ranitidine; Simvastatin; Multivitamins; Docusate Sodium; HYDROmorphone (Dilaudid); Potassium Chloride; AcetaZOLamide; Warfarin; GlyBURIDE; Heparin Flush (10 units/ml); Ibuprofen; Gabapentin; Metoprolol Succinate XL; Oxycodone-Acetaminophen; HydrALAzine; Aspirin EC; MetFORMIN (Glucophage); Magnesium Sulfate; SW; Propofol; Chlorhexidine Gluconate 0.12% Oral Rinse; Morphine Sulfate; Insulin Human Regular; Calcium Gluconate; 0.9% Sodium Chloride; Metoclopramide; Milk of Magnesia; Acetaminophen; Nitroglycerin; 5% Dextrose; Gentamicin; Isotonic Sodium Chloride
+- Procedures performed: Initial insertion of transvenous leads [electrodes] into atrium and ventricle; Initial insertion of dual-chamber device; Revision or removal of pacemaker device; Excision or destruction of other lesion or tissue of heart, endovascular approach; Insertion or replacement of epicardial lead [electrode] into epicardium; Catheter based invasive electrophysiologic testing; Cardiac mapping; Other incision with drainage of skin and subcutaneous tissue
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

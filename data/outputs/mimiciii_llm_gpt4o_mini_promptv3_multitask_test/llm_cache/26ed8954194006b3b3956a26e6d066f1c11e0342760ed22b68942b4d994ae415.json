@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which is uncontrolled, indicating current diabetes. There is also a diagnosis of obesity. Hypertension is likely given the presence of heart failure and coronary atherosclerosis, but not explicitly stated. The patient is on atorvastatin, which suggests a lipid disorder, and the prevalence in the population supports a prediction of lipid disorder diagnosis in the next visit. Cardiovascular disease is indicated by heart failure and coronary atherosclerosis. There is no evidence of kidney disease or stroke in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3669,
+    "completion_tokens": 256
+  }
+}

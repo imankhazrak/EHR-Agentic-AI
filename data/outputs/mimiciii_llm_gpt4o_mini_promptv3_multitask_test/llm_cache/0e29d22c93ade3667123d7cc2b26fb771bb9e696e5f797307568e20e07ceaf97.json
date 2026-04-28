@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple cardiovascular conditions, including a recent subendocardial infarction and coronary atherosclerosis, which increases the likelihood of lipid metabolism disorders and cardiovascular disease. The presence of insulin in the medication list indicates current diabetes management. Unspecified essential hypertension is documented, confirming hypertension. There is no explicit evidence of obesity in the record. The acute kidney failure diagnosis suggests a risk for kidney disease in the next visit, and the combination of cardiovascular issues and diabetes raises the risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4283,
+    "completion_tokens": 252
+  }
+}

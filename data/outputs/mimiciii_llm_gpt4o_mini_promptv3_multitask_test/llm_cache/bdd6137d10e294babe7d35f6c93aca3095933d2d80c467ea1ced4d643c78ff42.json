@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Pure hypercholesterolemia', indicating a current lipid disorder, which supports a high likelihood of a similar diagnosis in the next visit. The patient is also diagnosed with 'Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled', confirming current diabetes. There is no explicit mention of obesity, but the presence of diabetes and potential cardiovascular issues may suggest a risk; however, no direct evidence of obesity is present. The patient has 'Coronary atheros",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1206,
+    "completion_tokens": 256
+  }
+}

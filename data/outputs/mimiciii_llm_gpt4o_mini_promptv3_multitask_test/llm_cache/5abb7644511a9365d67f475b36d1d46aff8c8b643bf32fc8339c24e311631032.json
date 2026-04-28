@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which strongly supports a future diagnosis of lipid metabolism disorders. The presence of diabetes is indicated by the prescription of insulin, and hypertension is suggested by the use of medications like Metoprolol and Captopril. There is no explicit evidence of obesity in the current visit record. Given the patient's cardiac conditions and procedures performed, there is a high likelihood of cardiovascular disease in the next visit. The diagnosis of calculus of the kidney indicates a current kidney issue,",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3724,
+    "completion_tokens": 256
+  }
+}

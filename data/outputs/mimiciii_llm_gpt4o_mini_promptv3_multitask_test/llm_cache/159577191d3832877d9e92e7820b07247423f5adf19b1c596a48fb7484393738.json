@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has been prescribed Atorvastatin, which is used to manage lipid levels, indicating a likely diagnosis of a lipid disorder. There is no evidence of diabetes in the record. Lisinopril and Metoprolol suggest hypertension management. There is no indication of obesity. Given the acute myocardial infarction and related cardiac issues, the patient is at high risk for cardiovascular disease. The presence of congestive heart failure and cardiogenic shock raises the likelihood of kidney disease. The risk of stroke is also elevated",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 904,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a high likelihood of a lipid metabolism disorder in the next visit. There is no evidence of diabetes, and while unspecified essential hypertension is noted, it suggests current hypertension. There is no indication of obesity. Given the patient's history of coronary atherosclerosis and current cardiovascular issues, there is a strong likelihood of cardiovascular disease in the next visit. The patient does not show signs of kidney disease, but the presence of atrial fibrillation and other cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1056,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant health issues, including uncontrolled diabetes, unspecified essential hypertension, and morbid obesity. The presence of other conditions such as coronary atherosclerosis and chronic heart failure suggests a high risk for cardiovascular disease. The diagnosis of acute kidney failure indicates current kidney issues, and the history of cerebrovascular disease raises the risk for stroke. Additionally, the record includes unspecified hyperlipidemia, which supports the prediction for lipid metabolism disorders.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3996,
+    "completion_tokens": 244
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with ketoacidosis and is on long-term insulin, confirming current diabetes. Hypertension is indicated by the use of medications like Lisinopril and HydrALAzine. There is no evidence of obesity in the current visit record. The patient has chronic systolic heart failure and other cardiovascular issues, indicating a high likelihood of cardiovascular disease. End stage renal disease is documented, confirming kidney disease. There is no evidence of stroke or risk factors for stroke in the current visit",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3699,
+    "completion_tokens": 256
+  }
+}

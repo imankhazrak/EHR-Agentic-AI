@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record does not indicate any explicit diagnosis of diabetes or obesity. However, the patient has hypertension, as evidenced by the prescription of Nadolol, which is commonly used to treat high blood pressure. The patient also has acute kidney failure, which suggests a high likelihood of kidney disease in the next visit. There is no evidence of lipid metabolism disorders or cardiovascular disease based on the current diagnoses and medications.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3843,
+    "completion_tokens": 236
+  }
+}

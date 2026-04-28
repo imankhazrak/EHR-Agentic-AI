@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"reasoning\": \"The patient has a documented diagnosis of pure hypercholesterolemia, indicating a disorder of lipid metabolism. There is no evidence of diabetes in the current visit record. The patient has hypertensive chronic kidney disease, confirming hypertension. There is no mention of obesity. The patient has a history of aortocoronary bypass and atrial fibrillation, indicating a high likelihood of cardiovascular disease. The patient is also diagnosed with chronic kidney disease stage V, indicating kidney disease. The presence of late effects of cerebrovascular disease",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 871,
+    "completion_tokens": 256
+  }
+}

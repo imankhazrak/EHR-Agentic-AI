@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II or unspecified type) during the current visit, confirming current diabetes. There is no evidence of hypertension or obesity in the record. The patient has multiple cardiovascular conditions (atrial fibrillation, congestive heart failure) which suggest a high likelihood of cardiovascular disease in the next visit. The diagnosis of acute kidney failure indicates a significant risk for kidney disease in the next visit. Given the patient's cardiovascular issues and diabetes, there is also a notable risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3437,
+    "completion_tokens": 256
+  }
+}

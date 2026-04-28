@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a documented history of 'Other and unspecified hyperlipidemia', indicating a likelihood of lipid metabolism disorders. The record explicitly states 'Diabetes mellitus without mention of complication, type II or unspecified type', confirming current diabetes. 'Unspecified essential hypertension' indicates current hypertension. The Body Mass Index of 45.0-49.9 confirms obesity. Given the patient's conditions, there is a reasonable probability of cardiovascular disease. The patient has 'Acute kidney failure, unspecified', suggesting a risk for kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1085,
+    "completion_tokens": 256
+  }
+}

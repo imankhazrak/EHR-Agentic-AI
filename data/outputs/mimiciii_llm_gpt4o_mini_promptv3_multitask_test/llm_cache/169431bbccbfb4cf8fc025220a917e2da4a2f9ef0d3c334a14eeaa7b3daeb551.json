@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has end-stage renal disease and hypertensive chronic kidney disease, indicating severe kidney issues. The presence of diabetes is supported by the medication for insulin, suggesting current diabetes. Hypertension is evident from the diagnosis of hypertensive chronic kidney disease. There is a prescription for Gemfibrozil, which is used for lipid disorders, indicating a potential for lipid metabolism issues. The combination of diabetes and hypertension increases the risk for cardiovascular disease. However, there is no explicit evidence of obesity in the current record. The risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3871,
+    "completion_tokens": 256
+  }
+}

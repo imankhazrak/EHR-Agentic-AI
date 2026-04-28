@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), hypertension (hypertensive chronic kidney disease), and obesity. The presence of these conditions strongly supports their current status. For cardiovascular disease, the patient has atrial flutter and congestive heart failure, indicating a high likelihood of cardiovascular issues. The patient also has acute kidney failure and chronic kidney disease, suggesting ongoing kidney problems. Additionally, the patient has a personal history of transient ischemic attack (TIA), which increases the risk of stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3781,
+    "completion_tokens": 254
+  }
+}

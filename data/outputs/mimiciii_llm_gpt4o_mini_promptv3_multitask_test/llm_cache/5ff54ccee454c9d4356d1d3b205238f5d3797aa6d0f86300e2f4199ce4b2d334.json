@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of coronary atherosclerosis, atrial fibrillation, and congestive heart failure, indicating a high likelihood of cardiovascular disease. The presence of insulin indicates current diabetes management. Lisinopril suggests hypertension treatment. There is unspecified kidney disorder, which raises the likelihood of kidney disease. The patient has late effects of cerebrovascular disease, which increases the risk of stroke. No evidence of lipid disorders was found in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3612,
+    "completion_tokens": 244
+  }
+}

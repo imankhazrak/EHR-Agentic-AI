@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has diagnoses of congestive heart failure and atrial fibrillation, which indicate a high risk for cardiovascular disease. The presence of morbid obesity and hypertension (indicated by the prescription of antihypertensives like Metoprolol and Captopril) further supports this. There is no explicit evidence of diabetes in the current visit record. The patient has acute kidney failure, which suggests a risk for kidney disease in the next visit. The combination of these conditions, particularly the heart and kidney issues,",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3997,
+    "completion_tokens": 256
+  }
+}

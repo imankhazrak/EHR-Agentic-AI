@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The current visit record indicates the patient has 'Other and unspecified hyperlipidemia', which supports a prediction of 'Disorders of Lipid Metabolism' for the next visit. The patient is prescribed insulin, indicating current diabetes. The record includes 'Unspecified essential hypertension', confirming current hypertension. 'Obesity, unspecified' is explicitly mentioned, confirming current obesity. The presence of congestive heart failure and atrial fibrillation suggests a high likelihood of cardiovascular disease in the next visit. Oliguria and anuria",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3773,
+    "completion_tokens": 256
+  }
+}

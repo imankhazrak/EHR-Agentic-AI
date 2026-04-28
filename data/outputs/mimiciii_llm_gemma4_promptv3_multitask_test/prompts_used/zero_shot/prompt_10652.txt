@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Other myelopathy; Cardiac complications, not elsewhere classified; Other ascites; Acquired coagulation factor deficiency; Alcoholic cirrhosis of liver; Thrombocytopenia, unspecified; Babesiosis; Esophageal varices in diseases classified elsewhere, without mention of bleeding; Atrial fibrillation; Other specified paralytic syndrome; Unspecified acquired hypothyroidism; Late effect of radiation; Personal history of malignant neoplasm of other and unspecified oral cavity and pharynx; Radiological procedure and radiotherapy as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation
+- Medications prescribed: Dexamethasone; Fentanyl Patch; Morphine Sulfate; Oxycodone SR (OxyconTIN); Pantoprazole; Calcium Carbonate; Lorazepam; Ondansetron ODT; Docusate Sodium; Rifaximin; Nadolol; Levothyroxine Sodium; Senna; Polyethylene Glycol; Vitamin D; Sodium Chloride 0.9%  Flush; 0.9% Sodium Chloride; Lidocaine Jelly 2% (Urojet); Phytonadione; HYDROmorphone (Dilaudid); Dextrose 50%; Glucagon; Insulin; HydrALAzine; Labetalol; Furosemide; Heparin; Azithromycin; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; 5% Dextrose; Lactulose; OxycoDONE (Immediate Release); Atovaquone Suspension; Albumin 25% (12.5g / 50mL); Lansoprazole Oral Disintegrating Tab; SW; Potassium Chloride; Potassium Phosphate; Magnesium Sulfate; Calcium Gluconate; Calcium Replacement (Oncology); Potassium Chloride Replacement (Oncology)
+- Procedures performed: Biopsy of spinal cord or spinal meninges; Incision of lung; Percutaneous abdominal drainage
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

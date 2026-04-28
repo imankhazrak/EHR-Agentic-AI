@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Pathologic fracture of vertebrae; Methicillin susceptible pneumonia due to Staphylococcus aureus; Acute vascular insufficiency of intestine; Chronic diastolic heart failure; Other pulmonary insufficiency, not elsewhere classified; Urinary tract infection, site not specified; [ICD9-DX:585]; Chronic airway obstruction, not elsewhere classified; Congestive heart failure, unspecified; Difficulty in walking; Osteoporosis, unspecified; Other iatrogenic hypotension; Infection with microorganisms resistant to penicillins; Unspecified essential hypertension
+- Medications prescribed: Neutra-Phos; Potassium Chloride; Vancomycin HCl; Iso-Osmotic Dextrose; Potassium Phosphate; NS; D5W; Magnesium Sulfate; Lorazepam; Furosemide; Isosorbide Mononitrate; Prednisone; Acetaminophen; Diltiazem; Isosorbide Dinitrate; Insulin; Oxycodone-Acetaminophen; Sodium Chloride 0.9%  Flush; SW; Magnesium Oxide; Metoprolol; Guaifenesin; Fluticasone-Salmeterol (100/50); Docusate Sodium; Tiotropium Bromide; Albuterol 0.083% Neb Soln; Heparin Flush CVL  (100 units/ml); Ipratropium Bromide Neb; LR; Calcium Gluconate; Cosyntropin; Diazepam; Aluminum-Magnesium Hydrox.-Simethicone; Nitroglycerin Oint. 2%; Nitroglycerin; Syringe (IV Room); Methylprednisolone Na Succ.; Humulin-R Insulin; Hydralazine HCl; Metoprolol XL; Senna; Bisacodyl; Amlodipine; Calcitonin Salmon; Isosorbide Mononitrate (Extended Release); Morphine Sulfate; Norepinephrine; Lidocaine 5% Patch; traMADOL; Sodium Bicarbonate
+- Procedures performed: Non-invasive mechanical ventilation; Venous catheterization, not elsewhere classified; Infusion of vasopressor agent; Transfusion of packed cells
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

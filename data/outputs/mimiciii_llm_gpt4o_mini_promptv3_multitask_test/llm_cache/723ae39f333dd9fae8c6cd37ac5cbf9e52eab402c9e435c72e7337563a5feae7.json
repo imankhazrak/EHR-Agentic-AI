@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of hypertension (Unspecified essential hypertension) and is currently prescribed medications that include Metoprolol and Labetalol, which are commonly used for hypertension management. There is no explicit evidence of lipid disorders, obesity, or kidney disease in the current visit record. The presence of diabetes is supported by the medication Humulin-R Insulin, indicating current diabetes management. Given the patient's cardiovascular issues (thoracic aneurysm, aortic valve disorders, atrial fibrillation), there is a high",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3684,
+    "completion_tokens": 256
+  }
+}

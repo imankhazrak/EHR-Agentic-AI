@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant comorbidities, including obesity hypoventilation syndrome, chronic diastolic heart failure, and secondary diabetes mellitus. The presence of coronary atherosclerosis and congestive heart failure suggests a high risk for cardiovascular disease. The acute kidney failure diagnosis and prescribed medications (e.g., insulin) indicate ongoing diabetes management and potential kidney issues. Given the interplay of these conditions, the predictions reflect a high likelihood of future complications, including lipid disorders and stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3926,
+    "completion_tokens": 252
+  }
+}

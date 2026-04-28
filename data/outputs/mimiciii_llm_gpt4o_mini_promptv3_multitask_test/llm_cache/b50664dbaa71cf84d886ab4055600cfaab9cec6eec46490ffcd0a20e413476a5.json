@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record indicates significant cardiac issues (mitral and aortic valve stenosis, atrial fibrillation) which suggest a high risk for cardiovascular disease. However, there is no evidence of diabetes, hypertension, obesity, or lipid disorders documented in the current visit. Therefore, predictions for these conditions are negative. The absence of any kidney disease indicators and the lack of recent events suggesting a stroke further support the negative predictions for those conditions.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3673,
+    "completion_tokens": 242
+  }
+}

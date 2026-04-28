@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses related to diabetes, including uncontrolled diabetes with renal and neurological manifestations, indicating a current diabetes status. The presence of hypertension is suggested by the medication Metoprolol, which is commonly used for hypertension management. Obesity is likely due to the mention of obstructive sleep apnea, which is often associated with obesity. The patient's diabetes and related complications increase the risk for cardiovascular disease, kidney disease, and stroke, leading to positive predictions for these conditions in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4027,
+    "completion_tokens": 252
+  }
+}

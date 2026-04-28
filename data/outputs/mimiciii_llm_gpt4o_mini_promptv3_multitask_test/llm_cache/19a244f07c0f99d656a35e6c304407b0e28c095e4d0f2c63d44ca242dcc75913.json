@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented history of hyperlipidemia, which supports a prediction of lipid disorder in the next visit. The presence of insulin suggests current diabetes management. The medications and diagnoses indicate hypertension is likely present. There is no evidence of obesity in the record. Given the heart failure and other cardiovascular issues, the likelihood of cardiovascular disease is high. The patient has acute kidney failure and chronic kidney disease, indicating a high probability of kidney disease in the next visit. The presence of atrial fibrillation and other cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1034,
+    "completion_tokens": 256
+  }
+}

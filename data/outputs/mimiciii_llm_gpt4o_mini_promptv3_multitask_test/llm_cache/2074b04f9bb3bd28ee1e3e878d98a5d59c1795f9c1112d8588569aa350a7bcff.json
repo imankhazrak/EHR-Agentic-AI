@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient is prescribed Pravastatin, which indicates a current management of lipid levels, suggesting a likelihood of a lipid metabolism disorder. There is no evidence of diabetes or obesity in the record. The presence of hypertension is supported by the medication Lisinopril. Given the cardiac issues and heart failure, there is a high likelihood of ongoing cardiovascular disease. The patient has hypotension and heart failure, which may indicate kidney issues, but no direct evidence of kidney disease is present. There is no indication of stroke risk in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 763,
+    "completion_tokens": 256
+  }
+}

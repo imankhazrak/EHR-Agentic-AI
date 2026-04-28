@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The current visit record indicates multiple cardiovascular issues (e.g., chronic systolic heart failure, atrial fibrillation) which suggest a high likelihood of future cardiovascular disease. Hypertension is likely given the presence of heart failure and atrial fibrillation. There is no evidence of diabetes or obesity in the current record. The presence of hematuria and chronic heart failure suggests a risk for kidney disease. The patient's history of transient ischemic attack (TIA) and other cardiovascular issues indicates a risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3709,
+    "completion_tokens": 254
+  }
+}

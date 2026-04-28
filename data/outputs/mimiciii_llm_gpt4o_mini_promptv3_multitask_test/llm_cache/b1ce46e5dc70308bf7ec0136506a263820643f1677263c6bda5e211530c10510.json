@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of cardiovascular issues (e.g., heart failure, myocardial infarction) and is on medications like Simvastatin, which suggests a lipid disorder. Hypertension is explicitly documented as 'Hypertensive chronic kidney disease.' There is no evidence of diabetes or obesity. Given the patient's heart conditions and kidney issues, there is a high likelihood of cardiovascular disease and kidney disease in the next visit, as well as a significant risk of stroke due to the presence of atrial fibrillation and other cardiovascular factors",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1071,
+    "completion_tokens": 256
+  }
+}

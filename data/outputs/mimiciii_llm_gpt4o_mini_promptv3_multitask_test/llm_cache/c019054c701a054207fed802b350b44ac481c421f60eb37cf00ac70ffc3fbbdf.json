@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which strongly supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin and metformin indicates current diabetes management. Unspecified essential hypertension is documented, confirming current hypertension. There is no evidence of obesity in the record. Given the acute myocardial infarction and congestive heart failure, there is a high likelihood of cardiovascular disease in the next visit. There is no indication of kidney disease in the current visit. The history of acute myocardial infar",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3491,
+    "completion_tokens": 256
+  }
+}

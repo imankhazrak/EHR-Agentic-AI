@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has multiple cardiovascular-related diagnoses, including coronary atherosclerosis and paroxysmal ventricular tachycardia, which strongly suggest ongoing cardiovascular issues, leading to a high likelihood of cardiovascular disease in the next visit. The unspecified disorder of kidney and the history of atherosclerosis indicate a risk for kidney disease. The presence of atherosclerosis and other cardiovascular conditions increases the risk for stroke, hence a moderate prediction for stroke in the next visit. There is no evidence of diabetes, hypertension, obesity, or lipid",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3521,
+    "completion_tokens": 256
+  }
+}

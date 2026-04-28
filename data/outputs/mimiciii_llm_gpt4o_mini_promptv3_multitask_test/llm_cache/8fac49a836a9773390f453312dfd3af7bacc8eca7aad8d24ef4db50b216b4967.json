@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other and unspecified hyperlipidemia', which supports a prediction of lipid disorder in the next visit. The presence of 'Diabetes with neurological manifestations' confirms current diabetes. 'Unspecified essential hypertension' indicates current hypertension. 'Morbid obesity' confirms current obesity. The combination of diabetes, hypertension, and obesity increases the likelihood of cardiovascular disease. The diagnosis of 'Acute kidney failure' suggests a high probability of kidney disease in the next visit. There is no evidence in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 256
+  }
+}

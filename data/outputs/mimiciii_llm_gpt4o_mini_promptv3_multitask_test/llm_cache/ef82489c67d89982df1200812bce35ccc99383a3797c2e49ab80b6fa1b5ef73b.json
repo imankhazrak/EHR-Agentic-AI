@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension and is prescribed multiple medications including Atenolol and Lisinopril, indicating current hypertension. The presence of diabetes is supported by the use of Insulin, suggesting current diabetes. The patient has coronary atherosclerosis and intermediate coronary syndrome, which are strong indicators for future cardiovascular disease. The procedures performed, including coronary bypass and renal arteriography, suggest potential kidney issues, leading to a prediction of kidney disease. The combination of these conditions and risk factors increases the likelihood",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4020,
+    "completion_tokens": 256
+  }
+}

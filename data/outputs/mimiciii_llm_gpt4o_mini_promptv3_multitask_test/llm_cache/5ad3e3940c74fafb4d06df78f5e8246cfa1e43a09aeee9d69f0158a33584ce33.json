@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia' and is prescribed atorvastatin and rosuvastatin, indicating a current lipid disorder. The presence of diabetes is supported by the prescription of insulin. The diagnosis of 'Unspecified essential hypertension' confirms current hypertension. There is no explicit evidence of obesity in the record. Given the acute myocardial infarction and other cardiac issues, there is a high likelihood of cardiovascular disease in the next visit. The patient does not show clear evidence of kidney disease",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3893,
+    "completion_tokens": 256
+  }
+}

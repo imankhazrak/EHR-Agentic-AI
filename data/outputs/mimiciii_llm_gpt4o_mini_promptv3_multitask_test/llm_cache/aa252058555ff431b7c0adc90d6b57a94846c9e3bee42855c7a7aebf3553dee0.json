@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.55},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient is prescribed Simvastatin, which indicates a history of lipid issues, leading to a prediction of lipid disorder in the next visit. The presence of insulin suggests current diabetes management. Amlodipine and Losartan are antihypertensive medications, indicating current hypertension. There is no explicit evidence of obesity in the record. Given the patient's complex medical history, including acute vascular insufficiency and multiple procedures, there is a reasonable prediction for cardiovascular and kidney disease in the next visit. However, there is no",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3815,
+    "completion_tokens": 256
+  }
+}

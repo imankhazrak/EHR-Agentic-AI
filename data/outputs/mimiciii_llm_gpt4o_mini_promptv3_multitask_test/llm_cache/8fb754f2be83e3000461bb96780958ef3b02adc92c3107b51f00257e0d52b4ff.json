@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of hypertension and is currently prescribed insulin, indicating diabetes. The presence of acute myocardial infarction and coronary atherosclerosis suggests a high risk for cardiovascular disease. The acute kidney failure diagnosis supports the prediction of kidney disease. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis but the patient is on atorvastatin, which is used for lipid management. The risk of stroke is inferred from the cardiovascular issues present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3605,
+    "completion_tokens": 250
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, which supports the prediction of hypertension. The presence of cholesterolosis of the gallbladder and the prescription of Simvastatin indicate a potential lipid metabolism disorder, leading to a prediction of 'Yes' for lipid disorder in the next visit. There is no evidence of diabetes or obesity in the current record. The patient's history of hypertension and other comorbidities suggests a higher risk for cardiovascular disease, hence the prediction of 'Yes' for cardio in the next visit.",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3994,
+    "completion_tokens": 256
+  }
+}

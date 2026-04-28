@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has unspecified essential hypertension, which supports the prediction of hypertension. There is no evidence of diabetes or obesity in the current visit record. The presence of atrial fibrillation and other cardiovascular issues suggests a likelihood of cardiovascular disease in the next visit. The diagnosis of acute pyelonephritis indicates kidney involvement, supporting the prediction of kidney disease. The combination of atrial fibrillation and other risk factors suggests a higher likelihood of stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3647,
+    "completion_tokens": 242
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which indicates current diabetes. There is no explicit mention of hypertension or obesity in the record. The patient is prescribed atorvastatin, which suggests a potential lipid disorder, leading to a prediction of 'Yes' for lipid disorder in the next visit based on the prevalence. The presence of coronary atherosclerosis and old myocardial infarction indicates a high risk for cardiovascular disease, while acute kidney failure suggests ongoing kidney issues. The combination of diabetes and cardiovascular conditions increases the risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3809,
+    "completion_tokens": 256
+  }
+}

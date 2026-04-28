@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), unspecified essential hypertension, and obesity. The presence of coronary atherosclerosis and intermediate coronary syndrome suggests a high likelihood of cardiovascular disease. The patient is prescribed atorvastatin, which indicates a concern for lipid levels, supporting the prediction of a lipid disorder. The presence of polycystic kidney disease raises the possibility of kidney issues, but there is no direct evidence of current kidney disease. There is no evidence in the record to suggest a current stroke or",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1101,
+    "completion_tokens": 256
+  }
+}

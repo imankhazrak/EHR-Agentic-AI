@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of hypertension (unspecified essential hypertension) and is currently prescribed medications that indicate diabetes (Insulin) and hypertension (Captopril, Metoprolol, Amlodipine, Lisinopril). There is no explicit evidence of obesity in the current visit record. Given the presence of atrial fibrillation and hypertension, there is a significant risk for cardiovascular disease and stroke, especially considering the patient's complex medical history. However, there is no direct evidence of lipid metabolism disorders in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3989,
+    "completion_tokens": 256
+  }
+}

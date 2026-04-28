@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of diabetes mellitus (type II) and is prescribed insulin, indicating current diabetes. Hypertension is likely given the prescription of Lisinopril, an antihypertensive. The presence of hyperlipidemia (other and unspecified) and the use of atorvastatin support a prediction of lipid metabolism disorders in the next visit. The patient has multiple cardiovascular conditions, including coronary atherosclerosis and congestive heart failure, which increase the risk of cardiovascular disease and stroke. There is an unspecified",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4056,
+    "completion_tokens": 256
+  }
+}

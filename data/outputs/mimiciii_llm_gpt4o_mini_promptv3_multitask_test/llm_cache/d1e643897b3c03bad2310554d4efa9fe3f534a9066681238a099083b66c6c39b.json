@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"reasoning\": \"The current visit record indicates unspecified essential hypertension, which supports a diagnosis of hypertension. The presence of insulin suggests the patient has diabetes. There is no evidence of obesity or kidney disease. The patient has had an intracerebral hemorrhage, which increases the likelihood of a stroke in the next visit. There is no explicit evidence of lipid disorders, but the prevalence in the population is noted. Cardiovascular disease is likely due to the hypertension and stroke history.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3591,
+    "completion_tokens": 244
+  }
+}

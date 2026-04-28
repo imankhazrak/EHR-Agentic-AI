@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and hypertension (hypertensive chronic kidney disease). There is no explicit mention of obesity in the current visit record. Given the patient's cardiovascular conditions (subendocardial infarction, coronary atherosclerosis, etc.), there is a high likelihood of cardiovascular disease in the next visit. The presence of chronic kidney disease suggests a risk for kidney disease in the next visit, and the history of carotid artery occlusion indicates a potential risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4021,
+    "completion_tokens": 256
+  }
+}

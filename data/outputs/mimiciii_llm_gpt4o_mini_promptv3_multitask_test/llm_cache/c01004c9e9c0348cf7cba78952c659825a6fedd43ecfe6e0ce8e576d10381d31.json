@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of diabetes with renal manifestations, indicating current diabetes. There is also a diagnosis of end-stage renal disease, which suggests kidney disease will continue. The presence of multiple cardiovascular conditions, including subendocardial infarction and heart failure, supports a high likelihood of future cardiovascular disease. Hypertension is indicated by the use of medications like Lisinopril and Metoprolol, which are commonly prescribed for hypertension. There is no explicit evidence of obesity in the current visit record. The lipid disorder",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3949,
+    "completion_tokens": 256
+  }
+}

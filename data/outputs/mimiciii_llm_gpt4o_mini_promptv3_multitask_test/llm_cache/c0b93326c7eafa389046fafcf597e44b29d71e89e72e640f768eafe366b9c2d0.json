@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', which indicates a current lipid metabolism disorder, leading to a prediction of a diagnosis in the next visit. There is no evidence of diabetes, hypertension, or kidney disease in the current record. The patient's BMI is less than 19, indicating underweight rather than obesity, but the presence of cachexia suggests a significant health issue. The patient has congestive heart failure, which increases the risk for cardiovascular disease. There is no indication of stroke risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3887,
+    "completion_tokens": 256
+  }
+}

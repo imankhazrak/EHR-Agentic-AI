@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.55},\n  \"reasoning\": \"The patient has multiple serious diagnoses including chronic vascular insufficiency and embolism, which are associated with cardiovascular issues. The presence of insulin suggests diabetes, and medications like Metoprolol indicate hypertension management. There is no explicit evidence of obesity. Given the patient's complex condition, there is a reasonable likelihood of lipid disorders and kidney issues in the next visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3825,
+    "completion_tokens": 224
+  }
+}

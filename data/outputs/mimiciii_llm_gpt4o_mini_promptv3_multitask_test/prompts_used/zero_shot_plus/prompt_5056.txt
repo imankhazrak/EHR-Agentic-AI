@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Congestive heart failure, unspecified; Acute osteomyelitis, ankle and foot; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Chronic airway obstruction, not elsewhere classified; Other primary cardiomyopathies; Unspecified viral hepatitis C without hepatic coma; Atrial fibrillation; Pyogenic arthritis, ankle and foot; Pulmonary collapse; Seroma complicating a procedure; Atherosclerosis of native arteries of the extremities with gangrene; Ulcer of other part of foot; End stage renal disease; Paroxysmal ventricular tachycardia; Pneumonia, organism unspecified; Methicillin susceptible Staphylococcus aureus septicemia; Sepsis; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Long-term (current) use of insulin; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere; Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled; Background diabetic retinopathy; Obstructive sleep apnea (adult)(pediatric); Coronary atherosclerosis of native coronary artery; Chronic pancreatitis; Percutaneous transluminal coronary angioplasty status; Other bone involvement in diseases classified elsewhere; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Accidents occurring in other specified places; Staphylococcus infection in conditions classified elsewhere and of unspecified site, other staphylococcus; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Unspecified acquired hypothyroidism; Atherosclerosis of autologous vein bypass graft of the extremities; Unspecified transient mental disorder in conditions classified elsewhere; Anemia of other chronic disease; Metabolic encephalopathy
+- Medications prescribed: D5W; Magnesium Sulfate; Heparin Sodium; Morphine Sulfate; Metoprolol; Heparin Flush CVL  (100 units/ml); Amiodarone HCl; D5W (EXCEL BAG); Haloperidol; Warfarin; Furosemide; Sevelamer; Acetaminophen; Insulin; Pantoprazole; Clopidogrel Bisulfate; Lisinopril; Sodium Chloride 0.9%  Flush; Aspirin; Senna; Albuterol 0.083% Neb Soln; Atorvastatin; Ipratropium Bromide Neb; Metoclopramide; Docusate Sodium; Sodium Bicarbonate; Acetylcysteine 20%; Oxycodone; Morphine Sulfate SR; Morphine Sulfate IR; Pneumococcal Vac Polyvalent; Hydromorphone; Metronidazole; Oxycodone-Acetaminophen; Silver Nitrate Applicator; Heparin; Calcium Carbonate; Potassium Chloride; Pantoprazole Sodium; Vial; Dolasetron Mesylate; Aluminum-Magnesium Hydrox.-Simethicone; Fentanyl Citrate; Lactulose; Levofloxacin; Phytonadione; Iso-Osmotic Dextrose; Vancomycin HCl; Piperacillin-Tazobactam Na
+- Procedures performed: Amputation through foot; Amputation of toe; Other (peripheral) vascular shunt or bypass; Excisional debridement of wound, infection, or burn; Other skin graft to other sites; Revision of amputation stump; Venous catheterization, not elsewhere classified; Arteriography of femoral and other lower extremity arteries; Hemodialysis; Transfusion of packed cells
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

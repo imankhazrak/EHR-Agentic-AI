@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented history of 'Other and unspecified hyperlipidemia', indicating a lipid disorder. The record shows a diagnosis of 'Diabetes with renal manifestations', confirming current diabetes. 'Hypertensive chronic kidney disease' indicates current hypertension. There is no explicit mention of obesity. The patient has chronic systolic heart failure and a history of aortocoronary bypass, suggesting a high likelihood of cardiovascular disease. The diagnosis of 'End stage renal disease' confirms kidney disease. The patient has 'Late",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1124,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological manifestations and is on long-term insulin, indicating current diabetes. There is also unspecified essential hypertension and obesity noted in the diagnoses. The presence of other diseases such as coronary atherosclerosis and a history of myocardial infarction suggests a higher risk for cardiovascular disease. The lipid disorder is indicated by the diagnosis of 'other and unspecified hyperlipidemia' and the prescription of Simvastatin, which supports the prediction of a lipid disorder in the next visit. However, there",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3841,
+    "completion_tokens": 256
+  }
+}

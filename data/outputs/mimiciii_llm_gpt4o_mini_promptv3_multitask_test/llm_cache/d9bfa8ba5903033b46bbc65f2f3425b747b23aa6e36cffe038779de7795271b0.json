@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has pure hypercholesterolemia and other hyperlipidemia, indicating a high likelihood of lipid metabolism disorders. The record states diabetes mellitus type II, confirming current diabetes. Hypertensive chronic kidney disease is documented, confirming current hypertension. There is no mention of obesity. Given the patient's congestive heart failure and peripheral vascular disease, there is a significant risk for cardiovascular disease. The patient has end-stage renal disease, indicating a high likelihood of kidney disease. The presence of atrial flutter and other cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 889,
+    "completion_tokens": 256
+  }
+}

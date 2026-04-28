@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia', indicating a lipid disorder. The presence of 'Insulin' and 'Insulin Human Regular' suggests current diabetes management. 'Unspecified essential hypertension' indicates current hypertension. There is no evidence of obesity in the record. The patient's cardiovascular issues and procedures suggest a likelihood of future cardiovascular disease. There is no indication of kidney disease in the current visit. The patient has had a subarachnoid hemorrhage, which increases the risk of stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1101,
+    "completion_tokens": 256
+  }
+}

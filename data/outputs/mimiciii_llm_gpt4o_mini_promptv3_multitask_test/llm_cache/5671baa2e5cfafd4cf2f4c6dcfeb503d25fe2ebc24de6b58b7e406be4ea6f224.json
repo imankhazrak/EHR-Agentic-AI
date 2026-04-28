@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a diagnosis of pure hypercholesterolemia, which indicates a current lipid metabolism disorder, and this condition is likely to persist into the next visit. The presence of diabetes mellitus without mention of complications suggests the patient currently has diabetes. There is no evidence of hypertension or obesity in the record. The combination of diabetes and hypercholesterolemia increases the risk for cardiovascular disease, leading to a prediction of potential cardiovascular issues in the next visit. The unspecified intracranial hemorrhage raises concern for stroke risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3833,
+    "completion_tokens": 256
+  }
+}

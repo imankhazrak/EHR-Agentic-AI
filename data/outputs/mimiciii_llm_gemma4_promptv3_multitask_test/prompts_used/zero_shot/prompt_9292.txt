@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Acute respiratory failure; Acute pancreatitis; Other pulmonary embolism and infarction; Pneumonitis due to inhalation of food or vomitus; Bacteremia; Other ascites; Intestinal infection due to Clostridium difficile; Drug-induced delirium; Drug withdrawal; Alcohol withdrawal; Paralytic ileus; Acute cholecystitis; Unspecified pleural effusion; Alkalosis; [ICD9-DX:9974]; Dependence on respirator, status; Other and unspecified infection due to central venous catheter; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Other and unspecified alcohol dependence, unspecified; Other specified analgesics and antipyretics causing adverse effects in therapeutic use; Benzodiazepine-based tranquilizers causing adverse effects in therapeutic use; Combinations of opioid type drug with any other drug dependence, unspecified; Hypopotassemia; Essential thrombocythemia; Other specified disorders of biliary tract; Other abnormal glucose; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Other abnormal blood chemistry; Anemia, unspecified; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Esophageal reflux
+- Medications prescribed: 0.9% Sodium Chloride; Iso-Osmotic Dextrose; Heparin; Heparin Sodium; 5% Dextrose; Metoclopramide; 0.9% Sodium Chloride (Mini Bag Plus); Meperidine; Methadone; Micafungin; Ondansetron; LR; Vancomycin; Midazolam; Fentanyl Citrate; Phytonadione; Soln; Enoxaparin Sodium; Acetaminophen; Linezolid; D5W; Chlorhexidine Gluconate 0.12% Oral Rinse; Diazepam; Furosemide; Potassium Chloride; Amino Acids 4.25% W/ Dextrose 5%; Multivitamin IV; Vancomycin Oral Liquid; Ibuprofen; Dexmedetomidine; Haloperidol; Thiamine; Piperacillin-Tazobactam; Morphine Sulfate; Etomidate; Succinylcholine; Propofol; Lorazepam; Meropenem; Bisacodyl; Docusate Sodium (Liquid); Sodium Chloride 0.9%  Flush; Sterile Water; SW; Magnesium Sulfate; Vecuronium Bromide; Calcium Gluconate; D5NS; Dextrose 5%; Levofloxacin
+- Procedures performed: Temporary tracheostomy; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Percutaneous aspiration of gallbladder; Percutaneous abdominal drainage; Closed [endoscopic] biopsy of bronchus; Other bronchoscopy; Venous catheterization, not elsewhere classified; Thoracentesis; Parenteral infusion of concentrated nutritional substances; Injection or infusion of oxazolidinone class of antibiotics; Insertion of endotracheal tube
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

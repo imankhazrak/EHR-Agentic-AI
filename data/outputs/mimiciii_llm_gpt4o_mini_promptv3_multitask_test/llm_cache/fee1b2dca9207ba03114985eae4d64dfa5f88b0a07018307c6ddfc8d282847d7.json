@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has congestive heart failure, which suggests cardiovascular issues, and the presence of chronic conditions like iron deficiency anemia and urinary tract infection may indicate underlying health problems. However, there is no explicit evidence of lipid disorders, diabetes, or stroke. Hypertension is likely due to the heart failure diagnosis, and obesity is suggested by the presence of obstructive sleep apnea. Kidney disease is possible given the patient's complex medical history.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3592,
+    "completion_tokens": 238
+  }
+}

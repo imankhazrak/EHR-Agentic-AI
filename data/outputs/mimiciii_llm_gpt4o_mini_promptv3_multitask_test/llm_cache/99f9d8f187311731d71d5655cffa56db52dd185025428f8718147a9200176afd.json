@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a complex medical history with multiple diagnoses, including complications related to liver disease and malnutrition. The presence of insulin in the medication list indicates current diabetes management, leading to a strong prediction for diabetes. Hypertension is likely given the use of Metoprolol, a common antihypertensive. There is no explicit evidence of obesity in the record. The patient's critical condition and history suggest a risk for cardiovascular disease and kidney issues, but no direct evidence of stroke risk is present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4111,
+    "completion_tokens": 253
+  }
+}

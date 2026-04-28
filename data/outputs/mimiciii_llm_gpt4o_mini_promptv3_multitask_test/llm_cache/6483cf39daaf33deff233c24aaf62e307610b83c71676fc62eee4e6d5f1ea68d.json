@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record indicates 'Other and unspecified hyperlipidemia', which suggests a current lipid disorder, leading to a prediction of a diagnosis in the next visit. There is no evidence of diabetes or obesity. 'Unspecified essential hypertension' indicates current hypertension. Given the patient's acute kidney failure, it is likely they will have kidney disease in the next visit. The presence of multiple serious conditions raises the risk for cardiovascular disease, but there is no evidence of stroke risk in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 882,
+    "completion_tokens": 250
+  }
+}

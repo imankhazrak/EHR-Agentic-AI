@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of hypertension and chronic kidney disease, which supports the prediction of hypertension and kidney disease in the next visit. There is no evidence of diabetes or obesity in the current record. The presence of coronary atherosclerosis and heart failure indicates a high likelihood of cardiovascular disease. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis of a lipid disorder but the patient is on atorvastatin, which suggests a potential for lipid issues. There is no evidence to",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3705,
+    "completion_tokens": 256
+  }
+}

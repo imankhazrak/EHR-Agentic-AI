@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Septic shock; Severe sepsis; Acute kidney failure with lesion of tubular necrosis; Calculus of gallbladder with other cholecystitis, without mention of obstruction; Dehydration; Other and unspecified coagulation defects; Cocaine abuse, unspecified; Intestinal infection due to Clostridium difficile; Other and unspecified alcohol dependence, unspecified; Acidosis; Thrombocytopenia, unspecified
+- Medications prescribed: LR; Potassium Chl 40 mEq / 1000 mL NS; Potassium Chloride; Metronidazole; Levofloxacin; Vasopressin; Norepinephrine; NS; D5W; Dextrose 5%; Sodium Bicarbonate; Iso-Osmotic Dextrose; Vancomycin HCl; Insulin Human Regular; Multivitamins; Thiamine HCl; Folic Acid; Propofol; Fentanyl Citrate; Midazolam HCl; Syringe (IV Room); Pantoprazole Sodium; Vial; Calcium Gluconate; Magnesium Sulfate; Sodium Chloride 0.9%  Flush; D10W; Heparin; Metoprolol; Heparin Flush CVL  (100 units/ml); Piperacillin-Tazobactam Na; Dextrose 50%; Lorazepam; Albuterol; Furosemide; Insulin; Docusate Sodium (Liquid); HydrALAZINE HCl; Famotidine; Metolazone; Haloperidol; Oxycodone Liquid; Acetaminophen; Calcitriol; Calcium Carbonate; DiphenhydrAMINE HCl; Magnesium Oxide; Sarna Lotion
+- Procedures performed: Cholecystectomy; Other gastroenterostomy without gastrectomy; Transfusion of packed cells; Transfusion of platelets; Transfusion of other serum; Venous catheterization, not elsewhere classified; Enteral infusion of concentrated nutritional substances; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for less than 96 consecutive hours
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

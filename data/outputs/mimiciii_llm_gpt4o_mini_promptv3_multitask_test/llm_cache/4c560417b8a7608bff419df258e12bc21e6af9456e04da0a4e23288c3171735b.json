@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented history of diabetes mellitus type I, which indicates current diabetes. Hypertensive chronic kidney disease is noted, confirming current hypertension. There is no evidence of obesity in the record. The patient has coronary atherosclerosis and a history of myocardial infarction, suggesting a high likelihood of cardiovascular disease. The presence of end-stage renal disease indicates a high probability of kidney disease. Given the patient's severe health issues, including atrial flutter and history of myocardial infarction, there is a reasonable risk for stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 896,
+    "completion_tokens": 256
+  }
+}

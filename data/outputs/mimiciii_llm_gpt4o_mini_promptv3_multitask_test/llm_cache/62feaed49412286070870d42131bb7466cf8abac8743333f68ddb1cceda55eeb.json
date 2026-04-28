@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is on long-term insulin, indicating current diabetes. Hypertension is also present as indicated by the diagnosis of hypertensive chronic kidney disease. There is no evidence of obesity in the current visit record. The patient has chronic kidney disease stage V, which suggests a high likelihood of kidney disease in the next visit. The presence of ischemic heart disease and other cardiac conditions increases the likelihood of cardiovascular disease. However, there is no evidence of stroke or lipid",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3841,
+    "completion_tokens": 256
+  }
+}

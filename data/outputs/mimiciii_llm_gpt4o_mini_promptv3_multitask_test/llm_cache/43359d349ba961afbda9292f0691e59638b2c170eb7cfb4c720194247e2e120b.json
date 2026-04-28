@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of acute myocardial infarction and coronary atherosclerosis, which are strong indicators for cardiovascular disease. The presence of hypertension and diabetes (indicated by the prescription of insulin) further supports the likelihood of future cardiovascular issues. The medication Atorvastatin suggests a lipid disorder, and given the prevalence in the population, a diagnosis of lipid metabolism disorder is likely in the next visit. There is no evidence of obesity in the current record. Kidney disease is not indicated, and while the patient has risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3893,
+    "completion_tokens": 256
+  }
+}

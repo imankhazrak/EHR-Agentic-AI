@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Acute kidney failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Acidosis; Congestive heart failure, unspecified; Systolic heart failure, unspecified; Acute venous embolism and thrombosis of unspecified deep vessels of lower extremity; Atherosclerosis of native arteries of the extremities, unspecified; Pressure ulcer, heel; Pressure ulcer, buttock; Ulcer of other part of foot; Pneumonitis due to inhalation of food or vomitus; Other convulsions; Diabetes with neurological manifestations, type II or unspecified type, uncontrolled; Diabetes with renal manifestations, type II or unspecified type, uncontrolled; Toxic encephalopathy; Acute posthemorrhagic anemia; Hemorrhage of gastrointestinal tract, unspecified; Hyperosmolality and/or hypernatremia; Unspecified protein-calorie malnutrition; Candidiasis of other urogenital sites; Polyneuropathy in diabetes; Nephritis and nephropathy, not specified as acute or chronic, in diseases classified elsewhere; Osteoarthrosis, localized, not specified whether primary or secondary, lower leg; Delirium due to conditions classified elsewhere; Long-term (current) use of anticoagulants; Encounter for therapeutic drug monitoring; Coronary atherosclerosis of native coronary artery; Percutaneous transluminal coronary angioplasty status; Incomplete bladder emptying; Hyperplasia of prostate, unspecified, with urinary obstruction and other lower urinary symptoms (LUTS); Cyst of kidney, acquired; Cataract extraction status; Family history of ischemic heart disease; Family history of diabetes mellitus; Benign neoplasm of colon; Nonspecific abnormal findings in stool contents; Other late effects of cerebrovascular disease; Bell's palsy
+- Medications prescribed: Vitamin A; Calcitriol; Aspirin; Albuterol; Simvastatin; Dolasetron Mesylate; Clopidogrel Bisulfate; Zinc Sulfate; Sodium Chloride 0.9%  Flush; D5W; traZODONE HCl; Warfarin; Heparin Sodium; Amphotericin B; Sterile Water For Irrigation; Multivitamins; Metoprolol; Furosemide; Insulin; Docusate Sodium; Hydralazine HCl; Sevelamer; Prochlorperazine; Ascorbic Acid; Nephrocaps; Sodium Citrate/Citric Acid; Alteplase (Catheter Clearance); Simethicone; Milk of Magnesia; Heparin Flush PICC (100 units/ml); Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Potassium Chloride; Isosorbide Dinitrate; NS; Ferrous Sulfate; Lansoprazole Oral Suspension; Pantoprazole; Levofloxacin; Heparin; Fluconazole; Acetaminophen; Isosorbide Mononitrate (Extended Release); Metoprolol XL; Phytonadione; DopAmine; Lactulose; Metronidazole; Bisacodyl; Guaifenesin-Dextromethorphan
+- Procedures performed: Injection or infusion of nesiritide; Pulmonary artery wedge monitoring; Monitoring of cardiac output by other technique; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Barium swallow; Transfusion of packed cells
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

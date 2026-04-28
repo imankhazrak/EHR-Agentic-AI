@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Infection following other infusion, injection, transfusion, or vaccination; Intraspinal abscess; Meningitis due to other specified bacteria; Nutritional marasmus; Psoas muscle abscess; Unspecified pleural effusion; Cachexia; Cellulitis and abscess of trunk; Systemic lupus erythematosus; Generalized convulsive epilepsy, without mention of intractable epilepsy; Encephalopathy, unspecified; Body Mass Index less than 19, adult; Reaction to spinal or lumbar puncture; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Orthostatic hypotension; Long-term (current) use of steroids; Loss of weight; Other specified antibiotics causing adverse effects in therapeutic use; Persistent vomiting; Need for desensitization to allergens; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure
+- Medications prescribed: Bag; 0.9% Sodium Chloride; Potassium Chloride; Sterile Water; Magnesium Sulfate; Calcium Gluconate; Heparin; Heparin Flush (10 units/ml); Sodium Chloride 0.9%  Flush; Docusate Sodium; Midazolam; Fentanyl Citrate; Imipenem-Cilastatin *NF*; Linezolid; 0.9% Sodium Chloride (Mini Bag Plus); D5W; Propofol; Gabapentin; Famotidine; Soln; Potassium Chloride (Powder); D5 1/2NS; Hydrocortisone Na Succ.; Insulin; LeVETiracetam; Acyclovir; 5% Dextrose; Iso-Osmotic Sodium Chloride; OxycoDONE (Immediate Release); Ondansetron; PredniSONE; Prochlorperazine; Lorazepam; Neutra-Phos; 0.45% Sodium Chloride; MethylPREDNISolone Sodium Succ; Readi-Cat 2 (Barium Sulfate 2% Suspension); Olanzapine (Disintegrating Tablet); Acetaminophen; Acetaminophen IV; Vancomycin; Iso-Osmotic Dextrose; HYDROmorphone; Promethazine; Amikacin; Lactated Ringers; HYDROmorphone (Dilaudid); Multivitamins W/minerals; Influenza Virus Vaccine; Senna
+- Procedures performed: Other exploration and decompression of spinal canal; Biopsy of bone, other bones; Excision or destruction of lesion of spinal cord or spinal meninges; Incision of lung; Other incision of conjunctiva; Continuous invasive mechanical ventilation for less than 96 consecutive hours
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

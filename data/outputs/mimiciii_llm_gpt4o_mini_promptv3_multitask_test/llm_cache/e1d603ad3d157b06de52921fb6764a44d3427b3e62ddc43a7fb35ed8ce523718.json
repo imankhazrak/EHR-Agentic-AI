@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.15},\n  \"reasoning\": \"The current visit record includes 'Other and unspecified hyperlipidemia', indicating a lipid disorder, which supports a prediction of a diagnosis in the next visit. The presence of insulin suggests diabetes management, indicating the patient currently has diabetes. Medications like Metoprolol Tartrate and the presence of multiple serious conditions suggest hypertension. There is no explicit evidence of obesity in the record. Given the patient's serious conditions, there is a reasonable prediction for cardiovascular disease. However, there is no evidence of kidney disease or stroke in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3962,
+    "completion_tokens": 256
+  }
+}

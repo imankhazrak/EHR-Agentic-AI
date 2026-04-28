@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a history of chronic kidney disease and is currently diagnosed with hypertensive chronic kidney disease, indicating hypertension. The use of Atorvastatin and Gemfibrozil suggests a focus on lipid management, which supports the prediction of a lipid disorder diagnosis in the next visit. There is no evidence of diabetes or obesity in the current record. The patient has congestive heart failure, which increases the likelihood of cardiovascular disease. The presence of acute kidney failure and chronic kidney disease indicates a high probability of kidney disease in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1069,
+    "completion_tokens": 256
+  }
+}

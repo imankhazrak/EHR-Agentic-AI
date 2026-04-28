@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with multiple manifestations, indicating current diabetes. Obesity is explicitly stated as a diagnosis. Hypertension is likely given the presence of cardiovascular issues, but not explicitly stated. The patient has significant cardiovascular disease (atherosclerosis, heart failure, old myocardial infarction), suggesting a high likelihood of future cardiovascular events. Additionally, diabetes-related renal manifestations indicate a high probability of kidney disease. The risk of stroke is elevated due to the combination of diabetes and cardiovascular disease.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 253
+  }
+}

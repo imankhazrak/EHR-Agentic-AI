@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a history of coronary atherosclerosis and is on atorvastatin, indicating a lipid disorder. The use of insulin suggests current diabetes. The presence of hypertension medications (HydrALAzine, Labetalol, NIFEdipine CR) indicates current hypertension. The patient's BMI is less than 19, indicating they are not obese. Given the heart failure and kidney issues, cardiovascular disease is likely to persist, and acute kidney failure suggests ongoing kidney disease. There is no evidence of stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 987,
+    "completion_tokens": 256
+  }
+}

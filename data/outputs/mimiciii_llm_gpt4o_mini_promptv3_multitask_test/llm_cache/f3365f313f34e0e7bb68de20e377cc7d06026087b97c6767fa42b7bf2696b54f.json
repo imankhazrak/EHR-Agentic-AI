@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of 'Other specified cardiac dysrhythmias' which suggests cardiovascular issues, and the presence of hypertension is indicated by the medication Diltiazem, which is commonly used for hypertension management. There is no evidence of diabetes or obesity in the current visit record. The patient has hematuria, which could indicate kidney issues, and the presence of chronic pulmonary heart diseases may increase the risk of cardiovascular disease. However, there is no direct evidence of lipid metabolism disorders or stroke risk.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3878,
+    "completion_tokens": 255
+  }
+}

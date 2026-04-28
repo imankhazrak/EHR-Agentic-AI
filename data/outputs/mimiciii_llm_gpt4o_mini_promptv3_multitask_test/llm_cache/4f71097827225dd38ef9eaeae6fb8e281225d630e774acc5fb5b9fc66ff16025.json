@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has multiple documented diagnoses related to diabetes, including diabetes with neurological, renal, and ophthalmic manifestations, indicating current diabetes. Hypertension is indicated by the diagnosis of unspecified essential hypertension. Morbid obesity is explicitly mentioned. The presence of other and unspecified hyperlipidemia suggests a likelihood of lipid metabolism disorders. Cardiovascular issues are indicated by diagnoses of heart failure and coronary atherosclerosis. Kidney disease is suggested by diabetes with renal manifestations and nephritis/nephropathy. There is no direct evidence of stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1159,
+    "completion_tokens": 256
+  }
+}

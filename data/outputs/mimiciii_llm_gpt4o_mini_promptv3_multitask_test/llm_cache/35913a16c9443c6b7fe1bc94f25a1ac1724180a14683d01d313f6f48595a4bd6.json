@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a history of hypertension and is currently diagnosed with hypertensive chronic kidney disease, indicating a high likelihood of kidney disease and cardiovascular complications. The presence of atrial fibrillation and congestive heart failure further supports the prediction of cardiovascular disease. There is no evidence of diabetes or obesity in the current visit record. The patient is prescribed atorvastatin, which suggests a potential lipid disorder, leading to a prediction of 'Yes' for lipid metabolism disorders in the next visit based on the prevalence in the population.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3873,
+    "completion_tokens": 256
+  }
+}

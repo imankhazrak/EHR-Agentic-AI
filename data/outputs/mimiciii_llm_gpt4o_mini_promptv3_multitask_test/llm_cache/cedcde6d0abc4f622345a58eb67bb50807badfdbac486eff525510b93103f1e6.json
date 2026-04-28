@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of chronic diastolic heart failure and unspecified essential hypertension, indicating current hypertension. The presence of diabetes is suggested by the use of insulin, which is a strong indicator of diabetes. There is no evidence of obesity in the current visit record. The patient has acute kidney failure, which suggests a high likelihood of kidney disease in the next visit. Cardiovascular issues are present, increasing the likelihood of future cardiovascular disease. There is no evidence of stroke risk factors or history in the current visit record.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3823,
+    "completion_tokens": 256
+  }
+}

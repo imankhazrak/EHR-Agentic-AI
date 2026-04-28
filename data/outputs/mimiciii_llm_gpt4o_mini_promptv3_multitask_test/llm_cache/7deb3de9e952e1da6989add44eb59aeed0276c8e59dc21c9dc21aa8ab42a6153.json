@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a history of atrial fibrillation, which suggests cardiovascular issues, and is currently experiencing acute kidney failure, indicating a high likelihood of kidney disease. There is no explicit evidence of diabetes or lipid disorders in the current visit record, but hypertension is likely due to the medications prescribed (e.g., Metoprolol). Obesity is suggested by the presence of obstructive sleep apnea, which is often associated with obesity.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1060,
+    "completion_tokens": 240
+  }
+}

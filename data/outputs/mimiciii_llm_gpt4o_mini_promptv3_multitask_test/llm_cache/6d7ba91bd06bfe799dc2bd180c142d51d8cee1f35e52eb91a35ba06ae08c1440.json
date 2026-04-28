@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is on long-term insulin, indicating current diabetes. Hypertensive chronic kidney disease is also noted, confirming hypertension. There is no explicit evidence of obesity in the record. The presence of coronary atherosclerosis and congestive heart failure suggests a high risk for cardiovascular disease. The patient has end-stage renal disease, which strongly indicates ongoing kidney disease. Additionally, the history of transient ischemic attack (TIA) raises the risk for stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4045,
+    "completion_tokens": 255
+  }
+}

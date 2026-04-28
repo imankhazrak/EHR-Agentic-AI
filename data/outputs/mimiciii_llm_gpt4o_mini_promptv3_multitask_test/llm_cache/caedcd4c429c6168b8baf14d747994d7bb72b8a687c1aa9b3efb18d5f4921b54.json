@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Diabetes mellitus without mention of complication' indicating current diabetes. There is also a diagnosis of 'Unspecified essential hypertension', confirming current hypertension. The presence of 'Pure hypercholesterolemia' suggests a likelihood of lipid metabolism disorders, leading to a prediction of diagnosis in the next visit. There is no evidence of obesity in the current record. The patient has multiple risk factors for cardiovascular disease, including diabetes and hypertension, which supports a prediction for potential cardiovascular issues in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3603,
+    "completion_tokens": 256
+  }
+}

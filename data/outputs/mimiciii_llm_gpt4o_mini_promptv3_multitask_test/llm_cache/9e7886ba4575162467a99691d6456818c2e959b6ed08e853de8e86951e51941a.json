@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with neurological manifestations and is on long-term insulin, indicating current diabetes. Hypertension is likely given the presence of chronic systolic heart failure and the use of Lisinopril, a common antihypertensive. There is no evidence of obesity in the record. The patient has multiple cardiovascular issues, including chronic heart failure and atrial fibrillation, suggesting a high likelihood of cardiovascular disease. Chronic kidney disease is also documented, indicating a high probability of kidney disease in the next",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 256
+  }
+}

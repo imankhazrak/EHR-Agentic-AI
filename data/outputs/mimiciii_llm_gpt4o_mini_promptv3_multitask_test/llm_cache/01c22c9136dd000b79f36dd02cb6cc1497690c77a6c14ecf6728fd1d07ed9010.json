@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, hypertension, and morbid obesity, all of which are confirmed by the current visit record. Additionally, the presence of coronary atherosclerosis and chronic heart failure indicates a high likelihood of cardiovascular disease. The acute kidney failure diagnosis suggests ongoing kidney issues. The history of cerebrovascular disease and other risk factors increases the likelihood of stroke. The lipid disorder prediction is based on the current diagnosis of hyperlipidemia.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3743,
+    "completion_tokens": 245
+  }
+}

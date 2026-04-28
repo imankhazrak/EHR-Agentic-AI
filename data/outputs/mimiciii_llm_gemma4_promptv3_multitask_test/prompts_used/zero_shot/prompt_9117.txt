@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Aortic valve disorders; Cardiac complications, not elsewhere classified; Atrial fibrillation; Coronary atherosclerosis of native coronary artery; Unspecified essential hypertension; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Peripheral vascular disease, unspecified; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Occlusion and stenosis of carotid artery without mention of cerebral infarction; Occlusion and stenosis of multiple and bilateral precerebral arteries without mention of cerebral infarction; Anemia, unspecified; Cracked tooth; Unspecified disorder of the teeth and supporting structures; Chronic total occlusion of coronary artery
+- Medications prescribed: Calcium Gluconate; GlipiZIDE; Glucagon; Dextrose 50%; Metoprolol Tartrate; Acetaminophen; Insulin; Clopidogrel; Furosemide; HYDROmorphone (Dilaudid); HydrALAzine; Potassium Chloride; Aspirin EC; Sodium Chloride 0.9%  Flush; Ranitidine; Simvastatin; Bisacodyl; Milk of Magnesia; Docusate Sodium; Albumin 5% (25g / 500mL); Magnesium Sulfate; Heparin Flush (10 units/ml); SW; Oxycodone-Acetaminophen; Syringe; Morphine Sulfate; D5W; Meperidine; Phenylephrine; 5% Dextrose; Neostigmine; Nitroglycerin; Glycopyrrolate; Propofol; Metoclopramide; Iso-Osmotic Dextrose; 0.9% Sodium Chloride; Vancomycin; Insulin Human Regular; Fentanyl Citrate; Ketorolac; Atorvastatin; Pneumococcal Vac Polyvalent; Ciprofloxacin HCl; Valsartan; Lorazepam; LR; Epinephrine; Chlorhexidine Gluconate 0.12% Oral Rinse; Docusate Sodium (Liquid)
+- Procedures performed: Open and other replacement of aortic valve with tissue graft; Single internal mammary-coronary artery bypass; Extracorporeal circulation auxiliary to open heart surgery
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

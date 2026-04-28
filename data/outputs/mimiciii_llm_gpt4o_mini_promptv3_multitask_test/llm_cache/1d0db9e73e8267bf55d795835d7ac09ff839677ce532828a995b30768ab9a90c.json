@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a long-term use of insulin indicating diabetes, and the presence of hypertension is supported by medications like Labetalol and Hydralazine. The patient's BMI is less than 19, indicating they do not have obesity. Given the diagnoses of coronary atherosclerosis and heart failure, there is a strong likelihood of cardiovascular disease. The patient has acute kidney failure and a history of kidney transplant, suggesting a high probability of kidney disease. There is no direct evidence of stroke risk in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3778,
+    "completion_tokens": 256
+  }
+}

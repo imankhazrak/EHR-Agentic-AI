@@ -1,0 +1,17 @@
+# Prompt_v3 multitask test run: OpenAI gpt-4o-mini.
+# Usage:
+#   python -m src.scripts.run_zero_shot --config configs/default.yaml \
+#       --overrides configs/experiments/gpt4o_mini_promptv3_multitask_test.yaml
+
+paths:
+  processed: "data/processed/mimiciii_multitask"
+  outputs: "data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_test"
+
+llm:
+  provider: openai
+  model_name: gpt-4o-mini
+  model: gpt-4o-mini
+  prompt_template_dir: "prompts_v3"
+  multitask: true
+  max_test_samples: null
+  cache_dir: "data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_test/llm_cache"

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus and unspecified essential hypertension, indicating current conditions. There is also evidence of hyperlipidemia, which supports the prediction of a lipid disorder in the next visit. Given the acute myocardial infarction and other cardiac complications, there is a high likelihood of ongoing cardiovascular issues. The patient also has acute kidney failure, suggesting a risk for kidney disease in the next visit. The presence of cerebral embolism with cerebral infarction indicates a significant risk for stroke in the future.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4050,
+    "completion_tokens": 255
+  }
+}

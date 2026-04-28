@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is on insulin, indicating current diabetes. Hypertensive chronic kidney disease is also noted, suggesting current hypertension. The presence of hyperlipidemia and other cardiovascular conditions increases the likelihood of a lipid disorder diagnosis in the next visit. The patient has chronic kidney disease and acute kidney failure, indicating a high probability of kidney disease in the next visit. Given the history of transient ischemic attack (TIA) and other cardiovascular issues, there is a significant",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1308,
+    "completion_tokens": 256
+  }
+}

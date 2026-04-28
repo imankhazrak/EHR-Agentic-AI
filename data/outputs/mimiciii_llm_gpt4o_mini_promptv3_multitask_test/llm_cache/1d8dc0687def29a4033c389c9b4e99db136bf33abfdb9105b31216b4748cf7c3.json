@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is currently prescribed insulin, indicating active management of diabetes. There is also a diagnosis of unspecified essential hypertension, suggesting the patient has hypertension. The presence of multiple cardiovascular issues, including acute myocardial infarction and heart failure, supports a high likelihood of cardiovascular disease in the next visit. The patient has acute kidney failure, which increases the risk of kidney disease in the future. The record does not provide evidence of obesity, and while there is a mention of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4303,
+    "completion_tokens": 256
+  }
+}

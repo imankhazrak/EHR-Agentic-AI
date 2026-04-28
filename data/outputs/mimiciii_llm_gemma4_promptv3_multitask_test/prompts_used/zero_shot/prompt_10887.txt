@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Perforation of intestine; Septic shock; Unspecified peritonitis; Acute kidney failure, unspecified; Injury to liver without mention of open wound into cavity laceration, unspecified; Acidosis; Other ascites; Severe sepsis; Atrial fibrillation; Neoplasm of unspecified nature of other genitourinary organs; Unspecified noninflammatory disorder of ovary, fallopian tube, and broad ligament; Urinary tract infection, site not specified; Unspecified essential hypertension; Fall from other slipping, tripping, or stumbling; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Hypoglycemia, unspecified; Other and unspecified ovarian cyst; Other specified disorders of intestine; Other ill-defined conditions; Other diseases of spleen; [ICD9-DX:0414]; Hernia of other specified sites without mention of obstruction or gangrene; Examination of participant in clinical trial; Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits
+- Medications prescribed: Scopolamine Patch; Piperacillin-Tazobactam; Insulin Human Regular; Norepinephrine; LR; 0.9% Sodium Chloride; 5% Dextrose; 0.9% Sodium Chloride (Mini Bag Plus); Midazolam; Vasopressin; Potassium Chloride; Albumin 5% (25g / 500mL); Sodium Bicarbonate; Cisatracurium Besylate; Calcium Chloride; Albuterol Inhaler; Iso-Osmotic Dextrose; Vancomycin; Albumin 25% (12.5g / 50mL); Fentanyl Citrate; Sodium Chloride 0.9%  Flush; Soln; Chlorhexidine Gluconate 0.12% Oral Rinse; Vial; SW; Calcium Gluconate; Magnesium Sulfate; Pantoprazole; Dextrose 50%; Glucagon; Insulin; Pneumococcal Vac Polyvalent; Amiodarone; 5% Dextrose (EXCEL BAG); Ciprofloxacin HCl; Aspirin; Neutra-Phos; Furosemide; Ondansetron ODT; Multivitamins; Ferrous Sulfate; Potassium Phosphate; Ketorolac; Metoprolol Tartrate; Phosphorus; AcetaZOLamide Sodium; Lansoprazole Oral Disintegrating Tab; Potassium Chloride (Powder); Docusate Sodium; Acetaminophen
+- Procedures performed: Total splenectomy; Reopening of recent laparotomy site; Open and other sigmoidectomy; Other unilateral oophorectomy; Colostomy, not otherwise specified; Other gastroenterostomy without gastrectomy; Insertion of intercostal catheter for drainage; Application of other wound dressing; Percutaneous abdominal drainage; Diagnostic ultrasound of abdomen and retroperitoneum; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Venous catheterization, not elsewhere classified; Arterial catheterization; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

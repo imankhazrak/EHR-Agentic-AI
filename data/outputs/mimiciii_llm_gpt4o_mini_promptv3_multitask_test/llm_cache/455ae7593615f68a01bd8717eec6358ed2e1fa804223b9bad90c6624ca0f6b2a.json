@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with unspecified complications, indicating current diabetes. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease. The patient is classified as morbidly obese based on a BMI of 40.0-44.9. Given the history of subendocardial infarction and chronic systolic heart failure, cardiovascular disease is likely. Chronic kidney disease is also documented, indicating current kidney issues. There is no evidence of a stroke or related conditions in the current visit record.\"\n",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1454,
+    "completion_tokens": 256
+  }
+}

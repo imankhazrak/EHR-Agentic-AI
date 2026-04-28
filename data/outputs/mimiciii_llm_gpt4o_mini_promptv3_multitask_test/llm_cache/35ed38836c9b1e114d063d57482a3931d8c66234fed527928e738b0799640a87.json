@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has multiple documented diagnoses of diabetes, including diabetes with neurological, renal, and ophthalmic manifestations, indicating current diabetes. The presence of obesity is explicitly stated. Hypertension is likely given the patient's cardiovascular issues and medications like Metoprolol, which is often used for hypertension. Cardiovascular disease is indicated by diagnoses of atherosclerosis and coronary artery disease. Kidney disease is supported by the diagnosis of nephritis and nephropathy related to diabetes. The risk of stroke is elevated due to the patient's cardiovascular conditions",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 256
+  }
+}

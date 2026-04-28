@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient is prescribed Atorvastatin, which indicates a potential lipid disorder, leading to a prediction of 'Yes' for lipid metabolism disorders in the next visit. The presence of Humulin-R Insulin suggests current diabetes. The patient has a history of atrial fibrillation and is on medications like Metoprolol and Captopril, indicating hypertension. There is no explicit evidence of obesity in the current record. Given the patient's cardiovascular history, there is a significant risk for cardiovascular disease. The presence of urinary",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3861,
+    "completion_tokens": 256
+  }
+}

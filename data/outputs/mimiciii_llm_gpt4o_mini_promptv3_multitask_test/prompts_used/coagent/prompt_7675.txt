@@ -1,0 +1,137 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only the current visit record, the provided demonstration cases, and the refined criteria.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+Use:
+- Current visit record
+- Demonstration cases
+- Refined criteria
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Demonstration Cases]
+5. [Refined Criteria]
+6. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the record, examples, and refined criteria.
+- Do NOT assume missing information.
+- Do NOT rely on external medical knowledge.
+
+For lipid disorder:
+- Same strict rules:
+  • Explicit diagnosis/history/evidence → Yes  
+  • Medication ONLY if supported  
+  • DO NOT rely only on risk factors  
+
+For other tasks:
+- Answer "Yes" ONLY if clear evidence exists
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Long-term (current) use of steroids; Other nonspecific abnormal serum enzyme levels; Esophageal reflux; Barrett's esophagus; Unspecified essential hypertension; Personal history of tobacco use; Pneumonia due to escherichia coli [E. coli]; Acute and chronic respiratory failure; Complications of other specified transplanted organ; Chronic graft-versus-host disease; Other specified alveolar and parietoalveolar pneumonopathies; Pathologic fracture of vertebrae; Other disorders of neurohypophysis; Hypoxemia; Other acute pain; Other chronic pain; Abdominal pain, right upper quadrant; Backache, unspecified; Personal history of myeloid leukemia; Bronchiectasis without acute exacerbation; Other dependence on machines, supplemental oxygen; Osteoporosis, unspecified; Anemia of other chronic disease; Personal history of venous thrombosis and embolism; Long-term (current) use of anticoagulants
+- Medications prescribed: Enoxaparin Sodium; Lidocaine 5% Patch; Pregabalin; Tobramycin Inhalation Soln; Acyclovir; Polyethylene Glycol; Calcium Carbonate; Budesonide; Docusate Sodium; Senna; Vitamin D; Multivitamins W/minerals; Pancrease MT 16; Pantoprazole; Artificial Tears; Lorazepam; Morphine Sulfate IR; Bisacodyl; Milk of Magnesia; Voriconazole; 1/2 NS; Azithromycin; Iso-Osmotic Dextrose; 0.9% Sodium Chloride (Mini Bag Plus); Levofloxacin; Morphine Sulfate; HYDROmorphone (Dilaudid); Oseltamivir Phosphate; PredniSONE; CefePIME; Vancomycin; Sulfameth/Trimethoprim SS; Pantoprazole Sodium; Tobramycin Sulfate; Sulfameth/Trimethoprim; 0.9% Sodium Chloride; Heparin Flush (10 units/ml); Ondansetron; Oseltamivir; Neutra-Phos; Lidocaine Jelly 2% (Urojet); Potassium Chloride; Mycophenolate Mofetil; Metoprolol Tartrate; Vial; 5% Dextrose; Piperacillin-Tazobactam; MethylPREDNISolone Sodium Succ; Linezolid; Ipratropium Bromide Neb
+- Procedures performed: Injection or infusion of oxazolidinone class of antibiotics; Venous catheterization, not elsewhere classified
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only documented evidence  
+(2) Use demonstration cases as pattern guidance  
+(3) Apply refined criteria to reduce common errors  
+(4) Consider diagnoses, medications, procedures jointly  
+(5) Weigh multiple signals together  
+(6) Use prevalence only as background context  
+(7) Base conclusions strictly on evidence  
+
+[Demonstration Cases]
+Case 1:
+- Diagnoses made: Pneumococcal septicemia [Streptococcus pneumoniae septicemia]; Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia]; Obstructive chronic bronchitis with (acute) exacerbation; [ICD9-DX:5185]; Acidosis; Septic shock; Acute posthemorrhagic anemia; Accidental puncture or laceration during a procedure, not elsewhere classified; Hyposmolality and/or hyponatremia
+- Medications prescribed: Haloperidol; Metoprolol; Olanzapine; Prednisone; Atenolol; Salmeterol Xinafoate Diskus (50 mcg); Insulin; SW; Potassium Chloride; Heparin Flush PICC (100 units/ml); Amlodipine; NS; Metoclopramide; Methylprednisolone Na Succ.; Ipratropium Bromide Neb; Magnesium Sulfate; Fentanyl Citrate; D5W; Furosemide; Nitroglycerin; Calcium Gluconate; Midazolam HCl; Lactulose; Albuterol Neb Soln; Lisinopril; Syringe (IV Room); Sertraline HCl; Lansoprazole; Lorazepam; Clonazepam; Ondansetron; Imipramine HCl; Olanzapine (Disintegrating Tablet); Levofloxacin; Nystatin Oral Suspension; Iso-Osmotic Dextrose; Ceftriaxone; Guaifenesin; Succinylcholine; Etomidate; Propofol (Generic); Albuterol-Ipratropium; Lansoprazole Oral Suspension; Albuterol; Dextrose 5%; Vancomycin HCl; Pantoprazole Sodium; Heparin Flush CVL  (100 units/ml); Docusate Sodium (Liquid); Ipratropium Bromide MDI
+- Procedures performed: Venous catheterization, not elsewhere classified; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Fiber-optic bronchoscopy; Arterial catheterization; Transfusion of packed cells
+Outcome: Yes
+
+Case 2:
+- Diagnoses made: Acute respiratory failure; Pneumonia due to respiratory syncytial virus; Congestive heart failure, unspecified; Diastolic heart failure, unspecified; Pure hypercholesterolemia; Depressive disorder, not elsewhere classified; Esophageal reflux; Iron deficiency anemia, unspecified
+- Medications prescribed: Aspirin; Clonazepam; Sertraline HCl; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Potassium Chloride; Azithromycin; Furosemide; Magnesium Oxide; Mirapex; Sodium Chloride 0.9%  Flush; Heparin Flush CVL  (100 units/ml); Acetaminophen; Heparin; Lisinopril; Sinemet; Tasmar; Atorvastatin; Amantadine; Docusate Sodium; Lactulose; Pantoprazole
+- Procedures performed: Venous catheterization, not elsewhere classified
+Outcome: Yes
+
+Case 3:
+- Diagnoses made: Obstructive chronic bronchitis with (acute) exacerbation; Pneumonia, organism unspecified; Atrial flutter; Cellulitis and abscess of buttock; Atrial fibrillation; Long-term (current) use of anticoagulants; Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled; Obstructive sleep apnea (adult)(pediatric); Dehydration; Congestive heart failure, unspecified; Gout, unspecified; Polycythemia vera
+- Medications prescribed: Diltiazem; Metoprolol; NS; Warfarin; Xopenex; Tiotropium Bromide; Sodium Chloride 0.9%  Flush; Magnesium Sulfate; Potassium Chloride; PredniSONE; Lisinopril; Insulin; Oxycodone SR (OxyconTIN); MethylPREDNISolone Sodium Succ; D5W; Albuterol 0.083% Neb Soln; Influenza Virus Vaccine; Ipratropium Bromide Neb; Azithromycin; Multivitamins; Aspirin; Allopurinol; Simvastatin; Pantoprazole; Senna; Docusate Sodium; Neutra-Phos; MetFORMIN (Glucophage); Zolpidem Tartrate; OxycoDONE (Immediate Release); Furosemide; Diltiazem Extended-Release
+- Procedures performed: None recorded
+Outcome: Yes
+
+Case 4:
+- Diagnoses made: Unspecified septicemia; Unspecified viral hepatitis C with hepatic coma; Urinary tract infection, site not specified; Hyposmolality and/or hyponatremia; Hematemesis; Acute kidney failure, unspecified; Other and unspecified coagulation defects; Pneumonitis due to inhalation of food or vomitus; Sepsis; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, in remission; Chronic kidney disease, unspecified; Other emphysema; Iron deficiency anemia secondary to blood loss (chronic); Stricture and stenosis of esophagus; Thrombocytopenia, unspecified; Open wound of tongue and floor of mouth, without mention of complication; Human bite; Accidents occurring in residential institution; Unspecified schizophrenia, unspecified
+- Medications prescribed: NS; Albuterol; Ipratropium Bromide MDI; SW; Propofol; D5W; Magnesium Sulfate; MetRONIDAZOLE (FLagyl); Octreotide Acetate; Iso-Osmotic Dextrose; Piperacillin-Tazobactam Na; Heparin Flush CVL  (100 units/ml); Vancomycin; Vial; Pantoprazole Sodium; Lactulose; Rifaximin; Sodium Chloride 0.9%  Flush; Ferrous Sulfate (Liquid); Potassium Chloride; Heparin; Furosemide; Heparin Flush PICC (100 units/ml); Spironolactone; CefePIME; Lidocaine Jelly 2% (Urojet); Olanzapine; Pantoprazole; Phytonadione; Neutra-Phos
+- Procedures performed: Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; Arterial catheterization; Transfusion of other serum; Transfusion of packed cells; Venous catheterization, not elsewhere classified
+Outcome: No
+
+Case 5:
+- Diagnoses made: Other pulmonary embolism and infarction; Pneumonia, organism unspecified; Acute kidney failure, unspecified; Malignant neoplasm of upper lobe, bronchus or lung; Secondary malignant neoplasm of bone and bone marrow; [ICD9-DX:7863]; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Other disorders of neurohypophysis; Hemorrhage of gastrointestinal tract, unspecified; Other specified cardiac dysrhythmias; Other esophagitis; Late effect of radiation; Radiological procedure and radiotherapy as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Nonspecific abnormal results of function study of liver; Hematuria, unspecified; Anemia, unspecified; Insomnia, unspecified; Personal history of other lymphatic and hematopoietic neoplasms; Encounter for palliative care
+- Medications prescribed: traZODONE; Cyanocobalamin; Sodium Chloride Nasal; Neutra-Phos; Mirtazapine; Pantoprazole; FoLIC Acid; Dexamethasone; Pemetrexed; CARBOplatin; 5% Dextrose; 0.9% Sodium Chloride; Prochlorperazine; Lorazepam; Ondansetron; Potassium Phosphate; Zolpidem Tartrate; Calcium Replacement (Oncology); Bisacodyl; Calcium Gluconate; Maalox/Diphenhydramine/Lidocaine; Acetaminophen; Iso-Osmotic Dextrose; CefePIME; Vancomycin; 0.9% Sodium Chloride (Mini Bag Plus); Metoprolol Tartrate; Metoclopramide; Magnesium Sulfate; Potassium Chloride Replacement (Oncology); SW; Polyethylene Glycol; Lactulose; D5 1/2NS; Codeine Sulfate; Zoledronic Acid; PACLItaxel (TaxOL); 5% Dextrose (EXCEL BAG); Ampicillin-Sulbactam; Iso-Osmotic Sodium Chloride; DiphenhydrAMINE; Famotidine; Vial; Filgrastim; Sodium Chloride 0.9%  Flush; Potassium Chloride; ChlorproMAZINE; OxycoDONE (Immediate Release); Benzonatate; Heparin Sodium
+- Procedures performed: Interruption of the vena cava; Injection or infusion of cancer chemotherapeutic substance; Fiber-optic bronchoscopy; Other lavage of bronchus and trachea
+Outcome: No
+
+Case 6:
+- Diagnoses made: Universal ulcerative (chronic) colitis; Other pulmonary embolism and infarction; Acute kidney failure, unspecified; Other venous embolism and thrombosis of inferior vena cava; Perforation of intestine; Peritonitis (acute) generalized; Unspecified pleural effusion; Acidosis; Acute venous embolism and thrombosis of deep vessels of distal lower extremity; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Cachexia; Candidiasis of mouth; Paroxysmal ventricular tachycardia; Delirium due to conditions classified elsewhere; Atrial fibrillation; Long-term (current) use of anticoagulants; Long-term (current) use of steroids; Esophageal reflux; Iron deficiency anemia secondary to blood loss (chronic); Tobacco use disorder; Heparin-induced thrombocytopenia (HIT); Interstitial emphysema; Methicillin resistant Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Surgical operation with formation of external stoma causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Dysphagia, oropharyngeal phase; Other disorders of plasma protein metabolism; Other specified disorders of skin; Unspecified disease of pancreas
+- Medications prescribed: Acetaminophen IV; 0.9% Sodium Chloride; Potassium Phosphate; Pantoprazole; Mupirocin Nasal Ointment 2%; Sodium Chloride 0.9%  Flush; Loperamide; Amiodarone; Argatroban; 5% Dextrose; Lansoprazole Oral Disintegrating Tab; Metoprolol Tartrate; Acetaminophen (Liquid); Quetiapine Fumarate; Gastroview (Diatrizoate Meglumine & Sodium); Psyllium; Calcium Carbonate; Vitamin D; OxycoDONE Liquid; Bag; Magnesium Sulfate; Sodium Chloride Nasal; Warfarin; Phenazopyridine; Guaifenesin; Alteplase (Catheter Clearance); Syringe (0.9% Sodium Chloride); Mupirocin Cream 2%; Phytonadione; Neutra-Phos; Furosemide; Phosphorus; 5% Dextrose (EXCEL BAG); Potassium Chloride (Powder); Iso-Osmotic Dextrose; Piperacillin-Tazobactam; HYDROmorphone (Dilaudid); Albumin 25% (12.5g / 50mL); traZODONE; Lorazepam; Vial; D5LR; OxycoDONE (Immediate Release); Acetaminophen; Vancomycin; Nystatin Oral Suspension; Sterile Water; Potassium Chloride; Insulin; Dextrose 50%
+- Procedures performed: Open total intra-abdominal colectomy; Other permanent ileostomy; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Thoracentesis; Insertion of intercostal catheter for drainage; Other electric countershock of heart; Enteral infusion of concentrated nutritional substances
+Outcome: No
+
+
+[Refined Criteria]
+1. **Evaluate Comorbidities Holistically**: Assess the interplay of multiple diagnoses (e.g., diabetes, hypertension, obesity) to identify higher risks for complications, rather than relying on single diagnoses.
+
+2. **Prioritize Strong Clinical Indicators**: Focus on well-established clinical indicators (e.g., uncontrolled diabetes, recent hospitalizations) that correlate directly with predicted outcomes, avoiding reliance on weak or isolated signals.
+
+3. **Analyze Medication Profiles**: Use prescribed medications as predictive tools, recognizing that certain medications (e.g., statins for hyperlipidemia, antihypertensives for cardiovascular risk) can indicate underlying conditions.
+
+4. **Identify Risk Factor Combinations**: Evaluate combinations of risk factors (e.g., obesity, diabetes, hypertension) collectively to strengthen predictions for related complications.
+
+5. **Avoid Rigid Diagnostic Criteria**: Allow for nuanced predictions by considering risk factors and clinical indicators without requiring explicit diagnoses for all positive predictions.
+
+6. **Recognize Patterns of Complications**: Use known associations between conditions (e.g., diabetes leading to cardiovascular disease) to inform predictions, especially when multiple related conditions are present.
+
+7. **Prioritize Recent Clinical Events**: Give more weight to recent health events (e.g., hospital visits, procedures)
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the record, examples, and refined criteria>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1  
+- Use exactly two decimal places  
+- Higher = stronger evidence  
+- Do NOT use percentages  
+- Do NOT output anything outside JSON

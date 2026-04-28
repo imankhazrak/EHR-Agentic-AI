@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of morbid obesity, which supports the prediction of obesity. The presence of diabetes is indicated by the prescription of insulin, suggesting current diabetes. Hypertension is likely due to the diagnosis of chronic diastolic heart failure and the prescription of medications like Valsartan and Hydralazine, which are used to manage hypertension. Cardiovascular disease is indicated by the chronic diastolic heart failure diagnosis. The acute kidney failure diagnosis suggests a current kidney issue, but there is no evidence of stroke risk",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3689,
+    "completion_tokens": 256
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient has a diagnosis of morbid obesity, which indicates a high likelihood of obesity. There is also a diagnosis of hypertensive chronic kidney disease, indicating current hypertension. The presence of diabetes is supported by the use of insulin, suggesting the patient has diabetes. Given the patient's end-stage renal disease and chronic kidney disease, there is a high probability of kidney disease in the next visit. The combination of obesity, diabetes, and hypertension increases the risk for cardiovascular disease, leading to a prediction of potential cardiovascular issues in the",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4168,
+    "completion_tokens": 256
+  }
+}

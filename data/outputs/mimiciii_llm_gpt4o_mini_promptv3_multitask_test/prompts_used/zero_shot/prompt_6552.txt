@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Urinary tract infection, site not specified; Acute on chronic combined systolic and diastolic heart failure; Acute respiratory failure; Acute kidney failure, unspecified; Systemic inflammatory response syndrome, unspecified; Mixed acid-base balance disorder; Hyposmolality and/or hyponatremia; Coronary atherosclerosis of autologous vein bypass graft; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Congestive heart failure, unspecified; Other specified hypotension; Hypovolemia; Mitral valve disorders; Other specified forms of chronic ischemic heart disease; Other chronic pulmonary heart diseases; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Atherosclerosis of native arteries of the extremities, unspecified; Ulcer of other part of foot; Long-term (current) use of insulin; Below knee amputation status; Other alteration of consciousness; Other specified cardiac dysrhythmias; Heart valve replaced by other means; Abnormal coagulation profile; Anticoagulants causing adverse effects in therapeutic use; Automatic implantable cardiac defibrillator in situ; Diarrhea; Anemia, unspecified; Coronary atherosclerosis of native coronary artery; Unspecified viral hepatitis C without hepatic coma; Unspecified essential hypertension; Other and unspecified hyperlipidemia; Unspecified acquired hypothyroidism; Memory loss; Opioid type dependence, in remission; Tobacco use disorder
+- Medications prescribed: 0.9% Sodium Chloride; 5% Dextrose; Chlorothiazide Sodium; Furosemide; Potassium Chloride; Vancomycin; SW; Iso-Osmotic Dextrose; Morphine Sulfate; Ranitidine (Liquid); Midazolam; Gabapentin; Docusate Sodium (Liquid); Fentanyl Citrate; Chlorhexidine Gluconate 0.12% Oral Rinse; Ipratropium Bromide MDI; Aspirin; LeVETiracetam; Senna; Amiodarone; Atorvastatin; Metolazone; Phytonadione; AcetaZOLamide Sodium; Lactulose; Warfarin; Multivitamins; Insulin; Lorazepam; Levalbuterol Neb; Nitroglycerin; Meropenem; 5% Dextrose (EXCEL BAG); Norepinephrine; Acetaminophen; Heparin Sodium; D5W; Heparin; Ranitidine; Docusate Sodium; Bisacodyl; Daptomycin; Famotidine; Iso-Osmotic Sodium Chloride; NS (Mini Bag Plus); Clonazepam; Oxycodone-Acetaminophen; Sodium Chloride 0.9%  Flush; Albuterol 0.083% Neb Soln; Lisinopril
+- Procedures performed: Excisional debridement of wound, infection, or burn; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Venous catheterization, not elsewhere classified; Arterial catheterization; Right heart cardiac catheterization; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Arteriography of renal arteries; Enteral infusion of concentrated nutritional substances
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

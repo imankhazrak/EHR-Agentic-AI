@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a documented diagnosis of 'Other unspecified hyperlipidemia', indicating a current lipid disorder, which supports a prediction of a future diagnosis of lipid metabolism disorders. The presence of 'Diabetes mellitus without mention of complication, type II or unspecified type' confirms current diabetes. 'Unspecified essential hypertension' indicates current hypertension. The Body Mass Index of 33.0-33.9 suggests obesity. The combination of diabetes and hypertension increases the risk for cardiovascular disease, leading to a prediction of potential cardiovascular issues",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4133,
+    "completion_tokens": 256
+  }
+}

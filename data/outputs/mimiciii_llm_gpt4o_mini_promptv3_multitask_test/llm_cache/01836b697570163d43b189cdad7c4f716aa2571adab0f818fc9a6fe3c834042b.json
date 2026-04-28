@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.55},\n  \"reasoning\": \"The patient has multiple cardiovascular issues including coronary atherosclerosis, old myocardial infarction, and is on medications like Metoprolol and Atorvastatin, which suggests a likelihood of lipid metabolism disorders. The presence of insulin in medications indicates current diabetes management. Unspecified essential hypertension is documented, confirming hypertension. There is no explicit evidence of obesity in the record. Given the patient's heart conditions and history, there is a significant risk for future cardiovascular events, kidney disease, and stroke.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1264,
+    "completion_tokens": 251
+  }
+}

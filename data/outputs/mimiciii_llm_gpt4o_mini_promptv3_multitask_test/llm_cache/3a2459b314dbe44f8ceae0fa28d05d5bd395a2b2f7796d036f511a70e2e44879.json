@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of current diabetes. There is also a history of cardiovascular issues (myocardial infarction and angioplasty), indicating a likelihood of future cardiovascular disease. The presence of acute kidney failure suggests a risk for kidney disease in the next visit. Hypertension is likely given the patient's cardiovascular history and medications (e.g., Metoprolol). There is no evidence of obesity in the current record. The lipid disorder prediction is based on the general prevalence in",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3643,
+    "completion_tokens": 256
+  }
+}

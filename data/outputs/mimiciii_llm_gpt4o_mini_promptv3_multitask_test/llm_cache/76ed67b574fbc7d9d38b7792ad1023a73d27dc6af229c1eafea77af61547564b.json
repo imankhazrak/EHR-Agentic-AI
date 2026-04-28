@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating severe health issues, including end-stage renal disease and hypertensive chronic kidney disease, which strongly correlate with diabetes and cardiovascular disease. The presence of Atorvastatin suggests a history of lipid metabolism disorders. Diabetes is indicated by the prescription of Insulin. Hypertension is confirmed by the diagnosis of hypertensive chronic kidney disease. There is no evidence of obesity in the current record. Given the patient's severe kidney disease and cardiovascular conditions, the likelihood of complications such as stroke is elevated.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4032,
+    "completion_tokens": 255
+  }
+}

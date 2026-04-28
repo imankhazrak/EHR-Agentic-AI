@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The current visit record indicates the patient has unspecified essential hypertension and is prescribed medications like Metoprolol and Losartan, which support the hypertension diagnosis. The presence of diabetes is indicated by the prescription of Humulin-R Insulin. There is no evidence of obesity in the record. Given the patient's aortic dissection and atrial fibrillation, there is a high likelihood of cardiovascular disease in the next visit. The risk of stroke is also elevated due to the atrial fibrillation. There is no evidence of kidney",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3682,
+    "completion_tokens": 256
+  }
+}

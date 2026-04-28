@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) and is on long-term insulin, indicating current diabetes. There is also a diagnosis of unspecified essential hypertension, confirming current hypertension. The patient's BMI is between 37.0-37.9, indicating obesity. Given the presence of multiple cardiovascular risk factors (diabetes, hypertension, coronary atherosclerosis), it is likely that the patient will have cardiovascular disease in the next visit. The patient also has acute kidney failure and chronic kidney disease, suggesting a",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4173,
+    "completion_tokens": 256
+  }
+}

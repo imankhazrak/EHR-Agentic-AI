@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record shows multiple serious conditions, including HIV disease and cardiomyopathy, which can increase the risk of cardiovascular disease. However, there is no evidence of diabetes, hypertension, or obesity in the record. There are no indications of lipid metabolism disorders or kidney disease. The absence of explicit diagnoses for diabetes, hypertension, and obesity leads to a 'No' prediction for those conditions. The prediction for cardiovascular disease is based on the presence of cardiomyopathy and the overall clinical picture.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3754,
+    "completion_tokens": 252
+  }
+}

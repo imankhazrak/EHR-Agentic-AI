@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has multiple diagnoses indicating significant cardiovascular issues (subendocardial infarction, heart failure, coronary atherosclerosis) and diabetes with neurological manifestations. The presence of 'other and unspecified hyperlipidemia' suggests a likelihood of lipid metabolism disorders. The patient is currently on medications like atorvastatin, which supports the lipid disorder prediction. Hypertension is explicitly diagnosed as 'unspecified essential hypertension.' There is no evidence of obesity in the current record. Given the cardiovascular conditions and diabetes, there is a strong",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3870,
+    "completion_tokens": 256
+  }
+}

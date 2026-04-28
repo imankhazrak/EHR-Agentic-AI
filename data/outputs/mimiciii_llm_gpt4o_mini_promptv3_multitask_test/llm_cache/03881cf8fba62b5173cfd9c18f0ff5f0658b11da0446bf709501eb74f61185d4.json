@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II), which indicates current diabetes. Unspecified essential hypertension is also diagnosed, confirming current hypertension. The record includes a diagnosis of obesity, confirming current obesity. For cardiovascular disease, the patient has a history of aortocoronary bypass and is on medications like Isosorbide Mononitrate and Clopidogrel, indicating a significant risk for cardiovascular issues. There is no evidence of kidney disease in the current visit record. The patient has late effects of",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4230,
+    "completion_tokens": 256
+  }
+}

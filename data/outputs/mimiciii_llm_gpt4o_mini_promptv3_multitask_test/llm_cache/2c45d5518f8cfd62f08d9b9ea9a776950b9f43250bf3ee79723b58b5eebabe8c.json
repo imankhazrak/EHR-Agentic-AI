@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of acute myocardial infarction and cardiogenic shock, indicating significant cardiovascular issues, which supports a prediction of cardiovascular disease in the next visit. The presence of unspecified essential hypertension suggests current hypertension. The record does not provide explicit evidence of diabetes, but the use of insulin indicates a strong likelihood of diabetes. There is no evidence of obesity or kidney disease in the current visit. The lipid disorder prediction is based on the absence of any explicit diagnosis or medication related to lipid metabolism disorders.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4151,
+    "completion_tokens": 253
+  }
+}

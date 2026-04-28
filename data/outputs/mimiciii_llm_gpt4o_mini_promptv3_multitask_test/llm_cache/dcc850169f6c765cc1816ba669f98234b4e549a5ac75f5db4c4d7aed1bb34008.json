@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.65},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus, which supports the prediction of current diabetes. There is also evidence of cardiovascular issues (coronary atherosclerosis, myocardial infarction) and procedures related to vascular interventions, indicating a high likelihood of cardiovascular disease in the next visit. The presence of hyperosmolality and other complications suggests potential kidney issues, while the history of carotid artery occlusion and cerebral infarction indicates a risk for stroke. However, there is no explicit evidence of obesity in the current record",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1174,
+    "completion_tokens": 256
+  }
+}

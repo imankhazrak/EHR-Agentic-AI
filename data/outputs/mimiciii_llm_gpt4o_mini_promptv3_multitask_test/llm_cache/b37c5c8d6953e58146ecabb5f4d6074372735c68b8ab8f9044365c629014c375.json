@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes mellitus (type II) without complications, indicating current diabetes. Hypertension is likely given the prescription of Lisinopril, a common antihypertensive, but not explicitly diagnosed. There are multiple cardiovascular issues noted (e.g., atherosclerosis, congestive heart failure, atrial fibrillation), suggesting a high likelihood of future cardiovascular disease. The patient has acute kidney failure, indicating a current kidney issue, which may persist into the next visit. The risk of stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1033,
+    "completion_tokens": 256
+  }
+}

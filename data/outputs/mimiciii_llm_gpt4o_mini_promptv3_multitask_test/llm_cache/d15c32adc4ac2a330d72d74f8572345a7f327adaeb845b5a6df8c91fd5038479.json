@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has been diagnosed with unspecified essential hypertension and other unspecified hyperlipidemia, indicating a current lipid disorder. The presence of insulin suggests diabetes management, indicating the patient likely has diabetes. Hypertension is confirmed by the diagnosis. There is no evidence of obesity in the record. Given the acute myocardial infarction and coronary atherosclerosis, the patient is at high risk for cardiovascular disease. The personal history of malignant neoplasm of the kidney suggests potential kidney disease. The risk of stroke is elevated due to the cardiovascular",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 934,
+    "completion_tokens": 256
+  }
+}

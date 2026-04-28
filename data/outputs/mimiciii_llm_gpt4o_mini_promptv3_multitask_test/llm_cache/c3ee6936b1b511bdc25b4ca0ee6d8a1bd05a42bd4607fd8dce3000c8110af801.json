@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which is confirmed by the presence of insulin in the medications. Hypertension is also explicitly mentioned as 'unspecified essential hypertension.' There is no evidence of obesity in the current visit record. Given the patient's cardiac conditions and history, there is a high likelihood of cardiovascular disease in the next visit. The risk of stroke is supported by the presence of atrial fibrillation and other cardiovascular issues. Disorders of lipid metabolism are likely due to the patient's coronary atherosclerosis and the prescription",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3742,
+    "completion_tokens": 256
+  }
+}

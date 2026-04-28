@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented history of hyperlipidemia, which supports a prediction of lipid disorders in the next visit. Diabetes is confirmed by the mention of long-term insulin use and a diagnosis of diabetes mellitus. Hypertension is indicated by the diagnosis of hypertensive chronic kidney disease. There is no explicit evidence of obesity in the record. Given the patient's history of heart failure, myocardial infarction, and atherosclerosis, cardiovascular disease is likely to be present in the next visit. The presence of acute kidney failure and",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1220,
+    "completion_tokens": 256
+  }
+}

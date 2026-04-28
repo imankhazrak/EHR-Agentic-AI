@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, indicating current hypertension. The presence of insulin suggests a diagnosis of diabetes. There is no evidence of obesity in the current visit record. The patient's multiple cardiovascular diagnoses (e.g., atherosclerosis, cardiomyopathy) suggest a likelihood of cardiovascular disease in the next visit. Additionally, the record mentions 'other specified anomalies of kidney,' indicating potential kidney disease. The risk of stroke is supported by the cardiovascular conditions present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3702,
+    "completion_tokens": 247
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has multiple serious conditions including acute kidney failure and chronic kidney disease, which increases the likelihood of kidney disease in the next visit. The presence of diabetes is supported by the medication for insulin, indicating current diabetes. Hypertension is likely given the use of medications like Metoprolol, which is often prescribed for hypertension. There is no evidence of obesity in the current visit record. Cardiovascular disease is a concern due to the patient's atrial fibrillation and other serious conditions, while the risk of stroke is elevated",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3804,
+    "completion_tokens": 256
+  }
+}

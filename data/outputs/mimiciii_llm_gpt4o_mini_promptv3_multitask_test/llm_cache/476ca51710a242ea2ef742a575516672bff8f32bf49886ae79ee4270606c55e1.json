@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of 'Secondary diabetes mellitus' indicating current diabetes. There are multiple cardiovascular conditions present (e.g., acute on chronic diastolic heart failure, atrial fibrillation) suggesting a high likelihood of cardiovascular disease in the next visit. Hypertension is likely given the heart failure diagnosis and the use of medications like Diltiazem and Metoprolol, which are often used for hypertension management. There is no evidence of obesity in the current record. The risk of stroke is elevated due to",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3899,
+    "completion_tokens": 256
+  }
+}

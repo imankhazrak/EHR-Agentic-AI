@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of hemiplegia, which suggests a history of stroke or cerebrovascular event. The presence of diabetes is indicated by the prescription of insulin, which strongly suggests current diabetes. There is no evidence of hypertension or obesity in the record. The lipid disorder prediction is based on the absence of any explicit diagnosis or related evidence. The patient has a subdural hemorrhage, which could indicate a risk for future cardiovascular issues, but no direct evidence of cardiovascular disease is present.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 253
+  }
+}

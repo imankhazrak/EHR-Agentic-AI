@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a diagnosis of unspecified essential hypertension, indicating current hypertension. The presence of atrial fibrillation and other cardiovascular issues suggests a high likelihood of future cardiovascular disease. The patient is prescribed insulin, indicating current diabetes. There is no evidence of obesity in the current visit record. The risk of stroke is supported by the presence of atrial fibrillation and other cardiovascular conditions. The lipid disorder prediction is based on the general prevalence in the population, as there is no explicit diagnosis of a lipid disorder but the patient is",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3736,
+    "completion_tokens": 256
+  }
+}

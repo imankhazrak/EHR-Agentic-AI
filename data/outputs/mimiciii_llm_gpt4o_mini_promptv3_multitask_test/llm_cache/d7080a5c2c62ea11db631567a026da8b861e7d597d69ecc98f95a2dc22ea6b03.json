@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which is confirmed by the presence of diabetes with renal and ophthalmic manifestations. Hypertension is also present as indicated by the diagnosis of hypertensive chronic kidney disease. There is no explicit mention of obesity in the record. The patient has end-stage renal disease, which strongly suggests ongoing kidney issues. Cardiovascular disease is indicated by the presence of chronic heart failure and a subendocardial infarction. The presence of late effects of cerebrovascular disease suggests a history of stroke,",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1041,
+    "completion_tokens": 256
+  }
+}

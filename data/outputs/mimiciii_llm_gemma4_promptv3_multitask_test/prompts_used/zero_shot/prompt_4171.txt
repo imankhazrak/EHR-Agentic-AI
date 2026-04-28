@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Acute respiratory failure; Pneumonitis due to inhalation of food or vomitus; Acute kidney failure, unspecified; Pulmonary tuberculosis, unspecified, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture; Other convulsions; Acidosis; [ICD9-DX:2766]; Alkalosis; Severe sepsis; Hypotension, unspecified; Other specified cardiac dysrhythmias; Enlargement of lymph nodes; Postsurgical hypothyroidism; Chronic osteomyelitis, forearm; Methicillin susceptible Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Unspecified essential hypertension; Peripheral vascular disease, unspecified; Esophageal reflux; Dyskinesia of esophagus; Bipolar disorder, unspecified; Anxiety state, unspecified; Osteoporosis, unspecified; Infection with microorganisms resistant to penicillins; Personal history of malignant neoplasm of thyroid
+- Medications prescribed: Magnesium Sulfate; NS; Fludrocortisone Acetate; Hydrocortisone Na Succ.; Syringe; Nystatin Oral Suspension; Lansoprazole Oral Suspension; Heparin; Levothyroxine Sodium; Vancomycin HCl; Epoetin Alfa; Iso-Osmotic Dextrose; Vial; Furosemide; Gabapentin; Meropenem; Midazolam HCl; D5W; Insulin; Neutra-Phos; Fentanyl Citrate; Amlodipine; Soln; Captopril; Senna; Lamotrigine; Polysaccharide Iron Complex; Benzonatate; Atenolol; Lisinopril; Vitamin D; Venlafaxine; Docusate Sodium (Liquid); Aspirin; Heparin Flush CVL  (100 units/ml); Cosyntropin; Sodium Bicarbonate; HydrALAZINE HCl; Metoprolol; Magnesium Oxide; Calcium Gluconate; Fluconazole; Miconazole Powder 2%; Miconazole 2% Cream; Sulfameth/Trimethoprim DS; Bisacodyl; traZODONE HCl; Lorazepam
+- Procedures performed: Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Arterial catheterization; Enteral infusion of concentrated nutritional substances; Systemic arterial pressure monitoring; Venous catheterization, not elsewhere classified
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

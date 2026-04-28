@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia' and is prescribed Atorvastatin and Ezetimibe, indicating a current lipid disorder. There is no evidence of diabetes in the current visit record. The patient is prescribed Metoprolol, which is commonly used for hypertension, suggesting the presence of hypertension. The presence of obstructive sleep apnea and other comorbidities may indicate obesity. Given the patient's complex medical history, including pulmonary embolism, there is a significant risk for",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3957,
+    "completion_tokens": 256
+  }
+}

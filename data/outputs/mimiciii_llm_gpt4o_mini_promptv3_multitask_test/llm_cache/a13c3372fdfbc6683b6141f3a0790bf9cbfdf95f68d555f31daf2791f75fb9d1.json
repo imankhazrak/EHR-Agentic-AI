@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The patient is currently prescribed insulin, indicating diabetes. Medications like Metoprolol and Hydralazine suggest management of hypertension. There is no evidence of obesity in the record. The presence of multiple complications and procedures related to the liver and vascular system raises concern for cardiovascular issues. The patient's current condition and procedures may indicate potential kidney involvement, but no direct evidence of kidney disease is present. There is no indication of stroke risk or history in the current visit.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1255,
+    "completion_tokens": 246
+  }
+}

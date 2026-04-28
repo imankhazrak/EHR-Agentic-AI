@@ -1,0 +1,40 @@
+{
+  "accuracy": 82.15,
+  "precision": 58.61,
+  "recall": 58.88,
+  "sensitivity": 58.88,
+  "specificity": 88.56,
+  "f1": 58.74,
+  "balanced_accuracy": 73.72,
+  "tp": 262,
+  "fp": 185,
+  "tn": 1432,
+  "fn": 183,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "matrix": [
+      [
+        1432,
+        185
+      ],
+      [
+        183,
+        262
+      ]
+    ]
+  },
+  "mode": "zero_shot_plus",
+  "model": "gpt-4o-mini-2024-07-18",
+  "n_total": 2492,
+  "n_valid_prediction": 2062,
+  "n_unparseable_prediction": 430,
+  "n_valid_probability": 2062,
+  "n_missing_probability": 430,
+  "n_invalid_probability": 0,
+  "n_out_of_range_probability": 0,
+  "auc": 74.78,
+  "auprc": 47.34
+}

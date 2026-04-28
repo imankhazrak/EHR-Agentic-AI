@@ -1,0 +1,58 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions based ONLY on the documented evidence.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on external medical knowledge beyond the record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Diabetes with peripheral circulatory disorders, type II or unspecified type, not stated as uncontrolled; Acute edema of lung, unspecified; Infection and inflammatory reaction due to other vascular device, implant, and graft; Other complications due to other vascular device, implant, and graft; Unspecified osteomyelitis, ankle and foot; Cellulitis and abscess of foot, except toes; Ulcer of heel and midfoot; Complications affecting other specified body systems, not elsewhere classified; Major depressive affective disorder, single episode, unspecified; Disruption of external operation (surgical) wound; Other noninfectious disorders of lymphatic channels; Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Atherosclerosis of native arteries of the extremities with ulceration; Arterial embolism and thrombosis of lower extremity; Goiter, unspecified; Infection with drug-resistant microorganisms, unspecified, with multiple drug resistance; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Arthropathy associated with neurological disorders; Chronic obstructive asthma, unspecified; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Morbid obesity; Other amputation stump complication; Surgical operation with anastomosis, bypass, or graft, with natural or artificial tissues used as implant causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Atrial fibrillation; Long-term (current) use of anticoagulants; Other bone involvement in diseases classified elsewhere; [ICD9-DX:0414]; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Amputation of limb(s) causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation
+- Medications prescribed: HYDROmorphone (Dilaudid); Warfarin; Bag; Magnesium Sulfate; 5% Dextrose; Furosemide; Chlorothiazide Sodium; Ciprofloxacin HCl; MetRONIDAZOLE (FLagyl); Syringe (0.9% Sodium Chloride); Alteplase (Catheter Clearance); Potassium Chloride; CefTAZidime; Vancomycin; 0.9% Sodium Chloride (Mini Bag Plus); Magnesium Oxide; Lidocaine 1%; Insulin; Morphine Sulfate; Albuterol-Ipratropium; Albuterol Inhaler; Diltiazem Extended-Release; Bisacodyl; Metoprolol Tartrate; Omeprazole; Collagenase Ointment; Hydrochlorothiazide; Heparin Flush (10 units/ml); Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Phytonadione; Influenza Virus Vaccine; Sterile Water; Diltiazem; Methimazole; Atorvastatin; Oxycodone-Acetaminophen; Ondansetron; Aspirin; 0.9% Sodium Chloride; Insulin Human Regular; Potassium Chloride (Powder); Heparin Sodium; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Metoclopramide; Phenylephrine; Fentanyl Citrate; Pantoprazole; NS; Ciprofloxacin IV
+- Procedures performed: Enteral infusion of concentrated nutritional substances; Other (peripheral) vascular shunt or bypass; Excisional debridement of wound, infection, or burn; Other revision of vascular procedure; Angioplasty of other non-coronary vessel(s); Attachment of pedicle or flap graft to other sites; Other incision with drainage of skin and subcutaneous tissue; Other diagnostic procedures on nasal sinuses; Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s); Procedure on single vessel; Insertion of one vascular stent
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

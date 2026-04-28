@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The patient is prescribed Simvastatin, which indicates a current concern for lipid levels, suggesting a likely diagnosis of a lipid metabolism disorder in the next visit. There is no evidence of diabetes in the record. The presence of heart failure and coronary atherosclerosis indicates hypertension. There is no mention of obesity. Given the acute and chronic kidney conditions, kidney disease is likely to persist. The cardiovascular issues suggest a high risk for future cardiovascular events, but there is no evidence of stroke risk in the current record.\"\n}",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 739,
+    "completion_tokens": 255
+  }
+}

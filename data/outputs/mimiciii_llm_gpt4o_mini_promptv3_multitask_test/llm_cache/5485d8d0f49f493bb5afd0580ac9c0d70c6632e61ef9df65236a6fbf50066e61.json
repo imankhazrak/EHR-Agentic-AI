@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.27},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.60},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.55},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The patient has a history of atrial fibrillation and is prescribed medications like atorvastatin, which suggests a potential lipid disorder. The presence of diabetes is supported by the prescription of Humulin-R Insulin. Hypertension is likely given the prescription of Captopril and Metoprolol. There is no explicit evidence of obesity in the current visit. The patient's cardiovascular issues and medications indicate a risk for future cardiovascular disease, and the presence of acidosis and chronic conditions suggests a risk for kidney disease. The patient's",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3608,
+    "completion_tokens": 256
+  }
+}

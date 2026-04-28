@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes with multiple manifestations, indicating current diabetes. There is also a diagnosis of obesity, confirming the presence of this condition. The presence of diabetes and obesity, along with a history of cardiovascular issues (e.g., atherosclerosis, myocardial infarction), suggests a high likelihood of cardiovascular disease in the next visit. Additionally, the patient has renal manifestations of diabetes, indicating kidney disease is likely. Hypertension is inferred from the presence of cardiovascular conditions and medications like Metoprolol,",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4049,
+    "completion_tokens": 256
+  }
+}

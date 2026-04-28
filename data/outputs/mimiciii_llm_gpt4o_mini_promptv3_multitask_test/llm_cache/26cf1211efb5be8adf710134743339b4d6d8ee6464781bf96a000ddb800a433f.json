@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"reasoning\": \"The patient has a documented diagnosis of diabetes, which supports the prediction of current diabetes. Hypertension is indicated by the prescription of medications like Metoprolol and Hydralazine, which are commonly used for hypertension management. The presence of coronary atherosclerosis and congestive heart failure suggests a high likelihood of cardiovascular disease. The current visit record indicates acute kidney failure, which supports the prediction of kidney disease. The patient has had a cerebral artery occlusion and intracerebral hemorrhage, indicating a high risk for stroke",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3962,
+    "completion_tokens": 256
+  }
+}

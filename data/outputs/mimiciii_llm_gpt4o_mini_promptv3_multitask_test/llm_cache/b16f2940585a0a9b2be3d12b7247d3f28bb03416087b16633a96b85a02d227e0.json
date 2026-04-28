@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"reasoning\": \"The patient has a diagnosis of diabetes with renal manifestations, indicating current diabetes. Hypertensive chronic kidney disease is also documented, confirming hypertension. The presence of other and unspecified hyperlipidemia suggests a likelihood of lipid metabolism disorders in the next visit. The patient's chronic kidney disease and acute kidney failure indicate a high risk for kidney disease in the next visit. However, there is no explicit evidence of obesity in the current record. The combination of diabetes and hypertension increases the risk for cardiovascular disease, but there is no direct",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3896,
+    "completion_tokens": 256
+  }
+}

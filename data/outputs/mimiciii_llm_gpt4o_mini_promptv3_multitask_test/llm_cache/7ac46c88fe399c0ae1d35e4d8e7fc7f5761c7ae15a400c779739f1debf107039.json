@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.75},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.20},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The patient has a diagnosis of 'Other and unspecified hyperlipidemia' which supports a prediction of lipid metabolism disorders in the next visit. The presence of insulin in the medication list indicates current diabetes management. The diagnosis of 'Unspecified essential hypertension' confirms current hypertension. There is no explicit evidence of obesity in the record. Given the patient's history of subarachnoid hemorrhage and other neurological issues, there is a high likelihood of stroke in the next visit. The patient does not show clear indicators of kidney disease",
+  "model": "gpt-4o-mini-2024-07-18",
+  "finish_reason": "length",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 4022,
+    "completion_tokens": 256
+  }
+}
