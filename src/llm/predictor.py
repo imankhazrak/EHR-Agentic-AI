@@ -21,7 +21,7 @@ from src.llm.prompt_builder import build_messages
 from src.llm.output_parser import (
     extract_logprob_confidence,
     multitask_flat_column_names,
-    parse_multitask_output,
+    parse_multitask_output_with_meta,
     parse_prediction,
 )
 from src.utils.io import save_text
@@ -132,29 +132,27 @@ def run_predictions(
             nan = float("nan")
 
             if multitask:
-                mt = parse_multitask_output(raw_text)
-                mt_fragment = {c: nan for c in mt_cols}
-                if mt is not None:
-                    reasoning = str(mt.pop("reasoning", ""))
-                    for k in mt_cols:
-                        if k in mt:
-                            mt_fragment[k] = mt[k]
-                    parsed_prediction = "Yes" if mt_fragment["lipid_pred"] == 1 else "No"
-                    pred_binary = int(mt_fragment["lipid_pred"])
-                    parsed_probability = float(mt_fragment["lipid_prob"])
-                    probability_parse_status = "ok"
-                    parse_valid_probability = True
-                    probability_format_warning = False
-                    parser_status = "multitask_json"
+                mt = parse_multitask_output_with_meta(raw_text)
+                mt_fragment = {c: mt.get(c, nan) for c in mt_cols}
+                reasoning = str(mt.get("reasoning", ""))
+                lipid_pred = mt_fragment.get("lipid_pred", nan)
+                lipid_prob = mt_fragment.get("lipid_prob", nan)
+                if pd.notna(lipid_pred):
+                    parsed_prediction = "Yes" if int(lipid_pred) == 1 else "No"
+                    pred_binary = int(lipid_pred)
                 else:
-                    reasoning = ""
                     parsed_prediction = "unparseable"
                     pred_binary = None
+                if pd.notna(lipid_prob):
+                    parsed_probability = float(lipid_prob)
+                    probability_parse_status = "ok"
+                    parse_valid_probability = True
+                else:
                     parsed_probability = nan
                     probability_parse_status = "missing"
                     parse_valid_probability = False
-                    probability_format_warning = False
-                    parser_status = "multitask_parse_failed"
+                probability_format_warning = False
+                parser_status = str(mt.get("parser_status", "multitask_parse_failed"))
                 row = {
                     id_col: sample_id,
                     "prompt_mode": mode,
@@ -168,6 +166,9 @@ def run_predictions(
                     "probability_format_warning": probability_format_warning,
                     "reasoning": reasoning,
                     "parser_status": parser_status,
+                    "parse_failure_reason": mt.get("parse_failure_reason", ""),
+                    "salvage_used": bool(mt.get("salvage_used", False)),
+                    "n_tasks_salvaged": int(mt.get("n_tasks_salvaged", 0)),
                     "prob_yes": conf["prob_yes"] if conf else None,
                     "prob_no": conf["prob_no"] if conf else None,
                     "raw_response_path": str(resp_path),

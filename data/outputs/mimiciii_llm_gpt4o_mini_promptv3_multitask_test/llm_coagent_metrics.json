@@ -1,15 +1,15 @@
 {
-  "accuracy": 83.41,
-  "precision": 56.05,
-  "recall": 51.46,
-  "sensitivity": 51.46,
-  "specificity": 90.74,
-  "f1": 53.66,
-  "balanced_accuracy": 71.1,
-  "tp": 176,
-  "fp": 138,
-  "tn": 1352,
-  "fn": 166,
+  "accuracy": 79.37,
+  "precision": 60.96,
+  "recall": 68.81,
+  "sensitivity": 68.81,
+  "specificity": 83.36,
+  "f1": 64.65,
+  "balanced_accuracy": 76.09,
+  "tp": 470,
+  "fp": 301,
+  "tn": 1508,
+  "fn": 213,
   "confusion_matrix": {
     "labels": [
       0,
@@ -17,24 +17,28 @@
     ],
     "matrix": [
       [
-        1352,
-        138
+        1508,
+        301
       ],
       [
-        166,
-        176
+        213,
+        470
       ]
     ]
   },
   "mode": "coagent",
   "model": "gpt-4o-mini-2024-07-18",
   "n_total": 2492,
-  "n_valid_prediction": 1832,
-  "n_unparseable_prediction": 660,
-  "n_valid_probability": 1832,
-  "n_missing_probability": 660,
+  "n_valid_prediction": 2492,
+  "n_unparseable_prediction": 0,
+  "n_strict_parse": 1832,
+  "n_salvaged_prediction": 660,
+  "n_salvaged_probability": 660,
+  "n_reasoning_unclosed": 660,
+  "n_valid_probability": 2492,
+  "n_missing_probability": 0,
   "n_invalid_probability": 0,
   "n_out_of_range_probability": 0,
-  "auc": 71.36,
-  "auprc": 40.0
+  "auc": 76.89,
+  "auprc": 53.44
 }

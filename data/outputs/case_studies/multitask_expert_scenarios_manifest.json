@@ -1,0 +1,23 @@
+{
+  "n_scenarios": 24,
+  "seed": 42,
+  "gpt_csv": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_test/llm_zero_shot_results.csv",
+  "gemma_jsonl": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/mimiciii_llm_gemma4_promptv3_multitask_test/raw_llm_responses/zero_shot/responses.jsonl",
+  "test_csv": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask/test.csv",
+  "tag_counts_in_selection": {
+    "both_models_same_wrong_tasks": 3,
+    "gemma_parse_salvage": 24,
+    "gemma_partial_output": 24,
+    "cross_model_disagreement": 21,
+    "cross_model_disagreement_high": 13,
+    "high_probability_gap_disagreement": 21,
+    "lipid_task_disagreement": 19,
+    "gpt_parse_salvage": 3
+  },
+  "outputs": {
+    "jsonl": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/case_studies/multitask_expert_scenarios.jsonl",
+    "markdown": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/case_studies/multitask_expert_scenarios_readable.md",
+    "html": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/case_studies/multitask_expert_scenarios_readable.html",
+    "index_csv": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/case_studies/multitask_expert_scenarios_index.csv"
+  }
+}

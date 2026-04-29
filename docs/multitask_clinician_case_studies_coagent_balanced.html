@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multitask Clinician Case Studies (CoAgent, Balanced)</title>
+  <style>
+    body { margin: 0; background: #f8fafc; color: #0f172a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    .container { width: 100%; max-width: none; box-sizing: border-box; padding: 24px 36px 64px; }
+    h1, h2, h3 { line-height: 1.25; margin-top: 1.1em; margin-bottom: 0.45em; }
+    h1 { font-size: 2rem; margin-top: 0; }
+    h2 { font-size: 1.35rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 6px; }
+    h3 { font-size: 1.05rem; }
+    p, li { font-size: 0.98rem; line-height: 1.5; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; background: #fff; border: 1px solid #e2e8f0; }
+    th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f1f5f9; }
+    code { background: #eef2ff; border-radius: 4px; padding: 1px 4px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+    .muted { color: #475569; }
+    .meta { font-size: 0.93rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multitask Clinician Case Studies (CoAgent, Balanced)</h1>
+    <p class="muted">Clinician-facing case review for <code>mimiciii_llm_gpt4o_mini_promptv3_multitask_test</code> with balanced TP/TN/FP/FN examples per task.</p>
+
+    <h2>Scope and selection intent</h2>
+    <ul>
+      <li>Tasks: <code>lipid_next</code>, <code>diabetes_current</code>, <code>hypertension_current</code>, <code>obesity_current</code>, <code>cardio_next</code>, <code>kidney_next</code>, <code>stroke_next</code>.</li>
+      <li>Balanced target set: 1 <code>TP</code>, 1 <code>TN</code>, 1 <code>FP</code>, 1 <code>FN</code> per task (28 cases total).</li>
+      <li>Confidence ranking rule: maximize <code>abs(probability - 0.5)</code> within each bucket.</li>
+    </ul>
+
+    <h2>Task confusion overview counts (balanced review set)</h2>
+    <table>
+      <thead>
+        <tr><th>Task</th><th>TP</th><th>TN</th><th>FP</th><th>FN</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>lipid_next</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>diabetes_current</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>hypertension_current</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>obesity_current</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>cardio_next</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>kidney_next</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td><code>stroke_next</code></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Cross-task clinician checklist</h2>
+    <ul>
+      <li>Verify temporal framing (<code>*_current</code> vs <code>*_next</code>) before actioning risk.</li>
+      <li>Reconcile diagnosis, procedure, and medication evidence against model rationale.</li>
+      <li>For FP predictions, check for confounding due to prophylaxis or history-only documentation.</li>
+      <li>For FN predictions, check hidden severity cues and recurrent disease trajectories.</li>
+      <li>Review cardio-renal-metabolic-neuro overlap before final adjudication.</li>
+    </ul>
+
+    <h2>Case studies by task</h2>
+    <p class="meta">For detailed clinician-facing TP/TN/FP/FN case writeups (labels, probabilities, snippets, and prompts), see the companion markdown file:<br/>
+    <code>docs/multitask_clinician_case_studies_coagent_balanced.md</code></p>
+
+    <div class="card">
+      <h3>Included details per selected case</h3>
+      <ul>
+        <li>True label and predicted label</li>
+        <li>Model probability and confidence distance from 0.5</li>
+        <li>Short clinical summary</li>
+        <li>Diagnosis / procedure / medication snippets</li>
+        <li>Clinician-oriented adjudication prompts</li>
+      </ul>
+    </div>
+
+    <p class="meta muted">Data sources referenced: <code>data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_test/llm_coagent_results.csv</code> and <code>data/processed/mimiciii_multitask/test.csv</code>.</p>
+  </div>
+</body>
+</html>

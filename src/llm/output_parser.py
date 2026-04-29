@@ -359,6 +359,82 @@ def parse_multitask_output(text: str) -> Optional[Dict[str, Any]]:
     return out
 
 
+def _extract_task_block_salvage(text: str, task_key: str) -> Tuple[Optional[int], Optional[float]]:
+    """Best-effort extraction for one multitask task block from malformed JSON text."""
+    # Accepts output fragments like:
+    #   "lipid_next": {"prediction": "Yes", "probability": 0.27}
+    patt = (
+        r'"'
+        + re.escape(task_key)
+        + r'"\s*:\s*\{\s*"prediction"\s*:\s*"(Yes|No)"\s*,\s*"probability"\s*:\s*([-+]?\d*\.?\d+)'
+    )
+    m = re.search(patt, text, flags=re.IGNORECASE | re.DOTALL)
+    if not m:
+        return None, None
+    pred = _multitask_yes_no_pred(m.group(1))
+    try:
+        prob_raw: Any = float(m.group(2))
+    except ValueError:
+        prob_raw = None
+    prob = _multitask_prob_float(prob_raw)
+    return pred, prob
+
+
+def _reasoning_unclosed(text: str) -> bool:
+    """Heuristic: reasoning field starts but does not end as a closed JSON string."""
+    t = (text or "").strip()
+    if not re.search(r'"reasoning"\s*:\s*"', t):
+        return False
+    # Closed-string pattern at end of object (optional markdown fence already stripped upstream).
+    closed = re.search(r'"reasoning"\s*:\s*"(?:\\.|[^"\\])*"\s*\}\s*$', t, flags=re.DOTALL)
+    return closed is None
+
+
+def parse_multitask_output_with_meta(text: str) -> Dict[str, Any]:
+    """Strict parse with broad salvage metadata for malformed multitask outputs."""
+    mt_cols = multitask_flat_column_names()
+    out: Dict[str, Any] = {c: math.nan for c in mt_cols}
+    out.update(
+        {
+            "reasoning": "",
+            "parser_status": "multitask_parse_failed",
+            "parse_failure_reason": "not_json_or_missing_required_fields",
+            "salvage_used": False,
+            "n_tasks_salvaged": 0,
+        }
+    )
+
+    strict = parse_multitask_output(text)
+    if strict is not None:
+        out.update(strict)
+        out["parser_status"] = "multitask_json"
+        out["parse_failure_reason"] = ""
+        out["salvage_used"] = False
+        out["n_tasks_salvaged"] = len(MULTITASK_JSON_TASK_KEYS)
+        return out
+
+    raw = _strip_markdown_json_fence((text or "").strip())
+    raw_norm = raw.replace('""', '"')
+    n_ok = 0
+    for tk in MULTITASK_JSON_TASK_KEYS:
+        prefix = MULTITASK_TASK_KEY_TO_PREFIX[tk]
+        pred_i, prob = _extract_task_block_salvage(raw_norm, tk)
+        if pred_i is not None and prob is not None:
+            out[f"{prefix}_pred"] = pred_i
+            out[f"{prefix}_prob"] = prob
+            n_ok += 1
+
+    out["n_tasks_salvaged"] = n_ok
+    out["salvage_used"] = n_ok > 0
+    if n_ok > 0:
+        out["parser_status"] = "multitask_salvaged_full" if n_ok == len(MULTITASK_JSON_TASK_KEYS) else "multitask_salvaged_partial"
+        out["parse_failure_reason"] = "reasoning_unclosed" if _reasoning_unclosed(raw_norm) else "malformed_json_salvaged"
+    else:
+        out["parse_failure_reason"] = "reasoning_unclosed" if _reasoning_unclosed(raw_norm) else "not_json_or_missing_required_fields"
+
+    return out
+
+
 def test_parse_multitask_output_example() -> None:
     """Sanity check: one valid prompt_v3-style JSON blob; asserts all expected keys exist."""
     sample = (

@@ -1,0 +1,77 @@
+<h1 id="mimic-iii-multitask-test-label-distribution-report">MIMIC-III Multitask Test Label Distribution Report</h1>
+<p>This report summarizes the distribution of all multitask labels for the test split.</p>
+<p>Source files: - <code>data/processed/mimiciii_multitask/test.csv</code> - <code>data/processed/mimiciii_multitask/label_stats.csv</code></p>
+<h2 id="dataset-scope">Dataset Scope</h2>
+<ul>
+<li>Split: <code>test</code></li>
+<li>Total rows: <code>2492</code></li>
+<li>Missing labels: <code>0</code> for every multitask label</li>
+</ul>
+<h2 id="label-distribution-all-multitask-labels-test-split">Label Distribution (All Multitask Labels, Test Split)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Label</th>
+<th style="text-align: right;">Positive (n)</th>
+<th style="text-align: right;">Negative (n)</th>
+<th style="text-align: right;">Positive Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>label_lipid_disorder</code></td>
+<td style="text-align: right;">683</td>
+<td style="text-align: right;">1809</td>
+<td style="text-align: right;">0.274077</td>
+</tr>
+<tr class="even">
+<td><code>label_lipid_next</code></td>
+<td style="text-align: right;">683</td>
+<td style="text-align: right;">1809</td>
+<td style="text-align: right;">0.274077</td>
+</tr>
+<tr class="odd">
+<td><code>label_diabetes_current</code></td>
+<td style="text-align: right;">825</td>
+<td style="text-align: right;">1667</td>
+<td style="text-align: right;">0.331059</td>
+</tr>
+<tr class="even">
+<td><code>label_hypertension_current</code></td>
+<td style="text-align: right;">1354</td>
+<td style="text-align: right;">1138</td>
+<td style="text-align: right;">0.543339</td>
+</tr>
+<tr class="odd">
+<td><code>label_obesity_current</code></td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">2353</td>
+<td style="text-align: right;">0.055778</td>
+</tr>
+<tr class="even">
+<td><code>label_cardio_next</code></td>
+<td style="text-align: right;">1246</td>
+<td style="text-align: right;">1246</td>
+<td style="text-align: right;">0.500000</td>
+</tr>
+<tr class="odd">
+<td><code>label_kidney_next</code></td>
+<td style="text-align: right;">1088</td>
+<td style="text-align: right;">1404</td>
+<td style="text-align: right;">0.436597</td>
+</tr>
+<tr class="even">
+<td><code>label_stroke_next</code></td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">2345</td>
+<td style="text-align: right;">0.058989</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-notes">Quick Notes</h2>
+<ul>
+<li><code>label_hypertension_current</code> has the highest positive rate (<code>54.33%</code>).</li>
+<li><code>label_cardio_next</code> is exactly balanced (<code>50.00%</code>).</li>
+<li><code>label_obesity_current</code> and <code>label_stroke_next</code> are strongly imbalanced (about <code>5-6%</code> positive).</li>
+<li><code>label_lipid_disorder</code> and <code>label_lipid_next</code> have identical distributions in this split.</li>
+</ul>
