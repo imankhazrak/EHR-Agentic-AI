@@ -74,6 +74,26 @@ def bag_of_codes_to_dataframe(
     return out
 
 
+def build_feature_keep_mask_from_prefixes(
+    feature_names: list[str],
+    forbidden_prefixes: list[str],
+    *,
+    feature_prefix: str = "feat_",
+) -> np.ndarray:
+    """Return boolean keep-mask that excludes features matching forbidden ICD prefixes."""
+    prefixes = [str(p).strip().replace(".", "") for p in forbidden_prefixes if str(p).strip()]
+    keep = np.ones(len(feature_names), dtype=bool)
+    if not prefixes:
+        return keep
+    for idx, feat in enumerate(feature_names):
+        token = feat
+        if token.startswith(feature_prefix):
+            token = token[len(feature_prefix):]
+        if any(token.startswith(p) for p in prefixes):
+            keep[idx] = False
+    return keep
+
+
 def build_bag_of_codes(
     train_df: pd.DataFrame,
     test_df: pd.DataFrame,

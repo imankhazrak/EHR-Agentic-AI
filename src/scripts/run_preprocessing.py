@@ -17,6 +17,7 @@ import argparse
 from pathlib import Path
 
 import pandas as pd
+from sklearn.model_selection import GroupShuffleSplit
 
 from src.utils.config_utils import load_config
 from src.utils.random_utils import set_seed
@@ -30,6 +31,34 @@ from src.data.code_mappings import CodeMapper
 from src.data.narrative_builder import add_narratives
 
 logger = get_logger(__name__, log_file="data/outputs/preprocessing.log")
+
+
+def _group_split_by_subject(
+    pairs: pd.DataFrame,
+    test_size: float,
+    seed: int,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    if "SUBJECT_ID" not in pairs.columns:
+        raise KeyError("SUBJECT_ID is required for grouped split")
+    splitter = GroupShuffleSplit(n_splits=1, test_size=test_size, random_state=seed)
+    idx_train, idx_test = next(splitter.split(pairs, groups=pairs["SUBJECT_ID"]))
+    train_df = pairs.iloc[idx_train].copy()
+    test_df = pairs.iloc[idx_test].copy()
+    return train_df, test_df
+
+
+def _overlap_diagnostics(train_df: pd.DataFrame, test_df: pd.DataFrame) -> dict:
+    train_subj = set(train_df["SUBJECT_ID"].astype(int).tolist())
+    test_subj = set(test_df["SUBJECT_ID"].astype(int).tolist())
+    cur_train = set(train_df["hadm_id_current"].astype(int).tolist())
+    cur_test = set(test_df["hadm_id_current"].astype(int).tolist())
+    nxt_train = set(train_df["hadm_id_next"].astype(int).tolist())
+    nxt_test = set(test_df["hadm_id_next"].astype(int).tolist())
+    return {
+        "subject_overlap": len(train_subj & test_subj),
+        "hadm_current_overlap": len(cur_train & cur_test),
+        "hadm_next_overlap": len(nxt_train & nxt_test),
+    }
 
 
 def main(config_path: str = "configs/default.yaml", overrides: list | None = None):
@@ -84,17 +113,11 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
     # ---- Step 6: Train/Test split ----
     logger.info("=== Step 6: Create train/test split ===")
     test_size = cfg["data"]["test_size"]
-    stratify = cfg["data"].get("stratify_test", True)
-
-    if stratify:
-        from sklearn.model_selection import train_test_split
-        train_df, test_df = train_test_split(
-            pairs, test_size=test_size, random_state=cfg["seed"],
-            stratify=pairs["label_lipid_disorder"],
-        )
-    else:
-        test_df = pairs.sample(n=test_size, random_state=cfg["seed"])
-        train_df = pairs.drop(test_df.index)
+    train_df, test_df = _group_split_by_subject(
+        pairs=pairs,
+        test_size=test_size,
+        seed=cfg["seed"],
+    )
 
     train_df = train_df.reset_index(drop=True).copy()
     test_df = test_df.reset_index(drop=True).copy()
@@ -107,12 +130,19 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
     save_dataframe(test_df, Path(processed_dir) / "test.csv")
     save_dataframe(pd.concat([train_df, test_df]), Path(processed_dir) / "full_dataset.csv")
 
+    overlap = _overlap_diagnostics(train_df, test_df)
+    if overlap["subject_overlap"] != 0:
+        raise AssertionError(f"Grouped split leakage: {overlap['subject_overlap']} overlapping subjects")
+
     summary = {
         "total_pairs": len(pairs),
         "train_size": len(train_df),
         "test_size": len(test_df),
         "train_prevalence": round(float(train_df["label_lipid_disorder"].mean()), 4),
         "test_prevalence": round(float(test_df["label_lipid_disorder"].mean()), 4),
+        "split_strategy": "grouped_by_subject_id",
+        "split_group_column": "SUBJECT_ID",
+        "overlap_diagnostics": overlap,
     }
     save_json(summary, Path(output_dir) / "processed_dataset_summary.json")
     logger.info("Preprocessing complete: %s", summary)

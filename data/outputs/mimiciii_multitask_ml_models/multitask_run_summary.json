@@ -27,8 +27,10 @@
   ],
   "prediction_columns_added_per_row": 16,
   "splits": {
-    "train_inner": 8469,
-    "val_inner": 1495,
-    "test": 2492
-  }
+    "train_inner": 8526,
+    "val_inner": 1505,
+    "test": 2425
+  },
+  "leakage_safe": true,
+  "task_feature_masks_file": "task_feature_masks.json"
 }

@@ -47,6 +47,25 @@ CCS53_ICD9_CODES: List[str] = [
 # We also accept prefix match for safety (some codes have extra digits)
 CCS53_PREFIX = "272"
 
+# Leakage-safe per-task forbidden ICD-9 diagnosis prefixes.
+TASK_FORBIDDEN_PREFIXES: dict[str, list[str]] = {
+    "label_lipid_disorder": ["272"],
+    "label_lipid_next": ["272"],
+    "label_diabetes_current": ["250"],
+    "label_hypertension_current": ["401", "402", "403", "404", "405"],
+    "label_obesity_current": ["2780"],
+    "label_cardio_next": ["410", "411", "412", "413", "414", "428"],
+    "label_kidney_next": ["584", "585", "586"],
+    "label_stroke_next": ["430", "431", "432", "433", "434", "435", "436"],
+}
+
+
+def get_task_forbidden_prefixes(label_name: str) -> list[str]:
+    """Return diagnosis prefixes to exclude from features for a given label."""
+    if label_name not in TASK_FORBIDDEN_PREFIXES:
+        raise KeyError(f"Unknown label for leakage mask: {label_name}")
+    return list(TASK_FORBIDDEN_PREFIXES[label_name])
+
 
 def is_lipid_disorder(code: str) -> bool:
     """Return True if the ICD-9 code maps to CCS category 53."""

@@ -11,12 +11,15 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from scipy import sparse
 from sklearn.model_selection import train_test_split
 
+from src.data.build_target_labels import get_task_forbidden_prefixes
 from src.ml.feature_builder import (
     bag_of_codes_to_dataframe,
+    build_feature_keep_mask_from_prefixes,
     fit_bag_of_codes_vectorizer,
     transform_bag_of_codes,
 )
@@ -143,6 +146,30 @@ def main(
     vocab = vectorizer.get_feature_names_out().tolist()
     save_json(vocab, output_dir / "feature_vocab.json")
 
+    # Leakage-safe per-task feature masks (deterministic, reusable at train time).
+    prefixed_vocab = [f"feat_{t}" for t in vocab]
+    mask_spec: dict[str, dict] = {}
+    for label in DEFAULT_LABEL_COLS:
+        forbidden = get_task_forbidden_prefixes(label)
+        keep_mask = build_feature_keep_mask_from_prefixes(prefixed_vocab, forbidden, feature_prefix="feat_")
+        keep_indices = np.flatnonzero(keep_mask).tolist()
+        dropped_indices = np.flatnonzero(~keep_mask).tolist()
+        dropped_features = [prefixed_vocab[i] for i in dropped_indices]
+        # Guardrail: ensure no forbidden prefixes remain in active feature set.
+        active_tokens = [vocab[i] for i in keep_indices]
+        forbidden_left = any(any(tok.startswith(p) for p in forbidden) for tok in active_tokens)
+        if forbidden_left:
+            raise AssertionError(f"Forbidden prefixes still active for {label}")
+        mask_spec[label] = {
+            "forbidden_prefixes": forbidden,
+            "n_features_total": len(prefixed_vocab),
+            "n_features_kept": len(keep_indices),
+            "n_features_dropped": len(dropped_indices),
+            "keep_indices": keep_indices,
+            "dropped_feature_examples": dropped_features[:30],
+        }
+    save_json(mask_spec, output_dir / "task_feature_masks.json")
+
     dist = pd.concat(
         [
             _build_label_distribution(train_inner, "train_inner"),
@@ -169,6 +196,7 @@ def main(
             "val_inner": "val_inner_encoded.npz",
             "test": "test_encoded.npz",
         },
+        "task_feature_masks_file": "task_feature_masks.json",
         "meta_files": {
             "train_inner": "train_inner_meta.csv",
             "val_inner": "val_inner_meta.csv",

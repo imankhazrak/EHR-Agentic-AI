@@ -1,7 +1,14 @@
 {
   "total_pairs": 12456,
-  "train_size": 9964,
-  "test_size": 2492,
-  "train_prevalence": 0.2743,
-  "test_prevalence": 0.2741
+  "train_size": 10031,
+  "test_size": 2425,
+  "train_prevalence": 0.2798,
+  "test_prevalence": 0.2511,
+  "split_strategy": "grouped_by_subject_id",
+  "split_group_column": "SUBJECT_ID",
+  "overlap_diagnostics": {
+    "subject_overlap": 0,
+    "hadm_current_overlap": 0,
+    "hadm_next_overlap": 0
+  }
 }

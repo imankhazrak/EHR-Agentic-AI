@@ -17,11 +17,10 @@ import pandas as pd
 from scipy import sparse
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.multioutput import MultiOutputClassifier
 from sklearn.tree import DecisionTreeClassifier
 
 from src.evaluation.metrics import compute_metrics
-from src.utils.io import save_dataframe, save_json
+from src.utils.io import load_json, save_dataframe, save_json
 from src.utils.logging_utils import get_logger
 
 logger = get_logger(__name__, log_file="data/outputs/run_multitask_ml_models.log")
@@ -61,28 +60,27 @@ def _load_split(input_dir: Path, split_name: str) -> tuple[Any, pd.DataFrame]:
     return x, meta
 
 
-def _build_model(model_name: str, seed: int) -> MultiOutputClassifier:
+def _build_model(model_name: str, seed: int):
     if model_name == "logistic_regression":
-        base = LogisticRegression(max_iter=1000, random_state=seed, solver="lbfgs")
+        return LogisticRegression(max_iter=1000, random_state=seed, solver="lbfgs")
     elif model_name == "decision_tree":
-        base = DecisionTreeClassifier(random_state=seed)
+        return DecisionTreeClassifier(random_state=seed)
     elif model_name == "random_forest":
-        base = RandomForestClassifier(n_estimators=100, random_state=seed)
+        return RandomForestClassifier(n_estimators=100, random_state=seed)
     else:
         raise ValueError(f"Unsupported model: {model_name}")
-    return MultiOutputClassifier(base)
 
 
-def _predict_with_proba(model: MultiOutputClassifier, x) -> tuple[np.ndarray, np.ndarray]:
-    y_pred = model.predict(x)
-    prob_list = model.predict_proba(x)
-    y_prob = np.zeros_like(y_pred, dtype=float)
-    for j, cls_prob in enumerate(prob_list):
-        # MultiOutputClassifier returns per-task probability arrays.
-        if cls_prob.shape[1] == 1:
-            y_prob[:, j] = 0.0
+def _predict_one_with_proba(model, x) -> tuple[np.ndarray, np.ndarray]:
+    y_pred = model.predict(x).astype(int)
+    if hasattr(model, "predict_proba"):
+        prob = model.predict_proba(x)
+        if prob.ndim == 2 and prob.shape[1] > 1:
+            y_prob = prob[:, 1]
         else:
-            y_prob[:, j] = cls_prob[:, 1]
+            y_prob = np.zeros(len(y_pred), dtype=float)
+    else:
+        y_prob = np.zeros(len(y_pred), dtype=float)
     return y_pred, y_prob
 
 
@@ -133,6 +131,20 @@ def _evaluate_split(
     return pd.concat([df, pd.DataFrame([macro])], ignore_index=True)
 
 
+def _load_task_masks(input_dir: Path) -> dict[str, list[int]]:
+    mask_path = input_dir / "task_feature_masks.json"
+    mask_obj = load_json(mask_path)
+    out: dict[str, list[int]] = {}
+    for label in EVAL_LABELS:
+        if label not in mask_obj:
+            raise KeyError(f"Missing mask for {label} in {mask_path}")
+        keep = mask_obj[label].get("keep_indices", [])
+        if not keep:
+            raise ValueError(f"Empty keep_indices for {label}")
+        out[label] = [int(i) for i in keep]
+    return out
+
+
 def _build_prediction_frame(
     meta_df: pd.DataFrame,
     y_pred: np.ndarray,
@@ -161,18 +173,33 @@ def main(input_dir: Path, output_dir: Path, seed: int = 42) -> None:
     y_val = val_meta[EVAL_LABELS].astype(int).values
     y_test = test_meta[EVAL_LABELS].astype(int).values
 
+    task_keep_indices = _load_task_masks(input_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     model_names = ["logistic_regression", "decision_tree", "random_forest"]
     all_metrics: list[pd.DataFrame] = []
 
     for model_name in model_names:
         logger.info("Training multitask model: %s", model_name)
-        model = _build_model(model_name, seed=seed)
-        model.fit(x_train, y_train)
+        yhat_train = np.zeros_like(y_train, dtype=int)
+        yhat_val = np.zeros_like(y_val, dtype=int)
+        yhat_test = np.zeros_like(y_test, dtype=int)
+        prob_train = np.zeros_like(y_train, dtype=float)
+        prob_val = np.zeros_like(y_val, dtype=float)
+        prob_test = np.zeros_like(y_test, dtype=float)
 
-        yhat_train, prob_train = _predict_with_proba(model, x_train)
-        yhat_val, prob_val = _predict_with_proba(model, x_val)
-        yhat_test, prob_test = _predict_with_proba(model, x_test)
+        for j, label in enumerate(EVAL_LABELS):
+            keep = task_keep_indices[label]
+            x_train_task = x_train[:, keep]
+            x_val_task = x_val[:, keep]
+            x_test_task = x_test[:, keep]
+            model = _build_model(model_name, seed=seed)
+            model.fit(x_train_task, y_train[:, j])
+            p_train, s_train = _predict_one_with_proba(model, x_train_task)
+            p_val, s_val = _predict_one_with_proba(model, x_val_task)
+            p_test, s_test = _predict_one_with_proba(model, x_test_task)
+            yhat_train[:, j], prob_train[:, j] = p_train, s_train
+            yhat_val[:, j], prob_val[:, j] = p_val, s_val
+            yhat_test[:, j], prob_test[:, j] = p_test, s_test
 
         train_metrics = _evaluate_split(y_train, yhat_train, prob_train, EVAL_LABELS, model_name, "train_inner")
         val_metrics = _evaluate_split(y_val, yhat_val, prob_val, EVAL_LABELS, model_name, "val_inner")
@@ -205,6 +232,8 @@ def main(input_dir: Path, output_dir: Path, seed: int = 42) -> None:
         "prediction_output_labels": ALL_OUTPUT_LABELS,
         "prediction_columns_added_per_row": 2 * len(ALL_OUTPUT_LABELS),
         "splits": {"train_inner": int(len(train_meta)), "val_inner": int(len(val_meta)), "test": int(len(test_meta))},
+        "leakage_safe": True,
+        "task_feature_masks_file": "task_feature_masks.json",
     }
     save_json(summary, output_dir / "multitask_run_summary.json")
     logger.info("Multitask ML run complete: %s", output_dir)
