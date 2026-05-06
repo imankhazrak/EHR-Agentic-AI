@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The record explicitly states 'Unspecified essential hypertension' for hypertension. 'Late effects of cerebrovascular disease, dysarthria' and 'Other late effects of cerebrovascular disease, dysphagia' indicate past cerebrovascular events, supporting 'cardio_next' and 'stroke_next'. 'Acute kidney failure, unspecified' and 'Late effects of cerebrovascular disease' support 'kidney_next'. Lipid disorder prediction is 'No' as no explicit CCS category 53 diagnosis is present, despite related conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3610,
+    "completion_tokens": 272
+  }
+}

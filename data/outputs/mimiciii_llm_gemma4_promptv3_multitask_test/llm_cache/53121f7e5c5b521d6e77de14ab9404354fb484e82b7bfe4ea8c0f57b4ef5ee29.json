@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly mentions 'Unspecified hypertensive heart disease with heart failure' (Hypertension: Yes). 'Acute kidney failure with lesion of tubular necrosis' (Kidney: Yes). 'Unspecified hypertensive heart disease with heart failure' implies cardiovascular issues (Cardio: Yes). 'Cholangitis' and 'Cirrhosis of liver' are present, but no explicit lipid diagnosis is made (Lipid: No). 'Obstruction of bile duct' and 'Cirrhosis' are present, but no explicit obesity diagnosis is made (Obesity: No). 'Acute kidney failure' and 'Hypertensive heart disease' are present, but no explicit stroke diagnosis is made (Stroke: No).\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3328,
+    "completion_tokens": 309
+  }
+}

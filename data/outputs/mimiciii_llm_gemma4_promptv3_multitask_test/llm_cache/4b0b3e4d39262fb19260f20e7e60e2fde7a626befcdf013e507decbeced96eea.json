@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses for 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', 'Unspecified essential hypertension', and 'Atherosclerosis of native arteries of the extremities with gangrene' (indicating cardiovascular issues). The record also lists 'Disorders of Lipid Metabolism' conditions via the explicit diagnosis of 'Diabetes mellitus' and 'Atherosclerosis', which aligns with the target definition. 'Atherosclerosis' and 'Congestive heart failure' support the 'cardio_next' prediction. 'Acute kidney failure, unspecified' and 'Urinary complications, not elsewhere classified' support the 'kidney_next' prediction. 'Obesity' is not explicitly diagnosed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3715,
+    "completion_tokens": 321
+  }
+}

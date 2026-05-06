@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists diagnoses for 'Diabetes with renal manifestations, type II or unspecified type' and 'Hypertensive chronic kidney disease, unspecified'. 'Subendocardial infarction' and 'Congestive heart failure' support the prediction for cardiovascular issues. 'Acute kidney failure' and 'Hypertensive chronic kidney disease' support the kidney prediction. 'Disorders of Lipid Metabolism' is supported by the presence of related diagnoses and the high probability derived from the target definition mapping.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3728,
+    "completion_tokens": 262
+  }
+}

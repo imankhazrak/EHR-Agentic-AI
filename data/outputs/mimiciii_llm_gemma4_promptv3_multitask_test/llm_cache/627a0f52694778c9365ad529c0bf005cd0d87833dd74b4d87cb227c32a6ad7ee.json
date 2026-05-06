@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Morbid obesity' and 'Unspecified essential hypertension' as diagnoses, supporting 'Yes' for obesity and hypertension. 'Congestive heart failure, unspecified' supports 'Yes' for cardio_next. 'Cellulitis and abscess of trunk' and 'Polycythemia vera' are listed, but no explicit lipid disorder diagnosis (like hypercholesterolemia) is present, yet the high probability for lipid_next is based on the general context and the high probability of other related conditions being present, as seen in the demonstration cases.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3363,
+    "completion_tokens": 286
+  }
+}

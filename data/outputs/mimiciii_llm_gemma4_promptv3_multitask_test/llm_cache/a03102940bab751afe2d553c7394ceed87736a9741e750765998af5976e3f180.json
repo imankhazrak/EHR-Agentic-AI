@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Unspecified essential hypertension' as a diagnosis, supporting a 'Yes' for current hypertension. 'Congestive heart failure, unspecified' is a diagnosis, supporting a 'Yes' for next visit cardio. No explicit diagnoses or medications for lipid disorders (hypercholesterolemia, etc.) are present, leading to 'No' for lipid next. No explicit diagnoses for diabetes or obesity are present, leading to 'No' for those current conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3516,
+    "completion_tokens": 264
+  }
+}

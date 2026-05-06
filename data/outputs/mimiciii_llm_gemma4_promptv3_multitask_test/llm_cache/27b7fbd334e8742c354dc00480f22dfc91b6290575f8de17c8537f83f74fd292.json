@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Congestive heart failure, unspecified', supporting 'Yes' for hypertension and cardio_next. 'Acute kidney failure, unspecified' supports 'Yes' for kidney_next. 'Other specified disorders of pancreatic internal secretion' and 'Aneurysm of iliac artery' are related to lipid/cardio risks, and 'Atorvastatin' is prescribed, supporting 'Yes' for lipid_next. 'Obesity' is not explicitly listed, supporting 'No' for obesity_current. 'Diabetes' is not explicitly listed, supporting 'No' for diabetes_current. 'Stroke' is not explicitly listed, supporting 'No' for stroke_next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3597,
+    "completion_tokens": 316
+  }
+}

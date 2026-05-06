@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Obesity, unspecified' and 'Unspecified essential hypertension' as diagnoses, which directly support the predictions for obesity and hypertension. 'Hyperosmolality and/or hypernatremia' and 'Congestive heart failure, unspecified' support the prediction for cardiovascular disease. 'Acute kidney failure with lesion of tubular necrosis' supports the prediction for kidney disease. The record also lists 'Body Mass Index 40.0-44.9, adult' which supports obesity. The diagnosis of 'Unspecified essential hypertension' supports the lipid disorder prediction as it is a related condition, and the record lists 'Hyperosmolality and/or hypernatremia' which is a related lipid abnormality.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3763,
+    "completion_tokens": 316
+  }
+}

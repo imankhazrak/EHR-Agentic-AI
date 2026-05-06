@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states diagnoses such as Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Congestive heart failure, unspecified; Subendocardial infarction, initial episode of care; and Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled. These diagnoses support the predictions for lipid next, diabetes current, hypertension current, cardio next, and kidney next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1127,
+    "completion_tokens": 253
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Primary pulmonary hypertension' and 'Congestive heart failure, unspecified', supporting a 'Yes' for current hypertension/cardio next. 'Acute kidney failure, unspecified' and 'Chronic kidney disease, Stage III (moderate)' support 'Yes' for kidney next. 'Primary pulmonary hypertension' is a form of hypertension. 'Cardiogenic shock' and 'Congestive heart failure' support 'Yes' for cardio next. No explicit diagnosis of lipid disorder is present, leading to 'No' for lipid next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3540,
+    "completion_tokens": 280
+  }
+}

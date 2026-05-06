@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes with neurological manifestations, type II or unspecified type' and 'Hypertensive chronic kidney disease, unspecified'. 'Acute diastolic heart failure' and 'Acute kidney failure' are also documented. 'Disorders of Lipid Metabolism' is covered by the explicit diagnosis of 'Diabetes with neurological manifestations' and the presence of related conditions like 'Hypertensive chronic kidney disease' and 'Acute diastolic heart failure', which align with the CCS category 53 context provided in the target definition.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3665,
+    "completion_tokens": 270
+  }
+}

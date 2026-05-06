@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Pure hypercholesterolemia' and 'Unspecified essential hypertension' as diagnoses, and prescribes 'Insulin' and 'Lisinopril' as medications, indicating current conditions for lipid and cardiovascular risk factors.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 231
+  }
+}

@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Accidental puncture or laceration during a procedure, not elsewhere classified; Acute kidney failure with lesion of tubular necrosis; Other retroperitoneal abscess; Other candidiasis of other specified sites; Hydronephrosis; Other ureteric obstruction; Bacteremia; Other postoperative infection; Opioid abuse, continuous; Unspecified viral hepatitis C without hepatic coma; Staphylococcus infection in conditions classified elsewhere and of unspecified site, other staphylococcus; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Anxiety state, unspecified; Depressive disorder, not elsewhere classified; Other chronic pain; Lumbago; Tobacco use disorder; Lack of housing; Cannabis abuse, continuous; Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus; Calculus of gallbladder and bile duct without cholecystitis, without mention of obstruction; Other drugs and medicinal substances causing adverse effects in therapeutic use; Other non-narcotic analgesics causing adverse effects in therapeutic use
+- Medications prescribed: 5% Dextrose; HYDROmorphone (Dilaudid); Vancomycin; Calcium Carbonate; Iso-Osmotic Sodium Chloride; Fluconazole; Bag; Sterile Water; 0.9% Sodium Chloride; Potassium Chloride; Magnesium Sulfate; Calcium Gluconate; Lactated Ringers; Acetaminophen IV; Soln; Vial; Pantoprazole; Iso-Osmotic Dextrose; Piperacillin-Tazobactam; Ondansetron; Sodium Chloride 0.9%  Flush; Heparin; Insulin; Glucagon; Dextrose 50%; Gastroview (Diatrizoate Meglumine & Sodium); Acetaminophen; OxycoDONE (Immediate Release); Bisacodyl; Alprazolam; Nystatin Cream; Sarna Lotion; NS; Ciprofloxacin IV; MetRONIDAZOLE (FLagyl); Influenza Virus Vaccine; Sumatriptan Succinate; Lorazepam; Lidocaine Jelly 2% (Urojet); Chloraseptic Throat Spray; Promethazine; Amoxicillin-Clavulanic Acid; Ondanse; Metoclopramide; Readi-Cat 2 (Barium Sulfate 2% Suspension); Prochlorperazine; Lidocaine 5% Patch; Artificial Tears; DiphenhydrAMINE; Heparin Flush (10 units/ml)
+- Procedures performed: Incision of abdominal wall; Other gastroenterostomy without gastrectomy; Suture of laceration of duodenum; Endoscopic sphincterotomy and papillotomy; Endoscopic removal of stone(s) from biliary tract; Endoscopic insertion of stent (tube) into bile duct; Percutaneous abdominal drainage; Parenteral infusion of concentrated nutritional substances; Central venous catheter placement with guidance
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Acute kidney failure. The presence of Coronary atherosclerosis and Subendocardial infarction supports the prediction of future cardiovascular disease. Lipid disorder prediction is 'Yes' due to the explicit diagnosis of related conditions in the record, aligning with the high probability seen in demonstration cases where explicit diagnoses lead to 'Yes' outcomes.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3362,
+    "completion_tokens": 247
+  }
+}

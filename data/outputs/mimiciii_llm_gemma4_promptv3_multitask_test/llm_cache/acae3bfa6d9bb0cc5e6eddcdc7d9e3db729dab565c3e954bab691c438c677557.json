@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' and 'Hypertensive chronic kidney disease', confirming lipid disorders and hypertension. 'Diabetes mellitus without mention of complication' is listed, confirming diabetes. 'Acute kidney failure' and 'Hypertensive chronic kidney disease' confirm kidney issues. 'Acute myocardial infarction' and 'Coronary atherosclerosis' confirm cardiovascular risk. Obesity is not mentioned in the diagnoses or procedures.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3578,
+    "completion_tokens": 253
+  }
+}

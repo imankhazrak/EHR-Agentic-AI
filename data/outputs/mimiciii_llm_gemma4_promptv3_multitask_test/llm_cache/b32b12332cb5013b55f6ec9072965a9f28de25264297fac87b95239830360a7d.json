@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Primary hypercoagulable state' and 'Coronary atherosclerosis of native coronary artery', which supports the prediction of 'Disorders of Lipid Metabolism' (CCS category 53). Diabetes mellitus is explicitly listed in the diagnoses. Hypertension and obesity are not explicitly mentioned in the diagnoses or medications. Cardiovascular disease is supported by 'Coronary atherosclerosis of native coronary artery' and 'Acute on chronic systolic heart failure'. Kidney disease is supported by 'Acute kidney failure with lesion of tubular necrosis'. Stroke is not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3660,
+    "completion_tokens": 280
+  }
+}

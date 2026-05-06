@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"obesity_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly states 'Other and unspecified hyperlipidemia' as a diagnosis, which falls under the scope of lipid disorders. Additionally, 'Acute kidney failure, unspecified' is a diagnosis, indicating kidney issues. 'Hydrochlorothiazide' and 'Verapamil SR' are prescribed medications often used for hypertension management, suggesting this condition is present or being treated.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 836,
+    "completion_tokens": 257
+  }
+}

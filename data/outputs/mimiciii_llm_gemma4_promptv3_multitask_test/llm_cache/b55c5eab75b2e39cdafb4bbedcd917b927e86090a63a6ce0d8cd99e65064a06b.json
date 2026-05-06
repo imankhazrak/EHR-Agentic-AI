@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Morbid obesity' and 'Body Mass Index 70 and over, adult', supporting the obesity prediction. The diagnosis of 'Morbid obesity' and the presence of 'Body Mass Index 70 and over, adult' strongly suggest the presence of lipid abnormalities, leading to a 'Yes' prediction for lipid_next, consistent with the target definition. No explicit evidence for diabetes, hypertension, or kidney disease was found in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3453,
+    "completion_tokens": 265
+  }
+}

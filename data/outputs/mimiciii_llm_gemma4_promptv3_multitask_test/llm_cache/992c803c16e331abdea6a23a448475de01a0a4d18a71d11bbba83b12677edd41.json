@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension', confirming current status for both. 'Rheumatic heart failure (congestive)' and 'Atrial fibrillation' support the prediction for 'cardio_next' (Yes). 'Unspecified essential hypertension' supports the prediction for 'lipid_next' (Yes) as it is a related condition, and the record confirms 'Diabetes mellitus' which falls under the scope of lipid disorder scope. 'Obesity' is not mentioned in the diagnoses or procedures, so the prediction is 'No'. 'Kidney' and 'Stroke' are not explicitly mentioned in the current diagnoses, so the prediction is 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3376,
+    "completion_tokens": 326
+  }
+}

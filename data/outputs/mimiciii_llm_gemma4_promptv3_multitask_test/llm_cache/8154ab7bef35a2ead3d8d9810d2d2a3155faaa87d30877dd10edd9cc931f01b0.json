@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents 'Other and unspecified hyperlipidemia' and 'Disorders of phosphorus metabolism', supporting a 'Yes' for lipid disorders. Diabetes, hypertension, and end-stage renal disease are explicitly documented diagnoses. Cardiovascular risks are supported by documented 'Atrial fibrillation', 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits', and 'Other and unspecified hyperlipidemia'. Kidney disease is explicitly documented as 'End stage renal disease' and 'Hypertensive chronic kidney disease'. Stroke risk is supported by the documented history of TIA/cerebral infarction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1162,
+    "completion_tokens": 286
+  }
+}

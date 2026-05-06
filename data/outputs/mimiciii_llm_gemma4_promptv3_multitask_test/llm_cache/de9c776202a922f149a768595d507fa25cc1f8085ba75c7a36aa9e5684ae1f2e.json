@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Coronary atherosclerosis of unspecified type of vessel' and 'Unspecified essential hypertension', and the medication list includes 'Atorvastatin', which supports a high probability for lipid disorders and cardiovascular issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 888,
+    "completion_tokens": 229
+  }
+}

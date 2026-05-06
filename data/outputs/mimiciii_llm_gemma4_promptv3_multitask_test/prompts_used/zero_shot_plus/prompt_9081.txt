@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Intraspinal abscess; Subendocardial infarction, initial episode of care; Acute and chronic respiratory failure; Acute kidney failure, unspecified; Atrioventricular block, complete; Pressure ulcer, lower back; Pressure ulcer, stage IV; Chronic kidney disease, Stage III (moderate); Acute osteomyelitis, other specified sites; Intervertebral disc disorder with myelopathy, thoracic region; Pathologic fracture of vertebrae; Delirium due to conditions classified elsewhere; Ulcer of heel and midfoot; Hyperosmolality and/or hypernatremia; Aneurysm of heart (wall); Paraplegia; Body Mass Index 40.0-44.9, adult; Chronic systolic heart failure; Chronic airway obstruction, not elsewhere classified; Obstructive sleep apnea (adult)(pediatric); Sinoatrial node dysfunction; Other chronic pulmonary heart diseases; Streptococcus infection in conditions classified elsewhere and of unspecified site, other streptococcus; Congestive heart failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Pressure ulcer, heel; Atrial fibrillation; Coronary atherosclerosis of unspecified type of vessel, native or graft; Morbid obesity; Diabetes with unspecified complication, type II or unspecified type, not stated as uncontrolled; Pressure ulcer, stage II; Other and unspecified special symptoms or syndromes, not elsewhere classified; Abdominal aneurysm without mention of rupture; Anemia, unspecified; Unspecified acquired hypothyroidism; Personal history of tobacco use
+- Medications prescribed: Haloperidol; Midodrine; 5% Dextrose; Furosemide; Collagenase Ointment; Heparin Flush (10 units/ml); Sterile Water; 0.9% Sodium Chloride; Midazolam; PHENYLEPHrine; NORepinephrine; Fentanyl Citrate; Soln; Atorvastatin; OLANZapine (Disintegrating Tablet); Famotidine; Heparin; Fluticasone Propionate 110mcg; Iso-Osmotic Dextrose; Vancomycin; CeftriaXONE; Clopidogrel; Insulin; Morphine Sulfate; HYDROmorphone (Dilaudid); Quetiapine Fumarate; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Potassium Chloride; Etomidate; Succinylcholine; Piperacillin-Tazobactam; Heparin Sodium; Ipratropium Bromide MDI; Albuterol Inhaler; Chlorhexidine Gluconate 0.12% Oral Rinse; Bag; Magnesium Sulfate; Calcium Gluconate; Docusate Sodium (Liquid); Simvastatin; Glucagon; Levothyroxine Sodium; Calcitriol; Dextrose 50%; Vitamin D; Aspirin; Neutra-Phos; Docusate Sodium; Fluticasone-Salmeterol Diskus (250/50)
+- Procedures performed: Dorsal and dorsolumbar fusion of the posterior column, posterior technique; Excision or destruction of lesion of spinal cord or spinal meninges; Other excision of joint, other specified sites; Excisional debridement of wound, infection, or burn; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Fusion or refusion of 4-8 vertebrae; Central venous catheter placement with guidance; Diagnostic ultrasound of heart; Non-invasive mechanical ventilation; Insertion of endotracheal tube; Enteral infusion of concentrated nutritional substances
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

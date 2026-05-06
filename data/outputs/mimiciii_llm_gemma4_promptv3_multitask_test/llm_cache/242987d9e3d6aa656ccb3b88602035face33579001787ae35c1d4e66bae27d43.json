@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents Atherosclerosis of native arteries of the extremities with gangrene, Congestive heart failure, unspecified, and Atrial fibrillation, which strongly indicate cardiovascular issues. Diabetes mellitus type II is documented, and Lisinopril/Spironolactone are prescribed, indicating management of hypertension. Kidney failure is explicitly documented. Atorvastatin is prescribed, supporting lipid management.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 258
+  }
+}

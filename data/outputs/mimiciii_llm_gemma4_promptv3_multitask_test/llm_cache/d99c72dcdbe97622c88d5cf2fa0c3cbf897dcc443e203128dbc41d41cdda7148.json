@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled' and 'Diabetes insipidus', confirming diabetes. 'Orthostatic hypotension' is listed, but no explicit diagnosis of hypertension is present. 'Cardio_next' and 'kidney_next' are inferred from listed conditions like 'Other specified cardiac dysrhythmias' and 'Retention of urine, unspecified', respectively. No explicit diagnosis of obesity, hypertension, or cardiovascular/kidney/stroke in the next visit is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 907,
+    "completion_tokens": 278
+  }
+}

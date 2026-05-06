@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly diagnoses 'Hypertensive chronic kidney disease, unspecified' and 'Coronary atherosclerosis of native coronary artery', supporting 'Yes' for hypertension and cardio_next. 'Chronic kidney disease' is also explicitly diagnosed, supporting 'Yes' for kidney_next. 'Hypertensive chronic kidney disease' is present, but no explicit lipid disorder diagnosis (hypercholesterolemia, etc.) is present, supporting 'No' for lipid_next. 'Hypertension' is explicitly diagnosed, supporting 'Yes' for hypertension_current. No explicit diagnosis of obesity or stroke is present, supporting 'No' for those categories.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3511,
+    "completion_tokens": 295
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "input_dir": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask",
+  "output_dir": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask_ml",
+  "split_seed": 42,
+  "val_ratio_within_train": 0.15,
+  "n_rows_train_source": 9964,
+  "n_rows_test_source": 2492,
+  "n_rows_train_inner": 8469,
+  "n_rows_val_inner": 1495,
+  "n_rows_test": 2492,
+  "n_features": 6937,
+  "feature_matrix_files": {
+    "train_inner": "train_inner_encoded.npz",
+    "val_inner": "val_inner_encoded.npz",
+    "test": "test_encoded.npz"
+  },
+  "meta_files": {
+    "train_inner": "train_inner_meta.csv",
+    "val_inner": "val_inner_meta.csv",
+    "test": "test_meta.csv"
+  },
+  "labels_included": [
+    "label_lipid_disorder",
+    "label_diabetes_current",
+    "label_hypertension_current",
+    "label_obesity_current",
+    "label_cardio_next",
+    "label_kidney_next",
+    "label_stroke_next"
+  ],
+  "dropped_duplicate_label": "label_lipid_next",
+  "fit_data_for_vectorizer": "train_inner_only"
+}

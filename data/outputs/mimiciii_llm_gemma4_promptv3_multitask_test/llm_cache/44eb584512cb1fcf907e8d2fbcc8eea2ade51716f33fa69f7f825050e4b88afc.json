@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' as a diagnosis, satisfying the criteria for 'Disorders of Lipid Metabolism'. 'Acute on chronic diastolic heart failure' and 'Coronary atherosclerosis of unspecified type of vessel' indicate a strong likelihood of 'cardio_next' being Yes. 'Acute kidney failure, unspecified' is explicitly listed, indicating 'kidney_next' is Yes. No explicit evidence for diabetes, hypertension, or stroke was found in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3550,
+    "completion_tokens": 268
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Pure hypercholesterolemia', which meets the criteria for 'Disorders of Lipid Metabolism'. 'Unspecified essential hypertension' is documented, confirming current hypertension. 'Atherosclerosis of autologous vein bypass graft of the extremities' and 'Congestive heart failure' confirm current cardiovascular issues. 'Acute kidney failure, unspecified' is documented, confirming current kidney issues. No explicit diagnosis for diabetes or obesity is present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3797,
+    "completion_tokens": 264
+  }
+}

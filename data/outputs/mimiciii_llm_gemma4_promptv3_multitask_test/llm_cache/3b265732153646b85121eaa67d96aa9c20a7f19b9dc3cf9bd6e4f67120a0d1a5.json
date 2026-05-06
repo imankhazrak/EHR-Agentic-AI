@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' for lipid disorder prediction, leading to a 'Yes' prediction. Diabetes mellitus is explicitly listed as a diagnosis. Hypertension and obesity are not explicitly diagnosed. Kidney disorder is indicated by the diagnosis 'Unspecified disorder of kidney and ureter'. Cardiovascular disease, stroke, and kidney disease next visit predictions are based on the explicit diagnoses and lack of explicit evidence for the next visit.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3319,
+    "completion_tokens": 257
+  }
+}

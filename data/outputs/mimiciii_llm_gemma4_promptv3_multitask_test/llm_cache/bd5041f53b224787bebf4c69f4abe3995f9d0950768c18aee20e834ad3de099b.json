@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses including 'Obstructive sleep apnea (adult)(pediatric)', 'Peripheral vascular disease, unspecified', 'Aortocoronary bypass status', 'Other and unspecified hyperlipidemia', and 'Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage I through stage IV, or unspecified', and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled'. These diagnoses support the 'Yes' predictions for lipid next, diabetes current, hypertension current, cardio next, kidney next, and stroke next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1102,
+    "completion_tokens": 283
+  }
+}

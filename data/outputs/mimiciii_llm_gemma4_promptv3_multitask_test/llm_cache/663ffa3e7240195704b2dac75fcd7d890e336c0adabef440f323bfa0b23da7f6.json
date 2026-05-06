@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly documents 'Other and unspecified hyperlipidemia' and 'Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled', supporting the lipid and diabetes predictions. 'Hypertensive chronic kidney disease, unspecified' confirms hypertension. 'Chronic kidney disease, unspecified' supports the kidney prediction. No explicit evidence for obesity, cardiovascular disease, or stroke was found.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3677,
+    "completion_tokens": 297
+  }
+}

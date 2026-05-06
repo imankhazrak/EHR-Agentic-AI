@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record explicitly diagnoses Primary pulmonary hypertension, which supports a 'Yes' prediction for hypertension_current and cardio_next. Hepatorenal syndrome is diagnosed, supporting a 'Yes' prediction for kidney_next. The record does not contain explicit diagnoses of hypercholesterolemia or hyperlipidemia, leading to a 'No' prediction for lipid_next. The record does not contain explicit diagnoses of diabetes or obesity, leading to 'No' predictions for those tasks.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3467,
+    "completion_tokens": 263
+  }
+}

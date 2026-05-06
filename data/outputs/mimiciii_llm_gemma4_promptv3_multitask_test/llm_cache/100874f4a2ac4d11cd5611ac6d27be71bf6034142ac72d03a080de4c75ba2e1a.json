@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly mentions 'Hypertensive chronic kidney disease, unspecified' and 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified', indicating current hypertension. Cardiovascular issues are present ('Acute on chronic systolic heart failure', 'Congestive heart failure, unspecified'), and kidney issues are present ('Acute kidney failure, unspecified', 'Chronic kidney disease, unspecified'), indicating current and likely future issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 926,
+    "completion_tokens": 256
+  }
+}

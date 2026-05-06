@@ -1,0 +1,34 @@
+{
+  "input_dir": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask_ml",
+  "output_dir": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/mimiciii_multitask_ml_models",
+  "models": [
+    "logistic_regression",
+    "decision_tree",
+    "random_forest"
+  ],
+  "eval_labels": [
+    "label_lipid_disorder",
+    "label_diabetes_current",
+    "label_hypertension_current",
+    "label_obesity_current",
+    "label_cardio_next",
+    "label_kidney_next",
+    "label_stroke_next"
+  ],
+  "prediction_output_labels": [
+    "label_lipid_disorder",
+    "label_lipid_next",
+    "label_diabetes_current",
+    "label_hypertension_current",
+    "label_obesity_current",
+    "label_cardio_next",
+    "label_kidney_next",
+    "label_stroke_next"
+  ],
+  "prediction_columns_added_per_row": 16,
+  "splits": {
+    "train_inner": 8469,
+    "val_inner": 1495,
+    "test": 2492
+  }
+}

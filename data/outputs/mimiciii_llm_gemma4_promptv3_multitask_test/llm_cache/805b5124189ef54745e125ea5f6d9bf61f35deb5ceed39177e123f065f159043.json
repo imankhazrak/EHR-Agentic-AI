@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Diabetes with renal manifestations, type I [juvenile type], uncontrolled'. 'Hypertension' is implied by 'Primary pulmonary hypertension' and the presence of cardiovascular issues. 'Kidney disease' is explicitly listed as 'End stage renal disease'. 'Obesity' is not mentioned in the diagnoses or procedures. 'Cardio next' is supported by 'Other specified cardiac dysrhythmias' and 'Diastolic heart failure'. 'Stroke next' is not explicitly diagnosed or implied by the listed conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3539,
+    "completion_tokens": 286
+  }
+}

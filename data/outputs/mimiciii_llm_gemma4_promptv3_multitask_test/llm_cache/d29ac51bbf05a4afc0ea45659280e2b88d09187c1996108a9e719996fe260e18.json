@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Other and unspecified hyperlipidemia' and 'Unspecified essential hypertension' and 'Diabetes mellitus' and 'Body Mass Index 33.0-33.9, adult', confirming lipid disorders, diabetes, hypertension, and obesity. 'Acute kidney failure with lesion of tubular necrosis' confirms kidney issues. Cardiovascular disease, stroke, and future lipid diagnoses are not explicitly stated as future events.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1095,
+    "completion_tokens": 252
+  }
+}

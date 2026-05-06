@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents diagnoses related to lipid metabolism (ICD9-DX:4251) and the prescription of Intralipid 20%, which supports a 'Yes' for lipid next. Diabetes is supported by the prescription of Humulin-R Insulin and Insulin. Hypertension is supported by the prescription of Hydralazine HCl and Nitroglycerin Oint. 2%. Obesity is not explicitly documented. Cardio next is supported by the diagnosis of Congestive heart failure, unspecified. Kidney next and stroke next are not explicitly documented.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1160,
+    "completion_tokens": 279
+  }
+}

@@ -18,6 +18,62 @@ from src.utils.logging_utils import get_logger
 logger = get_logger(__name__)
 
 
+DEFAULT_CODE_COLS = [
+    "diagnoses_codes_current",
+    "procedures_codes_current",
+    "medications_current",
+]
+
+
+def row_to_code_tokens(row: pd.Series, code_cols: list[str] | None = None) -> str:
+    """Join semicolon-separated code columns into a whitespace token string."""
+    cols = code_cols or DEFAULT_CODE_COLS
+    parts: list[str] = []
+    for col in cols:
+        val = row.get(col, "")
+        if pd.notna(val) and val:
+            parts.extend(str(val).split(";"))
+    return " ".join(parts)
+
+
+def dataframe_to_code_token_text(df: pd.DataFrame, code_cols: list[str] | None = None) -> pd.Series:
+    """Return one tokenized bag-of-codes text string per row."""
+    return df.apply(lambda row: row_to_code_tokens(row, code_cols=code_cols), axis=1)
+
+
+def fit_bag_of_codes_vectorizer(
+    train_df: pd.DataFrame,
+    code_cols: list[str] | None = None,
+) -> CountVectorizer:
+    """Fit a bag-of-codes CountVectorizer on train rows only."""
+    train_text = dataframe_to_code_token_text(train_df, code_cols=code_cols)
+    vec = CountVectorizer(binary=True, token_pattern=r"[^\s]+")
+    vec.fit(train_text)
+    return vec
+
+
+def transform_bag_of_codes(
+    df: pd.DataFrame,
+    vectorizer: CountVectorizer,
+    code_cols: list[str] | None = None,
+):
+    """Transform rows into sparse bag-of-codes matrix using a fitted vectorizer."""
+    text = dataframe_to_code_token_text(df, code_cols=code_cols)
+    return vectorizer.transform(text)
+
+
+def bag_of_codes_to_dataframe(
+    matrix,
+    vectorizer: CountVectorizer,
+    *,
+    prefix: str = "feat_",
+) -> pd.DataFrame:
+    """Convert sparse bag-of-codes matrix to a dense DataFrame with named columns."""
+    feature_names = vectorizer.get_feature_names_out()
+    out = pd.DataFrame.sparse.from_spmatrix(matrix, columns=[f"{prefix}{n}" for n in feature_names])
+    return out
+
+
 def build_bag_of_codes(
     train_df: pd.DataFrame,
     test_df: pd.DataFrame,
@@ -28,23 +84,10 @@ def build_bag_of_codes(
     Combines diagnoses_codes_current, procedures_codes_current, medications_current
     into one token string per row, then applies CountVectorizer with binary=True.
     """
-    if code_cols is None:
-        code_cols = ["diagnoses_codes_current", "procedures_codes_current", "medications_current"]
-
-    def _to_tokens(row: pd.Series) -> str:
-        parts = []
-        for col in code_cols:
-            val = row.get(col, "")
-            if pd.notna(val) and val:
-                parts.extend(str(val).split(";"))
-        return " ".join(parts)
-
-    train_text = train_df.apply(_to_tokens, axis=1)
-    test_text = test_df.apply(_to_tokens, axis=1)
-
-    vec = CountVectorizer(binary=True, token_pattern=r"[^\s]+")
-    X_train = vec.fit_transform(train_text)
-    X_test = vec.transform(test_text)
+    cols = code_cols or DEFAULT_CODE_COLS
+    vec = fit_bag_of_codes_vectorizer(train_df, code_cols=cols)
+    X_train = transform_bag_of_codes(train_df, vec, code_cols=cols)
+    X_test = transform_bag_of_codes(test_df, vec, code_cols=cols)
 
     logger.info("Bag-of-codes features: %d train × %d features", X_train.shape[0], X_train.shape[1])
     return X_train, X_test, vec

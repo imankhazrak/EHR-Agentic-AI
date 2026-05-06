@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with neurological manifestations, type I [juvenile type], uncontrolled', 'Unspecified essential hypertension', and 'Subendocardial infarction, initial episode of care', which directly support the 'Yes' predictions for diabetes, hypertension, and cardiovascular next visit. The record also lists 'Diabetes with ketoacidosis, type I [juvenile type], uncontrolled' and 'Background diabetic retinopathy', supporting the lipid disorder prediction based on the target definition. 'Acute kidney failure, unspecified' supports the kidney next visit prediction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3624,
+    "completion_tokens": 280
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists diagnoses for Diabetes mellitus and Unspecified essential hypertension. The diagnosis [ICD9-DX:2874] is present, which aligns with the lipid disorder prediction criteria. Obesity is not explicitly diagnosed. Cardiovascular, kidney, and stroke diagnoses are not explicitly listed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3536,
+    "completion_tokens": 281
+  }
+}

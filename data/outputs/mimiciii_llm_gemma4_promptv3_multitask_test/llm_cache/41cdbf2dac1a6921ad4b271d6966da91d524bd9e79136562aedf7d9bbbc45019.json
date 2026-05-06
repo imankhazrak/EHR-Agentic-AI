@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly mentions 'Other and unspecified hyperlipidemia' under Diagnoses made, which supports a 'Yes' prediction for lipid_next, but the specific format requires a Yes/No prediction based on the rules. Since the rules state to answer 'Yes' if explicit diagnosis/history/evidence exists, and 'Other and unspecified hyperlipidemia' is present, the prediction should reflect this. However, the provided format requires a Yes/No prediction for lipid_next, and the probability should reflect the strength of this evidence. Given the explicit mention, the prediction is Yes.\"\n}\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 868,
+    "completion_tokens": 303
+  }
+}

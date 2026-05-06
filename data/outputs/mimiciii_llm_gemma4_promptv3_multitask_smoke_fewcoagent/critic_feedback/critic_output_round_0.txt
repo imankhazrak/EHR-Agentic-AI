@@ -1,0 +1,10 @@
+1. Prioritize explicit diagnoses (e.g., Diabetes, Hypertension) over inferred risk factors (e.g., Atherosclerosis) when determining current status.
+2. Recognize that the presence of multiple cardiovascular risk factors (e.g., Atherosclerosis, Diabetes) should support a positive prediction for related complications (e.g., Lipid Disorder).
+3. Avoid over-relying on single, weak signals (e.g., prescribing a statin) to predict a positive outcome; require a combination of risk factors or explicit diagnosis.
+4. Ensure that the model evaluates each condition independently, preventing the assumption that one condition implies another (e.g., Diabetes does not automatically imply Kidney Disease).
+5. Pay special attention to missed positive cases by recognizing that a combination of known risk factors, even without an explicit diagnosis, can support a positive prediction for a related complication.
+6. Distinguish between insufficient single signals and meaningful combinations of signals when assessing positive predictions.
+7. Do not assume that the absence of an explicit diagnosis for a condition (e.g., Hypertension) means the condition is absent if strong risk factors are present.
+8. Keep criteria generalizable and actionable, grounded solely in the provided samples.
+9. Avoid overly strict rules requiring explicit diagnosis in all positive cases, allowing for inference from strong combinations of signals.
+10. Do not introduce external medical assumptions.

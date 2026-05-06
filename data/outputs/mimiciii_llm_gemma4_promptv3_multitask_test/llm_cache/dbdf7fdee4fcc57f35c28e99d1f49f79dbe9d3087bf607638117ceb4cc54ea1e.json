@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication' and 'Unspecified essential hypertension' as diagnoses. 'Dissection of carotid artery' is a direct finding, supporting the prediction for 'stroke_next' (Yes). 'Obesity' is not mentioned in the diagnoses or procedures. 'Stroke_next' is predicted Yes due to the 'Dissection of carotid artery' finding, similar to how direct findings map to outcomes in the demonstration cases.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3764,
+    "completion_tokens": 263
+  }
+}

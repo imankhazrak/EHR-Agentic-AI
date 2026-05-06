@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Diabetes mellitus without mention of complication' and 'Unspecified essential hypertension' as diagnoses. 'Acute kidney failure, unspecified' is also listed, supporting a 'Yes' for kidney next. 'Disorders of Lipid Metabolism' is supported by the presence of 'Insulin' and 'Simvastatin' as medications, which are treatments for lipid/metabolic issues, aligning with the target definition's scope.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3562,
+    "completion_tokens": 255
+  }
+}

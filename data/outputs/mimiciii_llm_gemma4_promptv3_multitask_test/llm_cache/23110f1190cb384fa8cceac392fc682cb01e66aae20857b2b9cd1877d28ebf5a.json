@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Other and unspecified hyperlipidemia' and 'Obesity, unspecified', confirming lipid disorders and obesity. 'Diabetes mellitus without mention of complication' and 'Unspecified essential hypertension' are also explicitly listed diagnoses, confirming diabetes and hypertension. 'Acute kidney failure with lesion of tubular necrosis' confirms kidney issues. Cardiovascular and stroke predictions are 'No' as there is no explicit diagnosis or strong evidence in the record to support them, aligning with the low probability seen in the demonstration cases where absence of evidence leads to 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3679,
+    "completion_tokens": 281
+  }
+}

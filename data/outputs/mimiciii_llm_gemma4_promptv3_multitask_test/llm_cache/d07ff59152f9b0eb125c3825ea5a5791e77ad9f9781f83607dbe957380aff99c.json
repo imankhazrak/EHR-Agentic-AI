@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The record explicitly documents Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease, and Iatrogenic cerebrovascular infarction or hemorrhage, and Subdural hemorrhage, and Late effects of cerebrovascular disease, aphasia, and Late effects of cerebrovascular disease, hemiplegia affecting unspecified side, indicating severe cardiovascular and renal issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1307,
+    "completion_tokens": 244
+  }
+}

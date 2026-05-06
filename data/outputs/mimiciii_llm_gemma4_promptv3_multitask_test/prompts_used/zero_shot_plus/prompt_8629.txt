@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Cardiac complications, not elsewhere classified; Acute on chronic diastolic heart failure; Pneumonia, organism unspecified; Hematoma complicating a procedure; Unspecified disease of pericardium; Other primary cardiomyopathies; Cardiac arrest; Pulmonary collapse; Iatrogenic pneumothorax; Acute respiratory failure; Acute kidney failure with lesion of tubular necrosis; Pneumonitis due to inhalation of food or vomitus; Acute pancreatitis; Cardiac tamponade; Iatrogenic pulmonary embolism and infarction; Other ill-defined heart diseases; Congestive heart failure, unspecified; Atrial fibrillation; Obesity, unspecified; Anxiety state, unspecified; Mitral valve disorders; Hypoxemia; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Accidents occurring in residential institution; [ICD9-DX:2766]; Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Other diseases of larynx, not elsewhere classified; Other antiprotozoal drugs causing adverse effects in therapeutic use; Asthma, unspecified type, unspecified; Accidents occurring in other specified places; Chest pain, unspecified; Abnormal coagulation profile
+- Medications prescribed: Heparin; Prismasate (B32 K2); Amiodarone; Heparin Sodium; D5W; Alteplase (Catheter Clearance); Erythromycin 0.5% Ophth Oint; HYDROmorphone (Dilaudid); Fentanyl Citrate; Iso-Osmotic Dextrose; Phenylephrine; MetRONIDAZOLE (FLagyl); Vancomycin; Midazolam; NS; Verapamil HCl; Sodium Bicarbonate; D5W (EXCEL BAG); Chlorhexidine Gluconate 0.12% Oral Rinse; Aztreonam; Clindamycin; Metoprolol; Propofol; Prismasate (B22 K4); OxycoDONE (Immediate Release); Norepinephrine; Heparin Flush CVL  (100 units/ml); Calcium Gluconate; Potassium Chloride; SW; Ipratropium Bromide MDI; Albuterol; Bisacodyl; Phytonadione; Ferrous Sulfate (Liquid); Docusate Sodium (Liquid); Vial; Pantoprazole Sodium; Acetaminophen; Lactulose; Warfarin; Clonazepam; Heparin Flush PICC (100 units/ml); Furosemide; Oxycodone SR (OxyconTIN); Metolazone; Aluminum-Magnesium Hydrox.-Simethicone; Sodium Polystyrene Sulfonate; Chlorothiazide Sodium; Senna
+- Procedures performed: Pericardiotomy; Pulmonary artery wedge monitoring; Insertion of intercostal catheter for drainage; Venous catheterization for renal dialysis; Cardiopulmonary resuscitation, not otherwise specified; Insertion of endotracheal tube; Venous catheterization, not elsewhere classified; Diagnostic ultrasound of heart; Transfusion of other serum; Hemodialysis; Closed [endoscopic] biopsy of bronchus; Thoracentesis; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Arterial catheterization; Transfusion of packed cells
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

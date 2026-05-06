@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled' and 'Acute kidney failure with lesion of tubular necrosis', supporting 'Yes' for diabetes and kidney next. 'Mitral valve disorders' and 'Congestive heart failure' support 'Yes' for cardio next. 'Mitral valve disorders' and 'Atrial fibrillation' support 'Yes' for lipid next based on the CCS category 53 definition provided. Hypertension and obesity are not explicitly mentioned in the diagnoses.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3357,
+    "completion_tokens": 275
+  }
+}

@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled; Hepatic encephalopathy; Hepatorenal syndrome; Acute respiratory failure; Esophageal varices in diseases classified elsewhere, with bleeding; Pneumonitis due to inhalation of food or vomitus; Infection and inflammatory reaction due to other internal orthopedic device, implant, and graft; Cellulitis and abscess of leg, except foot; Acute osteomyelitis, ankle and foot; Trimalleolar fracture, open; Other ascites; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Portal hypertension; End stage renal disease; Acute kidney failure, unspecified; Pressure ulcer, buttock; Pressure ulcer, stage II; Cirrhosis of liver without mention of alcohol; Other chronic nonalcoholic liver disease; Thrombocytopenia, unspecified; Chronic airway obstruction, not elsewhere classified; Other and unspecified hyperlipidemia; Morbid obesity; Gastroparesis; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Long-term (current) use of insulin
+- Medications prescribed: Heparin Sodium; 5% Dextrose; Amlodipine; Insulin; Fentanyl Citrate; 0.9% Sodium Chloride (Mini Bag Plus); Meropenem; Acetaminophen; 0.9% Sodium Chloride; Lactulose; Heparin Flush (10 units/ml); Nadolol; Tuberculin Protein; Albumin 25% (12.5g / 50mL); Midodrine; sevelamer HYDROCHLORIDE; Lanthanum; Calcium Acetate; AMP; Octreotide Acetate; Sodium Chloride 0.9%  Flush; CeftriaXONE; Iso-Osmotic Dextrose; Vial; Pantoprazole; Sucralfate; Dextrose 50%; Micafungin; Heparin; Alteplase (Catheter Clearance); Syringe (0.9% Sodium Chloride); Piperacillin-Tazobactam; Daptomycin; Calcium Gluconate; FoLIC Acid; Syringe; Propofol; Haloperidol; Heparin Flush (1000 units/mL); Olanzapine (Disintegrating Tablet); Lansoprazole Oral Disintegrating Tab; Norepinephrine; Chlorhexidine Gluconate 0.12% Oral Rinse; Iso-Osmotic Sodium Chloride; Famotidine; Soln; Citrate Dextrose 3% (ACD-A) CRRT; BuPROPion; Phytonadione; Heparin Flush (100 units/ml)
+- Procedures performed: Biopsy of bone, tibia and fibula; Debridement of open fracture site, tibia and fibula; Removal of implanted devices from bone, tibia and fibula; Open reduction of fracture with internal fixation, tibia and fibula; Other repair or plastic operations on bone, tibia and fibula; Local excision of lesion or tissue of bone, tibia and fibula; Endoscopy of large intestine through artificial stoma; Other endoscopy of small intestine; Endoscopic excision or destruction of lesion or tissue of esophagus; Percutaneous abdominal drainage; Venous catheterization, not elsewhere classified; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Insertion of endotracheal tube; Arterial catheterization; Hemodialysis; Enteral infusion of concentrated nutritional substances; Venous catheterization for renal dialysis
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

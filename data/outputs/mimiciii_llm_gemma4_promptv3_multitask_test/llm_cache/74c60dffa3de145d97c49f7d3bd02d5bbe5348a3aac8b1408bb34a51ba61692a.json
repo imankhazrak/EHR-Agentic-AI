@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with neurological manifestations, type II or unspecified type' and 'Unspecified essential hypertension', confirming current status for these conditions. 'Atherosclerosis of native arteries' supports the prediction for cardiovascular disease in the next visit. 'Disorders of Lipid Metabolism' is supported by the presence of these related diagnoses and medications like 'Atorvastatin', aligning with the target definition. Obesity is not explicitly diagnosed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3422,
+    "completion_tokens": 263
+  }
+}

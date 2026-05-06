@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents Pure hypercholesterolemia and Hypertensive chronic kidney disease, which satisfy the criteria for lipid disorders. Diabetes mellitus and Hypertensive chronic kidney disease confirm current diabetes and hypertension. Cardiovascular disease is confirmed by Subendocardial infarction and Congestive heart failure. Kidney disease is confirmed by Chronic kidney disease and Hypertensive chronic kidney disease. Obesity is not explicitly documented.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1055,
+    "completion_tokens": 245
+  }
+}

@@ -1,0 +1,35 @@
+--- Sample 1 ---
+[Patient Medical History]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Other complications due to other cardiac device, implant, and graft; Ulcer of other part of foot; Coronary atherosclerosis of native coronary artery; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled
+- Medications prescribed: Eptifibatide; Valsartan; Atorvastatin; D5W; DopAmine; SW; Heparin Sodium; Haloperidol; Captopril; Insulin; 1/2 NS; Atropine Sulfate; Quetiapine Fumarate; Cefpodoxime Proxetil; Metoprolol; Clopidogrel Bisulfate; Acetaminophen; Docusate Sodium; Senna; Amiodarone HCl; Sodium Chloride 0.9%  Flush; D5 1/2NS; Aspirin; Heparin; NS; Digoxin; Magnesium Oxide
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Procedure on single vessel; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly diagnoses 'Diabetes mellitus without mention of complication, type II or unspecified type' and 'Coronary atherosclerosis of native coronary artery', supporting 'Yes' for diabetes and cardio next. 'Subendocardial infarction' supports lipid disorder next. 'Valsartan' is prescribed, but no explicit hypertension diagnosis is present, leading to 'No' for current hypertension. No explicit evidence for obesity, kidney disease, or stroke is present.
+
+--- Sample 2 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of autologous vein bypass graft of the extremities; Acute posthemorrhagic anemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension
+- Medications prescribed: Potassium Chloride; Insulin; Oxycodone-Acetaminophen; Heparin Sodium; Furosemide; Warfarin; D5W; Senna; Docusate Sodium; Bisacodyl; Magnesium Sulfate; Enoxaparin Sodium; Pantoprazole Sodium; Nitroglycerin Ointment  2%; Morphine Sulfate; LR; Vial; Isotonic Sodium Chloride; Vancomycin HCl; Iso-Osmotic Dextrose; Gentamicin; Insulin Human Regular; NS; Heparin Flush CVL  (100 units/ml); Aspirin; Lisinopril; Metoprolol XL (Toprol XL); Simvastatin; Clopidogrel Bisulfate; Diltiazem Extended-Release; GlyBURIDE; MetFORMIN (Glucophage); Lyrica; Pantoprazole
+- Procedures performed: Other revision of vascular procedure; Repair of blood vessel with tissue patch graft
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Atherosclerosis (indicating cardiovascular risk). The presence of Simvastatin and Clopidogrel Bisulfate supports the prediction of lipid disorders. Obesity is not mentioned in the diagnoses or procedures. Kidney disease, stroke, and specific next-visit diagnoses are not explicitly documented.
+
+--- Sample 3 ---
+[Patient Medical History]
+- Diagnoses made: Subendocardial infarction, initial episode of care; Other complications due to other cardiac device, implant, and graft; Ulcer of other part of foot; Coronary atherosclerosis of native coronary artery; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled
+- Medications prescribed: Eptifibatide; Valsartan; Atorvastatin; D5W; DopAmine; SW; Heparin Sodium; Haloperidol; Captopril; Insulin; 1/2 NS; Atropine Sulfate; Quetiapine Fumarate; Cefpodoxime Proxetil; Metoprolol; Clopidogrel Bisulfate; Acetaminophen; Docusate Sodium; Senna; Amiodarone HCl; Sodium Chloride 0.9%  Flush; D5 1/2NS; Aspirin; Heparin; NS; Digoxin; Magnesium Oxide
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Procedure on single vessel; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly diagnoses 'Diabetes mellitus without mention of complication, type II or unspecified type' and 'Coronary atherosclerosis of native coronary artery', supporting 'Yes' for diabetes and cardio next. 'Subendocardial infarction' supports lipid disorder next. 'Valsartan' is prescribed, but no explicit hypertension diagnosis is present, leading to 'No' for current hypertension. No explicit evidence for obesity, kidney disease, or stroke is present.
+
+--- Sample 4 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of autologous vein bypass graft of the extremities; Acute posthemorrhagic anemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension
+- Medications prescribed: Potassium Chloride; Insulin; Oxycodone-Acetaminophen; Heparin Sodium; Furosemide; Warfarin; D5W; Senna; Docusate Sodium; Bisacodyl; Magnesium Sulfate; Enoxaparin Sodium; Pantoprazole Sodium; Nitroglycerin Ointment  2%; Morphine Sulfate; LR; Vial; Isotonic Sodium Chloride; Vancomycin HCl; Iso-Osmotic Dextrose; Gentamicin; Insulin Human Regular; NS; Heparin Flush CVL  (100 units/ml); Aspirin; Lisinopril; Metoprolol XL (Toprol XL); Simvastatin; Clopidogrel Bisulfate; Diltiazem Extended-Release; GlyBURIDE; MetFORMIN (Glucophage); Lyrica; Pantoprazole
+- Procedures performed: Other revision of vascular procedure; Repair of blood vessel with tissue patch graft
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Atherosclerosis (indicating cardiovascular risk). The presence of Simvastatin and Clopidogrel Bisulfate supports the prediction of lipid disorders. Obesity is not mentioned in the diagnoses or procedures. Kidney disease, stroke, and specific next-visit diagnoses are not explicitly documented.

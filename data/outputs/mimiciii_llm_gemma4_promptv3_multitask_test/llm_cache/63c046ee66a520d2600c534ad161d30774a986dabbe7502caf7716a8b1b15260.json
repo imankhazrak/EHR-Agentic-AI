@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Hypertensive chronic kidney disease, unspecified' and 'Morbid obesity' as diagnoses, supporting 'Yes' for hypertension and obesity. 'Chronic kidney disease, Stage IV (severe)' supports 'Yes' for kidney next. 'Chronic systolic heart failure' supports 'Yes' for cardio next. 'Hypertensive chronic kidney disease' supports 'Yes' for lipid next due to associated risk factors and the explicit diagnosis of 'Morbid obesity' which falls under CCS category 53 context. 'Chronic kidney disease' supports 'Yes' for lipid next. 'No' for diabetes and stroke as there is no explicit evidence in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3432,
+    "completion_tokens": 303
+  }
+}

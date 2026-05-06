@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with renal manifestations, type II or unspecified type, uncontrolled', 'Hypertensive chronic kidney disease', and 'End stage renal disease', which directly support the 'Yes' predictions for diabetes, hypertension, and kidney next/current status. The diagnosis of 'Diabetes with neurological manifestations' and 'Polyneuropathy in diabetes' supports the lipid disorder prediction as per the target definition's scope. 'Chronic diastolic heart failure' and 'Congestive heart failure' support the 'Yes' prediction for cardio next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3683,
+    "completion_tokens": 281
+  }
+}

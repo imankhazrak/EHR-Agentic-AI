@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The record explicitly lists 'Unspecified essential hypertension' as a diagnosis, supporting a 'Yes' for current hypertension. 'Acute myocardial infarction of unspecified site' and 'Cerebral embolism with cerebral infarction' indicate severe cardiovascular issues, supporting 'Yes' for next cardio and stroke. 'Disorders of Lipid Metabolism' is not explicitly diagnosed, leading to 'No' for lipid next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3754,
+    "completion_tokens": 246
+  }
+}

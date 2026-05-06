@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.30},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly documents 'Diabetes with ophthalmic manifestations, type I [juvenile type]' and 'Unspecified essential hypertension'. 'Acute kidney failure' is documented, and 'Late effects of cerebrovascular disease, hemiplegia' and 'Late effects of cerebrovascular disease, aphasia' are present, indicating stroke/cardio events.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1253,
+    "completion_tokens": 239
+  }
+}

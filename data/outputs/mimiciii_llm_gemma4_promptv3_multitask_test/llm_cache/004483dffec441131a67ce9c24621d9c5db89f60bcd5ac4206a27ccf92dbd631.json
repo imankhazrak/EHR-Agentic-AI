@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record documents various severe diagnoses, including acute kidney failure and secondary malignant neoplasms, but it does not explicitly mention any diagnosis or history of hypercholesterolemia, hyperlipidemia, or other conditions that would qualify as 'Disorders of Lipid Metabolism'. Similarly, there is no explicit mention of diabetes, hypertension, obesity, or specific next-visit diagnoses for cardiovascular disease, kidney disease, or stroke.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1164,
+    "completion_tokens": 251
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly documents 'Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled' and 'Primary pulmonary hypertension' and 'Subendocardial infarction, initial episode of care' and 'Mitral valve disorders' and 'Gemfibrozil' and 'Atorvastatin' which supports the diagnosis of lipid abnormalities.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1036,
+    "completion_tokens": 253
+  }
+}

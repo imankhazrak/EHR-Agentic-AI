@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Morbid obesity' and 'Primary pulmonary hypertension'. The presence of 'Morbid obesity' supports the 'obesity_current' prediction. 'Primary pulmonary hypertension' supports the 'hypertension_current' prediction, as pulmonary hypertension is a form of elevated pressure. 'Morbid obesity' and 'Primary pulmonary hypertension' are strong indicators for the 'cardio_next' prediction, as they relate to cardiovascular issues. The record also lists 'Personal history of venous thrombosis and embolism' and 'Long-term (current) use of anticoagulants', which are related to cardiovascular risk. The 'lipid_next' prediction is 'Yes' because the definition includes hypercholesterolemia/hyperlipidemia, and the record shows strong cardiovascular risk factors associated with lipid disorders.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3341,
+    "completion_tokens": 330
+  }
+}

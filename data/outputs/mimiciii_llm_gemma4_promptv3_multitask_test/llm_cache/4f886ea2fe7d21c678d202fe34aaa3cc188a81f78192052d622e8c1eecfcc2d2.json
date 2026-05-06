@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Diabetes with ophthalmic manifestations, type I [juvenile type]' and 'Diabetes with renal manifestations, type I [juvenile type]', confirming diabetes. Cardiovascular issues are supported by 'Congestive heart failure, unspecified' and 'Other and unspecified angina pectoris', suggesting a high probability for next visit. Kidney status is confirmed by 'Kidney replaced by transplant' and 'Diabetes with renal manifestations, type I [juvenile type]'. No explicit diagnosis of lipid disorder, hypertension, obesity, or stroke is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 876,
+    "completion_tokens": 280
+  }
+}

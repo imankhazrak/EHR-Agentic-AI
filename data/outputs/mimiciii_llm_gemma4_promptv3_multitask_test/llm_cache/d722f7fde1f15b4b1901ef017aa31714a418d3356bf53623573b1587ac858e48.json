@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses including 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', 'Unspecified essential hypertension', 'Acute kidney failure, unspecified', 'Atrial fibrillation', and 'Malignant neoplasm of kidney, except pelvis'. The record does not explicitly mention obesity or a specific diagnosis of lipid disorder, but the presence of multiple severe comorbidities strongly supports the prediction based on the documented clinical picture.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1042,
+    "completion_tokens": 260
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Other and unspecified hyperlipidemia' and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', confirming the presence of lipid disorders and diabetes. Hypertension is confirmed by the diagnosis 'Hypertensive chronic kidney disease'. Cardiovascular disease is supported by the diagnosis 'Cerebral embolism with cerebral infarction' and 'Subclavian steal syndrome', indicating next visit risk. Kidney disease is confirmed by 'Hypertensive chronic kidney disease'. Stroke risk is supported by the diagnosis 'Cerebral embolism with cerebral infarction'. Obesity is not explicitly diagnosed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3655,
+    "completion_tokens": 293
+  }
+}

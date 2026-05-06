@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension' as diagnoses. 'Obesity' is not listed as a diagnosis, and no explicit evidence for the other next-visit conditions (lipid, cardio, kidney, stroke) is present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3487,
+    "completion_tokens": 290
+  }
+}

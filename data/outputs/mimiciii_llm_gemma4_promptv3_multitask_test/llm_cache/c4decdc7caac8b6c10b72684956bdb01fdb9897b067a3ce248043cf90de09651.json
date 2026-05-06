@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Acute and chronic respiratory failure, Other convulsions, Pneumonitis due to inhalation of food or vomitus, Chronic airway obstruction, not elsewhere classified, Chronic hepatitis C without mention of hepatic coma, Pneumonia due to Klebsiella pneumoniae, Acute diastolic heart failure, Bacteremia, Opioid abuse, unspecified, Acquired coagulation factor deficiency, Infection and inflammatory reaction due to other vascular device, implant, and graft, Pneumonia due to other gram-negative bacteria, Congestive heart failure, unspecified, Viral pneumonia, unspecified, Hypopotassemia, Hypotension, unspecified, and Chronic hepatitis C without mention of hepatic coma. No explicit diagnosis or history of hypercholesterolemia, hyperlipidemia, or related lipid abnormalities is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1061,
+    "completion_tokens": 326
+  }
+}

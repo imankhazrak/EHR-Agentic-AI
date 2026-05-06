@@ -1,0 +1,89 @@
+--- Sample 1 ---
+[Patient Medical History]
+- Diagnoses made: Diabetes with other specified manifestations, type I [juvenile type], uncontrolled; Kidney replaced by transplant; Complications of transplanted pancreas; [ICD9-DX:5185]; Thrombocytopenia, unspecified; Cellulitis and abscess of trunk; Portal vein thrombosis; Iron deficiency anemia, unspecified; Fitting and adjustment of insulin pump; Delirium due to conditions classified elsewhere; Unspecified essential hypertension; Abnormal involuntary movements
+- Medications prescribed: Syringe (IV Room); Lorazepam; Metoprolol; NS; Levofloxacin; Iso-Osmotic Dextrose; Dextrose 5%; Vancomycin HCl; Metronidazole; Heparin Sodium; D5W; Prochlorperazine; Dolasetron Mesylate; Acetaminophen; Tacrolimus; Methylprednisolone Na Succ.; Furosemide; Calcium Gluconate; Magnesium Sulfate; Filgrastim; Valganciclovir HCl; D5 1/2NS; Mycophenolate Mofetil; Amlodipine; Potassium Phosphate; Anti-Thymocyte Globulin (Rabbit); Prednisone; Hydromorphone; Clonazepam; Vial; Methylprednisolone Na Succ; Heparin; Hydrocortisone Na Succ.; Dextrose 50%; Potassium Chloride; Pantoprazole; Pantoprazole Sodium; Nystatin Oral Suspension; Benzocaine 20% Spray; Valganciclovir HCl Suspension; Pamidronate; Ganciclovir; Phenaseptic Throat Spray; Insulin Human Regular; CycloSPORINE Modified (Neoral); Propofol; Heparin Flush CVL  (100 units/ml); Haloperidol; Dexmedetomidine HCl; 1/2 NS
+- Procedures performed: Homotransplant of pancreas; Incision of vessel, abdominal arteries; Total pancreatectomy; Transplant from cadaver; Transfusion of packed cells; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; Venous catheterization, not elsewhere classified; Parenteral infusion of concentrated nutritional substances; Transfusion of platelets
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists 'Diabetes with other specified manifestations, type I [juvenile type], uncontrolled' and 'Unspecified essential hypertension'. 'Kidney replaced by transplant' indicates a current state. Lipid disorder prediction is 'Yes' based on the explicit diagnosis of diabetes, which falls under the CCS category 53 context. Obesity is not mentioned in the record.
+
+--- Sample 2 ---
+[Patient Medical History]
+- Diagnoses made: Neoplasm of unspecified nature of brain; Abnormality of gait; Mild cognitive impairment, so stated; Late effect of intracranial injury without mention of skull fracture; Unspecified essential hypertension; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Esophageal reflux; Hypertrophy (benign) of prostate without urinary obstruction and other lower urinary tract symptom (LUTS); Depressive disorder, not elsewhere classified; Personal history of malignant neoplasm of esophagus; Personal history of other injury; Acquired absence of organ, eye; Late effects of other transport accident
+- Medications prescribed: Influenza Virus Vaccine; Sodium Chloride 0.9%  Flush; Zolpidem Tartrate; Alteplase (Catheter Clearance); Lorazepam; traZODONE; 0.9% Sodium Chloride; NiCARdipine IV; Amlodipine; NIFEdipine; Tamsulosin; Heparin Flush (10 units/ml); Heparin Flush (100 units/ml); Amantadine; Citalopram Hydrobromide; Pantoprazole; Vitamin D; Finasteride; Lactulose; Senna; Docusate Sodium; Bisacodyl; Insulin; Metoprolol Tartrate
+- Procedures performed: Incision of lung
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Neoplasm of unspecified nature of brain. The lipid disorder prediction is 'Yes' based on the explicit diagnosis of these conditions, which fall under the scope of the target definition and the provided examples.
+
+--- Sample 3 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of autologous vein bypass graft of the extremities; Acute posthemorrhagic anemia; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension
+- Medications prescribed: Potassium Chloride; Insulin; Oxycodone-Acetaminophen; Heparin Sodium; Furosemide; Warfarin; D5W; Senna; Docusate Sodium; Bisacodyl; Magnesium Sulfate; Enoxaparin Sodium; Pantoprazole Sodium; Nitroglycerin Ointment  2%; Morphine Sulfate; LR; Vial; Isotonic Sodium Chloride; Vancomycin HCl; Iso-Osmotic Dextrose; Gentamicin; Insulin Human Regular; NS; Heparin Flush CVL  (100 units/ml); Aspirin; Lisinopril; Metoprolol XL (Toprol XL); Simvastatin; Clopidogrel Bisulfate; Diltiazem Extended-Release; GlyBURIDE; MetFORMIN (Glucophage); Lyrica; Pantoprazole
+- Procedures performed: Other revision of vascular procedure; Repair of blood vessel with tissue patch graft
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Atherosclerosis (which implies cardiovascular risk). The lipid disorder prediction is 'Yes' based on the explicit diagnosis of these related conditions, aligning with the target definition. Obesity is not mentioned. Kidney and stroke are not explicitly diagnosed.
+
+--- Sample 4 ---
+[Patient Medical History]
+- Diagnoses made: Other encephalopathy; Acute respiratory failure; Grand mal status; Closed fracture of mandible, coronoid process; Acute kidney failure, unspecified; Acidosis; Pneumonia, organism unspecified; Iatrogenic pneumothorax; Unspecified fall; Cerebral atherosclerosis; Vascular dementia, uncomplicated; Contusion of orbital tissues; Contusion of face, scalp, and neck except eye(s); History of fall; Incontinence without sensory awareness; Arthrodesis status; Unspecified essential hypertension; Antiviral drugs causing adverse effects in therapeutic use; Nontoxic uninodular goiter; Other specified conditions of the tongue
+- Medications prescribed: NS (Glass Bottle); Metoprolol; CefTRIAXone; Fentanyl Citrate; NS; Insulin; Iso-Osmotic Dextrose; D5W; Phenobarbital Sodium; Phenytoin Sodium; Vancomycin HCl; Ranitidine (Liquid); Glycerin 50%; Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; Vecuronium Bromide; Heparin Flush CVL  (100 units/ml); Sodium Chloride 0.9%  Flush; Acetaminophen; Acyclovir; Magnesium Sulfate; Lorazepam; Multivitamins; Phenytoin; Propofol; Ampicillin Sodium; NS (Mini Bag Plus); Lansoprazole Oral Suspension; Potassium Chloride; Calcium Gluconate; SW; HydrALAZINE HCl; Fluphenazine; Vitamin D; Calcium Carbonate; Docusate Sodium; Senna; Niacin SR; Heparin; Pneumococcal Vac Polyvalent; Levetiracetam; Vial; D5 1/2NS; Pantoprazole Sodium; Sulfameth/Trimethoprim DS; Phenytoin (Suspension); Levofloxacin; Bisacodyl; Captopril; Fluticasone Propionate 110mcg; Albuterol 0.083% Neb Soln
+- Procedures performed: Temporary tracheostomy; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Percutaneous [endoscopic] gastrostomy [PEG]; Enteral infusion of concentrated nutritional substances; Incision of lung; Insertion of intercostal catheter for drainage
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record explicitly lists 'Unspecified essential hypertension' as a diagnosis. 'Acute kidney failure, unspecified' is also listed, supporting a 'Yes' prediction for kidney_next. No explicit diagnoses of hypercholesterolemia or hyperlipidemia were found to support a 'Yes' prediction for lipid_next.
+
+--- Sample 5 ---
+[Patient Medical History]
+- Diagnoses made: Atherosclerosis of native arteries of the extremities with gangrene; Chronic airway obstruction, not elsewhere classified; Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled; Polyneuropathy in diabetes; Coronary atherosclerosis of native coronary artery; Anemia, unspecified; Other chronic pulmonary heart diseases; Aortocoronary bypass status; Unspecified disorder of kidney and ureter
+- Medications prescribed: None recorded
+- Procedures performed: Other (peripheral) vascular shunt or bypass; Amputation of toe; Pulmonary artery wedge monitoring; Arteriography of femoral and other lower extremity arteries; Venous catheterization, not elsewhere classified
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists 'Diabetes with neurological manifestations, type II or unspecified type' and 'Unspecified disorder of kidney and ureter', supporting 'Yes' for diabetes and kidney next. 'Atherosclerosis' and 'Coronary atherosclerosis' support 'Yes' for lipid next and cardio next. Hypertension and obesity are not explicitly mentioned in the diagnoses or procedures.
+
+--- Sample 6 ---
+[Patient Medical History]
+- Diagnoses made: Dissection of aorta, thoracic; Pneumonia, organism unspecified; Rupture of artery; Unspecified essential hypertension; Coronary atherosclerosis of native coronary artery; Pure hypercholesterolemia; Unspecified hereditary and idiopathic peripheral neuropathy; Asthma, unspecified type, unspecified; Unspecified glaucoma; Barrett's esophagus; Abdominal pain, periumbilic; Backache, unspecified; Pain in joint, lower leg; Diverticulosis of colon (without mention of hemorrhage)
+- Medications prescribed: D5W; NS; Labetalol HCl; Captopril; Nitroprusside Sodium; Esmolol; Pantoprazole Sodium; Fentanyl Citrate; Pilocarpine 1%; Magnesium Sulfate; Potassium Chloride; Amlodipine; Betaxolol Hcl  0.25%; Alphagan P; Heparin; Atorvastatin; Docusate Sodium; Fluticasone Propionate 110mcg; Ipratropium Bromide Neb; Pantoprazole; Acetaminophen; Sodium Chloride 0.9%  Flush; Gabapentin; Dolasetron Mesylate; Levofloxacin; Senna; Lactulose; Pneumococcal Vac Polyvalent; Aspirin EC; Sodium Chloride Nasal; Simethicone; Lisinopril
+- Procedures performed: None recorded
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly diagnoses 'Pure hypercholesterolemia' and 'Unspecified essential hypertension', which directly supports a 'Yes' prediction for lipid disorder and hypertension, respectively. 'Coronary atherosclerosis' supports a 'Yes' for cardiovascular disease. No explicit evidence for diabetes, obesity, kidney disease, or stroke is present.
+
+--- Sample 7 ---
+[Patient Medical History]
+- Diagnoses made: Atrial fibrillation; Chronic systolic heart failure; Congestive heart failure, unspecified; Paroxysmal ventricular tachycardia; Other primary cardiomyopathies; Chronic kidney disease, unspecified; Esophageal reflux; Chronic airway obstruction, not elsewhere classified; Obstructive sleep apnea (adult)(pediatric); Depressive disorder, not elsewhere classified; Personal history of hodgkin's disease; Personal history of antineoplastic chemotherapy; Personal history of irradiation, presenting hazards to health
+- Medications prescribed: Bisacodyl; Docusate Sodium; Captopril; Atenolol; BuPROPion (Sustained Release); Pantoprazole; Lorazepam; Simvastatin; Senna; Digoxin; Doxazosin; Fluticasone Propionate 110mcg; Furosemide; Gabapentin; Acetaminophen; Simethicone; Potassium Chloride; Sodium Chloride 0.9%  Flush; Magnesium Oxide; Warfarin; Iso-Osmotic Dextrose; Vancomycin; OxycoDONE (Immediate Release); Clindamycin; Ranitidine; Spironolactone; Ipratropium Bromide MDI; Magnesium Sulfate; SW; Dofetilide
+- Procedures performed: Implantation or replacement of automatic cardioverter/defibrillator, total system [AICD]
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current visit record explicitly lists 'Obstructive sleep apnea (adult)(pediatric)' as a diagnosis, which is related to obesity. 'Chronic kidney disease, unspecified' is listed as a diagnosis. 'Atrial fibrillation' and 'Chronic systolic heart failure' are listed as diagnoses, supporting a 'Yes' for cardiovascular next prediction. 'Chronic kidney disease, unspecified' supports a 'Yes' for kidney next prediction. No explicit diagnosis of hypercholesterolemia or hyperlipidemia is present, leadin
+
+--- Sample 8 ---
+[Patient Medical History]
+- Diagnoses made: Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease; Diastolic heart failure, unspecified; Chronic kidney disease, Stage V; Congestive heart failure, unspecified; Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled; Polyneuropathy in diabetes; Abdominal pain, epigastric
+- Medications prescribed: Morphine Sulfate; Heparin; Sodium Chloride 0.9%  Flush; Ondansetron; HydrALAzine; Lidocaine 5% Patch; Lisinopril; Glycopyrrolate; Dextrose 50%; Famotidine; Gabapentin; Docusate Sodium; Duloxetine; Insulin; NIFEdipine CR; Aspirin; Omeprazole; Calcium Acetate; Zolpidem Tartrate; Senna; Sevelamer; Heparin Flush (10 units/ml); OxycoDONE (Immediate Release); D5W; Labetalol; Valsartan; Metoprolol Tartrate; Prochlorperazine
+- Procedures performed: Hemodialysis
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The current visit record explicitly lists diagnoses such as 'Diabetes with neurological manifestations, type I [juvenile type]' and 'Hypertensive chronic kidney disease'. 'Cardio_next' and 'Kidney_next' are supported by the presence of 'Diastolic heart failure' and 'Chronic kidney disease, Stage V'. 'Lipid_next' is supported by the explicit diagnosis of 'Diabetes with neurological manifestations, type I', which falls under the scope of lipid disorder prediction. 'Obesity_current' and 'Stroke_nex
+
+--- Sample 9 ---
+[Patient Medical History]
+- Diagnoses made: Acute myocardial infarction of inferolateral wall, initial episode of care; Coronary atherosclerosis of native coronary artery; Mitral valve disorders; Diseases of tricuspid valve; Tobacco use disorder
+- Medications prescribed: None recorded
+- Procedures performed: [ICD9-PX:3601]; Insertion of non-drug-eluting coronary artery stent(s); Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters
+[Actual Outcome] Yes
+[Wrong Prediction] No
+[Predictor Reasoning] The current record explicitly lists 'Acute myocardial infarction of inferolateral wall' and 'Coronary atherosclerosis', providing strong evidence for future cardiovascular issues. No explicit evidence for diabetes, hypertension, obesity, or kidney disease is present in the record.
+
+--- Sample 10 ---
+[Patient Medical History]
+- Diagnoses made: Alcoholic cirrhosis of liver; Hepatic encephalopathy; Acute kidney failure with lesion of tubular necrosis; Other ascites; Listeriosis; Bacteremia; Accidental puncture or laceration during a procedure, not elsewhere classified; Hematoma complicating a procedure; Acute posthemorrhagic anemia; Unspecified protein-calorie malnutrition; Pulmonary congestion and hypostasis; Other and unspecified coagulation defects; Blood in stool; Cirrhosis of liver without mention of alcohol; Unspecified acquired hypothyroidism; Myalgia and myositis, unspecified; Unspecified disorder of stomach and duodenum; Iron deficiency anemia secondary to blood loss (chronic); Other and unspecified alcohol dependence, in remission; Anxiety state, unspecified; Other (abnormal) findings on radiological examination of breast; Other specified procedures as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure
+- Medications prescribed: Bag; 5% Dextrose; Heparin; Sodium Chloride 0.9%  Flush; ValGANCIclovir Suspension; 0.9% Sodium Chloride; Pantoprazole; Phenylephrine; Prismasate (B32 K2); Ampicillin Sodium; Ondansetron; Lidocaine Jelly 2% (Urojet); Midodrine; CefePIME; Phytonadione; Desmopressin Acetate; MetRONIDAZOLE (FLagyl); Iso-Osmotic Dextrose; Citrate Dextrose 3% (ACD-A) CRRT; Prismasate (B22 K4); NS; CeftriaXONE; Sodium CITRATE 4%; Heparin Flush (10 units/ml); SW; Potassium Chloride; Calcium Gluconate; Norepinephrine; Heparin Flush (1000 units/mL); Meropenem; 0.9% Sodium Chloride (Mini Bag Plus); Vancomycin; Lansoprazole Oral Disintegrating Tab; Albumin 25% (12.5g / 50mL); Fentanyl Citrate; Midazolam; Vial; Dextrose 50%; Insulin; Lorazepam; Sodium Polystyrene Sulfonate; Sodium Bicarbonate; Lidocaine 5% Patch; Albuterol 0.083% Neb Soln; Furosemide; Benzocaine 20% Spray; Rifaximin; Nadolol; Octreotide Acetate; AMP
+- Procedures performed: Other transplant of liver; Transplant from cadaver; Percutaneous abdominal drainage; Venous catheterization for renal dialysis; Hemodialysis; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Continuous invasive mechanical ventilation for 96 consecutive hours or more
+[Actual Outcome] No
+[Wrong Prediction] Yes
+[Predictor Reasoning] The record explicitly lists 'Unspecified disorder of stomach and duodenum' and 'Other and unspecified alcohol dependence, in remission', which are related to lipid abnormalities. Furthermore, the presence of 'Hepatic encephalopathy' and 'Cirrhosis of liver without mention of alcohol' strongly suggests underlying metabolic issues consistent with lipid disorders. Hypertension is supported by the prescription of 'Phenylephrine', a common pressor agent. Kidney issues are confirmed by the diagnosis '

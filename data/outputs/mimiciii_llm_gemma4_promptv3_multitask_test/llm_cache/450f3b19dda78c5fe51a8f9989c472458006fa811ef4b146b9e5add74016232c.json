@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled'. The record also lists 'Aortic valve disorders' and 'Other left bundle branch block', which are related to cardiovascular status. 'Disorders of Lipid Metabolism' is predicted as 'Yes' based on the explicit mention of related conditions and the high probability derived from the target definition and record content.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3627,
+    "completion_tokens": 260
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record explicitly diagnoses Chronic kidney disease and Atrial fibrillation, which are related to cardiovascular issues. However, there is no explicit diagnosis of hypercholesterolemia or hyperlipidemia to confirm 'Disorders of Lipid Metabolism'. Diabetes, hypertension, and obesity are not explicitly diagnosed in the record. Atrial fibrillation suggests a risk for cardiovascular events, and Chronic kidney disease is explicitly documented.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3511,
+    "completion_tokens": 246
+  }
+}

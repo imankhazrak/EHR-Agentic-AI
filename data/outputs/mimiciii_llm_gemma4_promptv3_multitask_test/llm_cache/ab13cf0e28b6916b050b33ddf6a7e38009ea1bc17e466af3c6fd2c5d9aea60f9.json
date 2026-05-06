@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Diabetes mellitus of mother' and 'Diabetes with ketoacidosis, type I [juvenile type]'. The record also contains 'Background diabetic retinopathy' and 'Humulin-R Insulin' prescription, supporting the prediction of lipid disorder (CCS category 53) as per the target definition and demonstration cases. Hypertension and obesity are not explicitly mentioned in the diagnoses or medications.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3394,
+    "completion_tokens": 251
+  }
+}

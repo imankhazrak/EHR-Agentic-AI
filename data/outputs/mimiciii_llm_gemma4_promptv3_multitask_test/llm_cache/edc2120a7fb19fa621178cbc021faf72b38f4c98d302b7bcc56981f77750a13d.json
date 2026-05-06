@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The record explicitly documents 'Hypertensive chronic kidney disease' and 'Other primary cardiomyopathies', supporting the prediction of hypertension and cardiovascular next visit. 'End stage renal disease' supports kidney next visit. 'Hyperpotassemia' and 'Systemic lupus erythematosus' are documented, but no explicit lipid diagnosis is present, yet the high probability is based on the general context and the documented severe renal/cardiac status which often correlates with lipid disorders, as seen in the demonstration cases.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3513,
+    "completion_tokens": 314
+  }
+}

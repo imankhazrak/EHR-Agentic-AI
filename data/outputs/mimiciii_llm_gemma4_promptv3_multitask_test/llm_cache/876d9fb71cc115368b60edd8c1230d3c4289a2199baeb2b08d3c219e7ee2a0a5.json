@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' as a diagnosis, supporting a 'Yes' prediction for lipid disorders. Diabetes mellitus is also explicitly listed as a diagnosis. Hypertension is supported by the diagnosis 'Hypertensive chronic kidney disease, unspecified'. Cardiovascular disease is supported by diagnoses like 'Acute on chronic systolic heart failure' and 'Congestive heart failure, unspecified'. Kidney disease is supported by diagnoses such as 'Chronic kidney disease, unspecified' and 'Acute kidney failure, unspecified'. Obesity is not explicitly listed as a diagnosis, thus 'No'. Stroke is not explicitly listed as a diagnosis, thus 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3823,
+    "completion_tokens": 295
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension' as diagnoses. 'Congestive heart failure' and 'Subendocardial infarction' are also present, supporting a 'Yes' prediction for lipid next and cardio next based on the presence of related diagnoses and medications like Atorvastatin.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3572,
+    "completion_tokens": 297
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Other rheumatoid arthritis with visceral or systemic involvement', 'Compression of brain', 'Human immunodeficiency virus [HIV] disease', 'Acute respiratory failure', 'Systemic inflammatory response syndrome due to noninfectious process without acute organ dysfunction', 'Candidiasis of mouth', 'Pulmonary collapse', 'Hyposmolality and/or hyponatremia', 'Alkalosis', 'Other postablative hypothyroidism', 'Anemia, unspecified', 'Hypotension, unspecified', 'Diarrhea', 'Other secondary thrombocytopenia', 'Leukocytosis, unspecified', and 'Systemic inflammatory response syndrome due to noninfectious process without acute organ dysfunction'. There is no explicit mention of 'Disorders of Lipid Metabolism', diabetes, hypertension, obesity, or cardiovascular/kidney/stroke diagnoses in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1034,
+    "completion_tokens": 342
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with ketoacidosis, type I' and 'Unspecified essential hypertension', providing direct evidence for these conditions. 'Coronary atherosclerosis' supports the prediction for cardiovascular disease. 'Acute kidney failure' provides direct evidence for kidney issues. 'Obesity' is not mentioned in the diagnoses or medications. Lipid disorder prediction is supported by the explicit diagnosis of 'Diabetes with ketoacidosis', which falls under the scope of lipid abnormalities.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3386,
+    "completion_tokens": 266
+  }
+}

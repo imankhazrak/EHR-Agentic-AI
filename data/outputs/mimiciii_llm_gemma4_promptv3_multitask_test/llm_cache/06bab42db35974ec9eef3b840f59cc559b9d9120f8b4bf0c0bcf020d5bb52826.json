@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Hypertensive chronic kidney disease, unspecified' and 'Other primary cardiomyopathies', supporting the prediction of hypertension and cardiovascular disease. 'Acute kidney failure, unspecified' and 'Chronic kidney disease, Stage V' confirm kidney issues. The presence of 'Calculus of ureter' and 'Hypertensive chronic kidney disease' suggests underlying lipid abnormalities consistent with the target definition, leading to a 'Yes' prediction for lipid disorders in the next visit.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3467,
+    "completion_tokens": 263
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record explicitly lists 'Atrial fibrillation' (a cardiac condition) and 'Acute kidney failure, unspecified' (a kidney condition). 'Hyperosmolality and/or hypernatremia' and 'Hypercalcemia' are present, but no explicit diagnosis of hypercholesterolemia or hyperlipidemia is made to confirm 'Disorders of Lipid Metabolism'. 'Hypotension, unspecified' is listed, not hypertension. 'Atrial fibrillation' suggests a risk for 'cardio_next' (Yes, 0.50), and 'Acute kidney failure' suggests 'kidney_next' (Yes, 0.50). No evidence for diabetes or obesity is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3351,
+    "completion_tokens": 310
+  }
+}

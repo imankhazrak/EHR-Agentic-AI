@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' as a diagnosis, satisfying the criteria for 'Disorders of Lipid Metabolism'. 'Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled' and 'Malignant essential hypertension' are explicitly listed diagnoses, confirming the current status for these conditions. 'Obesity' is not mentioned in the diagnoses or procedures. Cardiovascular, kidney, and stroke conditions are not explicitly listed as diagnoses.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3554,
+    "completion_tokens": 261
+  }
+}

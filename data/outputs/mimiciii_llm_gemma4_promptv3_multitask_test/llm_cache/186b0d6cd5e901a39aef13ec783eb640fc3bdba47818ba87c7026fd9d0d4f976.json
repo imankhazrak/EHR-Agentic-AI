@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents 'Other and unspecified hyperlipidemia' and 'Morbid obesity', which supports a diagnosis of lipid disorder. Hypertension is documented as 'Unspecified hypertensive heart disease', and obesity is documented as 'Morbid obesity'. Cardiovascular disease is supported by 'Unspecified hypertensive heart disease with heart failure' and 'Acute on chronic systolic heart failure'. Kidney disease is supported by 'Acute kidney failure, unspecified'. Stroke is supported by 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1130,
+    "completion_tokens": 274
+  }
+}

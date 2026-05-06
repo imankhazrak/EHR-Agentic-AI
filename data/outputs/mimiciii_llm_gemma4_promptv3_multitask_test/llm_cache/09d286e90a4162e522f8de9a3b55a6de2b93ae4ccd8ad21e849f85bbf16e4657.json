@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record documents diagnoses such as Persistent postoperative fistula, Subdural hemorrhage, Congestive heart failure, unspecified, Atrial fibrillation, Hematoma complicating a procedure, Gastrostomy status, Heart valve replaced by other means, Aortocoronary bypass status, and Other specified surgical operations and procedures causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation. No explicit mention of lipid abnormalities, diabetes, hypertension, obesity, or specific next-visit diagnoses for cardiovascular, kidney, or stroke conditions is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 888,
+    "completion_tokens": 280
+  }
+}

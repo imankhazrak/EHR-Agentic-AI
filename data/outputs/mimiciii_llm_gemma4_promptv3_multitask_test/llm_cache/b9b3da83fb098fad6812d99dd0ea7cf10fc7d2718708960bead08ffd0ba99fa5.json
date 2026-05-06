@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses such as 'Diabetes with neurological manifestations, type II or unspecified type, uncontrolled', 'Hypertensive chronic kidney disease, unspecified', and 'End stage renal disease', which directly support the 'Yes' predictions for diabetes, hypertension, and kidney next/current status. The diagnosis of 'Atorvastatin' and 'Hypertensive chronic kidney disease' supports the 'Yes' prediction for lipid next status, aligning with the target definition. 'Acute on chronic systolic heart failure' supports the 'Yes' prediction for cardio next status. 'Obesity' is not explicitly mentioned in the diagnoses or procedures performed.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3543,
+    "completion_tokens": 295
+  }
+}

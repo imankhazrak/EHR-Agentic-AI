@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.80\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' as a diagnosis, supporting a 'Yes' prediction for lipid disorders. The record also lists 'Congestive heart failure, unspecified' as a diagnosis, supporting a 'Yes' prediction for cardiovascular disease. The record lists 'Body Mass Index less than 19, adult' as a diagnosis, supporting a 'No' prediction for obesity. Diabetes, hypertension, and kidney disease are not explicitly diagnosed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3463,
+    "completion_tokens": 315
+  }
+}

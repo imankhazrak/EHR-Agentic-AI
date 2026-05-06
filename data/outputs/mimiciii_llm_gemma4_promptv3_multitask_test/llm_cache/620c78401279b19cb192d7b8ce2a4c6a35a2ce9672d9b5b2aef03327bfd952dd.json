@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Secondary malignant neoplasm of lung, Other pulmonary embolism and infarction, Hyposmolality and/or hyponatremia, Malignant neoplasm of liver, secondary, Subendocardial infarction, initial episode of care, Pulmonary collapse, Other iatrogenic hypotension, Personal history of malignant neoplasm of kidney, and Anemia, unspecified. Medications prescribed include NS, D5W, Nicardipine HCl IV, Potassium Chloride, Aspirin EC, Aspirin, Heparin, D5 1/2NS, Magnesium Sulfate, Lidocaine 0.5%, Nifedipine CR, Lisinopril, Heparin Sodium, Sodium Chloride 0.9% Flush, Codeine Phosphate, Albuterol Neb Soln, Benzonatate, Lorazepam, Atorvastatin, Warfarin, Ranitidine, Docusate Sodium, Magnesium Oxide, Senna, Enoxaparin Sodium, Albuterol. No explicit diagnosis or history of lipid disorders, diabetes, hypertension, obesity, or cardiovascular/kidney/stroke events are explicitly stated as current or next events, other than the listed diagnoses and medications.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 406
+  }
+}

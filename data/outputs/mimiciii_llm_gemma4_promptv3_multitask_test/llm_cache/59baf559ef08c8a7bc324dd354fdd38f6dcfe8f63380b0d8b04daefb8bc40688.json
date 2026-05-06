@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"obesity_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' and 'Obesity, unspecified', supporting a 'Yes' prediction for lipid next. Diabetes mellitus and unspecified essential hypertension are also explicitly listed as diagnoses, supporting 'Yes' for current. Cardio next is supported by the presence of 'Diastolic heart failure, unspecified' and 'Congestive heart failure, unspecified'. Kidney and stroke next are not explicitly documented in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3501,
+    "completion_tokens": 307
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record does not explicitly list diagnoses or procedures for hypercholesterolemia, hyperlipidemia, or related lipid abnormalities (CCS category 53). Furthermore, there is no clear supporting evidence in the record for the presence of diabetes, hypertension, obesity, or the next visit diagnoses/procedures for cardiovascular disease, kidney disease, or stroke.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3530,
+    "completion_tokens": 288
+  }
+}

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Multitask overconfidence report</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Multitask overconfidence report</h1>
+</header>
+<h1 id="multitask-overconfidence-report">Multitask overconfidence report</h1>
+<p>Per-task probability histograms and descriptive bin statistics (GPT-4o-mini vs Gemma when available). This report is descriptive only; it does not apply calibration or retraining.</p>
+<h2 id="data-sources">Data sources</h2>
+<ul>
+<li><strong>GPT CSV:</strong> <code>/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/outputs/mimiciii_llm_gpt4o_mini_promptv3_multitask_test/llm_coagent_results.csv</code></li>
+<li><strong>Test CSV:</strong> <code>/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask/test.csv</code></li>
+<li><strong>Gemma:</strong> omitted</li>
+</ul>
+<p><strong>Note:</strong> Gemma was omitted or not merged; GPT-only metrics are shown.</p>
+<h2 id="lipid-disorder-next-visit-lipid">Lipid Disorder (Next Visit) (<code>lipid</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>1663</td>
+<td>0</td>
+<td>2492</td>
+<td>66.73%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>1721</td>
+<td>0.1238</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>137</td>
+<td>0.4015</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>100</td>
+<td>0.5700</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>534</td>
+<td>0.6704</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diabetes-current-visit-diabetes">Diabetes (Current Visit) (<code>diabetes</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-1">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>1007</td>
+<td>517</td>
+<td>2492</td>
+<td>61.16%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-1">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-1">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>1014</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>611</td>
+<td>0.0147</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>867</td>
+<td>0.9412</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hypertension-current-visit-hypertension">Hypertension (Current Visit) (<code>hypertension</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-2">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>603</td>
+<td>393</td>
+<td>2492</td>
+<td>39.97%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-2">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-2">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>648</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>12</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>964</td>
+<td>0.5290</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>868</td>
+<td>0.9724</td>
+</tr>
+</tbody>
+</table>
+<h2 id="obesity-current-visit-obesity">Obesity (Current Visit) (<code>obesity</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-3">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>1931</td>
+<td>66</td>
+<td>2492</td>
+<td>80.14%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-3">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-3">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>2336</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>4</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>23</td>
+<td>0.6087</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>129</td>
+<td>0.9690</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cardiovascular-condition-next-visit-cardio">Cardiovascular Condition (Next Visit) (<code>cardio</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-4">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>462</td>
+<td>18</td>
+<td>2492</td>
+<td>19.26%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-4">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-4">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>473</td>
+<td>0.1099</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>0</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>232</td>
+<td>0.1897</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>1560</td>
+<td>0.6109</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>227</td>
+<td>0.8678</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kidney-condition-next-visit-kidney">Kidney Condition (Next Visit) (<code>kidney</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-5">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>1128</td>
+<td>86</td>
+<td>2492</td>
+<td>48.72%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-5">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-5">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>1366</td>
+<td>0.2423</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>1</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>67</td>
+<td>0.3134</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>540</td>
+<td>0.6241</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>518</td>
+<td>0.7703</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stroke-next-visit-stroke">Stroke (Next Visit) (<code>stroke</code>)</h2>
+<ul>
+<li>Rows with non-null <strong>GPT</strong> probability for this task: <strong>2492</strong></li>
+<li><strong>Gemma:</strong> not included in this run (no Gemma source or no usable probabilities).</li>
+</ul>
+<h3 id="extreme-probabilities-6">Extreme probabilities</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Count(0)</th>
+<th>Count(1)</th>
+<th>Total</th>
+<th>% Extreme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPT-4o-mini</td>
+<td>1252</td>
+<td>6</td>
+<td>2492</td>
+<td>50.48%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probability-bin-analysis-6">Probability bin analysis</h3>
+<h4 id="gpt-4o-mini-6">GPT-4o-mini</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Probability Bin</th>
+<th>Count</th>
+<th>Avg True Label</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[0.0, 0.2]</td>
+<td>1471</td>
+<td>0.0449</td>
+</tr>
+<tr class="even">
+<td>(0.2, 0.4]</td>
+<td>2</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td>(0.4, 0.6]</td>
+<td>331</td>
+<td>0.0755</td>
+</tr>
+<tr class="even">
+<td>(0.6, 0.8]</td>
+<td>664</td>
+<td>0.0753</td>
+</tr>
+<tr class="odd">
+<td>(0.8, 1.0]</td>
+<td>24</td>
+<td>0.2500</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Counts can differ between models when one side has parse failures or missing task probabilities.</li>
+<li>Extreme counts treat exactly 0.0 and 1.0 as boundary spikes.</li>
+</ul>
+</body>
+</html>

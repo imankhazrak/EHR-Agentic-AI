@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes mellitus without mention of complication, type I [juvenile type], uncontrolled', 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', and 'Coronary atherosclerosis of unspecified type of vessel, native or graft'. These diagnoses directly support 'Yes' predictions for diabetes, hypertension, and cardiovascular next visit. The record also supports 'Yes' for lipid next due to the presence of related conditions and the high probability context provided. 'Obesity' and 'Stroke' are not explicitly diagnosed, leading to 'No' predictions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3504,
+    "completion_tokens": 294
+  }
+}

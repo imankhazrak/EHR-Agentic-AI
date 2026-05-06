@@ -313,7 +313,7 @@ def evaluate_llm_results(
     _write_parse_failure_report(merged, mode=mode, output_dir=output_dir, id_col=id_col)
 
     logger.info(
-        "Mode=%s metrics: ACC=%.2f P=%.2f Sens=%.2f Spec=%.2f F1=%.2f BalAcc=%.2f AUC=%s AUPRC=%s",
+        "Mode=%s metrics: ACC=%s P=%s Sens=%s Spec=%s F1=%s BalAcc=%s AUC=%s AUPRC=%s",
         mode,
         metrics["accuracy"],
         metrics["precision"],

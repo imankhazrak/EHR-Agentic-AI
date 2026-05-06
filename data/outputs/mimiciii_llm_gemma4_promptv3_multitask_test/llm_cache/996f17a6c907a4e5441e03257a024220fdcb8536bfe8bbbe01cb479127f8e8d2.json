@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents 'Pure hypercholesterolemia' and 'Unspecified essential hypertension', and 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' which indicates prior stroke/CVD. The record also documents 'Late effects of cerebrovascular disease, aphasia' which is a late effect of stroke. The record documents 'Stricture and stenosis of esophagus' and 'Hemorrhage of gastrointestinal tract, unspecified' which are related to cardiovascular/hypertensive issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 970,
+    "completion_tokens": 272
+  }
+}

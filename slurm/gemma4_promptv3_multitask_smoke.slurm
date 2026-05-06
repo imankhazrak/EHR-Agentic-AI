@@ -2,8 +2,8 @@
 #SBATCH --job-name=m3_gemma4_p3_mt_smoke
 #SBATCH --account=pcs0229
 #SBATCH --partition=gpu
-#SBATCH --time=04:00:00
-#SBATCH --nodes=1
+#SBATCH --time=08:00:00
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1
 #SBATCH --cpus-per-task=8

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The record explicitly lists 'Hypertensive chronic kidney disease, benign' and 'Atrial fibrillation', supporting hypertension and cardio next. 'Acute kidney failure' and 'Hypertensive chronic kidney disease' support kidney next. 'Late effects of cerebrovascular disease, aphasia' and 'Other late effects of cerebrovascular disease, dysphagia' support stroke next. 'Hyperosmolality' is present, but no explicit lipid diagnosis is made, leading to 'No' for lipid next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3506,
+    "completion_tokens": 266
+  }
+}

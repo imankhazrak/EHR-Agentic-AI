@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Obstructive hydrocephalus' and 'Personal history of malignant neoplasm of large intestine' as diagnoses, but does not contain explicit evidence of hypercholesterolemia or hyperlipidemia required for a 'Yes' prediction for lipid disorders. The record does not contain explicit evidence for diabetes, hypertension, or stroke. However, 'Obesity' is explicitly listed as a diagnosis in the current visit record, supporting a 'Yes' prediction for obesity.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3410,
+    "completion_tokens": 265
+  }
+}

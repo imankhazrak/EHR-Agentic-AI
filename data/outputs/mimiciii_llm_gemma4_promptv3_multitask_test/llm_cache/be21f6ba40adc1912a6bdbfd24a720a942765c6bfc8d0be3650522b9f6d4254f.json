@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with other specified manifestations, type II or unspecified type, uncontrolled', 'Hypertensive chronic kidney disease, unspecified', 'Chronic diastolic heart failure', and 'Obstructive sleep apnea (adult)(pediatric)', which strongly support 'Yes' for these conditions. 'Other and unspecified hyperlipidemia' supports the lipid disorder prediction. 'Atrial fibrillation' and 'Chronic diastolic heart failure' support the cardio prediction. 'Hypertensive chronic kidney disease' supports the kidney prediction. 'Stroke' is not explicitly mentioned in the diagnoses or medications, leading to a 'No' prediction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3538,
+    "completion_tokens": 343
+  }
+}

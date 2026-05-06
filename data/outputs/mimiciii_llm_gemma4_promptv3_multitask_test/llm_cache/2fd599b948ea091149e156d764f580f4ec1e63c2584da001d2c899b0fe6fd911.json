@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record documents diagnoses such as [ICD9-DX:5191], Unspecified chronic bronchitis, Paralysis agitans, Esophageal reflux, Legal blindness, as defined in U.S.A., Carrier or suspected carrier of other specified bacterial diseases, Infection with microorganisms resistant to penicillins, and Unspecified pruritic disorder. No explicit mention of hypercholesterolemia, hyperlipidemia, or other lipid abnormalities is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1098,
+    "completion_tokens": 261
+  }
+}

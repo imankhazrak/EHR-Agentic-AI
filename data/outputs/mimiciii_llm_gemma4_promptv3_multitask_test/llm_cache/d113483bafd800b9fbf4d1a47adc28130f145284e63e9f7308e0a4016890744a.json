@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', indicating current diagnoses for diabetes and hypertension. The record also lists 'Rheumatic heart failure (congestive)' and 'Mitral valve stenosis and aortic valve stenosis', supporting the prediction of cardiovascular issues. 'Acute kidney failure with lesion of tubular necrosis' and 'Hypertensive chronic kidney disease' support the prediction of kidney issues. The record also lists 'Diseases of tricuspid valve' and 'Portal hypertension', supporting the lipid disorder prediction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1221,
+    "completion_tokens": 303
+  }
+}

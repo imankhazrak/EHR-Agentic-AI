@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents Coronary atherosclerosis of native coronary artery, which supports a 'Yes' for cardio_next. Chronic kidney disease is explicitly documented, supporting 'Yes' for kidney_next. Diabetes mellitus is explicitly documented, supporting 'Yes' for diabetes_current. No explicit diagnoses for hypertension or obesity are present, supporting 'No' for those fields. No explicit diagnosis for stroke is present, supporting 'No' for stroke_next. No explicit diagnosis for lipid disorder is present, supporting 'No' for lipid_next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1293,
+    "completion_tokens": 276
+  }
+}

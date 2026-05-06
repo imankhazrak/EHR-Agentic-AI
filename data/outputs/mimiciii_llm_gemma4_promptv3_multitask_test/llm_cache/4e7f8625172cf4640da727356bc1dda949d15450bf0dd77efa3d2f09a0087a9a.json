@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with ophthalmic manifestations, type I [juvenile type]' and 'Unspecified essential hypertension', confirming the presence of these conditions. 'Disorders of Lipid Metabolism' is supported by the prescription of 'Cholestyramine' and the diagnosis of related conditions. 'Cardio next', 'Kidney next', and 'Stroke next' are supported by diagnoses like 'Late effects of cerebrovascular disease, aphasia' and 'Acute kidney failure, unspecified', indicating related next-visit conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3714,
+    "completion_tokens": 278
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states diagnoses including 'Diabetes with neurological manifestations, type I [juvenile type]', 'Unspecified essential hypertension', 'Morbid obesity', 'Other and unspecified hyperlipidemia', and 'Coronary atherosclerosis of unspecified type of vessel, native or graft', which supports the predictions for lipid disorders, diabetes, hypertension, and obesity. Cardiovascular and kidney disease are supported by diagnoses like 'Acute on chronic diastolic heart failure' and 'Nephritis and nephropathy'. Stroke is not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1024,
+    "completion_tokens": 269
+  }
+}

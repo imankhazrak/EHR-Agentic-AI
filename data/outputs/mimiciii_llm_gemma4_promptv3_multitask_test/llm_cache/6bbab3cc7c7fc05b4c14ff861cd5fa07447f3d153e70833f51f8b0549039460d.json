@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' as a diagnosis, satisfying the criteria for 'Disorders of Lipid Metabolism'. 'Hypertensive chronic kidney disease' is listed, confirming current hypertension. 'Kidney replaced by transplant' and 'Hypertensive chronic kidney disease' confirm current kidney issues. No explicit evidence for diabetes, obesity, or next-visit cardiovascular/stroke diagnoses was found.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3458,
+    "completion_tokens": 251
+  }
+}

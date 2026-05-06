@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Hypotension, unspecified' and does not contain any explicit diagnoses or medications supporting 'Disorders of Lipid Metabolism' (CCS category 53). No explicit evidence for diabetes, hypertension, obesity, or kidney/stroke diagnoses is present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3379,
+    "completion_tokens": 276
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses such as 'Coronary atherosclerosis of native coronary artery', 'Chronic diastolic heart failure', 'Hypertensive chronic kidney disease, unspecified', 'Chronic kidney disease, Stage II (mild)', and 'Occlusion and stenosis of multiple and bilateral precerebral arteries without mention of cerebral infarction', which support the predictions for lipid disorders, cardiovascular issues, kidney disease, and stroke.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1262,
+    "completion_tokens": 250
+  }
+}

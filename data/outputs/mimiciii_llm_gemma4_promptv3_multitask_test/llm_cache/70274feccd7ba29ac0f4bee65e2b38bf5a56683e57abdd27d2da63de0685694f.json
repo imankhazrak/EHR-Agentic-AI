@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Diabetes with renal manifestations, type II or unspecified type' and 'Unspecified essential hypertension'. 'Congestive heart failure, unspecified' suggests a high probability for 'cardio_next' (Yes). 'Acute pyelonephritis without lesion of renal medullary necrosis' and 'Kidney replaced by transplant' indicate ongoing kidney issues, supporting 'kidney_next' (Yes). 'Unspecified essential hypertension' supports 'hypertension_current' (Yes). 'Diabetes with renal manifestations' supports 'diabetes_current' (Yes). 'Obstructive sleep apnea' is present, but no explicit diagnosis of obesity is made, supporting 'obesity_current' (No). Lipid disorder prediction is 'No' as no explicit CCS category 53 diagnosis is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3853,
+    "completion_tokens": 331
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Pure hypercholesterolemia' for lipid disorder prediction, mapping to 'Yes' for lipid_next. Diabetes is confirmed by 'Diabetes with ophthalmic manifestations, type I [juvenile type]'. Hypertension is confirmed by 'Unspecified essential hypertension'. Kidney failure is confirmed by 'Acute kidney failure with lesion of tubular necrosis'. Obesity is not mentioned. Cardiovascular and stroke next predictions are 'No' as there is no explicit evidence in the record to support them, following the pattern of Case 4 and Case 5 where lack of evidence leads to 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3799,
+    "completion_tokens": 287
+  }
+}

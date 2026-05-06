@@ -1,0 +1,44 @@
+{
+  "accuracy": 79.13,
+  "precision": 59.95,
+  "recall": 67.65,
+  "sensitivity": 67.65,
+  "specificity": 83.36,
+  "f1": 63.56,
+  "balanced_accuracy": 75.5,
+  "tp": 437,
+  "fp": 292,
+  "tn": 1463,
+  "fn": 209,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "matrix": [
+      [
+        1463,
+        292
+      ],
+      [
+        209,
+        437
+      ]
+    ]
+  },
+  "mode": "zero_shot_plus",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "n_total": 2492,
+  "n_valid_prediction": 2401,
+  "n_unparseable_prediction": 91,
+  "n_strict_parse": 2398,
+  "n_salvaged_prediction": 3,
+  "n_salvaged_probability": 3,
+  "n_reasoning_unclosed": 3,
+  "n_valid_probability": 2401,
+  "n_missing_probability": 91,
+  "n_invalid_probability": 0,
+  "n_out_of_range_probability": 0,
+  "auc": 75.71,
+  "auprc": 49.7
+}

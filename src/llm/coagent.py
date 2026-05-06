@@ -55,6 +55,15 @@ def run_coagent_pipeline(
     set_seed(seed)
 
     cal_size = cfg.get("calibration_size", 200)
+    smoke_cap = cfg.get("max_test_samples")
+    if smoke_cap is not None:
+        try:
+            smoke_cap_i = int(smoke_cap)
+        except (TypeError, ValueError):
+            smoke_cap_i = 0
+        if smoke_cap_i > 0:
+            # Keep coagent calibration bounded during smoke/debug runs.
+            cal_size = min(int(cal_size), smoke_cap_i)
     n_wrong = cfg.get("n_wrong_samples", 30)
     batch_size = cfg.get("critic_batch_size", 10)
     n_rounds = cfg.get("n_critic_rounds", 3)

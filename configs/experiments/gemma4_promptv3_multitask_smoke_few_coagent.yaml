@@ -1,0 +1,31 @@
+# Prompt_v3 multitask smoke run tuned for V100-16GB on heavy modes (few-shot/coagent).
+
+paths:
+  processed: "data/processed/mimiciii_multitask"
+  outputs: "data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent"
+
+llm:
+  provider: local_gemma
+  model_name: models/hf_snapshots/google--gemma-4-e4b-it
+  model: models/hf_snapshots/google--gemma-4-e4b-it
+  prompt_template_dir: "prompts_v3"
+  multitask: true
+  max_test_samples: 5
+  cache_responses: false
+  cache_dir: "data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/llm_cache"
+  max_input_tokens: 4096
+  max_new_tokens: 1024
+  device_map: single
+
+few_shot:
+  n_positive: 2
+  n_negative: 2
+  strategy: random_balanced
+  seed: 42
+
+coagent:
+  calibration_size: 40
+  n_wrong_samples: 10
+  critic_batch_size: 5
+  n_critic_rounds: 1
+  consolidation_method: llm

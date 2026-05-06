@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Hypertensive chronic kidney disease, unspecified', which supports a 'Yes' prediction for lipid disorder and hypertension. 'Diabetes mellitus without mention of complication' is also listed, supporting 'Yes' for diabetes. 'Acute kidney failure' and 'Hypertensive chronic kidney disease' support 'Yes' for kidney issues. 'Atrial fibrillation' supports 'Yes' for cardiovascular next prediction. 'Obesity' is not explicitly listed in the diagnoses.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3571,
+    "completion_tokens": 321
+  }
+}

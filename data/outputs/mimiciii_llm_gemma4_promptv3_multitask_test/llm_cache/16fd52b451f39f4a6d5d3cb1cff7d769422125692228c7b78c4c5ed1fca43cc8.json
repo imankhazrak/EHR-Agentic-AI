@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record details severe trauma, pulmonary insufficiency, and associated medical interventions (e.g., closed fractures, mechanical ventilation). There is no explicit mention of hypercholesterolemia, hyperlipidemia, or other CCS category 53 lipid abnormalities, nor is there clear supporting evidence for the presence of diabetes, hypertension, obesity, or the specific next-visit conditions (cardio, kidney, stroke) based on the provided examples.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3636,
+    "completion_tokens": 257
+  }
+}

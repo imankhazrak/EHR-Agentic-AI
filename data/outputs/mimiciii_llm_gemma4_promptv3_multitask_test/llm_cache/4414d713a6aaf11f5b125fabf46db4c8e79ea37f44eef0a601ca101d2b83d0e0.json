@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Unspecified essential hypertension' as diagnoses, supporting a 'Yes' prediction for lipid and hypertension. 'Diabetes mellitus' is also explicitly listed. 'Acute myocardial infarction' supports 'Yes' for cardio_next. 'Acute kidney failure' supports 'Yes' for kidney_next. 'Obesity' is not mentioned in the diagnoses or procedures, thus 'No'. Stroke is not mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3538,
+    "completion_tokens": 263
+  }
+}

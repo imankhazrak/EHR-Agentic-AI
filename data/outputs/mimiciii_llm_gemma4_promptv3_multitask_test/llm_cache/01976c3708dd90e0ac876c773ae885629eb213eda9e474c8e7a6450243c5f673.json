@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The current visit record explicitly documents 'Pure hypercholesterolemia' and 'Morbid obesity', which satisfy the criteria for 'Disorders of Lipid Metabolism'. Furthermore, 'Hypertensive chronic kidney disease' and 'Morbid obesity' confirm the presence of hypertension and obesity. 'Acute kidney failure' and 'End stage renal disease' confirm kidney issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1065,
+    "completion_tokens": 240
+  }
+}

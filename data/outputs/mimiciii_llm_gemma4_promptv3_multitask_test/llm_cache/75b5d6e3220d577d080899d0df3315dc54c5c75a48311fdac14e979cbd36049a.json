@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly states 'Morbid obesity' and 'Cerebral embolism with cerebral infarction' and 'Old myocardial infarction' and 'Diverticulosis of colon' and 'Long-term (current) use of anticoagulants', which strongly supports the prediction of lipid disorder (CCS category 53) and cardiovascular issues. The record also explicitly states 'Morbid obesity' for obesity and 'Cerebral embolism with cerebral infarction' for stroke. Diabetes and hypertension are not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 268
+  }
+}

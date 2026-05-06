@@ -54,7 +54,13 @@ def main(config_path: str = "configs/default.yaml", overrides: list | None = Non
 
     logger.info("=== Running EHR-CoAgent Pipeline ===")
     # Merge coagent-specific config with top-level seed
-    co_cfg_full = {**co_cfg, "seed": seed}
+    co_cfg_full = {
+        **co_cfg,
+        "seed": seed,
+        # When debug/smoke caps test rows, also pass that cap so coagent can
+        # downscale calibration workload instead of using a large default.
+        "max_test_samples": cfg.get("llm", {}).get("max_test_samples"),
+    }
 
     pred_df = run_coagent_pipeline(
         client=client,

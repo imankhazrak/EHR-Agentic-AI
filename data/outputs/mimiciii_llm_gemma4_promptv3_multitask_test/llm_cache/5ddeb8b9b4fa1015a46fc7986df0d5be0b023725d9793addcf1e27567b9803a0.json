@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"reasoning\": \"The record explicitly states 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', supporting a 'Yes' prediction for diabetes. Hypertension is supported by 'Hypertensive chronic kidney disease, unspecified'. Obesity is not mentioned. Cardiovascular disease is supported by 'Acute on chronic combined systolic and diastolic heart failure' and 'Coronary atherosclerosis of native coronary artery'. Kidney disease is supported by 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified' and 'Chronic kidney disease, Stage III (moderate)'. Stroke is supported by 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits'. Lipid disorder prediction is 'No' as there is no explicit diagnosis of hypercholesterolemia or hyperlipidemia, despite the presence of 'Simvastatin' and 'Losartan Potassium'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3656,
+    "completion_tokens": 343
+  }
+}

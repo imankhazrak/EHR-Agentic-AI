@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 1.00},\n  \"obesity_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 1.00},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 1.00},\n  \"stroke_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease' and 'Other and unspecified hyperlipidemia', indicating current hypertension and lipid issues. Cardiovascular issues are supported by 'Mitral valve disorders' and 'Atrial fibrillation'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 877,
+    "completion_tokens": 240
+  }
+}

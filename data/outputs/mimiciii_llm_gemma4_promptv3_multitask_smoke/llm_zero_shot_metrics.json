@@ -1,14 +1,14 @@
 {
-  "accuracy": NaN,
-  "precision": 0.0,
-  "recall": 0.0,
-  "sensitivity": 0.0,
-  "specificity": 0.0,
-  "f1": 0.0,
-  "balanced_accuracy": NaN,
-  "tp": 0,
+  "accuracy": 100.0,
+  "precision": 100.0,
+  "recall": 100.0,
+  "sensitivity": 100.0,
+  "specificity": 100.0,
+  "f1": 100.0,
+  "balanced_accuracy": 100.0,
+  "tp": 2,
   "fp": 0,
-  "tn": 0,
+  "tn": 3,
   "fn": 0,
   "confusion_matrix": {
     "labels": [
@@ -17,25 +17,28 @@
     ],
     "matrix": [
       [
-        0,
+        3,
         0
       ],
       [
         0,
-        0
+        2
       ]
     ]
   },
   "mode": "zero_shot",
-  "model": "",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
   "n_total": 5,
-  "n_valid_prediction": 0,
-  "n_unparseable_prediction": 5,
-  "n_valid_probability": 0,
-  "n_missing_probability": 5,
+  "n_valid_prediction": 5,
+  "n_unparseable_prediction": 0,
+  "n_strict_parse": 5,
+  "n_salvaged_prediction": 0,
+  "n_salvaged_probability": 0,
+  "n_reasoning_unclosed": 0,
+  "n_valid_probability": 5,
+  "n_missing_probability": 0,
   "n_invalid_probability": 0,
   "n_out_of_range_probability": 0,
-  "auc": null,
-  "auprc": null,
-  "rank_metrics_note": "no_valid_probabilities"
+  "auc": 100.0,
+  "auprc": 100.0
 }

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly lists 'Other and unspecified hyperlipidemia' and 'Coronary atherosclerosis of native coronary artery' for lipid/cardio status. It also explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type' and 'Unspecified hypertensive heart disease' for diabetes/hypertension. 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits' supports stroke history/risk. 'Obesity' is not explicitly listed as a diagnosis.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1022,
+    "completion_tokens": 265
+  }
+}

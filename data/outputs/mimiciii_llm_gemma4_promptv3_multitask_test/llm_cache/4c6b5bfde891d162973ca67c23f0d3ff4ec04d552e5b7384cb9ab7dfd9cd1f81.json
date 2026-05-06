@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' as a diagnosis, supporting a 'Yes' prediction for hypertension. The record also lists 'Primary hypercoagulable state' and 'Atrial fibrillation' as diagnoses, which are strong indicators for 'Yes' in cardiovascular next prediction. The record does not explicitly list any diagnosis or medication that confirms 'Disorders of Lipid Metabolism' (CCS category 53), but the strong presence of 'Unspecified essential hypertension' and 'Primary hypercoagulable state' aligns with the background context and the strong evidence mapping shown in the demonstration cases for related conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3606,
+    "completion_tokens": 293
+  }
+}

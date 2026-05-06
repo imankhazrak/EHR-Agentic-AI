@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Long-term (current) use of insulin', supporting a 'Yes' for diabetes. Lipid disorder prediction is 'Yes' due to the explicit diagnosis of diabetes and insulin use, aligning with the CCS category 53 context. 'Cardio_next' and 'kidney_next' are 'Yes' because the record lists 'Congestive heart failure, unspecified' and 'Acute kidney failure with lesion of tubular necrosis', respectively. 'Hypertension' and 'obesity' are 'No' as there is no explicit mention of these conditions in the current visit record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3699,
+    "completion_tokens": 311
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension' as diagnoses. 'Atrial fibrillation' is listed, supporting a high probability for 'cardio_next' (cardiovascular disease). 'Gross hematuria' and 'Rupture of bladder, nontraumatic' suggest issues related to kidney/urinary tract, supporting 'kidney_next'. 'Atrial fibrillation' and 'Long-term (current) use of insulin' support the high probability for 'lipid_next' (lipid disorder). 'Obesity' is not explicitly mentioned in the diagnoses or procedures.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3636,
+    "completion_tokens": 307
+  }
+}

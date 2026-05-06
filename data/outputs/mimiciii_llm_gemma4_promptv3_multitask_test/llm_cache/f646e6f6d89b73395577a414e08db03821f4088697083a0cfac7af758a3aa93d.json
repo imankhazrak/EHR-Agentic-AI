@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses including 'Diabetes with neurological manifestations, type II or unspecified type', 'Unspecified essential hypertension', 'Other late effects of cerebrovascular disease, dysphagia', and 'Acute kidney failure, unspecified'. Furthermore, the record lists 'Other late effects of cerebrovascular disease, dysphagia', which supports the prediction of cardiovascular issues, and 'Acute kidney failure, unspecified' supports kidney issues. The diagnosis of 'Diabetes with neurological manifestations, type II or unspecified type' supports the prediction of lipid disorder next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 275
+  }
+}

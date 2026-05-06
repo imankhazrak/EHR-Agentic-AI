@@ -1,5 +1,8 @@
 """Analyze model confidence behavior from existing comparison outputs.
 
+For multitask (per-task histograms + report), use
+``python -m src.scripts.analyze_multitask_model_overconfidence``.
+
 Creates:
   - gemma_prob_hist.png
   - gpt_prob_hist.png

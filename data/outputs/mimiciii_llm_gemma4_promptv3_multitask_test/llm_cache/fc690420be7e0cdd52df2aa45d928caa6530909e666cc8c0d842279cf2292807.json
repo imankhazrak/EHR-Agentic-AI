@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Other late effects of cerebrovascular disease' (which implies stroke/cardio issues). 'Atherosclerosis of autologous vein bypass graft of the extremities' and 'Atherosclerosis of renal artery' support cardiovascular/kidney risk. 'Other late effects of cerebrovascular disease' supports stroke/cardio next prediction. Lipid disorder prediction is 'No' as no explicit CCS 53 diagnosis is present, despite related atherosclerosis.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3338,
+    "completion_tokens": 271
+  }
+}

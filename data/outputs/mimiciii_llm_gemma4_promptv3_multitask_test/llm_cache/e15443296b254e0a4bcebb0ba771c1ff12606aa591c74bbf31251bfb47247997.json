@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' and 'Coronary atherosclerosis of native coronary artery', supporting a 'Yes' for lipid disorder and cardiovascular next prediction. Diabetes mellitus and Hypertensive chronic kidney disease are explicitly listed, supporting 'Yes' for current diabetes and hypertension. 'End stage renal disease' supports 'Yes' for kidney next prediction. 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits' supports 'Yes' for stroke next prediction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3599,
+    "completion_tokens": 269
+  }
+}

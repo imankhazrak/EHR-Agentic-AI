@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Pure hypercholesterolemia' and 'Unspecified essential hypertension', and 'End stage renal disease' and 'Atherosclerosis of native arteries of the extremities with gangrene' and 'Congestive heart failure, unspecified' and 'Diastolic heart failure, unspecified' and 'Atherosclerosis of renal artery' and 'Diabetes with neurological manifestations, type II or unspecified type, uncontrolled' and 'Diabetes with ophthalmic manifestations, type II or unspecified type, uncontrolled' and 'Diabetes with renal manifestations, type II or unspecified type, uncontrolled' and 'Atherosclerosis of native arteries of the extremities with gangrene' and 'End stage renal disease' and 'Chronic airway obstruction, not elsewhere classified' and 'Atrial fibrillation' and 'Sarcoidosis' and 'Blood in stool' and 'Paroxysmal ventricular tachycardia' and 'Acute posthemorrhagic anemia' and 'Urinary tract infection, site not specified' and 'Unspecified acquired hypothyroidism' and 'Hypotension of hemodialysis' and 'Diarrhea' and 'Epistaxis' and 'Personal history of malignant neoplasm of breast' and 'Family history of malignant neoplasm of trachea, bronchus, and lung' and 'Family history of leukemia' and 'Aortocoronary bypass status' and 'Family history of diabetes mellitus' and 'Family history of ischemic heart disease.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1143,
+    "completion_tokens": 457
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses of Diabetes with neurological manifestations, Unspecified essential hypertension, and Coronary atherosclerosis. Rosuvastatin Calcium and Rosiglitazone Maleate are prescribed, supporting the presence of lipid abnormalities.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1093,
+    "completion_tokens": 228
+  }
+}

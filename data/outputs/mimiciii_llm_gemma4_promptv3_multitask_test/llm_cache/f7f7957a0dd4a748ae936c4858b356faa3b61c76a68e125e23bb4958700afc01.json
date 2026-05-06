@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Diabetes with renal manifestations, type I [juvenile type]' and 'Atherosclerosis of native arteries of the extremities with ulceration', supporting 'Yes' for lipid and cardio next. Diabetes is explicitly diagnosed. Hypertension and obesity are not explicitly diagnosed in the record, thus 'No' for current. Kidney disease is supported by 'Nephritis and nephropathy' and 'Kidney replaced by transplant'. Stroke is not explicitly diagnosed.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3558,
+    "completion_tokens": 264
+  }
+}

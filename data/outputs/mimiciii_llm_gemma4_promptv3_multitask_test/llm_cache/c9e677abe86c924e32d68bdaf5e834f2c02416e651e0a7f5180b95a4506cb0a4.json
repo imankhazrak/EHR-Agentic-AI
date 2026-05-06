@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', supporting a 'Yes' prediction for diabetes. 'Coronary atherosclerosis of native coronary artery' supports a 'Yes' prediction for cardio_next. 'Acute kidney failure, unspecified' supports a 'Yes' prediction for kidney_next. 'Hypotension, unspecified' supports a 'No' prediction for hypertension_current. 'Obesity' is not explicitly diagnosed, supporting a 'No' prediction. Lipid disorder prediction is 'No' as no explicit CCS category 53 diagnosis is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 293
+  }
+}

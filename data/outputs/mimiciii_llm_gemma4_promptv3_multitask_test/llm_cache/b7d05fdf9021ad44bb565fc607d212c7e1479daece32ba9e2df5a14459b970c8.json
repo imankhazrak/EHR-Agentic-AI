@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record explicitly lists 'Acute kidney failure' and 'Atrial fibrillation' (which is a risk factor for cardio/stroke). 'Cardio_next' is predicted 'Yes' due to the presence of 'Atrial fibrillation' and 'Arterial embolism and thrombosis of upper extremity'. 'Kidney_next' is predicted 'Yes' due to the explicit diagnosis of 'Acute kidney failure'. No explicit evidence for lipid disorders, diabetes, hypertension, or obesity was found in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3460,
+    "completion_tokens": 270
+  }
+}

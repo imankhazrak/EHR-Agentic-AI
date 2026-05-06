@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Intestinal or peritoneal adhesions with obstruction (postoperative) (postinfection)', 'Other specified intestinal malabsorption', 'Urinary tract infection, site not specified', 'Malignant neoplasm of bronchus and lung, unspecified', and 'Congestive heart failure, unspecified', but it does not contain explicit diagnoses or evidence for 'Disorders of Lipid Metabolism', current diabetes, hypertension, obesity, or future cardiovascular, kidney, or stroke conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1014,
+    "completion_tokens": 269
+  }
+}

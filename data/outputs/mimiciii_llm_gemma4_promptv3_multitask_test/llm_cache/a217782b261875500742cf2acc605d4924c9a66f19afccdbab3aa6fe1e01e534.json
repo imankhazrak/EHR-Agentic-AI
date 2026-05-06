@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension' as diagnoses. 'Disorders of Lipid Metabolism' is predicted as 'Yes' based on the explicit diagnosis of 'Diabetes mellitus' and the context provided in the demonstration cases, which map explicit diagnoses to 'Yes' outcomes. 'Obesity' is 'No' as there is no explicit diagnosis of obesity. 'Cardio_next' is 'Yes' due to the explicit diagnosis of 'Congestive heart failure, unspecified' and 'Other specified forms of chronic ischemic heart disease'. 'Kidney_next' and 'Stroke_next' are 'No' as there is no explicit diagnosis or strong evidence in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3551,
+    "completion_tokens": 328
+  }
+}

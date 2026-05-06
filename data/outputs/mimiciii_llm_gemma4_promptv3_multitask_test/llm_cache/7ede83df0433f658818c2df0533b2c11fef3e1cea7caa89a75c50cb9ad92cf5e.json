@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The record explicitly states 'Diabetes with neurological manifestations, type I [juvenile type]' and 'Diabetes with ketoacidosis, type I [juvenile type]'. 'Acute, but ill-defined, cerebrovascular disease' and 'Arteriography of cerebral arteries' support the prediction for cardiovascular/stroke next. 'Urinary tract infection' and 'Acute kidney failure' support the prediction for kidney next. No explicit mention of hypertension or obesity.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3630,
+    "completion_tokens": 259
+  }
+}

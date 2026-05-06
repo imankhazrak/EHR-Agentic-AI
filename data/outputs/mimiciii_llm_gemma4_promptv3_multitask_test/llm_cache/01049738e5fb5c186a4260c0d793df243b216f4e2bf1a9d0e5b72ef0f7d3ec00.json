@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.05},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Other and unspecified hyperlipidemia' and 'Unspecified hyperlipidemia' under diagnoses, which supports a 'Yes' for lipid next. 'Coronary atherosclerosis' and 'Cardiac complications' support 'Yes' for cardio next. 'Unspecified disorder of kidney and ureter' supports 'Yes' for kidney next. 'Insulin' is prescribed, suggesting a possible 'Yes' for diabetes current, though not explicitly diagnosed. Hypertension is not explicitly diagnosed, but 'Phenylephrine HCl' is prescribed, which is a vasopressor often used for blood pressure management, suggesting a possible 'Yes' for hypertension current.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 968,
+    "completion_tokens": 298
+  }
+}

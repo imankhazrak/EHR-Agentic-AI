@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record shows multiple severe cardiac diagnoses (Subendocardial infarction, Systolic heart failure, Coronary atherosclerosis) which strongly support a 'Yes' prediction for future cardiovascular issues. 'Acute kidney failure' is explicitly listed, supporting a 'Yes' prediction for future kidney issues. No explicit evidence for diabetes or hypertension was found in the record, leading to 'No' predictions for those conditions. Lipid disorder prediction is 'No' as no explicit CCS category 53 diagnosis was present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3679,
+    "completion_tokens": 267
+  }
+}

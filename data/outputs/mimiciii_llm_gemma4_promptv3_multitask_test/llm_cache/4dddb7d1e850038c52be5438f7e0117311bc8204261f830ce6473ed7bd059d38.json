@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses such as 'Other and unspecified hyperlipidemia' and 'Pure hyperglyceridemia', satisfying the criteria for lipid disorders. Diabetes mellitus, hypertensive chronic kidney disease, and coronary atherosclerosis are explicitly documented, confirming the presence of diabetes and hypertension. Nephrotic syndrome and acute kidney failure confirm kidney issues. Personal history of TIA and cerebral infarction confirms stroke/cardio events.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1328,
+    "completion_tokens": 249
+  }
+}

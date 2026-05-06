@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists diagnoses for 'Diabetes with neurological manifestations' and 'Hypertensive chronic kidney disease', confirming current status for diabetes and hypertension. 'Disorders of Lipid Metabolism' is supported by the presence of 'Atherosclerosis of native arteries of the extremities' and related diagnoses. 'Cardio_next' and 'Kidney_next' are confirmed by diagnoses of 'Other primary cardiomyopathies' and 'Hypertensive chronic kidney disease'. Obesity is not mentioned in the current diagnoses or medications.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3766,
+    "completion_tokens": 269
+  }
+}

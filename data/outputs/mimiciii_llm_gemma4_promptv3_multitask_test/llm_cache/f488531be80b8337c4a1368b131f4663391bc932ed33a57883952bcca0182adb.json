@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.50\n  },\n  \"kidney_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.00\n  },\n  \"reasoning\": \"The current visit record does not explicitly diagnose 'Disorders of Lipid Metabolism' (CCS category 53). While 'Atrial flutter' and 'Atrial fibrillation' are present, which relate to cardiovascular health, there is no direct evidence for lipid abnormalities. Diabetes, hypertension, and obesity are not explicitly mentioned in the diagnoses or procedures. 'Atrial flutter' is a clear indicator for the next visit's cardiovascular status.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3566,
+    "completion_tokens": 304
+  }
+}

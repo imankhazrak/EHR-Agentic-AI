@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' as a diagnosis, confirming the lipid disorder. 'Unspecified essential hypertension' is listed as a diagnosis, confirming hypertension. 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' and 'Late effects of cerebrovascular disease, aphasia' confirm prior cerebrovascular events, supporting the prediction of cardiovascular issues and stroke history/next status.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 830,
+    "completion_tokens": 255
+  }
+}

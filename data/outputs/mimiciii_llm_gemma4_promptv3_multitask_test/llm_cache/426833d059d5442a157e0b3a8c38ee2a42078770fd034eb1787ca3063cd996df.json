@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Morbid obesity' and 'Acute kidney failure, unspecified'. There is no explicit diagnosis of hypercholesterolemia or hyperlipidemia to predict lipid disorder next. Diabetes and hypertension are not explicitly diagnosed. Cardio and stroke are not explicitly diagnosed. The probability for obesity is high due to the explicit diagnosis, and for kidney next is high due to the explicit diagnosis of acute kidney failure.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3636,
+    "completion_tokens": 250
+  }
+}

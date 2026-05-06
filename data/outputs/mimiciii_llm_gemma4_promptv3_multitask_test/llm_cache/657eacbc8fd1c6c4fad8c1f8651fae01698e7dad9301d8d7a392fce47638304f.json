@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.10\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.10\n  },\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with renal manifestations, type II or unspecified type' and 'Hypertensive chronic kidney disease, unspecified'. 'Lipoma of intra-abdominal organs' is present, supporting the lipid disorder prediction. 'Diastolic heart failure' and 'Hypertensive chronic kidney disease' support the cardiovascular and kidney next predictions. 'Obesity' is not explicitly diagnosed, leading to a low probability. 'Stroke' is not mentioned in the current diagnoses or procedures.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3621,
+    "completion_tokens": 318
+  }
+}

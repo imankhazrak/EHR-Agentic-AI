@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension', supporting 'Yes' for both. 'Disorders of Lipid Metabolism' is supported by the presence of 'Diabetes mellitus' and the general context of the record, mapping to 'Yes' for lipid_next. 'Cardio_next' and 'kidney_next' are supported by explicit diagnoses like 'Acute on chronic combined systolic and diastolic heart failure' and 'Acute kidney failure, unspecified', mapping to 'Yes'. 'Obesity_current' and 'stroke_next' lack explicit supporting evidence in the record, mapping to 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3885,
+    "completion_tokens": 309
+  }
+}

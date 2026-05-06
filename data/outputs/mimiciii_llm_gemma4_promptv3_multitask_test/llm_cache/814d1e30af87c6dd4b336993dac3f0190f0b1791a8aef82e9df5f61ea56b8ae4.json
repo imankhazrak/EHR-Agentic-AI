@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Obesity, unspecified'. The record also lists 'Acquired kidney failure with lesion of tubular necrosis', supporting a 'Yes' prediction for kidney next. The record lists 'Unspecified essential hypertension', supporting a 'Yes' prediction for hypertension current. The record lists 'Obesity, unspecified', supporting a 'Yes' prediction for obesity current. The record lists 'Unspecified essential hypertension', supporting a 'Yes' prediction for lipid next based on the target definition.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3807,
+    "completion_tokens": 275
+  }
+}

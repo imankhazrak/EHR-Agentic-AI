@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses of 'Other and unspecified hyperlipidemia' and 'Benign essential hypertension', and 'Diabetes mellitus without mention of complication, type II or unspecified type'. Cardiovascular issues are documented as 'Acute on chronic diastolic heart failure' and 'Congestive heart failure'. Stroke is implied by 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' and 'Late effects of cerebrovascular disease, aphasia'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1180,
+    "completion_tokens": 260
+  }
+}

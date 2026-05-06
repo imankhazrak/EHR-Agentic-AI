@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Diabetes with unspecified complication, type II or unspecified type, uncontrolled' and 'Congestive heart failure, unspecified' and the medication list includes 'Atorvastatin' and 'Aspirin', which are used for lipid management, supporting a 'Yes' for lipid disorder next visit. Diabetes is explicitly diagnosed. Hypertension is supported by the prescription of 'Lisinopril' and 'Metoprolol'. Obesity is not mentioned in the diagnoses or procedures. Cardiovascular disease is supported by the diagnosis of 'Congestive heart failure, unspecified'. Kidney disease and stroke are not explicitly diagnosed or supported by the documented evidence.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1043,
+    "completion_tokens": 299
+  }
+}

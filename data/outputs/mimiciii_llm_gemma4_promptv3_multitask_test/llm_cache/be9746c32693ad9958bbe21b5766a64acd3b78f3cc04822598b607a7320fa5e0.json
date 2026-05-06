@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Coronary atherosclerosis of native coronary artery', 'Unspecified essential hypertension', and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', which strongly support the 'Yes' predictions for lipid disorder (via associated cardiovascular risk), diabetes, and hypertension. 'Coronary atherosclerosis' supports 'Yes' for cardio_next. 'Unspecified disorder of kidney and ureter' supports 'Yes' for kidney_next. 'Obesity' is not mentioned in the record, thus 'No'. 'Stroke' is not mentioned in the record, thus 'No'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3426,
+    "completion_tokens": 299
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Morbid obesity' and 'Unspecified essential hypertension' as diagnoses, supporting 'Yes' for obesity and hypertension. The diagnosis of 'Other pulmonary embolism and infarction' and 'Other chronic pulmonary heart diseases' suggests a high probability for cardiovascular issues in the next visit, though not explicitly stated as a diagnosis. Lipid disorder prediction is 'Yes' because the CCS category 53 is mentioned in the target definition, and the record contains related diagnoses like 'Morbid obesity' and 'Other chronic pulmonary heart diseases' which are associated with lipid abnormalities.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3454,
+    "completion_tokens": 285
+  }
+}

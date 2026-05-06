@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly lists diagnoses including 'Other and unspecified hyperlipidemia', 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', 'Hypertensive chronic kidney disease, unspecified', and 'Acute on chronic systolic heart failure'. These diagnoses support the 'Yes' predictions for lipid disorder, diabetes, hypertension, and cardiovascular issues. The record also lists 'Acute kidney failure, unspecified' and 'Chronic kidney disease, Stage IV (severe)', supporting the 'Yes' prediction for kidney issues. 'Other late effects of cerebrovascular disease' and 'Late effects of cerebrovascular disease, alterations of sensations' support the 'Yes' prediction for stroke issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1116,
+    "completion_tokens": 303
+  }
+}

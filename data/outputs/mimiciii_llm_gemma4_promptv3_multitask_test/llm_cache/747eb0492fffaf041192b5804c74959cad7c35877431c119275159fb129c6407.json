@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Carcinoma in situ of stomach, Pneumonia due to Pseudomonas, Atrial fibrillation, and Other primary cardiomyopathies, but does not explicitly state a diagnosis of hypercholesterolemia, hyperlipidemia, or any other condition meeting the criteria for 'Disorders of Lipid Metabolism'. Furthermore, there is no explicit mention of diabetes, hypertension, obesity, or specific diagnoses for cardiovascular, kidney, or stroke in the next visit.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1028,
+    "completion_tokens": 262
+  }
+}

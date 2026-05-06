@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Cardiac complications, not elsewhere classified', supporting 'Yes' for both. 'Disorders of Lipid Metabolism' is supported by the presence of 'Unspecified essential hypertension' and 'Cardiac complications, not elsewhere classified' in the record, mapping to 'Yes' based on the target definition and examples. 'Kidney disease' is supported by 'Personal history of malignant neoplasm of kidney'. 'Cardio next' is supported by the diagnosis of 'Cardiac complications, not elsewhere classified'. 'Stroke next' is not explicitly mentioned in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3464,
+    "completion_tokens": 291
+  }
+}

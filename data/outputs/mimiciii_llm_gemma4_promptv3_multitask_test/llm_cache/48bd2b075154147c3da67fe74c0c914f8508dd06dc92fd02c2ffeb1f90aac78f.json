@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Hypertensive chronic kidney disease' and 'Coronary atherosclerosis of native coronary artery', providing direct evidence for hypertension and cardiovascular disease. 'Renal dialysis status' and 'Hypertensive chronic kidney disease' confirm kidney issues. 'Congestive heart failure' and 'Combined systolic and diastolic heart failure' support cardiovascular next predictions. 'Hypertensive chronic kidney disease' confirms hypertension current prediction. No explicit evidence for diabetes or obesity is present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3395,
+    "completion_tokens": 266
+  }
+}

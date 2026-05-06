@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemma-4 Prompt_v3 Multitask Experiment Report</title>
+  <style>
+    :root { --bg:#fff; --fg:#111827; --muted:#4b5563; --border:#d1d5db; --header:#f3f4f6; --stripe:#f9fafb; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+    .page{width:100%;max-width:none;margin:0;padding:20px 24px 40px;box-sizing:border-box}
+    h1,h2{margin-top:0;margin-bottom:10px} h2{margin-top:28px;border-bottom:1px solid var(--border);padding-bottom:6px}
+    .meta{color:var(--muted);margin-bottom:12px}
+    code{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:4px;padding:1px 5px;font-family:"Courier New",monospace;font-size:.95em}
+    .table-wrap{width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:8px;margin-top:10px}
+    table{width:100%;border-collapse:collapse;font-size:14px;white-space:nowrap}
+    thead th{background:var(--header);border-bottom:1px solid var(--border);font-weight:700;text-align:left;padding:8px 10px}
+    tbody td{border-top:1px solid #eceff1;padding:7px 10px}
+    tbody tr:nth-child(even) td{background:var(--stripe)}
+    td.num,th.num{text-align:right}
+  </style>
+</head>
+<body>
+<div class="page">
+<h1>Gemma-4 Prompt_v3 Multitask Experiment Report</h1>
+<p class="meta">Date: 2026-05-05<br/>Model: <code>models/hf_snapshots/google--gemma-4-e4b-it</code><br/>Dataset split: <code>data/processed/mimiciii_multitask/test.csv</code><br/>Output dir: <code>data/outputs/mimiciii_llm_gemma4_promptv3_multitask_test</code></p>
+<h2>Scope</h2>
+<p>This report summarizes multitask results for completed prompt approaches:</p>
+<ul><li>Zero-shot (<code>m3_g4_p3_zs</code>, job <code>47281874</code>)</li><li>Zero-shot+ (<code>m3_g4_p3_zsp</code>, job <code>47281875</code>)</li><li>Few-shot (<code>m3_g4_p3_fs</code>, job <code>47281876</code>)</li></ul>
+<p>CoAgent (<code>m3_g4_p3_ca</code>, job <code>47281877</code>) was still running at report generation time, so it is not included in the finalized metric tables below.</p>
+<h2>Metrics Definition</h2>
+<p>Per task, metrics are computed on rows with a valid parsed prediction (<code>n_valid</code>) using ACC, P, R, F1, Spec, AUC, and AUPRC.</p>
+
+<h2>Zero-shot Results</h2>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th class="num">n_valid</th><th class="num">ACC</th><th class="num">P</th><th class="num">R</th><th class="num">F1</th><th class="num">Spec</th><th class="num">AUC</th><th class="num">AUPRC</th><th class="num">TP</th><th class="num">FP</th><th class="num">TN</th><th class="num">FN</th></tr></thead><tbody>
+<tr><td>lipid</td><td class="num">2453</td><td class="num">76.60</td><td class="num">55.30</td><td class="num">69.98</td><td class="num">61.78</td><td class="num">79.05</td><td class="num">74.40</td><td class="num">46.77</td><td class="num">464</td><td class="num">375</td><td class="num">1415</td><td class="num">199</td></tr>
+<tr><td>diabetes</td><td class="num">2453</td><td class="num">94.13</td><td class="num">84.91</td><td class="num">100.00</td><td class="num">91.84</td><td class="num">91.24</td><td class="num">94.80</td><td class="num">91.77</td><td class="num">810</td><td class="num">144</td><td class="num">1499</td><td class="num">0</td></tr>
+<tr><td>hypertension</td><td class="num">2453</td><td class="num">95.96</td><td class="num">93.09</td><td class="num">100.00</td><td class="num">96.42</td><td class="num">91.16</td><td class="num">93.60</td><td class="num">93.88</td><td class="num">1333</td><td class="num">99</td><td class="num">1021</td><td class="num">0</td></tr>
+<tr><td>obesity</td><td class="num">2453</td><td class="num">99.47</td><td class="num">91.33</td><td class="num">100.00</td><td class="num">95.47</td><td class="num">99.44</td><td class="num">96.10</td><td class="num">86.71</td><td class="num">137</td><td class="num">13</td><td class="num">2303</td><td class="num">0</td></tr>
+<tr><td>cardio</td><td class="num">2453</td><td class="num">75.87</td><td class="num">74.53</td><td class="num">78.20</td><td class="num">76.32</td><td class="num">73.56</td><td class="num">77.00</td><td class="num">72.57</td><td class="num">954</td><td class="num">326</td><td class="num">907</td><td class="num">266</td></tr>
+<tr><td>kidney</td><td class="num">2453</td><td class="num">73.22</td><td class="num">71.02</td><td class="num">65.11</td><td class="num">67.94</td><td class="num">79.48</td><td class="num">71.24</td><td class="num">61.66</td><td class="num">696</td><td class="num">284</td><td class="num">1100</td><td class="num">373</td></tr>
+<tr><td>stroke</td><td class="num">2453</td><td class="num">88.83</td><td class="num">12.57</td><td class="num">15.38</td><td class="num">13.84</td><td class="num">93.38</td><td class="num">53.90</td><td class="num">6.67</td><td class="num">22</td><td class="num">153</td><td class="num">2157</td><td class="num">121</td></tr>
+</tbody></table></div>
+
+<h2>Zero-shot+ Results</h2>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th class="num">n_valid</th><th class="num">ACC</th><th class="num">P</th><th class="num">R</th><th class="num">F1</th><th class="num">Spec</th><th class="num">AUC</th><th class="num">AUPRC</th><th class="num">TP</th><th class="num">FP</th><th class="num">TN</th><th class="num">FN</th></tr></thead><tbody>
+<tr><td>lipid</td><td class="num">2401</td><td class="num">79.13</td><td class="num">59.95</td><td class="num">67.65</td><td class="num">63.56</td><td class="num">83.36</td><td class="num">75.71</td><td class="num">49.70</td><td class="num">437</td><td class="num">292</td><td class="num">1463</td><td class="num">209</td></tr>
+<tr><td>diabetes</td><td class="num">2401</td><td class="num">90.55</td><td class="num">77.57</td><td class="num">100.00</td><td class="num">87.37</td><td class="num">85.95</td><td class="num">97.96</td><td class="num">95.27</td><td class="num">785</td><td class="num">227</td><td class="num">1389</td><td class="num">0</td></tr>
+<tr><td>hypertension</td><td class="num">2401</td><td class="num">93.84</td><td class="num">89.76</td><td class="num">100.00</td><td class="num">94.61</td><td class="num">86.58</td><td class="num">96.24</td><td class="num">96.13</td><td class="num">1298</td><td class="num">148</td><td class="num">955</td><td class="num">0</td></tr>
+<tr><td>obesity</td><td class="num">2401</td><td class="num">99.54</td><td class="num">92.62</td><td class="num">100.00</td><td class="num">96.17</td><td class="num">99.51</td><td class="num">99.00</td><td class="num">90.68</td><td class="num">138</td><td class="num">11</td><td class="num">2252</td><td class="num">0</td></tr>
+<tr><td>cardio</td><td class="num">2401</td><td class="num">72.55</td><td class="num">76.95</td><td class="num">64.16</td><td class="num">69.98</td><td class="num">80.90</td><td class="num">73.34</td><td class="num">69.78</td><td class="num">768</td><td class="num">230</td><td class="num">974</td><td class="num">429</td></tr>
+<tr><td>kidney</td><td class="num">2401</td><td class="num">72.05</td><td class="num">72.37</td><td class="num">58.38</td><td class="num">64.63</td><td class="num">82.68</td><td class="num">70.62</td><td class="num">62.06</td><td class="num">613</td><td class="num">234</td><td class="num">1117</td><td class="num">437</td></tr>
+<tr><td>stroke</td><td class="num">2401</td><td class="num">89.50</td><td class="num">9.93</td><td class="num">10.07</td><td class="num">10.00</td><td class="num">94.39</td><td class="num">52.48</td><td class="num">6.19</td><td class="num">14</td><td class="num">127</td><td class="num">2135</td><td class="num">125</td></tr>
+</tbody></table></div>
+
+<h2>Few-shot Results</h2>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th class="num">n_valid</th><th class="num">ACC</th><th class="num">P</th><th class="num">R</th><th class="num">F1</th><th class="num">Spec</th><th class="num">AUC</th><th class="num">AUPRC</th><th class="num">TP</th><th class="num">FP</th><th class="num">TN</th><th class="num">FN</th></tr></thead><tbody>
+<tr><td>lipid</td><td class="num">2490</td><td class="num">68.31</td><td class="num">45.52</td><td class="num">78.92</td><td class="num">57.74</td><td class="num">64.31</td><td class="num">72.47</td><td class="num">43.00</td><td class="num">539</td><td class="num">645</td><td class="num">1162</td><td class="num">144</td></tr>
+<tr><td>diabetes</td><td class="num">2490</td><td class="num">99.16</td><td class="num">97.52</td><td class="num">100.00</td><td class="num">98.74</td><td class="num">98.74</td><td class="num">92.97</td><td class="num">89.93</td><td class="num">825</td><td class="num">21</td><td class="num">1644</td><td class="num">0</td></tr>
+<tr><td>hypertension</td><td class="num">2490</td><td class="num">98.11</td><td class="num">97.11</td><td class="num">99.48</td><td class="num">98.28</td><td class="num">96.48</td><td class="num">96.52</td><td class="num">96.16</td><td class="num">1346</td><td class="num">40</td><td class="num">1097</td><td class="num">7</td></tr>
+<tr><td>obesity</td><td class="num">2490</td><td class="num">99.40</td><td class="num">90.26</td><td class="num">100.00</td><td class="num">94.88</td><td class="num">99.36</td><td class="num">98.22</td><td class="num">86.94</td><td class="num">139</td><td class="num">15</td><td class="num">2336</td><td class="num">0</td></tr>
+<tr><td>cardio</td><td class="num">2490</td><td class="num">74.38</td><td class="num">74.28</td><td class="num">74.64</td><td class="num">74.46</td><td class="num">74.12</td><td class="num">75.14</td><td class="num">70.37</td><td class="num">930</td><td class="num">322</td><td class="num">922</td><td class="num">316</td></tr>
+<tr><td>kidney</td><td class="num">2490</td><td class="num">72.33</td><td class="num">68.80</td><td class="num">67.10</td><td class="num">67.94</td><td class="num">76.39</td><td class="num">72.47</td><td class="num">63.75</td><td class="num">730</td><td class="num">331</td><td class="num">1071</td><td class="num">358</td></tr>
+<tr><td>stroke</td><td class="num">2490</td><td class="num">89.00</td><td class="num">11.52</td><td class="num">12.93</td><td class="num">12.18</td><td class="num">93.77</td><td class="num">52.53</td><td class="num">6.56</td><td class="num">19</td><td class="num">146</td><td class="num">2197</td><td class="num">128</td></tr>
+</tbody></table></div>
+
+<h2>Comparative Table (All Completed Approaches, All Tasks)</h2>
+<div class="table-wrap"><table><thead><tr><th>Approach</th><th>Task</th><th class="num">n_valid</th><th class="num">ACC</th><th class="num">P</th><th class="num">R</th><th class="num">F1</th><th class="num">Spec</th><th class="num">AUC</th><th class="num">AUPRC</th></tr></thead><tbody>
+<tr><td>zero_shot</td><td>lipid</td><td class="num">2453</td><td class="num">76.60</td><td class="num">55.30</td><td class="num">69.98</td><td class="num">61.78</td><td class="num">79.05</td><td class="num">74.40</td><td class="num">46.77</td></tr>
+<tr><td>zero_shot</td><td>diabetes</td><td class="num">2453</td><td class="num">94.13</td><td class="num">84.91</td><td class="num">100.00</td><td class="num">91.84</td><td class="num">91.24</td><td class="num">94.80</td><td class="num">91.77</td></tr>
+<tr><td>zero_shot</td><td>hypertension</td><td class="num">2453</td><td class="num">95.96</td><td class="num">93.09</td><td class="num">100.00</td><td class="num">96.42</td><td class="num">91.16</td><td class="num">93.60</td><td class="num">93.88</td></tr>
+<tr><td>zero_shot</td><td>obesity</td><td class="num">2453</td><td class="num">99.47</td><td class="num">91.33</td><td class="num">100.00</td><td class="num">95.47</td><td class="num">99.44</td><td class="num">96.10</td><td class="num">86.71</td></tr>
+<tr><td>zero_shot</td><td>cardio</td><td class="num">2453</td><td class="num">75.87</td><td class="num">74.53</td><td class="num">78.20</td><td class="num">76.32</td><td class="num">73.56</td><td class="num">77.00</td><td class="num">72.57</td></tr>
+<tr><td>zero_shot</td><td>kidney</td><td class="num">2453</td><td class="num">73.22</td><td class="num">71.02</td><td class="num">65.11</td><td class="num">67.94</td><td class="num">79.48</td><td class="num">71.24</td><td class="num">61.66</td></tr>
+<tr><td>zero_shot</td><td>stroke</td><td class="num">2453</td><td class="num">88.83</td><td class="num">12.57</td><td class="num">15.38</td><td class="num">13.84</td><td class="num">93.38</td><td class="num">53.90</td><td class="num">6.67</td></tr>
+<tr><td>zero_shot_plus</td><td>lipid</td><td class="num">2401</td><td class="num">79.13</td><td class="num">59.95</td><td class="num">67.65</td><td class="num">63.56</td><td class="num">83.36</td><td class="num">75.71</td><td class="num">49.70</td></tr>
+<tr><td>zero_shot_plus</td><td>diabetes</td><td class="num">2401</td><td class="num">90.55</td><td class="num">77.57</td><td class="num">100.00</td><td class="num">87.37</td><td class="num">85.95</td><td class="num">97.96</td><td class="num">95.27</td></tr>
+<tr><td>zero_shot_plus</td><td>hypertension</td><td class="num">2401</td><td class="num">93.84</td><td class="num">89.76</td><td class="num">100.00</td><td class="num">94.61</td><td class="num">86.58</td><td class="num">96.24</td><td class="num">96.13</td></tr>
+<tr><td>zero_shot_plus</td><td>obesity</td><td class="num">2401</td><td class="num">99.54</td><td class="num">92.62</td><td class="num">100.00</td><td class="num">96.17</td><td class="num">99.51</td><td class="num">99.00</td><td class="num">90.68</td></tr>
+<tr><td>zero_shot_plus</td><td>cardio</td><td class="num">2401</td><td class="num">72.55</td><td class="num">76.95</td><td class="num">64.16</td><td class="num">69.98</td><td class="num">80.90</td><td class="num">73.34</td><td class="num">69.78</td></tr>
+<tr><td>zero_shot_plus</td><td>kidney</td><td class="num">2401</td><td class="num">72.05</td><td class="num">72.37</td><td class="num">58.38</td><td class="num">64.63</td><td class="num">82.68</td><td class="num">70.62</td><td class="num">62.06</td></tr>
+<tr><td>zero_shot_plus</td><td>stroke</td><td class="num">2401</td><td class="num">89.50</td><td class="num">9.93</td><td class="num">10.07</td><td class="num">10.00</td><td class="num">94.39</td><td class="num">52.48</td><td class="num">6.19</td></tr>
+<tr><td>few_shot</td><td>lipid</td><td class="num">2490</td><td class="num">68.31</td><td class="num">45.52</td><td class="num">78.92</td><td class="num">57.74</td><td class="num">64.31</td><td class="num">72.47</td><td class="num">43.00</td></tr>
+<tr><td>few_shot</td><td>diabetes</td><td class="num">2490</td><td class="num">99.16</td><td class="num">97.52</td><td class="num">100.00</td><td class="num">98.74</td><td class="num">98.74</td><td class="num">92.97</td><td class="num">89.93</td></tr>
+<tr><td>few_shot</td><td>hypertension</td><td class="num">2490</td><td class="num">98.11</td><td class="num">97.11</td><td class="num">99.48</td><td class="num">98.28</td><td class="num">96.48</td><td class="num">96.52</td><td class="num">96.16</td></tr>
+<tr><td>few_shot</td><td>obesity</td><td class="num">2490</td><td class="num">99.40</td><td class="num">90.26</td><td class="num">100.00</td><td class="num">94.88</td><td class="num">99.36</td><td class="num">98.22</td><td class="num">86.94</td></tr>
+<tr><td>few_shot</td><td>cardio</td><td class="num">2490</td><td class="num">74.38</td><td class="num">74.28</td><td class="num">74.64</td><td class="num">74.46</td><td class="num">74.12</td><td class="num">75.14</td><td class="num">70.37</td></tr>
+<tr><td>few_shot</td><td>kidney</td><td class="num">2490</td><td class="num">72.33</td><td class="num">68.80</td><td class="num">67.10</td><td class="num">67.94</td><td class="num">76.39</td><td class="num">72.47</td><td class="num">63.75</td></tr>
+<tr><td>few_shot</td><td>stroke</td><td class="num">2490</td><td class="num">89.00</td><td class="num">11.52</td><td class="num">12.93</td><td class="num">12.18</td><td class="num">93.77</td><td class="num">52.53</td><td class="num">6.56</td></tr>
+</tbody></table></div>
+
+<h2>Comparative Table (Sorted by Task)</h2>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th>Approach</th><th class="num">n_valid</th><th class="num">ACC</th><th class="num">P</th><th class="num">R</th><th class="num">F1</th><th class="num">Spec</th><th class="num">AUC</th><th class="num">AUPRC</th></tr></thead><tbody>
+<tr><td>cardio</td><td>few_shot</td><td class="num">2490</td><td class="num">74.38</td><td class="num">74.28</td><td class="num">74.64</td><td class="num">74.46</td><td class="num">74.12</td><td class="num">75.14</td><td class="num">70.37</td></tr>
+<tr><td>cardio</td><td>zero_shot</td><td class="num">2453</td><td class="num">75.87</td><td class="num">74.53</td><td class="num">78.20</td><td class="num">76.32</td><td class="num">73.56</td><td class="num">77.00</td><td class="num">72.57</td></tr>
+<tr><td>cardio</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">72.55</td><td class="num">76.95</td><td class="num">64.16</td><td class="num">69.98</td><td class="num">80.90</td><td class="num">73.34</td><td class="num">69.78</td></tr>
+<tr><td>diabetes</td><td>few_shot</td><td class="num">2490</td><td class="num">99.16</td><td class="num">97.52</td><td class="num">100.00</td><td class="num">98.74</td><td class="num">98.74</td><td class="num">92.97</td><td class="num">89.93</td></tr>
+<tr><td>diabetes</td><td>zero_shot</td><td class="num">2453</td><td class="num">94.13</td><td class="num">84.91</td><td class="num">100.00</td><td class="num">91.84</td><td class="num">91.24</td><td class="num">94.80</td><td class="num">91.77</td></tr>
+<tr><td>diabetes</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">90.55</td><td class="num">77.57</td><td class="num">100.00</td><td class="num">87.37</td><td class="num">85.95</td><td class="num">97.96</td><td class="num">95.27</td></tr>
+<tr><td>hypertension</td><td>few_shot</td><td class="num">2490</td><td class="num">98.11</td><td class="num">97.11</td><td class="num">99.48</td><td class="num">98.28</td><td class="num">96.48</td><td class="num">96.52</td><td class="num">96.16</td></tr>
+<tr><td>hypertension</td><td>zero_shot</td><td class="num">2453</td><td class="num">95.96</td><td class="num">93.09</td><td class="num">100.00</td><td class="num">96.42</td><td class="num">91.16</td><td class="num">93.60</td><td class="num">93.88</td></tr>
+<tr><td>hypertension</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">93.84</td><td class="num">89.76</td><td class="num">100.00</td><td class="num">94.61</td><td class="num">86.58</td><td class="num">96.24</td><td class="num">96.13</td></tr>
+<tr><td>kidney</td><td>few_shot</td><td class="num">2490</td><td class="num">72.33</td><td class="num">68.80</td><td class="num">67.10</td><td class="num">67.94</td><td class="num">76.39</td><td class="num">72.47</td><td class="num">63.75</td></tr>
+<tr><td>kidney</td><td>zero_shot</td><td class="num">2453</td><td class="num">73.22</td><td class="num">71.02</td><td class="num">65.11</td><td class="num">67.94</td><td class="num">79.48</td><td class="num">71.24</td><td class="num">61.66</td></tr>
+<tr><td>kidney</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">72.05</td><td class="num">72.37</td><td class="num">58.38</td><td class="num">64.63</td><td class="num">82.68</td><td class="num">70.62</td><td class="num">62.06</td></tr>
+<tr><td>lipid</td><td>few_shot</td><td class="num">2490</td><td class="num">68.31</td><td class="num">45.52</td><td class="num">78.92</td><td class="num">57.74</td><td class="num">64.31</td><td class="num">72.47</td><td class="num">43.00</td></tr>
+<tr><td>lipid</td><td>zero_shot</td><td class="num">2453</td><td class="num">76.60</td><td class="num">55.30</td><td class="num">69.98</td><td class="num">61.78</td><td class="num">79.05</td><td class="num">74.40</td><td class="num">46.77</td></tr>
+<tr><td>lipid</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">79.13</td><td class="num">59.95</td><td class="num">67.65</td><td class="num">63.56</td><td class="num">83.36</td><td class="num">75.71</td><td class="num">49.70</td></tr>
+<tr><td>obesity</td><td>few_shot</td><td class="num">2490</td><td class="num">99.40</td><td class="num">90.26</td><td class="num">100.00</td><td class="num">94.88</td><td class="num">99.36</td><td class="num">98.22</td><td class="num">86.94</td></tr>
+<tr><td>obesity</td><td>zero_shot</td><td class="num">2453</td><td class="num">99.47</td><td class="num">91.33</td><td class="num">100.00</td><td class="num">95.47</td><td class="num">99.44</td><td class="num">96.10</td><td class="num">86.71</td></tr>
+<tr><td>obesity</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">99.54</td><td class="num">92.62</td><td class="num">100.00</td><td class="num">96.17</td><td class="num">99.51</td><td class="num">99.00</td><td class="num">90.68</td></tr>
+<tr><td>stroke</td><td>few_shot</td><td class="num">2490</td><td class="num">89.00</td><td class="num">11.52</td><td class="num">12.93</td><td class="num">12.18</td><td class="num">93.77</td><td class="num">52.53</td><td class="num">6.56</td></tr>
+<tr><td>stroke</td><td>zero_shot</td><td class="num">2453</td><td class="num">88.83</td><td class="num">12.57</td><td class="num">15.38</td><td class="num">13.84</td><td class="num">93.38</td><td class="num">53.90</td><td class="num">6.67</td></tr>
+<tr><td>stroke</td><td>zero_shot_plus</td><td class="num">2401</td><td class="num">89.50</td><td class="num">9.93</td><td class="num">10.07</td><td class="num">10.00</td><td class="num">94.39</td><td class="num">52.48</td><td class="num">6.19</td></tr>
+</tbody></table></div>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li>Lipid next-visit performance is best in this snapshot with <strong>zero_shot_plus</strong> (ACC 79.13, F1 63.56).</li>
+<li><strong>Few_shot</strong> has the highest recall for lipid (78.92) but with lower precision (45.52), indicating more false positives.</li>
+<li>Diabetes, hypertension, and obesity tasks are strong across approaches, especially in few-shot.</li>
+<li>Stroke remains difficult for all approaches (low precision/recall despite high specificity), consistent with class imbalance.</li>
+<li>CoAgent results should be appended once job <code>47281877</code> completes.</li>
+</ul>
+</div>
+</body>
+</html>

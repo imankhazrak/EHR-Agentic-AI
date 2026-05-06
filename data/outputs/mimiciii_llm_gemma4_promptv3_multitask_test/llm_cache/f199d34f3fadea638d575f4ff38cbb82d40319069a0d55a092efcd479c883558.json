@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly documents 'Other and unspecified hyperlipidemia' and 'Long-term (current) use of insulin' and 'Long-term (current) use of anticoagulants', supporting a 'Yes' for lipid disorders. Diabetes mellitus is documented, supporting 'Yes' for diabetes. Hypertension is documented via 'Hypertensive chronic kidney disease, unspecified'. Obesity is not explicitly documented. Cardiovascular and kidney issues are documented via 'Acute on chronic systolic heart failure' and 'Chronic kidney disease, Stage IV (severe)'. Stroke is supported by 'Other late effects of cerebrovascular disease' and 'Late effects of cerebrovascular disease, alterations of sensations'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1256,
+    "completion_tokens": 300
+  }
+}

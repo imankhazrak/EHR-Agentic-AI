@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' and 'Delirium due to conditions classified elsewhere' and 'Atrial fibrillation' and 'Congestive heart failure, unspecified' and 'Unspecified protein-calorie malnutrition' and 'Closed fracture of seventh cervical vertebra; Acute respiratory failure; Closed fracture of sacrum and coccyx without mention of spinal cord injury; Other specified forms of effusion, except tuberculous; [ICD9-DX:5128]; Diastolic heart failure, unspecified'. The record also lists 'Personal history of other lymphatic and hematopoietic neoplasms' and 'Personal history of irradiation, presenting hazards to health' and 'Personal history of malignant neoplasm of thyroid' and 'Personal history of malignant neoplasm of thyroid' and 'Personal history of malignant neoplasm of thyroid' and 'Personal history of malignant neoplasm of thyroid' and 'Personal history of malignant neoplasm of thyroid'. The presence of 'Unspecified essential hypertension' supports the 'Yes' prediction for lipid next, as per the rules.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1150,
+    "completion_tokens": 380
+  }
+}

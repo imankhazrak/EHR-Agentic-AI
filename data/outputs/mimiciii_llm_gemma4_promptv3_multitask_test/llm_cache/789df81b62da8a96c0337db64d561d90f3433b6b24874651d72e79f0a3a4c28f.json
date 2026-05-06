@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' as a diagnosis, supporting a 'Yes' prediction for hypertension. The record also lists 'Diseases of tricuspid valve' and 'Congestive heart failure' as diagnoses, which are related to cardiovascular issues, supporting a 'Yes' prediction for cardio_next. The lipid disorder prediction is 'Yes' based on the prevalence context and the presence of related diagnoses, as per the instructions. Diabetes and obesity are not explicitly diagnosed, leading to 'No' predictions for those categories.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3418,
+    "completion_tokens": 279
+  }
+}

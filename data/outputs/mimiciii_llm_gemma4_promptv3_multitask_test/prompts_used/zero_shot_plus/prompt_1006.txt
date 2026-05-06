@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Unspecified septicemia; Atherosclerosis of native arteries of the extremities with gangrene; Acute osteomyelitis, ankle and foot; [ICD9-DX:5185]; Cardiac complications, not elsewhere classified; Subendocardial infarction, initial episode of care; Congestive heart failure, unspecified; Urinary complications, not elsewhere classified; Acute kidney failure, unspecified; Primary pulmonary hypertension; [ICD9-DX:2765]; Severe sepsis; Chronic osteomyelitis, ankle and foot; Coronary atherosclerosis of native coronary artery; Anemia, unspecified; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension
+- Medications prescribed: Potassium Chloride; NS; Metoprolol; Hydralazine HCl; Insulin; Lidocaine Jelly 2% (Urojet); Albuterol; Magnesium Sulfate; SW; Heparin; Oxycodone-Acetaminophen; Hydrochlorothiazide; Lactulose; Nicardipine HCl; Atorvastatin; Rosiglitazone Maleate; D5W; Metformin; Bumetanide; Sodium Chloride 0.9%  Flush; Nystatin Oral Suspension; Miconazole Powder 2%; Losartan Potassium; LR; Morphine Sulfate; Nitroglycerin; Iso-Osmotic Dextrose; Vancomycin HCl; Heparin Flush CVL  (100 units/ml); Haloperidol; Heparin Sodium; Acetaminophen; Soln.; Propofol; Furosemide; Acetaminophen (Liquid); Famotidine; Metronidazole; Levofloxacin; Iso-Osmotic Sodium Chloride; Dextrose 5%; Calcium Gluconate; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Insulin Human Regular; Cosyntropin; Potassium Phosphate; Aspirin; Lorazepam; Labetalol HCl
+- Procedures performed: Amputation above knee; Other (peripheral) vascular shunt or bypass; [ICD9-PX:3601]; Injection or infusion of nesiritide; Insertion of drug-eluting coronary artery stent(s); Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Injection or infusion of platelet inhibitor; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; Venous catheterization, not elsewhere classified; Arterial catheterization; Enteral infusion of concentrated nutritional substances; Transfusion of packed cells
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

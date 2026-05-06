@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Hemorrhage of gastrointestinal tract, unspecified; Iron deficiency anemia secondary to blood loss (chronic); Other emphysema; Atrial fibrillation; Angiodysplasia of intestine with hemorrhage; Diverticulitis of colon with hemorrhage; Long-term (current) use of anticoagulants; Personal history of malignant neoplasm of prostate; Benign neoplasm of colon. No explicit diagnosis or history of hypercholesterolemia, hyperlipidemia, or related lipid abnormalities is present in the record. Furthermore, there is no explicit mention of diabetes, hypertension, obesity, cardiovascular disease, kidney disease, or stroke in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 302
+  }
+}

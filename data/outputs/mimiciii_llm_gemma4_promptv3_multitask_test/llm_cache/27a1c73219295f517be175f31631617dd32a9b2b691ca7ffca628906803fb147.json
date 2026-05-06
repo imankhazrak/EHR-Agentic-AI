@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses for Diabetes mellitus, Unspecified essential hypertension, and Chronic kidney disease. The presence of Diastolic heart failure and Congestive heart failure supports the prediction for cardiovascular next visit. The explicit diagnosis of Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled, maps to a 'Yes' prediction for diabetes current. The explicit diagnosis of Unspecified essential hypertension maps to a 'Yes' prediction for hypertension current. The explicit diagnosis of Chronic kidney disease maps to a 'Yes' prediction for kidney next. The explicit diagnosis of Diabetes mellitus maps to a 'Yes' prediction for lipid next, as it is a related metabolic disorder, and the explicit diagnosis of Obstructive chronic bronchitis with (acute) exacerbation maps to a 'No' prediction for obesity current as there is no explicit diagnosis of obesity.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3483,
+    "completion_tokens": 342
+  }
+}

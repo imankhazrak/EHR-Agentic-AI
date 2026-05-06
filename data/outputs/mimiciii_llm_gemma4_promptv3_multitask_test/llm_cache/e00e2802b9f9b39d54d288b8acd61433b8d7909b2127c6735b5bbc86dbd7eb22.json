@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Pure hypercholesterolemia' and 'Coronary atherosclerosis of native coronary artery', supporting a 'Yes' for lipid next. Diabetes, hypertension, and kidney issues are explicitly diagnosed ('Diabetes with renal manifestations', 'Hypertensive chronic kidney disease', 'End stage renal disease'), supporting 'Yes' for current. Obesity is not mentioned. Cardio and kidney next are supported by the presence of 'Coronary atherosclerosis' and 'End stage renal disease' respectively. Stroke is not mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3393,
+    "completion_tokens": 272
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes with renal manifestations, type II or unspecified type' and 'Congestive heart failure' (which implies cardiovascular issues). Lipid disorder prediction is 'Yes' due to the explicit diagnosis of diabetes with renal manifestations, fitting the CCS category 53 context. Hypertension and obesity are not explicitly diagnosed in the record. Kidney disease is indicated by 'Anemia in chronic kidney disease' and 'Acute kidney failure'. Stroke is not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3583,
+    "completion_tokens": 264
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly diagnoses 'Diabetes with neurological manifestations, type II or unspecified type, uncontrolled' and 'Hypertensive chronic kidney disease, unspecified', supporting 'Yes' for diabetes and hypertension. 'Coronary atherosclerosis of native coronary artery' supports 'Yes' for cardio_next. 'Diabetes with renal manifestations, type II or unspecified type, uncontrolled' and 'Chronic kidney disease, Stage II (mild)' support 'Yes' for kidney_next. 'Disorders of Lipid Metabolism' is supported by the presence of uncontrolled diabetes and associated lipid abnormalities, leading to 'Yes' for lipid_next. Obesity is not mentioned in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3796,
+    "completion_tokens": 297
+  }
+}

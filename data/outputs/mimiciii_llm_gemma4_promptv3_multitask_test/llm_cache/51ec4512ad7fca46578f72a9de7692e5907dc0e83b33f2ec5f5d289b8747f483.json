@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Benign essential hypertension' and includes medications like 'Metoprolol Succinate XL' and 'Phenylephrine', supporting a 'Yes' prediction for current hypertension. The record also contains diagnoses related to lipid abnormalities, such as 'Benign essential hypertension' which is often associated with lipid disorders, leading to a 'Yes' prediction for lipid disorders in the next visit, as per the target definition. No explicit evidence for diabetes, obesity, or the specified next-visit conditions (cardio, kidney, stroke) was found.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3771,
+    "completion_tokens": 282
+  }
+}

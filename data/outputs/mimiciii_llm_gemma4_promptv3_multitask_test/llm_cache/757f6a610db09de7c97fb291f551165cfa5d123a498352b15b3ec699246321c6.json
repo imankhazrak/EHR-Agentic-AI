@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Other and unspecified hyperlipidemia' as a diagnosis, which falls under the scope of lipid disorders. 'Unspecified essential hypertension' is also documented as a diagnosis. 'Atrial fibrillation' is documented as a diagnosis, which is a cardiovascular condition.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 239
+  }
+}

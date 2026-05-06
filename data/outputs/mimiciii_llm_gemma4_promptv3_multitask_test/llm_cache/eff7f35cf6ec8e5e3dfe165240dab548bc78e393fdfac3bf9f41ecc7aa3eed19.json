@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record does not explicitly diagnose 'Disorders of Lipid Metabolism' (CCS category 53). While cardiovascular issues are present (Chronic combined systolic and diastolic heart failure), there is no direct evidence to predict 'Yes' for lipid disorders. Diabetes, hypertension, and obesity are not explicitly diagnosed in the record. Cardiovascular disease is predicted 'Yes' due to the documented diagnosis of Chronic combined systolic and diastolic heart failure.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3489,
+    "completion_tokens": 254
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"diabetes_current\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.90\n  },\n  \"hypertension_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.10\n  },\n  \"obesity_current\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.10\n  },\n  \"cardio_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"kidney_next\": {\n    \"prediction\": \"Yes\",\n    \"probability\": 0.80\n  },\n  \"stroke_next\": {\n    \"prediction\": \"No\",\n    \"probability\": 0.10\n  },\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes with other specified manifestations, type II or unspecified type' and 'Congestive heart failure' and 'Acute kidney failure', providing clear evidence for these conditions. 'Atorvastatin' and 'Warfarin' are prescribed, supporting the lipid disorder prediction. Hypertension and obesity are not explicitly diagnosed in the record, leading to a 'No' prediction for those current conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3422,
+    "completion_tokens": 300
+  }
+}

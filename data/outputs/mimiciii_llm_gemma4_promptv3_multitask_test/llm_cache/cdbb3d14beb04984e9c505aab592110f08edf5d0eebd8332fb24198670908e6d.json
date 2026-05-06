@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with ketoacidosis, type I [juvenile type], uncontrolled', 'Hypertensive chronic kidney disease, unspecified', and 'End stage renal disease', which directly support the 'Yes' predictions for diabetes and hypertension. The presence of 'Diabetes with renal manifestations' and 'Hypertensive chronic kidney disease' supports the 'Yes' prediction for lipid disorders (CCS category 53). 'End stage renal disease' and 'Hypertensive chronic kidney disease' support the 'Yes' prediction for kidney disease. 'Other primary cardiomyopathies' supports the 'Yes' prediction for cardiovascular disease. Obesity is not explicitly mentioned in the diagnoses or procedures performed.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3515,
+    "completion_tokens": 308
+  }
+}

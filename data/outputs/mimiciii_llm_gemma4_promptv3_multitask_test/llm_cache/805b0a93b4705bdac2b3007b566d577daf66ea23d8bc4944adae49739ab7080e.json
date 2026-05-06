@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly mentions 'Coronary atherosclerosis of autologous vein bypass graft' and 'Congestive heart failure, unspecified', supporting a 'Yes' for cardio_next. 'Acute kidney failure, unspecified' and 'Kidney replaced by transplant' support 'Yes' for kidney_next. No explicit evidence for diabetes or hypertension is present, leading to 'No' for those current conditions. 'Body Mass Index less than 19, adult' supports 'No' for obesity_current. No explicit evidence for stroke is present, leading to 'No' for stroke_next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3599,
+    "completion_tokens": 288
+  }
+}

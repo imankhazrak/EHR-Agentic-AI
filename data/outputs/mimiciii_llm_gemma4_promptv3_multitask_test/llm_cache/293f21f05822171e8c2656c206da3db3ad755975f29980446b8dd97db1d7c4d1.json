@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled'. 'Occlusion and stenosis of carotid artery with cerebral infarction' and 'Occlusion and stenosis of multiple and bilateral precerebral arteries with cerebral infarction' provide evidence for cardiovascular and stroke risk. Hypertension is not explicitly diagnosed, and obesity is not mentioned in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3658,
+    "completion_tokens": 247
+  }
+}

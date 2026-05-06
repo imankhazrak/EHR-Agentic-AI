@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Hypertensive chronic kidney disease' and 'End stage renal disease', supporting hypertension and kidney issues. 'Atrial fibrillation' and 'End stage renal disease' support cardiovascular risk. 'Cholangitis' and 'Acute pancreatitis' are listed diagnoses. Lipid disorder prediction is based on the explicit mention of 'Hypertensive chronic kidney disease' and 'End stage renal disease' which are related to lipid abnormalities in the context of the provided examples.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3729,
+    "completion_tokens": 261
+  }
+}

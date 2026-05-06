@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Closed fracture of acetabulum; Closed fracture of upper end of tibia alone; Closed fracture of base of skull without mention of intra cranial injury, with no loss of consciousness; Closed fracture of multiple ribs, unspecified; Contusion of lung without mention of open wound into thorax; Injury to spleen without mention of open wound into cavity, unspecified injury; Dissection of carotid artery; Acute respiratory failure; Methicillin susceptible pneumonia due to Staphylococcus aureus; Intestinal infection due to Clostridium difficile; Closed fracture of malar and maxillary bones; Other motor vehicle traffic accident involving collision with motor vehicle injuring driver of motor vehicle other than motorcycle; Open wound of nose, unspecified site, without mention of complication; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Unspecified essential hypertension; Unspecified acquired hypothyroidism; Esophageal reflux
+- Medications prescribed: Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Dextrose 50%; Potassium Chloride; Duloxetine; Amitriptyline HCl; Calcium Gluconate; Psyllium Wafer; Atenolol; Lorazepam; Valsartan; Doxazosin; Simvastatin; Insulin; Vancomycin Oral Liquid; Metoprolol; HydrALAzine; Senna; Vancomycin; Iso-Osmotic Dextrose; Furosemide; Glycopyrrolate; Acetaminophen (Liquid); Propofol; Albuterol; Levothyroxine Sodium; Cosyntropin; Loperamide; Heparin Flush CVL  (100 units/ml); NS; CefazoLIN; D5W; Midazolam; Multivitamins; Fentanyl Citrate; Haloperidol; OxycoDONE-Acetaminophen Elixir; Lidocaine 1%; Sodium Bicarbonate; Ibuprofen Suspension; Insulin Human Regular; Bisacodyl; Labetalol; HYDROmorphone (Dilaudid); Potassium Chl 20 mEq / 1000 mL D5 1/2 NS; MetRONIDAZOLE (FLagyl); Ciprofloxacin; CloniDINE; Soln; Oxymetazoline HCl
+- Procedures performed: Open reduction of fracture with internal fixation, other specified bone; Temporary tracheostomy; Open reduction of fracture with internal fixation, tibia and fibula; Open reduction of malar and zygomatic fracture; Elevation of skull fracture fragments; Interruption of the vena cava; Closed endoscopic biopsy of lung; Suture of laceration of nose; Other gastrostomy; Enteral infusion of concentrated nutritional substances; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Other skin traction of limbs; Venous catheterization, not elsewhere classified
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

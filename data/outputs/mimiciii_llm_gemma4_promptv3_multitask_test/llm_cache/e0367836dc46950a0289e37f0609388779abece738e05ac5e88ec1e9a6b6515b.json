@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' as a diagnosis, satisfying the criteria for 'Disorders of Lipid Metabolism'. 'Diabetes mellitus' is explicitly listed as a diagnosis. 'Hypertension' and 'Obesity' are not explicitly listed as diagnoses. 'Cardio_next' and 'Stroke_next' are predicted as 'Yes' because 'Atrial fibrillation' and 'Cerebral thrombosis with cerebral infarction' are explicitly listed diagnoses, which map to these outcomes in the demonstration cases.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3497,
+    "completion_tokens": 274
+  }
+}

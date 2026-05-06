@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' and 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease' and 'Coronary atherosclerosis of native coronary artery', supporting the lipid and cardiovascular predictions. 'Hypertensive chronic kidney disease' confirms hypertension. 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' confirms stroke risk/history. 'Acute kidney failure' confirms kidney issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3755,
+    "completion_tokens": 263
+  }
+}

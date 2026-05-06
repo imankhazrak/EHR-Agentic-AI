@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Obesity, unspecified', 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', 'Diabetes with peripheral circulatory disorders, type I [juvenile type], not stated as uncontrolled', and 'Coronary atherosclerosis of native coronary artery'. These explicit diagnoses map directly to 'Yes' predictions for obesity, hypertension, diabetes, and cardiovascular next status, as shown in the demonstration cases. The presence of 'End stage renal disease' maps to 'Yes' for kidney next status. The presence of 'Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits' maps to 'Yes' for stroke next status, following the pattern of explicit history in the examples.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3774,
+    "completion_tokens": 323
+  }
+}

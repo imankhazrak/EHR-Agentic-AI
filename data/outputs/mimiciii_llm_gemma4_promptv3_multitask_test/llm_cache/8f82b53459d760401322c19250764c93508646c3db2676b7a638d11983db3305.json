@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses including 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Unspecified essential hypertension'. It also lists 'Congestive heart failure, unspecified' and 'Aortocoronary bypass status', which are related to cardiovascular status.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 808,
+    "completion_tokens": 246
+  }
+}

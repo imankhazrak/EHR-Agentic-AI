@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Dehydration, Acute on chronic systolic heart failure, Atrial flutter, Urinary tract infection, site not specified, Other primary cardiomyopathies, Intestinal infection due to other organism, not elsewhere classified, Congestive heart failure, unspecified, Atrial fibrillation, Mitral valve disorders, and Diseases of tricuspid valve. No explicit diagnosis or history of 'Disorders of Lipid Metabolism', diabetes, hypertension, obesity, or specific next-visit diagnoses for cardiovascular, kidney, or stroke conditions are present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 281
+  }
+}

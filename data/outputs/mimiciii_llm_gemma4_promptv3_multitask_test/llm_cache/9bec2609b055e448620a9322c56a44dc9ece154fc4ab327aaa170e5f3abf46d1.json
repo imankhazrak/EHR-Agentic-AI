@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses for 'Unspecified essential hypertension' and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled'. 'Acute kidney failure, unspecified' and 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' support the next visit predictions for kidney and stroke/cardio. 'Late effects of cerebrovascular disease, aphasia' and 'Chronic diastolic heart failure' support the cardio prediction.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3467,
+    "completion_tokens": 264
+  }
+}

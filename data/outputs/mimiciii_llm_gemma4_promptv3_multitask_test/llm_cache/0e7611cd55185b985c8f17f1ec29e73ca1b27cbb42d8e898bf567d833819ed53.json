@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Unspecified essential hypertension' and 'Coronary atherosclerosis of unspecified type of vessel, native or graft', which supports a 'Yes' prediction for lipid disorders and cardiovascular next visit. 'Acute kidney failure, unspecified' supports a 'Yes' prediction for kidney next visit. 'Unspecified essential hypertension' supports a 'Yes' prediction for current hypertension. No explicit evidence for diabetes or obesity was found in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3488,
+    "completion_tokens": 262
+  }
+}

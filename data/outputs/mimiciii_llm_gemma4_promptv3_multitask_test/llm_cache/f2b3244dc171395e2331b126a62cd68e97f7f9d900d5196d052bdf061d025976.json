@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Acute kidney failure, unspecified' and 'Portal hypertension', which are related to kidney issues. However, there is no explicit diagnosis of 'Disorders of Lipid Metabolism' (hypercholesterolemia, hyperlipidemia, etc.) in the record, leading to a 'No' prediction for lipid disorders. Other conditions like diabetes and hypertension are not explicitly diagnosed, resulting in 'No' predictions for those categories.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3687,
+    "completion_tokens": 257
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled' and 'Aortocoronary bypass status' and 'Old myocardial infarction', indicating cardiovascular issues. 'Quinapril' and 'Nitroglycerin SL' are prescribed for blood pressure management, suggesting hypertension. 'Atorvastatin' and 'Lactulose' are prescribed for lipid/renal support.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 821,
+    "completion_tokens": 252
+  }
+}

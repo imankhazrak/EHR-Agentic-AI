@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Pure hypercholesterolemia' and 'Diabetes with neurological manifestations, type II or unspecified type, uncontrolled', supporting a 'Yes' for lipid next. Diabetes is confirmed by multiple entries, supporting 'Yes' for diabetes current. Hypertension is confirmed by 'Unspecified essential hypertension', supporting 'Yes' for hypertension current. Obesity is not mentioned, supporting 'No' for obesity current. Cardiovascular next is supported by 'Congestive heart failure, unspecified' and 'Atherosclerosis of native arteries of the extremities with gangrene', supporting 'Yes' for cardio next. Kidney next is supported by 'End stage renal disease' and 'Atherosclerosis of renal artery', supporting 'Yes' for kidney next. Stroke is not mentioned, supporting 'No' for stroke next.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3744,
+    "completion_tokens": 331
+  }
+}

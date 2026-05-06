@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record shows diagnoses of Acute myocardial infarction and Atrial fibrillation, which strongly suggest the presence of cardiovascular issues (cardio_next: Yes). Hypertension is supported by the prescription of Labetalol HCl and Metoprolol, which are used to manage blood pressure (hypertension_current: Yes). Acute kidney failure is explicitly diagnosed (kidney_next: Yes). The record does not explicitly diagnose hypercholesterolemia or hyperlipidemia, so lipid_next is No. Diabetes and obesity are not explicitly diagnosed (diabetes_current: No, obesity_current: No). Stroke is not explicitly diagnosed (stroke_next: No).\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3634,
+    "completion_tokens": 299
+  }
+}

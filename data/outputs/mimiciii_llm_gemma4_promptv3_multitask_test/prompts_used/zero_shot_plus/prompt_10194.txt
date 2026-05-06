@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Toxic encephalopathy; Urinary tract infection, site not specified; Acute kidney failure, unspecified; Malignant ascites; Unspecified pleural effusion; Other chronic pulmonary heart diseases; Cachexia; Secondary malignant neoplasm of retroperitoneum and peritoneum; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Streptococcus infection in conditions classified elsewhere and of unspecified site, streptococcus, group D [Enterococcus]; Malignant neoplasm of ovary; Hydronephrosis; Compression of vein; Acute posthemorrhagic anemia; Multiple sclerosis; Osteoporosis, unspecified; Other and unspecified hyperlipidemia; Stricture or kinking of ureter; Neurogenic bladder NOS; Anemia in neoplastic disease; Malnutrition of moderate degree; Wheelchair dependence
+- Medications prescribed: 0.9% Sodium Chloride; Warfarin; Acyclovir; 5% Dextrose; Heparin; Iso-Osmotic Dextrose; CeftriaXONE; Heparin Sodium; Sodium Chloride 0.9%  Flush; D5 1/2NS; Linezolid; D5W; Ferrous Sulfate; Ampicillin; Provigil; Fluoxetine; Enoxaparin Sodium; Readi-Cat 2 (Barium Sulfate 2% Suspension); Metoprolol Tartrate; Phytonadione; Triamterene-Hydrochlorothiazide; Miconazole Powder 2%; Bisacodyl; Senna; Influenza Virus Vaccine; LeVETiracetam
+- Procedures performed: Percutaneous abdominal drainage
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

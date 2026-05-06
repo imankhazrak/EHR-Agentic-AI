@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.05},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Morbid obesity' and 'Unspecified essential hypertension' under diagnoses, and 'Secondary diabetes mellitus without mention of complication' under diagnoses. 'Chronic diastolic heart failure' and 'Congestive heart failure, unspecified' are listed, supporting a 'Yes' for cardio_next. The record does not explicitly mention kidney disease, stroke, or lipid disorders in the next visit, but the presence of multiple risk factors supports the 'Yes' for lipid_next based on the rules provided.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 948,
+    "completion_tokens": 271
+  }
+}

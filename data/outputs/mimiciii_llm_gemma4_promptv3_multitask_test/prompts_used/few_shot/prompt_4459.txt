@@ -1,0 +1,119 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record and the provided demonstration cases.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+Use both:
+- The current visit record
+- The demonstration cases
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Demonstration Cases]
+5. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record and demonstration cases.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the record and examples.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Explicit diagnosis/history/evidence → Yes  
+  • Medication ONLY if supported by other evidence  
+  • DO NOT rely only on risk factors  
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Chronic or unspecified duodenal ulcer with hemorrhage, without mention of obstruction; Complications of transplanted kidney; Urinary tract infection, site not specified; Acidosis; Acute kidney failure, unspecified; Surgical operation with transplant of whole organ causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Aortocoronary bypass status; Major depressive affective disorder, single episode, unspecified
+- Medications prescribed: Bupropion SR; Metoprolol; Bumetanide; Lorazepam; Hydralazine HCl; Dextrose 5%; Cyclosporine Modified (Neoral); Levofloxacin; NS; Calcium Gluconate; Pantoprazole Sodium; Magnesium Sulfate; Insulin; Sulfameth/Trimethoprim DS; Prednisone; Ampicillin Sodium; Citric Acid/Sodium Citrate; sodium; Furosemide; Tamsulosin HCl; Zolpidem Tartrate; Amlodipine; Pantoprazole; Potassium Chloride; Allopurinol; Senna; Docusate Sodium; Sarna Lotion
+- Procedures performed: Transfusion of packed cells
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the documented evidence in the current visit record.
+(2) Use the demonstration cases as examples of how evidence maps to predictions.
+(3) Consider diagnoses, medications, and procedures together.
+(4) Weigh multiple signals together.
+(5) Use prevalence only as background context.
+(6) Base conclusions strictly on evidence and patterns from examples.
+
+[Demonstration Cases]
+Case 1:
+- Diagnoses made: Pneumococcal septicemia [Streptococcus pneumoniae septicemia]; Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia]; Obstructive chronic bronchitis with (acute) exacerbation; [ICD9-DX:5185]; Acidosis; Septic shock; Acute posthemorrhagic anemia; Accidental puncture or laceration during a procedure, not elsewhere classified; Hyposmolality and/or hyponatremia
+- Medications prescribed: Haloperidol; Metoprolol; Olanzapine; Prednisone; Atenolol; Salmeterol Xinafoate Diskus (50 mcg); Insulin; SW; Potassium Chloride; Heparin Flush PICC (100 units/ml); Amlodipine; NS; Metoclopramide; Methylprednisolone Na Succ.; Ipratropium Bromide Neb; Magnesium Sulfate; Fentanyl Citrate; D5W; Furosemide; Nitroglycerin; Calcium Gluconate; Midazolam HCl; Lactulose; Albuterol Neb Soln; Lisinopril; Syringe (IV Room); Sertraline HCl; Lansoprazole; Lorazepam; Clonazepam; Ondansetron; Imipramine HCl; Olanzapine (Disintegrating Tablet); Levofloxacin; Nystatin Oral Suspension; Iso-Osmotic Dextrose; Ceftriaxone; Guaifenesin; Succinylcholine; Etomidate; Propofol (Generic); Albuterol-Ipratropium; Lansoprazole Oral Suspension; Albuterol; Dextrose 5%; Vancomycin HCl; Pantoprazole Sodium; Heparin Flush CVL  (100 units/ml); Docusate Sodium (Liquid); Ipratropium Bromide MDI
+- Procedures performed: Venous catheterization, not elsewhere classified; Insertion of endotracheal tube; Continuous invasive mechanical ventilation for 96 consecutive hours or more; Enteral infusion of concentrated nutritional substances; Fiber-optic bronchoscopy; Arterial catheterization; Transfusion of packed cells
+Outcome: Yes
+
+Case 2:
+- Diagnoses made: Acute respiratory failure; Pneumonia due to respiratory syncytial virus; Congestive heart failure, unspecified; Diastolic heart failure, unspecified; Pure hypercholesterolemia; Depressive disorder, not elsewhere classified; Esophageal reflux; Iron deficiency anemia, unspecified
+- Medications prescribed: Aspirin; Clonazepam; Sertraline HCl; Albuterol 0.083% Neb Soln; Ipratropium Bromide Neb; Potassium Chloride; Azithromycin; Furosemide; Magnesium Oxide; Mirapex; Sodium Chloride 0.9%  Flush; Heparin Flush CVL  (100 units/ml); Acetaminophen; Heparin; Lisinopril; Sinemet; Tasmar; Atorvastatin; Amantadine; Docusate Sodium; Lactulose; Pantoprazole
+- Procedures performed: Venous catheterization, not elsewhere classified
+Outcome: Yes
+
+Case 3:
+- Diagnoses made: Obstructive chronic bronchitis with (acute) exacerbation; Pneumonia, organism unspecified; Atrial flutter; Cellulitis and abscess of buttock; Atrial fibrillation; Long-term (current) use of anticoagulants; Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled; Obstructive sleep apnea (adult)(pediatric); Dehydration; Congestive heart failure, unspecified; Gout, unspecified; Polycythemia vera
+- Medications prescribed: Diltiazem; Metoprolol; NS; Warfarin; Xopenex; Tiotropium Bromide; Sodium Chloride 0.9%  Flush; Magnesium Sulfate; Potassium Chloride; PredniSONE; Lisinopril; Insulin; Oxycodone SR (OxyconTIN); MethylPREDNISolone Sodium Succ; D5W; Albuterol 0.083% Neb Soln; Influenza Virus Vaccine; Ipratropium Bromide Neb; Azithromycin; Multivitamins; Aspirin; Allopurinol; Simvastatin; Pantoprazole; Senna; Docusate Sodium; Neutra-Phos; MetFORMIN (Glucophage); Zolpidem Tartrate; OxycoDONE (Immediate Release); Furosemide; Diltiazem Extended-Release
+- Procedures performed: None recorded
+Outcome: Yes
+
+Case 4:
+- Diagnoses made: Unspecified septicemia; Unspecified viral hepatitis C with hepatic coma; Urinary tract infection, site not specified; Hyposmolality and/or hyponatremia; Hematemesis; Acute kidney failure, unspecified; Other and unspecified coagulation defects; Pneumonitis due to inhalation of food or vomitus; Sepsis; Alcoholic cirrhosis of liver; Other and unspecified alcohol dependence, in remission; Chronic kidney disease, unspecified; Other emphysema; Iron deficiency anemia secondary to blood loss (chronic); Stricture and stenosis of esophagus; Thrombocytopenia, unspecified; Open wound of tongue and floor of mouth, without mention of complication; Human bite; Accidents occurring in residential institution; Unspecified schizophrenia, unspecified
+- Medications prescribed: NS; Albuterol; Ipratropium Bromide MDI; SW; Propofol; D5W; Magnesium Sulfate; MetRONIDAZOLE (FLagyl); Octreotide Acetate; Iso-Osmotic Dextrose; Piperacillin-Tazobactam Na; Heparin Flush CVL  (100 units/ml); Vancomycin; Vial; Pantoprazole Sodium; Lactulose; Rifaximin; Sodium Chloride 0.9%  Flush; Ferrous Sulfate (Liquid); Potassium Chloride; Heparin; Furosemide; Heparin Flush PICC (100 units/ml); Spironolactone; CefePIME; Lidocaine Jelly 2% (Urojet); Olanzapine; Pantoprazole; Phytonadione; Neutra-Phos
+- Procedures performed: Continuous invasive mechanical ventilation for less than 96 consecutive hours; Insertion of endotracheal tube; Arterial catheterization; Transfusion of other serum; Transfusion of packed cells; Venous catheterization, not elsewhere classified
+Outcome: No
+
+Case 5:
+- Diagnoses made: Other pulmonary embolism and infarction; Pneumonia, organism unspecified; Acute kidney failure, unspecified; Malignant neoplasm of upper lobe, bronchus or lung; Secondary malignant neoplasm of bone and bone marrow; [ICD9-DX:7863]; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Other disorders of neurohypophysis; Hemorrhage of gastrointestinal tract, unspecified; Other specified cardiac dysrhythmias; Other esophagitis; Late effect of radiation; Radiological procedure and radiotherapy as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure; Nonspecific abnormal results of function study of liver; Hematuria, unspecified; Anemia, unspecified; Insomnia, unspecified; Personal history of other lymphatic and hematopoietic neoplasms; Encounter for palliative care
+- Medications prescribed: traZODONE; Cyanocobalamin; Sodium Chloride Nasal; Neutra-Phos; Mirtazapine; Pantoprazole; FoLIC Acid; Dexamethasone; Pemetrexed; CARBOplatin; 5% Dextrose; 0.9% Sodium Chloride; Prochlorperazine; Lorazepam; Ondansetron; Potassium Phosphate; Zolpidem Tartrate; Calcium Replacement (Oncology); Bisacodyl; Calcium Gluconate; Maalox/Diphenhydramine/Lidocaine; Acetaminophen; Iso-Osmotic Dextrose; CefePIME; Vancomycin; 0.9% Sodium Chloride (Mini Bag Plus); Metoprolol Tartrate; Metoclopramide; Magnesium Sulfate; Potassium Chloride Replacement (Oncology); SW; Polyethylene Glycol; Lactulose; D5 1/2NS; Codeine Sulfate; Zoledronic Acid; PACLItaxel (TaxOL); 5% Dextrose (EXCEL BAG); Ampicillin-Sulbactam; Iso-Osmotic Sodium Chloride; DiphenhydrAMINE; Famotidine; Vial; Filgrastim; Sodium Chloride 0.9%  Flush; Potassium Chloride; ChlorproMAZINE; OxycoDONE (Immediate Release); Benzonatate; Heparin Sodium
+- Procedures performed: Interruption of the vena cava; Injection or infusion of cancer chemotherapeutic substance; Fiber-optic bronchoscopy; Other lavage of bronchus and trachea
+Outcome: No
+
+Case 6:
+- Diagnoses made: Universal ulcerative (chronic) colitis; Other pulmonary embolism and infarction; Acute kidney failure, unspecified; Other venous embolism and thrombosis of inferior vena cava; Perforation of intestine; Peritonitis (acute) generalized; Unspecified pleural effusion; Acidosis; Acute venous embolism and thrombosis of deep vessels of distal lower extremity; Acute venous embolism and thrombosis of deep vessels of proximal lower extremity; Cachexia; Candidiasis of mouth; Paroxysmal ventricular tachycardia; Delirium due to conditions classified elsewhere; Atrial fibrillation; Long-term (current) use of anticoagulants; Long-term (current) use of steroids; Esophageal reflux; Iron deficiency anemia secondary to blood loss (chronic); Tobacco use disorder; Heparin-induced thrombocytopenia (HIT); Interstitial emphysema; Methicillin resistant Staphylococcus aureus in conditions classified elsewhere and of unspecified site; Pseudomonas infection in conditions classified elsewhere and of unspecified site; Surgical operation with formation of external stoma causing abnormal patient reaction, or later complication, without mention of misadventure at time of operation; Dysphagia, oropharyngeal phase; Other disorders of plasma protein metabolism; Other specified disorders of skin; Unspecified disease of pancreas
+- Medications prescribed: Acetaminophen IV; 0.9% Sodium Chloride; Potassium Phosphate; Pantoprazole; Mupirocin Nasal Ointment 2%; Sodium Chloride 0.9%  Flush; Loperamide; Amiodarone; Argatroban; 5% Dextrose; Lansoprazole Oral Disintegrating Tab; Metoprolol Tartrate; Acetaminophen (Liquid); Quetiapine Fumarate; Gastroview (Diatrizoate Meglumine & Sodium); Psyllium; Calcium Carbonate; Vitamin D; OxycoDONE Liquid; Bag; Magnesium Sulfate; Sodium Chloride Nasal; Warfarin; Phenazopyridine; Guaifenesin; Alteplase (Catheter Clearance); Syringe (0.9% Sodium Chloride); Mupirocin Cream 2%; Phytonadione; Neutra-Phos; Furosemide; Phosphorus; 5% Dextrose (EXCEL BAG); Potassium Chloride (Powder); Iso-Osmotic Dextrose; Piperacillin-Tazobactam; HYDROmorphone (Dilaudid); Albumin 25% (12.5g / 50mL); traZODONE; Lorazepam; Vial; D5LR; OxycoDONE (Immediate Release); Acetaminophen; Vancomycin; Nystatin Oral Suspension; Sterile Water; Potassium Chloride; Insulin; Dextrose 50%
+- Procedures performed: Open total intra-abdominal colectomy; Other permanent ileostomy; Continuous invasive mechanical ventilation for less than 96 consecutive hours; Thoracentesis; Insertion of intercostal catheter for drainage; Other electric countershock of heart; Enteral infusion of concentrated nutritional substances
+Outcome: No
+
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the record and examples>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence
+- Do NOT use percentages
+- Do NOT output anything outside JSON

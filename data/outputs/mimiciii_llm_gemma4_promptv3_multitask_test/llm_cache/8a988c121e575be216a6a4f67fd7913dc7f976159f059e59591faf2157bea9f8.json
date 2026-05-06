@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Morbid obesity' and 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled'. 'Atrial fibrillation' is present, supporting a 'Yes' for cardio_next. 'Lisinopril' is prescribed, supporting 'Yes' for hypertension_current. 'Body Mass Index 40.0-44.9, adult' and 'Morbid obesity' confirm obesity_current. Lipid disorder prediction is 'Yes' due to the explicit diagnosis of 'Morbid obesity' and related conditions, aligning with the CCS category 53 definition.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3560,
+    "completion_tokens": 296
+  }
+}

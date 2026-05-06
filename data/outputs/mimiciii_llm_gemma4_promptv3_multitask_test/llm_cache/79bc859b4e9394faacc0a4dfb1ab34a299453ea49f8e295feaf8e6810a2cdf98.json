@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Unspecified essential hypertension' as a diagnosis, supporting a 'Yes' prediction for hypertension. The record also lists 'Coronary atherosclerosis of native coronary artery' and 'Subendocardial infarction' as diagnoses, supporting a 'Yes' prediction for cardiovascular disease in the next visit. The record does not explicitly mention diabetes or obesity, leading to 'No' predictions for those conditions. The record does not list kidney disease or stroke as diagnoses, leading to 'No' predictions for those conditions. The record does list 'Coronary atherosclerosis' and 'Subendocardial infarction' which are related to lipid disorders, supporting a 'Yes' prediction for lipid disorders.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3578,
+    "completion_tokens": 308
+  }
+}

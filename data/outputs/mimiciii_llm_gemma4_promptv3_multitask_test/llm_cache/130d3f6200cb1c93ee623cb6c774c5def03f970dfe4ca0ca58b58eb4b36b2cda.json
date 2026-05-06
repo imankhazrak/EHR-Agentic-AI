@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as Candidal esophagitis, Esophageal hemorrhage, Paranoid type schizophrenia, chronic, Hyposmolality and/or hyponatremia, Suicidal ideation, Electrolyte and fluid disorders not elsewhere classified, Other emphysema, Hypertrophy (benign) of prostate with urinary obstruction and other lower urinary tract symptoms (LUTS), Retention of urine, unspecified, Epilepsy, unspecified, without mention of intractable epilepsy, Subacute dyskinesia due to drugs, Unspecified drug or medicinal substance causing adverse effects in therapeutic use, Constipation, unspecified, Other late effects of cerebrovascular disease, facial weakness, Migraine, unspecified, without mention of intractable migraine without mention of status migrainosus, Tachycardia, unspecified. No explicit diagnosis or history of hypercholesterolemia, hyperlipidemia, or related lipid abnormalities is present.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 893,
+    "completion_tokens": 348
+  }
+}

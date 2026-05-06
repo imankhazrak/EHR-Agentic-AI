@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Pure hypercholesterolemia' and 'Disorders of Lipid Metabolism' is defined by hypercholesterolemia. Diabetes, hypertension, and kidney issues are explicitly listed in diagnoses. Obesity is not mentioned. Cardiovascular and kidney issues are listed in diagnoses ('Aortocoronary bypass status' and 'Hypertensive chronic kidney disease'). Stroke is not explicitly listed.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3668,
+    "completion_tokens": 247
+  }
+}

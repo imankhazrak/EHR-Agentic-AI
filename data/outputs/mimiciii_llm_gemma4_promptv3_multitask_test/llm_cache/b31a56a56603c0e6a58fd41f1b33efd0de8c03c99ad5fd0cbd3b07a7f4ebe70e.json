@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current record shows diagnoses of Atrial fibrillation and the prescription of Lisinopril and Labetalol HCl, which are used to manage hypertension and cardiac conditions. However, there is no explicit diagnosis of hypercholesterolemia or hyperlipidemia to confirm 'Disorders of Lipid Metabolism'. The presence of Atrial fibrillation supports a 'Yes' prediction for 'cardio_next' based on the demonstration cases, and the prescription of antihypertensives supports 'Yes' for 'hypertension_current'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3412,
+    "completion_tokens": 272
+  }
+}

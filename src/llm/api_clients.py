@@ -88,9 +88,27 @@ class LLMResponse:
 # Cache helpers
 # ====================================================================
 
-def _cache_key(messages: List[Dict], model: str, temperature: float, seed: int | None) -> str:
+def _cache_key(
+    messages: List[Dict],
+    model: str,
+    temperature: float,
+    seed: int | None,
+    max_tokens: int | None,
+    request_kwargs: Dict[str, Any] | None = None,
+) -> str:
     """Deterministic hash for a request."""
-    payload = json.dumps({"messages": messages, "model": model, "temperature": temperature, "seed": seed}, sort_keys=True)
+    payload = json.dumps(
+        {
+            "messages": messages,
+            "model": model,
+            "temperature": temperature,
+            "seed": seed,
+            "max_tokens": max_tokens,
+            # Include per-request knobs that can affect output.
+            "request_kwargs": request_kwargs or {},
+        },
+        sort_keys=True,
+    )
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
@@ -276,7 +294,14 @@ class LLMClient:
 
     def complete(self, messages: List[Dict], use_cache: bool = True, **kwargs) -> LLMResponse:
         """Send a chat completion request, with optional caching and rate limiting."""
-        key = _cache_key(messages, self.model_name, self.cfg.get("temperature", 0), self.cfg.get("seed"))
+        key = _cache_key(
+            messages,
+            self.model_name,
+            self.cfg.get("temperature", 0),
+            self.cfg.get("seed"),
+            self.cfg.get("max_tokens"),
+            kwargs,
+        )
 
         if use_cache:
             cached = _check_cache(self.cache_dir, key)

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Hypertensive chronic kidney disease' and 'Congestive heart failure', supporting 'Yes' for hypertension and cardio next. 'Hyperpotassemia' and 'Other convulsions' are listed diagnoses. 'Insulins and antidiabetic agents causing adverse effects in therapeutic use' is listed, but no explicit diagnosis of diabetes is present, leading to 'No' for diabetes current. 'Hypertensive chronic kidney disease' supports 'Yes' for kidney next. 'Other specified hypoglycemia' is listed, but not a full diagnosis of diabetes, leading to 'No' for diabetes current. 'Other convulsions' and 'Congestive heart failure' support 'Yes' for cardio next. 'Hypertensive chronic kidney disease' supports 'Yes' for hypertension current.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3432,
+    "completion_tokens": 326
+  }
+}

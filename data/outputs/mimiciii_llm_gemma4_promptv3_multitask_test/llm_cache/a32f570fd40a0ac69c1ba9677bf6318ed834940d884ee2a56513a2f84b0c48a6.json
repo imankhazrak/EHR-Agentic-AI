@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Diabetes with renal manifestations, type II or unspecified type' and 'Nephritis and nephropathy', supporting a 'Yes' for diabetes and kidney issues. 'Hyperpotassemia' and 'End stage renal disease' further confirm severe renal involvement. No explicit evidence for hypertension or obesity is present in the record, leading to 'No' for those categories. The record does not explicitly state a diagnosis for cardiovascular disease or stroke, resulting in 'No' for those next-visit predictions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3382,
+    "completion_tokens": 274
+  }
+}

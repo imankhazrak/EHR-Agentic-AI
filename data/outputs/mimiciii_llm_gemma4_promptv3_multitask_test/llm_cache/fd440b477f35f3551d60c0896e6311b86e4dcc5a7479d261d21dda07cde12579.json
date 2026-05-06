@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Hypertensive chronic kidney disease, unspecified' and 'Congestive heart failure, unspecified', supporting hypertension and cardio next. 'Acute kidney failure' and 'Chronic kidney disease' support kidney next. 'Disorders of Lipid Metabolism' is not explicitly diagnosed, so lipid next is No. Hypertension is supported by the diagnosis 'Hypertensive chronic kidney disease'. Cardio next is supported by 'Congestive heart failure, unspecified'. Kidney next is supported by 'Acute kidney failure' and 'Chronic kidney disease'. Stroke next is not mentioned in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3392,
+    "completion_tokens": 283
+  }
+}

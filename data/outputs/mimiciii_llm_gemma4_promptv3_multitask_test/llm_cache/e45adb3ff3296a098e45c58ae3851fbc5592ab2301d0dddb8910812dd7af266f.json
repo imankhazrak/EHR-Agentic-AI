@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Other and unspecified hyperlipidemia' and 'Coronary atherosclerosis of native coronary artery', indicating lipid issues and cardiovascular disease. Diabetes is explicitly diagnosed as 'Diabetes with neurological manifestations, type I [juvenile type]' and 'Diabetes with ophthalmic manifestations, type I [juvenile type]'. Kidney issues are noted as 'Acute kidney failure, unspecified' and 'Kidney replaced by transplant'. Hypertension is not explicitly diagnosed.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1159,
+    "completion_tokens": 258
+  }
+}

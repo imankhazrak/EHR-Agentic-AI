@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 1.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Diabetes with unspecified complication, type II or unspecified type, uncontrolled' and 'Congestive heart failure, unspecified'. Medications include 'Atorvastatin' and 'Lisinopril', which are used for lipid and cardiovascular support respectively. The diagnosis of 'Diabetes' is current. Hypertension is supported by the prescription of 'Metoprolol' and 'Lisinopril'. Cardiovascular support is present via 'Congestive heart failure' diagnosis and medications.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 265
+  }
+}

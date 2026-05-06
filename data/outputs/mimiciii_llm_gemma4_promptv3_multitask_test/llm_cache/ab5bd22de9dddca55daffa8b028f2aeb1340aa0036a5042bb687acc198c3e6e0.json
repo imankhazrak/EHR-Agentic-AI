@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with renal manifestations, type II or unspecified type' and 'Hypertensive chronic kidney disease, unspecified', providing clear evidence for diabetes and hypertension. 'End stage renal disease' and 'Chronic systolic heart failure' support the next visit predictions for kidney and cardio. 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' supports the stroke prediction. 'Barrett's esophagus' and 'Regional enteritis' are present, but no explicit lipid disorder diagnosis is listed, yet the high probability is based on the prevalence context provided in the instructions and the strong presence of related cardiovascular and renal conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3523,
+    "completion_tokens": 302
+  }
+}

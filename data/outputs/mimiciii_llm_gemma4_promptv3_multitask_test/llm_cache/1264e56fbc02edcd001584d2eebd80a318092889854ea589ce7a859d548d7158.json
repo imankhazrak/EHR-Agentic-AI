@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Other and unspecified hyperlipidemia' as a diagnosis, supporting a 'Yes' prediction for lipid disorders. Diabetes is supported by the diagnosis 'Diabetes with renal manifestations, type II or unspecified type'. Hypertension is supported by the diagnosis 'Hypertensive chronic kidney disease'. Cardiovascular disease is supported by the diagnosis 'Congestive heart failure' and 'Old myocardial infarction'. Kidney disease is supported by the diagnosis 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease'. Obesity is not explicitly diagnosed in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3522,
+    "completion_tokens": 284
+  }
+}

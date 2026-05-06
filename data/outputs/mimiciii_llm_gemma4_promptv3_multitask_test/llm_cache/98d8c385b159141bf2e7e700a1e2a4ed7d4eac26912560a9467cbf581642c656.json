@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Other and unspecified hyperlipidemia' under Diagnoses made, which supports a 'Yes' for lipid_next. Diabetes mellitus type II is explicitly stated under Diagnoses made, supporting 'Yes' for diabetes_current. Hypertension is supported by the prescription of Doxazosin and Simvastatin, which are used for managing blood pressure/cardiovascular risk, supporting 'Yes' for hypertension_current. Obesity is not mentioned in the record, supporting 'No' for obesity_current. Cardiovascular, kidney, and stroke diagnoses are not explicitly mentioned in the record, supporting 'No' for the respective 'next' predictions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 895,
+    "completion_tokens": 297
+  }
+}

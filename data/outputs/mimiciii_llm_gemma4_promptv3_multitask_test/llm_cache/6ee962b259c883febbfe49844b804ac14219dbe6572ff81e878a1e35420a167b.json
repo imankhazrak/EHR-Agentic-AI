@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents diagnoses of 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', 'Unspecified essential hypertension', 'Coronary atherosclerosis of native coronary artery', 'Acute kidney failure, unspecified', and 'Dissection of aorta, thoracic'. The medication list includes 'Atorvastatin' and 'Amlodipine', which support the presence of lipid/cardio/HTN issues.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 903,
+    "completion_tokens": 270
+  }
+}

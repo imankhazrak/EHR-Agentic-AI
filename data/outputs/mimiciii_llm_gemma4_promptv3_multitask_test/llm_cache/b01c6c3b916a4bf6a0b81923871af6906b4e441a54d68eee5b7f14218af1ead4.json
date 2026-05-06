@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly documents 'Other and unspecified hyperlipidemia' and 'Hypertensive chronic kidney disease, unspecified', supporting the lipid diagnosis and hypertension. Cardiovascular issues are supported by 'Acute on chronic systolic heart failure' and 'Congestive heart failure, unspecified'. Kidney issues are supported by 'Acute kidney failure with lesion of tubular necrosis' and 'Hypertensive chronic kidney disease'. Stroke is supported by 'Cerebral embolism with cerebral infarction' and 'Late effects of cerebrovascular disease, aphasia'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1321,
+    "completion_tokens": 269
+  }
+}

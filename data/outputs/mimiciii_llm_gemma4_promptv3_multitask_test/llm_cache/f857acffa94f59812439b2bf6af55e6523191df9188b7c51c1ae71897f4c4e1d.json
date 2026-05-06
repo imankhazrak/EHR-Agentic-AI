@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Unspecified essential hypertension' and 'Acute kidney failure, unspecified' and 'Acute and chronic respiratory failure' and 'Acute on chronic diastolic heart failure' and 'Congestive heart failure, unspecified' and 'Obstructive chronic bronchitis with (acute) exacerbation' and 'Atrial fibrillation' and 'Severe sepsis' and 'Methicillin resistant Staphylococcus aureus septicemia' and 'Methicillin resistant pneumonia due to Staphylococcus aureus' and 'Hyperosmolality and/or hypernatremia' and 'Unspecified hereditary and idiopathic peripheral neuropathy' and 'Cardiac pacemaker in situ' and 'Knee joint replacement'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1197,
+    "completion_tokens": 299
+  }
+}

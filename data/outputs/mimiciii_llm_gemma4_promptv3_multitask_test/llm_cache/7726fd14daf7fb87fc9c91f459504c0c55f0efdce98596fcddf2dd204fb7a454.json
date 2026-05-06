@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents 'Pure hypercholesterolemia' and 'Atherosclerosis of native arteries of the extremities with ulceration', supporting a 'Yes' prediction for lipid disorders. Diabetes is confirmed by 'Diabetes with other specified manifestations, type II or unspecified type' and 'Polyneuropathy in diabetes'. Hypertension is documented as 'Unspecified essential hypertension'. Obesity is not mentioned in the record. Cardiovascular disease is supported by 'Atherosclerosis of native arteries of the extremities with ulceration' and long-term insulin use. Kidney disease is confirmed by 'Acute kidney failure, unspecified' and 'Diabetes with renal manifestations, type II or unspecified type'. Stroke is not explicitly documented.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3481,
+    "completion_tokens": 310
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Mixed hyperlipidemia' as a diagnosis, supporting a 'Yes' prediction for lipid disorders. 'Mixed hyperlipidemia' is a form of hyperlipidemia, which falls under the target definition. 'Other specified cardiac dysrhythmias' is listed, supporting a 'Yes' prediction for cardiovascular issues in the next visit, as per the prevalence context and diagnosis. No explicit evidence for diabetes, hypertension, obesity, kidney disease, or stroke is present in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3488,
+    "completion_tokens": 268
+  }
+}

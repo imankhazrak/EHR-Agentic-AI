@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Obesity, unspecified' and 'Unspecified essential hypertension', supporting the current status for these conditions. 'Coronary atherosclerosis of native coronary artery' and 'Acute on chronic systolic heart failure' support the next visit prediction for cardiovascular disease. 'Unspecified essential hypertension' supports the lipid disorder prediction as it is a related condition, and 'Obesity, unspecified' supports the lipid disorder prediction. 'Acute on chronic systolic heart failure' and 'Hyperosmolality and/or hypernatremia' support the next visit prediction for kidney disease. 'Other abnormal glucose' and 'Unspecified essential hypertension' do not provide clear evidence for current diabetes or stroke.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3826,
+    "completion_tokens": 306
+  }
+}

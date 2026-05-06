@@ -1,0 +1,10 @@
+{
+  "text": "unspecified coagulation defects\nMedications prescribed: Haloperidol; Metoclopramide; Haloperidol; Urinary tract infection; Hyposmolality and/or hyponatremia; Hematemesis; Acute kidney failure; Other and unspecified coagulation defects; Pneumonitis; Sepsis; Alcoholic cirrhosis of liver; Other and unspecified coagulation defects\nProcedures performed: Venous catheterization, not elsewhere classified\nOutcome: Yes\n\n[Refined Criteria]\n- Lipid disorder:\n  \u2022 Explicit diagnosis/history/evidence $\\rightarrow$ Yes\n  \u2022 Medication ONLY if supported $\\rightarrow$ Yes\n  \u2022 DO NOT rely only on risk factors $\\rightarrow$ Yes\n\n-Other tasks:\n  \u2022 Clear evidence $\\rightarrow$ Yes\n  \u2022 Otherwise $\\rightarrow$ No\n\nYou are presented with:\n1. [Target Definition]\n2. [Prediction Clarification]\n3. [Current Visit Record]\n4. [Instructions]\n5. [Demonstration Cases]\n6. [Refined Criteria]\n7. [Output Format]\n\n[Output Format]\n(1) Disorders of Lipid Metabolism: Yes/No\n(2) Diabetes: Yes/No\n(3. Hypertension: Yes/No\n(4) Obesity: Yes/No\n(5) Cardiovascular Disease: Yes/No\n(6) Kidney Disease: Yes/No\n(7) Stroke: Yes/No\n\n[Output Format]\n(1) Disorders of Lipid Metabolism: Yes/No\n(2) Diabetes: Yes/No\n(3. Hypertension: Yes/No\n(4) Obesity: Yes/No\n(5) Cardiovascular Disease: Yes/No\n(6) Kidney Disease: Yes/No\n(7) Stroke: Yes/No\n\n---\n**[Final Answer]**",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1536,
+    "completion_tokens": 372
+  }
+}

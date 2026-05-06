@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.70},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Other and unspecified hyperlipidemia' and 'Morbid obesity', supporting a 'Yes' for lipid next. 'Diabetes mellitus without mention of complication' is present, supporting 'Yes' for diabetes current. 'Hypertensive chronic kidney disease' and 'Morbid obesity' support 'Yes' for hypertension current. 'Morbid obesity' and 'BMI 50.0-59.9' support 'Yes' for obesity current. 'Chronic combined systolic and diastolic heart failure' supports 'Yes' for cardio next. 'End stage renal disease' supports 'Yes' for kidney next. No explicit evidence for stroke next was found.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3860,
+    "completion_tokens": 302
+  }
+}

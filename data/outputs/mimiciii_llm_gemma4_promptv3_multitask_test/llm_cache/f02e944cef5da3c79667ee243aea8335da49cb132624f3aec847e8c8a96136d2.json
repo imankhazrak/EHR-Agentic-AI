@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses such as 'Diabetes with peripheral circulatory disorders, type II or unspecified type, uncontrolled' and 'Congestive heart failure, unspecified' and 'Chronic kidney disease, Stage III (moderate)', which directly support the 'Yes' predictions for diabetes, cardio, and kidney next/current status. The record also supports the 'Yes' prediction for lipid next status due to the presence of uncontrolled diabetes and associated cardiovascular risk factors, aligning with the demonstration cases where explicit diagnoses lead to 'Yes' outcomes.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3591,
+    "completion_tokens": 275
+  }
+}

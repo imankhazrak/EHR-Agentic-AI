@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses including 'Morbid obesity', 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', 'Diabetes mellitus without mention of complication, type II or unspecified type', and 'Cholangitis' which falls under lipid abnormalities. 'Acute vascular insufficiency of intestine' and 'Congestive heart failure, unspecified' support cardiovascular issues. 'Acute kidney failure with lesion of tubular necrosis' supports kidney issues. 'Morbid obesity' and 'Hypertensive chronic kidney disease' support the current state of obesity and hypertension.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1420,
+    "completion_tokens": 286
+  }
+}

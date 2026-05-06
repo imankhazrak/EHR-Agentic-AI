@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Coronary atherosclerosis of native coronary artery', 'Atrial fibrillation', and 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side', which strongly support the prediction of cardiovascular issues ('cardio_next') and stroke ('stroke_next'). Furthermore, the diagnosis 'Unspecified disorder of kidney and ureter' supports the prediction of kidney issues ('kidney_next'). No explicit diagnosis of 'Disorders of Lipid Metabolism' is present, leading to a 'No' prediction for 'lipid_next'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3439,
+    "completion_tokens": 284
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Other and unspecified hyperlipidemia' and 'Hypertensive chronic kidney disease, unspecified', supporting a 'Yes' prediction for lipid disorders and hypertension. 'Diabetes mellitus without mention of complication' is listed, supporting 'Yes' for diabetes. 'Acute on chronic systolic heart failure' and 'Chronic kidney disease, Stage IV' support 'Yes' for cardiovascular and kidney issues. 'Other late effects of cerebrovascular disease' supports 'Yes' for stroke/cerebrovascular issues. 'Obesity' is not listed as a diagnosis.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3717,
+    "completion_tokens": 284
+  }
+}

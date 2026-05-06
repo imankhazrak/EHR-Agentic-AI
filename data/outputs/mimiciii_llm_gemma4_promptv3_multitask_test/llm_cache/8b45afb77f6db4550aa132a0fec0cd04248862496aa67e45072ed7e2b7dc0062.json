@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.50},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record does not explicitly diagnose 'Disorders of Lipid Metabolism' (CCS category 53). While 'Chronic diastolic heart failure' and 'Congestive heart failure' are present, there is no direct evidence to predict 'Disorders of Lipid Metabolism' for the next visit. Diabetes, hypertension, and obesity are not explicitly diagnosed in the record. 'Chronic diastolic heart failure' supports a 'Yes' prediction for 'cardio_next' based on the provided context, while kidney and stroke are not supported by the current diagnoses or medications.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3509,
+    "completion_tokens": 281
+  }
+}

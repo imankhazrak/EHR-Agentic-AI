@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Pure hypercholesterolemia' and 'Diabetes with renal manifestations, type I [juvenile type]', and 'Hypertensive chronic kidney disease, unspecified'. These findings directly support the 'Yes' predictions for lipid disorder, diabetes, and hypertension. 'Cardio_next' is supported by 'Congestive heart failure, unspecified' and 'Coronary atherosclerosis of native coronary artery'. 'Kidney_next' is supported by 'Hypertensive chronic kidney disease, unspecified' and 'Complications of transplanted kidney'. 'Obesity_current' and 'stroke_next' lack explicit supporting evidence in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3685,
+    "completion_tokens": 300
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Obstructive sleep apnea (adult)(pediatric)' as a diagnosis, which is related to obesity. 'Chronic kidney disease, unspecified' is listed as a diagnosis. 'Atrial fibrillation' and 'Chronic systolic heart failure' are listed as diagnoses, supporting a 'Yes' for cardiovascular next prediction. 'Chronic kidney disease, unspecified' supports a 'Yes' for kidney next prediction. No explicit diagnosis of hypercholesterolemia or hyperlipidemia is present, leading to 'No' for lipid next prediction. No explicit diagnosis of diabetes or hypertension is present, leading to 'No' for current predictions for those conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3465,
+    "completion_tokens": 301
+  }
+}

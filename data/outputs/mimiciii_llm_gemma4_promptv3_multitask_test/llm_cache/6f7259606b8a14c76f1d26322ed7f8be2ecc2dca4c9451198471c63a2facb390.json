@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.05},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Obstructive sleep apnea (adult)(pediatric)', 'Morbid obesity', and 'Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled', which directly support the 'Yes' predictions for obesity and diabetes. The record also lists 'Hypertensive chronic kidney disease' and 'End stage renal disease', supporting the 'Yes' prediction for kidney next. The diagnosis of 'Morbid obesity' and 'Hypertensive chronic kidney disease' strongly support the 'Yes' prediction for lipid next, as per the target definition. Cardio and stroke next are 'No' as there is no explicit evidence in the record to support these diagnoses.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3495,
+    "completion_tokens": 309
+  }
+}

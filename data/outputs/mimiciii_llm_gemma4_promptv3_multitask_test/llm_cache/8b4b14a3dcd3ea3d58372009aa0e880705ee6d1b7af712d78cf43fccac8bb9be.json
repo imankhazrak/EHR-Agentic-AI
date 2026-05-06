@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.90},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.90},\n  \"reasoning\": \"The record explicitly states 'Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled' and 'Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease', confirming diabetes and hypertension. 'End stage renal disease' confirms kidney issues. 'Coronary atherosclerosis of native coronary artery' confirms cardiovascular risk. 'Body Mass Index between 19-24, adult' confirms not obese. 'Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled' and 'Long-term (current) use of insulin' confirm lipid disorder risk/presence. Stroke is not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3941,
+    "completion_tokens": 304
+  }
+}

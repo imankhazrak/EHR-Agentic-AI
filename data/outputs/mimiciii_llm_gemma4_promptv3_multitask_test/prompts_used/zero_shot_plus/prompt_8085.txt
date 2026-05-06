@@ -1,0 +1,75 @@
+[system]
+You are a clinical prediction assistant for hospital records. Your task is to analyze the patient's current hospital visit and make multiple clinical predictions using only evidence present in the current visit record.
+---
+[user]
+Task: Based only on the patient's current hospital visit record below, predict the following:
+
+1. Whether "Disorders of Lipid Metabolism" will be diagnosed in the NEXT hospital visit.
+2. Whether the patient currently has diabetes.
+3. Whether the patient currently has hypertension.
+4. Whether the patient currently has obesity.
+5. Whether the patient will have cardiovascular disease in the NEXT hospital visit.
+6. Whether the patient will have kidney disease in the NEXT hospital visit.
+7. Whether the patient will have stroke in the NEXT hospital visit.
+
+You are presented with:
+1. [Target Definition]
+2. [Current Visit Record]
+3. [Instructions]
+4. [Output Format]
+
+[Target Definition]
+"Disorders of Lipid Metabolism" includes conditions such as hypercholesterolemia, hyperlipidemia, hyperlipoproteinemia, and related lipid abnormalities (CCS category 53).
+
+[Prediction Clarification]
+Important:
+- Predict ONLY based on the current visit record.
+- Do NOT assume information not explicitly mentioned.
+- Do NOT rely on outside medical knowledge beyond the documented record.
+
+For lipid disorder prediction:
+- Follow the same rules as before:
+  • Answer "Yes" if explicit diagnosis/history/evidence exists
+  • Use medication ONLY if supported by other evidence
+  • DO NOT rely only on risk factors (diabetes, hypertension, obesity)
+
+For other tasks:
+- Answer "Yes" ONLY if there is clear supporting evidence in the record
+- Otherwise answer "No"
+
+[Current Visit Record]
+- Diagnoses made: Acute myocardial infarction of other inferior wall, initial episode of care; Acute kidney failure, unspecified; Cardiac complications, not elsewhere classified; Atrial flutter; [ICD9-DX:9973]; Pulmonary collapse; Unspecified protein-calorie malnutrition; Cardiogenic shock; Urinary tract infection, site not specified; Mobitz (type) II atrioventricular block; Pressure ulcer, heel; Hyposmolality and/or hyponatremia; Diastolic heart failure, unspecified; Coronary atherosclerosis of native coronary artery; Atrial fibrillation; Anemia, unspecified; Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage I through stage IV, or unspecified; Chronic kidney disease, unspecified; Congestive heart failure, unspecified
+- Medications prescribed: Insulin; Potassium Chloride; Metoprolol; Furosemide; HydrALAzine; Isosorbide Mononitrate (Extended Release); Dextrose 50%; Sodium Chloride 0.9%  Flush; Calcitriol; D5 1/2NS; TraMADOL (Ultram); Isosorbide Dinitrate; Docusate Sodium (Liquid); Docusate Sodium; Acetaminophen; D5W; Piperacillin-Tazobactam Na; Iso-Osmotic Dextrose; Insulin Human Regular; Clopidogrel Bisulfate; NS; Heparin Flush CVL  (100 units/ml); Lansoprazole Oral Disintegrating Tab; Heparin; Aspirin; Bisacodyl; Ipratropium Bromide Neb; Albuterol 0.083% Neb Soln; Simvastatin; Heparin Sodium; Vancomycin; Pantoprazole; SW; Nitroglycerin; Aspirin EC; Warfarin; Epinephrine; Sodium Bicarbonate; Chlorothiazide Sodium; Heparin CRRT; Vasopressin; Prismasate (B32 K2); Prismasate (B22 K4); Calcium Gluconate; Heparin Flush; Heparin Flush CRRT (5000 Units/mL); DOBUTamine; LR; Glycopyrrolate; Neostigmine
+- Procedures performed: (Aorto)coronary bypass of two coronary arteries; Percutaneous transluminal coronary angioplasty [PTCA]; Single internal mammary-coronary artery bypass; Extracorporeal circulation auxiliary to open heart surgery; Procedure on single vessel; Left heart cardiac catheterization; Coronary arteriography using two catheters; Injection or infusion of platelet inhibitor; Other intubation of respiratory tract; Percutaneous [endoscopic] gastrostomy [PEG]; Enteral infusion of concentrated nutritional substances; Venous catheterization, not elsewhere classified; Venous catheterization for renal dialysis; Hemodialysis
+
+[Instructions]
+In the MIMIC-III population:
+- Lipid disorder prevalence ≈ 27.4% (next visit)
+
+Please:
+(1) Analyze only the evidence documented in the current visit record.
+(2) Consider diagnoses, medications, and procedures together.
+(3) Weigh multiple documented signals together.
+(4) Use prevalence only as background context, not as a decision rule.
+(5) Base conclusions on strength of evidence in the record.
+
+[Output Format]
+Your response MUST follow exactly this format:
+
+{
+  "lipid_next": {"prediction": "Yes/No", "probability": 0.00},
+  "diabetes_current": {"prediction": "Yes/No", "probability": 0.00},
+  "hypertension_current": {"prediction": "Yes/No", "probability": 0.00},
+  "obesity_current": {"prediction": "Yes/No", "probability": 0.00},
+  "cardio_next": {"prediction": "Yes/No", "probability": 0.00},
+  "kidney_next": {"prediction": "Yes/No", "probability": 0.00},
+  "stroke_next": {"prediction": "Yes/No", "probability": 0.00},
+  "reasoning": "<brief explanation grounded ONLY in the current visit record>"
+}
+
+[Rules for Probability]
+- Each probability must be between 0 and 1
+- Use exactly two decimal places
+- Higher = stronger evidence in the record
+- Do NOT use percentages
+- Do NOT add extra text outside JSON

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.10},\n  \"reasoning\": \"The record explicitly lists diagnoses such as 'Obesity hypoventilation syndrome', 'Morbid obesity', 'Chronic kidney disease, Stage II (mild)', 'Hypertensive chronic kidney disease, unspecified', and 'Diabetes mellitus without mention of complication, type II or unspecified type'. The record also lists 'Chronic diastolic heart failure' and 'Congestive heart failure, unspecified', supporting the prediction of cardiovascular disease. 'Acute kidney failure, unspecified' and 'Chronic kidney disease, Stage II (mild)' support the kidney disease prediction. 'Diabetes mellitus' is explicitly listed. 'Hypertensive chronic kidney disease' and 'Obesity hypoventilation syndrome' support hypertension and obesity. 'Stroke' is not explicitly mentioned.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1016,
+    "completion_tokens": 313
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes with renal manifestations, type II or unspecified type' and 'Hypertensive chronic kidney disease, unspecified'. 'Combined systolic and diastolic heart failure, unspecified' supports the prediction for cardiovascular next. 'Acute kidney failure' and 'Hypertensive chronic kidney disease' support the kidney next prediction. 'Hyperpotassemia' and 'End stage renal disease' are present, but no explicit lipid diagnosis is listed, yet the target definition is CCS category 53, and the prevalence is 27.4%, leading to a 'Yes' prediction for lipid next based on background context and related conditions.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3434,
+    "completion_tokens": 299
+  }
+}

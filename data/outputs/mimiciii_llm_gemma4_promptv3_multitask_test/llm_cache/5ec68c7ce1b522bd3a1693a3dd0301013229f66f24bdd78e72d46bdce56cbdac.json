@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.85},\n  \"diabetes_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"kidney_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No/No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents the prescription of Cholestyramine, which is a medication used to treat hyperlipidemia/lipid abnormalities, supporting a 'Yes' prediction for lipid disorders.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1023,
+    "completion_tokens": 219
+  }
+}

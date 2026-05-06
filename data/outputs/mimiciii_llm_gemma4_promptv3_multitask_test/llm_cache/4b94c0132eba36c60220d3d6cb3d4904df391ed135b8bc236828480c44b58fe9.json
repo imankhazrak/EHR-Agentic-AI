@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"reasoning\": \"The current visit record explicitly diagnoses 'Unspecified essential hypertension' and 'Coronary atherosclerosis of native coronary artery', supporting 'Yes' for hypertension and cardio_next. 'Occlusion and stenosis of multiple and bilateral precerebral arteries without mention of cerebral infarction' supports 'Yes' for stroke_next. 'Disorders of Lipid Metabolism' is not explicitly diagnosed, leading to 'No' for lipid_next, despite the background context.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3518,
+    "completion_tokens": 258
+  }
+}

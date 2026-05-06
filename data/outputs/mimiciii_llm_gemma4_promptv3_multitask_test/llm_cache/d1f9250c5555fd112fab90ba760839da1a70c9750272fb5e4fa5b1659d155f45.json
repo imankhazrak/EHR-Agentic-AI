@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly documents diagnoses including 'Diabetes with other specified manifestations, type II or unspecified type' and 'Coronary atherosclerosis of native coronary artery' and 'Acute kidney failure, unspecified' and 'Primary pulmonary hypertension' and 'Coronary atherosclerosis of native coronary artery' and 'Diabetes with other specified manifestations, type II or unspecified type'. The record also documents 'Primary pulmonary hypertension' and 'Coronary atherosclerosis of native coronary artery' which support the prediction of cardiovascular issues. The record does not explicitly state obesity or stroke.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1339,
+    "completion_tokens": 278
+  }
+}

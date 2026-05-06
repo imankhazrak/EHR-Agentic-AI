@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly diagnoses Pure hypercholesterolemia, which falls under the definition of Disorders of Lipid Metabolism. Diabetes mellitus and Morbid obesity are explicitly diagnosed. Other specified hypotension is diagnosed, but the prediction for hypertension_current is No because the record only lists 'Other specified hypotension' without a clear 'Hypertension' diagnosis matching the expected evidence mapping. Cardio next is Yes due to the explicit diagnosis of Atrial fibrillation. Kidney and stroke next are No as there is no explicit evidence in the record.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3425,
+    "completion_tokens": 272
+  }
+}

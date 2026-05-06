@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Coronary atherosclerosis of native coronary artery', which confirms the diagnosis of lipid disorder (CCS category 53). Diabetes mellitus and Unspecified essential hypertension are explicitly listed in the diagnoses made. Obesity is not mentioned in the diagnoses made. Cardiovascular disease is confirmed by 'Coronary atherosclerosis of native coronary artery' and 'Congestive heart failure, unspecified'. Kidney disease and stroke are not mentioned in the diagnoses made.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3459,
+    "completion_tokens": 269
+  }
+}

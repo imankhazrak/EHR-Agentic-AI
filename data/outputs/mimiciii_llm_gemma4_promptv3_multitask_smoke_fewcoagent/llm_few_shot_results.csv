@@ -1,0 +1,51 @@
+pair_id,label_lipid_disorder,prompt_mode,model_name,raw_response,parsed_prediction,pred_binary,parsed_probability,probability_parse_status,parse_valid_probability,probability_format_warning,reasoning,parser_status,parse_failure_reason,salvage_used,n_tasks_salvaged,prob_yes,prob_no,raw_response_path,lipid_prob,lipid_pred,diabetes_prob,diabetes_pred,hypertension_prob,hypertension_pred,obesity_prob,obesity_pred,cardio_prob,cardio_pred,kidney_prob,kidney_pred,stroke_prob,stroke_pred,true_label,split
+5346,0,few_shot,models/hf_snapshots/google--gemma-4-e4b-it,"{
+  ""lipid_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""diabetes_current"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""hypertension_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""kidney_next"": {""prediction"": ""Yes"", ""probability"": 0.80},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""The current record shows prescriptions for Insulin, indicating current diabetes. Congestive heart failure and Aortocoronary bypass status suggest a high likelihood of future cardiovascular issues. The presence of Angiodysplasia of intestine with hemorrhage and Congestive heart failure suggests current or future kidney involvement. No explicit evidence for obesity or hypertension is present in the diagnoses or medications.""
+}",No,0,0.0,ok,True,False,"The current record shows prescriptions for Insulin, indicating current diabetes. Congestive heart failure and Aortocoronary bypass status suggest a high likelihood of future cardiovascular issues. The presence of Angiodysplasia of intestine with hemorrhage and Congestive heart failure suggests current or future kidney involvement. No explicit evidence for obesity or hypertension is present in the diagnoses or medications.",multitask_json,,False,7,,,data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/raw_llm_responses/few_shot/responses.jsonl,0.0,0,0.8,1,0.0,0,0.0,0,0.8,1,0.8,1,0.0,0,0,test
+4305,0,few_shot,models/hf_snapshots/google--gemma-4-e4b-it,"{
+  ""lipid_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""diabetes_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""hypertension_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""kidney_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""The current visit record does not explicitly list any diagnoses or medications that confirm 'Disorders of Lipid Metabolism' (hypercholesterolemia, hyperlipidemia, etc.). Furthermore, there is no explicit evidence in the record to confirm the presence of diabetes, hypertension, obesity, or the future presence of cardiovascular, kidney, or stroke diseases.""
+}",No,0,0.0,ok,True,False,"The current visit record does not explicitly list any diagnoses or medications that confirm 'Disorders of Lipid Metabolism' (hypercholesterolemia, hyperlipidemia, etc.). Furthermore, there is no explicit evidence in the record to confirm the presence of diabetes, hypertension, obesity, or the future presence of cardiovascular, kidney, or stroke diseases.",multitask_json,,False,7,,,data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/raw_llm_responses/few_shot/responses.jsonl,0.0,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,0,0,test
+8843,1,few_shot,models/hf_snapshots/google--gemma-4-e4b-it,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""diabetes_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""kidney_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""Pure hypercholesterolemia is explicitly diagnosed, supporting a 'Yes' for lipid disorder. Unspecified essential hypertension is explicitly diagnosed, supporting 'Yes' for hypertension. Coronary atherosclerosis is explicitly diagnosed, supporting 'Yes' for cardiovascular disease. No explicit evidence for diabetes, obesity, kidney disease, or stroke was found in the record.""
+}",Yes,1,0.95,ok,True,False,"Pure hypercholesterolemia is explicitly diagnosed, supporting a 'Yes' for lipid disorder. Unspecified essential hypertension is explicitly diagnosed, supporting 'Yes' for hypertension. Coronary atherosclerosis is explicitly diagnosed, supporting 'Yes' for cardiovascular disease. No explicit evidence for diabetes, obesity, kidney disease, or stroke was found in the record.",multitask_json,,False,7,,,data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/raw_llm_responses/few_shot/responses.jsonl,0.95,1,0.0,0,0.9,1,0.0,0,0.95,1,0.0,0,0.0,0,1,test
+10771,0,few_shot,models/hf_snapshots/google--gemma-4-e4b-it,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""diabetes_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""kidney_next"": {""prediction"": ""Yes"", ""probability"": 0.90},
+  ""stroke_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""reasoning"": ""The current visit record explicitly lists diagnoses such as 'Secondary hyperparathyroidism (of renal origin)' and 'Hypertensive chronic kidney disease', which strongly support the prediction of 'Disorders of Lipid Metabolism' (CCS category 53) being present. Hypertension is confirmed by 'Hypertensive chronic kidney disease'. Kidney disease is confirmed by 'Polycystic kidney, autosomal dominant' and 'End stage renal disease'. No explicit evidence for diabetes or obesity was found in the record.""
+}",Yes,1,0.9,ok,True,False,"The current visit record explicitly lists diagnoses such as 'Secondary hyperparathyroidism (of renal origin)' and 'Hypertensive chronic kidney disease', which strongly support the prediction of 'Disorders of Lipid Metabolism' (CCS category 53) being present. Hypertension is confirmed by 'Hypertensive chronic kidney disease'. Kidney disease is confirmed by 'Polycystic kidney, autosomal dominant' and 'End stage renal disease'. No explicit evidence for diabetes or obesity was found in the record.",multitask_json,,False,7,,,data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/raw_llm_responses/few_shot/responses.jsonl,0.9,1,0.0,0,0.9,1,0.0,0,0.0,0,0.9,1,0.0,0,0,test
+5618,1,few_shot,models/hf_snapshots/google--gemma-4-e4b-it,"{
+  ""lipid_next"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""diabetes_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""hypertension_current"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""obesity_current"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""cardio_next"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""kidney_next"": {""prediction"": ""No"", ""probability"": 0.00},
+  ""stroke_next"": {""prediction"": ""Yes"", ""probability"": 0.95},
+  ""reasoning"": ""The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Unspecified essential hypertension', which directly support the 'Yes' predictions for lipid disorder and hypertension. The presence of 'Intracerebral hemorrhage' and 'Other vascular complications of medical care' supports the 'Yes' predictions for cardiovascular disease and stroke.""
+}",Yes,1,0.95,ok,True,False,"The current visit record explicitly lists 'Pure hypercholesterolemia' and 'Unspecified essential hypertension', which directly support the 'Yes' predictions for lipid disorder and hypertension. The presence of 'Intracerebral hemorrhage' and 'Other vascular complications of medical care' supports the 'Yes' predictions for cardiovascular disease and stroke.",multitask_json,,False,7,,,data/outputs/mimiciii_llm_gemma4_promptv3_multitask_smoke_fewcoagent/raw_llm_responses/few_shot/responses.jsonl,0.95,1,0.0,0,0.95,1,0.0,0,0.95,1,0.0,0,0.95,1,1,test

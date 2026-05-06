@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.80},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly states 'Hypertensive heart and chronic kidney disease' and 'chronic kidney disease stage V or end stage renal disease', confirming hypertension and kidney issues. 'Cardio next' is predicted as Yes due to 'Chronic combined systolic and diastolic heart failure' and 'Congestive heart failure'. 'Lipid next' is No as there is no explicit mention of hypercholesterolemia or hyperlipidemia. 'Hypertension current' is Yes based on the explicit diagnosis.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3486,
+    "completion_tokens": 265
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled', 'Unspecified essential hypertension', and 'Late effects of cerebrovascular disease, aphasia', which directly support the 'Yes' predictions for these conditions. The record also supports 'Hyperosmolality and/or hypernatremia' and 'Acute kidney failure, unspecified', supporting the 'Yes' prediction for kidney issues. 'Late effects of cerebrovascular disease, aphasia' supports the 'Yes' prediction for stroke/cardio issues. 'Obesity' is not explicitly listed in the diagnoses, thus 'No' is predicted.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3445,
+    "completion_tokens": 306
+  }
+}

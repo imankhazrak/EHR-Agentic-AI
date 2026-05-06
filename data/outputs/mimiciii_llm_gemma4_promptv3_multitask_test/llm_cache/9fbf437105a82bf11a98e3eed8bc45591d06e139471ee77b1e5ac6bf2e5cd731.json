@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes/No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly documents diagnoses including Hypertensive chronic kidney disease, Diabetes with renal manifestations, Atherosclerosis of native arteries of the extremities with ulceration, and Coronary atherosclerosis of unspecified type of vessel, native or graft, which strongly indicate the presence of lipid abnormalities and cardiovascular risk factors.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1025,
+    "completion_tokens": 240
+  }
+}

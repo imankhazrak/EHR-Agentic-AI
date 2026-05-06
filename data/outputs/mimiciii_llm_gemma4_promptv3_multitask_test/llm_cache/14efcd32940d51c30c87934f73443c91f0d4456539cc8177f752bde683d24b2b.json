@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The current visit record explicitly lists diagnoses such as 'Other and unspecified hyperlipidemia' and 'Benign essential hypertension', and 'Diabetes mellitus without mention of complication, type II or unspecified type'. Cardiovascular issues are supported by 'Acute on chronic diastolic heart failure' and 'Congestive heart failure'. Kidney issues are supported by 'Urinary tract infection, site not specified' and 'Urinary catheterization as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure'. Stroke is supported by 'Late effects of cerebrovascular disease, hemiplegia affecting unspecified side' and 'Late effects of cerebrovascular disease, aphasia'.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 1040,
+    "completion_tokens": 306
+  }
+}

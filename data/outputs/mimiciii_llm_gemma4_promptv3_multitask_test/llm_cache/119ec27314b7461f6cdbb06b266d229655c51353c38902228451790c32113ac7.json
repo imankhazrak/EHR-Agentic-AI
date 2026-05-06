@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"stroke_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"reasoning\": \"The record explicitly lists 'Other and unspecified hyperlipidemia' and 'Hypertensive chronic kidney disease, unspecified,' supporting a 'Yes' for lipid disorder and hypertension. 'Acute on chronic systolic heart failure' and 'Hypertensive chronic kidney disease' support 'Yes' for cardio and kidney next. 'Cerebral embolism with cerebral infarction' supports 'Yes' for stroke next. Diabetes and obesity are not explicitly documented.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3782,
+    "completion_tokens": 252
+  }
+}

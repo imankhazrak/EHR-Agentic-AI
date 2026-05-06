@@ -12,6 +12,7 @@ llm:
   multitask: true
   max_test_samples: null
   cache_dir: "data/outputs/mimiciii_llm_gemma4_promptv3_multitask_test/llm_cache"
-  max_input_tokens: 3072
-  max_new_tokens: 1024
+  # max_input_tokens / max_new_tokens = 4*1024 for long multitask JSON on V100-32G runs.
+  max_input_tokens: 4096
+  max_new_tokens: 4096
   device_map: single

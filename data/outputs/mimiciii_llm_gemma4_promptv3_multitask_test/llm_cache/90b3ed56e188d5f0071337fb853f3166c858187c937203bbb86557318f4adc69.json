@@ -1,0 +1,10 @@
+{
+  "text": "{\n  \"lipid_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"diabetes_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"hypertension_current\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"obesity_current\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"cardio_next\": {\"prediction\": \"Yes\", \"probability\": 0.95},\n  \"kidney_next\": {\"prediction\": \"Yes\", \"probability\": 0.90},\n  \"stroke_next\": {\"prediction\": \"No\", \"probability\": 0.00},\n  \"reasoning\": \"The record explicitly lists 'Other and unspecified hyperlipidemia' and 'Coronary atherosclerosis of native coronary artery', supporting a 'Yes' for lipid next. Diabetes is confirmed by 'Diabetes with neurological manifestations' and 'Diabetes with ophthalmic manifestations'. Hypertension is supported by 'Hypertensive chronic kidney disease'. Obesity is supported by 'Bariatric surgery status'. Cardio next is supported by 'Coronary atherosclerosis of native coronary artery' and 'Personal history of sudden cardiac arrest'. Kidney next is supported by 'Hypertensive chronic kidney disease' and 'End stage renal disease'. Stroke next is not explicitly mentioned in the diagnoses.\"\n}",
+  "model": "models/hf_snapshots/google--gemma-4-e4b-it",
+  "finish_reason": "stop",
+  "logprobs": null,
+  "usage": {
+    "prompt_tokens": 3835,
+    "completion_tokens": 293
+  }
+}
