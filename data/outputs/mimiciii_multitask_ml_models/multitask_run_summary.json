@@ -32,5 +32,207 @@
     "test": 2425
   },
   "leakage_safe": true,
+  "imbalance_strategy": "hybrid_class_weight_balanced_plus_train_upsampling_plus_threshold_tuning",
+  "threshold_selection": {
+    "primary_metric": "macro_auprc",
+    "tie_breaker": "macro_f1",
+    "search_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ]
+  },
+  "thresholds_by_model_and_label": {
+    "logistic_regression": {
+      "label_lipid_disorder": {
+        "threshold": 0.35,
+        "val_auprc": 0.4242,
+        "val_f1_at_threshold": 0.5106,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 12280,
+        "upsampling_applied": true
+      },
+      "label_diabetes_current": {
+        "threshold": 0.5,
+        "val_auprc": 0.867,
+        "val_f1_at_threshold": 0.7835,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 11188,
+        "upsampling_applied": true
+      },
+      "label_hypertension_current": {
+        "threshold": 0.2,
+        "val_auprc": 0.7952,
+        "val_f1_at_threshold": 0.7554,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9558,
+        "upsampling_applied": true
+      },
+      "label_obesity_current": {
+        "threshold": 0.55,
+        "val_auprc": 0.3798,
+        "val_f1_at_threshold": 0.3982,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16086,
+        "upsampling_applied": true
+      },
+      "label_cardio_next": {
+        "threshold": 0.4,
+        "val_auprc": 0.8453,
+        "val_f1_at_threshold": 0.7818,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 8818,
+        "upsampling_applied": true
+      },
+      "label_kidney_next": {
+        "threshold": 0.15,
+        "val_auprc": 0.7285,
+        "val_f1_at_threshold": 0.6696,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9672,
+        "upsampling_applied": true
+      },
+      "label_stroke_next": {
+        "threshold": 0.85,
+        "val_auprc": 0.1804,
+        "val_f1_at_threshold": 0.2029,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16050,
+        "upsampling_applied": true
+      }
+    },
+    "decision_tree": {
+      "label_lipid_disorder": {
+        "threshold": 0.8,
+        "val_auprc": 0.3578,
+        "val_f1_at_threshold": 0.4573,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 12280,
+        "upsampling_applied": true
+      },
+      "label_diabetes_current": {
+        "threshold": 0.05,
+        "val_auprc": 0.59,
+        "val_f1_at_threshold": 0.7004,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 11188,
+        "upsampling_applied": true
+      },
+      "label_hypertension_current": {
+        "threshold": 0.05,
+        "val_auprc": 0.6748,
+        "val_f1_at_threshold": 0.7202,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9558,
+        "upsampling_applied": true
+      },
+      "label_obesity_current": {
+        "threshold": 0.05,
+        "val_auprc": 0.1126,
+        "val_f1_at_threshold": 0.2569,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16086,
+        "upsampling_applied": true
+      },
+      "label_cardio_next": {
+        "threshold": 0.05,
+        "val_auprc": 0.6594,
+        "val_f1_at_threshold": 0.7127,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 8818,
+        "upsampling_applied": true
+      },
+      "label_kidney_next": {
+        "threshold": 0.55,
+        "val_auprc": 0.5515,
+        "val_f1_at_threshold": 0.6109,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9672,
+        "upsampling_applied": true
+      },
+      "label_stroke_next": {
+        "threshold": 0.05,
+        "val_auprc": 0.062,
+        "val_f1_at_threshold": 0.1302,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16050,
+        "upsampling_applied": true
+      }
+    },
+    "random_forest": {
+      "label_lipid_disorder": {
+        "threshold": 0.35,
+        "val_auprc": 0.5039,
+        "val_f1_at_threshold": 0.5709,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 12280,
+        "upsampling_applied": true
+      },
+      "label_diabetes_current": {
+        "threshold": 0.45,
+        "val_auprc": 0.8544,
+        "val_f1_at_threshold": 0.7876,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 11188,
+        "upsampling_applied": true
+      },
+      "label_hypertension_current": {
+        "threshold": 0.4,
+        "val_auprc": 0.8065,
+        "val_f1_at_threshold": 0.7839,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9558,
+        "upsampling_applied": true
+      },
+      "label_obesity_current": {
+        "threshold": 0.2,
+        "val_auprc": 0.3921,
+        "val_f1_at_threshold": 0.4167,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16086,
+        "upsampling_applied": true
+      },
+      "label_cardio_next": {
+        "threshold": 0.45,
+        "val_auprc": 0.8701,
+        "val_f1_at_threshold": 0.8054,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 8818,
+        "upsampling_applied": true
+      },
+      "label_kidney_next": {
+        "threshold": 0.4,
+        "val_auprc": 0.7867,
+        "val_f1_at_threshold": 0.6961,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 9672,
+        "upsampling_applied": true
+      },
+      "label_stroke_next": {
+        "threshold": 0.2,
+        "val_auprc": 0.1683,
+        "val_f1_at_threshold": 0.2277,
+        "train_rows_before_upsample": 8526,
+        "train_rows_after_upsample": 16050,
+        "upsampling_applied": true
+      }
+    }
+  },
   "task_feature_masks_file": "task_feature_masks.json"
 }

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leakage-Safe and Imbalance-Robust Multitask ML Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem auto; max-width: 980px; padding: 0 1rem; color: #111; }
+    h1, h2, h3, h4, h5, h6 { line-height: 1.25; }
+    code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    pre { background: #f4f4f4; padding: 0.8rem; overflow-x: auto; border-radius: 6px; }
+    pre code { background: transparent; padding: 0; }
+  </style>
+</head>
+<body>
+<h1>Leakage-Safe and Imbalance-Robust Multitask ML Pipeline: Data Encoding, Leakage Control, and Updated Results</h1>
+<h2>Abstract</h2>
+<p>This report documents a leakage-safe and imbalance-robust multitask machine-learning pipeline for MIMIC-III visit-pair prediction. The workflow combines patient-grouped data splitting, train-only feature encoding, task-specific leakage masks, class-weighted learners, train-only positive-class upsampling, and validation-based threshold optimization. We report the updated results after rerunning all classical ML models (logistic regression, decision tree, random forest) and summarize methodological implications for highly imbalanced labels.</p>
+<h2>1. Study Objective</h2>
+<p>The objective was to build a robust classical ML baseline for seven binary tasks while minimizing two major validity threats:</p>
+<ol>
+<li>data leakage due to shared patients between train and test;</li>
+<li>optimistic bias and poor minority recall caused by severe class imbalance.</li>
+</ol>
+<p>Predicted labels:</p>
+<ul>
+<li><code>label_lipid_disorder</code></li>
+<li><code>label_diabetes_current</code></li>
+<li><code>label_hypertension_current</code></li>
+<li><code>label_obesity_current</code></li>
+<li><code>label_cardio_next</code></li>
+<li><code>label_kidney_next</code></li>
+<li><code>label_stroke_next</code></li>
+</ul>
+<h2>2. Dataset Preparation and Encoding</h2>
+<h3>2.1 Leakage-safe split</h3>
+<p>Data were split by grouped patient identity (<code>SUBJECT_ID</code>) rather than row-wise random split.</p>
+<ul>
+<li>Total visit pairs: <code>12,456</code></li>
+<li>Train: <code>10,031</code></li>
+<li>Test: <code>2,425</code></li>
+<li>Overlap diagnostics:</li>
+<p>- <code>subject_overlap = 0</code>   - <code>hadm_current_overlap = 0</code>   - <code>hadm_next_overlap = 0</code></p>
+</ul>
+<p>This removes patient-level contamination between model development and final evaluation.</p>
+<h3>2.2 Inner development split</h3>
+<p>Within train, an inner split was used for model development:</p>
+<ul>
+<li><code>train_inner = 8,526</code></li>
+<li><code>val_inner = 1,505</code></li>
+<li><code>test = 2,425</code></li>
+</ul>
+<h3>2.3 Feature encoding</h3>
+<p>A sparse bag-of-codes representation was used:</p>
+<ul>
+<li>Inputs: <code>diagnoses_codes_current</code>, <code>procedures_codes_current</code>, <code>medications_current</code></li>
+<li>Encoder: binary <code>CountVectorizer</code></li>
+<li>Vocabulary fit policy: <strong>train_inner only</strong> (then transform val/test)</li>
+<li>Final feature space: <code>6,927</code> features</li>
+</ul>
+<p>Generated artifacts:</p>
+<ul>
+<li><code>train_inner_encoded.npz</code>, <code>val_inner_encoded.npz</code>, <code>test_encoded.npz</code></li>
+<li><code>feature_vocab.json</code></li>
+<li><code>task_feature_masks.json</code></li>
+</ul>
+<h2>3. Leakage Handling Strategy</h2>
+<h3>3.1 Task-specific feature masking</h3>
+<p>For each target, diagnosis-code prefixes used in target construction were removed from that task's input feature space, preventing direct target reconstruction. Examples:</p>
+<ul>
+<li>diabetes: <code>250*</code></li>
+<li>hypertension: <code>401*</code>-<code>405*</code></li>
+<li>obesity: <code>2780*</code></li>
+<li>lipid: <code>272*</code></li>
+<li>cardio: <code>410*</code>, <code>411*</code>, <code>412*</code>, <code>413*</code>, <code>414*</code>, <code>428*</code></li>
+<li>kidney: <code>584*</code>, <code>585*</code>, <code>586*</code></li>
+<li>stroke: <code>430*</code>-<code>436*</code></li>
+</ul>
+<p>Masking was deterministic and persisted (<code>task_feature_masks.json</code>), with guardrail checks ensuring forbidden prefixes are absent from each active task feature set.</p>
+<h2>4. Imbalance-Robust Modeling Strategy</h2>
+<p>To address strong skew in positive/negative prevalence, we implemented a hybrid strategy:</p>
+<ol>
+<li><strong>Class-weighted learners</strong>:</li>
+<p>- logistic regression (<code>class_weight=&#x27;balanced&#x27;</code>)    - decision tree (<code>class_weight=&#x27;balanced&#x27;</code>)    - random forest (<code>class_weight=&#x27;balanced&#x27;</code>)</p>
+<li><strong>Train-only positive upsampling</strong> to class parity (performed separately per task).</li>
+<li><strong>Threshold tuning on validation</strong> using a fixed grid (<code>0.05</code> to <code>0.95</code>):</li>
+<p>- primary criterion: macro-AUPRC policy    - tie-breaker: macro-F1</p>
+</ol>
+<h3>4.1 Exact protocol used to handle imbalance</h3>
+<p>The imbalance procedure used in this experiment is strictly as follows:</p>
+<ol>
+<li>Start from leakage-safe masked features for each task.</li>
+<li>For that task, use only <code>train_inner</code> rows to rebalance classes by random upsampling of the minority class until class parity.</li>
+<li>Fit a class-weighted classifier (<code>class_weight=&amp;#x27;balanced&amp;#x27;</code>) on the rebalanced training subset.</li>
+<li>Compute probabilities on <code>val_inner</code> (without any resampling).</li>
+<li>Select the task-specific decision threshold from <code>0.05</code> to <code>0.95</code> based on the chosen policy (primary AUPRC, tie-break F1).</li>
+<li>Apply the selected threshold to both <code>val_inner</code> and <code>test</code>.</li>
+</ol>
+<h3>4.2 What was explicitly avoided</h3>
+<ul>
+<li><strong>No</strong> upsampling or synthetic sampling on validation data.</li>
+<li><strong>No</strong> upsampling or synthetic sampling on test data.</li>
+<li><strong>No</strong> threshold tuning on test data.</li>
+<li><strong>No</strong> change to label prevalence in evaluation splits.</li>
+</ul>
+<p>This design ensures imbalance correction is learned strictly from the training partition, while validation/test remain unbiased for model selection and final reporting.</p>
+<p>All selected thresholds and upsampling diagnostics are saved in:</p>
+<ul>
+<li><code>data/outputs/mimiciii_multitask_ml_models/multitask_run_summary.json</code></li>
+</ul>
+<h2>5. Updated Results After Imbalance-Robust Rerun</h2>
+<h3>5.1 Test macro-average performance</h3>
+<p>From <code>multitask_metrics_all_models.csv</code> (<code>split=test</code>, <code>label=macro_avg</code>):</p>
+<ul>
+<li>Logistic Regression: Accuracy <code>75.08</code>, Sensitivity <code>62.70</code>, Specificity <code>69.01</code>, F1 <code>52.84</code>, AUC <code>75.63</code>, AUPRC <code>54.51</code></li>
+<li>Decision Tree: Accuracy <code>74.43</code>, Sensitivity <code>51.72</code>, Specificity <code>76.62</code>, F1 <code>48.70</code>, AUC <code>64.21</code>, AUPRC <code>40.17</code></li>
+<li>Random Forest: Accuracy <code>77.38</code>, Sensitivity <code>69.50</code>, Specificity <code>71.56</code>, F1 <code>58.15</code>, AUC <code>79.81</code>, AUPRC <code>58.49</code></li>
+</ul>
+<h3>5.2 Main interpretation</h3>
+<ul>
+<li>Random forest is now the strongest overall model by macro AUC/AUPRC and macro F1 on test.</li>
+<li>Compared with pre-imbalance handling runs, sensitivity improved notably for several difficult labels (especially rare outcomes), with an expected specificity trade-off.</li>
+<li>Extremely imbalanced tasks (e.g., stroke, obesity) remain challenging, but the updated pipeline provides a more clinically useful recall-oriented operating point.</li>
+</ul>
+<h2>6. Reproducibility</h2>
+<p>Pipeline commands:</p>
+<ol>
+<li><code>python -m src.scripts.run_preprocessing --config configs/default.yaml</code></li>
+<li><code>python -m src.scripts.build_mimiciii_multitask_dataset --source-processed data/processed/mimiciii --output-processed data/processed/mimiciii_multitask</code></li>
+<li><code>python -m src.scripts.prepare_multitask_ml_inputs --input-dir data/processed/mimiciii_multitask --output-dir data/processed/mimiciii_multitask_ml</code></li>
+<li><code>python -m src.scripts.run_multitask_ml_models --input-dir data/processed/mimiciii_multitask_ml --output-dir data/outputs/mimiciii_multitask_ml_models</code></li>
+</ol>
+<p>Primary output files:</p>
+<ul>
+<li><code>data/processed/mimiciii_multitask_ml/encoding_summary.json</code></li>
+<li><code>data/processed/mimiciii_multitask_ml/task_feature_masks.json</code></li>
+<li><code>data/outputs/mimiciii_multitask_ml_models/multitask_metrics_all_models.csv</code></li>
+<li><code>data/outputs/mimiciii_multitask_ml_models/multitask_run_summary.json</code></li>
+</ul>
+<h2>7. Limitations and Future Work</h2>
+<ul>
+<li>Threshold tuning is validation-set dependent and may require external recalibration.</li>
+<li>Rare-event tasks remain difficult; additional methods (focal loss alternatives via gradient boosting frameworks, calibrated ensembles, or temporal modeling) may improve robustness.</li>
+<li>Future reporting should include uncertainty intervals (bootstrap CIs), subgroup analyses, and external validation.</li>
+</ul>
+</body>
+</html>

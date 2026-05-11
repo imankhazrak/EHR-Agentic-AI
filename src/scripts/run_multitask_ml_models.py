@@ -17,6 +17,7 @@ import pandas as pd
 from scipy import sparse
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import average_precision_score, f1_score
 from sklearn.tree import DecisionTreeClassifier
 
 from src.evaluation.metrics import compute_metrics
@@ -62,11 +63,23 @@ def _load_split(input_dir: Path, split_name: str) -> tuple[Any, pd.DataFrame]:
 
 def _build_model(model_name: str, seed: int):
     if model_name == "logistic_regression":
-        return LogisticRegression(max_iter=1000, random_state=seed, solver="lbfgs")
+        return LogisticRegression(
+            max_iter=1000,
+            random_state=seed,
+            solver="lbfgs",
+            class_weight="balanced",
+        )
     elif model_name == "decision_tree":
-        return DecisionTreeClassifier(random_state=seed)
+        return DecisionTreeClassifier(
+            random_state=seed,
+            class_weight="balanced",
+        )
     elif model_name == "random_forest":
-        return RandomForestClassifier(n_estimators=100, random_state=seed)
+        return RandomForestClassifier(
+            n_estimators=100,
+            random_state=seed,
+            class_weight="balanced",
+        )
     else:
         raise ValueError(f"Unsupported model: {model_name}")
 
@@ -82,6 +95,46 @@ def _predict_one_with_proba(model, x) -> tuple[np.ndarray, np.ndarray]:
     else:
         y_prob = np.zeros(len(y_pred), dtype=float)
     return y_pred, y_prob
+
+
+def _upsample_positive_class_train_only(x, y: np.ndarray, seed: int):
+    """Upsample minority class to parity using only training rows."""
+    y = y.astype(int)
+    pos_idx = np.flatnonzero(y == 1)
+    neg_idx = np.flatnonzero(y == 0)
+    if len(pos_idx) == 0 or len(neg_idx) == 0:
+        return x, y
+    if len(pos_idx) == len(neg_idx):
+        return x, y
+    rng = np.random.default_rng(seed)
+    if len(pos_idx) < len(neg_idx):
+        sampled = rng.choice(pos_idx, size=(len(neg_idx) - len(pos_idx)), replace=True)
+    else:
+        sampled = rng.choice(neg_idx, size=(len(pos_idx) - len(neg_idx)), replace=True)
+    all_idx = np.concatenate([np.arange(len(y)), sampled])
+    rng.shuffle(all_idx)
+    return x[all_idx], y[all_idx]
+
+
+def _select_threshold_with_dual_metric(y_true: np.ndarray, y_prob: np.ndarray) -> dict[str, float]:
+    """Primary metric: AUPRC; tie-breaker: F1 across threshold grid."""
+    y_true = y_true.astype(int)
+    auprc = float(average_precision_score(y_true, y_prob))
+    candidates = np.linspace(0.05, 0.95, 19)
+    best_thr = 0.5
+    best_tuple = (-1.0, -1.0)
+    for thr in candidates:
+        y_hat = (y_prob >= thr).astype(int)
+        f1 = float(f1_score(y_true, y_hat, zero_division=0))
+        score = (auprc, f1)
+        if score > best_tuple:
+            best_tuple = score
+            best_thr = float(thr)
+    return {
+        "threshold": round(best_thr, 4),
+        "val_auprc": round(auprc, 4),
+        "val_f1_at_threshold": round(best_tuple[1], 4),
+    }
 
 
 def _evaluate_split(
@@ -177,9 +230,11 @@ def main(input_dir: Path, output_dir: Path, seed: int = 42) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     model_names = ["logistic_regression", "decision_tree", "random_forest"]
     all_metrics: list[pd.DataFrame] = []
+    threshold_table: dict[str, dict[str, dict[str, float]]] = {}
 
     for model_name in model_names:
         logger.info("Training multitask model: %s", model_name)
+        threshold_table[model_name] = {}
         yhat_train = np.zeros_like(y_train, dtype=int)
         yhat_val = np.zeros_like(y_val, dtype=int)
         yhat_test = np.zeros_like(y_test, dtype=int)
@@ -192,11 +247,27 @@ def main(input_dir: Path, output_dir: Path, seed: int = 42) -> None:
             x_train_task = x_train[:, keep]
             x_val_task = x_val[:, keep]
             x_test_task = x_test[:, keep]
+            x_fit, y_fit = _upsample_positive_class_train_only(
+                x_train_task,
+                y_train[:, j],
+                seed=seed + j,
+            )
             model = _build_model(model_name, seed=seed)
-            model.fit(x_train_task, y_train[:, j])
-            p_train, s_train = _predict_one_with_proba(model, x_train_task)
-            p_val, s_val = _predict_one_with_proba(model, x_val_task)
-            p_test, s_test = _predict_one_with_proba(model, x_test_task)
+            model.fit(x_fit, y_fit)
+            _, s_train = _predict_one_with_proba(model, x_train_task)
+            _, s_val = _predict_one_with_proba(model, x_val_task)
+            _, s_test = _predict_one_with_proba(model, x_test_task)
+            thr_info = _select_threshold_with_dual_metric(y_val[:, j], s_val)
+            threshold = thr_info["threshold"]
+            threshold_table[model_name][label] = {
+                **thr_info,
+                "train_rows_before_upsample": int(len(y_train[:, j])),
+                "train_rows_after_upsample": int(len(y_fit)),
+                "upsampling_applied": bool(len(y_fit) > len(y_train[:, j])),
+            }
+            p_train = (s_train >= threshold).astype(int)
+            p_val = (s_val >= threshold).astype(int)
+            p_test = (s_test >= threshold).astype(int)
             yhat_train[:, j], prob_train[:, j] = p_train, s_train
             yhat_val[:, j], prob_val[:, j] = p_val, s_val
             yhat_test[:, j], prob_test[:, j] = p_test, s_test
@@ -233,6 +304,13 @@ def main(input_dir: Path, output_dir: Path, seed: int = 42) -> None:
         "prediction_columns_added_per_row": 2 * len(ALL_OUTPUT_LABELS),
         "splits": {"train_inner": int(len(train_meta)), "val_inner": int(len(val_meta)), "test": int(len(test_meta))},
         "leakage_safe": True,
+        "imbalance_strategy": "hybrid_class_weight_balanced_plus_train_upsampling_plus_threshold_tuning",
+        "threshold_selection": {
+            "primary_metric": "macro_auprc",
+            "tie_breaker": "macro_f1",
+            "search_grid": [round(float(x), 2) for x in np.linspace(0.05, 0.95, 19)],
+        },
+        "thresholds_by_model_and_label": threshold_table,
         "task_feature_masks_file": "task_feature_masks.json",
     }
     save_json(summary, output_dir / "multitask_run_summary.json")

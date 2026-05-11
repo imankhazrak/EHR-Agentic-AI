@@ -290,3 +290,6 @@ gpt_4o_mini_results/
 # Large Hugging Face model snapshots (use src.scripts.download_gemma_model).
 models/hf_snapshots/
 
+# Aggregated prompts (can exceed GitHub's 100 MB blob limit; regenerate locally).
+data/outputs/**/prompts_used/all_prompts.jsonl
+
