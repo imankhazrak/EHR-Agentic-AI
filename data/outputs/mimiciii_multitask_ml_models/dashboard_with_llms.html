@@ -191,7 +191,7 @@
 <body>
   <header>
     <h1>MIMIC-III Multi-task: ML vs LLM Comparison</h1>
-    <p>Compare classical ML models, GPT-4o-mini, and Gemma-4 across the 7 target labels.</p>
+    <p>Compare classical ML models, GPT-4o-mini, and Gemma-4 (including <b>Gemma-4 finetuning</b>: Unsloth LoRA on multitask JSON, test split) across the 7 target labels.</p>
   </header>
 
   <main>
@@ -222,8 +222,9 @@
         </div>
         <div class="checkbox-list" id="filter-split"></div>
         <div class="panel-note">
-          LLM approaches (GPT-4o-mini, Gemma-4) were evaluated on the <b>test</b> split only.
+          LLM approaches (GPT-4o-mini, Gemma-4 prompting, <b>Gemma-4 finetuning</b>) were evaluated on the <b>test</b> split only.
           Selecting <i>train_inner</i> or <i>val_inner</i> will hide their lines.
+          Fine-tuned metrics are from <code>outputs/gemma4_router_lora/test_predictions_first_try.jsonl</code> (per-task rows with parseable gold and pred); see <code>docs/gemma4_finetuning_multitask_first_try.md</code>.
         </div>
       </fieldset>
     </div>
@@ -368,7 +369,16 @@
       { model: "gemma4_few_shot",       split: "test", label: "label_obesity_current",       accuracy: 99.40, sensitivity: 100.00, specificity: 99.36, f1: 94.88, auc: 98.22, auprc: 86.94 },
       { model: "gemma4_few_shot",       split: "test", label: "label_cardio_next",           accuracy: 74.38, sensitivity: 74.64, specificity: 74.12, f1: 74.46, auc: 75.14, auprc: 70.37 },
       { model: "gemma4_few_shot",       split: "test", label: "label_kidney_next",           accuracy: 72.33, sensitivity: 67.10, specificity: 76.39, f1: 67.94, auc: 72.47, auprc: 63.75 },
-      { model: "gemma4_few_shot",       split: "test", label: "label_stroke_next",           accuracy: 89.00, sensitivity: 12.93, specificity: 93.77, f1: 12.18, auc: 52.53, auprc: 6.56 }
+      { model: "gemma4_few_shot",       split: "test", label: "label_stroke_next",           accuracy: 89.00, sensitivity: 12.93, specificity: 93.77, f1: 12.18, auc: 52.53, auprc: 6.56 },
+
+      // -------- Gemma-4 finetuning (Unsloth LoRA multitask JSON), test split — first-try eval --------
+      { model: "gemma4_finetuning", split: "test", label: "label_lipid_disorder",        accuracy: 82.40, sensitivity: 61.28, specificity: 89.46, f1: 63.58, auc: 75.37, auprc: 50.19 },
+      { model: "gemma4_finetuning", split: "test", label: "label_diabetes_current",      accuracy: 99.83, sensitivity: 100.00, specificity: 99.75, f1: 99.74, auc: 99.88, auprc: 99.48 },
+      { model: "gemma4_finetuning", split: "test", label: "label_hypertension_current", accuracy: 99.79, sensitivity: 100.00, specificity: 99.53, f1: 99.81, auc: 99.77, auprc: 99.62 },
+      { model: "gemma4_finetuning", split: "test", label: "label_obesity_current",       accuracy: 99.92, sensitivity: 99.19, specificity: 99.96, f1: 99.19, auc: 99.57, auprc: 98.44 },
+      { model: "gemma4_finetuning", split: "test", label: "label_cardio_next",           accuracy: 82.69, sensitivity: 83.51, specificity: 81.84, f1: 83.10, auc: 82.68, auprc: 77.46 },
+      { model: "gemma4_finetuning", split: "test", label: "label_kidney_next",           accuracy: 74.34, sensitivity: 57.69, specificity: 86.39, f1: 65.38, auc: 72.04, auprc: 61.28 },
+      { model: "gemma4_finetuning", split: "test", label: "label_stroke_next",           accuracy: 94.21, sensitivity: 0.00, specificity: 100.00, f1: 0.00, auc: 50.00, auprc: 5.79 }
     ];
 
     const TARGET_LABELS = [
@@ -407,7 +417,8 @@
         models: [
           { id: "gemma4_zero_shot",      label: "Gemma-4 Zero-shot" },
           { id: "gemma4_zero_shot_plus", label: "Gemma-4 Zero-shot+" },
-          { id: "gemma4_few_shot",       label: "Gemma-4 Few-shot" }
+          { id: "gemma4_few_shot",       label: "Gemma-4 Few-shot" },
+          { id: "gemma4_finetuning",     label: "Gemma-4 finetuning" }
         ]
       }
     ];

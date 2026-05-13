@@ -293,3 +293,7 @@ models/hf_snapshots/
 # Aggregated prompts (can exceed GitHub's 100 MB blob limit; regenerate locally).
 data/outputs/**/prompts_used/all_prompts.jsonl
 
+# Training runs and LoRA checkpoints (large; keep local only).
+outputs/
+unsloth_compiled_cache/
+
