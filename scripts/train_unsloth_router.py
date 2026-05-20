@@ -10,6 +10,8 @@ That exporter writes ``output`` strings validated by ``parse_multitask_output`` 
 ``src/llm/output_parser.py``; this trainer imports the same parser to reject bad rows.
 
 The formatted ``text`` field matches ``scripts/test_unsloth_router.py`` so eval matches train.
+Long ``input`` narratives are shortened with ``src.utils.alpaca_multitask_fit`` so the
+``### Response:`` block and gold JSON are not truncated by the 2048 token cap.
 
 **Environment:** use the Conda env ``unsloth_env`` (Unsloth, TRL, CUDA-enabled PyTorch).
 Do not use the bare system Python; it will miss ``unsloth`` and match Slurm jobs under
@@ -52,6 +54,7 @@ from trl import SFTConfig, SFTTrainer
 # Schema + strict JSON checks: src/llm/output_parser.py (used by export + eval stack).
 # JSONL files: produced by src/scripts/export_multitask_unsloth_jsonl.py (run as __main__).
 from src.llm.output_parser import MULTITASK_JSON_TASK_KEYS, parse_multitask_output
+from src.utils.alpaca_multitask_fit import fit_visit_input_for_token_cap
 
 
 def build_multitask_sft_text(
@@ -84,32 +87,46 @@ def _validate_output_json(raw: str, row_index: int) -> None:
         )
 
 
-def _format_batch(
-    examples: Dict[str, List[Any]],
-    eos_token: str,
-) -> Dict[str, List[str]]:
-    inst = examples["instruction"]
-    n = len(inst)
-    inp = examples.get("input")
-    if inp is None:
-        inp = [""] * n
-    out = examples["output"]
-    texts: List[str] = []
-    for i in range(n):
-        in_i = inp[i] if i < len(inp) else ""
-        texts.append(
-            build_multitask_sft_text(
-                str(inst[i]),
-                str(in_i or ""),
-                str(out[i]),
-                eos_token,
+def _make_sft_format_fn(tokenizer: Any, max_seq_length: int, eos_token: str):
+    """Batched map: shorten long ``input`` so ``text`` never exceeds ``max_seq_length`` tokens."""
+
+    def _format_batch(examples: Dict[str, List[Any]]) -> Dict[str, List[str]]:
+        inst = examples["instruction"]
+        n = len(inst)
+        inp = examples.get("input")
+        if inp is None:
+            inp = [""] * n
+        out = examples["output"]
+        texts: List[str] = []
+        for i in range(n):
+            instruction = str(inst[i])
+            input_text = str(inp[i] if i < len(inp) else "")
+            output_text = str(out[i])
+            tail = f"\n\n### Response:\n{output_text}{eos_token}"
+            trunc_input, _ = fit_visit_input_for_token_cap(
+                tokenizer,
+                instruction=instruction,
+                input_text=input_text,
+                tail_after_input=tail,
+                max_length=max_seq_length,
             )
-        )
-    return {"text": texts}
+            texts.append(
+                build_multitask_sft_text(
+                    instruction,
+                    trunc_input,
+                    output_text,
+                    eos_token,
+                )
+            )
+        return {"text": texts}
+
+    return _format_batch
 
 
 def _prepare_split(
     ds: Dataset,
+    tokenizer: Any,
+    max_seq_length: int,
     tokenizer_eos: str,
     validate: bool,
     desc: str,
@@ -118,8 +135,9 @@ def _prepare_split(
         for i, row in enumerate(ds):
             _validate_output_json(str(row.get("output", "")), i)
     cols = list(ds.column_names)
+    fmt = _make_sft_format_fn(tokenizer, max_seq_length, tokenizer_eos)
     return ds.map(
-        lambda ex: _format_batch(ex, tokenizer_eos),
+        fmt,
         batched=True,
         remove_columns=cols,
         desc=f"Format {desc}",
@@ -259,7 +277,7 @@ def main() -> None:
     validate = not args.no_validate_multitask_json
     if validate:
         print("Validating each row with parse_multitask_output (multitask experiment).")
-    train_ds = _prepare_split(train_raw, eos, validate, "train")
+    train_ds = _prepare_split(train_raw, tokenizer, args.max_seq_length, eos, validate, "train")
 
     eval_ds: Optional[Dataset] = None
     if args.eval_jsonl is not None:
@@ -272,7 +290,7 @@ def main() -> None:
             n_e = max(0, min(int(args.eval_max_samples), len(eval_raw)))
             eval_raw = eval_raw.select(range(n_e))
             print(f"Using eval subset: first {n_e} rows (--eval-max-samples).")
-        eval_ds = _prepare_split(eval_raw, eos, validate, "eval")
+        eval_ds = _prepare_split(eval_raw, tokenizer, args.max_seq_length, eos, validate, "eval")
 
     out_dir.mkdir(parents=True, exist_ok=True)
     final_dir = out_dir / "final_lora"
@@ -340,6 +358,7 @@ def main() -> None:
         "save_total_limit": args.save_total_limit,
         "multitask_keys": list(MULTITASK_JSON_TASK_KEYS),
         "format": "Alpaca ### Instruction / ### Input / ### Response (matches test_unsloth_router.py)",
+        "input_truncation": "visit_input_prefix_fit_via_src.utils.alpaca_multitask_fit",
         "final_lora": str(final_dir),
     }
     with (out_dir / "train_manifest.json").open("w", encoding="utf-8") as f:

@@ -12,7 +12,18 @@ Run from repo root::
 
     python scripts/test_unsloth_router.py \\
       --model-path outputs/.../final_lora \\
-      --output-jsonl outputs/.../test_predictions_2nd_try.jsonl
+      --output-jsonl outputs/.../test_predictions_2nd_try_fixed.jsonl
+
+After a Slurm TIMEOUT, continue appending from the next index (same paths as the
+interrupted run)::
+
+    python scripts/test_unsloth_router.py --resume \\
+      --model-path outputs/.../final_lora \\
+      --output-jsonl outputs/.../partial.jsonl
+
+Score predictions (CPU only)::
+
+    python scripts/score_unsloth_multitask_jsonl.py outputs/.../test_predictions_2nd_try_fixed.jsonl --all-modes
 """
 
 from __future__ import annotations
@@ -21,7 +32,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 _ROOT = Path(__file__).resolve().parents[1]
 if str(_ROOT) not in sys.path:
@@ -34,6 +45,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 
 from src.llm.output_parser import parse_multitask_output
+from src.utils.alpaca_multitask_fit import fit_visit_input_for_token_cap, resolve_tokenizer_for_encode
 
 
 def build_multitask_generation_prompt(instruction: str, input_text: str) -> str:
@@ -54,6 +66,22 @@ def extract_response(decoded_text: str) -> str:
     return decoded_text.strip()
 
 
+def _truncate_input_to_fit_prompt(
+    tokenizer: Any,
+    instruction: str,
+    input_text: str,
+    max_length: int,
+) -> Tuple[str, List[int]]:
+    """Delegate to ``fit_visit_input_for_token_cap`` (shared with ``train_unsloth_router.py``)."""
+    return fit_visit_input_for_token_cap(
+        tokenizer,
+        instruction=instruction,
+        input_text=input_text,
+        tail_after_input="\n\n### Response:\n",
+        max_length=max_length,
+    )
+
+
 def _serialize_parse_result(parsed: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     if parsed is None:
         return None
@@ -68,6 +96,24 @@ def _serialize_parse_result(parsed: Optional[Dict[str, Any]]) -> Optional[Dict[s
     return out
 
 
+def _resume_start_index(output_path: Path) -> int:
+    """Next dataset row index to write, from existing JSONL (skips invalid lines)."""
+    if not output_path.is_file() or output_path.stat().st_size == 0:
+        return 0
+    nxt = 0
+    with output_path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+                nxt = max(nxt, int(rec["index"]) + 1)
+            except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                continue
+    return nxt
+
+
 def parse_args() -> argparse.Namespace:
     default_model = (
         _ROOT
@@ -75,7 +121,7 @@ def parse_args() -> argparse.Namespace:
         / "unsloth_mt_lora_natural_dist_job47427323_20260513_021406"
         / "final_lora"
     )
-    default_out = default_model.parent / "test_predictions_2nd_try.jsonl"
+    default_out = default_model.parent / "test_predictions_2nd_try_fixed.jsonl"
     p = argparse.ArgumentParser(description="Multitask JSON eval with Unsloth LoRA.")
     p.add_argument(
         "--model-path",
@@ -104,14 +150,19 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--max-new-tokens",
         type=int,
-        default=512,
-        help="Max tokens generated for the multitask JSON completion.",
+        default=768,
+        help="Max tokens generated for the multitask JSON completion (JSON is ~150–400 tokens).",
     )
     p.add_argument(
         "--device",
         type=str,
         default="cuda",
         help="cuda or cpu.",
+    )
+    p.add_argument(
+        "--resume",
+        action="store_true",
+        help="Append to output JSONL, skipping rows before the next index after the last valid line.",
     )
     return p.parse_args()
 
@@ -133,6 +184,13 @@ def main() -> None:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    start_idx = 0
+    if args.resume:
+        if not output_path.is_file():
+            raise SystemExit("--resume requires an existing --output-jsonl file.")
+        start_idx = _resume_start_index(output_path)
+        print(f"Resume: next dataset index = {start_idx} (from {output_path})")
+
     print(f"Loading LoRA from: {model_path}")
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=str(model_path),
@@ -140,38 +198,52 @@ def main() -> None:
         load_in_4bit=True,
     )
     FastLanguageModel.for_inference(model)
+    hf_tok = resolve_tokenizer_for_encode(tokenizer)
 
     print(f"Loading test JSONL: {test_path}")
     test_dataset = load_dataset("json", data_files=str(test_path), split="train")
-    print(f"Samples: {len(test_dataset)}  max_seq_length={args.max_seq_length}")
+    n_total = len(test_dataset)
+    print(f"Samples: {n_total}  max_seq_length={args.max_seq_length}")
+
+    if start_idx >= n_total:
+        print(f"Resume: nothing to do (indices 0..{n_total - 1} already covered).")
+        return
+
+    tail = test_dataset.select(range(start_idx, n_total))
+    file_mode = "a" if start_idx > 0 else "w"
 
     dev = torch.device(device)
 
-    with output_path.open("w", encoding="utf-8") as f:
-        for idx, example in enumerate(tqdm(test_dataset, desc="Generating")):
+    with output_path.open(file_mode, encoding="utf-8") as f:
+        for k, example in enumerate(tqdm(tail, desc="Generating", total=len(tail))):
+            idx = start_idx + k
             instruction = str(example["instruction"])
             input_text = str(example.get("input") or "")
             gold_raw = str(example.get("output") or "")
 
-            prompt = build_multitask_generation_prompt(instruction, input_text)
-            inputs = tokenizer(
-                text=prompt,
-                return_tensors="pt",
-                truncation=True,
-                max_length=args.max_seq_length,
-            ).to(dev)
+            _trunc_input, input_ids_list = _truncate_input_to_fit_prompt(
+                tokenizer, instruction, input_text, args.max_seq_length
+            )
+            input_ids = torch.tensor([input_ids_list], dtype=torch.long, device=dev)
+            attn = torch.ones_like(input_ids)
+            inputs = {"input_ids": input_ids, "attention_mask": attn}
+            prompt_len = int(input_ids.shape[1])
+
+            gen_kwargs: Dict[str, Any] = dict(
+                max_new_tokens=args.max_new_tokens,
+                temperature=0.0,
+                do_sample=False,
+                pad_token_id=hf_tok.pad_token_id or hf_tok.eos_token_id,
+                eos_token_id=hf_tok.eos_token_id,
+            )
 
             with torch.no_grad():
-                outputs = model.generate(
-                    **inputs,
-                    max_new_tokens=args.max_new_tokens,
-                    temperature=0.0,
-                    do_sample=False,
-                    pad_token_id=tokenizer.eos_token_id,
-                )
+                outputs = model.generate(**inputs, **gen_kwargs)
 
-            decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
-            prediction_text = extract_response(decoded)
+            gen_only = outputs[0, prompt_len:]
+            prediction_text = hf_tok.decode(gen_only, skip_special_tokens=True).strip()
+            if "### Response:" in prediction_text:
+                prediction_text = prediction_text.split("### Response:", 1)[-1].strip()
 
             gold_parsed = parse_multitask_output(gold_raw)
             pred_parsed = parse_multitask_output(prediction_text)
@@ -181,6 +253,7 @@ def main() -> None:
                 "pair_id": example.get("pair_id"),
                 "instruction": instruction,
                 "input": input_text,
+                "input_was_truncated": _trunc_input != input_text,
                 "gold_output": example.get("output", ""),
                 "prediction_text": prediction_text,
                 "gold_parse_ok": gold_parsed is not None,

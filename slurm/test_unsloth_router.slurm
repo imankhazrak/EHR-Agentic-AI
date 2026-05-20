@@ -2,7 +2,7 @@
 #SBATCH --job-name=test_unsloth_router
 #SBATCH --account=pcs0229
 #SBATCH --partition=gpu-exp
-#SBATCH --time=12:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -36,7 +36,7 @@ python -c "import sys; print(sys.executable)"
 nvidia-smi -L || true
 
 MODEL_LORA="${MODEL_LORA:-$PROJECT_DIR/outputs/unsloth_mt_lora_natural_dist_job47427323_20260513_021406/final_lora}"
-OUT_JSONL="${OUT_JSONL:-$PROJECT_DIR/outputs/unsloth_mt_lora_natural_dist_job47427323_20260513_021406/test_predictions_2nd_try.jsonl}"
+OUT_JSONL="${OUT_JSONL:-$PROJECT_DIR/outputs/unsloth_mt_lora_natural_dist_job47427323_20260513_021406/test_predictions_2nd_try_fixed.jsonl}"
 
 python "$PROJECT_DIR/scripts/test_unsloth_router.py" \
   --model-path "$MODEL_LORA" \
