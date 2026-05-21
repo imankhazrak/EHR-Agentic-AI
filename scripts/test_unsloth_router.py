@@ -164,7 +164,74 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Append to output JSONL, skipping rows before the next index after the last valid line.",
     )
+    p.add_argument(
+        "--max-samples",
+        type=int,
+        default=None,
+        help="Evaluate only the first N test rows (smoke runs).",
+    )
+    p.add_argument(
+        "--summary-json",
+        type=Path,
+        default=None,
+        help="Optional path to write strict-parse coverage summary JSON.",
+    )
     return p.parse_args()
+
+
+def _print_strict_parse_summary(
+    records: List[Dict[str, Any]],
+    *,
+    output_path: Path,
+    summary_json: Optional[Path] = None,
+) -> None:
+    """Print strict ``parse_multitask_output`` coverage; show up to 3 failed predictions."""
+    n = len(records)
+    gold_ok = sum(1 for r in records if r.get("gold_parse_ok"))
+    pred_ok = sum(1 for r in records if r.get("pred_parse_ok"))
+    pct = (100.0 * pred_ok / n) if n else 0.0
+
+    print("\n" + "=" * 72)
+    print("STRICT PARSE COVERAGE (parse_multitask_output)")
+    print("=" * 72)
+    print(f"output_jsonl: {output_path}")
+    print(f"n_generated: {n}")
+    print(f"gold_parse_ok: {gold_ok} / {n}")
+    print(f"pred_parse_ok: {pred_ok} / {n}")
+    print(f"strict_parse_coverage_pct: {pct:.2f}%")
+
+    failed = [r for r in records if not r.get("pred_parse_ok")]
+    if failed:
+        print(f"\nFailed strict parse ({len(failed)} rows); showing up to 3:")
+        for r in failed[:3]:
+            preview = str(r.get("prediction_text") or "")[:300].replace("\n", "\\n")
+            print(f"  index={r.get('index')} pair_id={r.get('pair_id')!r}")
+            print(f"    prediction_text[:300]={preview!r}")
+    else:
+        print("\nAll rows passed strict parse_multitask_output.")
+
+    print("=" * 72 + "\n")
+
+    if summary_json is not None:
+        summary_json.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "output_jsonl": str(output_path),
+            "n_generated": n,
+            "gold_parse_ok": gold_ok,
+            "pred_parse_ok": pred_ok,
+            "strict_parse_coverage_pct": round(pct, 4),
+            "failed_indices": [r.get("index") for r in failed],
+            "failed_examples": [
+                {
+                    "index": r.get("index"),
+                    "pair_id": r.get("pair_id"),
+                    "prediction_text_preview": str(r.get("prediction_text") or "")[:300],
+                }
+                for r in failed[:3]
+            ],
+        }
+        summary_json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        print(f"Wrote summary JSON: {summary_json}")
 
 
 def main() -> None:
@@ -202,6 +269,10 @@ def main() -> None:
 
     print(f"Loading test JSONL: {test_path}")
     test_dataset = load_dataset("json", data_files=str(test_path), split="train")
+    if args.max_samples is not None:
+        n_cap = max(0, min(int(args.max_samples), len(test_dataset)))
+        test_dataset = test_dataset.select(range(n_cap))
+        print(f"Using test subset: first {n_cap} rows (--max-samples).")
     n_total = len(test_dataset)
     print(f"Samples: {n_total}  max_seq_length={args.max_seq_length}")
 
@@ -213,6 +284,7 @@ def main() -> None:
     file_mode = "a" if start_idx > 0 else "w"
 
     dev = torch.device(device)
+    records: List[Dict[str, Any]] = []
 
     with output_path.open(file_mode, encoding="utf-8") as f:
         for k, example in enumerate(tqdm(tail, desc="Generating", total=len(tail))):
@@ -262,8 +334,15 @@ def main() -> None:
                 "pred_parsed_flat": _serialize_parse_result(pred_parsed),
             }
             f.write(json.dumps(record, ensure_ascii=False, default=str) + "\n")
+            records.append(record)
 
     print(f"Wrote predictions to: {output_path}")
+
+    if records:
+        summary_path = args.summary_json
+        if summary_path is None:
+            summary_path = output_path.with_suffix(".strict_summary.json")
+        _print_strict_parse_summary(records, output_path=output_path, summary_json=summary_path)
 
 
 if __name__ == "__main__":

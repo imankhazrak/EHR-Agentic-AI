@@ -30,7 +30,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Tuple
 
 import numpy as np
-from sklearn.metrics import matthews_corrcoef
 
 _ROOT = Path(__file__).resolve().parents[1]
 if str(_ROOT) not in sys.path:
@@ -46,6 +45,25 @@ from src.llm.output_parser import (
 )
 
 ParseMode = Literal["strict", "salvage", "lenient_flat"]
+
+
+def _matthews_corrcoef(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """MCC without requiring sklearn (unsloth_env may lack scikit-learn)."""
+    try:
+        from sklearn.metrics import matthews_corrcoef as sklearn_mcc
+
+        return float(sklearn_mcc(y_true, y_pred))
+    except ImportError:
+        yt = np.asarray(y_true, dtype=int)
+        yp = np.asarray(y_pred, dtype=int)
+        tp = int(np.sum((yt == 1) & (yp == 1)))
+        tn = int(np.sum((yt == 0) & (yp == 0)))
+        fp = int(np.sum((yt == 0) & (yp == 1)))
+        fn = int(np.sum((yt == 1) & (yp == 0)))
+        denom = math.sqrt((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn))
+        if denom == 0:
+            return 0.0
+        return float((tp * tn - fp * fn) / denom)
 
 DEFAULT_JSONL = (
     _ROOT
@@ -154,7 +172,7 @@ def evaluate_task(
     tn, fp, fn, tp = np.array(m["confusion_matrix"]["matrix"]).ravel()
     npv = (tn / (tn + fn) * 100) if (tn + fn) > 0 else 0.0
     m["npv_percent"] = round(float(npv), 2)
-    m["mcc"] = round(float(matthews_corrcoef(y_true_arr, y_pred_arr)), 4)
+    m["mcc"] = round(_matthews_corrcoef(y_true_arr, y_pred_arr), 4)
     m["n"] = int(len(y_true_arr))
     m["gold_yes_percent"] = round(100.0 * float(y_true_arr.sum()) / len(y_true_arr), 2)
     m["task"] = task_key
@@ -205,7 +223,7 @@ def evaluate_all(rows: List[Dict[str, Any]], mode: ParseMode) -> Dict[str, Any]:
         )
         tn, fp, fn, tp = np.array(micro["confusion_matrix"]["matrix"]).ravel()
         micro["npv_percent"] = round(float((tn / (tn + fn) * 100) if (tn + fn) > 0 else 0.0), 2)
-        micro["mcc"] = round(float(matthews_corrcoef(my, mp)), 4)
+        micro["mcc"] = round(_matthews_corrcoef(my, mp), 4)
         micro["n_task_rows"] = len(micro_y)
         del micro["confusion_matrix"]
 
@@ -372,8 +390,12 @@ def main() -> None:
             print(f"Wrote {md_out}")
 
         cov = report["coverage"]
+        n_rows = int(cov["n_rows"])
+        n_ok = int(cov["rows_with_usable_prediction"])
+        pct = (100.0 * n_ok / n_rows) if n_rows else 0.0
         print(
-            f"[{mode}] rows={cov['n_rows']} usable_pred_rows={cov['rows_with_usable_prediction']}"
+            f"[{mode}] rows={n_rows} usable_pred_rows={n_ok} "
+            f"strict_parse_coverage_pct={pct:.2f}%"
         )
         for tk in MULTITASK_JSON_TASK_KEYS:
             n = report["per_task"][tk].get("n", 0)
