@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemma-4 Multitask Fine-Tuning First Try Report</title>
+  <style>
+    :root { --bg:#fff; --fg:#111827; --muted:#4b5563; --border:#d1d5db; --header:#f3f4f6; --stripe:#f9fafb; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+    .page{width:100%;max-width:1100px;margin:0 auto;padding:20px 24px 40px;box-sizing:border-box}
+    h1,h2,h3{margin-top:0;margin-bottom:10px}
+    h2{margin-top:28px;border-bottom:1px solid var(--border);padding-bottom:6px}
+    h3{margin-top:20px;color:var(--fg)}
+    .meta{color:var(--muted);margin-bottom:12px}
+    code{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:4px;padding:1px 5px;font-family:"Courier New",monospace;font-size:.92em}
+    pre{background:#f8f9fb;border:1px solid var(--border);border-radius:8px;padding:12px 14px;overflow-x:auto;font-size:12px;line-height:1.4;white-space:pre-wrap;word-break:break-word}
+    pre code{background:transparent;border:none;padding:0;font-size:12px}
+    a{color:#2563eb;text-decoration:none}
+    a:hover{text-decoration:underline}
+    hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+    .table-wrap{width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:8px;margin:10px 0 16px}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead th{background:var(--header);border-bottom:1px solid var(--border);font-weight:700;text-align:left;padding:8px 10px;white-space:nowrap}
+    tbody td{border-top:1px solid #eceff1;padding:7px 10px}
+    tbody tr:nth-child(even) td{background:var(--stripe)}
+    ul,ol{padding-left:1.4em}
+    strong{font-weight:700}
+  </style>
+</head>
+<body>
+<div class="page">
+<header id="title-block-header">
+<h1 class="title">Gemma-4 Multitask Fine-Tuning First Try Report</h1>
+</header>
+<h1 id="gemma-4-multitask-fine-tuning-first-try-experiment-report">Gemma-4 Multitask Fine-Tuning: First-Try Experiment Report</h1>
+<p><strong>Date:</strong> 2026-06-19<br />
+<strong>Repository:</strong> EHR-Agentic-AI<br />
+<strong>Experiment line:</strong> Unsloth LoRA SFT on natural class distribution (<code>natural_dist</code>)<br />
+<strong>Related audit:</strong> <a href="gemma4_finetuning_multitask_first_try.md">gemma4_finetuning_multitask_first_try.md</a><br />
+<strong>Dashboard metrics:</strong> <a href="dashboard_with_llms_finetuining.html">dashboard_with_llms_finetuining.html</a></p>
+<hr />
+<h2 id="executive-summary">1. Executive summary</h2>
+<p>This report documents the <strong>first end-to-end attempt</strong> at supervised multitask fine-tuning of <strong>Gemma 4</strong> using <strong>Unsloth</strong>, <strong>4-bit quantization</strong>, and <strong>LoRA</strong>. A single model reads one current hospital-visit narrative and emits <strong>one strict JSON object</strong> covering <strong>seven binary clinical tasks</strong> (each with <code>prediction</code>: Yes/No and <code>probability</code> in [0, 1]) plus a short <code>reasoning</code> string.</p>
+<p><strong>Headline findings:</strong></p>
+<ul>
+<li><strong>Strong:</strong> <code>diabetes_current</code>, <code>hypertension_current</code>, and <code>obesity_current</code> reached near-perfect hard-label agreement on parseable test rows.</li>
+<li><strong>Moderate:</strong> <code>lipid_next</code>, <code>cardio_next</code>, and <code>kidney_next</code> showed usable but imperfect performance.</li>
+<li><strong>Failed:</strong> <code>stroke_next</code> — the model <strong>never predicted Yes</strong> on usable rows (0% recall, ROC-AUC ≈ 0.50) despite 94% accuracy driven by class prevalence.</li>
+<li><strong>Imbalance:</strong> No rebalancing was applied; training used the <strong>natural label distribution</strong>.</li>
+</ul>
+<p><strong>Artifacts:</strong></p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Artifact</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LoRA adapter + tokenizer</td>
+<td><code>outputs/gemma4_router_lora/final_lora/</code></td>
+</tr>
+<tr class="even">
+<td>First-pass test predictions</td>
+<td><code>outputs/gemma4_router_lora/test_predictions_first_try.jsonl</code></td>
+</tr>
+<tr class="odd">
+<td>Training JSONL</td>
+<td><code>dataset_for_unsloth/train.jsonl</code> (10,031 rows), <code>test.jsonl</code> (2,425 rows)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="clinical-tasks-seven-labels">2. Clinical tasks (seven labels)</h2>
+<p>Each example predicts seven binary outcomes from one <strong>current-visit narrative</strong> (<code>narrative_current</code>). Labels are derived from <strong>ICD-coded visit pairs</strong> in MIMIC-III multitask preprocessing.</p>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 32%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>JSON key</th>
+<th>CSV column</th>
+<th>Clinical intent</th>
+<th>Visit timing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lipid_next</code></td>
+<td><code>label_lipid_next</code></td>
+<td>Disorders of lipid metabolism</td>
+<td><strong>Next</strong> visit</td>
+</tr>
+<tr class="even">
+<td><code>diabetes_current</code></td>
+<td><code>label_diabetes_current</code></td>
+<td>Diabetes mellitus</td>
+<td><strong>Current</strong> visit</td>
+</tr>
+<tr class="odd">
+<td><code>hypertension_current</code></td>
+<td><code>label_hypertension_current</code></td>
+<td>Hypertension</td>
+<td><strong>Current</strong> visit</td>
+</tr>
+<tr class="even">
+<td><code>obesity_current</code></td>
+<td><code>label_obesity_current</code></td>
+<td>Obesity</td>
+<td><strong>Current</strong> visit</td>
+</tr>
+<tr class="odd">
+<td><code>cardio_next</code></td>
+<td><code>label_cardio_next</code></td>
+<td>Major cardiovascular-related outcome</td>
+<td><strong>Next</strong> visit</td>
+</tr>
+<tr class="even">
+<td><code>kidney_next</code></td>
+<td><code>label_kidney_next</code></td>
+<td>Kidney-related outcome</td>
+<td><strong>Next</strong> visit</td>
+</tr>
+<tr class="odd">
+<td><code>stroke_next</code></td>
+<td><code>label_stroke_next</code></td>
+<td>Stroke-related outcome</td>
+<td><strong>Next</strong> visit</td>
+</tr>
+</tbody>
+</table></div>
+<p>Schema enforcement: <code>MULTITASK_JSON_TASK_KEYS</code> in <code>src/llm/output_parser.py</code>. Gold JSON is exported by <code>src/scripts/export_multitask_unsloth_jsonl.py</code> with binary labels mapped to <code>"Yes"</code>/<code>"No"</code> and hard probabilities <code>1.0</code>/<code>0.0</code>.</p>
+<hr />
+<h2 id="dataset-splits-and-label-distribution">3. Dataset splits and label distribution</h2>
+<p><strong>Source CSVs:</strong> <code>data/processed/mimiciii_multitask/train.csv</code>, <code>test.csv</code><br />
+<strong>Exported JSONL:</strong> <code>dataset_for_unsloth/</code> (manifest: <code>dataset_for_unsloth/manifest.json</code>)</p>
+<p>Positive class = <strong>Yes</strong> (label value 1). <strong>Neg:Pos</strong> = negative count ÷ positive count.</p>
+<h3 id="training-set-n-10031">3.1 Training set (n = 10,031)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th style="text-align: right;">Positives</th>
+<th style="text-align: right;">Negatives</th>
+<th style="text-align: right;">Prev. Yes</th>
+<th style="text-align: right;">Neg:Pos ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lipid_next</code></td>
+<td style="text-align: right;">2,807</td>
+<td style="text-align: right;">7,224</td>
+<td style="text-align: right;">27.98%</td>
+<td style="text-align: right;">2.57:1</td>
+</tr>
+<tr class="even">
+<td><code>diabetes_current</code></td>
+<td style="text-align: right;">3,469</td>
+<td style="text-align: right;">6,562</td>
+<td style="text-align: right;">34.58%</td>
+<td style="text-align: right;">1.89:1</td>
+</tr>
+<tr class="odd">
+<td><code>hypertension_current</code></td>
+<td style="text-align: right;">5,624</td>
+<td style="text-align: right;">4,407</td>
+<td style="text-align: right;">56.07%</td>
+<td style="text-align: right;">0.78:1 (Yes majority)</td>
+</tr>
+<tr class="even">
+<td><code>obesity_current</code></td>
+<td style="text-align: right;">580</td>
+<td style="text-align: right;">9,451</td>
+<td style="text-align: right;">5.78%</td>
+<td style="text-align: right;"><strong>16.29:1</strong></td>
+</tr>
+<tr class="odd">
+<td><code>cardio_next</code></td>
+<td style="text-align: right;">5,170</td>
+<td style="text-align: right;">4,861</td>
+<td style="text-align: right;">51.54%</td>
+<td style="text-align: right;">0.94:1</td>
+</tr>
+<tr class="even">
+<td><code>kidney_next</code></td>
+<td style="text-align: right;">4,374</td>
+<td style="text-align: right;">5,657</td>
+<td style="text-align: right;">43.60%</td>
+<td style="text-align: right;">1.29:1</td>
+</tr>
+<tr class="odd">
+<td><code>stroke_next</code></td>
+<td style="text-align: right;">581</td>
+<td style="text-align: right;">9,450</td>
+<td style="text-align: right;">5.79%</td>
+<td style="text-align: right;"><strong>16.27:1</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="test-set-n-2425">3.2 Test set (n = 2,425)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th style="text-align: right;">Positives</th>
+<th style="text-align: right;">Negatives</th>
+<th style="text-align: right;">Prev. Yes</th>
+<th style="text-align: right;">Neg:Pos ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lipid_next</code></td>
+<td style="text-align: right;">609</td>
+<td style="text-align: right;">1,816</td>
+<td style="text-align: right;">25.11%</td>
+<td style="text-align: right;">2.98:1</td>
+</tr>
+<tr class="even">
+<td><code>diabetes_current</code></td>
+<td style="text-align: right;">780</td>
+<td style="text-align: right;">1,645</td>
+<td style="text-align: right;">32.16%</td>
+<td style="text-align: right;">2.11:1</td>
+</tr>
+<tr class="odd">
+<td><code>hypertension_current</code></td>
+<td style="text-align: right;">1,324</td>
+<td style="text-align: right;">1,101</td>
+<td style="text-align: right;">54.60%</td>
+<td style="text-align: right;">0.83:1 (Yes majority)</td>
+</tr>
+<tr class="even">
+<td><code>obesity_current</code></td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">2,300</td>
+<td style="text-align: right;">5.15%</td>
+<td style="text-align: right;"><strong>18.40:1</strong></td>
+</tr>
+<tr class="odd">
+<td><code>cardio_next</code></td>
+<td style="text-align: right;">1,231</td>
+<td style="text-align: right;">1,194</td>
+<td style="text-align: right;">50.76%</td>
+<td style="text-align: right;">0.97:1</td>
+</tr>
+<tr class="even">
+<td><code>kidney_next</code></td>
+<td style="text-align: right;">1,017</td>
+<td style="text-align: right;">1,408</td>
+<td style="text-align: right;">41.94%</td>
+<td style="text-align: right;">1.38:1</td>
+</tr>
+<tr class="odd">
+<td><code>stroke_next</code></td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">2,285</td>
+<td style="text-align: right;">5.77%</td>
+<td style="text-align: right;"><strong>16.32:1</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="class-imbalance-handling">3.3 Class imbalance handling</h3>
+<p><strong>None was applied in this experiment.</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Used?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Oversampling / undersampling</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Per-class or per-task loss weights</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Focal loss</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Stratified batch sampling</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Validation threshold tuning</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>Training explicitly preserved <strong>natural prevalence</strong> (Slurm run name <code>natural_dist</code>; see <code>slurm/train_unsloth_mt_natural_dist.slurm</code>). Loss is uniform cross-entropy on supervised JSON tokens only. Rare tasks (<code>obesity_current</code>, <code>stroke_next</code>) face roughly <strong>16–18 negatives per positive</strong> in both splits; the model still learned obesity well but <strong>collapsed to all-negative predictions for stroke</strong>.</p>
+<hr />
+<h2 id="fine-tuning-method">4. Fine-tuning method</h2>
+<h3 id="pipeline-overview">4.1 Pipeline overview</h3>
+<pre><code>train.csv / test.csv
+    → export_multitask_unsloth_jsonl
+    → dataset_for_unsloth/*.jsonl
+    → train_unsloth_router.py (Unsloth + TRL SFTTrainer)
+    → outputs/gemma4_router_lora/final_lora/
+    → test_unsloth_router.py (greedy generation)
+    → parse_multitask_output
+    → score_unsloth_multitask_jsonl.py (per-task metrics)</code></pre>
+<h3 id="stack-and-mechanism">4.2 Stack and mechanism</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unsloth</strong> <code>FastLanguageModel.from_pretrained</code></td>
+<td>Loads Gemma 4 with <strong>NF4 4-bit</strong> weights (<code>load_in_4bit=True</code>)</td>
+</tr>
+<tr class="even">
+<td><strong>PEFT LoRA</strong> via <code>FastLanguageModel.get_peft_model</code></td>
+<td>Trainable adapters on attention + MLP projections; base weights frozen</td>
+</tr>
+<tr class="odd">
+<td><strong>TRL</strong> <code>SFTTrainer</code></td>
+<td>Supervised fine-tuning on Alpaca-formatted <code>text</code> column</td>
+</tr>
+<tr class="even">
+<td><strong>Response-only loss</strong></td>
+<td><code>completion_only_loss=True</code>; instruction/input masked; loss on JSON + EOS only (<code>src/utils/unsloth_multitask_labels.py</code>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Alpaca layout</strong></td>
+<td><code>### Instruction</code> / <code>### Input</code> / <code>### Response</code> — matches inference prompt prefix</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="key-source-files">4.3 Key source files</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>src/scripts/export_multitask_unsloth_jsonl.py</code></td>
+<td>CSV → JSONL export</td>
+</tr>
+<tr class="even">
+<td><code>scripts/train_unsloth_router.py</code></td>
+<td>Training entrypoint</td>
+</tr>
+<tr class="odd">
+<td><code>slurm/train_unsloth_mt_natural_dist.slurm</code></td>
+<td>Full Slurm driver</td>
+</tr>
+<tr class="even">
+<td><code>scripts/test_unsloth_router.py</code></td>
+<td>Greedy test generation</td>
+</tr>
+<tr class="odd">
+<td><code>scripts/score_unsloth_multitask_jsonl.py</code></td>
+<td>Metric computation</td>
+</tr>
+<tr class="even">
+<td><code>src/llm/output_parser.py</code></td>
+<td>Strict JSON parser (<code>parse_multitask_output</code>)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="hyperparameters-and-training-configuration">5. Hyperparameters and training configuration</h2>
+<p>Recorded from <code>scripts/train_unsloth_router.py</code> defaults and <code>slurm/train_unsloth_mt_natural_dist.slurm</code>.</p>
+<h3 id="base-model-and-peft">5.1 Base model and PEFT</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hugging Face / Unsloth ID</td>
+<td><code>unsloth/gemma-4-e2b-it-unsloth-bnb-4bit</code></td>
+</tr>
+<tr class="even">
+<td>Quantization</td>
+<td>4-bit NF4 at load</td>
+</tr>
+<tr class="odd">
+<td>PEFT method</td>
+<td>LoRA</td>
+</tr>
+<tr class="even">
+<td>Rank <code>r</code></td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td><code>lora_alpha</code></td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td><code>lora_dropout</code></td>
+<td>0.05</td>
+</tr>
+<tr class="odd">
+<td><code>target_modules</code></td>
+<td><code>q_proj</code>, <code>k_proj</code>, <code>v_proj</code>, <code>o_proj</code>, <code>gate_proj</code>, <code>up_proj</code>, <code>down_proj</code></td>
+</tr>
+<tr class="even">
+<td><code>lora_bias</code></td>
+<td>none</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="optimization-sfttrainer">5.2 Optimization (SFTTrainer)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>max_seq_length</code></td>
+<td>2048</td>
+</tr>
+<tr class="even">
+<td><code>max_steps</code></td>
+<td>1500 (~1.2 epochs over 10,031 rows)</td>
+</tr>
+<tr class="odd">
+<td><code>per_device_train_batch_size</code></td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><code>gradient_accumulation_steps</code></td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td><strong>Effective batch size</strong></td>
+<td><strong>8</strong></td>
+</tr>
+<tr class="even">
+<td><code>learning_rate</code></td>
+<td><code>1e-4</code></td>
+</tr>
+<tr class="odd">
+<td><code>warmup_ratio</code></td>
+<td>0.03</td>
+</tr>
+<tr class="even">
+<td><code>weight_decay</code></td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td>Optimizer</td>
+<td><code>adamw_8bit</code></td>
+</tr>
+<tr class="even">
+<td>Mixed precision</td>
+<td>bf16 if GPU supports it, else fp16</td>
+</tr>
+<tr class="odd">
+<td><code>logging_steps</code></td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><code>save_steps</code></td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td><code>save_total_limit</code></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><code>seed</code></td>
+<td>42</td>
+</tr>
+<tr class="odd">
+<td>Final training loss (step 1500)</td>
+<td>≈ 0.433</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="compute-environment">5.3 Compute environment</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Resource</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPU</td>
+<td>1 × NVIDIA V100-32G</td>
+</tr>
+<tr class="even">
+<td>Partition</td>
+<td><code>gpu-exp</code></td>
+</tr>
+<tr class="odd">
+<td>Conda env</td>
+<td><code>unsloth_env</code></td>
+</tr>
+<tr class="even">
+<td>CUDA</td>
+<td>11.8 (module load when available)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="framework-versions-training-snapshot">5.4 Framework versions (training snapshot)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TRL</td>
+<td>0.24.0</td>
+</tr>
+<tr class="even">
+<td>Transformers</td>
+<td>5.5.0</td>
+</tr>
+<tr class="odd">
+<td>PyTorch</td>
+<td>2.10.0</td>
+</tr>
+<tr class="even">
+<td>PEFT</td>
+<td>0.19.1</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="input-format-real-complete-sample">6. Input format — real complete sample</h2>
+<p><strong>Source:</strong> <code>dataset_for_unsloth/train.jsonl</code>, row 1 (<code>pair_id = 1</code>).</p>
+<p>Each JSONL record has fields <code>instruction</code>, <code>input</code> (narrative only), and <code>output</code> (gold JSON). At <strong>inference</strong>, the model receives the Alpaca prefix ending at <code>### Response:</code> with no completion. At <strong>training</strong>, the gold JSON (and EOS) is appended to form the full supervised sequence.</p>
+<h3 id="fixed-instruction-v1-template">6.1 Fixed instruction (v1 template)</h3>
+<pre><code>You are given one current hospital visit narrative for a patient. Output exactly one JSON object with keys: lipid_next, diabetes_current, hypertension_current, obesity_current, cardio_next, kidney_next, stroke_next. Each key maps to an object with fields prediction (Yes or No) and probability (a number from 0 to 1, use two decimal places). Also include key reasoning with a short string. Do not add text outside the JSON object.</code></pre>
+<h3 id="inference-prompt-complete-pair_id-1">6.2 Inference prompt (complete, <code>pair_id = 1</code>)</h3>
+<pre><code>### Instruction:
+You are given one current hospital visit narrative for a patient. Output exactly one JSON object with keys: lipid_next, diabetes_current, hypertension_current, obesity_current, cardio_next, kidney_next, stroke_next. Each key maps to an object with fields prediction (Yes or No) and probability (a number from 0 to 1, use two decimal places). Also include key reasoning with a short string. Do not add text outside the JSON object.
+
+### Input:
+- Diagnoses made: Subendocardial infarction, initial episode of care; Cardiogenic shock; Blood in stool; Acute kidney failure, unspecified; Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease; Congestive heart failure, unspecified; Compression of vein; Pneumonitis due to inhalation of food or vomitus; Atrial fibrillation; Paroxysmal ventricular tachycardia; Coronary atherosclerosis of native coronary artery; Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled; Anemia in chronic kidney disease; Candidiasis of other urogenital sites; Pure hypercholesterolemia; Gout, unspecified; Personal history of malignant neoplasm of prostate; Other late effects of cerebrovascular disease
+- Medications prescribed: Vial; Calcium Gluconate; Normocarb; Sterile Water; Potassium Chloride; Epoetin Alfa; Levofloxacin; D5W; Heparin Sodium; HydrALAZINE HCl; Isosorbide Mononitrate (Extended Release); Metoprolol; Morphine Sulfate; Warfarin; Amiodarone HCl; D5W (EXCEL BAG); Metolazone; SW; Furosemide; Docusate Sodium; Pantoprazole; Insulin; Artificial Tears; Captopril; Glycerin Supps; Magnesium Sulfate; Zolpidem Tartrate; NS; Lisinopril; Pneumococcal Vac Polyvalent; Fluconazole; Simvastatin; Nitroglycerin; Sodium Chloride 0.9%  Flush; Calcium Carbonate; Clonidine HCl; Sodium Bicarbonate; Acetylcysteine 20%; Calcitriol; Sodium Chloride; Chlorothiazide Sodium; Atropine Sulfate; Heparin Flush CRRT (5000 Units/mL); Polysaccharide Iron Complex; Clopidogrel Bisulfate; Sertraline HCl; Aspirin; Atorvastatin; Eucerin; Senna
+- Procedures performed: Percutaneous transluminal coronary angioplasty [PTCA]; Implant of pulsation balloon; Angioplasty of other non-coronary vessel(s); Insertion of non-drug-eluting coronary artery stent(s); Procedure on three vessels; Insertion of three vascular stents; Venous catheterization for renal dialysis; Hemodialysis; Combined right and left heart cardiac catheterization; Coronary arteriography using two catheters; Transfusion of packed cells; Nonoperative removal of heart assist system
+
+### Response:
+</code></pre>
+<p>Long narratives are shortened at tokenization time when needed (<code>src/utils/alpaca_multitask_fit.py</code>) so the JSON completion fits within <code>max_seq_length = 2048</code>.</p>
+<h3 id="training-text-field">6.3 Training <code>text</code> field</h3>
+<p>Training concatenates the inference prompt above with the gold JSON completion and tokenizer EOS. Only tokens from the first <code>{</code> of the JSON onward receive gradient (response-only masking).</p>
+<hr />
+<h2 id="output-format-real-complete-sample">7. Output format — real complete sample</h2>
+<h3 id="gold-supervised-target-pair_id-1">7.1 Gold supervised target (<code>pair_id = 1</code>)</h3>
+<p>Gold labels are binary; exporter sets probability to <strong>1.0</strong> for Yes and <strong>0.0</strong> for No (not calibrated model scores):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;lipid_next&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;No&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">},</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;diabetes_current&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;Yes&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">},</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;hypertension_current&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;Yes&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">},</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;obesity_current&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;No&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">},</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;cardio_next&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;Yes&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">1.0</span><span class="fu">},</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;kidney_next&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;No&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">},</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;stroke_next&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="dt">&quot;prediction&quot;</span><span class="fu">:</span> <span class="st">&quot;No&quot;</span><span class="fu">,</span> <span class="dt">&quot;probability&quot;</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">},</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;reasoning&quot;</span><span class="fu">:</span> <span class="st">&quot;Supervised gold labels from ICD-derived visit-pair coding.&quot;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h3 id="model-generated-output-expected-schema">7.2 Model-generated output (expected schema)</h3>
+<p>At inference the model must emit the <strong>same JSON structure</strong> with no text outside the object. The first-try artifact stores raw generations in <code>outputs/gemma4_router_lora/test_predictions_first_try.jsonl</code> (nested <code>gold_json</code> / <code>pred_json</code> when parsing succeeded). Parse failures (~56 of 2,425 rows per task) excluded some rows from per-task metrics.</p>
+<hr />
+<h2 id="classifier-and-decision-function">8. Classifier and decision function</h2>
+<p>There is <strong>no separate sklearn or classical classifier</strong>. The fine-tuned language model <strong>is</strong> the multitask classifier: it generates JSON, which is parsed into seven binary decisions.</p>
+<h3 id="generation-scriptstest_unsloth_router.py">8.1 Generation (<code>scripts/test_unsloth_router.py</code>)</h3>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>temperature</code></td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td><code>do_sample</code></td>
+<td>False (greedy decoding)</td>
+</tr>
+<tr class="odd">
+<td><code>max_new_tokens</code></td>
+<td>768 (current script default; first try may have used a shorter budget)</td>
+</tr>
+<tr class="even">
+<td><code>max_seq_length</code></td>
+<td>2048</td>
+</tr>
+<tr class="odd">
+<td><code>load_in_4bit</code></td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Model mode</td>
+<td><code>FastLanguageModel.for_inference(model)</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="parsing-parse_multitask_output-in-srcllmoutput_parser.py">8.2 Parsing (<code>parse_multitask_output</code> in <code>src/llm/output_parser.py</code>)</h3>
+<ol type="1">
+<li>Strip optional Markdown JSON fences.</li>
+<li>Parse a <strong>single top-level JSON object</strong> with no trailing text.</li>
+<li>Require all seven task keys plus <code>reasoning</code>.</li>
+<li>For each task block <code>{"prediction": "Yes"|"No", "probability": float}</code>:
+<ul>
+<li>Map <code>"Yes"</code> → <code>{prefix}_pred = 1</code>, <code>"No"</code> → <code>0</code></li>
+<li>Map valid probability → <code>{prefix}_prob</code> (e.g. <code>lipid_prob</code>, <code>diabetes_prob</code>, …)</li>
+</ul></li>
+<li>Return <code>None</code> on any validation failure.</li>
+</ol>
+<h3 id="hard-classification-rule">8.3 Hard classification rule</h3>
+<ul>
+<li><strong>Positive class:</strong> Yes = 1<br />
+</li>
+<li><strong>Decision:</strong> use parsed <code>prediction</code> string directly — <strong>no probability threshold</strong> (e.g. no 0.5 cutoff on <code>probability</code>)<br />
+</li>
+<li><strong>Rank metrics:</strong> ROC-AUC and AUPRC use the reported <code>probability</code> field when finite; these measure discrimination, not calibration</li>
+</ul>
+<h3 id="metric-function-srcevaluationmetrics.py-compute_metrics">8.4 Metric function (<code>src/evaluation/metrics.py</code> → <code>compute_metrics</code>)</h3>
+<p>Called by <code>scripts/score_unsloth_multitask_jsonl.py</code> per task with:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Argument</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>y_true</code></td>
+<td>Gold binary labels (0/1)</td>
+</tr>
+<tr class="even">
+<td><code>y_pred</code></td>
+<td>Parsed hard predictions (0/1)</td>
+</tr>
+<tr class="odd">
+<td><code>y_score</code></td>
+<td>Parsed probabilities (optional, for AUC/AUPRC)</td>
+</tr>
+<tr class="even">
+<td><code>positive_label</code></td>
+<td>1 (Yes)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Outputs (0–100 scale):</strong> accuracy, precision, recall/sensitivity, specificity, F1, balanced accuracy; optionally AUC and AUPRC. Confusion matrix TP/FP/TN/FN. Matthews correlation (MCC) added in the scoring script.</p>
+<p><strong>Parse modes for scoring:</strong> <code>strict</code> (default), <code>salvage</code>, <code>lenient_flat</code> — first-try dashboard metrics used strict parsing on nested <code>pred_json</code> from the first-try artifact.</p>
+<hr />
+<h2 id="first-try-test-results">9. First-try test results</h2>
+<p><strong>Source:</strong> <code>outputs/gemma4_router_lora/test_predictions_first_try.jsonl</code><br />
+<strong>Metrics date:</strong> 2026-05-13 (see audit doc)<br />
+<strong>Coverage:</strong> 2,425 test lines; per-task usable N ≈ 2,369 (stroke: 2,368)</p>
+<p>Positive class = <strong>Yes</strong>. All percentages on [0, 100].</p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">Prev Yes</th>
+<th style="text-align: right;">Acc</th>
+<th style="text-align: right;">Sens</th>
+<th style="text-align: right;">Spec</th>
+<th style="text-align: right;">F1</th>
+<th style="text-align: right;">ROC-AUC</th>
+<th style="text-align: right;">AUPRC</th>
+<th style="text-align: right;">TN</th>
+<th style="text-align: right;">FP</th>
+<th style="text-align: right;">FN</th>
+<th style="text-align: right;">TP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lipid_next</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">25.08%</td>
+<td style="text-align: right;">82.40</td>
+<td style="text-align: right;">61.28</td>
+<td style="text-align: right;">89.46</td>
+<td style="text-align: right;">63.58</td>
+<td style="text-align: right;">75.37</td>
+<td style="text-align: right;">50.19</td>
+<td style="text-align: right;">1588</td>
+<td style="text-align: right;">187</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">364</td>
+</tr>
+<tr class="even">
+<td><code>diabetes_current</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">32.04%</td>
+<td style="text-align: right;">99.83</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">99.75</td>
+<td style="text-align: right;">99.74</td>
+<td style="text-align: right;">99.88</td>
+<td style="text-align: right;">99.48</td>
+<td style="text-align: right;">1606</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">759</td>
+</tr>
+<tr class="odd">
+<td><code>hypertension_current</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">54.96%</td>
+<td style="text-align: right;">99.79</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">99.53</td>
+<td style="text-align: right;">99.81</td>
+<td style="text-align: right;">99.77</td>
+<td style="text-align: right;">99.62</td>
+<td style="text-align: right;">1062</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1302</td>
+</tr>
+<tr class="even">
+<td><code>obesity_current</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">5.23%</td>
+<td style="text-align: right;">99.92</td>
+<td style="text-align: right;">99.19</td>
+<td style="text-align: right;">99.96</td>
+<td style="text-align: right;">99.19</td>
+<td style="text-align: right;">99.57</td>
+<td style="text-align: right;">98.44</td>
+<td style="text-align: right;">2244</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">123</td>
+</tr>
+<tr class="odd">
+<td><code>cardio_next</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">50.95%</td>
+<td style="text-align: right;">82.69</td>
+<td style="text-align: right;">83.51</td>
+<td style="text-align: right;">81.84</td>
+<td style="text-align: right;">83.10</td>
+<td style="text-align: right;">82.68</td>
+<td style="text-align: right;">77.46</td>
+<td style="text-align: right;">951</td>
+<td style="text-align: right;">211</td>
+<td style="text-align: right;">199</td>
+<td style="text-align: right;">1008</td>
+</tr>
+<tr class="even">
+<td><code>kidney_next</code></td>
+<td style="text-align: right;">2,369</td>
+<td style="text-align: right;">42.00%</td>
+<td style="text-align: right;">74.34</td>
+<td style="text-align: right;">57.69</td>
+<td style="text-align: right;">86.39</td>
+<td style="text-align: right;">65.38</td>
+<td style="text-align: right;">72.04</td>
+<td style="text-align: right;">61.28</td>
+<td style="text-align: right;">1187</td>
+<td style="text-align: right;">187</td>
+<td style="text-align: right;">421</td>
+<td style="text-align: right;">574</td>
+</tr>
+<tr class="odd">
+<td><code>stroke_next</code></td>
+<td style="text-align: right;">2,368</td>
+<td style="text-align: right;">5.79%</td>
+<td style="text-align: right;">94.21</td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;"><strong>0.00</strong></td>
+<td style="text-align: right;">50.00</td>
+<td style="text-align: right;">5.79</td>
+<td style="text-align: right;">2231</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">137</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="pooled-summaries">9.1 Pooled summaries</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Summary</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pooled binary instances</td>
+<td style="text-align: right;">16,582</td>
+</tr>
+<tr class="even">
+<td>Micro-accuracy</td>
+<td style="text-align: right;">90.45%</td>
+</tr>
+<tr class="odd">
+<td>Micro-F1 (Yes)</td>
+<td style="text-align: right;">83.92%</td>
+</tr>
+<tr class="even">
+<td>Micro-ROC-AUC</td>
+<td style="text-align: right;">87.75%</td>
+</tr>
+<tr class="odd">
+<td>Micro-AUPRC</td>
+<td style="text-align: right;">76.49%</td>
+</tr>
+<tr class="even">
+<td>Macro-F1 (Yes, unweighted over 7 tasks)</td>
+<td style="text-align: right;">72.97%</td>
+</tr>
+</tbody>
+</table></div>
+<p>These metrics appear in <a href="dashboard_with_llms_finetuining.html">dashboard_with_llms_finetuining.html</a> under model <strong>Gemma-4 finetuning</strong>.</p>
+<hr />
+<h2 id="reproduction-commands">10. Reproduction commands</h2>
+<p>From repository root with <code>unsloth_env</code> activated:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PYTHONPATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Export CSV splits to JSONL (once)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> src.scripts.export_multitask_unsloth_jsonl</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Train LoRA adapter</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/train_unsloth_router.py <span class="dt">\</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--run-name</span> natural_dist <span class="dt">\</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--train-jsonl</span> dataset_for_unsloth/train.jsonl <span class="dt">\</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">--eval-jsonl</span> dataset_for_unsloth/test.jsonl <span class="dt">\</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">--max-steps</span> 1500 <span class="dt">\</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">--max-seq-length</span> 2048</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Or submit Slurm job</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="ex">sbatch</span> slurm/train_unsloth_mt_natural_dist.slurm</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Generate test predictions</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/test_unsloth_router.py <span class="dt">\</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">--model-path</span> outputs/gemma4_router_lora/final_lora <span class="dt">\</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">--test-jsonl</span> dataset_for_unsloth/test.jsonl <span class="dt">\</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">--output-jsonl</span> outputs/gemma4_router_lora/test_predictions_first_try.jsonl</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Score predictions (CPU)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/score_unsloth_multitask_jsonl.py <span class="dt">\</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  outputs/gemma4_router_lora/test_predictions_first_try.jsonl <span class="dt">\</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">--parse-mode</span> strict</span></code></pre></div>
+<hr />
+<h2 id="limitations-and-recommended-next-steps">11. Limitations and recommended next steps</h2>
+<ol type="1">
+<li><strong>Stroke task unusable</strong> — all-negative predictions; needs class-weighted loss, oversampling, focal loss, or a dedicated binary head.</li>
+<li><strong>No imbalance correction</strong> — natural distribution preserved; rare next-visit outcomes underrepresented in gradient signal.</li>
+<li><strong>JSON validity</strong> — partial parse failures reduce usable rows; constrained decoding or grammar-based JSON generation could help.</li>
+<li><strong>Probability calibration</strong> — model-reported probabilities used for AUC without reliability analysis; not clinically calibrated.</li>
+<li><strong>Train–test parity</strong> — ensure <code>max_seq_length</code> and <code>max_new_tokens</code> match between training audit and inference reproduction.</li>
+</ol>
+<hr />
+<h2 id="file-index">12. File index</h2>
+<div class="table-wrap"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>docs/gemma4_multitask_finetuning_first_try_report_2026-06-19.md</code></td>
+<td>This report</td>
+</tr>
+<tr class="even">
+<td><code>docs/gemma4_finetuning_multitask_first_try.md</code></td>
+<td>Detailed technical audit (metrics definitions, MCC, NPV)</td>
+</tr>
+<tr class="odd">
+<td><code>docs/dashboard_with_llms_finetuining.html</code></td>
+<td>ML vs LLM comparison dashboard</td>
+</tr>
+<tr class="even">
+<td><code>dataset_for_unsloth/train.jsonl</code></td>
+<td>Training JSONL</td>
+</tr>
+<tr class="odd">
+<td><code>dataset_for_unsloth/test.jsonl</code></td>
+<td>Test JSONL</td>
+</tr>
+<tr class="even">
+<td><code>scripts/train_unsloth_router.py</code></td>
+<td>Training script</td>
+</tr>
+<tr class="odd">
+<td><code>scripts/test_unsloth_router.py</code></td>
+<td>Inference script</td>
+</tr>
+<tr class="even">
+<td><code>scripts/score_unsloth_multitask_jsonl.py</code></td>
+<td>Metric scoring</td>
+</tr>
+<tr class="odd">
+<td><code>outputs/gemma4_router_lora/final_lora/</code></td>
+<td>Saved adapter</td>
+</tr>
+<tr class="even">
+<td><code>outputs/gemma4_router_lora/test_predictions_first_try.jsonl</code></td>
+<td>First-pass predictions</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<p><em>Report generated 2026-06-19 from repository artifacts and <code>data/processed/mimiciii_multitask/*.csv</code> label counts.</em></p>
+</div>
+</body>
+</html>

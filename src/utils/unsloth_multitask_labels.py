@@ -17,17 +17,30 @@ from src.llm.output_parser import MULTITASK_JSON_TASK_KEYS, parse_multitask_outp
 from src.utils.alpaca_multitask_fit import resolve_tokenizer_for_encode
 
 RESPONSE_MARKER = "### Response:"
+STRICT_V2_JSON_SUPERVISION_PREFIX = '{"lipid_next":'
 
 
-def find_json_supervision_char_offset(formatted_text: str) -> int:
-    """Return character index of the first ``{`` in the assistant JSON block, or ``-1``."""
+def find_json_supervision_char_offset(
+    formatted_text: str,
+    *,
+    json_prefix: Optional[str] = None,
+) -> int:
+    """Return char index where supervised JSON begins (after ``### Response:``).
+
+    If ``json_prefix`` is set (e.g. strict_v2 ``{"lipid_next":``), use that; else first ``{``.
+    """
     if RESPONSE_MARKER not in formatted_text:
         return -1
-    tail = formatted_text.split(RESPONSE_MARKER, 1)[1]
+    base = formatted_text.index(RESPONSE_MARKER) + len(RESPONSE_MARKER)
+    tail = formatted_text[base:]
+    if json_prefix:
+        rel = tail.find(json_prefix)
+        if rel >= 0:
+            return base + rel
     rel = tail.find("{")
     if rel < 0:
         return -1
-    return formatted_text.index(RESPONSE_MARKER) + len(RESPONSE_MARKER) + rel
+    return base + rel
 
 
 def build_completion_mask_for_input_ids(
@@ -39,7 +52,11 @@ def build_completion_mask_for_input_ids(
 
     Returns ``(completion_mask, supervise_start_index, prefix_aligned)``.
     """
-    json_char = find_json_supervision_char_offset(formatted_text)
+    json_char = find_json_supervision_char_offset(
+        formatted_text, json_prefix=STRICT_V2_JSON_SUPERVISION_PREFIX
+        if STRICT_V2_JSON_SUPERVISION_PREFIX in formatted_text.split(RESPONSE_MARKER, 1)[-1]
+        else None
+    )
     if json_char < 0:
         return [0] * len(input_ids), len(input_ids), False
 
@@ -64,7 +81,11 @@ def _fallback_supervise_start(
     input_ids: List[int],
 ) -> int:
     """Find a reasonable supervision start when prefix encode does not match full encode."""
-    json_char = find_json_supervision_char_offset(formatted_text)
+    json_char = find_json_supervision_char_offset(
+        formatted_text, json_prefix=STRICT_V2_JSON_SUPERVISION_PREFIX
+        if STRICT_V2_JSON_SUPERVISION_PREFIX in formatted_text.split(RESPONSE_MARKER, 1)[-1]
+        else None
+    )
     if json_char < 0:
         return len(input_ids)
 
@@ -119,7 +140,11 @@ def audit_label_mask_row(
     n_masked = n_total - n_supervised
     pct = (100.0 * n_supervised / n_total) if n_total else 0.0
 
-    json_char = find_json_supervision_char_offset(formatted_text)
+    json_char = find_json_supervision_char_offset(
+        formatted_text, json_prefix=STRICT_V2_JSON_SUPERVISION_PREFIX
+        if STRICT_V2_JSON_SUPERVISION_PREFIX in formatted_text.split(RESPONSE_MARKER, 1)[-1]
+        else None
+    )
     resp_char = formatted_text.find(RESPONSE_MARKER)
     _, supervise_start, prefix_aligned = build_completion_mask_for_input_ids(
         hf_tokenizer, formatted_text, input_ids
@@ -129,6 +154,9 @@ def audit_label_mask_row(
 
     has_response_marker = RESPONSE_MARKER in prompt_decoded or RESPONSE_MARKER in formatted_text
     supervised_starts_with_brace = supervised_decoded.lstrip().startswith("{")
+    supervised_starts_with_lipid_next = supervised_decoded.lstrip().startswith(
+        STRICT_V2_JSON_SUPERVISION_PREFIX
+    )
     keys_present = all(k in supervised_decoded for k in MULTITASK_JSON_TASK_KEYS)
     parse_ok = parse_multitask_output(supervised_decoded) is not None
 
@@ -146,6 +174,7 @@ def audit_label_mask_row(
         "pct_supervised": round(pct, 2),
         "has_response_marker": has_response_marker,
         "supervised_starts_with_brace": supervised_starts_with_brace,
+        "supervised_starts_with_lipid_next": supervised_starts_with_lipid_next,
         "supervised_has_all_task_keys": keys_present,
         "supervised_parse_ok": parse_ok,
         "prompt_context_decoded": prompt_decoded,
@@ -153,6 +182,7 @@ def audit_label_mask_row(
         "failed_checks": _collect_mask_failures(
             has_response_marker=has_response_marker,
             supervised_starts_with_brace=supervised_starts_with_brace,
+            supervised_starts_with_lipid_next=supervised_starts_with_lipid_next,
             keys_present=keys_present,
             parse_ok=parse_ok,
             output_text=output_text,
@@ -165,6 +195,7 @@ def _collect_mask_failures(
     *,
     has_response_marker: bool,
     supervised_starts_with_brace: bool,
+    supervised_starts_with_lipid_next: bool,
     keys_present: bool,
     parse_ok: bool,
     output_text: str,
@@ -175,6 +206,8 @@ def _collect_mask_failures(
         failed.append("missing_response_marker_in_prompt")
     if not supervised_starts_with_brace:
         failed.append("supervised_not_starting_with_brace")
+    if STRICT_V2_JSON_SUPERVISION_PREFIX in output_text and not supervised_starts_with_lipid_next:
+        failed.append("supervised_not_starting_with_lipid_next_prefix")
     if not keys_present:
         failed.append("supervised_missing_task_keys")
     if not parse_ok:

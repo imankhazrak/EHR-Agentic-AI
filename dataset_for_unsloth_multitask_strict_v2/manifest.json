@@ -1,0 +1,16 @@
+{
+  "instruction_version": "strict_v2",
+  "compact_output_json": true,
+  "reasoning_style": "minimal",
+  "strict_v2_output_prefix": "{\"lipid_next\":",
+  "instruction_note": "Fixed string; not loaded from prompts_v3.",
+  "source_train_csv": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask/train.csv",
+  "source_test_csv": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/data/processed/mimiciii_multitask/test.csv",
+  "n_train": 10031,
+  "n_test": 2425,
+  "sample_output_prefix": "{\"lipid_next\":{\"prediction\":\"No\",\"probability\":0",
+  "outputs": {
+    "train_jsonl": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/dataset_for_unsloth_multitask_strict_v2/train.jsonl",
+    "test_jsonl": "/users/PCS0229/imankhazrak/EHR-Agentic-AI/dataset_for_unsloth_multitask_strict_v2/test.jsonl"
+  }
+}

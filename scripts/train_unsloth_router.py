@@ -305,6 +305,9 @@ def _run_label_mask_audit(
         print(f"pct_supervised: {audit['pct_supervised']}")
         print(f"has_response_marker: {audit['has_response_marker']}")
         print(f"supervised_starts_with_brace: {audit['supervised_starts_with_brace']}")
+        print(
+            f"supervised_starts_with_lipid_next: {audit.get('supervised_starts_with_lipid_next')}"
+        )
         print(f"supervised_has_all_task_keys: {audit['supervised_has_all_task_keys']}")
         print(f"supervised_parse_ok: {audit['supervised_parse_ok']}")
         print("\n[A] Prompt/context (masked tokens):")
